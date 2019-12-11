@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11737m.C11739b;
@@ -18,10 +18,10 @@ public final class DmcVideoMetaJsonAdapter extends C11725h<DmcVideoMeta> {
     public DmcVideoMetaJsonAdapter(C11760v vVar) {
         String str = "bookmarkData";
         C11739b a = C11739b.m37729a(str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"bookmarkData\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"bookmarkData\")");
         this.options = a;
         C11725h<UserMediaMeta> a2 = vVar.mo29869a((Type) UserMediaMeta.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<UserMediaM…ptySet(), \"bookmarkData\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<UserMediaM…ptySet(), \"bookmarkData\")");
         this.nullableUserMediaMetaAdapter = a2;
     }
 

@@ -2,7 +2,7 @@ package p520io.reactivex.p524d0;
 
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.C11947c;
@@ -30,7 +30,7 @@ public final class C11920c {
     /* renamed from: a */
     public static final <T, U> Single<Pair<T, U>> m38475a(Single<T> single, SingleSource<U> singleSource) {
         Single<Pair<T, U>> a = single.mo30205a(singleSource, (C11947c<? super T, ? super U, ? extends R>) C11921a.f27602a);
-        C12880j.m40222a((Object) a, "zipWith(other, BiFunction { t, u -> Pair(t, u) })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "zipWith(other, BiFunction { t, u -> Pair(t, u) })");
         return a;
     }
 }

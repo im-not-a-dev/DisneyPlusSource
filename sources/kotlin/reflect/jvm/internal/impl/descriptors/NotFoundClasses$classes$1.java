@@ -28,7 +28,7 @@ final class NotFoundClasses$classes$1 extends C12881k implements Function1<Class
             if (r1 == 0) goto L_0x0027
             kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses r2 = r8.this$0
             java.lang.String r3 = "outerClassId"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r3)
             r3 = 1
             java.util.List r3 = kotlin.p590y.C13199w.m40571c(r9, r3)
             kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor r1 = r2.getClass(r1, r3)
@@ -39,7 +39,7 @@ final class NotFoundClasses$classes$1 extends C12881k implements Function1<Class
             kotlin.reflect.jvm.internal.impl.storage.MemoizedFunctionToNotNull r1 = r1.packageFragments
             kotlin.reflect.jvm.internal.impl.name.FqName r2 = r0.getPackageFqName()
             java.lang.String r3 = "classId.packageFqName"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             java.lang.Object r1 = r1.invoke(r2)
             kotlin.reflect.jvm.internal.impl.descriptors.ClassOrPackageFragmentDescriptor r1 = (kotlin.reflect.jvm.internal.impl.descriptors.ClassOrPackageFragmentDescriptor) r1
         L_0x003c:
@@ -50,7 +50,7 @@ final class NotFoundClasses$classes$1 extends C12881k implements Function1<Class
             kotlin.reflect.jvm.internal.impl.storage.StorageManager r3 = r2.storageManager
             kotlin.reflect.jvm.internal.impl.name.Name r5 = r0.getShortClassName()
             java.lang.String r0 = "classId.shortClassName"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r0)
             java.lang.Object r9 = kotlin.p590y.C13199w.m40591g(r9)
             java.lang.Integer r9 = (java.lang.Integer) r9
             if (r9 == 0) goto L_0x0060

@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Class.Kind;
 import kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags;
@@ -34,13 +34,13 @@ public abstract class ProtoContainer {
             }
             this.kind = kind2;
             Boolean bool = Flags.IS_INNER.get(this.classProto.getFlags());
-            C12880j.m40222a((Object) bool, "Flags.IS_INNER.get(classProto.flags)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.IS_INNER.get(classProto.flags)");
             this.isInner = bool.booleanValue();
         }
 
         public FqName debugFqName() {
             FqName asSingleFqName = this.classId.asSingleFqName();
-            C12880j.m40222a((Object) asSingleFqName, "classId.asSingleFqName()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) asSingleFqName, "classId.asSingleFqName()");
             return asSingleFqName;
         }
 

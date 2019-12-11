@@ -8,7 +8,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p201e.p203b.p319v.C7873f;
@@ -105,7 +105,7 @@ public final class C7509h {
 
         /* renamed from: a */
         public final void mo20399a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -129,9 +129,9 @@ public final class C7509h {
         if (this.f16466b.mo19271e()) {
             this.f16467c.mo20834a(false);
             Single g = this.f16465a.mo30233g(C7510a.f16471c);
-            C12880j.m40222a((Object) g, "sessionInfoOnce\n        …t.location.countryCode) }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) g, "sessionInfoOnce\n        …t.location.countryCode) }");
             Object a = g.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(c0Var));
-            C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+            Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
             ((C11792d0) a).mo29920a(new C7508g(new C7511b(this)), C7512c.f16472c);
             return;
         }

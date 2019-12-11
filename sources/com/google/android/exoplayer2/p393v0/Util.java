@@ -48,81 +48,81 @@ import org.joda.time.DateTimeConstants;
 
 /* renamed from: com.google.android.exoplayer2.v0.k0 */
 /* compiled from: Util */
-public final class C9554k0 {
+public final class Util {
 
     /* renamed from: a */
-    public static final int f22281a = VERSION.SDK_INT;
+    public static final int SDK_INT = VERSION.SDK_INT;
 
     /* renamed from: b */
-    public static final String f22282b = Build.DEVICE;
+    public static final String DEVICE = Build.DEVICE;
 
     /* renamed from: c */
-    public static final String f22283c = Build.MANUFACTURER;
+    public static final String MANUFACTURER = Build.MANUFACTURER;
 
     /* renamed from: d */
-    public static final String f22284d = Build.MODEL;
+    public static final String MODEL = Build.MODEL;
 
     /* renamed from: e */
-    public static final String f22285e;
+    public static final String DEVICE_DEBUG_INFO;
 
     /* renamed from: f */
-    public static final byte[] f22286f = new byte[0];
+    public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
 
     /* renamed from: g */
-    private static final Pattern f22287g = Pattern.compile("(\\d\\d\\d\\d)\\-(\\d\\d)\\-(\\d\\d)[Tt](\\d\\d):(\\d\\d):(\\d\\d)([\\.,](\\d+))?([Zz]|((\\+|\\-)(\\d?\\d):?(\\d\\d)))?");
+    private static final Pattern XS_DATE_TIME_PATTERN = Pattern.compile("(\\d\\d\\d\\d)\\-(\\d\\d)\\-(\\d\\d)[Tt](\\d\\d):(\\d\\d):(\\d\\d)([\\.,](\\d+))?([Zz]|((\\+|\\-)(\\d?\\d):?(\\d\\d)))?");
 
     /* renamed from: h */
-    private static final Pattern f22288h = Pattern.compile("^(-)?P(([0-9]*)Y)?(([0-9]*)M)?(([0-9]*)D)?(T(([0-9]*)H)?(([0-9]*)M)?(([0-9.]*)S)?)?$");
+    private static final Pattern XS_DURATION_PATTERN = Pattern.compile("^(-)?P(([0-9]*)Y)?(([0-9]*)M)?(([0-9]*)D)?(T(([0-9]*)H)?(([0-9]*)M)?(([0-9.]*)S)?)?$");
 
     /* renamed from: i */
-    private static final Pattern f22289i = Pattern.compile("%([A-Fa-f0-9]{2})");
+    private static final Pattern ESCAPED_CHARACTER_PATTERN = Pattern.compile("%([A-Fa-f0-9]{2})");
 
     /* renamed from: j */
-    private static HashMap<String, String> f22290j;
+    private static HashMap<String, String> languageTagIso3ToIso2;
 
     /* renamed from: k */
-    private static final String[] f22291k = {"alb", "sq", "arm", "hy", "baq", "eu", "bur", "my", "tib", "bo", "chi", "zh", "cze", "cs", "dut", "nl", "ger", "de", "gre", "el", "fre", "fr", "geo", "ka", "ice", "is", "mac", "mk", "mao", "mi", "may", "ms", "per", "fa", "rum", "ro", "slo", "sk", "wel", "cy"};
+    private static final String[] iso3BibliographicalToIso2 = {"alb", "sq", "arm", "hy", "baq", "eu", "bur", "my", "tib", "bo", "chi", "zh", "cze", "cs", "dut", "nl", "ger", "de", "gre", "el", "fre", "fr", "geo", "ka", "ice", "is", "mac", "mk", "mao", "mi", "may", "ms", "per", "fa", "rum", "ro", "slo", "sk", "wel", "cy"};
 
     /* renamed from: l */
-    private static final int[] f22292l = {0, 79764919, 159529838, 222504665, 319059676, 398814059, 445009330, 507990021, 638119352, 583659535, 797628118, 726387553, 890018660, 835552979, 1015980042, 944750013, 1276238704, 1221641927, 1167319070, 1095957929, 1595256236, 1540665371, 1452775106, 1381403509, 1780037320, 1859660671, 1671105958, 1733955601, 2031960084, 2111593891, 1889500026, 1952343757, -1742489888, -1662866601, -1851683442, -1788833735, -1960329156, -1880695413, -2103051438, -2040207643, -1104454824, -1159051537, -1213636554, -1284997759, -1389417084, -1444007885, -1532160278, -1603531939, -734892656, -789352409, -575645954, -646886583, -952755380, -1007220997, -827056094, -898286187, -231047128, -151282273, -71779514, -8804623, -515967244, -436212925, -390279782, -327299027, 881225847, 809987520, 1023691545, 969234094, 662832811, 591600412, 771767749, 717299826, 311336399, 374308984, 453813921, 533576470, 25881363, 88864420, 134795389, 214552010, 2023205639, 2086057648, 1897238633, 1976864222, 1804852699, 1867694188, 1645340341, 1724971778, 1587496639, 1516133128, 1461550545, 1406951526, 1302016099, 1230646740, 1142491917, 1087903418, -1398421865, -1469785312, -1524105735, -1578704818, -1079922613, -1151291908, -1239184603, -1293773166, -1968362705, -1905510760, -2094067647, -2014441994, -1716953613, -1654112188, -1876203875, -1796572374, -525066777, -462094256, -382327159, -302564546, -206542021, -143559028, -97365931, -17609246, -960696225, -1031934488, -817968335, -872425850, -709327229, -780559564, -600130067, -654598054, 1762451694, 1842216281, 1619975040, 1682949687, 2047383090, 2127137669, 1938468188, 2001449195, 1325665622, 1271206113, 1183200824, 1111960463, 1543535498, 1489069629, 1434599652, 1363369299, 622672798, 568075817, 748617968, 677256519, 907627842, 853037301, 1067152940, 995781531, 51762726, 131386257, 177728840, 240578815, 269590778, 349224269, 429104020, 491947555, -248556018, -168932423, -122852000, -60002089, -500490030, -420856475, -341238852, -278395381, -685261898, -739858943, -559578920, -630940305, -1004286614, -1058877219, -845023740, -916395085, -1119974018, -1174433591, -1262701040, -1333941337, -1371866206, -1426332139, -1481064244, -1552294533, -1690935098, -1611170447, -1833673816, -1770699233, -2009983462, -1930228819, -2119160460, -2056179517, 1569362073, 1498123566, 1409854455, 1355396672, 1317987909, 1246755826, 1192025387, 1137557660, 2072149281, 2135122070, 1912620623, 1992383480, 1753615357, 1816598090, 1627664531, 1707420964, 295390185, 358241886, 404320391, 483945776, 43990325, 106832002, 186451547, 266083308, 932423249, 861060070, 1041341759, 986742920, 613929101, 542559546, 756411363, 701822548, -978770311, -1050133554, -869589737, -924188512, -693284699, -764654318, -550540341, -605129092, -475935807, -413084042, -366743377, -287118056, -257573603, -194731862, -114850189, -35218492, -1984365303, -1921392450, -2143631769, -2063868976, -1698919467, -1635936670, -1824608069, -1744851700, -1347415887, -1418654458, -1506661409, -1561119128, -1129027987, -1200260134, -1254728445, -1309196108};
+    private static final int[] CRC32_BYTES_MSBF = {0, 79764919, 159529838, 222504665, 319059676, 398814059, 445009330, 507990021, 638119352, 583659535, 797628118, 726387553, 890018660, 835552979, 1015980042, 944750013, 1276238704, 1221641927, 1167319070, 1095957929, 1595256236, 1540665371, 1452775106, 1381403509, 1780037320, 1859660671, 1671105958, 1733955601, 2031960084, 2111593891, 1889500026, 1952343757, -1742489888, -1662866601, -1851683442, -1788833735, -1960329156, -1880695413, -2103051438, -2040207643, -1104454824, -1159051537, -1213636554, -1284997759, -1389417084, -1444007885, -1532160278, -1603531939, -734892656, -789352409, -575645954, -646886583, -952755380, -1007220997, -827056094, -898286187, -231047128, -151282273, -71779514, -8804623, -515967244, -436212925, -390279782, -327299027, 881225847, 809987520, 1023691545, 969234094, 662832811, 591600412, 771767749, 717299826, 311336399, 374308984, 453813921, 533576470, 25881363, 88864420, 134795389, 214552010, 2023205639, 2086057648, 1897238633, 1976864222, 1804852699, 1867694188, 1645340341, 1724971778, 1587496639, 1516133128, 1461550545, 1406951526, 1302016099, 1230646740, 1142491917, 1087903418, -1398421865, -1469785312, -1524105735, -1578704818, -1079922613, -1151291908, -1239184603, -1293773166, -1968362705, -1905510760, -2094067647, -2014441994, -1716953613, -1654112188, -1876203875, -1796572374, -525066777, -462094256, -382327159, -302564546, -206542021, -143559028, -97365931, -17609246, -960696225, -1031934488, -817968335, -872425850, -709327229, -780559564, -600130067, -654598054, 1762451694, 1842216281, 1619975040, 1682949687, 2047383090, 2127137669, 1938468188, 2001449195, 1325665622, 1271206113, 1183200824, 1111960463, 1543535498, 1489069629, 1434599652, 1363369299, 622672798, 568075817, 748617968, 677256519, 907627842, 853037301, 1067152940, 995781531, 51762726, 131386257, 177728840, 240578815, 269590778, 349224269, 429104020, 491947555, -248556018, -168932423, -122852000, -60002089, -500490030, -420856475, -341238852, -278395381, -685261898, -739858943, -559578920, -630940305, -1004286614, -1058877219, -845023740, -916395085, -1119974018, -1174433591, -1262701040, -1333941337, -1371866206, -1426332139, -1481064244, -1552294533, -1690935098, -1611170447, -1833673816, -1770699233, -2009983462, -1930228819, -2119160460, -2056179517, 1569362073, 1498123566, 1409854455, 1355396672, 1317987909, 1246755826, 1192025387, 1137557660, 2072149281, 2135122070, 1912620623, 1992383480, 1753615357, 1816598090, 1627664531, 1707420964, 295390185, 358241886, 404320391, 483945776, 43990325, 106832002, 186451547, 266083308, 932423249, 861060070, 1041341759, 986742920, 613929101, 542559546, 756411363, 701822548, -978770311, -1050133554, -869589737, -924188512, -693284699, -764654318, -550540341, -605129092, -475935807, -413084042, -366743377, -287118056, -257573603, -194731862, -114850189, -35218492, -1984365303, -1921392450, -2143631769, -2063868976, -1698919467, -1635936670, -1824608069, -1744851700, -1347415887, -1418654458, -1506661409, -1561119128, -1129027987, -1200260134, -1254728445, -1309196108};
 
     static {
         StringBuilder sb = new StringBuilder();
-        sb.append(f22282b);
+        sb.append(DEVICE);
         String str = ", ";
         sb.append(str);
-        sb.append(f22284d);
+        sb.append(MODEL);
         sb.append(str);
-        sb.append(f22283c);
+        sb.append(MANUFACTURER);
         sb.append(str);
-        sb.append(f22281a);
-        f22285e = sb.toString();
+        sb.append(SDK_INT);
+        DEVICE_DEBUG_INFO = sb.toString();
     }
 
     /* renamed from: a */
-    public static long m29389a(long j, long j2, long j3) {
+    public static long addWithOverflowDefault(long j, long j2, long j3) {
         long j4 = j + j2;
         return ((j ^ j4) & (j2 ^ j4)) < 0 ? j3 : j4;
     }
 
     /* renamed from: a */
-    public static <T> T m29394a(T t) {
+    public static <T> T castNonNull(T t) {
         return t;
     }
 
     /* renamed from: a */
-    public static boolean m29411a(Uri uri) {
+    public static boolean isLocalFileUri(Uri uri) {
         String scheme = uri.getScheme();
         return TextUtils.isEmpty(scheme) || "file".equals(scheme);
     }
 
     /* renamed from: a */
-    public static <T> T[] m29419a(T[] tArr) {
+    public static <T> T[] castNonNullTypeArray(T[] tArr) {
         return tArr;
     }
 
     /* renamed from: b */
-    public static int m29424b(int i) {
+    public static int getPcmEncoding(int i) {
         if (i == 8) {
             return 3;
         }
@@ -136,7 +136,7 @@ public final class C9554k0 {
     }
 
     /* renamed from: b */
-    public static int m29426b(long j, long j2) {
+    public static int compareLong(long j, long j2) {
         int i = (j > j2 ? 1 : (j == j2 ? 0 : -1));
         if (i < 0) {
             return -1;
@@ -222,7 +222,7 @@ public final class C9554k0 {
             return null;
         }
         String replace = str.replace('_', '-');
-        if (f22281a >= 21) {
+        if (SDK_INT >= 21) {
             replace = m29453g(replace);
         }
         if (!replace.isEmpty() && !"und".equals(replace)) {
@@ -231,10 +231,10 @@ public final class C9554k0 {
         String k = m29457k(str);
         String str2 = m29437b(k, "-")[0];
         if (str2.length() == 3) {
-            if (f22290j == null) {
-                f22290j = m29402a();
+            if (languageTagIso3ToIso2 == null) {
+                languageTagIso3ToIso2 = m29402a();
             }
-            String str3 = (String) f22290j.get(str2);
+            String str3 = (String) languageTagIso3ToIso2.get(str2);
             if (str3 != null) {
                 StringBuilder sb = new StringBuilder();
                 sb.append(str3);
@@ -258,7 +258,7 @@ public final class C9554k0 {
 
     /* renamed from: h */
     public static long m29454h(String str) throws C8723g0 {
-        Matcher matcher = f22287g.matcher(str);
+        Matcher matcher = XS_DATE_TIME_PATTERN.matcher(str);
         if (matcher.matches()) {
             int i = 0;
             if (matcher.group(9) != null && !matcher.group(9).equalsIgnoreCase("Z")) {
@@ -287,7 +287,7 @@ public final class C9554k0 {
 
     /* renamed from: i */
     public static long m29455i(String str) {
-        Matcher matcher = f22288h.matcher(str);
+        Matcher matcher = XS_DURATION_PATTERN.matcher(str);
         if (!matcher.matches()) {
             return (long) (Double.parseDouble(str) * 3600.0d * 1000.0d);
         }
@@ -347,7 +347,7 @@ public final class C9554k0 {
         }
         int i4 = length - (i2 * 2);
         StringBuilder sb = new StringBuilder(i4);
-        Matcher matcher = f22289i.matcher(str);
+        Matcher matcher = ESCAPED_CHARACTER_PATTERN.matcher(str);
         while (i2 > 0 && matcher.find()) {
             char parseInt = (char) Integer.parseInt(matcher.group(1), 16);
             sb.append(str, i, matcher.start());
@@ -401,7 +401,7 @@ public final class C9554k0 {
     /* renamed from: d */
     private static String[] m29448d() {
         Configuration configuration = Resources.getSystem().getConfiguration();
-        int i = f22281a;
+        int i = SDK_INT;
         if (i >= 24) {
             return m29436b(configuration);
         }
@@ -490,7 +490,7 @@ public final class C9554k0 {
             StringBuilder sb = new StringBuilder();
             sb.append("Failed to read system property ");
             sb.append(str);
-            C9563q.m29496a("Util", sb.toString(), e);
+            Log.m29496a("Util", sb.toString(), e);
             return null;
         }
     }
@@ -768,7 +768,7 @@ public final class C9554k0 {
             return j;
         }
         long d = m29444d(j, seekParameters.f18391a, Long.MIN_VALUE);
-        long a = m29389a(j, seekParameters.f18392b, Long.MAX_VALUE);
+        long a = addWithOverflowDefault(j, seekParameters.f18392b, Long.MAX_VALUE);
         boolean z = true;
         boolean z2 = d <= j2 && j2 <= a;
         if (d > j3 || j3 > a) {
@@ -846,7 +846,7 @@ public final class C9554k0 {
             case 7:
                 return 1276;
             case 8:
-                int i2 = f22281a;
+                int i2 = SDK_INT;
                 return (i2 < 23 && i2 < 21) ? 0 : 6396;
             default:
                 return 0;
@@ -889,7 +889,7 @@ public final class C9554k0 {
     /* renamed from: a */
     public static int m29385a(byte[] bArr, int i, int i2, int i3) {
         while (i < i2) {
-            i3 = f22292l[((i3 >>> 24) ^ (bArr[i] & 255)) & 255] ^ (i3 << 8);
+            i3 = CRC32_BYTES_MSBF[((i3 >>> 24) ^ (bArr[i] & 255)) & 255] ^ (i3 << 8);
             i++;
         }
         return i3;
@@ -949,11 +949,11 @@ public final class C9554k0 {
     /* renamed from: a */
     public static Point m29391a(Context context, Display display) {
         String str;
-        if (f22281a <= 28 && display.getDisplayId() == 0 && m29446d(context)) {
-            if ("Sony".equals(f22283c) && f22284d.startsWith("BRAVIA") && context.getPackageManager().hasSystemFeature("com.sony.dtv.hardware.panel.qfhd")) {
+        if (SDK_INT <= 28 && display.getDisplayId() == 0 && m29446d(context)) {
+            if ("Sony".equals(MANUFACTURER) && MODEL.startsWith("BRAVIA") && context.getPackageManager().hasSystemFeature("com.sony.dtv.hardware.panel.qfhd")) {
                 return new Point(3840, 2160);
             }
-            if (f22281a < 28) {
+            if (SDK_INT < 28) {
                 str = m29441c("sys.display-size");
             } else {
                 str = m29441c("vendor.display-size");
@@ -973,11 +973,11 @@ public final class C9554k0 {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Invalid display size: ");
                 sb.append(str);
-                C9563q.m29497b("Util", sb.toString());
+                Log.m29497b("Util", sb.toString());
             }
         }
         Point point = new Point();
-        int i = f22281a;
+        int i = SDK_INT;
         if (i >= 23) {
             m29442c(display, point);
         } else if (i >= 17) {
@@ -1031,7 +1031,7 @@ public final class C9554k0 {
     /* renamed from: a */
     private static HashMap<String, String> m29402a() {
         String[] iSOLanguages = Locale.getISOLanguages();
-        HashMap<String, String> hashMap = new HashMap<>(iSOLanguages.length + f22291k.length);
+        HashMap<String, String> hashMap = new HashMap<>(iSOLanguages.length + iso3BibliographicalToIso2.length);
         int i = 0;
         for (String str : iSOLanguages) {
             try {
@@ -1043,7 +1043,7 @@ public final class C9554k0 {
             }
         }
         while (true) {
-            String[] strArr = f22291k;
+            String[] strArr = iso3BibliographicalToIso2;
             if (i >= strArr.length) {
                 return hashMap;
             }

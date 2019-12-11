@@ -10,7 +10,7 @@ import java.util.Map;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p581d0.C12731a;
 import kotlin.reflect.KClass;
@@ -40,7 +40,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                 cls = C12731a.m39866a(a);
             }
         }
-        if (C12880j.m40224a((Object) cls, (Object) this.$annotationClass)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) this.$annotationClass)) {
             List list = this.$methods;
             if (!(list instanceof Collection) || !list.isEmpty()) {
                 Iterator it = list.iterator();
@@ -124,7 +124,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             throw new C13142s("null cannot be cast to non-null type kotlin.Array<*>");
                         }
                     } else {
-                        z2 = C12880j.m40224a(obj2, invoke);
+                        z2 = Intrinsics.areEqual(obj2, invoke);
                         continue;
                     }
                     if (!z2) {

@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.scopes.receivers;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.SimpleType;
 
@@ -29,7 +29,7 @@ public class ImplicitClassReceiver implements ImplicitReceiver, ThisClassReceive
         if (implicitClassReceiver != null) {
             classDescriptor3 = implicitClassReceiver.classDescriptor;
         }
-        return C12880j.m40224a((Object) classDescriptor2, (Object) classDescriptor3);
+        return Intrinsics.areEqual((Object) classDescriptor2, (Object) classDescriptor3);
     }
 
     public final ClassDescriptor getClassDescriptor() {
@@ -50,7 +50,7 @@ public class ImplicitClassReceiver implements ImplicitReceiver, ThisClassReceive
 
     public SimpleType getType() {
         SimpleType defaultType = this.classDescriptor.getDefaultType();
-        C12880j.m40222a((Object) defaultType, "classDescriptor.defaultType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) defaultType, "classDescriptor.defaultType");
         return defaultType;
     }
 }

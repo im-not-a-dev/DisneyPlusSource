@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p361p0;
 
 import com.google.android.exoplayer2.p361p0.C8840m.C8841a;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.ShortBuffer;
@@ -55,7 +55,7 @@ public final class C8818b0 implements C8840m {
 
     /* renamed from: a */
     public float mo23056a(float f) {
-        float a = C9554k0.m29379a(f, 0.1f, 8.0f);
+        float a = Util.m29379a(f, 0.1f, 8.0f);
         if (this.f18775e != a) {
             this.f18775e = a;
             this.f18778h = true;
@@ -66,7 +66,7 @@ public final class C8818b0 implements C8840m {
 
     /* renamed from: b */
     public float mo23061b(float f) {
-        float a = C9554k0.m29379a(f, 0.1f, 8.0f);
+        float a = Util.m29379a(f, 0.1f, 8.0f);
         if (this.f18774d != a) {
             this.f18774d = a;
             this.f18778h = true;
@@ -155,9 +155,9 @@ public final class C8818b0 implements C8840m {
         int i = this.f18776f;
         int i2 = this.f18773c;
         if (i == i2) {
-            j2 = C9554k0.m29439c(j, this.f18783m, j3);
+            j2 = Util.m29439c(j, this.f18783m, j3);
         } else {
-            j2 = C9554k0.m29439c(j, this.f18783m * ((long) i), j3 * ((long) i2));
+            j2 = Util.m29439c(j, this.f18783m * ((long) i), j3 * ((long) i2));
         }
         return j2;
     }

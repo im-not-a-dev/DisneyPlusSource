@@ -6,7 +6,7 @@ import com.bamtech.sdk4.identity.IdentityToken.DefaultImpls;
 import com.bamtech.sdk4.identity.SecurityAction;
 import com.bamtech.shadow.gson.p050r.C2246c;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -37,8 +37,8 @@ public abstract class LoginResponse {
             if (this != obj) {
                 if (obj instanceof Success) {
                     Success success = (Success) obj;
-                    if (C12880j.m40224a((Object) getToken(), (Object) success.getToken())) {
-                        if (!(getExpiresIn() == success.getExpiresIn()) || !C12880j.m40224a((Object) getIssuedAt(), (Object) success.getIssuedAt()) || !C12880j.m40224a((Object) getSecurityAction(), (Object) success.getSecurityAction())) {
+                    if (Intrinsics.areEqual((Object) getToken(), (Object) success.getToken())) {
+                        if (!(getExpiresIn() == success.getExpiresIn()) || !Intrinsics.areEqual((Object) getIssuedAt(), (Object) success.getIssuedAt()) || !Intrinsics.areEqual((Object) getSecurityAction(), (Object) success.getSecurityAction())) {
                             return false;
                         }
                     }
@@ -97,7 +97,7 @@ public abstract class LoginResponse {
 
         public Success() {
             DateTime now = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
             this("", 3300, now, null);
         }
     }

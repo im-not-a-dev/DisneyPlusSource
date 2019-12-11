@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12863c;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -152,10 +152,10 @@ public abstract class KPropertyImpl<R> extends KCallableImpl<R> implements KProp
         this.signature = str2;
         this.rawBoundReceiver = obj;
         LazyVal<Field> lazy = ReflectProperties.lazy(new KPropertyImpl$_javaField$1(this));
-        C12880j.m40222a((Object) lazy, "ReflectProperties.lazy {…y -> null\n        }\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazy, "ReflectProperties.lazy {…y -> null\n        }\n    }");
         this._javaField = lazy;
         LazySoftVal<PropertyDescriptor> lazySoft = ReflectProperties.lazySoft(propertyDescriptor, new KPropertyImpl$_descriptor$1(this));
-        C12880j.m40222a((Object) lazySoft, "ReflectProperties.lazySo…or(name, signature)\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazySoft, "ReflectProperties.lazySo…or(name, signature)\n    }");
         this._descriptor = lazySoft;
     }
 
@@ -169,7 +169,7 @@ public abstract class KPropertyImpl<R> extends KCallableImpl<R> implements KProp
 
     public boolean equals(Object obj) {
         KPropertyImpl asKPropertyImpl = UtilKt.asKPropertyImpl(obj);
-        if (asKPropertyImpl == null || !C12880j.m40224a((Object) getContainer(), (Object) asKPropertyImpl.getContainer()) || !C12880j.m40224a((Object) getName(), (Object) asKPropertyImpl.getName()) || !C12880j.m40224a((Object) this.signature, (Object) asKPropertyImpl.signature) || !C12880j.m40224a(this.rawBoundReceiver, asKPropertyImpl.rawBoundReceiver)) {
+        if (asKPropertyImpl == null || !Intrinsics.areEqual((Object) getContainer(), (Object) asKPropertyImpl.getContainer()) || !Intrinsics.areEqual((Object) getName(), (Object) asKPropertyImpl.getName()) || !Intrinsics.areEqual((Object) this.signature, (Object) asKPropertyImpl.signature) || !Intrinsics.areEqual(this.rawBoundReceiver, asKPropertyImpl.rawBoundReceiver)) {
             return false;
         }
         return true;
@@ -232,7 +232,7 @@ public abstract class KPropertyImpl<R> extends KCallableImpl<R> implements KProp
     }
 
     public boolean isBound() {
-        return !C12880j.m40224a(this.rawBoundReceiver, C12863c.NO_RECEIVER);
+        return !Intrinsics.areEqual(this.rawBoundReceiver, C12863c.NO_RECEIVER);
     }
 
     public boolean isConst() {
@@ -253,7 +253,7 @@ public abstract class KPropertyImpl<R> extends KCallableImpl<R> implements KProp
 
     public PropertyDescriptor getDescriptor() {
         Object invoke = this._descriptor.invoke();
-        C12880j.m40222a(invoke, "_descriptor()");
+        Intrinsics.checkReturnedValueIsNotNull(invoke, "_descriptor()");
         return (PropertyDescriptor) invoke;
     }
 
@@ -263,7 +263,7 @@ public abstract class KPropertyImpl<R> extends KCallableImpl<R> implements KProp
 
     public KPropertyImpl(KDeclarationContainerImpl kDeclarationContainerImpl, PropertyDescriptor propertyDescriptor) {
         String asString = propertyDescriptor.getName().asString();
-        C12880j.m40222a((Object) asString, "descriptor.name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "descriptor.name.asString()");
         this(kDeclarationContainerImpl, asString, RuntimeTypeMapper.INSTANCE.mapPropertySignature(propertyDescriptor).asString(), propertyDescriptor, C12863c.NO_RECEIVER);
     }
 }

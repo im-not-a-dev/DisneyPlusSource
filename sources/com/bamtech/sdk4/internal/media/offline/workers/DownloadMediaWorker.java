@@ -23,7 +23,7 @@ import javax.inject.Provider;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 
@@ -41,7 +41,7 @@ public final class DownloadMediaWorker extends Worker {
     public DownloadMediaWorker(Context context, WorkerParameters workerParameters) {
         super(context, workerParameters);
         DateTimeFormatter dateTime = ISODateTimeFormat.dateTime();
-        C12880j.m40222a((Object) dateTime, "ISODateTimeFormat.dateTime()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "ISODateTimeFormat.dateTime()");
         this.dateTimeFormatter = dateTime;
         OfflineMediaPlugin.Companion.getComponent$plugin_offline_media_release().inject(this);
     }
@@ -59,7 +59,7 @@ public final class DownloadMediaWorker extends Worker {
             }
             return exoCachedMedia != null;
         }
-        C12880j.m40227c("download");
+        Intrinsics.throwUninitializedPropertyAccessException("download");
         throw null;
     }
 
@@ -76,7 +76,7 @@ public final class DownloadMediaWorker extends Worker {
             }
             return;
         }
-        C12880j.m40227c("download");
+        Intrinsics.throwUninitializedPropertyAccessException("download");
         throw null;
     }
 
@@ -93,16 +93,16 @@ public final class DownloadMediaWorker extends Worker {
                 if (defaultDownloadWorkManagerHelper != null) {
                     String storageOperationMediaWorkId$plugin_offline_media_release = defaultDownloadWorkManagerHelper.getStorageOperationMediaWorkId$plugin_offline_media_release(cachedMedia);
                     Operation a = WorkManager.m5490a().mo5637a(storageOperationMediaWorkId$plugin_offline_media_release);
-                    C12880j.m40222a((Object) a, "WorkManager.getInstance(…elUniqueWork(operationId)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a, "WorkManager.getInstance(…elUniqueWork(operationId)");
                     C10414c.m32922a(a.mo5618a(), new DownloadMediaWorker$restartDownload$$inlined$let$lambda$1(storageOperationMediaWorkId$plugin_offline_media_release, this, cachedMedia), C10417e.m32923a());
                     return;
                 }
-                C12880j.m40227c("workManagerHelper");
+                Intrinsics.throwUninitializedPropertyAccessException("workManagerHelper");
                 throw null;
             }
             return;
         }
-        C12880j.m40227c("download");
+        Intrinsics.throwUninitializedPropertyAccessException("download");
         throw null;
     }
 
@@ -173,7 +173,7 @@ public final class DownloadMediaWorker extends Worker {
             org.joda.time.DateTime r9 = org.joda.time.DateTime.now(r9)     // Catch:{ all -> 0x01b9 }
             org.joda.time.Minutes r10 = org.joda.time.Minutes.minutesBetween(r8, r9)     // Catch:{ all -> 0x01b9 }
             java.lang.String r11 = "Minutes.minutesBetween(startTime, endTime)"
-            kotlin.jvm.internal.C12880j.m40222a(r10, r11)     // Catch:{ all -> 0x01b9 }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r10, r11)     // Catch:{ all -> 0x01b9 }
             int r10 = r10.getMinutes()     // Catch:{ all -> 0x01b9 }
             com.bamtech.sdk4.internal.media.offline.ConditionReporter r11 = r1.conditionReporter     // Catch:{ all -> 0x01b9 }
             if (r11 == 0) goto L_0x01a3
@@ -274,29 +274,29 @@ public final class DownloadMediaWorker extends Worker {
             r15 = r0
             com.bamtech.sdk4.internal.service.ServiceTransaction.DefaultImpls.logDust$default(r9, r10, r11, r12, r13, r14, r15, r16)     // Catch:{ all -> 0x01c7 }
             androidx.work.ListenableWorker$Result r0 = androidx.work.ListenableWorker.Result.m5469b()     // Catch:{ all -> 0x01c7 }
-            kotlin.jvm.internal.C12880j.m40222a(r0, r2)     // Catch:{ all -> 0x01c7 }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)     // Catch:{ all -> 0x01c7 }
             goto L_0x0258
         L_0x019b:
             r8 = 4
             java.lang.String r0 = "download"
-            kotlin.jvm.internal.C12880j.m40227c(r0)     // Catch:{ all -> 0x01c7 }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)     // Catch:{ all -> 0x01c7 }
             r2 = 0
             throw r2
         L_0x01a3:
             r8 = 4
-            kotlin.jvm.internal.C12880j.m40227c(r3)     // Catch:{ all -> 0x01c7 }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)     // Catch:{ all -> 0x01c7 }
             r2 = 0
             throw r2
         L_0x01a9:
             r8 = 4
             java.lang.String r0 = "download"
-            kotlin.jvm.internal.C12880j.m40227c(r0)     // Catch:{ all -> 0x01c7 }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)     // Catch:{ all -> 0x01c7 }
             r2 = 0
             throw r2
         L_0x01b1:
             r8 = 4
             java.lang.String r0 = "subcomponent"
-            kotlin.jvm.internal.C12880j.m40227c(r0)     // Catch:{ all -> 0x01c7 }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)     // Catch:{ all -> 0x01c7 }
             r2 = 0
             throw r2
         L_0x01b9:
@@ -346,7 +346,7 @@ public final class DownloadMediaWorker extends Worker {
             r9 = r7
             com.bamtech.sdk4.internal.service.ServiceTransaction.DefaultImpls.logDust$default(r9, r10, r11, r12, r13, r14, r15, r16)
             androidx.work.ListenableWorker$Result r0 = androidx.work.ListenableWorker.Result.m5469b()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)
             goto L_0x0258
         L_0x021a:
             kotlin.Pair[] r2 = new kotlin.Pair[r8]
@@ -371,17 +371,17 @@ public final class DownloadMediaWorker extends Worker {
             com.bamtech.sdk4.internal.service.ServiceTransaction.DefaultImpls.logDust$default(r9, r10, r11, r12, r13, r14, r15, r16)
             androidx.work.ListenableWorker$Result r0 = androidx.work.ListenableWorker.Result.m5467a()
             java.lang.String r2 = "Result.failure()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)
         L_0x0258:
             return r0
         L_0x0259:
-            kotlin.jvm.internal.C12880j.m40227c(r3)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)
             r2 = 0
             throw r2
         L_0x025e:
             r2 = 0
             java.lang.String r0 = "transactionProvider"
-            kotlin.jvm.internal.C12880j.m40227c(r0)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)
             throw r2
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtech.sdk4.internal.media.offline.workers.DownloadMediaWorker.doWork():androidx.work.ListenableWorker$Result");
@@ -392,7 +392,7 @@ public final class DownloadMediaWorker extends Worker {
         if (download2 != null) {
             return download2;
         }
-        C12880j.m40227c("download");
+        Intrinsics.throwUninitializedPropertyAccessException("download");
         throw null;
     }
 
@@ -410,15 +410,15 @@ public final class DownloadMediaWorker extends Worker {
                     aVar.mo5591a((String) pair.mo31015c(), pair.mo31016d());
                 }
                 Data a = aVar.mo5594a();
-                C12880j.m40222a((Object) a, "dataBuilder.build()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a, "dataBuilder.build()");
                 Result a2 = Result.m5468a(a);
-                C12880j.m40222a((Object) a2, "Result.success(workDataO…load.downloadPercentage))");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a2, "Result.success(workDataO…load.downloadPercentage))");
                 return a2;
             }
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
-        C12880j.m40227c(str);
+        Intrinsics.throwUninitializedPropertyAccessException(str);
         throw null;
     }
 
@@ -427,7 +427,7 @@ public final class DownloadMediaWorker extends Worker {
         if (provider != null) {
             return provider;
         }
-        C12880j.m40227c("transactionProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("transactionProvider");
         throw null;
     }
 
@@ -436,13 +436,13 @@ public final class DownloadMediaWorker extends Worker {
         if (defaultDownloadWorkManagerHelper != null) {
             return defaultDownloadWorkManagerHelper;
         }
-        C12880j.m40227c("workManagerHelper");
+        Intrinsics.throwUninitializedPropertyAccessException("workManagerHelper");
         throw null;
     }
 
     public void onStopped() {
         ListenableFuture b = WorkManager.m5490a().mo5644b(getId());
-        C12880j.m40222a((Object) b, "WorkManager.getInstance().getWorkInfoById(id)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "WorkManager.getInstance().getWorkInfoById(id)");
         C10414c.m32922a(b, new DownloadMediaWorker$onStopped$1(this), C10417e.m32923a());
     }
 }

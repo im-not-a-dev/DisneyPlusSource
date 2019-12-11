@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil;
 import java.util.LinkedHashSet;
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -37,7 +37,7 @@ final class DescriptorUtilsKt$computeSealedSubclasses$1 extends C12881k implemen
                 }
                 if (z) {
                     MemberScope unsubstitutedInnerClassesScope = classDescriptor.getUnsubstitutedInnerClassesScope();
-                    C12880j.m40222a((Object) unsubstitutedInnerClassesScope, "descriptor.unsubstitutedInnerClassesScope");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) unsubstitutedInnerClassesScope, "descriptor.unsubstitutedInnerClassesScope");
                     invoke(unsubstitutedInnerClassesScope, z);
                 }
             }

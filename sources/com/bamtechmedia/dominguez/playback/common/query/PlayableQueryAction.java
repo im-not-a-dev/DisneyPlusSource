@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.core.content.search.C3724a;
 import java.util.List;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11724g;
 import p163g.p500m.p501a.C11733i;
 import p520io.reactivex.Single;
@@ -41,7 +41,7 @@ public final class PlayableQueryAction {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f14362a, (java.lang.Object) ((com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction.ContentIdReferenceResponse) r2).f14362a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f14362a, (java.lang.Object) ((com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction.ContentIdReferenceResponse) r2).f14362a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -53,7 +53,7 @@ public final class PlayableQueryAction {
                 com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction$ContentIdReferenceResponse r2 = (com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction.ContentIdReferenceResponse) r2
                 com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction$DmcVideoElements r0 = r1.f14362a
                 com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction$DmcVideoElements r2 = r2.f14362a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -101,7 +101,7 @@ public final class PlayableQueryAction {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f14363a, (java.lang.Object) ((com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction.DmcVideoElements) r2).f14363a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f14363a, (java.lang.Object) ((com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction.DmcVideoElements) r2).f14363a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -113,7 +113,7 @@ public final class PlayableQueryAction {
                 com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction$DmcVideoElements r2 = (com.bamtechmedia.dominguez.playback.common.query.PlayableQueryAction.DmcVideoElements) r2
                 java.util.List<com.bamtechmedia.dominguez.core.content.assets.b> r0 = r1.f14363a
                 java.util.List<com.bamtechmedia.dominguez.core.content.assets.b> r2 = r2.f14363a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -219,7 +219,7 @@ public final class PlayableQueryAction {
     /* renamed from: a */
     public final Single<C3693o> mo18894a(String str) {
         Single<C3693o> g = this.f14361a.mo13577a(ContentIdReferenceResponse.class, "core/DmcVideos", C13170i0.m40332a(C12907r.m40244a("contentId", str)), null).mo30233g(C6293b.f14364c);
-        C12880j.m40222a((Object) g, "searchApi.typedSearch<Co…ponse $it\")\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.typedSearch<Co…ponse $it\")\n            }");
         return g;
     }
 }

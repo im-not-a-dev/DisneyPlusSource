@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.analytics;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -27,31 +27,31 @@ public final class AdobeConfigJsonAdapter extends C11725h<AdobeConfig> {
 
     public AdobeConfigJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("lastModified", "marketingCloud", "target", "audienceManager", "acquisition", "analytics", "messages", "remotes");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"l…\", \"messages\", \"remotes\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"l…\", \"messages\", \"remotes\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "lastModified");
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ptySet(), \"lastModified\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ptySet(), \"lastModified\")");
         this.stringAdapter = a2;
         C11725h<MarketingCloud> a3 = vVar.mo29869a((Type) MarketingCloud.class, C13188p0.m40531a(), "marketingCloud");
-        C12880j.m40222a((Object) a3, "moshi.adapter<MarketingC…ySet(), \"marketingCloud\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<MarketingC…ySet(), \"marketingCloud\")");
         this.marketingCloudAdapter = a3;
         C11725h<Target> a4 = vVar.mo29869a((Type) Target.class, C13188p0.m40531a(), "target");
-        C12880j.m40222a((Object) a4, "moshi.adapter<Target>(Ta…ons.emptySet(), \"target\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<Target>(Ta…ons.emptySet(), \"target\")");
         this.targetAdapter = a4;
         C11725h<AudienceManager> a5 = vVar.mo29869a((Type) AudienceManager.class, C13188p0.m40531a(), "audienceManager");
-        C12880j.m40222a((Object) a5, "moshi.adapter<AudienceMa…Set(), \"audienceManager\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<AudienceMa…Set(), \"audienceManager\")");
         this.audienceManagerAdapter = a5;
         C11725h<Acquisition> a6 = vVar.mo29869a((Type) Acquisition.class, C13188p0.m40531a(), "acquisition");
-        C12880j.m40222a((Object) a6, "moshi.adapter<Acquisitio…mptySet(), \"acquisition\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a6, "moshi.adapter<Acquisitio…mptySet(), \"acquisition\")");
         this.acquisitionAdapter = a6;
         C11725h<Analytics> a7 = vVar.mo29869a((Type) Analytics.class, C13188p0.m40531a(), "analytics");
-        C12880j.m40222a((Object) a7, "moshi.adapter<Analytics>….emptySet(), \"analytics\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a7, "moshi.adapter<Analytics>….emptySet(), \"analytics\")");
         this.analyticsAdapter = a7;
         C11725h<List<String>> a8 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, String.class), C13188p0.m40531a(), "messages");
-        C12880j.m40222a((Object) a8, "moshi.adapter<List<Strin…s.emptySet(), \"messages\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a8, "moshi.adapter<List<Strin…s.emptySet(), \"messages\")");
         this.listOfStringAdapter = a8;
         C11725h<Remotes> a9 = vVar.mo29869a((Type) Remotes.class, C13188p0.m40531a(), "remotes");
-        C12880j.m40222a((Object) a9, "moshi.adapter<Remotes>(R…ns.emptySet(), \"remotes\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a9, "moshi.adapter<Remotes>(R…ns.emptySet(), \"remotes\")");
         this.remotesAdapter = a9;
     }
 

@@ -20,7 +20,7 @@ import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9548j;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
@@ -260,20 +260,20 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
                         } else {
                             this.f20221f.f19163a = dVar2.getPosition();
                         }
-                        C9554k0.m29405a((DataSource) this.f20217b);
+                        Util.m29405a((DataSource) this.f20217b);
                     } catch (Throwable th) {
                         th = th;
                         dVar = dVar2;
                         if (!(i == 1 || dVar == null)) {
                             this.f20221f.f19163a = dVar.getPosition();
                         }
-                        C9554k0.m29405a((DataSource) this.f20217b);
+                        Util.m29405a((DataSource) this.f20217b);
                         throw th;
                     }
                 } catch (Throwable th2) {
                     th = th2;
                     this.f20221f.f19163a = dVar.getPosition();
-                    C9554k0.m29405a((DataSource) this.f20217b);
+                    Util.m29405a((DataSource) this.f20217b);
                     throw th;
                 }
             }
@@ -366,7 +366,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
                 if (this.f20231b == null) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("None of the available extractors (");
-                    sb.append(C9554k0.m29433b((Object[]) this.f20230a));
+                    sb.append(Util.m29433b((Object[]) this.f20230a));
                     sb.append(") could read the stream.");
                     throw new C9202k0(sb.toString(), uri);
                 }
@@ -902,7 +902,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
             return 0;
         }
         C8921a b = oVar.mo23277b(j);
-        return C9554k0.m29390a(j, seekParameters, b.f19164a.f19169a, b.f19165b.f19169a);
+        return Util.m29390a(j, seekParameters, b.f19164a.f19169a, b.f19165b.f19169a);
     }
 
     /* access modifiers changed from: 0000 */
@@ -1046,11 +1046,11 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
         int i2 = length + 1;
         C9081f[] fVarArr = (C9081f[]) Arrays.copyOf(this.f20201l0, i2);
         fVarArr[length] = fVar;
-        C9554k0.m29419a((T[]) fVarArr);
+        Util.castNonNullTypeArray((T[]) fVarArr);
         this.f20201l0 = fVarArr;
         C9137e0[] e0VarArr = (C9137e0[]) Arrays.copyOf(this.f20200k0, i2);
         e0VarArr[length] = e0Var;
-        C9554k0.m29419a((T[]) e0VarArr);
+        Util.castNonNullTypeArray((T[]) e0VarArr);
         this.f20200k0 = e0VarArr;
         return e0Var;
     }

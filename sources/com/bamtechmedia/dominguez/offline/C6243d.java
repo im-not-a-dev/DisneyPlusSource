@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.bamtech.sdk4.media.offline.DownloadErrorReason;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 import org.joda.time.DateTime;
 
@@ -119,10 +119,10 @@ public final class C6243d implements Parcelable {
         if (this != obj) {
             if (obj instanceof C6243d) {
                 C6243d dVar = (C6243d) obj;
-                if (C12880j.m40224a((Object) this.f14285c, (Object) dVar.f14285c) && C12880j.m40224a((Object) this.f14277U, (Object) dVar.f14277U) && C12880j.m40224a((Object) this.f14278V, (Object) dVar.f14278V) && Float.compare(this.f14279W, dVar.f14279W) == 0) {
+                if (Intrinsics.areEqual((Object) this.f14285c, (Object) dVar.f14285c) && Intrinsics.areEqual((Object) this.f14277U, (Object) dVar.f14277U) && Intrinsics.areEqual((Object) this.f14278V, (Object) dVar.f14278V) && Float.compare(this.f14279W, dVar.f14279W) == 0) {
                     if (this.f14280X == dVar.f14280X) {
-                        if ((this.f14281Y == dVar.f14281Y) && C12880j.m40224a((Object) this.f14282Z, (Object) dVar.f14282Z) && C12880j.m40224a((Object) this.f14283a0, (Object) dVar.f14283a0)) {
-                            if (!(this.f14284b0 == dVar.f14284b0) || !C12880j.m40224a((Object) this.f14286c0, (Object) dVar.f14286c0)) {
+                        if ((this.f14281Y == dVar.f14281Y) && Intrinsics.areEqual((Object) this.f14282Z, (Object) dVar.f14282Z) && Intrinsics.areEqual((Object) this.f14283a0, (Object) dVar.f14283a0)) {
+                            if (!(this.f14284b0 == dVar.f14284b0) || !Intrinsics.areEqual((Object) this.f14286c0, (Object) dVar.f14286c0)) {
                                 return false;
                             }
                         }

@@ -11,7 +11,7 @@ import com.bamtech.sdk4.token.AccessContext;
 import com.bamtech.sdk4.token.Grant;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.SingleTransformer;
@@ -45,14 +45,14 @@ public final class DefaultDeviceAccessContextHelper implements DeviceAccessConte
         }
         Throwable cause = th.getCause();
         if (cause instanceof ServiceException) {
-            return C12880j.m40224a((Object) ((ErrorReason) C13199w.m40589f(((ServiceException) cause).getErrors())).getCode(), (Object) "invalid_grant");
+            return Intrinsics.areEqual((Object) ((ErrorReason) C13199w.m40589f(((ServiceException) cause).getErrors())).getCode(), (Object) "invalid_grant");
         }
         return false;
     }
 
     public Single<TransactionResult<AccessContext>> createDeviceContext(ServiceTransaction serviceTransaction) {
         Single<TransactionResult<AccessContext>> h = getDeviceContext(serviceTransaction).mo30235h(new DefaultDeviceAccessContextHelper$createDeviceContext$1(this, serviceTransaction));
-        C12880j.m40222a((Object) h, "getDeviceContext(transac…}\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "getDeviceContext(transac…}\n            }\n        }");
         return h;
     }
 
@@ -62,7 +62,7 @@ public final class DefaultDeviceAccessContextHelper implements DeviceAccessConte
 
     public Single<TransactionResult<AccessContext>> getDeviceContext(ServiceTransaction serviceTransaction) {
         Single<TransactionResult<AccessContext>> a = Single.m38396a((Callable<? extends SingleSource<? extends T>>) new DefaultDeviceAccessContextHelper$getDeviceContext$1<Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) a, "Single.defer {\n         …valInProgress!!\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.defer {\n         …valInProgress!!\n        }");
         return a;
     }
 

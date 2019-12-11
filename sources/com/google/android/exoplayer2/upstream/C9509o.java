@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.upstream.o */
@@ -48,7 +48,7 @@ public final class C9509o implements C9491f {
     /* renamed from: b */
     public synchronized void mo24560b() {
         int i = 0;
-        int max = Math.max(0, C9554k0.m29381a(this.f22150e, this.f22147b) - this.f22151f);
+        int max = Math.max(0, Util.m29381a(this.f22150e, this.f22147b) - this.f22151f);
         if (max < this.f22152g) {
             if (this.f22148c != null) {
                 int i2 = this.f22152g - 1;

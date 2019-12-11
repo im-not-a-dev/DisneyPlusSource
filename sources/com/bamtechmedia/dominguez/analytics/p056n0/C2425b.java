@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.analytics.p056n0;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.Consumer;
 
 /* renamed from: com.bamtechmedia.dominguez.analytics.n0.b */
@@ -16,6 +16,6 @@ final class C2425b implements Consumer {
     }
 
     public final /* synthetic */ void accept(Object obj) {
-        C12880j.m40222a(this.f6688c.invoke(obj), "invoke(...)");
+        Intrinsics.checkReturnedValueIsNotNull(this.f6688c.invoke(obj), "invoke(...)");
     }
 }

@@ -12,7 +12,7 @@ import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11724g;
 import p163g.p500m.p501a.C11733i;
 import p520io.reactivex.Single;
@@ -59,7 +59,7 @@ public final class RemoteContentSetDataSource {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f9383a, (java.lang.Object) ((com.bamtechmedia.dominguez.core.content.sets.RemoteContentSetDataSource.SetBySetId) r2).f9383a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f9383a, (java.lang.Object) ((com.bamtechmedia.dominguez.core.content.sets.RemoteContentSetDataSource.SetBySetId) r2).f9383a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -71,7 +71,7 @@ public final class RemoteContentSetDataSource {
                 com.bamtechmedia.dominguez.core.content.sets.RemoteContentSetDataSource$SetBySetId r2 = (com.bamtechmedia.dominguez.core.content.sets.RemoteContentSetDataSource.SetBySetId) r2
                 com.bamtechmedia.dominguez.core.content.sets.ContentSet r0 = r1.f9383a
                 com.bamtechmedia.dominguez.core.content.sets.ContentSet r2 = r2.f9383a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -211,7 +211,7 @@ public final class RemoteContentSetDataSource {
     /* renamed from: a */
     public final Single<ContentSet> mo13644a(ContentSetType contentSetType, String str, String str2, Long l, Integer num) {
         Single<ContentSet> g = m12747a(contentSetType).mo30233g(new C3758b(C5859p.m18900a(C5859p.m18900a(C5859p.m18900a(C13173j0.m40356a(C12907r.m40244a("setId", str), C12907r.m40244a("setType", contentSetType.name())), C12907r.m40244a("lastUpdated", l)), C12907r.m40244a("pageSize", num)), C12907r.m40244a("text_field", this.f9381b.mo13666a(contentSetType))))).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C3759c<Object,Object>(this, str2)).mo30233g(C3760d.f9387c);
-        C12880j.m40222a((Object) g, "localBookmarkMapOnce(typ…ta in GraphQlRespone\" } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "localBookmarkMapOnce(typ…ta in GraphQlRespone\" } }");
         return g;
     }
 
@@ -221,7 +221,7 @@ public final class RemoteContentSetDataSource {
             return C3166d.m11070a(this.f9382c);
         }
         Single<Map<String, Object>> b = Single.m38399b(C13173j0.m40350a());
-        C12880j.m40222a((Object) b, "Single.just(emptyMap())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(emptyMap())");
         return b;
     }
 
@@ -229,7 +229,7 @@ public final class RemoteContentSetDataSource {
     public final Single<ContentSet> mo13643a(ContentSet contentSet, String str) {
         Pair[] pairArr = {C12907r.m40244a("setId", contentSet.mo13608e()), C12907r.m40244a("setType", contentSet.mo13618k()), C12907r.m40244a("pageSize", Integer.valueOf(contentSet.m12717f0().mo13411Z())), C12907r.m40244a("page", Integer.valueOf(contentSet.m12717f0().mo13410Y()))};
         Single<ContentSet> g = this.f9380a.mo13577a(SetBySetId.class, "core/SetBySetId", C13173j0.m40356a(pairArr), str).mo30233g(new C3761e(contentSet));
-        C12880j.m40222a((Object) g, "searchApi.typedSearch<Se…items + newSet.items) } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.typedSearch<Se…items + newSet.items) } }");
         return g;
     }
 }

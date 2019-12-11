@@ -9,7 +9,7 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.p524d0.C11922d;
 
@@ -26,7 +26,7 @@ public final class GooglePlayAdvertisingIdProvider implements AdvertisingIdProvi
         try {
             if (GoogleApiAvailability.m30032a().mo24987c(context) == 0) {
                 Single b = Single.m38399b(AdvertisingIdClient.getAdvertisingIdInfo(context));
-                C12880j.m40222a((Object) b, "Single.just(AdvertisingI…vertisingIdInfo(context))");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(AdvertisingI…vertisingIdInfo(context))");
                 C11922d.m38478a(b, C19361.INSTANCE, new Function1<Info, C13145v>(this) {
                     final /* synthetic */ GooglePlayAdvertisingIdProvider this$0;
 
@@ -41,7 +41,7 @@ public final class GooglePlayAdvertisingIdProvider implements AdvertisingIdProvi
 
                     public final void invoke(Info info) {
                         GooglePlayAdvertisingIdProvider googlePlayAdvertisingIdProvider = this.this$0;
-                        C12880j.m40222a((Object) info, "info");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) info, "info");
                         googlePlayAdvertisingIdProvider.advertisingId = info.getId();
                         this.this$0.limitAdTracking = info.isLimitAdTrackingEnabled();
                     }

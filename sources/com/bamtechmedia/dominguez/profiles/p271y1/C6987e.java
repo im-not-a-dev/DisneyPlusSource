@@ -47,7 +47,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p590y.C13180m;
 import p096e.p121h.p135s.C4121a0;
@@ -215,7 +215,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
                 if (e != null) {
                     t.mo18810a(e);
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
@@ -246,7 +246,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
             if (th instanceof BadRequestException) {
                 C2810a.m10485a(this.f15543c.mo19746o(), 0, true, 1, (Object) null);
             } else {
-                C12880j.m40222a((Object) th, "error");
+                Intrinsics.checkReturnedValueIsNotNull((Object) th, "error");
                 throw th;
             }
         }
@@ -341,7 +341,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         }
 
         public final void invoke() {
-            C6672a.m20687a(this.f15546c.mo19749r(), C12880j.m40224a((Object) this.f15546c.mo19750s().mo19724y(), (Object) C6776c.f15157c), false, 2, null);
+            C6672a.m20687a(this.f15546c.mo19749r(), Intrinsics.areEqual((Object) this.f15546c.mo19750s().mo19724y(), (Object) C6776c.f15157c), false, 2, null);
             this.f15546c.mo19748q().mo19618c();
         }
     }
@@ -471,7 +471,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
                         C7008j jVar = (C7008j) next;
                         LinearLayout linearLayout = (LinearLayout) this.f15551c._$_findCachedViewById(C7946e.profilesViewGroup);
                         LinearLayout linearLayout2 = (LinearLayout) this.f15551c._$_findCachedViewById(C7946e.profilesViewGroup);
-                        C12880j.m40222a((Object) linearLayout2, "profilesViewGroup");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout2, "profilesViewGroup");
                         linearLayout.addView(jVar.mo19769a((ViewGroup) linearLayout2, i));
                         i = i2;
                     } else {
@@ -549,9 +549,9 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
             if (m21269w() == C6989b.EDIT_ALL_PROFILE) {
                 C6969y0 y0Var = this.f15526Z;
                 if (y0Var == null) {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
-                } else if (C12880j.m40224a((Object) y0Var.mo19724y(), (Object) C6774b.f15156c)) {
+                } else if (Intrinsics.areEqual((Object) y0Var.mo19724y(), (Object) C6774b.f15156c)) {
                     bVar = C2433b.PROFILE_EDIT_PROFILE_ONBOARDING;
                 }
             }
@@ -560,9 +560,9 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
             } else {
                 C6969y0 y0Var2 = this.f15526Z;
                 if (y0Var2 == null) {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
-                } else if (C12880j.m40224a((Object) y0Var2.mo19724y(), (Object) C6774b.f15156c)) {
+                } else if (Intrinsics.areEqual((Object) y0Var2.mo19724y(), (Object) C6774b.f15156c)) {
                     bVar = C2433b.PROFILE_SWITCHER;
                 } else {
                     bVar = C2433b.PROFILE_SWITCHER_PROFILE;
@@ -578,7 +578,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         if (jVar != null) {
             return jVar;
         }
-        C12880j.m40227c("logOutRouter");
+        Intrinsics.throwUninitializedPropertyAccessException("logOutRouter");
         throw null;
     }
 
@@ -596,7 +596,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         if (m1Var != null) {
             m1Var.mo19441A();
         } else {
-            C12880j.m40227c("profilesViewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("profilesViewModel");
             throw null;
         }
     }
@@ -610,11 +610,11 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
             if (xVar != null) {
                 xVar.mo20833a();
             } else {
-                C12880j.m40227c("subscriptionMessage");
+                Intrinsics.throwUninitializedPropertyAccessException("subscriptionMessage");
                 throw null;
             }
         } else {
-            C12880j.m40227c("profilesViewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("profilesViewModel");
             throw null;
         }
     }
@@ -627,10 +627,10 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
     public void onViewCreated(View view, Bundle bundle) {
         String str;
         TextView textView = (TextView) view.findViewById(C7946e.titleTextView);
-        C12880j.m40222a((Object) textView, "view.titleTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "view.titleTextView");
         textView.setText(C5880u.m18936a(m21269w().mo19757c()));
         TextView textView2 = (TextView) view.findViewById(C7946e.subTitleTextView);
-        C12880j.m40222a((Object) textView2, "view.subTitleTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "view.subTitleTextView");
         Integer b = m21269w().mo19756b();
         textView2.setText(b != null ? C5880u.m18936a(b.intValue()) : null);
         Button button = (Button) view.findViewById(C7946e.editAllProfilesButton);
@@ -641,7 +641,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
             if (d0Var != null) {
                 str = d0Var.mo19292a();
             } else {
-                C12880j.m40227c(str2);
+                Intrinsics.throwUninitializedPropertyAccessException(str2);
                 throw null;
             }
         } else {
@@ -649,7 +649,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
             if (d0Var2 != null) {
                 str = d0Var2.mo19298b();
             } else {
-                C12880j.m40227c(str2);
+                Intrinsics.throwUninitializedPropertyAccessException(str2);
                 throw null;
             }
         }
@@ -657,10 +657,10 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         button.setOnClickListener(new C6999k(this));
         ((NoConnectionView) _$_findCachedViewById(C7946e.profilesErrorView)).setRetryListener(this);
         ConstraintLayout constraintLayout = (ConstraintLayout) _$_findCachedViewById(C7946e.profilesRoot);
-        C12880j.m40222a((Object) constraintLayout, "profilesRoot");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "profilesRoot");
         constraintLayout.setVisibility(8);
         NoConnectionView noConnectionView = (NoConnectionView) _$_findCachedViewById(C7946e.profilesErrorView);
-        C12880j.m40222a((Object) noConnectionView, "profilesErrorView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) noConnectionView, "profilesErrorView");
         noConnectionView.setVisibility(8);
     }
 
@@ -670,7 +670,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         if (kVar != null) {
             return kVar;
         }
-        C12880j.m40227c("presenter");
+        Intrinsics.throwUninitializedPropertyAccessException("presenter");
         throw null;
     }
 
@@ -680,7 +680,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("profileAnalytics");
+        Intrinsics.throwUninitializedPropertyAccessException("profileAnalytics");
         throw null;
     }
 
@@ -690,7 +690,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         if (h0Var != null) {
             return h0Var;
         }
-        C12880j.m40227c("profileNavRouter");
+        Intrinsics.throwUninitializedPropertyAccessException("profileNavRouter");
         throw null;
     }
 
@@ -700,7 +700,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         if (y0Var != null) {
             return y0Var;
         }
-        C12880j.m40227c("profilesHostViewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesHostViewModel");
         throw null;
     }
 
@@ -710,7 +710,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         if (z0Var != null) {
             return z0Var;
         }
-        C12880j.m40227c("profilesListener");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesListener");
         throw null;
     }
 
@@ -720,7 +720,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         if (c1Var != null) {
             return c1Var;
         }
-        C12880j.m40227c("profilesMemoryCache");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesMemoryCache");
         throw null;
     }
 
@@ -730,7 +730,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         if (m1Var != null) {
             return m1Var;
         }
-        C12880j.m40227c("profilesViewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesViewModel");
         throw null;
     }
 
@@ -739,12 +739,12 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
     public final void m21268c(Function0<C13145v> function0) {
         LinearLayout linearLayout = (LinearLayout) _$_findCachedViewById(C7946e.profilesViewGroup);
         String str = "profilesViewGroup";
-        C12880j.m40222a((Object) linearLayout, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, str);
         if (linearLayout.getChildCount() == 0) {
             function0.invoke();
         }
         LinearLayout linearLayout2 = (LinearLayout) _$_findCachedViewById(C7946e.profilesViewGroup);
-        C12880j.m40222a((Object) linearLayout2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout2, str);
         int i = 0;
         for (Object next : C4121a0.m14117a(linearLayout2)) {
             int i2 = i + 1;
@@ -757,7 +757,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
             }
         }
         LinearLayout linearLayout3 = (LinearLayout) _$_findCachedViewById(C7946e.profilesViewGroup);
-        C12880j.m40222a((Object) linearLayout3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout3, str);
         ((LinearLayout) _$_findCachedViewById(C7946e.profilesViewGroup)).postDelayed(new C6990c(function0), (((long) (linearLayout3.getChildCount() - 1)) * 50) + 300);
     }
 
@@ -775,7 +775,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
             m21258a(c0Var);
             return;
         }
-        C12880j.m40227c("profileAnalytics");
+        Intrinsics.throwUninitializedPropertyAccessException("profileAnalytics");
         throw null;
     }
 
@@ -787,7 +787,7 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         String str = "profilesRoot";
         if (aVar.mo19452f()) {
             ConstraintLayout constraintLayout = (ConstraintLayout) _$_findCachedViewById(C7946e.profilesRoot);
-            C12880j.m40222a((Object) constraintLayout, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, str);
             constraintLayout.setVisibility(8);
             NoConnectionView noConnectionView = (NoConnectionView) _$_findCachedViewById(C7946e.profilesErrorView);
             if (noConnectionView != null) {
@@ -800,24 +800,24 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
             return;
         }
         ConstraintLayout constraintLayout2 = (ConstraintLayout) _$_findCachedViewById(C7946e.profilesRoot);
-        C12880j.m40222a((Object) constraintLayout2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout2, str);
         constraintLayout2.setVisibility(0);
         NoConnectionView noConnectionView2 = (NoConnectionView) _$_findCachedViewById(C7946e.profilesErrorView);
         if (noConnectionView2 != null) {
             C4127b0.m14131b(noConnectionView2, false);
         }
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C7946e.profilesProgressbar);
-        C12880j.m40222a((Object) progressBar, "profilesProgressbar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "profilesProgressbar");
         if (aVar.mo19448c()) {
             i = 0;
         }
         progressBar.setVisibility(i);
         TextView textView = (TextView) _$_findCachedViewById(C7946e.titleTextView);
-        C12880j.m40222a((Object) textView, "titleTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "titleTextView");
         textView.setVisibility(0);
         ((Button) _$_findCachedViewById(C7946e.editAllProfilesButton)).clearFocus();
         Button button = (Button) _$_findCachedViewById(C7946e.editAllProfilesButton);
-        C12880j.m40222a((Object) button, "editAllProfilesButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) button, "editAllProfilesButton");
         button.setVisibility(0);
         lVar.mo19762a(aVar);
     }
@@ -834,17 +834,17 @@ public final class C6987e extends C11890i implements C7717x, C2413n, C5864r, C56
         C6725m1 m1Var = this.f15522V;
         if (m1Var != null) {
             Completable a = m1Var.mo19442a(c0Var).mo30040a(C11992a.m38600a());
-            C12880j.m40222a((Object) a, "profilesViewModel.select…dSchedulers.mainThread())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "profilesViewModel.select…dSchedulers.mainThread())");
             C0722m viewLifecycleOwner = getViewLifecycleOwner();
-            C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+            Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
             C10541b a2 = C10541b.m33255a(viewLifecycleOwner, C0716a.ON_DESTROY);
-            C12880j.m40222a((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
             Object a3 = a.mo30048a((C11912b<? extends R>) C11793e.m37930a((C11790c0) a2));
-            C12880j.m40222a(a3, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+            Intrinsics.checkReturnedValueIsNotNull(a3, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
             ((C11839v) a3).mo29926a(new C6991d(this), new C6993e(this));
             return;
         }
-        C12880j.m40227c("profilesViewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesViewModel");
         throw null;
     }
 }

@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p327y.C7926c;
 import p163g.p201e.p203b.p327y.C7927d;
 import p163g.p201e.p203b.p327y.C7928e;
@@ -98,7 +98,7 @@ public final class C7935b extends C11890i {
         public final void onClick(View view) {
             C2747a o = this.f17074c.mo20842o();
             C10541b a = C10541b.m33254a((C0722m) this.f17074c);
-            C12880j.m40222a((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
             C2748a.m10387a(o, a, false, 2, null);
         }
     }
@@ -122,7 +122,7 @@ public final class C7935b extends C11890i {
     /* renamed from: q */
     private final void m23155q() {
         View _$_findCachedViewById = _$_findCachedViewById(C7927d.serviceUnavailableLoginButton);
-        C12880j.m40222a((Object) _$_findCachedViewById, "serviceUnavailableLoginButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "serviceUnavailableLoginButton");
         Bundle arguments = getArguments();
         int i = 0;
         if (!(arguments != null && !arguments.getBoolean("loggedIn"))) {
@@ -136,7 +136,7 @@ public final class C7935b extends C11890i {
     /* renamed from: r */
     private final void m23156r() {
         View _$_findCachedViewById = _$_findCachedViewById(C7927d.serviceUnavailableLogoutButton);
-        C12880j.m40222a((Object) _$_findCachedViewById, "serviceUnavailableLogoutButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "serviceUnavailableLogoutButton");
         Bundle arguments = getArguments();
         int i = 0;
         boolean z = true;
@@ -161,11 +161,11 @@ public final class C7935b extends C11890i {
             if (cVar != null) {
                 cVar.mo20839a(a);
             } else {
-                C12880j.m40227c("router");
+                Intrinsics.throwUninitializedPropertyAccessException("router");
                 throw null;
             }
         } else {
-            C12880j.m40227c("stringDictionary");
+            Intrinsics.throwUninitializedPropertyAccessException("stringDictionary");
             throw null;
         }
     }
@@ -199,7 +199,7 @@ public final class C7935b extends C11890i {
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("logOutHelper");
+        Intrinsics.throwUninitializedPropertyAccessException("logOutHelper");
         throw null;
     }
 
@@ -219,7 +219,7 @@ public final class C7935b extends C11890i {
             Window window = activity.getWindow();
             if (window != null) {
                 Context context = view.getContext();
-                C12880j.m40222a((Object) context, "view.context");
+                Intrinsics.checkReturnedValueIsNotNull((Object) context, "view.context");
                 window.setNavigationBarColor(C5837i.m18835a(context, C7926c.navBarBackground, null, false, 6, null));
             }
         }
@@ -237,7 +237,7 @@ public final class C7935b extends C11890i {
         if (cVar != null) {
             return cVar;
         }
-        C12880j.m40227c("router");
+        Intrinsics.throwUninitializedPropertyAccessException("router");
         throw null;
     }
 }

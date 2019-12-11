@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -17,7 +17,7 @@ public final class RetryHandlerKt {
     /* access modifiers changed from: private */
     public static final Single<? extends PurchaseActivationResult> executeRetry(ServiceTransaction serviceTransaction, AccessTokenProvider accessTokenProvider, AccessContextUpdater accessContextUpdater, ReceiptClaim receiptClaim, Function2<? super Map<String, String>, ? super ReceiptClaimBody, ? extends Single<? extends PurchaseActivationResult>> function2) {
         Single<? extends PurchaseActivationResult> a = accessTokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new RetryHandlerKt$executeRetry$1<Object,Object>(receiptClaim, function2)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new RetryHandlerKt$executeRetry$2<Object,Object>(accessContextUpdater, serviceTransaction));
-        C12880j.m40222a((Object) a, "accessTokenProvider.getA…  .map { response }\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "accessTokenProvider.getA…  .map { response }\n    }");
         return a;
     }
 }

@@ -7,7 +7,7 @@ import com.bamtech.sdk4.Session;
 import com.bamtech.sdk4.session.SessionInfo;
 import com.uber.autodispose.android.lifecycle.C10541b;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p327y.p328g.C7930a;
 import p163g.p503n.p504a.C11790c0;
 import p163g.p503n.p504a.C11792d0;
@@ -120,7 +120,7 @@ public final class ServiceAvailabilityStateImpl implements C7930a, C0710d {
 
         /* renamed from: a */
         public final void mo19249a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -135,7 +135,7 @@ public final class ServiceAvailabilityStateImpl implements C7930a, C0710d {
         this.f14892V = aVar;
         mVar.getLifecycle().mo4134a(this);
         PublishSubject<Boolean> q = PublishSubject.m38553q();
-        C12880j.m40222a((Object) q, "PublishSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) q, "PublishSubject.create()");
         this.f14893c = q;
     }
 
@@ -157,7 +157,7 @@ public final class ServiceAvailabilityStateImpl implements C7930a, C0710d {
     /* renamed from: d */
     public Single<Boolean> mo19244d() {
         Single<Boolean> d = this.f14891U.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) C6597a.f14894c).mo30233g(new C6598b(this)).mo30227d((Consumer<? super T>) new C6599c<Object>(this));
-        C12880j.m40222a((Object) d, "sessionOnce.flatMap { it…ss { subject.onNext(it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "sessionOnce.flatMap { it…ss { subject.onNext(it) }");
         return d;
     }
 
@@ -175,16 +175,16 @@ public final class ServiceAvailabilityStateImpl implements C7930a, C0710d {
     public void mo4131f(C0722m mVar) {
         Single d = mo19244d();
         C10541b a = C10541b.m33254a(mVar);
-        C12880j.m40222a((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
         Object a2 = d.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a((C11790c0) a));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a2).mo29920a(new C6600d(this), C6601e.f14898c);
     }
 
     /* renamed from: b */
     public Observable<Boolean> mo19243b() {
         Observable<Boolean> b = mo19244d().mo30236i().mo30140a((ObservableSource<? extends T>) this.f14893c).mo30164b();
-        C12880j.m40222a((Object) b, "availabilityOnce()\n     …  .distinctUntilChanged()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "availabilityOnce()\n     …  .distinctUntilChanged()");
         return b;
     }
 }

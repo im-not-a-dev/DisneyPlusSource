@@ -34,7 +34,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p135s.C4127b0;
 import p163g.p201e.p203b.p204d.C5411n0;
@@ -280,14 +280,14 @@ public final class C5513c extends C11890i implements C2413n, C7717x {
                 c3.mo17571a(true, new C5522c(this));
             }
             Context requireContext = this.f13065c.requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             if (C5837i.m18843e(requireContext)) {
                 PasswordInputLayout c4 = this.f13065c.f13058Z;
                 if (c4 != null) {
                     String a = C5880u.m18936a(C5415p0.enter_new_password);
                     if (a != null) {
                         String upperCase = a.toUpperCase();
-                        C12880j.m40222a((Object) upperCase, "(this as java.lang.String).toUpperCase()");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) upperCase, "(this as java.lang.String).toUpperCase()");
                         c4.setTitle(upperCase);
                         return;
                     }
@@ -471,7 +471,7 @@ public final class C5513c extends C11890i implements C2413n, C7717x {
 
         public final void invoke(boolean z) {
             Context requireContext = this.f13077c.requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             if (C5837i.m18843e(requireContext)) {
                 if (z) {
                     LoadingButton loadingButton = (LoadingButton) this.f13077c._$_findCachedViewById(C5411n0.saveButton);
@@ -625,7 +625,7 @@ public final class C5513c extends C11890i implements C2413n, C7717x {
         OnboardingToolbar onboardingToolbar = (OnboardingToolbar) _$_findCachedViewById(C5411n0.changePasswordOnboardingToolbar);
         if (onboardingToolbar != null) {
             C0532d requireActivity = requireActivity();
-            C12880j.m40222a((Object) requireActivity, "requireActivity()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
             onboardingToolbar.mo17459a(requireActivity, getView(), (NestedScrollView) _$_findCachedViewById(C5411n0.changePasswordScrollView), (ConstraintLayout) _$_findCachedViewById(C5411n0.changePasswordLayout), false, new C5530i(this));
         }
         OnboardingToolbar onboardingToolbar2 = (OnboardingToolbar) _$_findCachedViewById(C5411n0.changePasswordOnboardingToolbar);
@@ -668,10 +668,10 @@ public final class C5513c extends C11890i implements C2413n, C7717x {
                 eVar.mo17294a(inputTextValue, str);
                 return;
             }
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
@@ -703,7 +703,7 @@ public final class C5513c extends C11890i implements C2413n, C7717x {
         if (eVar != null) {
             return eVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -713,14 +713,14 @@ public final class C5513c extends C11890i implements C2413n, C7717x {
         if (bVar != null) {
             return bVar;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         View inflate = layoutInflater.inflate(C5413o0.fragment_account_change_password, viewGroup, false);
         this.f13059a0 = inflate.findViewById(C5411n0.forgotPassword);
-        C12880j.m40222a((Object) inflate, "view");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "view");
         return inflate;
     }
 
@@ -737,7 +737,7 @@ public final class C5513c extends C11890i implements C2413n, C7717x {
             C5755i.m18679a(this, eVar, null, null, new C5527f(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 

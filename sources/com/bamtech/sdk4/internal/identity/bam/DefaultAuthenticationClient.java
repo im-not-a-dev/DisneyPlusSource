@@ -7,7 +7,7 @@ import com.bamtech.sdk4.internal.networking.ConverterProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Single;
@@ -36,25 +36,25 @@ public final class DefaultAuthenticationClient implements AuthenticationClient {
 
     public Single<LoginResponse> authenticate(ServiceTransaction serviceTransaction, AuthenticationRequest authenticationRequest, Map<String, String> map) {
         Single<LoginResponse> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultAuthenticationClient$authenticate$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAuthenticationClient$authenticate$2<Object,Object>(this, map, serviceTransaction, authenticationRequest));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…_LOGIN)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…_LOGIN)\n                }");
         return a;
     }
 
     public Single<AuthenticationFlowResponse> check(ServiceTransaction serviceTransaction, CheckRequest checkRequest, Map<String, String> map) {
         Single<AuthenticationFlowResponse> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultAuthenticationClient$check$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAuthenticationClient$check$2<Object,Object>(this, map, serviceTransaction, checkRequest));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…_CHECK)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…_CHECK)\n                }");
         return a;
     }
 
     public Single<OtpRedeemResponse> redeemOnetimePasscode(ServiceTransaction serviceTransaction, OneTimePasscodeRedeemRequest oneTimePasscodeRedeemRequest, Map<String, String> map) {
         Single<OtpRedeemResponse> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultAuthenticationClient$redeemOnetimePasscode$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAuthenticationClient$redeemOnetimePasscode$2<Object,Object>(this, map, serviceTransaction, oneTimePasscodeRedeemRequest));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…E_PASSCODE)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…E_PASSCODE)\n            }");
         return a;
     }
 
     public Completable requestOneTimePasscode(ServiceTransaction serviceTransaction, OneTimePasscodeRequest oneTimePasscodeRequest, Map<String, String> map) {
         Completable b = this.configurationProvider.getServiceLink(serviceTransaction, DefaultAuthenticationClient$requestOneTimePasscode$1.INSTANCE).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultAuthenticationClient$requestOneTimePasscode$2<Object,Object>(this, map, serviceTransaction, oneTimePasscodeRequest));
-        C12880j.m40222a((Object) b, "configurationProvider.ge…E_PASSCODE)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "configurationProvider.ge…E_PASSCODE)\n            }");
         return b;
     }
 }

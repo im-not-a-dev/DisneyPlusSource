@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.Visibility;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaMember;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaValueParameter;
@@ -21,7 +21,7 @@ import kotlin.reflect.jvm.internal.structure.ReflectJavaModifierListOwner.Defaul
 /* compiled from: ReflectJavaMember.kt */
 public abstract class ReflectJavaMember extends ReflectJavaElement implements JavaMember, ReflectJavaAnnotationOwner, ReflectJavaModifierListOwner {
     public boolean equals(Object obj) {
-        return (obj instanceof ReflectJavaMember) && C12880j.m40224a((Object) getMember(), (Object) ((ReflectJavaMember) obj).getMember());
+        return (obj instanceof ReflectJavaMember) && Intrinsics.areEqual((Object) getMember(), (Object) ((ReflectJavaMember) obj).getMember());
     }
 
     public AnnotatedElement getElement() {
@@ -47,7 +47,7 @@ public abstract class ReflectJavaMember extends ReflectJavaElement implements Ja
             }
         }
         Name name2 = SpecialNames.NO_NAME_PROVIDED;
-        C12880j.m40222a((Object) name2, "SpecialNames.NO_NAME_PROVIDED");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name2, "SpecialNames.NO_NAME_PROVIDED");
         return name2;
     }
 
@@ -129,7 +129,7 @@ public abstract class ReflectJavaMember extends ReflectJavaElement implements Ja
 
     public ReflectJavaClass getContainingClass() {
         Class declaringClass = getMember().getDeclaringClass();
-        C12880j.m40222a((Object) declaringClass, "member.declaringClass");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaringClass, "member.declaringClass");
         return new ReflectJavaClass(declaringClass);
     }
 }

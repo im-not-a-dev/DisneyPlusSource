@@ -36,7 +36,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.p575i.p576a.C12706f;
@@ -550,7 +550,7 @@ public class C8491b extends C8542f implements C8485h, C8487j {
                 java.net.Socket r2 = r1.accept()     // Catch:{ Exception -> 0x00bd }
                 com.disneystreaming.companion.m.m.b r5 = r7.f18069e0     // Catch:{ Exception -> 0x00bd }
                 java.lang.String r6 = "newSocket"
-                kotlin.jvm.internal.C12880j.m40222a(r2, r6)     // Catch:{ Exception -> 0x00bd }
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r6)     // Catch:{ Exception -> 0x00bd }
                 r5.m24648a(r2)     // Catch:{ Exception -> 0x00bd }
                 goto L_0x00a6
             L_0x00bd:
@@ -828,7 +828,7 @@ public class C8491b extends C8542f implements C8485h, C8487j {
     public C8491b(CompanionConfiguration companionConfiguration) {
         super(companionConfiguration);
         ExecutorService newSingleThreadExecutor = Executors.newSingleThreadExecutor();
-        C12880j.m40222a((Object) newSingleThreadExecutor, "Executors.newSingleThreadExecutor()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) newSingleThreadExecutor, "Executors.newSingleThreadExecutor()");
         this.f18045k = C13224c1.m40660a(newSingleThreadExecutor);
     }
 
@@ -937,7 +937,7 @@ public class C8491b extends C8542f implements C8485h, C8487j {
         SocketAddress remoteSocketAddress = socket.getRemoteSocketAddress();
         if (remoteSocketAddress != null) {
             InetAddress address = ((InetSocketAddress) remoteSocketAddress).getAddress();
-            C12880j.m40222a((Object) address, "(socket.remoteSocketAddr…netSocketAddress).address");
+            Intrinsics.checkReturnedValueIsNotNull((Object) address, "(socket.remoteSocketAddr…netSocketAddress).address");
             String hostAddress = address.getHostAddress();
             C8476c cVar = C8476c.f18029a;
             StringBuilder sb = new StringBuilder();
@@ -951,7 +951,7 @@ public class C8491b extends C8542f implements C8485h, C8487j {
             }
             EncryptedMessage encryptedMessage = (EncryptedMessage) a;
             if (encryptedMessage != null) {
-                C12880j.m40222a((Object) hostAddress, "address");
+                Intrinsics.checkReturnedValueIsNotNull((Object) hostAddress, "address");
                 m24647a(encryptedMessage, hostAddress);
                 return;
             }

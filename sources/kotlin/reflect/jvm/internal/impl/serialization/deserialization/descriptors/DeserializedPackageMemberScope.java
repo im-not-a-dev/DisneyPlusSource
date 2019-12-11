@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor;
@@ -36,18 +36,18 @@ public class DeserializedPackageMemberScope extends DeserializedMemberScope {
 
     public DeserializedPackageMemberScope(PackageFragmentDescriptor packageFragmentDescriptor, Package packageR, NameResolver nameResolver, BinaryVersion binaryVersion, DeserializedContainerSource deserializedContainerSource, DeserializationComponents deserializationComponents, Function0<? extends Collection<Name>> function0) {
         TypeTable typeTable = packageR.getTypeTable();
-        C12880j.m40222a((Object) typeTable, "proto.typeTable");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeTable, "proto.typeTable");
         kotlin.reflect.jvm.internal.impl.metadata.deserialization.TypeTable typeTable2 = new kotlin.reflect.jvm.internal.impl.metadata.deserialization.TypeTable(typeTable);
         Companion companion = VersionRequirementTable.Companion;
         ProtoBuf.VersionRequirementTable versionRequirementTable = packageR.getVersionRequirementTable();
-        C12880j.m40222a((Object) versionRequirementTable, "proto.versionRequirementTable");
+        Intrinsics.checkReturnedValueIsNotNull((Object) versionRequirementTable, "proto.versionRequirementTable");
         DeserializationContext createContext = deserializationComponents.createContext(packageFragmentDescriptor, nameResolver, typeTable2, companion.create(versionRequirementTable), binaryVersion, deserializedContainerSource);
         List functionList = packageR.getFunctionList();
-        C12880j.m40222a((Object) functionList, "proto.functionList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) functionList, "proto.functionList");
         List propertyList = packageR.getPropertyList();
-        C12880j.m40222a((Object) propertyList, "proto.propertyList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) propertyList, "proto.propertyList");
         List typeAliasList = packageR.getTypeAliasList();
-        C12880j.m40222a((Object) typeAliasList, "proto.typeAliasList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeAliasList, "proto.typeAliasList");
         super(createContext, functionList, propertyList, typeAliasList, function0);
         this.packageDescriptor = packageFragmentDescriptor;
     }

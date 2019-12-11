@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.utils;
 
 import androidx.fragment.app.C0538i;
 import androidx.fragment.app.Fragment;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.s */
 /* compiled from: OnKeyDownHandler.kt */
@@ -19,7 +19,7 @@ public final class C5866s {
     /* renamed from: a */
     private static final boolean m18913a(Fragment fragment, int i) {
         C0538i childFragmentManager = fragment.getChildFragmentManager();
-        C12880j.m40222a((Object) childFragmentManager, "fragment.childFragmentManager");
+        Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "fragment.childFragmentManager");
         Fragment f = childFragmentManager.mo3160f();
         if (f != null && m18913a(f, i)) {
             return true;

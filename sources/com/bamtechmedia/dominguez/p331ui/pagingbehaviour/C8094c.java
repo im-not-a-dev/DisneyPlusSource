@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView.C0817t;
 import com.bamtechmedia.dominguez.collections.C3323f0;
 import com.bamtechmedia.dominguez.collections.p080o0.C3441g;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.p527w.p529c.C11992a;
 
@@ -46,7 +46,7 @@ public final class C8094c extends C8087a {
     public /* synthetic */ C8094c(RecyclerView recyclerView, C3323f0 f0Var, C3441g gVar, C11969r rVar, int i, DefaultConstructorMarker defaultConstructorMarker) {
         if ((i & 8) != 0) {
             rVar = C11992a.m38600a();
-            C12880j.m40222a((Object) rVar, "AndroidSchedulers.mainThread()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) rVar, "AndroidSchedulers.mainThread()");
         }
         this(recyclerView, f0Var, gVar, rVar);
     }

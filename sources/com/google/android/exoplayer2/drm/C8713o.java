@@ -4,7 +4,7 @@ import java.util.UUID;
 
 /* renamed from: com.google.android.exoplayer2.drm.o */
 /* compiled from: FrameworkMediaCrypto */
-public final class C8713o implements C8712n {
+public final class C8713o implements ExoMediaCrypto {
 
     /* renamed from: a */
     public final UUID f18506a;

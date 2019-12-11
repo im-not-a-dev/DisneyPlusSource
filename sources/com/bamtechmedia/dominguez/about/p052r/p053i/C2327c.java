@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.about.p052r.p053i;
 import android.widget.TextView;
 import com.bamtechmedia.dominguez.about.C2283n;
 import com.bamtechmedia.dominguez.about.C2284o;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11853e;
 import p163g.p509o.p510a.p511l.C11866a;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -20,7 +20,7 @@ public final class C2327c extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f6488c, (java.lang.Object) ((com.bamtechmedia.dominguez.about.p052r.p053i.C2327c) r2).f6488c) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f6488c, (java.lang.Object) ((com.bamtechmedia.dominguez.about.p052r.p053i.C2327c) r2).f6488c) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -32,7 +32,7 @@ public final class C2327c extends C11866a {
             com.bamtechmedia.dominguez.about.r.i.c r2 = (com.bamtechmedia.dominguez.about.p052r.p053i.C2327c) r2
             java.lang.String r0 = r1.f6488c
             java.lang.String r2 = r2.f6488c
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:
@@ -58,7 +58,7 @@ public final class C2327c extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof C2327c) && C12880j.m40224a((Object) ((C2327c) eVar).f6488c, (Object) this.f6488c);
+        return (eVar instanceof C2327c) && Intrinsics.areEqual((Object) ((C2327c) eVar).f6488c, (Object) this.f6488c);
     }
 
     public String toString() {
@@ -71,7 +71,7 @@ public final class C2327c extends C11866a {
 
     public void bind(C11867b bVar, int i) {
         TextView textView = (TextView) bVar.mo20994a().findViewById(C2283n.about_section_title);
-        C12880j.m40222a((Object) textView, "viewHolder.about_section_title");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "viewHolder.about_section_title");
         textView.setText(this.f6488c);
     }
 }

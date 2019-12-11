@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content;
 import com.bamtechmedia.dominguez.core.content.collections.C3680n;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.content.x */
 /* compiled from: VideoArtAssetExt.kt */
@@ -21,7 +21,7 @@ public final class C3794x {
                 break;
             }
             Object next = it.next();
-            if (C12880j.m40224a((Object) ((C3680n) next).mo13319W(), (Object) str)) {
+            if (Intrinsics.areEqual((Object) ((C3680n) next).mo13319W(), (Object) str)) {
                 obj = next;
                 break;
             }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p581d0.C12731a;
 import kotlin.reflect.KDeclarationContainer;
 import kotlin.reflect.KFunction;
@@ -112,7 +112,7 @@ public final class ReflectJvmMapping {
             kotlin.reflect.jvm.internal.components.ReflectKotlinClass$Factory r0 = kotlin.reflect.jvm.internal.components.ReflectKotlinClass.Factory
             java.lang.Class r1 = r5.getDeclaringClass()
             java.lang.String r2 = "declaringClass"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             kotlin.reflect.jvm.internal.components.ReflectKotlinClass r0 = r0.create(r1)
             r1 = 0
             if (r0 == 0) goto L_0x001d
@@ -141,7 +141,7 @@ public final class ReflectJvmMapping {
         L_0x0034:
             kotlin.reflect.jvm.internal.KPackageImpl r0 = new kotlin.reflect.jvm.internal.KPackageImpl
             java.lang.Class r5 = r5.getDeclaringClass()
-            kotlin.jvm.internal.C12880j.m40222a(r5, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r2)
             r0.<init>(r5, r1, r4, r1)
         L_0x0040:
             return r0
@@ -181,7 +181,7 @@ public final class ReflectJvmMapping {
             r3 = r1
             kotlin.reflect.KFunction r3 = (kotlin.reflect.KFunction) r3
             java.lang.reflect.Method r3 = getJavaMethod(r3)
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r3, r8)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r3, r8)
             if (r3 == 0) goto L_0x0036
             goto L_0x004f
         L_0x004e:
@@ -191,7 +191,7 @@ public final class ReflectJvmMapping {
             return r1
         L_0x0052:
             java.lang.Class r0 = r8.getDeclaringClass()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             kotlin.reflect.KClass r0 = kotlin.p581d0.C12731a.m39867a(r0)
             kotlin.reflect.KClass r0 = kotlin.reflect.full.KClasses.getCompanionObject(r0)
             if (r0 == 0) goto L_0x00bf
@@ -207,23 +207,23 @@ public final class ReflectJvmMapping {
             if (r4 == 0) goto L_0x00b5
             java.lang.String r5 = r4.getName()
             java.lang.String r6 = r8.getName()
-            boolean r5 = kotlin.jvm.internal.C12880j.m40224a(r5, r6)
+            boolean r5 = kotlin.jvm.internal.Intrinsics.areEqual(r5, r6)
             if (r5 == 0) goto L_0x00b5
             java.lang.Class[] r5 = r4.getParameterTypes()
             if (r5 == 0) goto L_0x00b1
             java.lang.Class[] r6 = r8.getParameterTypes()
             java.lang.String r7 = "this.parameterTypes"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r7)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r7)
             boolean r5 = java.util.Arrays.equals(r5, r6)
             if (r5 == 0) goto L_0x00b5
             java.lang.Class r4 = r4.getReturnType()
             java.lang.Class r5 = r8.getReturnType()
-            boolean r4 = kotlin.jvm.internal.C12880j.m40224a(r4, r5)
+            boolean r4 = kotlin.jvm.internal.Intrinsics.areEqual(r4, r5)
             if (r4 == 0) goto L_0x00b5
             r4 = 1
             goto L_0x00b6
         L_0x00b1:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r2
         L_0x00b5:
             r4 = 0
@@ -238,7 +238,7 @@ public final class ReflectJvmMapping {
             return r3
         L_0x00bf:
             java.lang.Class r0 = r8.getDeclaringClass()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             kotlin.reflect.KClass r0 = kotlin.p581d0.C12731a.m39867a(r0)
             java.util.Collection r0 = kotlin.reflect.full.KClasses.getFunctions(r0)
             java.util.Iterator r0 = r0.iterator()
@@ -249,7 +249,7 @@ public final class ReflectJvmMapping {
             r3 = r1
             kotlin.reflect.KFunction r3 = (kotlin.reflect.KFunction) r3
             java.lang.reflect.Method r3 = getJavaMethod(r3)
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r3, r8)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r3, r8)
             if (r3 == 0) goto L_0x00d2
             goto L_0x00eb
         L_0x00ea:
@@ -281,7 +281,7 @@ public final class ReflectJvmMapping {
                     break;
                 }
                 Object next2 = it.next();
-                if (C12880j.m40224a((Object) getJavaField((KProperty) next2), (Object) field)) {
+                if (Intrinsics.areEqual((Object) getJavaField((KProperty) next2), (Object) field)) {
                     obj = next2;
                     break;
                 }
@@ -289,14 +289,14 @@ public final class ReflectJvmMapping {
             return (KProperty) obj;
         }
         Class declaringClass = field.getDeclaringClass();
-        C12880j.m40222a((Object) declaringClass, "declaringClass");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaringClass, "declaringClass");
         Iterator it2 = KClasses.getMemberProperties(C12731a.m39867a(declaringClass)).iterator();
         while (true) {
             if (!it2.hasNext()) {
                 break;
             }
             Object next3 = it2.next();
-            if (C12880j.m40224a((Object) getJavaField((KProperty1) next3), (Object) field)) {
+            if (Intrinsics.areEqual((Object) getJavaField((KProperty1) next3), (Object) field)) {
                 obj = next3;
                 break;
             }
@@ -310,7 +310,7 @@ public final class ReflectJvmMapping {
     public static final <T> KFunction<T> getKotlinFunction(Constructor<T> constructor) {
         Object obj;
         Class declaringClass = constructor.getDeclaringClass();
-        C12880j.m40222a((Object) declaringClass, "declaringClass");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaringClass, "declaringClass");
         Iterator it = C12731a.m39867a(declaringClass).getConstructors().iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -318,7 +318,7 @@ public final class ReflectJvmMapping {
                 break;
             }
             obj = it.next();
-            if (C12880j.m40224a((Object) getJavaConstructor((KFunction) obj), (Object) constructor)) {
+            if (Intrinsics.areEqual((Object) getJavaConstructor((KFunction) obj), (Object) constructor)) {
                 break;
             }
         }

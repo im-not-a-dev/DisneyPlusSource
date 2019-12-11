@@ -9,7 +9,7 @@ import android.text.style.UnderlineSpan;
 import com.facebook.stetho.server.http.HttpStatus;
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9325e;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -342,7 +342,7 @@ public final class C9335a extends C9343e {
             this.f21389j = 0;
             this.f21388i = 1;
         } else if (i != 4) {
-            C9563q.m29500d("Cea608Decoder", "Invalid channel. Defaulting to CC1.");
+            Log.m29500d("Cea608Decoder", "Invalid channel. Defaulting to CC1.");
             this.f21389j = 0;
             this.f21388i = 0;
         } else {

@@ -1,7 +1,7 @@
 package kotlin.p588j0;
 
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlin.j0.w */
 /* compiled from: StringsJVM.kt */
@@ -43,13 +43,13 @@ class C12832w extends C12831v {
         }
         StringBuilder sb = new StringBuilder();
         String substring = str.substring(0, 1);
-        C12880j.m40222a((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
         if (substring != null) {
             String upperCase = substring.toUpperCase();
-            C12880j.m40222a((Object) upperCase, "(this as java.lang.String).toUpperCase()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) upperCase, "(this as java.lang.String).toUpperCase()");
             sb.append(upperCase);
             String substring2 = str.substring(1);
-            C12880j.m40222a((Object) substring2, "(this as java.lang.String).substring(startIndex)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) substring2, "(this as java.lang.String).substring(startIndex)");
             sb.append(substring2);
             return sb.toString();
         }
@@ -63,13 +63,13 @@ class C12832w extends C12831v {
         }
         StringBuilder sb = new StringBuilder();
         String substring = str.substring(0, 1);
-        C12880j.m40222a((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
         if (substring != null) {
             String lowerCase = substring.toLowerCase();
-            C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
             sb.append(lowerCase);
             String substring2 = str.substring(1);
-            C12880j.m40222a((Object) substring2, "(this as java.lang.String).substring(startIndex)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) substring2, "(this as java.lang.String).substring(startIndex)");
             sb.append(substring2);
             return sb.toString();
         }
@@ -80,7 +80,7 @@ class C12832w extends C12831v {
     public static final String m40114a(String str, char c, char c2, boolean z) {
         if (!z) {
             String replace = str.replace(c, c2);
-            C12880j.m40222a((Object) replace, "(this as java.lang.Strin…replace(oldChar, newChar)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) replace, "(this as java.lang.Strin…replace(oldChar, newChar)");
             return replace;
         }
         return C12788p.m39984a(C12833x.m40147a((CharSequence) str, new char[]{c}, z, 0, 4, (Object) null), String.valueOf(c2), null, null, 0, null, null, 62, null);
@@ -199,7 +199,7 @@ class C12832w extends C12831v {
                     }
                 }
                 String sb2 = sb.toString();
-                C12880j.m40222a((Object) sb2, "sb.toString()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "sb.toString()");
                 return sb2;
             }
             char charAt = charSequence.charAt(0);

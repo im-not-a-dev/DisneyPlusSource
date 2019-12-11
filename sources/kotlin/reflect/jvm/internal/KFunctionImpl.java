@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12863c;
 import kotlin.jvm.internal.C12878h;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -89,7 +89,7 @@ public final class KFunctionImpl extends KCallableImpl<Object> implements C12878
 
     public boolean equals(Object obj) {
         KFunctionImpl asKFunctionImpl = UtilKt.asKFunctionImpl(obj);
-        if (asKFunctionImpl == null || !C12880j.m40224a((Object) getContainer(), (Object) asKFunctionImpl.getContainer()) || !C12880j.m40224a((Object) getName(), (Object) asKFunctionImpl.getName()) || !C12880j.m40224a((Object) this.signature, (Object) asKFunctionImpl.signature) || !C12880j.m40224a(this.rawBoundReceiver, asKFunctionImpl.rawBoundReceiver)) {
+        if (asKFunctionImpl == null || !Intrinsics.areEqual((Object) getContainer(), (Object) asKFunctionImpl.getContainer()) || !Intrinsics.areEqual((Object) getName(), (Object) asKFunctionImpl.getName()) || !Intrinsics.areEqual((Object) this.signature, (Object) asKFunctionImpl.signature) || !Intrinsics.areEqual(this.rawBoundReceiver, asKFunctionImpl.rawBoundReceiver)) {
             return false;
         }
         return true;
@@ -117,7 +117,7 @@ public final class KFunctionImpl extends KCallableImpl<Object> implements C12878
 
     public String getName() {
         String asString = getDescriptor().getName().asString();
-        C12880j.m40222a((Object) asString, "descriptor.name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "descriptor.name.asString()");
         return asString;
     }
 
@@ -130,7 +130,7 @@ public final class KFunctionImpl extends KCallableImpl<Object> implements C12878
     }
 
     public boolean isBound() {
-        return !C12880j.m40224a(this.rawBoundReceiver, C12863c.NO_RECEIVER);
+        return !Intrinsics.areEqual(this.rawBoundReceiver, C12863c.NO_RECEIVER);
     }
 
     public boolean isExternal() {
@@ -192,7 +192,7 @@ public final class KFunctionImpl extends KCallableImpl<Object> implements C12878
 
     public KFunctionImpl(KDeclarationContainerImpl kDeclarationContainerImpl, FunctionDescriptor functionDescriptor) {
         String asString = functionDescriptor.getName().asString();
-        C12880j.m40222a((Object) asString, "descriptor.name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "descriptor.name.asString()");
         this(kDeclarationContainerImpl, asString, RuntimeTypeMapper.INSTANCE.mapSignature(functionDescriptor).asString(), functionDescriptor, null, 16, null);
     }
 

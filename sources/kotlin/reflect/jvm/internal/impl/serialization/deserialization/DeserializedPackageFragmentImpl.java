@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Package;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.PackageFragment;
@@ -29,9 +29,9 @@ public abstract class DeserializedPackageFragmentImpl extends DeserializedPackag
         this.metadataVersion = binaryVersion;
         this.containerSource = deserializedContainerSource;
         StringTable strings = packageFragment.getStrings();
-        C12880j.m40222a((Object) strings, "proto.strings");
+        Intrinsics.checkReturnedValueIsNotNull((Object) strings, "proto.strings");
         QualifiedNameTable qualifiedNames = packageFragment.getQualifiedNames();
-        C12880j.m40222a((Object) qualifiedNames, "proto.qualifiedNames");
+        Intrinsics.checkReturnedValueIsNotNull((Object) qualifiedNames, "proto.qualifiedNames");
         this.nameResolver = new NameResolverImpl(strings, qualifiedNames);
         this.classDataFinder = new ProtoBasedClassDataFinder(packageFragment, this.nameResolver, this.metadataVersion, new DeserializedPackageFragmentImpl$classDataFinder$1(this));
         this._proto = packageFragment;
@@ -42,7 +42,7 @@ public abstract class DeserializedPackageFragmentImpl extends DeserializedPackag
         if (memberScope != null) {
             return memberScope;
         }
-        C12880j.m40227c("_memberScope");
+        Intrinsics.throwUninitializedPropertyAccessException("_memberScope");
         throw null;
     }
 
@@ -51,7 +51,7 @@ public abstract class DeserializedPackageFragmentImpl extends DeserializedPackag
         if (packageFragment != null) {
             this._proto = null;
             Package packageR = packageFragment.getPackage();
-            C12880j.m40222a((Object) packageR, "proto.`package`");
+            Intrinsics.checkReturnedValueIsNotNull((Object) packageR, "proto.`package`");
             DeserializedPackageMemberScope deserializedPackageMemberScope = new DeserializedPackageMemberScope(this, packageR, this.nameResolver, this.metadataVersion, this.containerSource, deserializationComponents, new DeserializedPackageFragmentImpl$initialize$1(this));
             this._memberScope = deserializedPackageMemberScope;
             return;

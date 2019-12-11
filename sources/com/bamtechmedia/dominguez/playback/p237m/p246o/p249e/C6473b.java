@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.playback.common.contentrating.C6285b.C6290e;
 import com.bamtechmedia.dominguez.playback.common.tracks.C6320f.C6321a;
 import com.bamtechmedia.dominguez.playback.p237m.C6336a;
 import com.bamtechmedia.dominguez.playback.p237m.C6338c;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Observable;
 
 /* renamed from: com.bamtechmedia.dominguez.playback.m.o.e.b */
@@ -37,7 +37,7 @@ public final class C6473b implements C5742a<C6336a> {
         C6285b bVar2 = bVar;
         C5884x.m18951a((Object) aVar2, (String) null, 1, (Object) null);
         Observable<C6336a> b2 = Observable.m38309b(C6336a.m19906a(aVar2, null, null, null, bVar2, C6321a.f14413a, false, null, false, 0, null, null, null, null, false, false, 32743, null));
-        C12880j.m40222a((Object) b2, "Observable.just(\n       …n\n            )\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b2, "Observable.just(\n       …n\n            )\n        )");
         return b2;
     }
 }

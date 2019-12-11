@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.core.content.search.C3724a;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import org.joda.time.DateTime;
 
@@ -63,7 +63,7 @@ public final class C2320h implements OnDateSetListener {
         public final boolean invoke() {
             DateTime now = DateTime.now();
             int i = this.f6480c;
-            C12880j.m40222a((Object) now, "date");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "date");
             return i == now.getYear() && this.f6479V + 1 == now.getMonthOfYear() && this.f6478U == now.getDayOfMonth();
         }
     }
@@ -85,7 +85,7 @@ public final class C2320h implements OnDateSetListener {
             b = DateTime.now();
         }
         Context requireContext = this.f6477c.requireContext();
-        C12880j.m40222a((Object) b, "date");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "date");
         DatePickerDialog datePickerDialog = new DatePickerDialog(requireContext, this, b.getYear(), b.getMonthOfYear() - 1, b.getDayOfMonth());
         datePickerDialog.show();
     }

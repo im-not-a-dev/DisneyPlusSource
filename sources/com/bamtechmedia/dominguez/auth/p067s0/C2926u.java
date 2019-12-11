@@ -7,7 +7,7 @@ import com.bamtechmedia.dominguez.auth.p061o0.p063i.C2754c;
 import com.bamtechmedia.dominguez.auth.p061o0.p063i.C2756e;
 import com.bamtechmedia.dominguez.auth.p067s0.C2901o0.C2903b;
 import java.util.HashMap;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.auth.s0.u */
 /* compiled from: OtpLoginFragment.kt */
@@ -52,7 +52,7 @@ public final class C2926u extends C2889o {
             if (eVar != null) {
                 eVar.mo11773b();
             } else {
-                C12880j.m40227c("passwordResetRouter");
+                Intrinsics.throwUninitializedPropertyAccessException("passwordResetRouter");
                 throw null;
             }
         } else if (bVar.mo11907a()) {
@@ -60,7 +60,7 @@ public final class C2926u extends C2889o {
             if (cVar != null) {
                 cVar.mo11764a();
             } else {
-                C12880j.m40227c("authHostRouter");
+                Intrinsics.throwUninitializedPropertyAccessException("authHostRouter");
                 throw null;
             }
         }

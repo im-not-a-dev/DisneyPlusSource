@@ -14,7 +14,7 @@ import java.util.Map.Entry;
 import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Function;
@@ -137,7 +137,7 @@ public final class C6410j {
     /* renamed from: a */
     private final void m20062a(String str, String str2, Map<String, String> map) {
         Single g = this.f14540e.mo18834a(str).mo30220b(this.f14539d).mo30233g(new C6412b(this, map, str2));
-        C12880j.m40222a((Object) g, "contentLocationProvider.…mpseExtras)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "contentLocationProvider.…mpseExtras)\n            }");
         C5826e0.m18824a(g);
     }
 }

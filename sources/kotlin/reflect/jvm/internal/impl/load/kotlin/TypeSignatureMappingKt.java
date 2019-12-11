@@ -7,7 +7,7 @@ import java.util.List;
 import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.jvm.functions.C12853n;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.FunctionTypesKt;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
@@ -54,7 +54,7 @@ public final class TypeSignatureMappingKt {
         KotlinType kotlinType2;
         ClassifierDescriptor declarationDescriptor = kotlinType.getConstructor().getDeclarationDescriptor();
         if (declarationDescriptor != null) {
-            C12880j.m40222a((Object) declarationDescriptor, "kotlinType.constructor.d…n expected: $kotlinType\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declarationDescriptor, "kotlinType.constructor.d…n expected: $kotlinType\")");
             if (!hashSet.add(declarationDescriptor)) {
                 return null;
             }
@@ -97,15 +97,15 @@ public final class TypeSignatureMappingKt {
             containingDeclaration = getContainer(containingDeclaration);
         }
         Name safeIdentifier = SpecialNames.safeIdentifier(classDescriptor.getName());
-        C12880j.m40222a((Object) safeIdentifier, "SpecialNames.safeIdentifier(klass.name)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) safeIdentifier, "SpecialNames.safeIdentifier(klass.name)");
         String identifier = safeIdentifier.getIdentifier();
-        C12880j.m40222a((Object) identifier, "SpecialNames.safeIdentifier(klass.name).identifier");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "SpecialNames.safeIdentifier(klass.name).identifier");
         if (containingDeclaration instanceof PackageFragmentDescriptor) {
             FqName fqName = ((PackageFragmentDescriptor) containingDeclaration).getFqName();
             if (!fqName.isRoot()) {
                 StringBuilder sb = new StringBuilder();
                 String asString = fqName.asString();
-                C12880j.m40222a((Object) asString, "fqName.asString()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) asString, "fqName.asString()");
                 sb.append(C12832w.m40115a(asString, '.', '/', false, 4, (Object) null));
                 sb.append('/');
                 sb.append(identifier);
@@ -178,14 +178,14 @@ public final class TypeSignatureMappingKt {
             if (r3 != 0) goto L_0x0028
             goto L_0x0029
         L_0x0024:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r2
         L_0x0028:
             r1 = 0
         L_0x0029:
             return r1
         L_0x002a:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r2
         */
         throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.impl.load.kotlin.TypeSignatureMappingKt.hasVoidReturnType(kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor):boolean");
@@ -203,9 +203,9 @@ public final class TypeSignatureMappingKt {
             boolean z2 = false;
             if (primitiveType != null) {
                 JvmPrimitiveType jvmPrimitiveType = JvmPrimitiveType.get(primitiveType);
-                C12880j.m40222a((Object) jvmPrimitiveType, "JvmPrimitiveType.get(primitiveType)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) jvmPrimitiveType, "JvmPrimitiveType.get(primitiveType)");
                 String desc = jvmPrimitiveType.getDesc();
-                C12880j.m40222a((Object) desc, "JvmPrimitiveType.get(primitiveType).desc");
+                Intrinsics.checkReturnedValueIsNotNull((Object) desc, "JvmPrimitiveType.get(primitiveType).desc");
                 Object createFromString = jvmTypeFactory.createFromString(desc);
                 if (!TypeUtils.isNullableType(kotlinType) && !TypeEnhancementKt.hasEnhancedNullability(kotlinType)) {
                     z = false;
@@ -217,7 +217,7 @@ public final class TypeSignatureMappingKt {
                 StringBuilder sb = new StringBuilder();
                 sb.append("[");
                 JvmPrimitiveType jvmPrimitiveType2 = JvmPrimitiveType.get(primitiveArrayType);
-                C12880j.m40222a((Object) jvmPrimitiveType2, "JvmPrimitiveType.get(arrayElementType)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) jvmPrimitiveType2, "JvmPrimitiveType.get(arrayElementType)");
                 sb.append(jvmPrimitiveType2.getDesc());
                 return jvmTypeFactory.createFromString(sb.toString());
             } else if (KotlinBuiltIns.isUnderKotlinPackage(classDescriptor)) {
@@ -229,7 +229,7 @@ public final class TypeSignatureMappingKt {
                             Iterator it = mutabilityMappings.iterator();
                             while (true) {
                                 if (it.hasNext()) {
-                                    if (C12880j.m40224a((Object) ((PlatformMutabilityMapping) it.next()).getJavaClass(), (Object) mapKotlinToJava)) {
+                                    if (Intrinsics.areEqual((Object) ((PlatformMutabilityMapping) it.next()).getJavaClass(), (Object) mapKotlinToJava)) {
                                         z2 = true;
                                         break;
                                     }
@@ -243,9 +243,9 @@ public final class TypeSignatureMappingKt {
                         }
                     }
                     JvmClassName byClassId = JvmClassName.byClassId(mapKotlinToJava);
-                    C12880j.m40222a((Object) byClassId, "JvmClassName.byClassId(classId)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) byClassId, "JvmClassName.byClassId(classId)");
                     String internalName = byClassId.getInternalName();
-                    C12880j.m40222a((Object) internalName, "JvmClassName.byClassId(classId).internalName");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) internalName, "JvmClassName.byClassId(classId).internalName");
                     return jvmTypeFactory.createObjectType(internalName);
                 }
             }
@@ -281,7 +281,7 @@ public final class TypeSignatureMappingKt {
         }
         ClassifierDescriptor declarationDescriptor = constructor.getDeclarationDescriptor();
         if (declarationDescriptor != null) {
-            C12880j.m40222a((Object) declarationDescriptor, "constructor.declarationD…structor of $kotlinType\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declarationDescriptor, "constructor.declarationD…structor of $kotlinType\")");
             String str = "null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor";
             if (ErrorUtils.isError(declarationDescriptor)) {
                 T createObjectType = jvmTypeFactory.createObjectType("error/NonExistentClass");
@@ -306,7 +306,7 @@ public final class TypeSignatureMappingKt {
                     }
                     if (!typeMappingMode.isForAnnotationParameter() || !KotlinBuiltIns.isKClass(classDescriptor)) {
                         ClassDescriptor original = classDescriptor.getOriginal();
-                        C12880j.m40222a((Object) original, "descriptor.original");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) original, "descriptor.original");
                         t = typeMappingConfiguration.getPredefinedTypeForClass(original);
                         if (t == null) {
                             if (classDescriptor.getKind() == ClassKind.ENUM_ENTRY) {
@@ -318,7 +318,7 @@ public final class TypeSignatureMappingKt {
                                 }
                             }
                             ClassDescriptor original2 = classDescriptor.getOriginal();
-                            C12880j.m40222a((Object) original2, "enumClassIfEnumEntry.original");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) original2, "enumClassIfEnumEntry.original");
                             t = jvmTypeFactory.createObjectType(computeInternalName(original2, typeMappingConfiguration, z));
                         }
                     } else {
@@ -333,7 +333,7 @@ public final class TypeSignatureMappingKt {
                         T mapType = mapType(TypeUtilsKt.getRepresentativeUpperBound((TypeParameterDescriptor) declarationDescriptor), jvmTypeFactory, typeMappingMode, typeMappingConfiguration, null, FunctionsKt.getDO_NOTHING_3(), z);
                         if (jvmDescriptorTypeWriter2 != null) {
                             Name name = declarationDescriptor.getName();
-                            C12880j.m40222a((Object) name, "descriptor.getName()");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) name, "descriptor.getName()");
                             jvmDescriptorTypeWriter.writeTypeVariable(name, mapType);
                         }
                         return mapType;
@@ -349,7 +349,7 @@ public final class TypeSignatureMappingKt {
             } else if (kotlinType.getArguments().size() == 1) {
                 TypeProjection typeProjection = (TypeProjection) kotlinType.getArguments().get(0);
                 KotlinType type = typeProjection.getType();
-                C12880j.m40222a((Object) type, "memberProjection.type");
+                Intrinsics.checkReturnedValueIsNotNull((Object) type, "memberProjection.type");
                 if (typeProjection.getProjectionKind() == Variance.IN_VARIANCE) {
                     obj = jvmTypeFactory.createObjectType("java/lang/Object");
                     if (jvmDescriptorTypeWriter2 != null) {
@@ -362,7 +362,7 @@ public final class TypeSignatureMappingKt {
                         jvmDescriptorTypeWriter.writeArrayType();
                     }
                     Variance projectionKind = typeProjection.getProjectionKind();
-                    C12880j.m40222a((Object) projectionKind, "memberProjection.projectionKind");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) projectionKind, "memberProjection.projectionKind");
                     obj = mapType(type, jvmTypeFactory, typeMappingMode.toGenericArgumentMode(projectionKind), typeMappingConfiguration, jvmDescriptorTypeWriter, nVar, z);
                     if (jvmDescriptorTypeWriter2 != null) {
                         jvmDescriptorTypeWriter.writeArrayEnd();

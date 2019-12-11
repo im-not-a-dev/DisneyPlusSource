@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.types.SimpleType;
 
@@ -17,7 +17,7 @@ final class C12928xf01ceaf8 extends C12881k implements Function0<SimpleType> {
 
     public final SimpleType invoke() {
         SimpleType anyType = this.this$0.moduleDescriptor.getBuiltIns().getAnyType();
-        C12880j.m40222a((Object) anyType, "moduleDescriptor.builtIns.anyType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) anyType, "moduleDescriptor.builtIns.anyType");
         return anyType;
     }
 }

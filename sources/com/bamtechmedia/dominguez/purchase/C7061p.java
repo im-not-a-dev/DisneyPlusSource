@@ -7,7 +7,7 @@ import com.bamtechmedia.dominguez.paywall.exceptions.C6261a;
 import com.bamtechmedia.dominguez.paywall.exceptions.PaywallError;
 import com.bamtechmedia.dominguez.paywall.exceptions.PaywallError.C6256e;
 import com.bamtechmedia.dominguez.paywall.exceptions.PaywallError.C6258g;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p299m.C7543f.C7544a;
 import p163g.p201e.p203b.p299m.C7547h;
 import p163g.p201e.p203b.p299m.p300y.C7576g;
@@ -17,7 +17,7 @@ import p163g.p201e.p203b.p307o.p308p.C7626a;
 import p163g.p201e.p203b.p319v.C7887p.C7889b;
 import p163g.p201e.p203b.p319v.C7904t;
 import p163g.p201e.p203b.p319v.C7906v;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtechmedia.dominguez.purchase.p */
 /* compiled from: PaywallErrorHandler.kt */
@@ -54,7 +54,7 @@ public final class C7061p {
         if (!(th instanceof C6261a)) {
             return false;
         }
-        return C12880j.m40224a((Object) ((C6261a) th).mo18845b(), (Object) C6258g.f14297a);
+        return Intrinsics.areEqual((Object) ((C6261a) th).mo18845b(), (Object) C6258g.f14297a);
     }
 
     /* renamed from: a */
@@ -64,16 +64,16 @@ public final class C7061p {
         sb.append(bVar.mo20805b());
         sb.append("; Type: ");
         sb.append(bVar.mo20804a());
-        C14100a.m44526b(sb.toString(), new Object[0]);
+        Timber.m44526b(sb.toString(), new Object[0]);
         PaywallError a = bVar.mo20804a();
-        if (C12880j.m40224a((Object) a, (Object) C6256e.f14295a)) {
+        if (Intrinsics.areEqual((Object) a, (Object) C6256e.f14295a)) {
             C7547h hVar = this.f15660a;
             C7544a aVar = new C7544a();
             aVar.mo20467a(Integer.valueOf(C7906v.paywall_error_purchase_restore_fail_expired));
             aVar.mo20466a(C7904t.paywall_restore_error);
             aVar.mo20480g(Integer.valueOf(C7906v.btn_dismiss));
             hVar.mo20491b(aVar.mo20465a());
-        } else if (C12880j.m40224a((Object) a, (Object) C6258g.f14297a)) {
+        } else if (Intrinsics.areEqual((Object) a, (Object) C6258g.f14297a)) {
             this.f15660a.mo20489a(C7576g.ERROR, C7906v.purchase_restore_error_no_products);
         } else {
             C7547h hVar2 = this.f15660a;
@@ -98,7 +98,7 @@ public final class C7061p {
 
     /* renamed from: a */
     private final int m21406a(C7619i iVar) {
-        if (C12880j.m40224a((Object) iVar.mo20545c(), (Object) LinkSubscriptionPartialError.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) iVar.mo20545c(), (Object) LinkSubscriptionPartialError.INSTANCE)) {
             return C7904t.paywall_sdk_error_link_subscription_partial_error;
         }
         return C7904t.paywall_sdk_error;

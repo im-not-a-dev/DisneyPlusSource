@@ -5,7 +5,7 @@ import android.view.View;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p287k.C7310d;
 
 /* renamed from: com.bamtechmedia.dominguez.detail.common.g0.d */
@@ -15,7 +15,7 @@ public final class C5950d {
     public final boolean mo17884a(int i, View view, View view2) {
         boolean z = i == 19;
         boolean z2 = i == 20;
-        boolean a = C12880j.m40224a(view.getTag(C7310d.focusHelperTabView), (Object) Boolean.valueOf(true));
+        boolean a = Intrinsics.areEqual(view.getTag(C7310d.focusHelperTabView), (Object) Boolean.valueOf(true));
         if (a && z2) {
             View focusSearch = view.focusSearch(130);
             if (focusSearch != null && focusSearch.getId() == C7310d.contentDetailRecyclerView) {
@@ -36,7 +36,7 @@ public final class C5950d {
         if (a == 20) {
             z3 = true;
         }
-        Integer num = (!z3 || !z2 || !z) ? (!z3 || !z2) ? (!z4 || !C12880j.m40224a(view.getTag(C7310d.focusHelperTabView), (Object) Boolean.valueOf(true))) ? null : Integer.valueOf(C7310d.headerExpanded) : Integer.valueOf(C7310d.headerCollapsed) : Integer.valueOf(C7310d.headerCollapsedNoBlur);
+        Integer num = (!z3 || !z2 || !z) ? (!z3 || !z2) ? (!z4 || !Intrinsics.areEqual(view.getTag(C7310d.focusHelperTabView), (Object) Boolean.valueOf(true))) ? null : Integer.valueOf(C7310d.headerExpanded) : Integer.valueOf(C7310d.headerCollapsed) : Integer.valueOf(C7310d.headerCollapsedNoBlur);
         if (num != null) {
             function1.invoke(Integer.valueOf(num.intValue()));
         }
@@ -45,7 +45,7 @@ public final class C5950d {
     /* renamed from: a */
     private final int m19091a(View view, int i) {
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "currentFocus.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "currentFocus.context");
         if (!C5837i.m18836a(context)) {
             return i;
         }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -55,7 +55,7 @@ public abstract class AbstractTypeAliasDescriptor extends DeclarationDescriptorN
         L_0x000f:
             kotlin.reflect.jvm.internal.impl.types.SimpleType r0 = kotlin.reflect.jvm.internal.impl.types.TypeUtils.makeUnsubstitutedType(r2, r0)
             java.lang.String r1 = "TypeUtils.makeUnsubstitu…ope ?: MemberScope.Empty)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             return r0
         */
         throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractTypeAliasDescriptor.computeDefaultType():kotlin.reflect.jvm.internal.impl.types.SimpleType");
@@ -66,7 +66,7 @@ public abstract class AbstractTypeAliasDescriptor extends DeclarationDescriptorN
         if (list != null) {
             return list;
         }
-        C12880j.m40227c("declaredTypeParametersImpl");
+        Intrinsics.throwUninitializedPropertyAccessException("declaredTypeParametersImpl");
         throw null;
     }
 
@@ -83,12 +83,12 @@ public abstract class AbstractTypeAliasDescriptor extends DeclarationDescriptorN
             return C13185o.m40513a();
         }
         Collection<ClassConstructorDescriptor> constructors = classDescriptor.getConstructors();
-        C12880j.m40222a((Object) constructors, "classDescriptor.constructors");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constructors, "classDescriptor.constructors");
         ArrayList arrayList = new ArrayList();
         for (ClassConstructorDescriptor classConstructorDescriptor : constructors) {
             Companion companion = TypeAliasConstructorDescriptorImpl.Companion;
             StorageManager storageManager = getStorageManager();
-            C12880j.m40222a((Object) classConstructorDescriptor, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) classConstructorDescriptor, "it");
             TypeAliasConstructorDescriptor createIfAvailable = companion.createIfAvailable(storageManager, this, classConstructorDescriptor);
             if (createIfAvailable != null) {
                 arrayList.add(createIfAvailable);

@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.search;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -21,10 +21,10 @@ public final class RecentSearchListJsonAdapter extends C11725h<RecentSearchList>
     public RecentSearchListJsonAdapter(C11760v vVar) {
         String str = "recentSearches";
         C11739b a = C11739b.m37729a(str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"recentSearches\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"recentSearches\")");
         this.options = a;
         C11725h<List<RecentSearch>> a2 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, RecentSearch.class), C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<List<Recen…ySet(), \"recentSearches\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<List<Recen…ySet(), \"recentSearches\")");
         this.listOfRecentSearchAdapter = a2;
     }
 

@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.paging;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -19,10 +19,10 @@ public final class DefaultPagingMetaDataJsonAdapter extends C11725h<DefaultPagin
     public DefaultPagingMetaDataJsonAdapter(C11760v vVar) {
         String str = "hits";
         C11739b a = C11739b.m37729a(str, "page_size", "offset");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"h…\", \"page_size\", \"offset\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"h…\", \"page_size\", \"offset\")");
         this.options = a;
         C11725h<Integer> a2 = vVar.mo29869a((Type) Integer.TYPE, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<Int>(Int::…tions.emptySet(), \"hits\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<Int>(Int::…tions.emptySet(), \"hits\")");
         this.intAdapter = a2;
     }
 

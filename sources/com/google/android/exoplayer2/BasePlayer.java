@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.Timeline.C8670c;
 
 /* renamed from: com.google.android.exoplayer2.p */
 /* compiled from: BasePlayer */
-public abstract class C8812p implements Player {
+public abstract class BasePlayer implements Player {
 
     /* renamed from: a */
     protected final C8670c f18741a = new C8670c();

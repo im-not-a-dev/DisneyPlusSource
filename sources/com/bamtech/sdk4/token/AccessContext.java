@@ -3,7 +3,7 @@ package com.bamtech.sdk4.token;
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 
 @DontObfuscate
@@ -32,7 +32,7 @@ public final class AccessContext implements AccessToken {
             return false;
         }
         AccessContext accessContext = (AccessContext) obj;
-        return !(C12880j.m40224a((Object) getAccessToken(), (Object) accessContext.getAccessToken()) ^ true) && !(C12880j.m40224a((Object) this.tokenType, (Object) accessContext.tokenType) ^ true) && !(C12880j.m40224a((Object) this.refreshToken, (Object) accessContext.refreshToken) ^ true) && !(C12880j.m40224a((Object) this.generatedOn, (Object) accessContext.generatedOn) ^ true) && !(C12880j.m40224a((Object) this.expiration, (Object) accessContext.expiration) ^ true);
+        return !(Intrinsics.areEqual((Object) getAccessToken(), (Object) accessContext.getAccessToken()) ^ true) && !(Intrinsics.areEqual((Object) this.tokenType, (Object) accessContext.tokenType) ^ true) && !(Intrinsics.areEqual((Object) this.refreshToken, (Object) accessContext.refreshToken) ^ true) && !(Intrinsics.areEqual((Object) this.generatedOn, (Object) accessContext.generatedOn) ^ true) && !(Intrinsics.areEqual((Object) this.expiration, (Object) accessContext.expiration) ^ true);
     }
 
     public String getAccessToken() {
@@ -76,7 +76,7 @@ public final class AccessContext implements AccessToken {
                     z2 = true;
                 } else {
                     DateTime plusMillis = this.generatedOn.plusMillis((int) (((double) (this.expiration.getMillis() - this.generatedOn.getMillis())) * d));
-                    C12880j.m40222a((Object) plusMillis, "firstRefreshTime");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) plusMillis, "firstRefreshTime");
                     return plusMillis.isBeforeNow();
                 }
             }

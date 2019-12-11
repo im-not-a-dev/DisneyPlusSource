@@ -1,7 +1,7 @@
 package com.disneystreaming.companion.messaging;
 
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11760v;
 import p163g.p500m.p501a.C11760v.C11761a;
@@ -21,7 +21,7 @@ public final class C8569d {
         C11761a aVar = new C11761a();
         aVar.mo29872a(MessageType.class, new MessageTypeJsonAdapter());
         C11760v a = aVar.mo29873a();
-        C12880j.m40222a((Object) a, "Moshi.Builder()\n        …r())\n            .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Moshi.Builder()\n        …r())\n            .build()");
         return a;
     }
 
@@ -37,7 +37,7 @@ public final class C8569d {
         Map context = message.getPayload().getContext();
         payload.setContext(context != null ? C13170i0.m40334b(context) : null);
         String json = a.toJson(message);
-        C12880j.m40222a((Object) json, "moshi.adapter<Message>(M…context?.toSortedMap() })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) json, "moshi.adapter<Message>(M…context?.toSortedMap() })");
         return json;
     }
 
@@ -47,7 +47,7 @@ public final class C8569d {
         Map context = payload.getContext();
         payload.setContext(context != null ? C13170i0.m40334b(context) : null);
         String json = a.toJson(payload);
-        C12880j.m40222a((Object) json, "moshi.adapter<Payload>(P…context?.toSortedMap() })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) json, "moshi.adapter<Payload>(P…context?.toSortedMap() })");
         return json;
     }
 

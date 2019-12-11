@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import kotlin.C12907r;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.MethodSignatureMappingKt;
@@ -75,7 +75,7 @@ public final class BuiltinMethodsWithSpecialGenericSignature {
             }
             String str2 = (String) it.next();
             String desc = JvmPrimitiveType.BOOLEAN.getDesc();
-            C12880j.m40222a((Object) desc, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) desc, str);
             arrayList.add(SpecialBuiltinMembers.method("java/util/Collection", str2, "Ljava/util/Collection;", desc));
         }
         ERASED_COLLECTION_PARAMETER_NAME_AND_SIGNATURES = arrayList;
@@ -95,31 +95,31 @@ public final class BuiltinMethodsWithSpecialGenericSignature {
         String str3 = "Collection";
         String javaUtil = signatureBuildingComponents.javaUtil(str3);
         String desc2 = JvmPrimitiveType.BOOLEAN.getDesc();
-        C12880j.m40222a((Object) desc2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc2, str);
         String str4 = "Ljava/lang/Object;";
         String javaUtil2 = signatureBuildingComponents.javaUtil(str3);
         String desc3 = JvmPrimitiveType.BOOLEAN.getDesc();
-        C12880j.m40222a((Object) desc3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc3, str);
         String str5 = "remove";
         String str6 = "Map";
         String javaUtil3 = signatureBuildingComponents.javaUtil(str6);
         String desc4 = JvmPrimitiveType.BOOLEAN.getDesc();
-        C12880j.m40222a((Object) desc4, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc4, str);
         String javaUtil4 = signatureBuildingComponents.javaUtil(str6);
         String desc5 = JvmPrimitiveType.BOOLEAN.getDesc();
-        C12880j.m40222a((Object) desc5, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc5, str);
         String javaUtil5 = signatureBuildingComponents.javaUtil(str6);
         String desc6 = JvmPrimitiveType.BOOLEAN.getDesc();
-        C12880j.m40222a((Object) desc6, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc6, str);
         String str7 = "Ljava/lang/Object;Ljava/lang/Object;";
         String str8 = "List";
         String javaUtil6 = signatureBuildingComponents.javaUtil(str8);
         String desc7 = JvmPrimitiveType.INT.getDesc();
         String str9 = "JvmPrimitiveType.INT.desc";
-        C12880j.m40222a((Object) desc7, str9);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc7, str9);
         String javaUtil7 = signatureBuildingComponents.javaUtil(str8);
         String desc8 = JvmPrimitiveType.INT.getDesc();
-        C12880j.m40222a((Object) desc8, str9);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc8, str9);
         GENERIC_PARAMETERS_METHODS_TO_DEFAULT_VALUES_MAP = C13173j0.m40356a(C12907r.m40244a(SpecialBuiltinMembers.method(javaUtil, "contains", str4, desc2), TypeSafeBarrierDescription.FALSE), C12907r.m40244a(SpecialBuiltinMembers.method(javaUtil2, str5, str4, desc3), TypeSafeBarrierDescription.FALSE), C12907r.m40244a(SpecialBuiltinMembers.method(javaUtil3, "containsKey", str4, desc4), TypeSafeBarrierDescription.FALSE), C12907r.m40244a(SpecialBuiltinMembers.method(javaUtil4, "containsValue", str4, desc5), TypeSafeBarrierDescription.FALSE), C12907r.m40244a(SpecialBuiltinMembers.method(javaUtil5, str5, str7, desc6), TypeSafeBarrierDescription.FALSE), C12907r.m40244a(SpecialBuiltinMembers.method(signatureBuildingComponents.javaUtil(str6), "getOrDefault", str7, str4), TypeSafeBarrierDescription.MAP_GET_OR_DEFAULT), C12907r.m40244a(SpecialBuiltinMembers.method(signatureBuildingComponents.javaUtil(str6), "get", str4, str4), TypeSafeBarrierDescription.NULL), C12907r.m40244a(SpecialBuiltinMembers.method(signatureBuildingComponents.javaUtil(str6), str5, str4, str4), TypeSafeBarrierDescription.NULL), C12907r.m40244a(SpecialBuiltinMembers.method(javaUtil6, "indexOf", str4, desc7), TypeSafeBarrierDescription.INDEX), C12907r.m40244a(SpecialBuiltinMembers.method(javaUtil7, "lastIndexOf", str4, desc8), TypeSafeBarrierDescription.INDEX));
         Map<NameAndSignature, TypeSafeBarrierDescription> map = GENERIC_PARAMETERS_METHODS_TO_DEFAULT_VALUES_MAP;
         LinkedHashMap linkedHashMap = new LinkedHashMap(C13173j0.m40349a(map.size()));
@@ -151,7 +151,7 @@ public final class BuiltinMethodsWithSpecialGenericSignature {
     public static final FunctionDescriptor getOverriddenBuiltinFunctionWithErasedValueParametersInJava(FunctionDescriptor functionDescriptor) {
         BuiltinMethodsWithSpecialGenericSignature builtinMethodsWithSpecialGenericSignature = INSTANCE;
         Name name = functionDescriptor.getName();
-        C12880j.m40222a((Object) name, "functionDescriptor.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "functionDescriptor.name");
         if (!builtinMethodsWithSpecialGenericSignature.getSameAsBuiltinMethodWithErasedValueParameters(name)) {
             return null;
         }

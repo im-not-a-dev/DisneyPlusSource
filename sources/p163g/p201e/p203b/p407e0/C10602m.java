@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.collections.C3419l;
 import com.bamtechmedia.dominguez.core.content.sets.ContentSetType;
 import com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.functions.C11945a;
 
@@ -60,14 +60,14 @@ public final class C10602m implements C10601l {
     /* renamed from: b */
     public Completable mo27468b(String str) {
         Completable b = this.f25042a.mo21109b(C13183n.m40498a(str)).mo30228e().mo30050b((C11945a) new C10604b(this));
-        C12880j.m40222a((Object) b, "remote.removeItems(listO…etsOfType(WatchlistSet) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "remote.removeItems(listO…etsOfType(WatchlistSet) }");
         return b;
     }
 
     /* renamed from: a */
     public Completable mo27467a(String str) {
         Completable b = this.f25042a.mo21108a(C13183n.m40498a(str)).mo30228e().mo30050b((C11945a) new C10603a(this));
-        C12880j.m40222a((Object) b, "remote.add(listOf(conten…etsOfType(WatchlistSet) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "remote.add(listOf(conten…etsOfType(WatchlistSet) }");
         return b;
     }
 }

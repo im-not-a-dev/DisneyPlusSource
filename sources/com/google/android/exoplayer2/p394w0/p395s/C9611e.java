@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p394w0.p395s;
 
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import com.google.android.exoplayer2.p394w0.p395s.C9608d.C9609a;
@@ -13,22 +13,22 @@ import java.util.zip.Inflater;
 public final class C9611e {
 
     /* renamed from: a */
-    private static final int f22479a = C9554k0.m29428b("ytmp");
+    private static final int f22479a = Util.m29428b("ytmp");
 
     /* renamed from: b */
-    private static final int f22480b = C9554k0.m29428b("mshp");
+    private static final int f22480b = Util.m29428b("mshp");
 
     /* renamed from: c */
-    private static final int f22481c = C9554k0.m29428b("raw ");
+    private static final int f22481c = Util.m29428b("raw ");
 
     /* renamed from: d */
-    private static final int f22482d = C9554k0.m29428b("dfl8");
+    private static final int f22482d = Util.m29428b("dfl8");
 
     /* renamed from: e */
-    private static final int f22483e = C9554k0.m29428b("mesh");
+    private static final int f22483e = Util.m29428b("mesh");
 
     /* renamed from: f */
-    private static final int f22484f = C9554k0.m29428b("proj");
+    private static final int f22484f = Util.m29428b("proj");
 
     /* renamed from: a */
     private static int m29747a(int i) {
@@ -150,7 +150,7 @@ public final class C9611e {
             C9572w wVar2 = new C9572w();
             Inflater inflater = new Inflater(true);
             try {
-                if (!C9554k0.m29413a(wVar, wVar2, inflater)) {
+                if (!Util.m29413a(wVar, wVar2, inflater)) {
                     return null;
                 }
                 inflater.end();

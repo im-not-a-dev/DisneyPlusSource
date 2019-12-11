@@ -20,7 +20,7 @@ public final class C1658i {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f5794a, (java.lang.Object) ((com.bamnet.iap.p035c.p036c.C1658i) r2).f5794a) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f5794a, (java.lang.Object) ((com.bamnet.iap.p035c.p036c.C1658i) r2).f5794a) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -32,7 +32,7 @@ public final class C1658i {
             com.bamnet.iap.c.c.i r2 = (com.bamnet.iap.p035c.p036c.C1658i) r2
             java.util.List<com.android.billingclient.api.m> r0 = r1.f5794a
             java.util.List<com.android.billingclient.api.m> r2 = r2.f5794a
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:

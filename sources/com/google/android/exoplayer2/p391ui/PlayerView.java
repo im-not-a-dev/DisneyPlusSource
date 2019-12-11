@@ -46,7 +46,7 @@ import com.google.android.exoplayer2.p391ui.C9405g.C9409d;
 import com.google.android.exoplayer2.p391ui.p392r.C9429g;
 import com.google.android.exoplayer2.p391ui.p392r.C9430h;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9555l;
 import com.google.android.exoplayer2.p394w0.C9601p;
 import com.google.android.exoplayer2.p394w0.C9602q;
@@ -753,7 +753,7 @@ public class PlayerView extends FrameLayout implements C9206b {
             this.f21692f0 = null;
             this.f21693g0 = null;
             ImageView imageView = new ImageView(context2);
-            if (C9554k0.f22281a >= 23) {
+            if (Util.SDK_INT >= 23) {
                 m28738b(getResources(), imageView);
             } else {
                 m28729a(getResources(), imageView);

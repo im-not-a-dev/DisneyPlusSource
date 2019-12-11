@@ -40,7 +40,7 @@ public final class C6510e {
             if (r1 == 0) goto L_0x00a3
             java.lang.String r1 = r1.toUpperCase()
             java.lang.String r3 = "(this as java.lang.String).toUpperCase()"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r3)
             java.lang.Object r0 = r0.get(r1)
             java.util.Set r0 = (java.util.Set) r0
             r1 = 0
@@ -49,12 +49,12 @@ public final class C6510e {
             java.lang.String r4 = r4.name()
             if (r4 == 0) goto L_0x009c
             java.lang.String r4 = r4.toUpperCase()
-            kotlin.jvm.internal.C12880j.m40222a(r4, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r3)
             com.bamtechmedia.dominguez.core.content.playback.queryaction.a r6 = r6.mo13538d()
             java.lang.String r6 = r6.name()
             if (r6 == 0) goto L_0x0096
             java.lang.String r6 = r6.toUpperCase()
-            kotlin.jvm.internal.C12880j.m40222a(r6, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r3)
             java.lang.StringBuilder r2 = new java.lang.StringBuilder
             r2.<init>()
             r2.append(r4)

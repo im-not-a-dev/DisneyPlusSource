@@ -8,7 +8,7 @@ import com.bamtech.sdk4.service.ServiceExceptionCase.AccountBlocked;
 import com.bamtech.sdk4.service.ServiceExceptionCase.InvalidCredentials;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
 import p163g.p201e.p203b.p307o.C7619i;
 import p520io.reactivex.Completable;
@@ -73,7 +73,7 @@ public final class C2977j {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7824a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p068t0.C2977j.C2978a.C2980b) r2).f7824a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7824a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p068t0.C2977j.C2978a.C2980b) r2).f7824a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -85,7 +85,7 @@ public final class C2977j {
                     com.bamtechmedia.dominguez.auth.t0.j$a$b r2 = (com.bamtechmedia.dominguez.auth.p068t0.C2977j.C2978a.C2980b) r2
                     java.lang.String r0 = r1.f7824a
                     java.lang.String r2 = r2.f7824a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -168,7 +168,7 @@ public final class C2977j {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7827a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p068t0.C2977j.C2978a.C2983e) r2).f7827a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7827a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p068t0.C2977j.C2978a.C2983e) r2).f7827a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -180,7 +180,7 @@ public final class C2977j {
                     com.bamtechmedia.dominguez.auth.t0.j$a$e r2 = (com.bamtechmedia.dominguez.auth.p068t0.C2977j.C2978a.C2983e) r2
                     java.lang.String r0 = r1.f7827a
                     java.lang.String r2 = r2.f7827a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -276,7 +276,7 @@ public final class C2977j {
     /* renamed from: a */
     public final Observable<C2978a> mo11982a(String str) {
         Observable<C2978a> i = this.f7819a.authenticate(this.f7821c, str).mo30225d((Function<? super T, ? extends ObservableSource<? extends R>>) new C2984b<Object,Object>(this)).mo30154a(C2981c.f7825a).mo30198i(new C2985c(this, str));
-        C12880j.m40222a((Object) i, "identityApi.authenticate…          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "identityApi.authenticate…          }\n            }");
         return i;
     }
 
@@ -287,7 +287,7 @@ public final class C2977j {
         C2982d dVar = C2982d.f7826a;
         if (dVar != null) {
             Observable<C2978a> a = authorize.mo30043a((ObservableSource<T>) Observable.m38309b(dVar));
-            C12880j.m40222a((Object) a, "accountApi.authorize(ide…nSuccess as ActionState))");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "accountApi.authorize(ide…nSuccess as ActionState))");
             return a;
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.auth.password.PasswordLoginAction.ActionState");
@@ -299,10 +299,10 @@ public final class C2977j {
         C7619i b = this.f7822d.mo20538b(th);
         String a = b.mo20543a();
         ServiceExceptionCase b2 = b.mo20544b();
-        if (C12880j.m40224a((Object) b2, (Object) InvalidCredentials.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) b2, (Object) InvalidCredentials.INSTANCE)) {
             return new C2983e(a);
         }
-        if (C12880j.m40224a((Object) b2, (Object) AccountBlocked.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) b2, (Object) AccountBlocked.INSTANCE)) {
             return C2979a.f7823a;
         }
         return new C2980b(a);

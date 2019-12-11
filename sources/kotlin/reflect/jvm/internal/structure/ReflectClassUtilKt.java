@@ -33,7 +33,7 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.functions.Function4;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.p581d0.C12731a;
 import kotlin.p590y.C13180m;
@@ -92,7 +92,7 @@ public final class ReflectClassUtilKt {
         } else if (!cls.isArray()) {
             if (cls.getEnclosingMethod() == null && cls.getEnclosingConstructor() == null) {
                 String simpleName = cls.getSimpleName();
-                C12880j.m40222a((Object) simpleName, "simpleName");
+                Intrinsics.checkReturnedValueIsNotNull((Object) simpleName, "simpleName");
                 if (!(simpleName.length() == 0)) {
                     Class declaringClass = cls.getDeclaringClass();
                     if (declaringClass != null) {
@@ -105,7 +105,7 @@ public final class ReflectClassUtilKt {
                         }
                     }
                     ClassId classId2 = ClassId.topLevel(new FqName(cls.getName()));
-                    C12880j.m40222a((Object) classId2, "ClassId.topLevel(FqName(name))");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) classId2, "ClassId.topLevel(FqName(name))");
                     return classId2;
                 }
             }
@@ -120,14 +120,14 @@ public final class ReflectClassUtilKt {
     }
 
     public static final String getDesc(Class<?> cls) {
-        if (C12880j.m40224a((Object) cls, (Object) Void.TYPE)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) Void.TYPE)) {
             return "V";
         }
         String name = createArrayType(cls).getName();
-        C12880j.m40222a((Object) name, "createArrayType().name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "createArrayType().name");
         if (name != null) {
             String substring = name.substring(1);
-            C12880j.m40222a((Object) substring, "(this as java.lang.String).substring(startIndex)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.String).substring(startIndex)");
             return C12832w.m40115a(substring, '.', '/', false, 4, (Object) null);
         }
         throw new C13142s("null cannot be cast to non-null type java.lang.String");
@@ -146,7 +146,7 @@ public final class ReflectClassUtilKt {
             return C12788p.m39999g(C12788p.m39992c(C12781n.m39973a(type, (Function1<? super T, ? extends T>) ReflectClassUtilKt$parameterizedTypeArguments$1.INSTANCE), ReflectClassUtilKt$parameterizedTypeArguments$2.INSTANCE));
         }
         Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
-        C12880j.m40222a((Object) actualTypeArguments, "actualTypeArguments");
+        Intrinsics.checkReturnedValueIsNotNull((Object) actualTypeArguments, "actualTypeArguments");
         return C13174k.m40412l(actualTypeArguments);
     }
 
@@ -160,7 +160,7 @@ public final class ReflectClassUtilKt {
             return classLoader;
         }
         ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
-        C12880j.m40222a((Object) systemClassLoader, "ClassLoader.getSystemClassLoader()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) systemClassLoader, "ClassLoader.getSystemClassLoader()");
         return systemClassLoader;
     }
 

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 import p163g.p201e.p203b.p286j.C7290d;
 import p163g.p201e.p203b.p286j.C7290d.C7291a;
@@ -90,7 +90,7 @@ public final class C7398h implements C7290d {
         boolean contains = httpUrl.mo35762m().contains("addToWatchlist");
         boolean contains2 = httpUrl.mo35762m().contains("download");
         C7396f fVar = this.f16255a;
-        C12880j.m40222a((Object) group, "encodedSeriesId");
+        Intrinsics.checkReturnedValueIsNotNull((Object) group, "encodedSeriesId");
         C7394e eVar = new C7394e(group, null, a, contains2, contains, d != null ? d.intValue() : 0, num != null ? num.intValue() : 0);
         return fVar.mo20240a(eVar);
     }

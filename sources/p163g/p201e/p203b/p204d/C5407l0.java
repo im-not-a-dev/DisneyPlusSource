@@ -1,7 +1,7 @@
 package p163g.p201e.p203b.p204d;
 
 import com.bamtech.sdk4.account.DefaultAccount;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.e.b.d.l0 */
 /* compiled from: DefaultAccountExt.kt */
@@ -18,6 +18,6 @@ public final class C5407l0 {
 
     /* renamed from: b */
     public static final boolean m18172b(DefaultAccount defaultAccount) {
-        return C12880j.m40224a(defaultAccount.getAttributes().get("userVerified"), (Object) Boolean.valueOf(true));
+        return Intrinsics.areEqual(defaultAccount.getAttributes().get("userVerified"), (Object) Boolean.valueOf(true));
     }
 }

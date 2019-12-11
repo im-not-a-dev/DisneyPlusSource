@@ -14,8 +14,8 @@ import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.source.C9137e0;
 import com.google.android.exoplayer2.source.C9137e0.C9139b;
@@ -714,7 +714,7 @@ final class C9167m implements C9444b<C9212d>, C9448f, C9143g0, C8914i, C9139b {
             java.util.ArrayList<com.google.android.exoplayer2.source.hls.j> r1 = r0.f20657c0
             boolean r1 = r1.isEmpty()
             if (r1 != 0) goto L_0x0139
-            boolean r1 = com.google.android.exoplayer2.p393v0.C9554k0.m29414a(r11, r4)
+            boolean r1 = com.google.android.exoplayer2.p393v0.Util.m29414a(r11, r4)
             if (r1 != 0) goto L_0x0139
             boolean r1 = r0.f20643H0
             if (r1 != 0) goto L_0x0130
@@ -833,7 +833,7 @@ final class C9167m implements C9444b<C9212d>, C9448f, C9143g0, C8914i, C9139b {
         sb.append(i);
         sb.append(" of type ");
         sb.append(i2);
-        C9563q.m29500d("HlsSampleStreamWrapper", sb.toString());
+        Log.m29500d("HlsSampleStreamWrapper", sb.toString());
         return new C8911f();
     }
 
@@ -868,7 +868,7 @@ final class C9167m implements C9444b<C9212d>, C9448f, C9143g0, C8914i, C9139b {
             while (i3 < this.f20657c0.size() - 1 && m27530a((C9164j) this.f20657c0.get(i3))) {
                 i3++;
             }
-            C9554k0.m29409a((List<T>) this.f20657c0, 0, i3);
+            Util.m29409a((List<T>) this.f20657c0, 0, i3);
             C9164j jVar = (C9164j) this.f20657c0.get(0);
             Format format = jVar.f20858c;
             if (!format.equals(this.f20676v0)) {
@@ -1120,7 +1120,7 @@ final class C9167m implements C9444b<C9212d>, C9448f, C9143g0, C8914i, C9139b {
             i2 = format2.f18363o0;
         }
         int i3 = i2;
-        String a = C9554k0.m29396a(format.f18346Y, C9566t.m29513f(format2.f18349b0));
+        String a = Util.m29396a(format.f18346Y, C9566t.m29513f(format2.f18349b0));
         String d = C9566t.m29511d(a);
         if (d == null) {
             d = format2.f18349b0;
@@ -1144,7 +1144,7 @@ final class C9167m implements C9444b<C9212d>, C9448f, C9143g0, C8914i, C9139b {
                 z = false;
             }
             return z;
-        } else if (!C9554k0.m29414a((Object) str, (Object) str2)) {
+        } else if (!Util.m29414a((Object) str, (Object) str2)) {
             return false;
         } else {
             if (!"application/cea-608".equals(str) && !"application/cea-708".equals(str)) {

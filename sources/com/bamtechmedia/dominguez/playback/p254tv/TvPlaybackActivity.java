@@ -66,7 +66,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p135s.C4121a0;
 import p096e.p154p.C4265b;
@@ -75,9 +75,10 @@ import p096e.p154p.C4309m.C4315f;
 import p096e.p154p.C4317o;
 import p163g.p201e.p203b.p299m.C7536a;
 import p163g.p201e.p203b.p299m.C7536a.C7538b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
-@Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000¤\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 ±\u00012\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0002±\u0001B\u0005¢\u0006\u0002\u0010\u0006J\n\u0010\u0001\u001a\u00030\u0001H\u0002J\n\u0010\u0001\u001a\u00030\u0001H\u0002J\u0015\u0010\u0001\u001a\u00020>2\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0016J\u0016\u0010\u0001\u001a\u00030\u00012\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0002J\u0014\u0010\u0001\u001a\u00030\u00012\b\u0010\u0001\u001a\u00030\u0001H\u0002J\n\u0010\u0001\u001a\u00030\u0001H\u0016J\u0013\u0010\u0001\u001a\u00030\u00012\u0007\u0010\u0001\u001a\u00020>H\u0007J\u0014\u0010\u0001\u001a\u00030\u00012\b\u0010\u0001\u001a\u00030\u0001H\u0002J\u001a\u0010\u0001\u001a\u00030\u00012\b\u0010\u0001\u001a\u00030\u0001H\u0001¢\u0006\u0003\b\u0001J\u001d\u0010\u0001\u001a\u00020>2\b\u0010\u0001\u001a\u00030\u00012\b\u0010\u0001\u001a\u00030\u0001H\u0016J\n\u0010\u0001\u001a\u00030\u0001H\u0016J\u0016\u0010\u0001\u001a\u00030\u00012\n\u0010\u0001\u001a\u0005\u0018\u00010 \u0001H\u0014J\u0016\u0010¡\u0001\u001a\u00030\u00012\n\u0010¢\u0001\u001a\u0005\u0018\u00010£\u0001H\u0016J\u0015\u0010¤\u0001\u001a\u00020>2\n\u0010\u0001\u001a\u0005\u0018\u00010¥\u0001H\u0016J\u0016\u0010¦\u0001\u001a\u00030\u00012\n\u0010¢\u0001\u001a\u0005\u0018\u00010£\u0001H\u0016J\n\u0010§\u0001\u001a\u00030\u0001H\u0014J\n\u0010¨\u0001\u001a\u00030\u0001H\u0014J\n\u0010©\u0001\u001a\u00030\u0001H\u0002J\u0014\u0010ª\u0001\u001a\u00030\u00012\b\u0010«\u0001\u001a\u00030¬\u0001H\u0007J\n\u0010­\u0001\u001a\u00030\u0001H\u0002J\u0014\u0010®\u0001\u001a\u00030\u00012\b\u0010¯\u0001\u001a\u00030°\u0001H\u0007R\u001e\u0010\u0007\u001a\u00020\b8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\t\u0010\n\"\u0004\b\u000b\u0010\fR\u001e\u0010\r\u001a\u00020\u000e8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R\u001e\u0010\u0013\u001a\u00020\u00148\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R\u001e\u0010\u0019\u001a\u00020\u001a8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u001b\u0010\u001c\"\u0004\b\u001d\u0010\u001eR\u001e\u0010\u001f\u001a\u00020 8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b!\u0010\"\"\u0004\b#\u0010$R\u001a\u0010%\u001a\u00020&X.¢\u0006\u000e\n\u0000\u001a\u0004\b'\u0010(\"\u0004\b)\u0010*R\u001e\u0010+\u001a\u00020,8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b-\u0010.\"\u0004\b/\u00100R\u001e\u00101\u001a\u0002028\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b3\u00104\"\u0004\b5\u00106R\u001e\u00107\u001a\u0002088\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b9\u0010:\"\u0004\b;\u0010<R\u000e\u0010=\u001a\u00020>X\u000e¢\u0006\u0002\n\u0000R\u001e\u0010?\u001a\u00020@8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bA\u0010B\"\u0004\bC\u0010DR\u001e\u0010E\u001a\u00020F8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bG\u0010H\"\u0004\bI\u0010JR\u001e\u0010K\u001a\u00020L8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bM\u0010N\"\u0004\bO\u0010PR\u001e\u0010Q\u001a\u00020R8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bS\u0010T\"\u0004\bU\u0010VR\u001e\u0010W\u001a\u00020X8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bY\u0010Z\"\u0004\b[\u0010\\R\u001e\u0010]\u001a\u00020^8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b_\u0010`\"\u0004\ba\u0010bR\u001e\u0010c\u001a\u00020d8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\be\u0010f\"\u0004\bg\u0010hR\u001e\u0010i\u001a\u00020j8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bk\u0010l\"\u0004\bm\u0010nR\u001e\u0010o\u001a\u00020p8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bq\u0010r\"\u0004\bs\u0010tR\u000e\u0010u\u001a\u00020vX.¢\u0006\u0002\n\u0000R\u001e\u0010w\u001a\u00020x8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\by\u0010z\"\u0004\b{\u0010|R!\u0010}\u001a\u00020~8\u0006@\u0006X.¢\u0006\u0011\n\u0000\u001a\u0005\b\u0010\u0001\"\u0006\b\u0001\u0010\u0001¨\u0006²\u0001"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/tv/TvPlaybackActivity;", "Lcom/bamtechmedia/dominguez/core/framework/BaseActivity;", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsStateProvider;", "Landroid/content/DialogInterface$OnDismissListener;", "Landroid/content/DialogInterface$OnShowListener;", "Lcom/bamtechmedia/dominguez/dialogs/AlertDialogCallback;", "()V", "backgroundResponder", "Lcom/bamtechmedia/dominguez/playback/common/background/PlaybackActivityBackgroundResponder;", "getBackgroundResponder", "()Lcom/bamtechmedia/dominguez/playback/common/background/PlaybackActivityBackgroundResponder;", "setBackgroundResponder", "(Lcom/bamtechmedia/dominguez/playback/common/background/PlaybackActivityBackgroundResponder;)V", "contentRatingListeners", "Lcom/bamtechmedia/dominguez/playback/common/listeners/ContentRatingListeners;", "getContentRatingListeners", "()Lcom/bamtechmedia/dominguez/playback/common/listeners/ContentRatingListeners;", "setContentRatingListeners", "(Lcom/bamtechmedia/dominguez/playback/common/listeners/ContentRatingListeners;)V", "contentRatingPresenter", "Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingPresenter;", "getContentRatingPresenter", "()Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingPresenter;", "setContentRatingPresenter", "(Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingPresenter;)V", "convivaSetup", "Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;", "getConvivaSetup", "()Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;", "setConvivaSetup", "(Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;)V", "currentContentUpdates", "Lcom/bamtechmedia/dominguez/playback/common/controls/TopBarPresenter;", "getCurrentContentUpdates", "()Lcom/bamtechmedia/dominguez/playback/common/controls/TopBarPresenter;", "setCurrentContentUpdates", "(Lcom/bamtechmedia/dominguez/playback/common/controls/TopBarPresenter;)V", "engine", "Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "getEngine", "()Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "setEngine", "(Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;)V", "engineFactory", "Lcom/bamtechmedia/dominguez/playback/common/engine/PlaybackEngineFactory;", "getEngineFactory", "()Lcom/bamtechmedia/dominguez/playback/common/engine/PlaybackEngineFactory;", "setEngineFactory", "(Lcom/bamtechmedia/dominguez/playback/common/engine/PlaybackEngineFactory;)V", "errorHandler", "Lcom/bamtechmedia/dominguez/playback/common/error/PlaybackErrorHandler;", "getErrorHandler", "()Lcom/bamtechmedia/dominguez/playback/common/error/PlaybackErrorHandler;", "setErrorHandler", "(Lcom/bamtechmedia/dominguez/playback/common/error/PlaybackErrorHandler;)V", "focusHandler", "Lcom/bamtechmedia/dominguez/playback/tv/VideoPlaybackFocusHandler;", "getFocusHandler", "()Lcom/bamtechmedia/dominguez/playback/tv/VideoPlaybackFocusHandler;", "setFocusHandler", "(Lcom/bamtechmedia/dominguez/playback/tv/VideoPlaybackFocusHandler;)V", "isAnimating", "", "localBookmarksMarker", "Lcom/bamtechmedia/dominguez/playback/mobile/LocalBookmarksMarker;", "getLocalBookmarksMarker", "()Lcom/bamtechmedia/dominguez/playback/mobile/LocalBookmarksMarker;", "setLocalBookmarksMarker", "(Lcom/bamtechmedia/dominguez/playback/mobile/LocalBookmarksMarker;)V", "playPauseAccessibility", "Lcom/bamtechmedia/dominguez/playback/common/accessibility/PlayPauseAccessibility;", "getPlayPauseAccessibility", "()Lcom/bamtechmedia/dominguez/playback/common/accessibility/PlayPauseAccessibility;", "setPlayPauseAccessibility", "(Lcom/bamtechmedia/dominguez/playback/common/accessibility/PlayPauseAccessibility;)V", "playbackAnalytics", "Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;", "getPlaybackAnalytics", "()Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;", "setPlaybackAnalytics", "(Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;)V", "ratingFormatter", "Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;", "getRatingFormatter", "()Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;", "setRatingFormatter", "(Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;)V", "sentryCapabilitiesReporter", "Lcom/bamtechmedia/dominguez/playback/common/engine/session/SentryCapabilitiesReporter;", "getSentryCapabilitiesReporter", "()Lcom/bamtechmedia/dominguez/playback/common/engine/session/SentryCapabilitiesReporter;", "setSentryCapabilitiesReporter", "(Lcom/bamtechmedia/dominguez/playback/common/engine/session/SentryCapabilitiesReporter;)V", "stringDictionary", "Lcom/bamtechmedia/dominguez/config/StringDictionary;", "getStringDictionary", "()Lcom/bamtechmedia/dominguez/config/StringDictionary;", "setStringDictionary", "(Lcom/bamtechmedia/dominguez/config/StringDictionary;)V", "titleTreatment", "Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;", "getTitleTreatment", "()Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;", "setTitleTreatment", "(Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;)V", "trackListeners", "Lcom/bamtechmedia/dominguez/playback/common/listeners/TrackListeners;", "getTrackListeners", "()Lcom/bamtechmedia/dominguez/playback/common/listeners/TrackListeners;", "setTrackListeners", "(Lcom/bamtechmedia/dominguez/playback/common/listeners/TrackListeners;)V", "upNextAnalytics", "Lcom/bamtechmedia/dominguez/playback/common/analytics/UpNextAnalytics;", "getUpNextAnalytics", "()Lcom/bamtechmedia/dominguez/playback/common/analytics/UpNextAnalytics;", "setUpNextAnalytics", "(Lcom/bamtechmedia/dominguez/playback/common/analytics/UpNextAnalytics;)V", "upNextComponent", "Lcom/bamtechmedia/dominguez/playback/tv/upnext/TvUpNextComponent;", "upNextListeners", "Lcom/bamtechmedia/dominguez/playback/common/listeners/UpNextListeners;", "getUpNextListeners", "()Lcom/bamtechmedia/dominguez/playback/common/listeners/UpNextListeners;", "setUpNextListeners", "(Lcom/bamtechmedia/dominguez/playback/common/listeners/UpNextListeners;)V", "viewModel", "Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;", "getViewModel", "()Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;", "setViewModel", "(Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;)V", "animateViewToNormal", "", "animateViewToUpNext", "dispatchKeyEvent", "event", "Landroid/view/KeyEvent;", "finishAndCheckForRoute", "routeAfterPlayback", "Lcom/bamtechmedia/dominguez/playback/common/RouteAfterPlayback;", "finishWithResult", "resultCode", "", "getAnalyticsSection", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsSection;", "hideContentRating", "isTemporary", "initializeUIComponents", "container", "Landroid/view/ViewGroup;", "mapPlaybackStateToAction", "state", "Lcom/bamtechmedia/dominguez/playback/common/PlaybackState;", "mapPlaybackStateToAction$playback_release", "onAlertDialogAction", "requestId", "which", "onBackPressed", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onDismiss", "dialog", "Landroid/content/DialogInterface;", "onGenericMotionEvent", "Landroid/view/MotionEvent;", "onShow", "onStart", "onUserLeaveHint", "showAudioAndSubtitlesFragment", "showContentRating", "contentRatingAction", "Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingAction;", "showDeeplinkContentError", "updateTitles", "playable", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "Companion", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
+@Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000¤\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 ±\u00012\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0002±\u0001B\u0005¢\u0006\u0002\u0010\u0006J\n\u0010\u0001\u001a\u00030\u0001H\u0002J\n\u0010
+\u0001\u001a\u00030\u0001H\u0002J\u0015\u0010\u0001\u001a\u00020>2\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0016J\u0016\u0010\u0001\u001a\u00030\u00012\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0002J\u0014\u0010\u0001\u001a\u00030\u00012\b\u0010\u0001\u001a\u00030\u0001H\u0002J\n\u0010\u0001\u001a\u00030\u0001H\u0016J\u0013\u0010\u0001\u001a\u00030\u00012\u0007\u0010\u0001\u001a\u00020>H\u0007J\u0014\u0010\u0001\u001a\u00030\u00012\b\u0010\u0001\u001a\u00030\u0001H\u0002J\u001a\u0010\u0001\u001a\u00030\u00012\b\u0010\u0001\u001a\u00030\u0001H\u0001¢\u0006\u0003\b\u0001J\u001d\u0010\u0001\u001a\u00020>2\b\u0010\u0001\u001a\u00030\u00012\b\u0010\u0001\u001a\u00030\u0001H\u0016J\n\u0010\u0001\u001a\u00030\u0001H\u0016J\u0016\u0010\u0001\u001a\u00030\u00012\n\u0010\u0001\u001a\u0005\u0018\u00010 \u0001H\u0014J\u0016\u0010¡\u0001\u001a\u00030\u00012\n\u0010¢\u0001\u001a\u0005\u0018\u00010£\u0001H\u0016J\u0015\u0010¤\u0001\u001a\u00020>2\n\u0010\u0001\u001a\u0005\u0018\u00010¥\u0001H\u0016J\u0016\u0010¦\u0001\u001a\u00030\u00012\n\u0010¢\u0001\u001a\u0005\u0018\u00010£\u0001H\u0016J\n\u0010§\u0001\u001a\u00030\u0001H\u0014J\n\u0010¨\u0001\u001a\u00030\u0001H\u0014J\n\u0010©\u0001\u001a\u00030\u0001H\u0002J\u0014\u0010ª\u0001\u001a\u00030\u00012\b\u0010«\u0001\u001a\u00030¬\u0001H\u0007J\n\u0010­\u0001\u001a\u00030\u0001H\u0002J\u0014\u0010®\u0001\u001a\u00030\u00012\b\u0010¯\u0001\u001a\u00030°\u0001H\u0007R\u001e\u0010\u0007\u001a\u00020\b8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\t\u0010\n\"\u0004\b\u000b\u0010\fR\u001e\u0010\r\u001a\u00020\u000e8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R\u001e\u0010\u0013\u001a\u00020\u00148\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R\u001e\u0010\u0019\u001a\u00020\u001a8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u001b\u0010\u001c\"\u0004\b\u001d\u0010\u001eR\u001e\u0010\u001f\u001a\u00020 8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b!\u0010\"\"\u0004\b#\u0010$R\u001a\u0010%\u001a\u00020&X.¢\u0006\u000e\n\u0000\u001a\u0004\b'\u0010(\"\u0004\b)\u0010*R\u001e\u0010+\u001a\u00020,8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b-\u0010.\"\u0004\b/\u00100R\u001e\u00101\u001a\u0002028\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b3\u00104\"\u0004\b5\u00106R\u001e\u00107\u001a\u0002088\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b9\u0010:\"\u0004\b;\u0010<R\u000e\u0010=\u001a\u00020>X\u000e¢\u0006\u0002\n\u0000R\u001e\u0010?\u001a\u00020@8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bA\u0010B\"\u0004\bC\u0010DR\u001e\u0010E\u001a\u00020F8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bG\u0010H\"\u0004\bI\u0010JR\u001e\u0010K\u001a\u00020L8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bM\u0010N\"\u0004\bO\u0010PR\u001e\u0010Q\u001a\u00020R8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bS\u0010T\"\u0004\bU\u0010VR\u001e\u0010W\u001a\u00020X8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bY\u0010Z\"\u0004\b[\u0010\\R\u001e\u0010]\u001a\u00020^8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b_\u0010`\"\u0004\ba\u0010bR\u001e\u0010c\u001a\u00020d8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\be\u0010f\"\u0004\bg\u0010hR\u001e\u0010i\u001a\u00020j8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bk\u0010l\"\u0004\bm\u0010nR\u001e\u0010o\u001a\u00020p8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bq\u0010r\"\u0004\bs\u0010tR\u000e\u0010u\u001a\u00020vX.¢\u0006\u0002\n\u0000R\u001e\u0010w\u001a\u00020x8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\by\u0010z\"\u0004\b{\u0010|R!\u0010}\u001a\u00020~8\u0006@\u0006X.¢\u0006\u0011\n\u0000\u001a\u0005\b\u0010\u0001\"\u0006\b\u0001\u0010\u0001¨\u0006²\u0001"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/tv/TvPlaybackActivity;", "Lcom/bamtechmedia/dominguez/core/framework/BaseActivity;", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsStateProvider;", "Landroid/content/DialogInterface$OnDismissListener;", "Landroid/content/DialogInterface$OnShowListener;", "Lcom/bamtechmedia/dominguez/dialogs/AlertDialogCallback;", "()V", "backgroundResponder", "Lcom/bamtechmedia/dominguez/playback/common/background/PlaybackActivityBackgroundResponder;", "getBackgroundResponder", "()Lcom/bamtechmedia/dominguez/playback/common/background/PlaybackActivityBackgroundResponder;", "setBackgroundResponder", "(Lcom/bamtechmedia/dominguez/playback/common/background/PlaybackActivityBackgroundResponder;)V", "contentRatingListeners", "Lcom/bamtechmedia/dominguez/playback/common/listeners/ContentRatingListeners;", "getContentRatingListeners", "()Lcom/bamtechmedia/dominguez/playback/common/listeners/ContentRatingListeners;", "setContentRatingListeners", "(Lcom/bamtechmedia/dominguez/playback/common/listeners/ContentRatingListeners;)V", "contentRatingPresenter", "Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingPresenter;", "getContentRatingPresenter", "()Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingPresenter;", "setContentRatingPresenter", "(Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingPresenter;)V", "convivaSetup", "Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;", "getConvivaSetup", "()Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;", "setConvivaSetup", "(Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;)V", "currentContentUpdates", "Lcom/bamtechmedia/dominguez/playback/common/controls/TopBarPresenter;", "getCurrentContentUpdates", "()Lcom/bamtechmedia/dominguez/playback/common/controls/TopBarPresenter;", "setCurrentContentUpdates", "(Lcom/bamtechmedia/dominguez/playback/common/controls/TopBarPresenter;)V", "engine", "Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "getEngine", "()Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "setEngine", "(Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;)V", "engineFactory", "Lcom/bamtechmedia/dominguez/playback/common/engine/PlaybackEngineFactory;", "getEngineFactory", "()Lcom/bamtechmedia/dominguez/playback/common/engine/PlaybackEngineFactory;", "setEngineFactory", "(Lcom/bamtechmedia/dominguez/playback/common/engine/PlaybackEngineFactory;)V", "errorHandler", "Lcom/bamtechmedia/dominguez/playback/common/error/PlaybackErrorHandler;", "getErrorHandler", "()Lcom/bamtechmedia/dominguez/playback/common/error/PlaybackErrorHandler;", "setErrorHandler", "(Lcom/bamtechmedia/dominguez/playback/common/error/PlaybackErrorHandler;)V", "focusHandler", "Lcom/bamtechmedia/dominguez/playback/tv/VideoPlaybackFocusHandler;", "getFocusHandler", "()Lcom/bamtechmedia/dominguez/playback/tv/VideoPlaybackFocusHandler;", "setFocusHandler", "(Lcom/bamtechmedia/dominguez/playback/tv/VideoPlaybackFocusHandler;)V", "isAnimating", "", "localBookmarksMarker", "Lcom/bamtechmedia/dominguez/playback/mobile/LocalBookmarksMarker;", "getLocalBookmarksMarker", "()Lcom/bamtechmedia/dominguez/playback/mobile/LocalBookmarksMarker;", "setLocalBookmarksMarker", "(Lcom/bamtechmedia/dominguez/playback/mobile/LocalBookmarksMarker;)V", "playPauseAccessibility", "Lcom/bamtechmedia/dominguez/playback/common/accessibility/PlayPauseAccessibility;", "getPlayPauseAccessibility", "()Lcom/bamtechmedia/dominguez/playback/common/accessibility/PlayPauseAccessibility;", "setPlayPauseAccessibility", "(Lcom/bamtechmedia/dominguez/playback/common/accessibility/PlayPauseAccessibility;)V", "playbackAnalytics", "Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;", "getPlaybackAnalytics", "()Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;", "setPlaybackAnalytics", "(Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;)V", "ratingFormatter", "Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;", "getRatingFormatter", "()Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;", "setRatingFormatter", "(Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;)V", "sentryCapabilitiesReporter", "Lcom/bamtechmedia/dominguez/playback/common/engine/session/SentryCapabilitiesReporter;", "getSentryCapabilitiesReporter", "()Lcom/bamtechmedia/dominguez/playback/common/engine/session/SentryCapabilitiesReporter;", "setSentryCapabilitiesReporter", "(Lcom/bamtechmedia/dominguez/playback/common/engine/session/SentryCapabilitiesReporter;)V", "stringDictionary", "Lcom/bamtechmedia/dominguez/config/StringDictionary;", "getStringDictionary", "()Lcom/bamtechmedia/dominguez/config/StringDictionary;", "setStringDictionary", "(Lcom/bamtechmedia/dominguez/config/StringDictionary;)V", "titleTreatment", "Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;", "getTitleTreatment", "()Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;", "setTitleTreatment", "(Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;)V", "trackListeners", "Lcom/bamtechmedia/dominguez/playback/common/listeners/TrackListeners;", "getTrackListeners", "()Lcom/bamtechmedia/dominguez/playback/common/listeners/TrackListeners;", "setTrackListeners", "(Lcom/bamtechmedia/dominguez/playback/common/listeners/TrackListeners;)V", "upNextAnalytics", "Lcom/bamtechmedia/dominguez/playback/common/analytics/UpNextAnalytics;", "getUpNextAnalytics", "()Lcom/bamtechmedia/dominguez/playback/common/analytics/UpNextAnalytics;", "setUpNextAnalytics", "(Lcom/bamtechmedia/dominguez/playback/common/analytics/UpNextAnalytics;)V", "upNextComponent", "Lcom/bamtechmedia/dominguez/playback/tv/upnext/TvUpNextComponent;", "upNextListeners", "Lcom/bamtechmedia/dominguez/playback/common/listeners/UpNextListeners;", "getUpNextListeners", "()Lcom/bamtechmedia/dominguez/playback/common/listeners/UpNextListeners;", "setUpNextListeners", "(Lcom/bamtechmedia/dominguez/playback/common/listeners/UpNextListeners;)V", "viewModel", "Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;", "getViewModel", "()Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;", "setViewModel", "(Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;)V", "animateViewToNormal", "", "animateViewToUpNext", "dispatchKeyEvent", "event", "Landroid/view/KeyEvent;", "finishAndCheckForRoute", "routeAfterPlayback", "Lcom/bamtechmedia/dominguez/playback/common/RouteAfterPlayback;", "finishWithResult", "resultCode", "", "getAnalyticsSection", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsSection;", "hideContentRating", "isTemporary", "initializeUIComponents", "container", "Landroid/view/ViewGroup;", "mapPlaybackStateToAction", "state", "Lcom/bamtechmedia/dominguez/playback/common/PlaybackState;", "mapPlaybackStateToAction$playback_release", "onAlertDialogAction", "requestId", "which", "onBackPressed", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onDismiss", "dialog", "Landroid/content/DialogInterface;", "onGenericMotionEvent", "Landroid/view/MotionEvent;", "onShow", "onStart", "onUserLeaveHint", "showAudioAndSubtitlesFragment", "showContentRating", "contentRatingAction", "Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingAction;", "showDeeplinkContentError", "updateTitles", "playable", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "Companion", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.tv.TvPlaybackActivity */
 /* compiled from: TvPlaybackActivity.kt */
 public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismissListener, OnShowListener, C7536a {
@@ -164,7 +165,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         /* renamed from: a */
         public Intent mo18948a(Context context, String str) {
             Intent putExtra = new Intent(context, TvPlaybackActivity.class).putExtra("contentId", str);
-            C12880j.m40222a((Object) putExtra, "Intent(context, TvPlayba…ra(CONTENT_ID, contentId)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) putExtra, "Intent(context, TvPlayba…ra(CONTENT_ID, contentId)");
             return putExtra;
         }
 
@@ -175,7 +176,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         /* renamed from: a */
         public Intent mo18947a(Context context, C3693o oVar) {
             Intent putExtra = new Intent(context, TvPlaybackActivity.class).putExtra("playable", oVar);
-            C12880j.m40222a((Object) putExtra, "Intent(context, TvPlayba…a(PLAYABLE_KEY, playable)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) putExtra, "Intent(context, TvPlayba…a(PLAYABLE_KEY, playable)");
             return putExtra;
         }
     }
@@ -270,7 +271,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
 
         public final void invoke() {
             Group group = (Group) this.f14775c.mo19190d(C6327f.playerControls);
-            C12880j.m40222a((Object) group, "playerControls");
+            Intrinsics.checkReturnedValueIsNotNull((Object) group, "playerControls");
             group.setVisibility(8);
             this.f14775c.mo19192k().mo7537b().mo16970S0();
         }
@@ -341,7 +342,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (tvUpNextComponent != null) {
             return tvUpNextComponent;
         }
-        C12880j.m40227c("upNextComponent");
+        Intrinsics.throwUninitializedPropertyAccessException("upNextComponent");
         throw null;
     }
 
@@ -351,36 +352,36 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         bVar.mo15085a((C4315f) new C6523b(this));
         C4317o.m14847a((ConstraintLayout) mo19190d(C6327f.rootView), bVar);
         ConstraintLayout constraintLayout = (ConstraintLayout) mo19190d(C6327f.rootView);
-        C12880j.m40222a((Object) constraintLayout, "rootView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "rootView");
         View a = C4121a0.m14116a(constraintLayout, 0);
         C0425d dVar = new C0425d();
         dVar.mo2430c((ConstraintLayout) mo19190d(C6327f.rootView));
         ExoSurfaceView exoSurfaceView = (ExoSurfaceView) mo19190d(C6327f.videoView);
         String str = "videoView";
-        C12880j.m40222a((Object) exoSurfaceView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView, str);
         dVar.mo2412a(exoSurfaceView.getId(), 7, 0);
         ExoSurfaceView exoSurfaceView2 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView2, str);
         dVar.mo2412a(exoSurfaceView2.getId(), 4, 0);
         ExoSurfaceView exoSurfaceView3 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView3, str);
         dVar.mo2429c(exoSurfaceView3.getId(), 0);
         ExoSurfaceView exoSurfaceView4 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView4, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView4, str);
         dVar.mo2425b(exoSurfaceView4.getId(), 0);
         ExoSurfaceView exoSurfaceView5 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView5, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView5, str);
         dVar.mo2413a(exoSurfaceView5.getId(), 6, 0, 6);
         ExoSurfaceView exoSurfaceView6 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView6, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView6, str);
         dVar.mo2413a(exoSurfaceView6.getId(), 3, 0, 3);
         dVar.mo2432d(a.getId(), 8);
         dVar.mo2427b((ConstraintLayout) mo19190d(C6327f.rootView));
         ExoSurfaceView exoSurfaceView7 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView7, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView7, str);
         exoSurfaceView7.setForeground(null);
         ExoSurfaceView exoSurfaceView8 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView8, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView8, str);
         exoSurfaceView8.setFocusable(false);
         ((ExoSurfaceView) mo19190d(C6327f.videoView)).setOnClickListener(null);
     }
@@ -391,36 +392,36 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         bVar.mo15085a((C4315f) new C6524c(this));
         C4317o.m14847a((ConstraintLayout) mo19190d(C6327f.rootView), bVar);
         ConstraintLayout constraintLayout = (ConstraintLayout) mo19190d(C6327f.rootView);
-        C12880j.m40222a((Object) constraintLayout, "rootView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "rootView");
         View a = C4121a0.m14116a(constraintLayout, 0);
         C0425d dVar = new C0425d();
         dVar.mo2430c((ConstraintLayout) mo19190d(C6327f.rootView));
         ExoSurfaceView exoSurfaceView = (ExoSurfaceView) mo19190d(C6327f.videoView);
         String str = "videoView";
-        C12880j.m40222a((Object) exoSurfaceView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView, str);
         dVar.mo2411a(exoSurfaceView.getId(), 6);
         ExoSurfaceView exoSurfaceView2 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView2, str);
         dVar.mo2411a(exoSurfaceView2.getId(), 3);
         ExoSurfaceView exoSurfaceView3 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView3, str);
         dVar.mo2412a(exoSurfaceView3.getId(), 7, (int) getResources().getDimension(C6325d.up_next_video_view_end_margin_post_play));
         ExoSurfaceView exoSurfaceView4 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView4, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView4, str);
         dVar.mo2412a(exoSurfaceView4.getId(), 4, (int) getResources().getDimension(C6325d.up_next_video_view_bottom_margin_post_play));
         ExoSurfaceView exoSurfaceView5 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView5, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView5, str);
         dVar.mo2429c(exoSurfaceView5.getId(), (int) getResources().getDimension(C6325d.up_next_video_view_width));
         ExoSurfaceView exoSurfaceView6 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView6, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView6, str);
         dVar.mo2425b(exoSurfaceView6.getId(), (int) getResources().getDimension(C6325d.up_next_video_view_height));
         dVar.mo2432d(a.getId(), 0);
         dVar.mo2427b((ConstraintLayout) mo19190d(C6327f.rootView));
         ExoSurfaceView exoSurfaceView7 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView7, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView7, str);
         exoSurfaceView7.setForeground(getDrawable(C6326e.up_next_focusable_border));
         ExoSurfaceView exoSurfaceView8 = (ExoSurfaceView) mo19190d(C6327f.videoView);
-        C12880j.m40222a((Object) exoSurfaceView8, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) exoSurfaceView8, str);
         exoSurfaceView8.setFocusable(true);
         ((ExoSurfaceView) mo19190d(C6327f.videoView)).setOnClickListener(new C6525d(this));
     }
@@ -432,11 +433,11 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
             sDK4ExoPlaybackEngine.mo7537b().mo16970S0();
             C6561b bVar = new C6561b();
             C0538i supportFragmentManager = getSupportFragmentManager();
-            C12880j.m40222a((Object) supportFragmentManager, "supportFragmentManager");
+            Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager, "supportFragmentManager");
             bVar.show(supportFragmentManager, "audio & subtitles fragment");
             return;
         }
-        C12880j.m40227c("engine");
+        Intrinsics.throwUninitializedPropertyAccessException("engine");
         throw null;
     }
 
@@ -476,10 +477,10 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
                 bVar.mo19205a(sDK4ExoPlaybackEngine, keyEvent);
                 return super.dispatchKeyEvent(keyEvent);
             }
-            C12880j.m40227c("engine");
+            Intrinsics.throwUninitializedPropertyAccessException("engine");
             throw null;
         }
-        C12880j.m40227c("focusHandler");
+        Intrinsics.throwUninitializedPropertyAccessException("focusHandler");
         throw null;
     }
 
@@ -495,7 +496,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (cVar != null) {
             return cVar;
         }
-        C12880j.m40227c("convivaSetup");
+        Intrinsics.throwUninitializedPropertyAccessException("convivaSetup");
         throw null;
     }
 
@@ -505,7 +506,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (sDK4ExoPlaybackEngine != null) {
             return sDK4ExoPlaybackEngine;
         }
-        C12880j.m40227c("engine");
+        Intrinsics.throwUninitializedPropertyAccessException("engine");
         throw null;
     }
 
@@ -515,7 +516,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (eVar != null) {
             return eVar;
         }
-        C12880j.m40227c("playbackAnalytics");
+        Intrinsics.throwUninitializedPropertyAccessException("playbackAnalytics");
         throw null;
     }
 
@@ -525,7 +526,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (cVar != null) {
             return cVar;
         }
-        C12880j.m40227c("trackListeners");
+        Intrinsics.throwUninitializedPropertyAccessException("trackListeners");
         throw null;
     }
 
@@ -535,7 +536,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (eVar != null) {
             return eVar;
         }
-        C12880j.m40227c("upNextListeners");
+        Intrinsics.throwUninitializedPropertyAccessException("upNextListeners");
         throw null;
     }
 
@@ -544,7 +545,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (sDK4ExoPlaybackEngine != null) {
             sDK4ExoPlaybackEngine.mo7543h();
         } else {
-            C12880j.m40227c("engine");
+            Intrinsics.throwUninitializedPropertyAccessException("engine");
             throw null;
         }
     }
@@ -598,7 +599,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
             androidx.lifecycle.i$a r1 = androidx.lifecycle.C0715i.C0716a.ON_DESTROY
             com.uber.autodispose.android.lifecycle.b r1 = com.uber.autodispose.android.lifecycle.C10541b.m33255a(r10, r1)
             java.lang.String r2 = "AndroidLifecycleScopePro…om(\n    this, untilEvent)"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             r11.mo19086a(r1)
             android.content.Intent r11 = r10.getIntent()
             java.lang.String r1 = "playable"
@@ -642,7 +643,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
             android.view.View r11 = r10.mo19190d(r11)
             androidx.constraintlayout.widget.ConstraintLayout r11 = (androidx.constraintlayout.widget.ConstraintLayout) r11
             java.lang.String r1 = "rootView"
-            kotlin.jvm.internal.C12880j.m40222a(r11, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r11, r1)
             r10.m20298a(r11)
             com.bamtechmedia.dominguez.playback.m.i.a r11 = r10.f14766p0
             if (r11 == 0) goto L_0x0103
@@ -658,59 +659,59 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
             if (r1 == 0) goto L_0x00f5
             g.d.b.m r0 = r1.mo7537b()
             java.lang.String r1 = "engine.events"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             androidx.lifecycle.i$a r1 = androidx.lifecycle.C0715i.C0716a.ON_DESTROY
             com.uber.autodispose.android.lifecycle.b r1 = com.uber.autodispose.android.lifecycle.C10541b.m33255a(r10, r1)
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             r11.mo19102a(r0, r1)
             return
         L_0x00f5:
-            kotlin.jvm.internal.C12880j.m40227c(r3)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)
             throw r0
         L_0x00f9:
             java.lang.String r11 = "errorHandler"
-            kotlin.jvm.internal.C12880j.m40227c(r11)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r11)
             throw r0
         L_0x00ff:
-            kotlin.jvm.internal.C12880j.m40227c(r3)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)
             throw r0
         L_0x0103:
             java.lang.String r11 = "playPauseAccessibility"
-            kotlin.jvm.internal.C12880j.m40227c(r11)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r11)
             throw r0
         L_0x0109:
-            kotlin.jvm.internal.C12880j.m40227c(r3)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)
             throw r0
         L_0x010d:
             java.lang.String r11 = "viewModel"
-            kotlin.jvm.internal.C12880j.m40227c(r11)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r11)
             throw r0
         L_0x0113:
             java.lang.String r11 = "sentryCapabilitiesReporter"
-            kotlin.jvm.internal.C12880j.m40227c(r11)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r11)
             throw r0
         L_0x0119:
             java.lang.String r11 = "localBookmarksMarker"
-            kotlin.jvm.internal.C12880j.m40227c(r11)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r11)
             throw r0
         L_0x011f:
-            kotlin.jvm.internal.C12880j.m40227c(r1)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r1)
             throw r0
         L_0x0123:
-            kotlin.jvm.internal.C12880j.m40227c(r3)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)
             throw r0
         L_0x0127:
-            kotlin.jvm.internal.C12880j.m40227c(r3)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)
             throw r0
         L_0x012b:
-            kotlin.jvm.internal.C12880j.m40227c(r3)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)
             throw r0
         L_0x012f:
-            kotlin.jvm.internal.C12880j.m40227c(r1)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r1)
             throw r0
         L_0x0133:
             java.lang.String r11 = "engineFactory"
-            kotlin.jvm.internal.C12880j.m40227c(r11)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r11)
             throw r0
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtechmedia.dominguez.playback.p254tv.TvPlaybackActivity.onCreate(android.os.Bundle):void");
@@ -721,7 +722,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (cVar != null) {
             cVar.mo19153c();
         } else {
-            C12880j.m40227c("trackListeners");
+            Intrinsics.throwUninitializedPropertyAccessException("trackListeners");
             throw null;
         }
     }
@@ -732,7 +733,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
             sDK4ExoPlaybackEngine.mo7536a(motionEvent);
             return super.onGenericMotionEvent(motionEvent);
         }
-        C12880j.m40227c("engine");
+        Intrinsics.throwUninitializedPropertyAccessException("engine");
         throw null;
     }
 
@@ -741,7 +742,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (cVar != null) {
             cVar.mo19151a();
         } else {
-            C12880j.m40227c("trackListeners");
+            Intrinsics.throwUninitializedPropertyAccessException("trackListeners");
             throw null;
         }
     }
@@ -760,13 +761,13 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
                     C5755i.m18679a(this, fVar2, null, null, new C6529h(this), 6, null);
                     return;
                 }
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
-        C12880j.m40227c("focusHandler");
+        Intrinsics.throwUninitializedPropertyAccessException("focusHandler");
         throw null;
     }
 
@@ -777,7 +778,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (sDK4ExoPlaybackEngine != null) {
             sDK4ExoPlaybackEngine.mo7539d().mo7611b();
         } else {
-            C12880j.m40227c("engine");
+            Intrinsics.throwUninitializedPropertyAccessException("engine");
             throw null;
         }
     }
@@ -787,7 +788,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         StringBuilder sb = new StringBuilder();
         sb.append("unable to play content: resultCode = ");
         sb.append(i);
-        C14100a.m44526b(sb.toString(), new Object[0]);
+        Timber.m44526b(sb.toString(), new Object[0]);
         setResult(i);
         finish();
     }
@@ -811,27 +812,27 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
                             if (tvUpNextComponent2 != null) {
                                 lifecycle.mo4134a(tvUpNextComponent2);
                             } else {
-                                C12880j.m40227c("upNextComponent");
+                                Intrinsics.throwUninitializedPropertyAccessException("upNextComponent");
                                 throw null;
                             }
                         } else {
-                            C12880j.m40227c("titleTreatment");
+                            Intrinsics.throwUninitializedPropertyAccessException("titleTreatment");
                             throw null;
                         }
                     } else {
-                        C12880j.m40227c("ratingFormatter");
+                        Intrinsics.throwUninitializedPropertyAccessException("ratingFormatter");
                         throw null;
                     }
                 } else {
-                    C12880j.m40227c("stringDictionary");
+                    Intrinsics.throwUninitializedPropertyAccessException("stringDictionary");
                     throw null;
                 }
             } else {
-                C12880j.m40227c("upNextAnalytics");
+                Intrinsics.throwUninitializedPropertyAccessException("upNextAnalytics");
                 throw null;
             }
         } else {
-            C12880j.m40227c("upNextListeners");
+            Intrinsics.throwUninitializedPropertyAccessException("upNextListeners");
             throw null;
         }
     }
@@ -841,7 +842,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         if (aVar.mo18954c() == null) {
             C6342f fVar = this.f14749Y;
             if (fVar == null) {
-                C12880j.m40227c("viewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("viewModel");
                 throw null;
             } else if (fVar.mo18989z()) {
                 m20305r();
@@ -853,7 +854,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
             if (bVar != null) {
                 bVar.mo19103a(aVar.mo18956e());
             } else {
-                C12880j.m40227c("errorHandler");
+                Intrinsics.throwUninitializedPropertyAccessException("errorHandler");
                 throw null;
             }
         } else if (aVar.mo18952a()) {
@@ -872,7 +873,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
                     }
                     return;
                 }
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             } else if (aVar.mo18963j() instanceof C6503b) {
                 if (!this.f14770t0) {
@@ -882,7 +883,7 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
                 if (bVar3 != null) {
                     bVar3.mo19206b();
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             } else if (aVar.mo18962i() instanceof C6322b) {
@@ -904,16 +905,16 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         C6414a aVar = this.f14752b0;
         if (aVar != null) {
             ConstraintLayout constraintLayout = (ConstraintLayout) mo19190d(C6327f.topBarContainer);
-            C12880j.m40222a((Object) constraintLayout, "topBarContainer");
+            Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "topBarContainer");
             TextView textView = (TextView) mo19190d(C6327f.parentTitle);
-            C12880j.m40222a((Object) textView, "parentTitle");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "parentTitle");
             TextView textView2 = (TextView) mo19190d(C6327f.seriesTitle);
-            C12880j.m40222a((Object) textView2, "seriesTitle");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "seriesTitle");
             C6415a aVar2 = new C6415a(constraintLayout, textView, textView2, null, null, 24, null);
             aVar.mo19061a(oVar, aVar2);
             return;
         }
-        C12880j.m40227c("currentContentUpdates");
+        Intrinsics.throwUninitializedPropertyAccessException("currentContentUpdates");
         throw null;
     }
 
@@ -925,24 +926,24 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
             if (contentRatingPresenter != null) {
                 C3693o b = eVar.mo18893b();
                 TextView textView = (TextView) mo19190d(C6327f.ratingId);
-                C12880j.m40222a((Object) textView, "ratingId");
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView, "ratingId");
                 TextView textView2 = (TextView) mo19190d(C6327f.ratingAdvisory);
-                C12880j.m40222a((Object) textView2, "ratingAdvisory");
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "ratingAdvisory");
                 LinearLayout linearLayout = (LinearLayout) mo19190d(C6327f.disclaimerContainer);
-                C12880j.m40222a((Object) linearLayout, "disclaimerContainer");
+                Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, "disclaimerContainer");
                 ConstraintLayout constraintLayout = (ConstraintLayout) mo19190d(C6327f.contentRatingParent);
-                C12880j.m40222a((Object) constraintLayout, "contentRatingParent");
+                Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "contentRatingParent");
                 C6280b bVar2 = new C6280b(textView, textView2, linearLayout, constraintLayout);
                 int a = eVar.mo18892a().mo18891a();
                 C6493a aVar = this.f14754d0;
                 if (aVar != null) {
                     contentRatingPresenter.mo18879a(b, bVar2, a, aVar);
                 } else {
-                    C12880j.m40227c("contentRatingListeners");
+                    Intrinsics.throwUninitializedPropertyAccessException("contentRatingListeners");
                     throw null;
                 }
             } else {
-                C12880j.m40227c("contentRatingPresenter");
+                Intrinsics.throwUninitializedPropertyAccessException("contentRatingPresenter");
                 throw null;
             }
         }
@@ -954,14 +955,14 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
         String str = "contentRatingPresenter";
         if (contentRatingPresenter != null) {
             ConstraintLayout constraintLayout = (ConstraintLayout) mo19190d(C6327f.contentRatingParent);
-            C12880j.m40222a((Object) constraintLayout, "contentRatingParent");
+            Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "contentRatingParent");
             contentRatingPresenter.mo18878a(constraintLayout);
             if (z) {
                 ContentRatingPresenter contentRatingPresenter2 = this.f14753c0;
                 if (contentRatingPresenter2 != null) {
                     contentRatingPresenter2.mo18880b();
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             } else {
@@ -969,12 +970,12 @@ public final class TvPlaybackActivity extends C5735b implements C2413n, OnDismis
                 if (aVar != null) {
                     aVar.mo19148a();
                 } else {
-                    C12880j.m40227c("contentRatingListeners");
+                    Intrinsics.throwUninitializedPropertyAccessException("contentRatingListeners");
                     throw null;
                 }
             }
         } else {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
     }

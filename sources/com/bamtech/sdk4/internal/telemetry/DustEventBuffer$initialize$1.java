@@ -4,7 +4,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.internal.telemetry.DustEventBuffer.TelemetryProcessingRequest;
 import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.MaybeSource;
 import p520io.reactivex.functions.Function;
@@ -23,7 +23,7 @@ final class DustEventBuffer$initialize$1<T, R> implements Function<T, MaybeSourc
     public final Maybe<TelemetryProcessingRequest> apply(final TelemetryProcessingRequest telemetryProcessingRequest) {
         AccessTokenProvider access$getTokenProvider$p = this.this$0.tokenProvider;
         ServiceTransaction serviceTransaction = this.$transaction;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return access$getTokenProvider$p.getStoredAccessToken(serviceTransaction).mo30131f(new Function<T, R>() {
             public final TelemetryProcessingRequest apply(String str) {
                 return telemetryProcessingRequest;

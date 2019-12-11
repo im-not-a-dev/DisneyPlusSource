@@ -8,7 +8,7 @@ import com.google.common.base.Optional;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p299m.C7543f.C7544a;
 import p163g.p201e.p203b.p299m.C7547h;
@@ -171,13 +171,13 @@ public final class C2763b {
         L_0x0011:
             io.reactivex.Maybe r0 = p520io.reactivex.Maybe.m38259h()
             java.lang.String r1 = "Maybe.empty()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
         L_0x001a:
             com.bamtechmedia.dominguez.auth.p0.e r1 = r2.f7506b
             io.reactivex.Maybe r1 = r1.mo11786a()
             io.reactivex.Maybe r0 = r0.mo30115b(r1)
             java.lang.String r1 = "(autoLoginOptional.orNul…Login.credentialsMaybe())"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             return r0
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtechmedia.dominguez.auth.p064p0.C2763b.m10418b():io.reactivex.Maybe");
@@ -186,7 +186,7 @@ public final class C2763b {
     /* renamed from: a */
     public final Single<Boolean> mo11780a() {
         Single<Boolean> a = m10418b().mo30128d(new C2764a(this)).mo30213a(Boolean.valueOf(false));
-        C12880j.m40222a((Object) a, "credentialsMaybe()\n     ….onErrorReturnItem(false)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "credentialsMaybe()\n     ….onErrorReturnItem(false)");
         return a;
     }
 
@@ -194,7 +194,7 @@ public final class C2763b {
     /* renamed from: a */
     public final Single<Boolean> m10416a(C2770d dVar) {
         Single<Boolean> a = this.f7507c.authenticate(dVar.mo11784a(), dVar.mo11785b()).mo30217b((Function<? super T, ? extends CompletableSource>) new C2765b<Object,Object>(this)).mo30050b((C11945a) new C2766c(this)).mo30036a((Consumer<? super Throwable>) new C2767d<Object>(this, dVar)).mo30045a(Boolean.valueOf(true));
-        C12880j.m40222a((Object) a, "identityApi.authenticate…   .toSingleDefault(true)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "identityApi.authenticate…   .toSingleDefault(true)");
         return a;
     }
 }

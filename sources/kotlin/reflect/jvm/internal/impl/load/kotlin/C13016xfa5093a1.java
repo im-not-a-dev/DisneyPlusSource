@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.kotlin;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.components.DescriptorResolverUtils;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinJvmBinaryClass.AnnotationArrayArgumentVisitor;
@@ -45,7 +45,7 @@ public final class C13016xfa5093a1 implements AnnotationArrayArgumentVisitor {
             ConstantValueFactory constantValueFactory = ConstantValueFactory.INSTANCE;
             List compact = CollectionsKt.compact(this.elements);
             KotlinType type = annotationParameterByName.getType();
-            C12880j.m40222a((Object) type, "parameter.type");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "parameter.type");
             access$getArguments$p.put(name, constantValueFactory.createArrayValue(compact, type));
         }
     }

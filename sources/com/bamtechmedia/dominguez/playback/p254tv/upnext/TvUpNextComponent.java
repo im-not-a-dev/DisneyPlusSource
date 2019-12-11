@@ -46,14 +46,14 @@ import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Observable;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.p527w.p529c.C11992a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\t\n\u0000\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003BC\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0006\u0010\f\u001a\u00020\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\f\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00120\u0011¢\u0006\u0002\u0010\u0013J\u0018\u0010$\u001a\u00020\u00122\u0006\u0010%\u001a\u00020&2\u0006\u0010'\u001a\u00020(H\u0002J\b\u0010)\u001a\u00020\u0012H\u0002J\u0010\u0010*\u001a\u00020\u00122\u0006\u0010+\u001a\u00020,H\u0016J\u0010\u0010-\u001a\u00020\u00122\u0006\u0010.\u001a\u00020\u0002H\u0016J\u0010\u0010/\u001a\u00020\u00122\u0006\u0010%\u001a\u00020&H\u0002J\u0018\u00100\u001a\u00020\u00122\u0006\u0010'\u001a\u00020(2\u0006\u0010%\u001a\u00020&H\u0003J\u0018\u00101\u001a\u00020\u00122\u0006\u00102\u001a\u00020&2\u0006\u00103\u001a\u00020\u0019H\u0002J \u00104\u001a\u00020\u00122\u0006\u0010.\u001a\u0002052\u0006\u00102\u001a\u00020&2\u0006\u00103\u001a\u00020\u0019H\u0002J \u00106\u001a\u00020\u00122\u0006\u00107\u001a\u0002052\u0006\u0010%\u001a\u00020&2\u0006\u0010'\u001a\u00020(H\u0002J\u0010\u00108\u001a\u00020\u00122\u0006\u0010%\u001a\u00020&H\u0002J(\u00109\u001a\u00020\u00122\u0006\u00102\u001a\u00020&2\u0006\u0010.\u001a\u0002052\u0006\u0010:\u001a\u00020\u00192\u0006\u0010\u0018\u001a\u00020\u0019H\u0002J\u0018\u0010;\u001a\u00020\u00122\u0006\u0010.\u001a\u00020\u00022\u0006\u0010<\u001a\u00020=H\u0002J\b\u0010>\u001a\u00020\u0012H\u0002J\u0018\u0010?\u001a\u00020\u00122\u0006\u0010@\u001a\u00020A2\u0006\u0010%\u001a\u00020&H\u0002R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0019X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u0019X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00120\u0011X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\u0019X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001dX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\rX\u0004¢\u0006\u0002\n\u0000R\u0016\u0010\u001e\u001a\n  *\u0004\u0018\u00010\u001f0\u001fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020\u001dX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020\u0017X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020\u0019X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006B"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/tv/upnext/TvUpNextComponent;", "Lcom/bamtechmedia/dominguez/playback/common/UIComponent;", "Lcom/bamtechmedia/dominguez/playback/common/PlaybackState;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "container", "Landroid/view/ViewGroup;", "upNextListeners", "Lcom/bamtechmedia/dominguez/playback/common/listeners/UpNextListeners;", "upNextAnalytics", "Lcom/bamtechmedia/dominguez/playback/common/analytics/UpNextAnalytics;", "stringDictionary", "Lcom/bamtechmedia/dominguez/config/StringDictionary;", "ratingFormatter", "Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;", "titleTreatment", "Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;", "hideVideoControls", "Lkotlin/Function0;", "", "(Landroid/view/ViewGroup;Lcom/bamtechmedia/dominguez/playback/common/listeners/UpNextListeners;Lcom/bamtechmedia/dominguez/playback/common/analytics/UpNextAnalytics;Lcom/bamtechmedia/dominguez/config/StringDictionary;Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;Lkotlin/jvm/functions/Function0;)V", "autoPlayDisposable", "Lio/reactivex/disposables/Disposable;", "backgroundImage", "Landroid/widget/ImageView;", "comingSoonText", "Landroid/widget/TextView;", "descriptionText", "metadataText", "playButton", "Landroid/widget/Button;", "root", "Landroid/view/View;", "kotlin.jvm.PlatformType", "secondaryButton", "titleCardImage", "titleText", "autoPlayNextContent", "nextPlayable", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "autoPlayEnabled", "", "hideUpNext", "onDestroy", "owner", "Landroidx/lifecycle/LifecycleOwner;", "render", "state", "setupAndLoadImages", "setupAutoPlay", "setupDescriptionText", "playable", "textView", "setupMetadataText", "Lcom/bamtechmedia/dominguez/playback/common/UpNextState;", "setupPlayButton", "upNextState", "setupSecondaryButton", "setupTitleText", "titleTextView", "showUpNext", "action", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextAction$DisplayUpNextDialogElements;", "stopAutoPlayTimer", "updatePlayButtonTextWithTimeLeft", "timeLeft", "", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.tv.upnext.TvUpNextComponent */
@@ -142,7 +142,7 @@ public final class TvUpNextComponent implements C6340d<C6336a>, C0710d {
                 C5763b.m18702a(this.f14850V.f14833U, a, 0, null, Integer.valueOf(view.getWidth()), false, false, false, 102, null);
             }
             ViewTreeObserver viewTreeObserver = this.f14849U;
-            C12880j.m40222a((Object) viewTreeObserver, "vto");
+            Intrinsics.checkReturnedValueIsNotNull((Object) viewTreeObserver, "vto");
             if (viewTreeObserver.isAlive()) {
                 this.f14849U.removeOnPreDrawListener(this);
             } else {
@@ -214,7 +214,7 @@ public final class TvUpNextComponent implements C6340d<C6336a>, C0710d {
         /* renamed from: a */
         public final void accept(Long l) {
             TvUpNextComponent tvUpNextComponent = this.f14858c;
-            C12880j.m40222a((Object) l, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) l, "it");
             tvUpNextComponent.m20435a(l.longValue(), this.f14857U);
         }
     }
@@ -231,7 +231,7 @@ public final class TvUpNextComponent implements C6340d<C6336a>, C0710d {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
     }
 
@@ -317,32 +317,32 @@ public final class TvUpNextComponent implements C6340d<C6336a>, C0710d {
         this.f14848i0 = function0;
         this.f14841c = LayoutInflater.from(viewGroup.getContext()).inflate(C6329h.component_tv_up_next_view, viewGroup, false);
         View findViewById = this.f14841c.findViewById(C6327f.upNextBackgroundImage);
-        C12880j.m40222a((Object) findViewById, "root.findViewById(R.id.upNextBackgroundImage)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) findViewById, "root.findViewById(R.id.upNextBackgroundImage)");
         this.f14833U = (ImageView) findViewById;
         View findViewById2 = this.f14841c.findViewById(C6327f.upNextTitleImage);
-        C12880j.m40222a((Object) findViewById2, "root.findViewById(R.id.upNextTitleImage)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) findViewById2, "root.findViewById(R.id.upNextTitleImage)");
         this.f14834V = (ImageView) findViewById2;
         View findViewById3 = this.f14841c.findViewById(C6327f.upNextTitleText);
-        C12880j.m40222a((Object) findViewById3, "root.findViewById(R.id.upNextTitleText)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) findViewById3, "root.findViewById(R.id.upNextTitleText)");
         this.f14835W = (TextView) findViewById3;
         View findViewById4 = this.f14841c.findViewById(C6327f.upNextComingSoonText);
-        C12880j.m40222a((Object) findViewById4, "root.findViewById(R.id.upNextComingSoonText)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) findViewById4, "root.findViewById(R.id.upNextComingSoonText)");
         this.f14836X = (TextView) findViewById4;
         View findViewById5 = this.f14841c.findViewById(C6327f.upNextMetadataText);
-        C12880j.m40222a((Object) findViewById5, "root.findViewById(R.id.upNextMetadataText)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) findViewById5, "root.findViewById(R.id.upNextMetadataText)");
         this.f14837Y = (TextView) findViewById5;
         View findViewById6 = this.f14841c.findViewById(C6327f.upNextDescriptionText);
-        C12880j.m40222a((Object) findViewById6, "root.findViewById(R.id.upNextDescriptionText)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) findViewById6, "root.findViewById(R.id.upNextDescriptionText)");
         this.f14838Z = (TextView) findViewById6;
         View findViewById7 = this.f14841c.findViewById(C6327f.upNextPlayButton);
-        C12880j.m40222a((Object) findViewById7, "root.findViewById(R.id.upNextPlayButton)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) findViewById7, "root.findViewById(R.id.upNextPlayButton)");
         this.f14839a0 = (Button) findViewById7;
         View findViewById8 = this.f14841c.findViewById(C6327f.upNextSecondaryButton);
-        C12880j.m40222a((Object) findViewById8, "root.findViewById(R.id.upNextSecondaryButton)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) findViewById8, "root.findViewById(R.id.upNextSecondaryButton)");
         this.f14840b0 = (Button) findViewById8;
         viewGroup.addView(this.f14841c, 0);
         View view = this.f14841c;
-        C12880j.m40222a((Object) view, "root");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "root");
         view.setVisibility(8);
     }
 
@@ -395,9 +395,9 @@ public final class TvUpNextComponent implements C6340d<C6336a>, C0710d {
     /* renamed from: b */
     private final void m20448b() {
         View view = this.f14841c;
-        C12880j.m40222a((Object) view, "root");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "root");
         if (!(view.getVisibility() == 0)) {
-            C14100a.m44532e("hideUpNext called but already hidden", new Object[0]);
+            Timber.m44532e("hideUpNext called but already hidden", new Object[0]);
             return;
         }
         m20452d();
@@ -415,17 +415,17 @@ public final class TvUpNextComponent implements C6340d<C6336a>, C0710d {
             StringBuilder sb = new StringBuilder();
             sb.append("Unhandled UpNextAction = ");
             sb.append(aVar.mo18963j());
-            C14100a.m44532e(sb.toString(), new Object[0]);
+            Timber.m44532e(sb.toString(), new Object[0]);
         }
     }
 
     /* renamed from: a */
     private final void m20440a(C6336a aVar, C6502a aVar2) {
         View view = this.f14841c;
-        C12880j.m40222a((Object) view, "root");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "root");
         boolean z = true;
         if (view.getVisibility() == 0) {
-            C14100a.m44532e("showUpNext called but already visible", new Object[0]);
+            Timber.m44532e("showUpNext called but already visible", new Object[0]);
             return;
         }
         C3693o f = aVar.mo18958f();
@@ -458,7 +458,7 @@ public final class TvUpNextComponent implements C6340d<C6336a>, C0710d {
     private final void m20436a(C3693o oVar) {
         this.f14847h0.mo13768a(oVar, this.f14834V);
         View view = this.f14841c;
-        C12880j.m40222a((Object) view, "root");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "root");
         ViewTreeObserver viewTreeObserver = view.getViewTreeObserver();
         viewTreeObserver.addOnPreDrawListener(new C6569a(view, viewTreeObserver, this, oVar));
     }

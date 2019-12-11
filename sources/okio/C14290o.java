@@ -1,7 +1,7 @@
 package okio;
 
 import java.io.OutputStream;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: okio.o */
 /* compiled from: Okio.kt */
@@ -41,7 +41,7 @@ final class C14290o implements C14300v {
                     C14297t.m45789a(sVar);
                 }
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }

@@ -163,7 +163,7 @@ final class DefaultOnlineMediaClient$getVerifiedMediaItem$1$3$qosCallback$1 exte
         L_0x00de:
             java.lang.String r1 = (java.lang.String) r1
             java.lang.String r5 = "LIVE"
-            boolean r1 = kotlin.jvm.internal.C12880j.m40224a(r5, r1)
+            boolean r1 = kotlin.jvm.internal.Intrinsics.areEqual(r5, r1)
             if (r22 == 0) goto L_0x00f2
             com.bamtech.sdk4.internal.media.HlsPlaylists r5 = r22.getHlsPlaylists()
             if (r5 == 0) goto L_0x00f2

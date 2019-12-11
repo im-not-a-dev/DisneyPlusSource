@@ -7,7 +7,7 @@ import java.util.List;
 import kotlin.C12898l;
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p586h0.C12757d;
 import kotlin.p590y.C13162e0;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
@@ -109,7 +109,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
                 if (findClassAcrossModuleDependencies != null) {
                     List parameters = getParameters();
                     TypeConstructor typeConstructor = findClassAcrossModuleDependencies.getTypeConstructor();
-                    C12880j.m40222a((Object) typeConstructor, "descriptor.typeConstructor");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "descriptor.typeConstructor");
                     List<TypeParameterDescriptor> e = C13199w.m40587e(parameters, typeConstructor.getParameters().size());
                     ArrayList arrayList2 = new ArrayList(C13187p.m40525a((Iterable) e, 10));
                     for (TypeParameterDescriptor defaultType : e) {
@@ -168,7 +168,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
             public final Kind byClassNamePrefix(FqName fqName, String str) {
                 Kind[] values;
                 for (Kind kind : Kind.values()) {
-                    if (C12880j.m40224a((Object) kind.getPackageFqName(), (Object) fqName) && C12832w.m40123b(str, kind.getClassNamePrefix(), false, 2, null)) {
+                    if (Intrinsics.areEqual((Object) kind.getPackageFqName(), (Object) fqName) && C12832w.m40123b(str, kind.getClassNamePrefix(), false, 2, null)) {
                         return kind;
                     }
                 }
@@ -202,7 +202,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
             sb.append(this.classNamePrefix);
             sb.append(i);
             Name identifier = Name.identifier(sb.toString());
-            C12880j.m40222a((Object) identifier, "Name.identifier(\"$classNamePrefix$arity\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(\"$classNamePrefix$arity\")");
             return identifier;
         }
     }
@@ -276,7 +276,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
 
     public SourceElement getSource() {
         SourceElement sourceElement = SourceElement.NO_SOURCE;
-        C12880j.m40222a((Object) sourceElement, "SourceElement.NO_SOURCE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement, "SourceElement.NO_SOURCE");
         return sourceElement;
     }
 
@@ -290,7 +290,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
 
     public Visibility getVisibility() {
         Visibility visibility = Visibilities.PUBLIC;
-        C12880j.m40222a((Object) visibility, "Visibilities.PUBLIC");
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "Visibilities.PUBLIC");
         return visibility;
     }
 
@@ -324,7 +324,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
 
     public String toString() {
         String asString = getName().asString();
-        C12880j.m40222a((Object) asString, "name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "name.asString()");
         return asString;
     }
 

@@ -2,7 +2,7 @@ package com.bamtech.player.exo;
 
 import android.content.Context;
 import android.os.Looper;
-import com.google.android.exoplayer2.C8802o0;
+import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.LoadControl;
 import com.google.android.exoplayer2.RenderersFactory;
 import com.google.android.exoplayer2.drm.C8710l;
@@ -15,7 +15,7 @@ import p163g.p174d.p178b.C5319t.C5322c;
 
 /* renamed from: com.bamtech.player.exo.g */
 /* compiled from: SimplerExoPlayer */
-public class C1708g extends C8802o0 implements C5322c {
+public class C1708g extends SimpleExoPlayer implements C5322c {
 
     /* renamed from: H */
     C5319t f5964H = C5319t.f12805a;

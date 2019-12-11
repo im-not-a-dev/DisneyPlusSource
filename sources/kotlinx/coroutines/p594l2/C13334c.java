@@ -3,7 +3,7 @@ package kotlinx.coroutines.p594l2;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.C12688f;
 import kotlinx.coroutines.C13230d1;
@@ -61,7 +61,7 @@ public final class C13334c {
     /* renamed from: a */
     private static final Completable m40967a(C13233e0 e0Var, C12688f fVar, Function2<? super C13233e0, ? super C12683c<? super C13145v>, ? extends Object> function2) {
         Completable a = Completable.m38151a((C11914c) new C13335a(e0Var, fVar, function2));
-        C12880j.m40222a((Object) a, "Completable.create { sub…AULT, coroutine, block)\n}");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.create { sub…AULT, coroutine, block)\n}");
         return a;
     }
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.profiles.x1.g.b */
 /* compiled from: AbstractLanguageHandler.kt */
@@ -50,12 +50,12 @@ public abstract class C6918b {
             while (true) {
                 if (it.hasNext()) {
                     Language language = (Language) it.next();
-                    if (C12880j.m40224a((Object) language.mo13104Y(), (Object) str)) {
+                    if (Intrinsics.areEqual((Object) language.mo13104Y(), (Object) str)) {
                         String b0 = language.mo13107b0();
                         if (b0 != null) {
                             String lowerCase = b0.toLowerCase();
-                            C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
-                            if (C12880j.m40224a((Object) lowerCase, (Object) mo19687a())) {
+                            Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
+                            if (Intrinsics.areEqual((Object) lowerCase, (Object) mo19687a())) {
                                 return language;
                             }
                         } else {

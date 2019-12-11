@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p366s0.p372w;
 
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.EOFException;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.io.IOException;
 final class C8995f {
 
     /* renamed from: i */
-    private static final int f19734i = C9554k0.m29428b("OggS");
+    private static final int f19734i = Util.m29428b("OggS");
 
     /* renamed from: a */
     public int f19735a;

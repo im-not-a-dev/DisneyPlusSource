@@ -6,7 +6,7 @@ import android.media.AudioFocusRequest.Builder;
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
 import android.os.Handler;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.b.g0.v5.g */
 /* compiled from: OreoAudioFocusFlow */
@@ -36,7 +36,7 @@ class C5178g extends C5176e {
             z = false;
         }
         sb.append(z);
-        C14100a.m44529c(sb.toString(), new Object[0]);
+        Timber.m44529c(sb.toString(), new Object[0]);
     }
 
     /* access modifiers changed from: 0000 */

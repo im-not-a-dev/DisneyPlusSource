@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p366s0;
 
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.io.IOException;
 
 /* renamed from: com.google.android.exoplayer2.s0.a */
@@ -166,7 +166,7 @@ public abstract class C8899a {
                 return j4;
             }
             long j7 = (long) (((float) (j - j2)) * (((float) (j5 - j4)) / ((float) (j3 - j2))));
-            return C9554k0.m29431b(((j7 + j4) - j6) - (j7 / 20), j4, j5 - 1);
+            return Util.m29431b(((j7 + j4) - j6) - (j7 / 20), j4, j5 - 1);
         }
 
         /* access modifiers changed from: private */

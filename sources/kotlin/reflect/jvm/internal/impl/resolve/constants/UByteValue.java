@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FindClassInModuleKt;
@@ -18,7 +18,7 @@ public final class UByteValue extends UnsignedValueConstant<Byte> {
 
     public KotlinType getType(ModuleDescriptor moduleDescriptor) {
         ClassId classId = KotlinBuiltIns.FQ_NAMES.uByte;
-        C12880j.m40222a((Object) classId, "KotlinBuiltIns.FQ_NAMES.uByte");
+        Intrinsics.checkReturnedValueIsNotNull((Object) classId, "KotlinBuiltIns.FQ_NAMES.uByte");
         ClassDescriptor findClassAcrossModuleDependencies = FindClassInModuleKt.findClassAcrossModuleDependencies(moduleDescriptor, classId);
         if (findClassAcrossModuleDependencies != null) {
             SimpleType defaultType = findClassAcrossModuleDependencies.getDefaultType();
@@ -27,7 +27,7 @@ public final class UByteValue extends UnsignedValueConstant<Byte> {
             }
         }
         SimpleType createErrorType = ErrorUtils.createErrorType("Unsigned type UByte not found");
-        C12880j.m40222a((Object) createErrorType, "ErrorUtils.createErrorTy…ed type UByte not found\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createErrorType, "ErrorUtils.createErrorTy…ed type UByte not found\")");
         return createErrorType;
     }
 

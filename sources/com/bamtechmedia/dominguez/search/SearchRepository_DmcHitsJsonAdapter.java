@@ -7,7 +7,7 @@ import com.bamtechmedia.dominguez.search.SearchRepository.DmcHits;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -31,19 +31,19 @@ public final class SearchRepository_DmcHitsJsonAdapter extends C11725h<DmcHits> 
         String str3 = "resultsType";
         String str4 = "hits";
         C11739b a = C11739b.m37729a(str4, str3, str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"h…sType\", \"meta\", \"assets\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"h…sType\", \"meta\", \"assets\")");
         this.options = a;
         C11725h<List<DmcAssetWrapper>> a2 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, DmcAssetWrapper.class), C13188p0.m40531a(), str4);
-        C12880j.m40222a((Object) a2, "moshi.adapter<List<Searc…tions.emptySet(), \"hits\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<List<Searc…tions.emptySet(), \"hits\")");
         this.listOfDmcAssetWrapperAdapter = a2;
         C11725h<String> a3 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str3);
-        C12880j.m40222a((Object) a3, "moshi.adapter<String>(St…mptySet(), \"resultsType\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<String>(St…mptySet(), \"resultsType\")");
         this.stringAdapter = a3;
         C11725h<DefaultPagingMetaData> a4 = vVar.mo29869a((Type) DefaultPagingMetaData.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a4, "moshi.adapter<DefaultPag…tions.emptySet(), \"meta\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<DefaultPag…tions.emptySet(), \"meta\")");
         this.defaultPagingMetaDataAdapter = a4;
         C11725h<List<C3626b>> a5 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, C3626b.class), C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a5, "moshi.adapter<List<Asset…ons.emptySet(), \"assets\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<List<Asset…ons.emptySet(), \"assets\")");
         this.listOfAssetAdapter = a5;
     }
 

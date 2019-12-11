@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.framework;
 
 import androidx.lifecycle.C0741y;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p503n.p504a.C11790c0;
 import p520io.reactivex.subjects.C11978b;
 
@@ -33,7 +33,7 @@ public class C5733a extends C0741y {
 
     public C5733a() {
         C11978b j = C11978b.m38573j();
-        C12880j.m40222a((Object) j, "CompletableSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "CompletableSubject.create()");
         this.scopeSubject = j;
     }
 

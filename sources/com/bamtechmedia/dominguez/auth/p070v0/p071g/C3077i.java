@@ -17,7 +17,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -27,7 +27,7 @@ import p163g.p503n.p504a.C11792d0;
 import p163g.p503n.p504a.C11793e;
 import p520io.reactivex.C11974s;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000d\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001&B?\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\b\b\u0001\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010¢\u0006\u0002\u0010\u0011J\u0010\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001cH\u0002J\u0010\u0010\u001d\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001eH\u0002J\u0010\u0010\u001f\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020 H\u0002J\u0010\u0010!\u001a\u00020\u001a2\b\u0010\"\u001a\u0004\u0018\u00010\u0013J\u0010\u0010#\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020$H\u0002J\u0010\u0010%\u001a\u00020\u001a2\b\u0010\"\u001a\u0004\u0018\u00010\u0013R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u001c\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0014\u0010\u0015\"\u0004\b\u0016\u0010\u0017R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\r\u001a\u00020\u000e¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u0018R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000¨\u0006'"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailViewModel$ViewState;", "loginEmailAction", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction;", "router", "Lcom/bamtechmedia/dominguez/auth/api/router/AccountValidationRouter;", "errorRouter", "Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;", "otpRouter", "Lcom/bamtechmedia/dominguez/auth/api/router/OtpRouter;", "authHostViewModel", "Lcom/bamtechmedia/dominguez/auth/AuthHostViewModel;", "isTelevision", "", "serviceAvailabilityState", "Lcom/bamtechmedia/dominguez/portability/api/ServiceAvailabilityState;", "(Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction;Lcom/bamtechmedia/dominguez/auth/api/router/AccountValidationRouter;Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;Lcom/bamtechmedia/dominguez/auth/api/router/OtpRouter;Lcom/bamtechmedia/dominguez/auth/AuthHostViewModel;ZLcom/bamtechmedia/dominguez/portability/api/ServiceAvailabilityState;)V", "email", "", "getEmail", "()Ljava/lang/String;", "setEmail", "(Ljava/lang/String;)V", "()Z", "handleAcceptedState", "", "actionState", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction$ActionState$Accepted;", "handleAccountRecoveryState", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction$ActionState$AccountRecovery;", "handleNotFoundState", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction$ActionState$NotFound;", "login", "input", "mapLoginEmailActionState", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction$ActionState;", "signUp", "ViewState", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.v0.g.i */
@@ -79,7 +79,7 @@ public final class C3077i extends C5741g<C3081c> {
             /* renamed from: a */
             public final C3081c invoke(C3081c cVar) {
                 Boolean bool = this.f7969c;
-                C12880j.m40222a((Object) bool, "serviceAvailable");
+                Intrinsics.checkReturnedValueIsNotNull((Object) bool, "serviceAvailable");
                 return C3081c.m10904a(cVar, false, false, false, null, null, bool.booleanValue(), 31, null);
             }
         }
@@ -107,7 +107,7 @@ public final class C3077i extends C5741g<C3081c> {
 
         /* renamed from: a */
         public final void mo12106a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -115,7 +115,7 @@ public final class C3077i extends C5741g<C3081c> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -227,7 +227,7 @@ public final class C3077i extends C5741g<C3081c> {
                     C3081c cVar = (C3081c) obj;
                     if (this.f7971a == cVar.f7971a) {
                         if (this.f7972b == cVar.f7972b) {
-                            if ((this.f7973c == cVar.f7973c) && C12880j.m40224a((Object) this.f7974d, (Object) cVar.f7974d) && C12880j.m40224a((Object) this.f7975e, (Object) cVar.f7975e)) {
+                            if ((this.f7973c == cVar.f7973c) && Intrinsics.areEqual((Object) this.f7974d, (Object) cVar.f7974d) && Intrinsics.areEqual((Object) this.f7975e, (Object) cVar.f7975e)) {
                                 if (this.f7976f == cVar.f7976f) {
                                     return true;
                                 }
@@ -378,7 +378,7 @@ public final class C3077i extends C5741g<C3081c> {
 
         /* renamed from: a */
         public final void accept(Boolean bool) {
-            C12880j.m40222a((Object) bool, "available");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bool, "available");
             if (bool.booleanValue()) {
                 this.f7979c.f7966f.mo11798b(this.f7978U.mo12076a());
                 this.f7979c.updateState(C3084a.f7980c);
@@ -400,7 +400,7 @@ public final class C3077i extends C5741g<C3081c> {
 
         /* renamed from: a */
         public final void mo12121a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -452,7 +452,7 @@ public final class C3077i extends C5741g<C3081c> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Unhandled Exception: during LoginEmailAction", new Object[0]);
+            Timber.m44528b(th, "Unhandled Exception: during LoginEmailAction", new Object[0]);
         }
     }
 
@@ -543,7 +543,7 @@ public final class C3077i extends C5741g<C3081c> {
             g.n.a.h r2 = p163g.p503n.p504a.C11793e.m37930a(r2)
             java.lang.Object r1 = r1.mo30161a(r2)
             java.lang.String r2 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             g.n.a.a0 r1 = (p163g.p503n.p504a.C11786a0) r1
             com.bamtechmedia.dominguez.auth.v0.g.i$a r2 = new com.bamtechmedia.dominguez.auth.v0.g.i$a
             r2.<init>(r11)
@@ -588,7 +588,7 @@ public final class C3077i extends C5741g<C3081c> {
             g.n.a.h r0 = p163g.p503n.p504a.C11793e.m37930a(r0)
             java.lang.Object r3 = r3.mo30161a(r0)
             java.lang.String r0 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r0)
             g.n.a.a0 r3 = (p163g.p503n.p504a.C11786a0) r3
             com.bamtechmedia.dominguez.auth.v0.g.i$g r0 = new com.bamtechmedia.dominguez.auth.v0.g.i$g
             r0.<init>(r2)
@@ -651,7 +651,7 @@ public final class C3077i extends C5741g<C3081c> {
     /* renamed from: a */
     private final void m10894a(C3053d dVar) {
         Object a = this.f7967g.mo19244d().mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C3083e(this, dVar), C3086f.f7982c);
     }
 }

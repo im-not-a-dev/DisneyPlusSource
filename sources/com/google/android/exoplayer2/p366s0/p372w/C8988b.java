@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.io.EOFException;
 import java.io.IOException;
 import net.danlew.android.joda.DateUtils;
@@ -62,7 +62,7 @@ final class C8988b implements C8996g {
 
         /* renamed from: b */
         public C8921a mo23277b(long j) {
-            return new C8921a(new C8923p(j, C9554k0.m29431b((C8988b.this.f19707b + ((C8988b.this.f19709d.mo23416b(j) * (C8988b.this.f19708c - C8988b.this.f19707b)) / C8988b.this.f19711f)) - 30000, C8988b.this.f19707b, C8988b.this.f19708c - 1)));
+            return new C8921a(new C8923p(j, Util.m29431b((C8988b.this.f19707b + ((C8988b.this.f19709d.mo23416b(j) * (C8988b.this.f19708c - C8988b.this.f19707b)) / C8988b.this.f19711f)) - 30000, C8988b.this.f19707b, C8988b.this.f19708c - 1)));
         }
 
         /* renamed from: c */
@@ -147,7 +147,7 @@ final class C8988b implements C8996g {
         long position2 = hVar.getPosition() - (((long) i) * (i2 <= 0 ? 2 : 1));
         long j6 = this.f19715j;
         long j7 = this.f19714i;
-        return C9554k0.m29431b(position2 + ((j3 * (j6 - j7)) / (this.f19717l - this.f19716k)), j7, j6 - 1);
+        return Util.m29431b(position2 + ((j3 * (j6 - j7)) / (this.f19717l - this.f19716k)), j7, j6 - 1);
     }
 
     /* access modifiers changed from: 0000 */
@@ -165,7 +165,7 @@ final class C8988b implements C8996g {
 
     /* renamed from: c */
     public void mo23398c(long j) {
-        this.f19713h = C9554k0.m29431b(j, 0, this.f19711f - 1);
+        this.f19713h = Util.m29431b(j, 0, this.f19711f - 1);
         this.f19710e = 2;
         this.f19714i = this.f19707b;
         this.f19715j = this.f19708c;

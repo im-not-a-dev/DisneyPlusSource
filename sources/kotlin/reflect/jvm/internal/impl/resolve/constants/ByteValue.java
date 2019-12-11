@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.SimpleType;
 
@@ -19,7 +19,7 @@ public final class ByteValue extends IntegerValueConstant<Byte> {
 
     public SimpleType getType(ModuleDescriptor moduleDescriptor) {
         SimpleType byteType = moduleDescriptor.getBuiltIns().getByteType();
-        C12880j.m40222a((Object) byteType, "module.builtIns.byteType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) byteType, "module.builtIns.byteType");
         return byteType;
     }
 }

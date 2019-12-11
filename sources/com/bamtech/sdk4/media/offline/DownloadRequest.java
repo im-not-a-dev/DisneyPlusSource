@@ -29,7 +29,7 @@ public final class DownloadRequest {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:16:0x004c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.thumbnailResolution, (java.lang.Object) r3.thumbnailResolution) != false) goto L_0x0051;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.thumbnailResolution, (java.lang.Object) r3.thumbnailResolution) != false) goto L_0x0051;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -41,31 +41,31 @@ public final class DownloadRequest {
             com.bamtech.sdk4.media.offline.DownloadRequest r3 = (com.bamtech.sdk4.media.offline.DownloadRequest) r3
             com.bamtech.sdk4.media.MediaItem r0 = r2.mediaItem
             com.bamtech.sdk4.media.MediaItem r1 = r3.mediaItem
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             com.bamtech.sdk4.media.offline.VariantConstraints r0 = r2.variantConstraints
             com.bamtech.sdk4.media.offline.VariantConstraints r1 = r3.variantConstraints
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.util.List<java.lang.String> r0 = r2.audioLanguages
             java.util.List<java.lang.String> r1 = r3.audioLanguages
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.util.List<java.lang.String> r0 = r2.subtitleLanguages
             java.util.List<java.lang.String> r1 = r3.subtitleLanguages
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.io.File r0 = r2.alternateStorageDir
             java.io.File r1 = r3.alternateStorageDir
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.util.List<com.bamtech.sdk4.internal.media.HlsPlaylistVariant> r0 = r2.playlistVariants
             java.util.List<com.bamtech.sdk4.internal.media.HlsPlaylistVariant> r1 = r3.playlistVariants
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             com.bamtech.sdk4.ThumbnailResolution r0 = r2.thumbnailResolution
             com.bamtech.sdk4.ThumbnailResolution r3 = r3.thumbnailResolution
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x004f
             goto L_0x0051
         L_0x004f:

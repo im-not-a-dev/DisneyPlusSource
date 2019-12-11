@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.types.checker;
 
 import java.util.List;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -24,7 +24,7 @@ public final class NewCapturedTypeConstructor implements CapturedTypeConstructor
 
     public KotlinBuiltIns getBuiltIns() {
         KotlinType type = getProjection().getType();
-        C12880j.m40222a((Object) type, "projection.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "projection.type");
         return TypeUtilsKt.getBuiltIns(type);
     }
 

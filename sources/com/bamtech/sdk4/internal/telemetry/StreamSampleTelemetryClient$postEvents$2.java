@@ -15,7 +15,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.Dust$Events;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Single;
@@ -52,9 +52,9 @@ final class StreamSampleTelemetryClient$postEvents$2<T, R> implements Function<T
         String telemetry_post_stream_sample = TelemetryServiceConfigurationKt.getTELEMETRY_POST_STREAM_SAMPLE(Dust$Events.INSTANCE);
         Call a2 = C1691e.m7799a(a);
         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new C2069x68787d31(a2)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single<TelemetryResponse> g = b.mo30222c((Consumer<? super Disposable>) new C2070x68787d32<Object>(serviceTransaction2, telemetry_post_stream_sample)).mo30218b((Consumer<? super Throwable>) new C2071x68787d33<Object>(a, serviceTransaction2, telemetry_post_stream_sample)).mo30233g(new C2072x68787d34(serviceTransaction2, telemetry_post_stream_sample));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g;
     }
 }

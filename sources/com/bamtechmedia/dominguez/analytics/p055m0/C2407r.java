@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.analytics.p057o0.C2435d;
 import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Function;
@@ -209,14 +209,14 @@ public final class C2407r implements C2434c, C2435d {
     /* renamed from: a */
     public Single<Map<String, String>> mo11521a() {
         Single<Map<String, String>> b = this.f6657a.mo30233g(C2410c.f6660c).mo30237i(C2411d.f6661c).mo30220b(this.f6658b);
-        C12880j.m40222a((Object) b, "sdkSessionInfoSingle\n   ….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "sdkSessionInfoSingle\n   ….subscribeOn(ioScheduler)");
         return b;
     }
 
     /* renamed from: b */
     public Single<Map<String, String>> mo11526b() {
         Single<Map<String, String>> b = this.f6657a.mo30233g(C2409b.f6659c).mo30220b(this.f6658b);
-        C12880j.m40222a((Object) b, "sdkSessionInfoSingle.map….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "sdkSessionInfoSingle.map….subscribeOn(ioScheduler)");
         return b;
     }
 }

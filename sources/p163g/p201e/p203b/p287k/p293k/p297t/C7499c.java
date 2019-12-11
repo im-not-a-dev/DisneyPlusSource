@@ -1,7 +1,7 @@
 package p163g.p201e.p203b.p287k.p293k.p297t;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.Consumer;
 
 /* renamed from: g.e.b.k.k.t.c */
@@ -16,6 +16,6 @@ final class C7499c implements Consumer {
     }
 
     public final /* synthetic */ void accept(Object obj) {
-        C12880j.m40222a(this.f16460c.invoke(obj), "invoke(...)");
+        Intrinsics.checkReturnedValueIsNotNull(this.f16460c.invoke(obj), "invoke(...)");
     }
 }

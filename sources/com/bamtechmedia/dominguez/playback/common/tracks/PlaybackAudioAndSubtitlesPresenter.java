@@ -16,7 +16,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.p590y.C13180m;
@@ -30,7 +30,7 @@ import p520io.reactivex.SingleSource;
 import p520io.reactivex.disposables.CompositeDisposable;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u001e\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u0000 #2\u00020\u00012\u00020\u0002:\u0001#B1\b\u0007\u0012\u000e\b\u0001\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\b\b\u0001\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\u0018\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0012\u001a\u00020\u0010H\u0002J\u0016\u0010\u0013\u001a\u00020\u00142\f\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\u00170\u0016H\u0002J\u0016\u0010\u0018\u001a\u00020\u00142\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u001a0\u0016H\u0002J\u0010\u0010\u001b\u001a\u00020\u00142\u0006\u0010\u001c\u001a\u00020\u0017H\u0016J\u0010\u0010\u001d\u001a\u00020\u00142\u0006\u0010\u001e\u001a\u00020\u001fH\u0016J\u0010\u0010 \u001a\u00020\u00142\u0006\u0010\u001e\u001a\u00020\u001fH\u0016J\u0010\u0010!\u001a\u00020\u00142\u0006\u0010\"\u001a\u00020\u001aH\u0016R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006$"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/tracks/PlaybackAudioAndSubtitlesPresenter;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "Lcom/bamtechmedia/dominguez/playback/common/tracks/ProfileUpdateListener;", "trackListObservable", "Lio/reactivex/Observable;", "Lcom/bamtech/player/tracks/TrackList;", "trackUpdateListener", "Lcom/bamtechmedia/dominguez/playback/common/tracks/TrackUpdateListener;", "profilesRepository", "Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;", "isTelevision", "", "(Lio/reactivex/Observable;Lcom/bamtechmedia/dominguez/playback/common/tracks/TrackUpdateListener;Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;Z)V", "profileUpdateDisposable", "Lio/reactivex/disposables/CompositeDisposable;", "determineNextAccessibilityId", "", "listSize", "currentPosition", "displayAudioTracks", "", "audioTracks", "", "Lcom/bamtech/player/tracks/AudioTrack;", "displaySubtitleTracks", "subtitleTracks", "Lcom/bamtech/player/tracks/SubtitleTrack;", "onAudioTrackSelected", "audioTrack", "onDestroy", "owner", "Landroidx/lifecycle/LifecycleOwner;", "onStart", "onSubtitleTrackSelected", "subtitleTrack", "Companion", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: PlaybackAudioAndSubtitlesPresenter.kt */
@@ -133,7 +133,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
             StringBuilder sb = new StringBuilder();
             sb.append("updated profile from audio track to ");
             sb.append(c0Var);
-            C14100a.m44522a(sb.toString(), new Object[0]);
+            Timber.m44522a(sb.toString(), new Object[0]);
         }
     }
 
@@ -150,7 +150,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
 
         /* renamed from: a */
         public final void mo18917a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -158,7 +158,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -201,7 +201,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
         /* renamed from: a */
         public final void accept(Collection<C5285a> collection) {
             PlaybackAudioAndSubtitlesPresenter playbackAudioAndSubtitlesPresenter = this.f14382c;
-            C12880j.m40222a((Object) collection, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) collection, "it");
             playbackAudioAndSubtitlesPresenter.m19849a(collection);
         }
     }
@@ -219,7 +219,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
 
         /* renamed from: a */
         public final void mo18920a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -227,7 +227,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -270,7 +270,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
         /* renamed from: a */
         public final void accept(List<C5288c> list) {
             PlaybackAudioAndSubtitlesPresenter playbackAudioAndSubtitlesPresenter = this.f14385c;
-            C12880j.m40222a((Object) list, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "it");
             playbackAudioAndSubtitlesPresenter.m19851b((Collection<? extends C5288c>) list);
         }
     }
@@ -288,7 +288,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
 
         /* renamed from: a */
         public final void mo18923a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -296,7 +296,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -432,7 +432,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
             StringBuilder sb = new StringBuilder();
             sb.append("updated profile from subtitle track to ");
             sb.append(c0Var);
-            C14100a.m44522a(sb.toString(), new Object[0]);
+            Timber.m44522a(sb.toString(), new Object[0]);
         }
     }
 
@@ -449,7 +449,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
 
         /* renamed from: a */
         public final void mo18927a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -457,7 +457,7 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -525,17 +525,17 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
             com.bamtechmedia.dominguez.playback.common.tracks.PlaybackAudioAndSubtitlesPresenter$e r1 = com.bamtechmedia.dominguez.playback.common.tracks.PlaybackAudioAndSubtitlesPresenter.C6302e.f14381c
             io.reactivex.Observable r0 = r0.mo30193g(r1)
             java.lang.String r1 = "trackListObservable\n    …map { it.audioLanguages }"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             androidx.lifecycle.i r1 = r8.getLifecycle()
             java.lang.String r2 = "owner.lifecycle"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             com.uber.autodispose.android.lifecycle.b r1 = com.uber.autodispose.android.lifecycle.C10541b.m33251a(r1)
             java.lang.String r3 = "AndroidLifecycleScopeProvider.from(this)"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r3)
             g.n.a.h r1 = p163g.p503n.p504a.C11793e.m37930a(r1)
             java.lang.Object r0 = r0.mo30161a(r1)
             java.lang.String r1 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.a0 r0 = (p163g.p503n.p504a.C11786a0) r0
             com.bamtechmedia.dominguez.playback.common.tracks.PlaybackAudioAndSubtitlesPresenter$f r4 = new com.bamtechmedia.dominguez.playback.common.tracks.PlaybackAudioAndSubtitlesPresenter$f
             r4.<init>(r7)
@@ -551,14 +551,14 @@ public final class PlaybackAudioAndSubtitlesPresenter implements C0710d, C6316d 
             com.bamtechmedia.dominguez.playback.common.tracks.PlaybackAudioAndSubtitlesPresenter$h r4 = com.bamtechmedia.dominguez.playback.common.tracks.PlaybackAudioAndSubtitlesPresenter.C6305h.f14384c
             io.reactivex.Observable r0 = r0.mo30193g(r4)
             java.lang.String r4 = "trackListObservable\n    …map { it.subtitleTracks }"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r4)
             androidx.lifecycle.i r8 = r8.getLifecycle()
-            kotlin.jvm.internal.C12880j.m40222a(r8, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r2)
             com.uber.autodispose.android.lifecycle.b r8 = com.uber.autodispose.android.lifecycle.C10541b.m33251a(r8)
-            kotlin.jvm.internal.C12880j.m40222a(r8, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r3)
             g.n.a.h r8 = p163g.p503n.p504a.C11793e.m37930a(r8)
             java.lang.Object r8 = r0.mo30161a(r8)
-            kotlin.jvm.internal.C12880j.m40222a(r8, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r1)
             g.n.a.a0 r8 = (p163g.p503n.p504a.C11786a0) r8
             com.bamtechmedia.dominguez.playback.common.tracks.PlaybackAudioAndSubtitlesPresenter$i r0 = new com.bamtechmedia.dominguez.playback.common.tracks.PlaybackAudioAndSubtitlesPresenter$i
             r0.<init>(r7)

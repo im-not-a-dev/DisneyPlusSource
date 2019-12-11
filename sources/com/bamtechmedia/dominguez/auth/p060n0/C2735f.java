@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.auth.p069u0.C3017j.C3018a;
 import com.bamtechmedia.dominguez.core.design.widgets.textinputlayout.PasswordInputLayout;
 import com.bamtechmedia.dominguez.core.utils.C5880u;
 import java.util.HashMap;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p312q.C7717x;
 
 /* renamed from: com.bamtechmedia.dominguez.auth.n0.f */
@@ -54,7 +54,7 @@ public final class C2735f extends C3004g implements C7717x {
             if (aVar2 != null) {
                 aVar2.mo11750b();
             } else {
-                C12880j.m40227c("accountUpdateRouter");
+                Intrinsics.throwUninitializedPropertyAccessException("accountUpdateRouter");
                 throw null;
             }
         }

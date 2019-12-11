@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.trackselection;
 import android.os.SystemClock;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.p379m0.C9224l;
 import com.google.android.exoplayer2.source.p379m0.C9225m;
@@ -192,7 +192,7 @@ public abstract class C9292c implements C9311j {
             return false;
         }
         long[] jArr = this.f21206e;
-        jArr[i] = Math.max(jArr[i], C9554k0.m29389a(elapsedRealtime, j, Long.MAX_VALUE));
+        jArr[i] = Math.max(jArr[i], Util.addWithOverflowDefault(elapsedRealtime, j, Long.MAX_VALUE));
         return true;
     }
 }

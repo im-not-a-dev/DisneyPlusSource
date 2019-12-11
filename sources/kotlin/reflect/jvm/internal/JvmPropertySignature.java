@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.JvmFunctionSignature.KotlinFunction;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.JvmAbi;
@@ -34,7 +34,7 @@ public abstract class JvmPropertySignature {
             sb.append(JvmAbi.getterName(this.field.getName()));
             sb.append("()");
             Class type = this.field.getType();
-            C12880j.m40222a((Object) type, "field.type");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "field.type");
             sb.append(ReflectClassUtilKt.getDesc(type));
             return sb.toString();
         }
@@ -92,11 +92,11 @@ public abstract class JvmPropertySignature {
                 NameResolver nameResolver3 = this.nameResolver;
                 JvmMethodSignature getter = this.signature.getGetter();
                 String str2 = "signature.getter";
-                C12880j.m40222a((Object) getter, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) getter, str2);
                 sb.append(nameResolver3.getString(getter.getName()));
                 NameResolver nameResolver4 = this.nameResolver;
                 JvmMethodSignature getter2 = this.signature.getGetter();
-                C12880j.m40222a((Object) getter2, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) getter2, str2);
                 sb.append(nameResolver4.getString(getter2.getDesc()));
                 str = sb.toString();
             } else {
@@ -130,11 +130,11 @@ public abstract class JvmPropertySignature {
                 kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor r0 = r4.descriptor
                 kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor r0 = r0.getContainingDeclaration()
                 java.lang.String r1 = "descriptor.containingDeclaration"
-                kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
                 kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor r1 = r4.descriptor
                 kotlin.reflect.jvm.internal.impl.descriptors.Visibility r1 = r1.getVisibility()
                 kotlin.reflect.jvm.internal.impl.descriptors.Visibility r2 = kotlin.reflect.jvm.internal.impl.descriptors.Visibilities.INTERNAL
-                boolean r1 = kotlin.jvm.internal.C12880j.m40224a(r1, r2)
+                boolean r1 = kotlin.jvm.internal.Intrinsics.areEqual(r1, r2)
                 java.lang.String r2 = "$"
                 if (r1 == 0) goto L_0x0057
                 boolean r1 = r0 instanceof kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedClassDescriptor
@@ -143,7 +143,7 @@ public abstract class JvmPropertySignature {
                 kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Class r0 = r0.getClassProto()
                 kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite$GeneratedExtension<kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Class, java.lang.Integer> r1 = kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.classModuleName
                 java.lang.String r3 = "JvmProtoBuf.classModuleName"
-                kotlin.jvm.internal.C12880j.m40222a(r1, r3)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r3)
                 java.lang.Object r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.ProtoBufUtilKt.getExtensionOrNull(r0, r1)
                 java.lang.Integer r0 = (java.lang.Integer) r0
                 if (r0 == 0) goto L_0x0041
@@ -166,7 +166,7 @@ public abstract class JvmPropertySignature {
                 kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor r1 = r4.descriptor
                 kotlin.reflect.jvm.internal.impl.descriptors.Visibility r1 = r1.getVisibility()
                 kotlin.reflect.jvm.internal.impl.descriptors.Visibility r3 = kotlin.reflect.jvm.internal.impl.descriptors.Visibilities.PRIVATE
-                boolean r1 = kotlin.jvm.internal.C12880j.m40224a(r1, r3)
+                boolean r1 = kotlin.jvm.internal.Intrinsics.areEqual(r1, r3)
                 if (r1 == 0) goto L_0x009f
                 boolean r0 = r0 instanceof kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor
                 if (r0 == 0) goto L_0x009f

@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.java;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
 
@@ -16,13 +16,13 @@ public final class FakePureImplementationsProvider {
         FakePureImplementationsProvider fakePureImplementationsProvider = new FakePureImplementationsProvider();
         INSTANCE = fakePureImplementationsProvider;
         FqName fqName = KotlinBuiltIns.FQ_NAMES.mutableList;
-        C12880j.m40222a((Object) fqName, "FQ_NAMES.mutableList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "FQ_NAMES.mutableList");
         fakePureImplementationsProvider.implementedWith(fqName, fakePureImplementationsProvider.fqNameListOf("java.util.ArrayList", "java.util.LinkedList"));
         FqName fqName2 = KotlinBuiltIns.FQ_NAMES.mutableSet;
-        C12880j.m40222a((Object) fqName2, "FQ_NAMES.mutableSet");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName2, "FQ_NAMES.mutableSet");
         fakePureImplementationsProvider.implementedWith(fqName2, fakePureImplementationsProvider.fqNameListOf("java.util.HashSet", "java.util.TreeSet", "java.util.LinkedHashSet"));
         FqName fqName3 = KotlinBuiltIns.FQ_NAMES.mutableMap;
-        C12880j.m40222a((Object) fqName3, "FQ_NAMES.mutableMap");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName3, "FQ_NAMES.mutableMap");
         fakePureImplementationsProvider.implementedWith(fqName3, fakePureImplementationsProvider.fqNameListOf("java.util.HashMap", "java.util.TreeMap", "java.util.LinkedHashMap", "java.util.concurrent.ConcurrentHashMap", "java.util.concurrent.ConcurrentSkipListMap"));
         fakePureImplementationsProvider.implementedWith(new FqName("java.util.function.Function"), fakePureImplementationsProvider.fqNameListOf("java.util.function.UnaryOperator"));
         fakePureImplementationsProvider.implementedWith(new FqName("java.util.function.BiFunction"), fakePureImplementationsProvider.fqNameListOf("java.util.function.BinaryOperator"));

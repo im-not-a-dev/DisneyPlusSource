@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptorVisitor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -29,7 +29,7 @@ public abstract class PackageFragmentDescriptorImpl extends DeclarationDescripto
 
     public SourceElement getSource() {
         SourceElement sourceElement = SourceElement.NO_SOURCE;
-        C12880j.m40222a((Object) sourceElement, "SourceElement.NO_SOURCE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement, "SourceElement.NO_SOURCE");
         return sourceElement;
     }
 

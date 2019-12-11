@@ -12,7 +12,7 @@ import java.util.Set;
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -125,7 +125,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
                 }
             }
             NameAndTypeMemberComparator nameAndTypeMemberComparator = NameAndTypeMemberComparator.INSTANCE;
-            C12880j.m40222a((Object) nameAndTypeMemberComparator, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) nameAndTypeMemberComparator, str);
             C13194s.m40541a(arrayList, nameAndTypeMemberComparator);
             collection.addAll(arrayList);
         }
@@ -138,7 +138,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
                 }
             }
             NameAndTypeMemberComparator nameAndTypeMemberComparator2 = NameAndTypeMemberComparator.INSTANCE;
-            C12880j.m40222a((Object) nameAndTypeMemberComparator2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) nameAndTypeMemberComparator2, str);
             C13194s.m40541a(arrayList2, nameAndTypeMemberComparator2);
             collection.addAll(arrayList2);
         }
@@ -155,7 +155,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             java.util.Map<kotlin.reflect.jvm.internal.impl.name.Name, byte[]> r0 = r5.functionProtosBytes
             kotlin.reflect.jvm.internal.impl.protobuf.Parser<kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Function> r1 = kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Function.PARSER
             java.lang.String r2 = "ProtoBuf.Function.PARSER"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             java.lang.Object r0 = r0.get(r6)
             byte[] r0 = (byte[]) r0
             if (r0 == 0) goto L_0x0026
@@ -181,7 +181,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationContext r3 = r5.f29578c
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.MemberDeserializer r3 = r3.getMemberDeserializer()
             java.lang.String r4 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r4)
             kotlin.reflect.jvm.internal.impl.descriptors.SimpleFunctionDescriptor r2 = r3.loadFunction(r2)
             r1.add(r2)
             goto L_0x0033
@@ -204,7 +204,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             java.util.Map<kotlin.reflect.jvm.internal.impl.name.Name, byte[]> r0 = r5.propertyProtosBytes
             kotlin.reflect.jvm.internal.impl.protobuf.Parser<kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Property> r1 = kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Property.PARSER
             java.lang.String r2 = "ProtoBuf.Property.PARSER"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             java.lang.Object r0 = r0.get(r6)
             byte[] r0 = (byte[]) r0
             if (r0 == 0) goto L_0x0026
@@ -230,7 +230,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationContext r3 = r5.f29578c
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.MemberDeserializer r3 = r3.getMemberDeserializer()
             java.lang.String r4 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r4)
             kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor r2 = r3.loadProperty(r2)
             r1.add(r2)
             goto L_0x0033

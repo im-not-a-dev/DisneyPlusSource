@@ -19,7 +19,7 @@ import java.util.Collection;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11847b;
 import p163g.p509o.p510a.C11848c;
 import p163g.p509o.p510a.C11863k;
@@ -71,22 +71,22 @@ public abstract class C6312a extends C11885d implements C6324g {
                 WindowManager windowManager = (WindowManager) systemService;
                 Dialog requireDialog = this.f14400U.requireDialog();
                 String str = "requireDialog()";
-                C12880j.m40222a((Object) requireDialog, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireDialog, str);
                 Window window = requireDialog.getWindow();
                 if (window != null) {
                     View decorView = window.getDecorView();
                     Dialog requireDialog2 = this.f14400U.requireDialog();
-                    C12880j.m40222a((Object) requireDialog2, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) requireDialog2, str);
                     Window window2 = requireDialog2.getWindow();
                     if (window2 != null) {
                         windowManager.updateViewLayout(decorView, window2.getAttributes());
                         this.f14400U.mo18934r().onShow(this.f14400U.getDialog());
                         return;
                     }
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
             throw new C13142s("null cannot be cast to non-null type android.view.WindowManager");
@@ -96,24 +96,24 @@ public abstract class C6312a extends C11885d implements C6324g {
     /* renamed from: t */
     private final void m19874t() {
         Dialog requireDialog = requireDialog();
-        C12880j.m40222a((Object) requireDialog, "requireDialog()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireDialog, "requireDialog()");
         Window window = requireDialog.getWindow();
         if (window != null) {
             window.setFlags(8, 8);
             View decorView = window.getDecorView();
-            C12880j.m40222a((Object) decorView, "decorView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) decorView, "decorView");
             C0532d activity = getActivity();
             if (activity != null) {
-                C12880j.m40222a((Object) activity, "activity!!");
+                Intrinsics.checkReturnedValueIsNotNull((Object) activity, "activity!!");
                 Window window2 = activity.getWindow();
-                C12880j.m40222a((Object) window2, "activity!!.window");
+                Intrinsics.checkReturnedValueIsNotNull((Object) window2, "activity!!.window");
                 View decorView2 = window2.getDecorView();
-                C12880j.m40222a((Object) decorView2, "activity!!.window.decorView");
+                Intrinsics.checkReturnedValueIsNotNull((Object) decorView2, "activity!!.window.decorView");
                 decorView.setSystemUiVisibility(decorView2.getSystemUiVisibility());
                 requireDialog().setOnShowListener(new C6313a(window, this));
                 return;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
     }
@@ -138,7 +138,7 @@ public abstract class C6312a extends C11885d implements C6324g {
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         Dialog requireDialog = requireDialog();
-        C12880j.m40222a((Object) requireDialog, "requireDialog()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireDialog, "requireDialog()");
         Window window = requireDialog.getWindow();
         if (window != null) {
             LayoutParams attributes = window.getAttributes();
@@ -164,7 +164,7 @@ public abstract class C6312a extends C11885d implements C6324g {
         if (onDismissListener != null) {
             onDismissListener.onDismiss(dialogInterface);
         } else {
-            C12880j.m40227c("dismissListener");
+            Intrinsics.throwUninitializedPropertyAccessException("dismissListener");
             throw null;
         }
     }
@@ -176,7 +176,7 @@ public abstract class C6312a extends C11885d implements C6324g {
         if (playbackAudioAndSubtitlesPresenter != null) {
             lifecycle.mo4134a(playbackAudioAndSubtitlesPresenter);
         } else {
-            C12880j.m40227c("presenter");
+            Intrinsics.throwUninitializedPropertyAccessException("presenter");
             throw null;
         }
     }
@@ -187,7 +187,7 @@ public abstract class C6312a extends C11885d implements C6324g {
         if (oVar != null) {
             return oVar;
         }
-        C12880j.m40227c("focusHelper");
+        Intrinsics.throwUninitializedPropertyAccessException("focusHelper");
         throw null;
     }
 
@@ -200,7 +200,7 @@ public abstract class C6312a extends C11885d implements C6324g {
         if (onShowListener != null) {
             return onShowListener;
         }
-        C12880j.m40227c("showListener");
+        Intrinsics.throwUninitializedPropertyAccessException("showListener");
         throw null;
     }
 

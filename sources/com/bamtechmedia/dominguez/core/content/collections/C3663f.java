@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11780y;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Function;
@@ -90,12 +90,12 @@ public final class C3663f {
         String b = this.f9196b.mo13361b(kVar);
         C3724a aVar = this.f9195a;
         ParameterizedType a = C11780y.m37894a((Type) Map.class, String.class, StandardCollection.class);
-        C12880j.m40222a((Object) a, "Types.newParameterizedTy…rdCollection::class.java)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Types.newParameterizedTy…rdCollection::class.java)");
         StringBuilder sb = new StringBuilder();
         sb.append("core/");
         sb.append(b);
         Single<C3658a> g = aVar.mo13577a(a, sb.toString(), MapExtensionsKt.plusIfNotNull(MapExtensionsKt.plusIfNotNull(C13173j0.m40356a(C12907r.m40244a("slug", kVar.mo13377a0()), C12907r.m40244a("contentClass", kVar.mo13375Y())), C12907r.m40244a("curatedSetsFilled", this.f9196b.mo13362c(kVar))), C12907r.m40244a("text_field", this.f9196b.mo13360a(kVar))), str).mo30233g(new C3665b(this, b));
-        C12880j.m40222a((Object) g, "searchApi.search<Map<Str…l(it.data?.get(query))) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.search<Map<Str…l(it.data?.get(query))) }");
         return g;
     }
 

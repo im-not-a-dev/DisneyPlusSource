@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageViewDescriptor;
@@ -35,7 +35,7 @@ public class SubpackagesScope extends MemberScopeImpl {
         ArrayList arrayList = new ArrayList(subPackagesOf.size());
         for (FqName shortName : subPackagesOf) {
             Name shortName2 = shortName.shortName();
-            C12880j.m40222a((Object) shortName2, "subFqName.shortName()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) shortName2, "subFqName.shortName()");
             if (((Boolean) function1.invoke(shortName2)).booleanValue()) {
                 CollectionsKt.addIfNotNull(arrayList, getPackage(shortName2));
             }
@@ -50,7 +50,7 @@ public class SubpackagesScope extends MemberScopeImpl {
         }
         ModuleDescriptor moduleDescriptor2 = this.moduleDescriptor;
         FqName child = this.fqName.child(name);
-        C12880j.m40222a((Object) child, "fqName.child(name)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) child, "fqName.child(name)");
         PackageViewDescriptor packageViewDescriptor = moduleDescriptor2.getPackage(child);
         if (packageViewDescriptor.isEmpty()) {
             return null;

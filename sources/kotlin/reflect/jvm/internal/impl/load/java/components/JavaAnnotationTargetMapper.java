@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.C12907r;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.KotlinRetention;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.KotlinTarget;
@@ -43,9 +43,9 @@ public final class JavaAnnotationTargetMapper {
             return null;
         }
         ClassId classId = ClassId.topLevel(KotlinBuiltIns.FQ_NAMES.annotationRetention);
-        C12880j.m40222a((Object) classId, "ClassId.topLevel(KotlinB…AMES.annotationRetention)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) classId, "ClassId.topLevel(KotlinB…AMES.annotationRetention)");
         Name identifier = Name.identifier(kotlinRetention.name());
-        C12880j.m40222a((Object) identifier, "Name.identifier(retention.name)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(retention.name)");
         return new EnumValue(classId, identifier);
     }
 
@@ -70,9 +70,9 @@ public final class JavaAnnotationTargetMapper {
         ArrayList arrayList3 = new ArrayList(C13187p.m40525a((Iterable) arrayList2, 10));
         for (KotlinTarget kotlinTarget : arrayList2) {
             ClassId classId = ClassId.topLevel(KotlinBuiltIns.FQ_NAMES.annotationTarget);
-            C12880j.m40222a((Object) classId, "ClassId.topLevel(KotlinB…Q_NAMES.annotationTarget)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) classId, "ClassId.topLevel(KotlinB…Q_NAMES.annotationTarget)");
             Name identifier = Name.identifier(kotlinTarget.name());
-            C12880j.m40222a((Object) identifier, "Name.identifier(kotlinTarget.name)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(kotlinTarget.name)");
             arrayList3.add(new EnumValue(classId, identifier));
         }
         return new ArrayValue(arrayList3, JavaAnnotationTargetMapper$mapJavaTargetArguments$1.INSTANCE);

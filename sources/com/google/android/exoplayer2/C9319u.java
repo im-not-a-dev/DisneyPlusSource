@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2;
 
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import com.google.android.exoplayer2.upstream.C9491f;
@@ -190,14 +190,14 @@ public class C9319u implements LoadControl {
         m28329a(i10, i9, str6, str5);
         m28329a(i13, 0, "backBufferDurationMs", str);
         this.f21314a = oVar;
-        this.f21315b = C8883r.m25967a((long) i8);
-        this.f21316c = C8883r.m25967a((long) i9);
-        this.f21317d = C8883r.m25967a((long) i10);
-        this.f21318e = C8883r.m25967a((long) i11);
-        this.f21319f = C8883r.m25967a((long) i12);
+        this.f21315b = C8883r.msToUs((long) i8);
+        this.f21316c = C8883r.msToUs((long) i9);
+        this.f21317d = C8883r.msToUs((long) i10);
+        this.f21318e = C8883r.msToUs((long) i11);
+        this.f21319f = C8883r.msToUs((long) i12);
         this.f21320g = i6;
         this.f21321h = z;
-        this.f21322i = C8883r.m25967a((long) i13);
+        this.f21322i = C8883r.msToUs((long) i13);
         this.f21323j = z2;
     }
 
@@ -207,7 +207,7 @@ public class C9319u implements LoadControl {
         boolean z2 = this.f21314a.mo24576d() >= this.f21324k;
         long j2 = this.f21326m ? this.f21316c : this.f21315b;
         if (f > 1.0f) {
-            j2 = Math.min(C9554k0.m29387a(j2, f), this.f21317d);
+            j2 = Math.min(Util.m29387a(j2, f), this.f21317d);
         }
         if (j < j2) {
             if (!this.f21321h && z2) {
@@ -222,7 +222,7 @@ public class C9319u implements LoadControl {
 
     /* renamed from: a */
     public boolean mo7725a(long j, float f, boolean z) {
-        long b = C9554k0.m29430b(j, f);
+        long b = Util.m29430b(j, f);
         long j2 = z ? this.f21319f : this.f21318e;
         return j2 <= 0 || b >= j2 || (!this.f21321h && this.f21314a.mo24576d() >= this.f21324k);
     }

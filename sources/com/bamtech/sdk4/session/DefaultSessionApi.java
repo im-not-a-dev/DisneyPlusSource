@@ -23,7 +23,7 @@ import kotlin.C12898l;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Observable;
 import p520io.reactivex.Single;
@@ -84,7 +84,7 @@ public final class DefaultSessionApi implements SessionApi {
     public Completable authorize(Grant grant) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         SessionExtension sessionExtension = this.extension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(sessionExtension.authorizeExternalGrant(serviceTransaction, grant.getAssertion()), serviceTransaction, DefaultSessionApiKt.getSESSION_API_GRANT_AUTHORIZATION(), (Object) null, 4, (Object) null);
     }
 
@@ -122,9 +122,9 @@ public final class DefaultSessionApi implements SessionApi {
     public Single<String> getSessionToken() {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         AccessContextUpdater accessContextUpdater = this.contextUpdater;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Single g = AccessContextUpdater.DefaultImpls.getOrUpdate$default(accessContextUpdater, serviceTransaction, false, 2, null).mo30233g(DefaultSessionApi$getSessionToken$1.INSTANCE);
-        C12880j.m40222a((Object) g, "contextUpdater.getOrUpda…ssToken\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "contextUpdater.getOrUpda…ssToken\n                }");
         return DustExtensionsKt.withDust$default(g, serviceTransaction, DefaultSessionApiKt.getSESSION_API_GET_SESSION_TOKEN(), (Object) null, 4, (Object) null);
     }
 
@@ -135,9 +135,9 @@ public final class DefaultSessionApi implements SessionApi {
     public Completable reauthorize() {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         AccessContextUpdater accessContextUpdater = this.contextUpdater;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Completable e = accessContextUpdater.getOrUpdate(serviceTransaction, true).mo30228e();
-        C12880j.m40222a((Object) e, "contextUpdater.getOrUpda…         .ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "contextUpdater.getOrUpda…         .ignoreElement()");
         return DustExtensionsKt.withDust$default(e, serviceTransaction, DefaultSessionApiKt.getSESSION_API_REAUTHORIZE(), (Object) null, 4, (Object) null);
     }
 
@@ -149,24 +149,24 @@ public final class DefaultSessionApi implements SessionApi {
     public Observable<SessionState> watchSessionState() {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         Observable g = this.internalSessionStateProvider.watchInternalSessionState().mo30193g(new DefaultSessionApi$watchSessionState$1(this));
-        C12880j.m40222a((Object) g, "internalSessionStateProv…p { it.toSessionState() }");
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "internalSessionStateProv…p { it.toSessionState() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(g, serviceTransaction, DefaultSessionApiKt.getSESSION_API_WATCH_SESSION_STATE(), (Object) null, 4, (Object) null);
     }
 
     public Single<SessionInfo> getSessionInfo(boolean z) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         SessionInfoExtension sessionInfoExtension = this.manager;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(sessionInfoExtension.getSessionInfo(serviceTransaction, z), serviceTransaction, DefaultSessionApiKt.getSESSION_API_GET_SESSION_INFO(), (Object) null, 4, (Object) null);
     }
 
     public Completable logout(boolean z) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         AccessContextUpdater accessContextUpdater = this.contextUpdater;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Completable e = DustExtensionsKt.withDust$default(accessContextUpdater.reset(serviceTransaction), serviceTransaction, DefaultSessionApiKt.getSESSION_API_LOGOUT(), (Object) null, 4, (Object) null).mo30219b((C11945a) new DefaultSessionApi$logout$1(this, z)).mo30228e();
-        C12880j.m40222a((Object) e, "contextUpdater.reset(tra…         .ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "contextUpdater.reset(tra…         .ignoreElement()");
         return e;
     }
 }

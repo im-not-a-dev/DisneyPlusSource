@@ -9,7 +9,7 @@ import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
 import com.google.android.exoplayer2.p393v0.C9544h;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.Arrays;
@@ -125,7 +125,7 @@ public final class C9038k implements C9042o {
                 sb.append("Detected audio object type: ");
                 sb.append(a);
                 sb.append(", but assuming AAC LC.");
-                C9563q.m29500d("AdtsReader", sb.toString());
+                Log.m29500d("AdtsReader", sb.toString());
                 a = 2;
             }
             this.f19910b.mo24670c(5);

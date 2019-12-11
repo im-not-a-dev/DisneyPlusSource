@@ -39,7 +39,7 @@ public final class C9530b0 extends BufferedOutputStream {
             }
         }
         if (th != null) {
-            C9554k0.m29408a(th);
+            Util.m29408a(th);
             throw null;
         }
     }

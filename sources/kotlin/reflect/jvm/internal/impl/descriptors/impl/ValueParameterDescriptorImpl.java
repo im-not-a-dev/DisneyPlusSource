@@ -6,7 +6,7 @@ import java.util.List;
 import kotlin.C13142s;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -68,15 +68,15 @@ public class ValueParameterDescriptorImpl extends VariableDescriptorImpl impleme
 
         public ValueParameterDescriptor copy(CallableDescriptor callableDescriptor, Name name, int i) {
             Annotations annotations = getAnnotations();
-            C12880j.m40222a((Object) annotations, "annotations");
+            Intrinsics.checkReturnedValueIsNotNull((Object) annotations, "annotations");
             KotlinType type = getType();
-            C12880j.m40222a((Object) type, "type");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "type");
             boolean declaresDefaultValue = declaresDefaultValue();
             boolean isCrossinline = isCrossinline();
             boolean isNoinline = isNoinline();
             KotlinType varargElementType = getVarargElementType();
             SourceElement sourceElement = SourceElement.NO_SOURCE;
-            C12880j.m40222a((Object) sourceElement, "SourceElement.NO_SOURCE");
+            Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement, "SourceElement.NO_SOURCE");
             WithDestructuringDeclaration withDestructuringDeclaration = new WithDestructuringDeclaration(callableDescriptor, null, i, annotations, name, type, declaresDefaultValue, isCrossinline, isNoinline, varargElementType, sourceElement, new ValueParameterDescriptorImpl$WithDestructuringDeclaration$copy$1(this));
             return withDestructuringDeclaration;
         }
@@ -135,15 +135,15 @@ public class ValueParameterDescriptorImpl extends VariableDescriptorImpl impleme
 
     public ValueParameterDescriptor copy(CallableDescriptor callableDescriptor, Name name, int i) {
         Annotations annotations = getAnnotations();
-        C12880j.m40222a((Object) annotations, "annotations");
+        Intrinsics.checkReturnedValueIsNotNull((Object) annotations, "annotations");
         KotlinType type = getType();
-        C12880j.m40222a((Object) type, "type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "type");
         boolean declaresDefaultValue2 = declaresDefaultValue();
         boolean isCrossinline2 = isCrossinline();
         boolean isNoinline2 = isNoinline();
         KotlinType varargElementType2 = getVarargElementType();
         SourceElement sourceElement = SourceElement.NO_SOURCE;
-        C12880j.m40222a((Object) sourceElement, "SourceElement.NO_SOURCE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement, "SourceElement.NO_SOURCE");
         ValueParameterDescriptorImpl valueParameterDescriptorImpl = new ValueParameterDescriptorImpl(callableDescriptor, null, i, annotations, name, type, declaresDefaultValue2, isCrossinline2, isNoinline2, varargElementType2, sourceElement);
         return valueParameterDescriptorImpl;
     }
@@ -153,7 +153,7 @@ public class ValueParameterDescriptorImpl extends VariableDescriptorImpl impleme
             CallableDescriptor containingDeclaration = getContainingDeclaration();
             if (containingDeclaration != null) {
                 Kind kind = ((CallableMemberDescriptor) containingDeclaration).getKind();
-                C12880j.m40222a((Object) kind, "(containingDeclaration a…bleMemberDescriptor).kind");
+                Intrinsics.checkReturnedValueIsNotNull((Object) kind, "(containingDeclaration a…bleMemberDescriptor).kind");
                 if (kind.isReal()) {
                     return true;
                 }
@@ -174,10 +174,10 @@ public class ValueParameterDescriptorImpl extends VariableDescriptorImpl impleme
 
     public Collection<ValueParameterDescriptor> getOverriddenDescriptors() {
         Collection<CallableDescriptor> overriddenDescriptors = getContainingDeclaration().getOverriddenDescriptors();
-        C12880j.m40222a((Object) overriddenDescriptors, "containingDeclaration.overriddenDescriptors");
+        Intrinsics.checkReturnedValueIsNotNull((Object) overriddenDescriptors, "containingDeclaration.overriddenDescriptors");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) overriddenDescriptors, 10));
         for (CallableDescriptor callableDescriptor : overriddenDescriptors) {
-            C12880j.m40222a((Object) callableDescriptor, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) callableDescriptor, "it");
             arrayList.add((ValueParameterDescriptor) callableDescriptor.getValueParameters().get(getIndex()));
         }
         return arrayList;
@@ -189,7 +189,7 @@ public class ValueParameterDescriptorImpl extends VariableDescriptorImpl impleme
 
     public Visibility getVisibility() {
         Visibility visibility = Visibilities.LOCAL;
-        C12880j.m40222a((Object) visibility, "Visibilities.LOCAL");
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "Visibilities.LOCAL");
         return visibility;
     }
 

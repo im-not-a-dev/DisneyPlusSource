@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.serialization.deserialization.descripto
 
 import java.util.List;
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor.UserDataKey;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -48,7 +48,7 @@ public final class DeserializedSimpleFunctionDescriptor extends SimpleFunctionDe
             name2 = name;
         } else {
             Name name3 = getName();
-            C12880j.m40222a((Object) name3, "name");
+            Intrinsics.checkReturnedValueIsNotNull((Object) name3, "name");
             name2 = name3;
         }
         DeserializedSimpleFunctionDescriptor deserializedSimpleFunctionDescriptor = new DeserializedSimpleFunctionDescriptor(declarationDescriptor, simpleFunctionDescriptor, annotations, name2, kind, getProto(), getNameResolver(), getTypeTable(), getVersionRequirementTable(), getContainerSource(), sourceElement);
@@ -83,7 +83,7 @@ public final class DeserializedSimpleFunctionDescriptor extends SimpleFunctionDe
     public final SimpleFunctionDescriptorImpl initialize(ReceiverParameterDescriptor receiverParameterDescriptor, ReceiverParameterDescriptor receiverParameterDescriptor2, List<? extends TypeParameterDescriptor> list, List<? extends ValueParameterDescriptor> list2, KotlinType kotlinType, Modality modality, Visibility visibility, Map<? extends UserDataKey<?>, ?> map, CoroutinesCompatibilityMode coroutinesCompatibilityMode) {
         SimpleFunctionDescriptorImpl initialize = super.initialize(receiverParameterDescriptor, receiverParameterDescriptor2, list, list2, kotlinType, modality, visibility, map);
         this.coroutinesExperimentalCompatibilityMode = coroutinesCompatibilityMode;
-        C12880j.m40222a((Object) initialize, "super.initialize(\n      …easeEnvironment\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) initialize, "super.initialize(\n      …easeEnvironment\n        }");
         return initialize;
     }
 

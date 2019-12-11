@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.metadata.deserialization;
 
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.VersionRequirement;
 
 /* compiled from: VersionRequirement.kt */
@@ -21,7 +21,7 @@ public final class VersionRequirementTable {
                 return getEMPTY();
             }
             List requirementList = versionRequirementTable.getRequirementList();
-            C12880j.m40222a((Object) requirementList, "table.requirementList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requirementList, "table.requirementList");
             return new VersionRequirementTable(requirementList, null);
         }
 

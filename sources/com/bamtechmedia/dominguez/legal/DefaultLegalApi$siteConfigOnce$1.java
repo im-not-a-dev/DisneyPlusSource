@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.legal;
 
 import com.bamtechmedia.dominguez.core.utils.p223t0.C5879c;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Request.C14113a;
@@ -26,12 +26,12 @@ final class DefaultLegalApi$siteConfigOnce$1<T, R> implements Function<T, Single
         aVar.mo35840a(DefaultLegalApi.ACCEPT_HEADER, DefaultLegalApi.MIME_TYPE_JSON);
         aVar.mo35847b();
         Request a = aVar.mo35846a();
-        C12880j.m40222a((Object) a, "Request.Builder()\n      …                 .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Request.Builder()\n      …                 .build()");
         OkHttpClient access$getOkHttpClient$p = this.this$0.okHttpClient;
         C11725h access$getSiteConfigAdapter$p = this.this$0.siteConfigAdapter;
-        C12880j.m40222a((Object) access$getSiteConfigAdapter$p, "siteConfigAdapter");
+        Intrinsics.checkReturnedValueIsNotNull((Object) access$getSiteConfigAdapter$p, "siteConfigAdapter");
         Single<SiteConfigResponse> g = C5879c.m18933a(a, access$getOkHttpClient$p).mo30233g(new C6111xadd93bca(access$getSiteConfigAdapter$p));
-        C12880j.m40222a((Object) g, "createSingle(client).map…)?.toObject<T>(adapter) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "createSingle(client).map…)?.toObject<T>(adapter) }");
         return g;
     }
 }

@@ -16,7 +16,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p590y.C13180m;
 import p163g.p201e.p203b.p287k.C7310d;
@@ -122,7 +122,7 @@ public final class C5925a extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13718W, (java.lang.Object) r3.f13718W) != false) goto L_0x0033;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13718W, (java.lang.Object) r3.f13718W) != false) goto L_0x0033;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -134,19 +134,19 @@ public final class C5925a extends C11866a {
             com.bamtechmedia.dominguez.detail.common.f0.a r3 = (com.bamtechmedia.dominguez.detail.common.p229f0.C5925a) r3
             com.bamtechmedia.dominguez.detail.common.x r0 = r2.f13719c
             com.bamtechmedia.dominguez.detail.common.x r1 = r3.f13719c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.util.List<com.bamtechmedia.dominguez.detail.common.x> r0 = r2.f13716U
             java.util.List<com.bamtechmedia.dominguez.detail.common.x> r1 = r3.f13716U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             com.bamtechmedia.dominguez.detail.common.d0.a r0 = r2.f13717V
             com.bamtechmedia.dominguez.detail.common.d0.a r1 = r3.f13717V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             com.bamtechmedia.dominguez.core.design.widgets.e.a r0 = r2.f13718W
             com.bamtechmedia.dominguez.core.design.widgets.e.a r3 = r3.f13718W
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0031
             goto L_0x0033
         L_0x0031:
@@ -163,7 +163,7 @@ public final class C5925a extends C11866a {
         if (eVar != null) {
             C5925a aVar = (C5925a) eVar;
             boolean z = true;
-            if (!(!C12880j.m40224a((Object) aVar.f13719c, (Object) this.f13719c)) && !(!C12880j.m40224a((Object) aVar.f13716U, (Object) this.f13716U))) {
+            if (!(!Intrinsics.areEqual((Object) aVar.f13719c, (Object) this.f13719c)) && !(!Intrinsics.areEqual((Object) aVar.f13716U, (Object) this.f13716U))) {
                 z = false;
             }
             return new C5926a(z);
@@ -191,7 +191,7 @@ public final class C5925a extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof C5925a) && C12880j.m40224a((Object) ((C5925a) eVar).f13716U, (Object) this.f13716U);
+        return (eVar instanceof C5925a) && Intrinsics.areEqual((Object) ((C5925a) eVar).f13716U, (Object) this.f13716U);
     }
 
     public String toString() {
@@ -223,13 +223,13 @@ public final class C5925a extends C11866a {
     /* renamed from: a */
     private final void m19024a(C11867b bVar, C6008x xVar, int i) {
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "viewHolder.itemView.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "viewHolder.itemView.context");
         String a = C5880u.m18938a(context, xVar.mo18028d());
         FocusSearchInterceptTabLayout focusSearchInterceptTabLayout = (FocusSearchInterceptTabLayout) bVar.mo20994a().findViewById(C7310d.detailTabLayout);
         if (focusSearchInterceptTabLayout.mo26895b(i) == null) {
-            C12880j.m40222a((Object) focusSearchInterceptTabLayout, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) focusSearchInterceptTabLayout, "it");
             focusSearchInterceptTabLayout.mo26886a(C5842k0.m18858a(focusSearchInterceptTabLayout, C7312f.detail_tabs_tab, a), i);
         }
     }
@@ -277,11 +277,11 @@ public final class C5925a extends C11866a {
                 }
             }
             View findViewById = bVar.mo20994a().findViewById(C7310d.tab_separator);
-            C12880j.m40222a((Object) findViewById, "tab_separator");
+            Intrinsics.checkReturnedValueIsNotNull((Object) findViewById, "tab_separator");
             findViewById.setVisibility(0);
             C5681a aVar = this.f13718W;
             FocusSearchInterceptTabLayout focusSearchInterceptTabLayout = (FocusSearchInterceptTabLayout) bVar.mo20994a().findViewById(C7310d.detailTabLayout);
-            C12880j.m40222a((Object) focusSearchInterceptTabLayout, "detailTabLayout");
+            Intrinsics.checkReturnedValueIsNotNull((Object) focusSearchInterceptTabLayout, "detailTabLayout");
             C5681a.m18553a(aVar, focusSearchInterceptTabLayout, this.f13716U.indexOf(this.f13719c), null, null, null, new C5927b(this, list), 28, null);
         }
     }

@@ -15,7 +15,7 @@ public final class C3342a0 extends C3384s {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f8408Y, (java.lang.Object) ((com.bamtechmedia.dominguez.collections.items.C3342a0) r2).f8408Y) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f8408Y, (java.lang.Object) ((com.bamtechmedia.dominguez.collections.items.C3342a0) r2).f8408Y) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -27,7 +27,7 @@ public final class C3342a0 extends C3384s {
             com.bamtechmedia.dominguez.collections.items.a0 r2 = (com.bamtechmedia.dominguez.collections.items.C3342a0) r2
             com.bamtechmedia.dominguez.collections.items.v r0 = r1.f8408Y
             com.bamtechmedia.dominguez.collections.items.v r2 = r2.f8408Y
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:

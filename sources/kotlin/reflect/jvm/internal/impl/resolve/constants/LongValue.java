@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.SimpleType;
 
@@ -19,7 +19,7 @@ public final class LongValue extends IntegerValueConstant<Long> {
 
     public SimpleType getType(ModuleDescriptor moduleDescriptor) {
         SimpleType longType = moduleDescriptor.getBuiltIns().getLongType();
-        C12880j.m40222a((Object) longType, "module.builtIns.longType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) longType, "module.builtIns.longType");
         return longType;
     }
 }

@@ -13,7 +13,7 @@ import java.util.UUID;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0000\u0018\u00002\u00020\u0001B\u0007\b\u0007¢\u0006\u0002\u0010\u0002J\u0010\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u0006H\u0002J,\u0010\u0007\u001a\u001e\u0012\f\u0012\n\u0012\u0004\u0012\u00020\n\u0018\u00010\t\u0012\f\u0012\n\u0012\u0004\u0012\u00020\n\u0018\u00010\t0\b2\u0006\u0010\u000b\u001a\u00020\u0006H\u0016Jn\u0010\f\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\r\u0012\u0004\u0012\u00020\u00060\b0\t2\u0006\u0010\u000e\u001a\u00020\u000f2\f\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00060\t2\u0006\u0010\u0011\u001a\u00020\r2\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u000e\u0010\u0013\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010\t2\u0006\u0010\u0014\u001a\u00020\r2\u0006\u0010\u0015\u001a\u00020\u00042\u0006\u0010\u0016\u001a\u00020\u0004H\u0016J3\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u00060\t*\b\u0012\u0004\u0012\u00020\u00060\t2\f\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u0006\u0010\u0015\u001a\u00020\u0004H\u0000¢\u0006\u0002\b\u0019J-\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00060\t*\b\u0012\u0004\u0012\u00020\u00060\t2\u000e\u0010\u001b\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010\tH\u0000¢\u0006\u0002\b\u001cJ%\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u00060\t*\b\u0012\u0004\u0012\u00020\u00060\t2\u0006\u0010\u0016\u001a\u00020\u0004H\u0000¢\u0006\u0002\b\u001eJ\u0017\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020 0\t*\u00020!H\u0000¢\u0006\u0002\b\"¨\u0006#"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/media/offline/DefaultTrackHelper;", "Lcom/bamtech/sdk4/internal/media/offline/TrackHelper;", "()V", "canDecodeAudio", "", "variant", "Lcom/bamtech/sdk4/internal/media/offline/VariantCandidate;", "getMatchingMatchingAudioAndSubtitleTrackNames", "Lkotlin/Pair;", "", "", "candidate", "getTracks", "", "transaction", "Lcom/bamtech/sdk4/internal/service/ServiceTransaction;", "availableTrackGroups", "trackType", "languageFilter", "group", "renditionKeyType", "bypassEmpty", "bypassAudioVerification", "filterLanguages", "languages", "filterLanguages$plugin_offline_media_release", "filterMatchingIds", "matchingGroupIds", "filterMatchingIds$plugin_offline_media_release", "filterPlayableAudio", "filterPlayableAudio$plugin_offline_media_release", "toList", "Lcom/google/android/exoplayer2/source/hls/HlsTrackMetadataEntry$VariantInfo;", "Lcom/google/android/exoplayer2/metadata/Metadata;", "toList$plugin_offline_media_release", "plugin-offline-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: TrackHelper.kt */
@@ -58,7 +58,7 @@ public final class DefaultTrackHelper implements TrackHelper {
         L_0x003a:
             java.util.List r0 = com.google.android.exoplayer2.p381t0.C9275d.m28139b(r0, r3, r4)
             java.lang.String r3 = "MediaCodecUtil.getDecode…SecureDecryption == true)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             java.util.ArrayList r3 = new java.util.ArrayList
             r3.<init>()
             java.util.Iterator r0 = r0.iterator()
@@ -261,16 +261,16 @@ public final class DefaultTrackHelper implements TrackHelper {
         int X = metadata.mo22862X();
         for (int i = 0; i < X; i++) {
             C8737b a = metadata.mo22863a(i);
-            C12880j.m40222a((Object) a, "this.get(i)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "this.get(i)");
             arrayList.add(a);
         }
         ArrayList arrayList2 = new ArrayList();
         for (C8737b bVar : arrayList) {
             if (bVar != null) {
                 List<C9172b> list = ((C9170n) bVar).f20682V;
-                C12880j.m40222a((Object) list, "entry.variantInfos");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list, "entry.variantInfos");
                 for (C9172b bVar2 : list) {
-                    C12880j.m40222a((Object) bVar2, "it");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) bVar2, "it");
                     arrayList2.add(bVar2);
                 }
             } else {

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.p525e0.C11934b;
 import p520io.reactivex.subjects.C11976a;
 
@@ -21,7 +21,7 @@ public final class C2680u extends WorkerFactory {
 
     public C2680u() {
         C11976a<Set<WorkerFactory>> p = C11976a.m38563p();
-        C12880j.m40222a((Object) p, "BehaviorSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) p, "BehaviorSubject.create()");
         this.f7428b = p;
     }
 
@@ -33,7 +33,7 @@ public final class C2680u extends WorkerFactory {
     /* renamed from: a */
     public ListenableWorker mo5648a(Context context, String str, WorkerParameters workerParameters) {
         Object c = this.f7428b.mo30186d().mo30203a(1, TimeUnit.SECONDS, C11934b.m38498a()).mo30224c();
-        C12880j.m40222a(c, "subject\n        .firstOr…))\n        .blockingGet()");
+        Intrinsics.checkReturnedValueIsNotNull(c, "subject\n        .firstOr…))\n        .blockingGet()");
         Iterable<WorkerFactory> iterable = (Iterable) c;
         ArrayList arrayList = new ArrayList();
         for (WorkerFactory a : iterable) {

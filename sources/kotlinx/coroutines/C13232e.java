@@ -2,7 +2,7 @@ package kotlinx.coroutines;
 
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.C12684d;
 import kotlin.p573a0.C12688f;
@@ -50,7 +50,7 @@ final /* synthetic */ class C13232e {
         if (plus == b) {
             C13276n nVar = new C13276n(plus, cVar);
             obj = C13328b.m40953a((C13210a<? super T>) nVar, nVar, function2);
-        } else if (C12880j.m40224a((Object) (C12684d) plus.get(C12684d.f29380b), (Object) (C12684d) b.get(C12684d.f29380b))) {
+        } else if (Intrinsics.areEqual((Object) (C12684d) plus.get(C12684d.f29380b), (Object) (C12684d) b.get(C12684d.f29380b))) {
             C13248h2 h2Var = new C13248h2(plus, cVar);
             Object b2 = C13283u.m40837b(plus, null);
             try {

@@ -7,7 +7,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.resolve.constants.IntegerLiteralTypeConstructor;
 import kotlin.reflect.jvm.internal.impl.types.FlexibleTypesKt;
@@ -97,7 +97,7 @@ public final class TypeIntersector {
             r0.<init>(r8)
             java.util.Iterator r8 = r0.iterator()
             java.lang.String r1 = "filteredTypes.iterator()"
-            kotlin.jvm.internal.C12880j.m40222a(r8, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r1)
         L_0x000e:
             boolean r1 = r8.hasNext()
             if (r1 == 0) goto L_0x0057
@@ -117,9 +117,9 @@ public final class TypeIntersector {
             kotlin.reflect.jvm.internal.impl.types.SimpleType r5 = (kotlin.reflect.jvm.internal.impl.types.SimpleType) r5
             if (r5 == r1) goto L_0x004d
             java.lang.String r6 = "lower"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
             java.lang.String r6 = "upper"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r6)
             java.lang.Object r5 = r9.invoke(r5, r1)
             java.lang.Boolean r5 = (java.lang.Boolean) r5
             boolean r5 = r5.booleanValue()
@@ -181,10 +181,10 @@ public final class TypeIntersector {
             for (SimpleType simpleType : list) {
                 if (simpleType.getConstructor() instanceof IntersectionTypeConstructor) {
                     Collection<KotlinType> supertypes = simpleType.getConstructor().getSupertypes();
-                    C12880j.m40222a((Object) supertypes, "type.constructor.supertypes");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "type.constructor.supertypes");
                     ArrayList arrayList2 = new ArrayList(C13187p.m40525a((Iterable) supertypes, 10));
                     for (KotlinType kotlinType : supertypes) {
-                        C12880j.m40222a((Object) kotlinType, "it");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType, "it");
                         SimpleType upperIfFlexible = FlexibleTypesKt.upperIfFlexible(kotlinType);
                         if (simpleType.isMarkedNullable()) {
                             upperIfFlexible = upperIfFlexible.makeNullableAsSpecified(true);

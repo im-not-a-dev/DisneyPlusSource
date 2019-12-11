@@ -123,7 +123,7 @@ public final class DmcSeriesBundle implements Parcelable {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:14:0x0042, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13918Y, (java.lang.Object) r3.f13918Y) != false) goto L_0x0047;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13918Y, (java.lang.Object) r3.f13918Y) != false) goto L_0x0047;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -135,27 +135,27 @@ public final class DmcSeriesBundle implements Parcelable {
             com.bamtechmedia.dominguez.detail.series.models.DmcSeriesBundle r3 = (com.bamtechmedia.dominguez.detail.series.models.DmcSeriesBundle) r3
             com.bamtechmedia.dominguez.core.content.PromoLabel r0 = r2.f13919c
             com.bamtechmedia.dominguez.core.content.PromoLabel r1 = r3.f13919c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0045
             com.bamtechmedia.dominguez.core.content.assets.DmcSeries r0 = r2.f13914U
             com.bamtechmedia.dominguez.core.content.assets.DmcSeries r1 = r3.f13914U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0045
             com.bamtechmedia.dominguez.detail.series.models.SeriesBundleSeasons r0 = r2.f13915V
             com.bamtechmedia.dominguez.detail.series.models.SeriesBundleSeasons r1 = r3.f13915V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0045
             com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes r0 = r2.f13916W
             com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes r1 = r3.f13916W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0045
             com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent r0 = r2.f13917X
             com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent r1 = r3.f13917X
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0045
             com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent r0 = r2.f13918Y
             com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent r3 = r3.f13918Y
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0045
             goto L_0x0047
         L_0x0045:

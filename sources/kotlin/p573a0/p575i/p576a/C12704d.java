@@ -1,6 +1,6 @@
 package kotlin.p573a0.p575i.p576a;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.C12684d;
 import kotlin.p573a0.C12688f;
@@ -27,7 +27,7 @@ public abstract class C12704d extends C12701a {
         if (fVar != null) {
             return fVar;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -40,7 +40,7 @@ public abstract class C12704d extends C12701a {
             if (bVar != null) {
                 ((C12684d) bVar).mo31040a(cVar);
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }

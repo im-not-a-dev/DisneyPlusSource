@@ -157,7 +157,7 @@ class C12823p {
             java.lang.StringBuilder r15 = (java.lang.StringBuilder) r15
             java.lang.String r14 = r15.toString()
             java.lang.String r15 = "mapIndexedNotNull { inde…\"\\n\")\n        .toString()"
-            kotlin.jvm.internal.C12880j.m40222a(r14, r15)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r14, r15)
             return r14
         */
         throw new UnsupportedOperationException("Method not decompiled: kotlin.p588j0.C12823p.m40098a(java.lang.String, java.lang.String):java.lang.String");

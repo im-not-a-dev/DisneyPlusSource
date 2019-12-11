@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.C8883r;
 import com.google.android.exoplayer2.metadata.p359j.C8776k;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.s0.u.d */
 /* compiled from: MlltSeeker */
@@ -23,7 +23,7 @@ final class C8951d implements C8953a {
     private C8951d(long[] jArr, long[] jArr2) {
         this.f19356a = jArr;
         this.f19357b = jArr2;
-        this.f19358c = C8883r.m25967a(jArr2[jArr2.length - 1]);
+        this.f19358c = C8883r.msToUs(jArr2[jArr2.length - 1]);
     }
 
     /* renamed from: a */
@@ -52,8 +52,8 @@ final class C8951d implements C8953a {
 
     /* renamed from: b */
     public C8921a mo23277b(long j) {
-        Pair a = m26316a(C8883r.m25968b(C9554k0.m29431b(j, 0, this.f19358c)), this.f19357b, this.f19356a);
-        return new C8921a(new C8923p(C8883r.m25967a(((Long) a.first).longValue()), ((Long) a.second).longValue()));
+        Pair a = m26316a(C8883r.usToMs(Util.m29431b(j, 0, this.f19358c)), this.f19357b, this.f19356a);
+        return new C8921a(new C8923p(C8883r.msToUs(((Long) a.first).longValue()), ((Long) a.second).longValue()));
     }
 
     /* renamed from: c */
@@ -68,12 +68,12 @@ final class C8951d implements C8953a {
 
     /* renamed from: a */
     public long mo23360a(long j) {
-        return C8883r.m25967a(((Long) m26316a(j, this.f19356a, this.f19357b).second).longValue());
+        return C8883r.msToUs(((Long) m26316a(j, this.f19356a, this.f19357b).second).longValue());
     }
 
     /* renamed from: a */
     private static Pair<Long, Long> m26316a(long j, long[] jArr, long[] jArr2) {
-        int b = C9554k0.m29429b(jArr, j, true, true);
+        int b = Util.m29429b(jArr, j, true, true);
         long j2 = jArr[b];
         long j3 = jArr2[b];
         int i = b + 1;

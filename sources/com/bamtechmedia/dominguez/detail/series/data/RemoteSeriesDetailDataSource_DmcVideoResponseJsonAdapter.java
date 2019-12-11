@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSourc
 import com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -20,10 +20,10 @@ public final class RemoteSeriesDetailDataSource_DmcVideoResponseJsonAdapter exte
 
     public RemoteSeriesDetailDataSource_DmcVideoResponseJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("DmcVideos");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"DmcVideos\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"DmcVideos\")");
         this.options = a;
         C11725h<SeriesBundleEpisodes> a2 = vVar.mo29869a((Type) SeriesBundleEpisodes.class, C13188p0.m40531a(), "composite");
-        C12880j.m40222a((Object) a2, "moshi.adapter<SeriesBund….emptySet(), \"composite\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<SeriesBund….emptySet(), \"composite\")");
         this.seriesBundleEpisodesAdapter = a2;
     }
 

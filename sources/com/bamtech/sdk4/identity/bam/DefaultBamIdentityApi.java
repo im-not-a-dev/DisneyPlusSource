@@ -8,7 +8,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.DustExtensionsKt;
 import java.util.List;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Single;
@@ -28,21 +28,21 @@ public final class DefaultBamIdentityApi implements BamIdentityApi {
 
     public Single<IdentityToken> authenticate(String str, String str2) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return authenticate(serviceTransaction, str, str2);
     }
 
     public Single<RedeemedPasscodeToken> authenticateWithPasscode(String str, String str2) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         IdentityManager identityManager2 = (IdentityManager) this.identityManager.get();
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(identityManager2.redeemOneTimePasscode(serviceTransaction, str, str2), serviceTransaction, BamIdentityApiKt.getBAMIDP_API_AUTHENTICATE_WITH_PASSCODE(), (Object) null, 4, (Object) null);
     }
 
     public <T> Single<IdentityToken> create(String str, String str2, T t, boolean z) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         IdentityManager identityManager2 = (IdentityManager) this.identityManager.get();
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         ServiceTransaction serviceTransaction2 = serviceTransaction;
         return DustExtensionsKt.withDust$default(DefaultImpls.create$default(identityManager2, serviceTransaction2, str, str2, t, false, 16, null), serviceTransaction2, BamIdentityApiKt.getBAMIDP_API_CREATE_IDENTITY(), (Object) null, 4, (Object) null);
     }
@@ -50,36 +50,36 @@ public final class DefaultBamIdentityApi implements BamIdentityApi {
     public Single<List<AuthenticationFlow>> getAuthenticationFlow(String str) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         IdentityManager identityManager2 = (IdentityManager) this.identityManager.get();
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(identityManager2.getAuthenticationFlow(serviceTransaction, str), serviceTransaction, BamIdentityApiKt.getBAMIDP_API_REQUEST_AUTHENTICATION_FLOW(), (Object) null, 4, (Object) null);
     }
 
     public Completable requestOneTimePasscode(String str, OneTimePasscodeRequestReason oneTimePasscodeRequestReason) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         IdentityManager identityManager2 = (IdentityManager) this.identityManager.get();
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(identityManager2.requestOneTimePasscode(serviceTransaction, str, oneTimePasscodeRequestReason), serviceTransaction, BamIdentityApiKt.getBAMIDP_API_REQUEST_ONE_TIME_PASSCODE(), (Object) null, 4, (Object) null);
     }
 
     public boolean requiresAuthentication() {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         IdentityManager identityManager2 = (IdentityManager) this.identityManager.get();
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return identityManager2.requiresAuthentication(serviceTransaction);
     }
 
     public Completable updateEmail(String str, String str2, String str3) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Completable b = authenticate(serviceTransaction, str, str2).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultBamIdentityApi$updateEmail$1<Object,Object>(this, serviceTransaction, str3, str2));
-        C12880j.m40222a((Object) b, "authenticate(transaction…ssword)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "authenticate(transaction…ssword)\n                }");
         return DustExtensionsKt.withDust$default(b, serviceTransaction, BamIdentityApiKt.getBAMIDP_API_UPDATE_EMAIL(), (Object) null, 4, (Object) null);
     }
 
     public Completable updatePassword(String str, String str2) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         IdentityManager identityManager2 = (IdentityManager) this.identityManager.get();
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(identityManager2.changePassword(serviceTransaction, str, str2), serviceTransaction, BamIdentityApiKt.getBAMIDP_API_UPDATE_PASSWORD(), (Object) null, 4, (Object) null);
     }
 

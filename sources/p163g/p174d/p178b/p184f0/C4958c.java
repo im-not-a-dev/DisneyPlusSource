@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.joda.time.format.DateTimeFormatter;
 import p163g.p174d.p178b.p196m0.C5303a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.b.f0.c */
 /* compiled from: HlsDateRangeParser */
@@ -137,7 +137,7 @@ public class C4958c {
             StringBuilder sb = new StringBuilder();
             sb.append("Could not parse:\n");
             sb.append(str);
-            C14100a.m44528b(e, sb.toString(), new Object[0]);
+            Timber.m44528b(e, sb.toString(), new Object[0]);
             return null;
         }
     }

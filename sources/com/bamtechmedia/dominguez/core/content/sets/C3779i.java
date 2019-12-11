@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.core.content.sets;
 
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11747s;
@@ -39,7 +39,7 @@ public final class C3779i extends C11725h<C3778h> {
         if (map == null) {
             return null;
         }
-        if (C12880j.m40224a(map.get("type"), (Object) "SetRef")) {
+        if (Intrinsics.areEqual(map.get("type"), (Object) "SetRef")) {
             hVar = (C3778h) this.f9420a.mo29866a(ReferenceSet.class).fromJsonValue(map);
         } else {
             hVar = (C3778h) this.f9420a.mo29866a(ContentSet.class).fromJsonValue(map);

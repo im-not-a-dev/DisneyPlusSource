@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal;
 
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
@@ -18,9 +18,9 @@ final class ReflectionObjectRenderer$renderLambda$1$1 extends C12881k implements
 
     public final String invoke(ValueParameterDescriptor valueParameterDescriptor) {
         ReflectionObjectRenderer reflectionObjectRenderer = ReflectionObjectRenderer.INSTANCE;
-        C12880j.m40222a((Object) valueParameterDescriptor, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, "it");
         KotlinType type = valueParameterDescriptor.getType();
-        C12880j.m40222a((Object) type, "it.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "it.type");
         return reflectionObjectRenderer.renderType(type);
     }
 }

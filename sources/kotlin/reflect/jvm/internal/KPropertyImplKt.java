@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.KPropertyImpl.Accessor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
@@ -80,7 +80,7 @@ public final class KPropertyImplKt {
             kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor r8 = r8.getDescriptor()
             kotlin.reflect.jvm.internal.impl.descriptors.Visibility r8 = r8.getVisibility()
             kotlin.reflect.jvm.internal.impl.descriptors.Visibility r0 = kotlin.reflect.jvm.internal.impl.descriptors.Visibilities.INTERNAL
-            boolean r8 = kotlin.jvm.internal.C12880j.m40224a(r8, r0)
+            boolean r8 = kotlin.jvm.internal.Intrinsics.areEqual(r8, r0)
             if (r8 == 0) goto L_0x00fc
             kotlin.reflect.jvm.internal.KPropertyImpl r8 = r7.getProperty()
             kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor r8 = r8.getDescriptor()
@@ -298,7 +298,7 @@ public final class KPropertyImplKt {
     /* access modifiers changed from: private */
     public static final boolean isJvmFieldPropertyInCompanionObject(PropertyDescriptor propertyDescriptor) {
         DeclarationDescriptor containingDeclaration = propertyDescriptor.getContainingDeclaration();
-        C12880j.m40222a((Object) containingDeclaration, "containingDeclaration");
+        Intrinsics.checkReturnedValueIsNotNull((Object) containingDeclaration, "containingDeclaration");
         if (!DescriptorUtils.isCompanionObject(containingDeclaration)) {
             return false;
         }

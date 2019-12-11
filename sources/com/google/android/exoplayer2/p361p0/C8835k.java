@@ -6,8 +6,8 @@ import android.media.AudioFocusRequest.Builder;
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 
 /* renamed from: com.google.android.exoplayer2.p0.k */
 /* compiled from: AudioFocusManager */
@@ -59,7 +59,7 @@ public final class C8835k {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Unknown focus change type: ");
                     sb.append(i);
-                    C9563q.m29500d("AudioFocusManager", sb.toString());
+                    Log.m29500d("AudioFocusManager", sb.toString());
                     return;
                 } else {
                     C8835k.this.f18841e = 1;
@@ -134,7 +134,7 @@ public final class C8835k {
             return 1;
         }
         if (this.f18841e == 0) {
-            if (C9554k0.f22281a >= 26) {
+            if (Util.SDK_INT >= 26) {
                 i = m25632h();
             } else {
                 i = m25631g();
@@ -157,7 +157,7 @@ public final class C8835k {
         C8837b bVar = this.f18838b;
         C8831i iVar = this.f18840d;
         C9537e.m29296a(iVar);
-        return audioManager.requestAudioFocus(bVar, C9554k0.m29438c(iVar.f18828c), this.f18842f);
+        return audioManager.requestAudioFocus(bVar, Util.m29438c(iVar.f18828c), this.f18842f);
     }
 
     /* renamed from: h */
@@ -201,7 +201,7 @@ public final class C8835k {
     public void m25622b(boolean z) {
         if (this.f18842f != 0 || this.f18841e != 0) {
             if (this.f18842f != 1 || this.f18841e == -1 || z) {
-                if (C9554k0.f22281a >= 26) {
+                if (Util.SDK_INT >= 26) {
                     m25629e();
                 } else {
                     m25628d();

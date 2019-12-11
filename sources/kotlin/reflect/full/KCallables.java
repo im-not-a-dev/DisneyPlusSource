@@ -108,7 +108,7 @@ public final class KCallables {
             r4 = r3
             kotlin.reflect.KParameter r4 = (kotlin.reflect.KParameter) r4
             java.lang.String r4 = r4.getName()
-            boolean r4 = kotlin.jvm.internal.C12880j.m40224a(r4, r6)
+            boolean r4 = kotlin.jvm.internal.Intrinsics.areEqual(r4, r6)
             if (r4 == 0) goto L_0x000b
             if (r1 == 0) goto L_0x0025
             goto L_0x002c

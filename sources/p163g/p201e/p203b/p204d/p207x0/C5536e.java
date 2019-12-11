@@ -12,7 +12,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -35,7 +35,7 @@ import p520io.reactivex.Single;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001)BI\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u0010\u0012\b\u0010\u0011\u001a\u0004\u0018\u00010\u0012¢\u0006\u0002\u0010\u0013J\u0010\u0010\u001c\u001a\u00020\u001d2\b\u0010\u001e\u001a\u0004\u0018\u00010\u0012J\u0016\u0010\u001f\u001a\u00020\u001d2\u0006\u0010 \u001a\u00020\u00122\u0006\u0010!\u001a\u00020\u0012J\u000e\u0010\"\u001a\b\u0012\u0004\u0012\u00020\u00120#H\u0002J\u0010\u0010$\u001a\u00020\u001d2\u0006\u0010%\u001a\u00020&H\u0002J\u0006\u0010'\u001a\u00020\u001dJ\u0010\u0010(\u001a\u00020\u001d2\u0006\u0010!\u001a\u00020\u0012H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0014\u001a\u00020\u0012X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0019\u001a\u00020\u0012X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\u0016\"\u0004\b\u001b\u0010\u0018R\u0010\u0010\u0011\u001a\u0004\u0018\u00010\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000¨\u0006*"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/account/password/ChangePasswordViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/account/password/ChangePasswordViewModel$State;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "passwordValidator", "Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;", "changePasswordAction", "Lcom/bamtechmedia/dominguez/account/password/ChangePasswordAction;", "successRouter", "Lcom/bamtechmedia/dominguez/auth/api/router/AccountUpdateRouter;", "errorRouter", "Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;", "otpRouter", "Lcom/bamtechmedia/dominguez/auth/api/router/OtpRouter;", "autoLogin", "Lcom/bamtechmedia/dominguez/auth/autologin/AutoLogin;", "optionalEmail", "", "(Lcom/bamtech/sdk4/account/AccountApi;Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;Lcom/bamtechmedia/dominguez/account/password/ChangePasswordAction;Lcom/bamtechmedia/dominguez/auth/api/router/AccountUpdateRouter;Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;Lcom/bamtechmedia/dominguez/auth/api/router/OtpRouter;Lcom/bamtechmedia/dominguez/auth/autologin/AutoLogin;Ljava/lang/String;)V", "currentPasswordInput", "getCurrentPasswordInput", "()Ljava/lang/String;", "setCurrentPasswordInput", "(Ljava/lang/String;)V", "newPasswordInput", "getNewPasswordInput", "setNewPasswordInput", "calculatePasswordStrength", "", "password", "changePassword", "currentPassword", "newPassword", "emailOnce", "Lio/reactivex/Single;", "mapChangePasswordActionState", "actionState", "Lcom/bamtechmedia/dominguez/account/password/ChangePasswordAction$ActionState;", "onForgotPasswordClicked", "updateAutoLogin", "State", "account_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.d.x0.e */
@@ -151,7 +151,7 @@ public final class C5536e extends C5741g<C5537a> {
             if (this != obj) {
                 if (obj instanceof C5537a) {
                     C5537a aVar = (C5537a) obj;
-                    if (!(this.f13091a == aVar.f13091a) || !C12880j.m40224a((Object) this.f13092b, (Object) aVar.f13092b) || !C12880j.m40224a((Object) this.f13093c, (Object) aVar.f13093c) || !C12880j.m40224a((Object) this.f13094d, (Object) aVar.f13094d)) {
+                    if (!(this.f13091a == aVar.f13091a) || !Intrinsics.areEqual((Object) this.f13092b, (Object) aVar.f13092b) || !Intrinsics.areEqual((Object) this.f13093c, (Object) aVar.f13093c) || !Intrinsics.areEqual((Object) this.f13094d, (Object) aVar.f13094d)) {
                         return false;
                     }
                 }
@@ -299,7 +299,7 @@ public final class C5536e extends C5741g<C5537a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Unhandled Exception  while trying to change account password.", new Object[0]);
+            Timber.m44528b(th, "Unhandled Exception  while trying to change account password.", new Object[0]);
         }
     }
 
@@ -387,7 +387,7 @@ public final class C5536e extends C5741g<C5537a> {
         /* renamed from: a */
         public final void accept(String str) {
             C2755d d = this.f13105c.f13088h;
-            C12880j.m40222a((Object) str, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, "it");
             d.mo11770a(str, true);
         }
     }
@@ -406,7 +406,7 @@ public final class C5536e extends C5741g<C5537a> {
         /* renamed from: a */
         public final void accept(Throwable th) {
             C7626a c = this.f13106c.f13087g;
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             c.mo20540a(th);
         }
     }
@@ -446,7 +446,7 @@ public final class C5536e extends C5741g<C5537a> {
         public final void accept(String str) {
             C2760a a = this.f13109c.f13089i;
             if (a != null) {
-                C12880j.m40222a((Object) str, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) str, "it");
                 a.store(str, this.f13108U);
             }
         }
@@ -465,7 +465,7 @@ public final class C5536e extends C5741g<C5537a> {
 
         /* renamed from: a */
         public final void mo17319a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -473,7 +473,7 @@ public final class C5536e extends C5741g<C5537a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -513,14 +513,14 @@ public final class C5536e extends C5741g<C5537a> {
             }
         }
         Single<String> g = this.f13083c.getAccount().mo30131f(C5542f.f13101c).mo30134g();
-        C12880j.m40222a((Object) g, "accountApi.getAccount().…{ it.email() }.toSingle()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "accountApi.getAccount().…{ it.email() }.toSingle()");
         return g;
     }
 
     /* renamed from: A */
     public final void mo17293A() {
         Object a = m18326B().mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C5546j(this), new C5547k(this));
     }
 
@@ -550,12 +550,12 @@ public final class C5536e extends C5741g<C5537a> {
             r1.<init>(r3)
             io.reactivex.Single r0 = r0.mo30209a(r1)
             java.lang.String r1 = "emailOnce()\n            …ChangePasswordSuccess() }"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.c0 r1 = r3.getViewModelScope()
             g.n.a.h r1 = p163g.p503n.p504a.C11793e.m37930a(r1)
             java.lang.Object r0 = r0.mo30215a(r1)
             java.lang.String r1 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.d0 r0 = (p163g.p503n.p504a.C11792d0) r0
             g.e.b.d.x0.e$m r1 = new g.e.b.d.x0.e$m
             r1.<init>(r3, r4)
@@ -590,9 +590,9 @@ public final class C5536e extends C5741g<C5537a> {
     /* renamed from: a */
     public final void mo17294a(String str, String str2) {
         Observable d = m18326B().mo30225d((Function<? super T, ? extends ObservableSource<? extends R>>) new C5539c<Object,Object>(this, str, str2));
-        C12880j.m40222a((Object) d, "emailOnce()\n            …tPassword, newPassword) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "emailOnce()\n            …tPassword, newPassword) }");
         Object a = d.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C5551f(new C5540d(this)), C5541e.f13100c);
     }
 

@@ -13,7 +13,7 @@ import java.util.HashMap;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p312q.C7700r;
 import p163g.p201e.p203b.p316t.C7793s.C7794a;
@@ -109,11 +109,11 @@ public final class C7784l extends C11890i implements C7700r {
             if (sVar2 != null) {
                 sVar2.mo20699y();
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
     }
@@ -121,7 +121,7 @@ public final class C7784l extends C11890i implements C7700r {
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C10647a.optionsList);
-        C12880j.m40222a((Object) recyclerView, "optionsList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "optionsList");
         RecyclerViewExtKt.m18800a(this, recyclerView, this.f16862U);
     }
 }

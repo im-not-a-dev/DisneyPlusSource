@@ -11,7 +11,7 @@ import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p174d.p178b.C5300m.C5302b;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0006\b\u0007\u0018\u0000 \u00172\u00020\u0001:\u0001\u0017B\u001d\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0010\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u000bH\u0007J\u0018\u0010\u0014\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\u0005H\u0007J\u0010\u0010\u0015\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u000bH\u0007J\b\u0010\u0016\u001a\u00020\u0012H\u0007R,\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u000b0\nj\b\u0012\u0004\u0012\u00020\u000b`\f8\u0006X\u0004¢\u0006\u000e\n\u0000\u0012\u0004\b\r\u0010\u000e\u001a\u0004\b\u000f\u0010\u0010R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0018"}, mo31007d2 = {"Lcom/bamtech/player/delegates/WakeLockDelegate;", "Lcom/bamtech/player/delegates/ControllerDelegate;", "window", "Landroid/view/Window;", "shouldKeepScreenOn", "", "events", "Lcom/bamtech/player/PlayerEvents;", "(Landroid/view/Window;ZLcom/bamtech/player/PlayerEvents;)V", "locks", "Ljava/util/HashSet;", "", "Lkotlin/collections/HashSet;", "locks$annotations", "()V", "getLocks", "()Ljava/util/HashSet;", "acquire", "", "tag", "acquireOrRelease", "release", "releaseAll", "Companion", "bamplayer-core_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 @SuppressLint({"CheckResult"})
@@ -55,7 +55,7 @@ public final class C5146t5 implements C5271z3 {
 
         /* renamed from: a */
         public final void mo16650a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -63,7 +63,7 @@ public final class C5146t5 implements C5271z3 {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -105,7 +105,7 @@ public final class C5146t5 implements C5271z3 {
 
         /* renamed from: a */
         public final void mo16651a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -113,7 +113,7 @@ public final class C5146t5 implements C5271z3 {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -156,7 +156,7 @@ public final class C5146t5 implements C5271z3 {
 
         /* renamed from: a */
         public final void mo16653a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -164,7 +164,7 @@ public final class C5146t5 implements C5271z3 {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -207,7 +207,7 @@ public final class C5146t5 implements C5271z3 {
 
         /* renamed from: a */
         public final void mo16655a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -215,7 +215,7 @@ public final class C5146t5 implements C5271z3 {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -333,7 +333,7 @@ public final class C5146t5 implements C5271z3 {
     /* renamed from: b */
     public final void mo16648b(String str) {
         this.f12463c.remove(str);
-        C14100a.m44529c("WakeLock released %s #locks=%d", str, Integer.valueOf(this.f12463c.size()));
+        Timber.m44529c("WakeLock released %s #locks=%d", str, Integer.valueOf(this.f12463c.size()));
         if (this.f12463c.isEmpty()) {
             this.f12462U.clearFlags(128);
         }
@@ -343,13 +343,13 @@ public final class C5146t5 implements C5271z3 {
     public final void mo16646a(String str) {
         this.f12463c.add(str);
         this.f12462U.addFlags(128);
-        C14100a.m44529c("WakeLock added %s #locks=%d", str, Integer.valueOf(this.f12463c.size()));
+        Timber.m44529c("WakeLock added %s #locks=%d", str, Integer.valueOf(this.f12463c.size()));
     }
 
     /* renamed from: a */
     public final void mo16645a() {
         this.f12462U.clearFlags(128);
         this.f12463c.clear();
-        C14100a.m44529c("WakeLock releaseAll", new Object[0]);
+        Timber.m44529c("WakeLock releaseAll", new Object[0]);
     }
 }

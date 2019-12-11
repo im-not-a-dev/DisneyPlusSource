@@ -58,12 +58,12 @@ public class C13441i implements Serializable {
     }
 
     /* renamed from: a */
-    public void mo34682a(C13440h hVar) throws C13431a {
+    public void mo34682a(C13440h hVar) throws AlreadySelectedException {
         String str = this.f29944U;
         if (str == null || str.equals(hVar.mo34669f())) {
             this.f29944U = hVar.mo34669f();
             return;
         }
-        throw new C13431a(this, hVar);
+        throw new AlreadySelectedException(this, hVar);
     }
 }

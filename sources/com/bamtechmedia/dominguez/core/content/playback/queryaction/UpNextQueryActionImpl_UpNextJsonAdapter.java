@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.core.content.playback.queryaction.UpNextQueryA
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -33,22 +33,22 @@ public final class UpNextQueryActionImpl_UpNextJsonAdapter extends C11725h<UpNex
         String str3 = "itemFrom";
         String str4 = "upNextType";
         C11739b a = C11739b.m37729a("items", str4, str3, str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"i…\"itemTo\", \"parentItemTo\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"i…\"itemTo\", \"parentItemTo\")");
         this.options = a;
         C11725h<List<C3632f>> a2 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, C3632f.class), C13188p0.m40531a(), "upNextElements");
-        C12880j.m40222a((Object) a2, "moshi.adapter<List<DmcAs…ySet(), \"upNextElements\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<List<DmcAs…ySet(), \"upNextElements\")");
         this.listOfDmcAssetAdapter = a2;
         C11725h<String> a3 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str4);
-        C12880j.m40222a((Object) a3, "moshi.adapter<String>(St…emptySet(), \"upNextType\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<String>(St…emptySet(), \"upNextType\")");
         this.stringAdapter = a3;
         C11725h<ItemFrom> a4 = vVar.mo29869a((Type) ItemFrom.class, C13188p0.m40531a(), str3);
-        C12880j.m40222a((Object) a4, "moshi.adapter<UpNextQuer…s.emptySet(), \"itemFrom\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<UpNextQuer…s.emptySet(), \"itemFrom\")");
         this.nullableItemFromAdapter = a4;
         C11725h<ItemTo> a5 = vVar.mo29869a((Type) ItemTo.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a5, "moshi.adapter<UpNextQuer…ons.emptySet(), \"itemTo\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<UpNextQuer…ons.emptySet(), \"itemTo\")");
         this.nullableItemToAdapter = a5;
         C11725h<ParentItemTo> a6 = vVar.mo29869a((Type) ParentItemTo.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a6, "moshi.adapter<UpNextQuer…ptySet(), \"parentItemTo\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a6, "moshi.adapter<UpNextQuer…ptySet(), \"parentItemTo\")");
         this.nullableParentItemToAdapter = a6;
     }
 

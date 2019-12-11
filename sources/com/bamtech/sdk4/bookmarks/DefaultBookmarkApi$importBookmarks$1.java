@@ -2,7 +2,7 @@ package com.bamtech.sdk4.bookmarks;
 
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.functions.C11945a;
@@ -30,7 +30,7 @@ final class DefaultBookmarkApi$importBookmarks$1<T, R> implements Function<List<
             public final void run() {
                 DefaultBookmarkApi defaultBookmarkApi = this.this$0.this$0;
                 List list = list;
-                C12880j.m40222a((Object) list, "list");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list, "list");
                 defaultBookmarkApi.processBookmarks$plugin_bookmarks_release(list, this.this$0.$bookmarks);
             }
         });

@@ -7,7 +7,7 @@ import java.util.Set;
 import kotlin.C13147x;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -55,7 +55,7 @@ public final class ModuleDescriptorImpl extends DeclarationDescriptorImpl implem
     /* access modifiers changed from: private */
     public final String getId() {
         String name = getName().toString();
-        C12880j.m40222a((Object) name, "name.toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "name.toString()");
         return name;
     }
 
@@ -149,10 +149,10 @@ public final class ModuleDescriptorImpl extends DeclarationDescriptorImpl implem
     }
 
     public boolean shouldSeeInternalsOf(ModuleDescriptor moduleDescriptor) {
-        if (!C12880j.m40224a((Object) this, (Object) moduleDescriptor)) {
+        if (!Intrinsics.areEqual((Object) this, (Object) moduleDescriptor)) {
             ModuleDependencies moduleDependencies = this.dependencies;
             if (moduleDependencies == null) {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             } else if (!C13199w.m40564a((Iterable) moduleDependencies.getModulesWhoseInternalsAreVisible(), (Object) moduleDescriptor) && !getExpectedByModules().contains(moduleDescriptor)) {
                 return false;

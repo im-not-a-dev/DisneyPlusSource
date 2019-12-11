@@ -5,7 +5,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 import java.util.Map;
 import kotlin.C12907r;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.lazy.LazyJavaResolverContext;
@@ -33,13 +33,13 @@ public final class JavaAnnotationMapper {
     /* JADX INFO: used method not loaded: kotlin.y.j0.a(kotlin.Pair[]):null, types can be incorrect */
     static {
         Name identifier = Name.identifier("message");
-        C12880j.m40222a((Object) identifier, "Name.identifier(\"message\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(\"message\")");
         DEPRECATED_ANNOTATION_MESSAGE = identifier;
         Name identifier2 = Name.identifier("allowedTargets");
-        C12880j.m40222a((Object) identifier2, "Name.identifier(\"allowedTargets\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier2, "Name.identifier(\"allowedTargets\")");
         TARGET_ANNOTATION_ALLOWED_TARGETS = identifier2;
         Name identifier3 = Name.identifier("value");
-        C12880j.m40222a((Object) identifier3, "Name.identifier(\"value\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier3, "Name.identifier(\"value\")");
         RETENTION_ANNOTATION_VALUE = identifier3;
     }
 
@@ -47,7 +47,7 @@ public final class JavaAnnotationMapper {
     }
 
     public final AnnotationDescriptor findMappedJavaAnnotation(FqName fqName, JavaAnnotationOwner javaAnnotationOwner, LazyJavaResolverContext lazyJavaResolverContext) {
-        if (C12880j.m40224a((Object) fqName, (Object) KotlinBuiltIns.FQ_NAMES.deprecated)) {
+        if (Intrinsics.areEqual((Object) fqName, (Object) KotlinBuiltIns.FQ_NAMES.deprecated)) {
             JavaAnnotation findAnnotation = javaAnnotationOwner.findAnnotation(JAVA_DEPRECATED_FQ_NAME);
             if (findAnnotation != null || javaAnnotationOwner.isDeprecatedInJavaDoc()) {
                 return new JavaDeprecatedAnnotationDescriptor(findAnnotation, lazyJavaResolverContext);
@@ -78,21 +78,21 @@ public final class JavaAnnotationMapper {
 
     public final AnnotationDescriptor mapOrResolveJavaAnnotation(JavaAnnotation javaAnnotation, LazyJavaResolverContext lazyJavaResolverContext) {
         ClassId classId = javaAnnotation.getClassId();
-        if (C12880j.m40224a((Object) classId, (Object) ClassId.topLevel(JAVA_TARGET_FQ_NAME))) {
+        if (Intrinsics.areEqual((Object) classId, (Object) ClassId.topLevel(JAVA_TARGET_FQ_NAME))) {
             return new JavaTargetAnnotationDescriptor(javaAnnotation, lazyJavaResolverContext);
         }
-        if (C12880j.m40224a((Object) classId, (Object) ClassId.topLevel(JAVA_RETENTION_FQ_NAME))) {
+        if (Intrinsics.areEqual((Object) classId, (Object) ClassId.topLevel(JAVA_RETENTION_FQ_NAME))) {
             return new JavaRetentionAnnotationDescriptor(javaAnnotation, lazyJavaResolverContext);
         }
-        if (C12880j.m40224a((Object) classId, (Object) ClassId.topLevel(JAVA_REPEATABLE_FQ_NAME))) {
+        if (Intrinsics.areEqual((Object) classId, (Object) ClassId.topLevel(JAVA_REPEATABLE_FQ_NAME))) {
             FqName fqName = KotlinBuiltIns.FQ_NAMES.repeatable;
-            C12880j.m40222a((Object) fqName, "KotlinBuiltIns.FQ_NAMES.repeatable");
+            Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "KotlinBuiltIns.FQ_NAMES.repeatable");
             return new JavaAnnotationDescriptor(lazyJavaResolverContext, javaAnnotation, fqName);
-        } else if (C12880j.m40224a((Object) classId, (Object) ClassId.topLevel(JAVA_DOCUMENTED_FQ_NAME))) {
+        } else if (Intrinsics.areEqual((Object) classId, (Object) ClassId.topLevel(JAVA_DOCUMENTED_FQ_NAME))) {
             FqName fqName2 = KotlinBuiltIns.FQ_NAMES.mustBeDocumented;
-            C12880j.m40222a((Object) fqName2, "KotlinBuiltIns.FQ_NAMES.mustBeDocumented");
+            Intrinsics.checkReturnedValueIsNotNull((Object) fqName2, "KotlinBuiltIns.FQ_NAMES.mustBeDocumented");
             return new JavaAnnotationDescriptor(lazyJavaResolverContext, javaAnnotation, fqName2);
-        } else if (C12880j.m40224a((Object) classId, (Object) ClassId.topLevel(JAVA_DEPRECATED_FQ_NAME))) {
+        } else if (Intrinsics.areEqual((Object) classId, (Object) ClassId.topLevel(JAVA_DEPRECATED_FQ_NAME))) {
             return null;
         } else {
             return new LazyJavaAnnotationDescriptor(lazyJavaResolverContext, javaAnnotation);

@@ -1,6 +1,6 @@
 package com.bamtechmedia.dominguez.detail.movie.data;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.detail.movie.data.a */
 /* compiled from: DetailAnalyticsInfo.kt */
@@ -40,7 +40,7 @@ public final class C6018a {
         if (this != obj) {
             if (obj instanceof C6018a) {
                 C6018a aVar = (C6018a) obj;
-                if ((this.f13871a == aVar.f13871a) && C12880j.m40224a((Object) this.f13872b, (Object) aVar.f13872b)) {
+                if ((this.f13871a == aVar.f13871a) && Intrinsics.areEqual((Object) this.f13872b, (Object) aVar.f13872b)) {
                     if (this.f13873c == aVar.f13873c) {
                         return true;
                     }

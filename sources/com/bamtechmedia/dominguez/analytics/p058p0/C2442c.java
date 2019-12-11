@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.analytics.p058p0;
 import com.bamtechmedia.dominguez.analytics.p059q0.C2452d;
 import com.bamtechmedia.dominguez.auth.p066r0.C2793c;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Completable;
 import p520io.reactivex.functions.C11945a;
@@ -67,14 +67,14 @@ public final class C2442c implements C2793c {
     /* renamed from: c */
     public Completable mo11572c() {
         Completable h = Completable.m38169h();
-        C12880j.m40222a((Object) h, "Completable.complete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
         return h;
     }
 
     /* renamed from: a */
     public Completable mo11570a() {
         Completable b = Completable.m38166c((C11945a) new C2444b(this)).mo30051b(this.f6734c);
-        C12880j.m40222a((Object) b, "Completable.fromAction {….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.fromAction {….subscribeOn(ioScheduler)");
         return b;
     }
 }

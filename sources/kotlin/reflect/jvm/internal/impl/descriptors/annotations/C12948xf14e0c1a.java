@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.annotations;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -20,7 +20,7 @@ final class C12948xf14e0c1a extends C12881k implements Function1<ModuleDescripto
 
     public final SimpleType invoke(ModuleDescriptor moduleDescriptor) {
         SimpleType arrayType = moduleDescriptor.getBuiltIns().getArrayType(Variance.INVARIANT, this.$this_createDeprecatedAnnotation.getStringType());
-        C12880j.m40222a((Object) arrayType, "module.builtIns.getArray…ce.INVARIANT, stringType)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) arrayType, "module.builtIns.getArray…ce.INVARIANT, stringType)");
         return arrayType;
     }
 }

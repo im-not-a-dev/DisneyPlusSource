@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.auth.p066r0.C2797e;
 import com.bamtechmedia.dominguez.core.p218n.C5792f;
 import com.bamtechmedia.dominguez.legal.api.LegalRouter;
 import com.bamtechmedia.dominguez.legal.api.LegalRouter.DefaultImpls;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p204d.C5393h;
 import p163g.p201e.p203b.p407e0.C10597i;
 
@@ -60,7 +60,7 @@ public final class C7790q implements C7777f {
             default:
                 Toast makeText = Toast.makeText(this.f16868a.getApplicationContext(), "Not implemented", 0);
                 makeText.show();
-                C12880j.m40222a((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
+                Intrinsics.checkReturnedValueIsNotNull((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
                 makeText.show();
                 return;
         }
@@ -75,7 +75,7 @@ public final class C7790q implements C7777f {
     private final void m22874a() {
         C5792f fVar = this.f16870c;
         Object newInstance = C2797e.class.newInstance();
-        C12880j.m40222a(newInstance, "T::class.java.newInstance()");
+        Intrinsics.checkReturnedValueIsNotNull(newInstance, "T::class.java.newInstance()");
         fVar.mo17668a((C0530c) newInstance, "LogOutDialogFragment");
     }
 }

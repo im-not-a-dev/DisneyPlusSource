@@ -9,7 +9,7 @@ import com.google.android.exoplayer2.upstream.DataSource;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -45,7 +45,7 @@ public final class LicenseUtilsKt {
 
     public static final DateTime getLicenseExpiration(ExoCachedMedia exoCachedMedia, WidevineLicenseManager widevineLicenseManager) {
         DateTime plusSeconds = DateTime.now(DateTimeZone.UTC).plusSeconds((int) widevineLicenseManager.getLicenseDuration(exoCachedMedia.getLicense()));
-        C12880j.m40222a((Object) plusSeconds, "now.plusSeconds(expiration.toInt())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) plusSeconds, "now.plusSeconds(expiration.toInt())");
         return plusSeconds;
     }
 
@@ -102,7 +102,7 @@ public final class LicenseUtilsKt {
             byte[] r1 = r4.download(r3, r6)
             goto L_0x004b
         L_0x0045:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r1
         L_0x0049:
             byte[] r1 = new byte[r0]

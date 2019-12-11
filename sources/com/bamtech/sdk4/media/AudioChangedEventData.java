@@ -20,7 +20,7 @@ public final class AudioChangedEventData implements BaseQosClientData {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x003c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.audioName, (java.lang.Object) r3.audioName) != false) goto L_0x0041;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.audioName, (java.lang.Object) r3.audioName) != false) goto L_0x0041;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -32,23 +32,23 @@ public final class AudioChangedEventData implements BaseQosClientData {
             com.bamtech.sdk4.media.AudioChangedEventData r3 = (com.bamtech.sdk4.media.AudioChangedEventData) r3
             java.lang.String r0 = r2.getPlaybackSessionId()
             java.lang.String r1 = r3.getPlaybackSessionId()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003f
             java.lang.Integer r0 = r2.audioChannels
             java.lang.Integer r1 = r3.audioChannels
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003f
             java.lang.String r0 = r2.audioCodec
             java.lang.String r1 = r3.audioCodec
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003f
             java.lang.String r0 = r2.audioLanguage
             java.lang.String r1 = r3.audioLanguage
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003f
             java.lang.String r0 = r2.audioName
             java.lang.String r3 = r3.audioName
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x003f
             goto L_0x0041
         L_0x003f:

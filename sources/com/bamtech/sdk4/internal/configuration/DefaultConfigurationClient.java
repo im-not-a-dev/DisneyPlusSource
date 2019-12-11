@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.networking.ConverterProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.internal.telemetry.dust.Dust$Events;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import p520io.reactivex.Single;
 import p520io.reactivex.disposables.Disposable;
@@ -32,9 +32,9 @@ public final class DefaultConfigurationClient implements ConfigurationClient {
         String configuration_get = ConfigurationClientKt.getCONFIGURATION_GET(Dust$Events.INSTANCE);
         Call a2 = C1691e.m7799a(a);
         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new DefaultConfigurationClient$getConfiguration$$inlined$toSingle$1(a2)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single<Configuration> g = b.mo30222c((Consumer<? super Disposable>) new DefaultConfigurationClient$getConfiguration$$inlined$toSingle$2<Object>(serviceTransaction, configuration_get)).mo30218b((Consumer<? super Throwable>) new DefaultConfigurationClient$getConfiguration$$inlined$toSingle$3<Object>(a, serviceTransaction, configuration_get)).mo30233g(new DefaultConfigurationClient$getConfiguration$$inlined$toSingle$4(serviceTransaction, configuration_get));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g;
     }
 

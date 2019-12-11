@@ -35,7 +35,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -48,7 +48,7 @@ import p520io.reactivex.ObservableSource;
 import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u0000 H2\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001HBM\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0012\u0012\u0006\u0010\u0013\u001a\u00020\u0014¢\u0006\u0002\u0010\u0015J\u0018\u0010*\u001a\n ,*\u0004\u0018\u00010+0+2\u0006\u0010-\u001a\u00020.H\u0002J\u0018\u0010/\u001a\n ,*\u0004\u0018\u00010+0+2\u0006\u0010-\u001a\u00020.H\u0002J\u0018\u00100\u001a\n ,*\u0004\u0018\u00010+0+2\u0006\u0010-\u001a\u00020.H\u0002J\u0010\u00101\u001a\u0002022\u0006\u0010-\u001a\u00020.H\u0003J\u0010\u00103\u001a\u0002022\u0006\u0010-\u001a\u00020.H\u0003J\u0010\u00104\u001a\u0002022\u0006\u00105\u001a\u000206H\u0002J2\u00107\u001a\u0002022\u0006\u0010-\u001a\u00020.2\b\u00108\u001a\u0004\u0018\u0001062\u0006\u00109\u001a\u00020:2\b\b\u0002\u0010\u001a\u001a\u00020\u001b2\u0006\u0010;\u001a\u00020\u001bJ\u0010\u0010<\u001a\u0002022\u0006\u0010-\u001a\u00020.H\u0003J\u0010\u0010=\u001a\u0002022\u0006\u0010>\u001a\u000206H\u0002J\b\u0010?\u001a\u000202H\u0002J\u0012\u0010@\u001a\u0004\u0018\u00010A2\u0006\u00105\u001a\u000206H\u0002J\u0010\u0010B\u001a\u0002022\u0006\u00105\u001a\u000206H\u0002J\u0010\u0010C\u001a\u00020\u001b2\u0006\u0010D\u001a\u00020\u001bH\u0002J\u0010\u0010E\u001a\u0002022\u0006\u0010-\u001a\u00020.H\u0002J\u0015\u0010F\u001a\u0002022\u0006\u0010-\u001a\u00020.H\u0001¢\u0006\u0002\bGR\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u0016\u001a\u00020\u00178F¢\u0006\u0006\u001a\u0004\b\u0018\u0010\u0019R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u001a\u001a\u00020\u001bX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001c\u0010\u001d\"\u0004\b\u001e\u0010\u001fR$\u0010 \u001a\u00020!8\u0006@\u0006X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\"\u0010#\u001a\u0004\b$\u0010%\"\u0004\b&\u0010'R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010(\u001a\u00020\u00178BX\u0004¢\u0006\u0006\u001a\u0004\b)\u0010\u0019¨\u0006I"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/playback/common/PlaybackState;", "playableQueryAction", "Lcom/bamtechmedia/dominguez/playback/common/query/PlayableQueryAction;", "upNextQueryAction", "Lcom/bamtechmedia/dominguez/core/content/playback/queryaction/UpNextQueryAction;", "nextRecommendation", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextActionResolver;", "sessionStarter", "Lcom/bamtechmedia/dominguez/playback/common/engine/session/SessionStarter;", "engineLanguageSetup", "Lcom/bamtechmedia/dominguez/playback/common/engine/languages/EngineLanguageSetup;", "playerAnalytics", "Lcom/bamtechmedia/dominguez/playback/common/analytics/PlayerAnalytics;", "autoPlayRules", "Lcom/bamtechmedia/dominguez/playback/common/upnext/autoplay/AutoPlayRules;", "profilesRepository", "Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;", "upNextConfig", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextConfig;", "(Lcom/bamtechmedia/dominguez/playback/common/query/PlayableQueryAction;Lcom/bamtechmedia/dominguez/core/content/playback/queryaction/UpNextQueryAction;Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextActionResolver;Lcom/bamtechmedia/dominguez/playback/common/engine/session/SessionStarter;Lcom/bamtechmedia/dominguez/playback/common/engine/languages/EngineLanguageSetup;Lcom/bamtechmedia/dominguez/playback/common/analytics/PlayerAnalytics;Lcom/bamtechmedia/dominguez/playback/common/upnext/autoplay/AutoPlayRules;Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextConfig;)V", "currentPlayhead", "", "getCurrentPlayhead", "()J", "fromDeeplink", "", "getFromDeeplink", "()Z", "setFromDeeplink", "(Z)V", "mediator", "Lcom/bamtechmedia/dominguez/playback/common/StateMediator;", "mediator$annotations", "()V", "getMediator", "()Lcom/bamtechmedia/dominguez/playback/common/StateMediator;", "setMediator", "(Lcom/bamtechmedia/dominguez/playback/common/StateMediator;)V", "videoDuration", "getVideoDuration", "configureUpNextForMilestone", "Lio/reactivex/disposables/Disposable;", "kotlin.jvm.PlatformType", "engine", "Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "handlePrematurelyHidingRatingOverlay", "handleReshowingRatingOverlay", "launchCloseIconOnInitialBuffering", "", "launchRatingAndMilestoneOnVideoStart", "loadUpNextValue", "currentPlayable", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "onEngineCreated", "initialPlayable", "contentId", "", "kidsOnly", "playerErrors", "replaceNextState", "newNextPlayable", "sendPageLoad", "setMilestoneLocation", "Lcom/bamtech/player/upnext/UpNextTimeEvents;", "setMilestones", "shouldAcceptVisibilityChange", "show", "subscribeToEvents", "trackVideoEnd", "trackVideoEnd$playback_release", "Companion", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.m.f */
@@ -196,7 +196,7 @@ public final class C6342f extends C5741g<C6336a> {
         /* renamed from: a */
         public final void accept(C6501b bVar) {
             C6338c A = this.f14458c.mo18985A();
-            C12880j.m40222a((Object) bVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bVar, "it");
             if (A.mo18973a(bVar)) {
                 this.f14458c.submitEvent(new C6472a());
             }
@@ -217,7 +217,7 @@ public final class C6342f extends C5741g<C6336a> {
         /* renamed from: a */
         public final void accept(C6501b bVar) {
             C6342f fVar = this.f14459c;
-            C12880j.m40222a((Object) bVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bVar, "it");
             fVar.submitEvent(new C6476a(bVar));
         }
     }
@@ -235,7 +235,7 @@ public final class C6342f extends C5741g<C6336a> {
 
         /* renamed from: a */
         public final void mo18995a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -243,7 +243,7 @@ public final class C6342f extends C5741g<C6336a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -303,7 +303,7 @@ public final class C6342f extends C5741g<C6336a> {
 
         /* renamed from: a */
         public final void mo18998a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -311,7 +311,7 @@ public final class C6342f extends C5741g<C6336a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -375,7 +375,7 @@ public final class C6342f extends C5741g<C6336a> {
 
         /* renamed from: a */
         public final void mo19001a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -383,7 +383,7 @@ public final class C6342f extends C5741g<C6336a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -444,7 +444,7 @@ public final class C6342f extends C5741g<C6336a> {
 
         /* renamed from: a */
         public final void mo19004a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -452,7 +452,7 @@ public final class C6342f extends C5741g<C6336a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -587,7 +587,7 @@ public final class C6342f extends C5741g<C6336a> {
             if (c != null) {
                 fVar.submitEvent(new C6468e(c, C6284a.SHORT_DURATION));
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -606,7 +606,7 @@ public final class C6342f extends C5741g<C6336a> {
 
         /* renamed from: a */
         public final void mo19011a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -614,7 +614,7 @@ public final class C6342f extends C5741g<C6336a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -639,7 +639,7 @@ public final class C6342f extends C5741g<C6336a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "playback exception", new Object[0]);
+            Timber.m44528b(th, "playback exception", new Object[0]);
         }
     }
 
@@ -656,7 +656,7 @@ public final class C6342f extends C5741g<C6336a> {
 
         /* renamed from: a */
         public final void mo19013a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -664,7 +664,7 @@ public final class C6342f extends C5741g<C6336a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -744,7 +744,7 @@ public final class C6342f extends C5741g<C6336a> {
                 return a.mo19167a(true, c, oVar2, false, eVar, new C6369a(this.f14479c));
             }
             Observable<? extends C6501b> b = Observable.m38309b(C6505d.f14720a);
-            C12880j.m40222a((Object) b, "Observable.just(IgnoreUpNextPreparing)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "Observable.just(IgnoreUpNextPreparing)");
             return b;
         }
     }
@@ -762,13 +762,13 @@ public final class C6342f extends C5741g<C6336a> {
 
         /* renamed from: a */
         public final void accept(C6501b bVar) {
-            if (C12880j.m40224a((Object) bVar, (Object) C6504c.f14719a) || C12880j.m40224a((Object) bVar, (Object) C6503b.f14718a)) {
+            if (Intrinsics.areEqual((Object) bVar, (Object) C6504c.f14719a) || Intrinsics.areEqual((Object) bVar, (Object) C6503b.f14718a)) {
                 this.f14480c.submitEvent(new C6463b(null, null, 3, null));
-            } else if (C12880j.m40224a((Object) bVar, (Object) C6505d.f14720a)) {
+            } else if (Intrinsics.areEqual((Object) bVar, (Object) C6505d.f14720a)) {
                 C5861q.m18905a("Up Next visibility event while content was preparing");
             } else {
                 C6342f fVar = this.f14480c;
-                C12880j.m40222a((Object) bVar, "upNextAction");
+                Intrinsics.checkReturnedValueIsNotNull((Object) bVar, "upNextAction");
                 fVar.submitEvent(new C6476a(bVar));
             }
         }
@@ -787,7 +787,7 @@ public final class C6342f extends C5741g<C6336a> {
 
         /* renamed from: a */
         public final void mo19016a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -795,7 +795,7 @@ public final class C6342f extends C5741g<C6336a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {

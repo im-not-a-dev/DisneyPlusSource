@@ -16,7 +16,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import okhttp3.HttpUrl;
 import p096e.p110c.p111b.C3918a.C3919a;
@@ -95,18 +95,18 @@ public final class C10612e implements C10611d {
     /* renamed from: b */
     private final Intent m33339b(HttpUrl httpUrl) {
         String httpUrl2 = httpUrl.mo35758i().mo35774b("web.disneyplus.com").mo35772a().toString();
-        C12880j.m40222a((Object) httpUrl2, "link.newBuilder().host(\"….com\").build().toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) httpUrl2, "link.newBuilder().host(\"….com\").build().toString()");
         List queryIntentActivities = this.f25053a.getPackageManager().queryIntentActivities(new Intent("android.intent.action.VIEW", Uri.parse(httpUrl2)), 0);
-        C12880j.m40222a((Object) queryIntentActivities, "context.packageManager.q… Uri.parse(queryUrl)), 0)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) queryIntentActivities, "context.packageManager.q… Uri.parse(queryUrl)), 0)");
         ArrayList<ResolveInfo> arrayList = new ArrayList<>();
         for (Object next : queryIntentActivities) {
-            if (true ^ C12880j.m40224a((Object) ((ResolveInfo) next).activityInfo.packageName, (Object) this.f25053a.getPackageName())) {
+            if (true ^ Intrinsics.areEqual((Object) ((ResolveInfo) next).activityInfo.packageName, (Object) this.f25053a.getPackageName())) {
                 arrayList.add(next);
             }
         }
         ArrayList arrayList2 = new ArrayList(C13187p.m40525a((Iterable) arrayList, 10));
         for (ResolveInfo resolveInfo : arrayList) {
-            C12880j.m40222a((Object) resolveInfo, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) resolveInfo, "it");
             arrayList2.add(m33337a(httpUrl, resolveInfo));
         }
         if (arrayList2.size() <= 1) {
@@ -124,12 +124,12 @@ public final class C10612e implements C10611d {
     public void mo27479a(HttpUrl httpUrl) {
         HttpUrl a = httpUrl.mo35758i().mo35777d("https").mo35772a();
         String httpUrl2 = a.toString();
-        C12880j.m40222a((Object) httpUrl2, "httpsUrl.toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) httpUrl2, "httpsUrl.toString()");
         if (!m33338a(httpUrl2)) {
             m33340b(httpUrl2);
             return;
         }
-        C12880j.m40222a((Object) a, "httpsUrl");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "httpsUrl");
         Intent b = m33339b(a);
         if (b != null) {
             this.f25054b.mo17672b(new C10614b(b));
@@ -147,12 +147,12 @@ public final class C10612e implements C10611d {
     /* renamed from: a */
     private final boolean m33338a(String str) {
         List<ResolveInfo> queryIntentActivities = this.f25053a.getPackageManager().queryIntentActivities(new Intent("android.intent.action.VIEW", Uri.parse(str)), 0);
-        C12880j.m40222a((Object) queryIntentActivities, "context.packageManager.q…VIEW, Uri.parse(url)), 0)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) queryIntentActivities, "context.packageManager.q…VIEW, Uri.parse(url)), 0)");
         if ((queryIntentActivities instanceof Collection) && queryIntentActivities.isEmpty()) {
             return false;
         }
         for (ResolveInfo resolveInfo : queryIntentActivities) {
-            if (C12880j.m40224a((Object) resolveInfo.activityInfo.packageName, (Object) this.f25053a.getPackageName())) {
+            if (Intrinsics.areEqual((Object) resolveInfo.activityInfo.packageName, (Object) this.f25053a.getPackageName())) {
                 return true;
             }
         }
@@ -162,7 +162,7 @@ public final class C10612e implements C10611d {
     /* renamed from: a */
     private final Intent m33337a(HttpUrl httpUrl, ResolveInfo resolveInfo) {
         Intent component = new Intent("android.intent.action.VIEW", Uri.parse(httpUrl.toString())).setComponent(new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name));
-        C12880j.m40222a((Object) component, "Intent(Intent.ACTION_VIE…eInfo.activityInfo.name))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) component, "Intent(Intent.ACTION_VIE…eInfo.activityInfo.name))");
         return component;
     }
 

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.structure;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaPrimitiveType;
 import kotlin.reflect.jvm.internal.impl.resolve.jvm.JvmPrimitiveType;
@@ -21,11 +21,11 @@ public final class ReflectJavaPrimitiveType extends ReflectJavaType implements J
     }
 
     public PrimitiveType getType() {
-        if (C12880j.m40224a((Object) getReflectType(), (Object) Void.TYPE)) {
+        if (Intrinsics.areEqual((Object) getReflectType(), (Object) Void.TYPE)) {
             return null;
         }
         JvmPrimitiveType jvmPrimitiveType = JvmPrimitiveType.get(getReflectType().getName());
-        C12880j.m40222a((Object) jvmPrimitiveType, "JvmPrimitiveType.get(reflectType.name)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) jvmPrimitiveType, "JvmPrimitiveType.get(reflectType.name)");
         return jvmPrimitiveType.getPrimitiveType();
     }
 }

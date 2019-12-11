@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -67,7 +67,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
     public final ClassDescriptor createTypeForMissingDependencies(FqName fqName) {
         ModuleDescriptor module = this.f29556c.getModule();
         ClassId classId = ClassId.topLevel(fqName);
-        C12880j.m40222a((Object) classId, "ClassId.topLevel(fqName)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) classId, "ClassId.topLevel(fqName)");
         return FindClassInModuleKt.findNonGenericClassAcrossDependencies(module, classId, this.f29556c.getComponents().getDeserializedDescriptorResolver().getComponents().getNotFoundClasses());
     }
 
@@ -83,7 +83,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
             Name name = javaAnnotationArgument.getName();
             if (name == null) {
                 name = JvmAnnotationNames.DEFAULT_ANNOTATION_MEMBER_NAME;
-                C12880j.m40222a((Object) name, "DEFAULT_ANNOTATION_MEMBER_NAME");
+                Intrinsics.checkReturnedValueIsNotNull((Object) name, "DEFAULT_ANNOTATION_MEMBER_NAME");
             }
             return resolveFromArray(name, ((JavaArrayAnnotationArgument) javaAnnotationArgument).getElements());
         } else if (javaAnnotationArgument instanceof JavaAnnotationAsAnnotationArgument) {
@@ -109,7 +109,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
             r2 = this;
             kotlin.reflect.jvm.internal.impl.types.SimpleType r0 = r2.getType()
             java.lang.String r1 = "type"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = kotlin.reflect.jvm.internal.impl.types.KotlinTypeKt.isError(r0)
             r1 = 0
             if (r0 == 0) goto L_0x0011
@@ -133,7 +133,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
             kotlin.reflect.jvm.internal.impl.types.SimpleType r3 = r3.getArrayType(r0, r1)
         L_0x003e:
             java.lang.String r0 = "DescriptorResolverUtils.… type\")\n                )"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r0)
             java.util.ArrayList r0 = new java.util.ArrayList
             r1 = 10
             int r1 = kotlin.p590y.C13187p.m40525a(r4, r1)
@@ -158,7 +158,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
             kotlin.reflect.jvm.internal.impl.resolve.constants.ArrayValue r3 = r4.createArrayValue(r0, r3)
             return r3
         L_0x0075:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r1
         */
         throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaAnnotationDescriptor.resolveFromArray(kotlin.reflect.jvm.internal.impl.name.Name, java.util.List):kotlin.reflect.jvm.internal.impl.resolve.constants.ConstantValue");

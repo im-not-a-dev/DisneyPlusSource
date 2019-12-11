@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.internal.telemetry.dust.DustExtensionsKt;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Maybe;
 
@@ -24,7 +24,7 @@ public final class DefaultAccountApi implements AccountApi {
     public Completable authorize(IdentityToken identityToken) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         AccountExtension accountExtension2 = this.accountExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(accountExtension2.authorize(serviceTransaction, identityToken), serviceTransaction, AccountApiKt.getACCOUNT_API_AUTHORIZE(), (Object) null, 4, (Object) null);
     }
 
@@ -35,16 +35,16 @@ public final class DefaultAccountApi implements AccountApi {
     public Maybe<DefaultAccount> getAccount() {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         AccountExtension accountExtension2 = this.accountExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Maybe<DefaultAccount> h = DustExtensionsKt.withDust$default(accountExtension2.getAccount(serviceTransaction), serviceTransaction, AccountApiKt.getACCOUNT_API_GET_ACCOUNT(), (Object) null, 4, (Object) null).mo30234h();
-        C12880j.m40222a((Object) h, "accountExtension.getAcco…               .toMaybe()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "accountExtension.getAcco…               .toMaybe()");
         return h;
     }
 
     public <T> Completable createAccount(IdentityToken identityToken, T t, boolean z) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         AccountExtension accountExtension2 = this.accountExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(accountExtension2.createAccount(serviceTransaction, identityToken, t, z), serviceTransaction, AccountApiKt.getACCOUNT_API_CREATE_ACCOUNT(), (Object) null, 4, (Object) null);
     }
 }

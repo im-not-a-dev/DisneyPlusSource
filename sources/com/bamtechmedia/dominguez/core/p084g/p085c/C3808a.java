@@ -13,7 +13,7 @@ import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12865c0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p135s.C4135d0;
 import p096e.p121h.p135s.C4140e0;
 import p096e.p121h.p135s.C4187x;
@@ -183,14 +183,14 @@ public abstract class C3808a extends C0900t {
         public void onAnimationCancel(Animator animator) {
             C3808a aVar = C3808a.this;
             View view = this.f9475a.itemView;
-            C12880j.m40222a((Object) view, "vh.itemView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view, "vh.itemView");
             aVar.m12837a(view);
         }
 
         public void onAnimationEnd(Animator animator) {
             C3808a aVar = C3808a.this;
             View view = this.f9475a.itemView;
-            C12880j.m40222a((Object) view, "vh.itemView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view, "vh.itemView");
             aVar.m12837a(view);
             C3808a.this.mo5136h(this.f9475a);
             C3808a.this.mo13714j().remove(this.f9475a);
@@ -219,14 +219,14 @@ public abstract class C3808a extends C0900t {
         public void onAnimationCancel(Animator animator) {
             C3808a aVar = C3808a.this;
             View view = this.f9477a.itemView;
-            C12880j.m40222a((Object) view, "vh.itemView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view, "vh.itemView");
             aVar.m12837a(view);
         }
 
         public void onAnimationEnd(Animator animator) {
             C3808a aVar = C3808a.this;
             View view = this.f9477a.itemView;
-            C12880j.m40222a((Object) view, "vh.itemView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view, "vh.itemView");
             aVar.m12837a(view);
             C3808a.this.mo5140l(this.f9477a);
             C3808a.this.mo13715k().remove(this.f9477a);
@@ -462,7 +462,7 @@ public abstract class C3808a extends C0900t {
                 while (it.hasNext()) {
                     C0794d0 d0Var = (C0794d0) it.next();
                     C3808a aVar = this.f9497c;
-                    C12880j.m40222a((Object) d0Var, "holder");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) d0Var, "holder");
                     aVar.m12854x(d0Var);
                 }
                 this.f9496U.clear();
@@ -491,7 +491,7 @@ public abstract class C3808a extends C0900t {
                 while (it.hasNext()) {
                     C3809a aVar = (C3809a) it.next();
                     C3808a aVar2 = this.f9499c;
-                    C12880j.m40222a((Object) aVar, "change");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "change");
                     aVar2.m12838a(aVar);
                 }
                 this.f9498U.clear();
@@ -538,7 +538,7 @@ public abstract class C3808a extends C0900t {
     /* renamed from: A */
     private final void m12836A(C0794d0 d0Var) {
         View view = d0Var.itemView;
-        C12880j.m40222a((Object) view, "holder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "holder.itemView");
         m12837a(view);
         mo13719w(d0Var);
     }
@@ -567,7 +567,7 @@ public abstract class C3808a extends C0900t {
     /* renamed from: z */
     private final void m12856z(C0794d0 d0Var) {
         View view = d0Var.itemView;
-        C12880j.m40222a((Object) view, "holder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "holder.itemView");
         m12837a(view);
         mo13718v(d0Var);
     }
@@ -590,7 +590,7 @@ public abstract class C3808a extends C0900t {
             Iterator it = this.f9458h.iterator();
             while (it.hasNext()) {
                 C0794d0 d0Var = (C0794d0) it.next();
-                C12880j.m40222a((Object) d0Var, "holder");
+                Intrinsics.checkReturnedValueIsNotNull((Object) d0Var, "holder");
                 m12855y(d0Var);
             }
             this.f9458h.clear();
@@ -602,7 +602,7 @@ public abstract class C3808a extends C0900t {
                 C3820l lVar = new C3820l(this, arrayList);
                 if (z) {
                     View view = ((C3813e) arrayList.get(0)).mo13739c().itemView;
-                    C12880j.m40222a((Object) view, "moves[0].holder.itemView");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) view, "moves[0].holder.itemView");
                     C4187x.m14364a(view, (Runnable) lVar, mo4671f());
                 } else {
                     lVar.run();
@@ -619,7 +619,7 @@ public abstract class C3808a extends C0900t {
                     if (d != null) {
                         C4187x.m14364a(d.itemView, (Runnable) kVar, mo4671f());
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 } else {
@@ -641,7 +641,7 @@ public abstract class C3808a extends C0900t {
                     }
                     long max = f + Math.max(e, j);
                     View view2 = ((C0794d0) arrayList3.get(0)).itemView;
-                    C12880j.m40222a((Object) view2, "additions[0].itemView");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) view2, "additions[0].itemView");
                     C4187x.m14364a(view2, (Runnable) jVar, max);
                 } else {
                     jVar.run();
@@ -682,7 +682,7 @@ public abstract class C3808a extends C0900t {
     /* renamed from: b */
     public final void m12847b(C0794d0 d0Var, int i, int i2, int i3, int i4) {
         View view = d0Var.itemView;
-        C12880j.m40222a((Object) view, "holder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "holder.itemView");
         int i5 = i3 - i;
         int i6 = i4 - i2;
         if (i5 != 0) {
@@ -693,7 +693,7 @@ public abstract class C3808a extends C0900t {
         }
         this.f9466p.add(d0Var);
         C4135d0 a = C4187x.m14348a(view);
-        C12880j.m40222a((Object) a, "ViewCompat.animate(view)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "ViewCompat.animate(view)");
         a.mo14705a(mo4670e());
         C3817i iVar = new C3817i(this, d0Var, i5, i6, a);
         a.mo14707a((C4140e0) iVar);
@@ -704,7 +704,7 @@ public abstract class C3808a extends C0900t {
     public void mo4666c(C0794d0 d0Var) {
         View view = d0Var.itemView;
         String str = "item.itemView";
-        C12880j.m40222a((Object) view, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, str);
         C4187x.m14348a(view).mo14709a();
         int size = this.f9460j.size();
         while (true) {
@@ -713,7 +713,7 @@ public abstract class C3808a extends C0900t {
                 break;
             }
             Object obj = this.f9460j.get(size);
-            C12880j.m40222a(obj, "pendingMoves[i]");
+            Intrinsics.checkReturnedValueIsNotNull(obj, "pendingMoves[i]");
             if (((C3813e) obj).mo13739c() == d0Var) {
                 C4187x.m14382d(view, 0.0f);
                 C4187x.m14378c(view, 0.0f);
@@ -724,13 +724,13 @@ public abstract class C3808a extends C0900t {
         m12844a((List<C3809a>) this.f9461k, d0Var);
         if (this.f9458h.remove(d0Var)) {
             View view2 = d0Var.itemView;
-            C12880j.m40222a((Object) view2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) view2, str);
             m12837a(view2);
             mo5140l(d0Var);
         }
         if (this.f9459i.remove(d0Var)) {
             View view3 = d0Var.itemView;
-            C12880j.m40222a((Object) view3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) view3, str);
             m12837a(view3);
             mo5136h(d0Var);
         }
@@ -741,7 +741,7 @@ public abstract class C3808a extends C0900t {
                 break;
             }
             Object obj2 = this.f9464n.get(size2);
-            C12880j.m40222a(obj2, "changesList[i]");
+            Intrinsics.checkReturnedValueIsNotNull(obj2, "changesList[i]");
             ArrayList arrayList = (ArrayList) obj2;
             m12844a((List<C3809a>) arrayList, d0Var);
             if (arrayList.isEmpty()) {
@@ -755,7 +755,7 @@ public abstract class C3808a extends C0900t {
                 break;
             }
             Object obj3 = this.f9463m.get(size3);
-            C12880j.m40222a(obj3, "movesList[i]");
+            Intrinsics.checkReturnedValueIsNotNull(obj3, "movesList[i]");
             ArrayList arrayList2 = (ArrayList) obj3;
             int size4 = arrayList2.size();
             while (true) {
@@ -764,7 +764,7 @@ public abstract class C3808a extends C0900t {
                     break;
                 }
                 Object obj4 = arrayList2.get(size4);
-                C12880j.m40222a(obj4, "moves[j]");
+                Intrinsics.checkReturnedValueIsNotNull(obj4, "moves[j]");
                 if (((C3813e) obj4).mo13739c() == d0Var) {
                     C4187x.m14382d(view, 0.0f);
                     C4187x.m14378c(view, 0.0f);
@@ -783,11 +783,11 @@ public abstract class C3808a extends C0900t {
                 break;
             }
             Object obj5 = this.f9462l.get(size5);
-            C12880j.m40222a(obj5, "additionsList[i]");
+            Intrinsics.checkReturnedValueIsNotNull(obj5, "additionsList[i]");
             ArrayList arrayList3 = (ArrayList) obj5;
             if (arrayList3.remove(d0Var)) {
                 View view4 = d0Var.itemView;
-                C12880j.m40222a((Object) view4, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) view4, str);
                 m12837a(view4);
                 mo5136h(d0Var);
                 if (arrayList3.isEmpty()) {
@@ -824,7 +824,7 @@ public abstract class C3808a extends C0900t {
     /* renamed from: a */
     public boolean mo4982a(C0794d0 d0Var, int i, int i2, int i3, int i4) {
         View view = d0Var.itemView;
-        C12880j.m40222a((Object) view, "holder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "holder.itemView");
         int u = i + ((int) C4187x.m14406u(d0Var.itemView));
         int v = i2 + ((int) C4187x.m14407v(d0Var.itemView));
         mo4666c(d0Var);
@@ -866,10 +866,10 @@ public abstract class C3808a extends C0900t {
                 break;
             }
             Object obj = this.f9460j.get(size);
-            C12880j.m40222a(obj, "pendingMoves[i]");
+            Intrinsics.checkReturnedValueIsNotNull(obj, "pendingMoves[i]");
             C3813e eVar = (C3813e) obj;
             View view = eVar.mo13739c().itemView;
-            C12880j.m40222a((Object) view, "item.holder.itemView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view, "item.holder.itemView");
             C4187x.m14382d(view, 0.0f);
             C4187x.m14378c(view, 0.0f);
             mo5138j(eVar.mo13739c());
@@ -877,7 +877,7 @@ public abstract class C3808a extends C0900t {
         }
         for (int size2 = this.f9458h.size() - 1; size2 >= 0; size2--) {
             Object obj2 = this.f9458h.get(size2);
-            C12880j.m40222a(obj2, "pendingRemovals[i]");
+            Intrinsics.checkReturnedValueIsNotNull(obj2, "pendingRemovals[i]");
             mo5140l((C0794d0) obj2);
             this.f9458h.remove(size2);
         }
@@ -889,31 +889,31 @@ public abstract class C3808a extends C0900t {
                 break;
             }
             Object obj3 = this.f9459i.get(size3);
-            C12880j.m40222a(obj3, "pendingAdditions[i]");
+            Intrinsics.checkReturnedValueIsNotNull(obj3, "pendingAdditions[i]");
             C0794d0 d0Var = (C0794d0) obj3;
             View view2 = d0Var.itemView;
-            C12880j.m40222a((Object) view2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) view2, str);
             m12837a(view2);
             mo5136h(d0Var);
             this.f9459i.remove(size3);
         }
         for (int size4 = this.f9461k.size() - 1; size4 >= 0; size4--) {
             Object obj4 = this.f9461k.get(size4);
-            C12880j.m40222a(obj4, "pendingChanges[i]");
+            Intrinsics.checkReturnedValueIsNotNull(obj4, "pendingChanges[i]");
             m12848b((C3809a) obj4);
         }
         this.f9461k.clear();
         if (mo4672g()) {
             for (int size5 = this.f9463m.size() - 1; size5 >= 0; size5--) {
                 Object obj5 = this.f9463m.get(size5);
-                C12880j.m40222a(obj5, "movesList[i]");
+                Intrinsics.checkReturnedValueIsNotNull(obj5, "movesList[i]");
                 ArrayList arrayList = (ArrayList) obj5;
                 for (int size6 = arrayList.size() - 1; size6 >= 0; size6--) {
                     Object obj6 = arrayList.get(size6);
-                    C12880j.m40222a(obj6, "moves[j]");
+                    Intrinsics.checkReturnedValueIsNotNull(obj6, "moves[j]");
                     C3813e eVar2 = (C3813e) obj6;
                     View view3 = eVar2.mo13739c().itemView;
-                    C12880j.m40222a((Object) view3, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) view3, str);
                     C4187x.m14382d(view3, 0.0f);
                     C4187x.m14378c(view3, 0.0f);
                     mo5138j(eVar2.mo13739c());
@@ -925,14 +925,14 @@ public abstract class C3808a extends C0900t {
             }
             for (int size7 = this.f9462l.size() - 1; size7 >= 0; size7--) {
                 Object obj7 = this.f9462l.get(size7);
-                C12880j.m40222a(obj7, "additionsList[i]");
+                Intrinsics.checkReturnedValueIsNotNull(obj7, "additionsList[i]");
                 ArrayList arrayList2 = (ArrayList) obj7;
                 for (int size8 = arrayList2.size() - 1; size8 >= 0; size8--) {
                     Object obj8 = arrayList2.get(size8);
-                    C12880j.m40222a(obj8, "additions[j]");
+                    Intrinsics.checkReturnedValueIsNotNull(obj8, "additions[j]");
                     C0794d0 d0Var2 = (C0794d0) obj8;
                     View view4 = d0Var2.itemView;
-                    C12880j.m40222a((Object) view4, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) view4, str);
                     C4187x.m14351a(view4, 1.0f);
                     mo5136h(d0Var2);
                     if (size8 < arrayList2.size()) {
@@ -945,11 +945,11 @@ public abstract class C3808a extends C0900t {
             }
             for (int size9 = this.f9464n.size() - 1; size9 >= 0; size9--) {
                 Object obj9 = this.f9464n.get(size9);
-                C12880j.m40222a(obj9, "changesList[i]");
+                Intrinsics.checkReturnedValueIsNotNull(obj9, "changesList[i]");
                 ArrayList arrayList3 = (ArrayList) obj9;
                 for (int size10 = arrayList3.size() - 1; size10 >= 0; size10--) {
                     Object obj10 = arrayList3.get(size10);
-                    C12880j.m40222a(obj10, "changes[j]");
+                    Intrinsics.checkReturnedValueIsNotNull(obj10, "changes[j]");
                     m12848b((C3809a) obj10);
                     if (arrayList3.isEmpty()) {
                         this.f9464n.remove(arrayList3);
@@ -1013,7 +1013,7 @@ public abstract class C3808a extends C0900t {
         if (view != null) {
             this.f9468r.add(c);
             C4135d0 a2 = C4187x.m14348a(view);
-            C12880j.m40222a((Object) a2, "ViewCompat.animate(newView)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a2, "ViewCompat.animate(newView)");
             a2.mo14711b(0.0f);
             a2.mo14713c(0.0f);
             a2.mo14705a(mo4668d());
@@ -1057,7 +1057,7 @@ public abstract class C3808a extends C0900t {
             mo5131a(d0Var, z);
             return true;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -1088,7 +1088,7 @@ public abstract class C3808a extends C0900t {
         view.setPivotY(((float) view.getMeasuredHeight()) / 2.0f);
         view.setPivotX(((float) view.getMeasuredWidth()) / 2.0f);
         ViewPropertyAnimator interpolator = view.animate().setInterpolator(null);
-        C12880j.m40222a((Object) interpolator, "view.animate().setInterpolator(null)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) interpolator, "view.animate().setInterpolator(null)");
         interpolator.setStartDelay(0);
     }
 }

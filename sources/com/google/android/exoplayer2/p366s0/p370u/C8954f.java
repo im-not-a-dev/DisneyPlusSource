@@ -3,8 +3,8 @@ package com.google.android.exoplayer2.p366s0.p370u;
 import com.google.android.exoplayer2.p366s0.C8918m;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.s0.u.f */
@@ -42,7 +42,7 @@ final class C8954f implements C8953a {
             return null;
         }
         int i3 = mVar2.f19159d;
-        long c = C9554k0.m29439c((long) i2, 1000000 * ((long) (i3 >= 32000 ? 1152 : 576)), (long) i3);
+        long c = Util.m29439c((long) i2, 1000000 * ((long) (i3 >= 32000 ? 1152 : 576)), (long) i3);
         int B = wVar.mo24676B();
         int B2 = wVar.mo24676B();
         int B3 = wVar.mo24676B();
@@ -80,7 +80,7 @@ final class C8954f implements C8953a {
             sb.append(j3);
             sb.append(", ");
             sb.append(j5);
-            C9563q.m29500d("VbriSeeker", sb.toString());
+            Log.m29500d("VbriSeeker", sb.toString());
         }
         C8954f fVar = new C8954f(jArr, jArr2, c, j5);
         return fVar;
@@ -88,7 +88,7 @@ final class C8954f implements C8953a {
 
     /* renamed from: b */
     public C8921a mo23277b(long j) {
-        int b = C9554k0.m29429b(this.f19378a, j, true, true);
+        int b = Util.m29429b(this.f19378a, j, true, true);
         C8923p pVar = new C8923p(this.f19378a[b], this.f19379b[b]);
         if (pVar.f19169a < j) {
             long[] jArr = this.f19378a;
@@ -117,6 +117,6 @@ final class C8954f implements C8953a {
 
     /* renamed from: a */
     public long mo23360a(long j) {
-        return this.f19378a[C9554k0.m29429b(this.f19379b, j, true, true)];
+        return this.f19378a[Util.m29429b(this.f19379b, j, true, true)];
     }
 }

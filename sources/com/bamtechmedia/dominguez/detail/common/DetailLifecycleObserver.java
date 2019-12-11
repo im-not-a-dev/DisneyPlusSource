@@ -11,7 +11,7 @@ import kotlin.jvm.internal.C12879i;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u0019\u0012\n\u0010\u0002\u001a\u0006\u0012\u0002\b\u00030\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u0010\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nH\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u0012\u0010\u0002\u001a\u0006\u0012\u0002\b\u00030\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u000b"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/detail/common/DetailLifecycleObserver;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "viewModel", "Lcom/bamtechmedia/dominguez/detail/common/DetailViewModel;", "config", "Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;", "(Lcom/bamtechmedia/dominguez/detail/common/DetailViewModel;Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;)V", "onStart", "", "owner", "Landroidx/lifecycle/LifecycleOwner;", "contentDetail_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: DetailLifecycleObserver.kt */
@@ -54,7 +54,7 @@ public final class DetailLifecycleObserver implements C0710d {
 
         /* renamed from: a */
         public final void mo17794a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -62,7 +62,7 @@ public final class DetailLifecycleObserver implements C0710d {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -139,15 +139,15 @@ public final class DetailLifecycleObserver implements C0710d {
             io.reactivex.r r7 = p520io.reactivex.p525e0.C11934b.m38498a()
             io.reactivex.Observable r0 = p520io.reactivex.Observable.m38298a(r2, r4, r6, r7)
             java.lang.String r1 = "Observable.interval(0L, …Schedulers.computation())"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             androidx.lifecycle.i$a r1 = androidx.lifecycle.C0715i.C0716a.ON_STOP
             com.uber.autodispose.android.lifecycle.b r9 = com.uber.autodispose.android.lifecycle.C10541b.m33255a(r9, r1)
             java.lang.String r1 = "AndroidLifecycleScopePro…om(\n    this, untilEvent)"
-            kotlin.jvm.internal.C12880j.m40222a(r9, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r9, r1)
             g.n.a.h r9 = p163g.p503n.p504a.C11793e.m37930a(r9)
             java.lang.Object r9 = r0.mo30161a(r9)
             java.lang.String r0 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r9, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r9, r0)
             g.n.a.a0 r9 = (p163g.p503n.p504a.C11786a0) r9
             com.bamtechmedia.dominguez.detail.common.DetailLifecycleObserver$a r0 = new com.bamtechmedia.dominguez.detail.common.DetailLifecycleObserver$a
             r0.<init>(r8)

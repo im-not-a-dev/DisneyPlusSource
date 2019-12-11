@@ -4,7 +4,7 @@ import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.p361p0.C8822d0;
 import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
 
@@ -50,7 +50,7 @@ final class C9065d {
             StringBuilder sb = new StringBuilder();
             sb.append("Unsupported RIFF format: ");
             sb.append(i);
-            C9563q.m29497b(str, sb.toString());
+            Log.m29497b(str, sb.toString());
             return null;
         }
         C9066a a = C9066a.m26917a(hVar, wVar);
@@ -76,7 +76,7 @@ final class C9065d {
                 sb2.append(q4);
                 sb2.append(" bit/sample, type ");
                 sb2.append(q);
-                C9563q.m29497b(str, sb2.toString());
+                Log.m29497b(str, sb2.toString());
                 return null;
             }
             hVar.mo23288a(((int) a.f20146b) - 16);
@@ -106,7 +106,7 @@ final class C9065d {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Ignoring unknown WAV chunk: ");
                     sb.append(a.f20145a);
-                    C9563q.m29500d(str, sb.toString());
+                    Log.m29500d(str, sb.toString());
                 }
                 long j = a.f20146b + 8;
                 if (a.f20145a == C8822d0.f18799a) {
@@ -132,7 +132,7 @@ final class C9065d {
                     sb3.append(j2);
                     sb3.append(", ");
                     sb3.append(a2);
-                    C9563q.m29500d(str, sb3.toString());
+                    Log.m29500d(str, sb3.toString());
                     j2 = a2;
                 }
                 cVar.mo23478a(position, j2);

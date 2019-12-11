@@ -43,7 +43,7 @@ public final class BuiltInsPackageFragmentImpl extends DeserializedPackageFragme
                 kotlin.p580c0.C12724b.m39863a(r13, r0)
                 kotlin.reflect.jvm.internal.impl.serialization.deserialization.builtins.BuiltInsPackageFragmentImpl r13 = new kotlin.reflect.jvm.internal.impl.serialization.deserialization.builtins.BuiltInsPackageFragmentImpl
                 java.lang.String r0 = "proto"
-                kotlin.jvm.internal.C12880j.m40222a(r5, r0)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r0)
                 r8 = 0
                 r1 = r13
                 r2 = r10
@@ -74,7 +74,7 @@ public final class BuiltInsPackageFragmentImpl extends DeserializedPackageFragme
                 throw r10     // Catch:{ all -> 0x0063 }
             L_0x005d:
                 java.lang.String r10 = "version"
-                kotlin.jvm.internal.C12880j.m40227c(r10)     // Catch:{ all -> 0x0063 }
+                kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r10)     // Catch:{ all -> 0x0063 }
                 throw r0
             L_0x0063:
                 r10 = move-exception

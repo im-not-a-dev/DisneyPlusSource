@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11907a;
 import p520io.reactivex.Flowable;
 import p520io.reactivex.subjects.C11976a;
@@ -45,7 +45,7 @@ public final class C7141a {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f15793a, (java.lang.Object) ((com.bamtechmedia.dominguez.sdk.vpn.C7141a.C7142a.C7143a) r2).f15793a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f15793a, (java.lang.Object) ((com.bamtechmedia.dominguez.sdk.vpn.C7141a.C7142a.C7143a) r2).f15793a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -57,7 +57,7 @@ public final class C7141a {
                     com.bamtechmedia.dominguez.sdk.vpn.a$a$a r2 = (com.bamtechmedia.dominguez.sdk.vpn.C7141a.C7142a.C7143a) r2
                     com.bamtech.sdk4.service.ServiceException r0 = r1.f15793a
                     com.bamtech.sdk4.service.ServiceException r2 = r2.f15793a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -109,14 +109,14 @@ public final class C7141a {
 
     public C7141a() {
         C11976a<C7142a> p = C11976a.m38563p();
-        C12880j.m40222a((Object) p, "BehaviorSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) p, "BehaviorSubject.create()");
         this.f15791a = p;
     }
 
     /* renamed from: a */
     public final Flowable<C7142a> mo19964a() {
         Flowable<C7142a> a = this.f15791a.mo30164b().mo30135a(C11907a.LATEST);
-        C12880j.m40222a((Object) a, "vpnDetectedSubject.disti…nged().toFlowable(LATEST)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "vpnDetectedSubject.disti…nged().toFlowable(LATEST)");
         return a;
     }
 

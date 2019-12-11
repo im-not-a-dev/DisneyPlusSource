@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.core.content.assets.C3623a;
 import com.bamtechmedia.dominguez.core.p088i.C3843m;
 import com.bamtechmedia.dominguez.core.p088i.p090o.C3846a;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\u0018\u00002\u00020\u0001B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0012\u0010\u0012\u001a\u00020\u00132\b\u0010\u0014\u001a\u0004\u0018\u00010\u0015H\u0016J\b\u0010\u0016\u001a\u00020\u0013H\u0014J\b\u0010\u0017\u001a\u0004\u0018\u00010\u0018J\b\u0010\u0019\u001a\u00020\u0013H\u0016J\u0018\u0010\u001a\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u0010\u001c\u001a\u00020\u0007H\u0014J(\u0010\u001d\u001a\u00020\u00132\u0006\u0010\u001e\u001a\u00020\u00072\u0006\u0010\u001f\u001a\u00020\u00072\u0006\u0010 \u001a\u00020\u00072\u0006\u0010!\u001a\u00020\u0007H\u0014J\u0012\u0010\"\u001a\u00020\u00132\b\b\u0001\u0010#\u001a\u00020\u0007H\u0016J\u0012\u0010$\u001a\u00020\u00132\b\u0010%\u001a\u0004\u0018\u00010&H\u0016J\u0010\u0010'\u001a\u00020(2\u0006\u0010)\u001a\u00020\u0018H\u0014R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R$\u0010\r\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\f@FX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011¨\u0006*"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/design/widgets/AspectRatioImageView;", "Landroidx/appcompat/widget/AppCompatImageView;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "foregroundDrawableCompat", "Lcom/bamtechmedia/dominguez/core/design/compat/ForegroundDrawableCompat;", "value", "Lcom/bamtechmedia/dominguez/core/content/assets/AspectRatio;", "ratio", "getRatio", "()Lcom/bamtechmedia/dominguez/core/content/assets/AspectRatio;", "setRatio", "(Lcom/bamtechmedia/dominguez/core/content/assets/AspectRatio;)V", "draw", "", "canvas", "Landroid/graphics/Canvas;", "drawableStateChanged", "getForegroundDrawable", "Landroid/graphics/drawable/Drawable;", "jumpDrawablesToCurrentState", "onMeasure", "widthMeasureSpec", "heightMeasureSpec", "onSizeChanged", "w", "h", "oldw", "oldh", "setImageResource", "resId", "setImageURI", "uri", "Landroid/net/Uri;", "verifyDrawable", "", "who", "lib_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -95,7 +95,7 @@ public final class AspectRatioImageView extends AppCompatImageView {
     }
 
     public final void setRatio(C3623a aVar) {
-        if (!C12880j.m40224a((Object) this.f13194V, (Object) aVar)) {
+        if (!Intrinsics.areEqual((Object) this.f13194V, (Object) aVar)) {
             this.f13194V = aVar;
             if (!isInLayout()) {
                 requestLayout();

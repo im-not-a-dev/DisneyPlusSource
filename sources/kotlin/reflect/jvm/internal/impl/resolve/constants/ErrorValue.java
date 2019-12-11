@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
 import kotlin.C13145v;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.ErrorUtils;
 import kotlin.reflect.jvm.internal.impl.types.SimpleType;
@@ -38,7 +38,7 @@ public abstract class ErrorValue extends ConstantValue<C13145v> {
 
         public SimpleType getType(ModuleDescriptor moduleDescriptor) {
             SimpleType createErrorType = ErrorUtils.createErrorType(this.message);
-            C12880j.m40222a((Object) createErrorType, "ErrorUtils.createErrorType(message)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createErrorType, "ErrorUtils.createErrorType(message)");
             return createErrorType;
         }
     }

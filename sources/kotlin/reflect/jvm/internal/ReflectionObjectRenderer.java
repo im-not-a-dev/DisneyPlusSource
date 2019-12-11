@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal;
 
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KParameter.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
@@ -41,7 +41,7 @@ public final class ReflectionObjectRenderer {
     private final void appendReceiverType(StringBuilder sb, ReceiverParameterDescriptor receiverParameterDescriptor) {
         if (receiverParameterDescriptor != null) {
             KotlinType type = receiverParameterDescriptor.getType();
-            C12880j.m40222a((Object) type, "receiver.type");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "receiver.type");
             sb.append(renderType(type));
             sb.append(".");
         }
@@ -80,23 +80,23 @@ public final class ReflectionObjectRenderer {
         INSTANCE.appendReceivers(sb, functionDescriptor);
         DescriptorRenderer descriptorRenderer = renderer;
         Name name = functionDescriptor.getName();
-        C12880j.m40222a((Object) name, "descriptor.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "descriptor.name");
         sb.append(descriptorRenderer.renderName(name, true));
         List valueParameters = functionDescriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters, "descriptor.valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "descriptor.valueParameters");
         StringBuilder sb2 = sb;
         C13199w.m40557a(valueParameters, sb2, ", ", "(", ")", 0, null, ReflectionObjectRenderer$renderFunction$1$1.INSTANCE, 48, null);
         sb.append(": ");
         ReflectionObjectRenderer reflectionObjectRenderer = INSTANCE;
         KotlinType returnType = functionDescriptor.getReturnType();
         if (returnType != null) {
-            C12880j.m40222a((Object) returnType, "descriptor.returnType!!");
+            Intrinsics.checkReturnedValueIsNotNull((Object) returnType, "descriptor.returnType!!");
             sb.append(reflectionObjectRenderer.renderType(returnType));
             String sb3 = sb.toString();
-            C12880j.m40222a((Object) sb3, "StringBuilder().apply(builderAction).toString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) sb3, "StringBuilder().apply(builderAction).toString()");
             return sb3;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -104,20 +104,20 @@ public final class ReflectionObjectRenderer {
         StringBuilder sb = new StringBuilder();
         INSTANCE.appendReceivers(sb, functionDescriptor);
         List valueParameters = functionDescriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters, "invoke.valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "invoke.valueParameters");
         StringBuilder sb2 = sb;
         C13199w.m40557a(valueParameters, sb2, ", ", "(", ")", 0, null, ReflectionObjectRenderer$renderLambda$1$1.INSTANCE, 48, null);
         sb.append(" -> ");
         ReflectionObjectRenderer reflectionObjectRenderer = INSTANCE;
         KotlinType returnType = functionDescriptor.getReturnType();
         if (returnType != null) {
-            C12880j.m40222a((Object) returnType, "invoke.returnType!!");
+            Intrinsics.checkReturnedValueIsNotNull((Object) returnType, "invoke.returnType!!");
             sb.append(reflectionObjectRenderer.renderType(returnType));
             String sb3 = sb.toString();
-            C12880j.m40222a((Object) sb3, "StringBuilder().apply(builderAction).toString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) sb3, "StringBuilder().apply(builderAction).toString()");
             return sb3;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -139,7 +139,7 @@ public final class ReflectionObjectRenderer {
         sb.append(" of ");
         sb.append(INSTANCE.renderCallable(kParameterImpl.getCallable().getDescriptor()));
         String sb3 = sb.toString();
-        C12880j.m40222a((Object) sb3, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb3, "StringBuilder().apply(builderAction).toString()");
         return sb3;
     }
 
@@ -149,15 +149,15 @@ public final class ReflectionObjectRenderer {
         INSTANCE.appendReceivers(sb, propertyDescriptor);
         DescriptorRenderer descriptorRenderer = renderer;
         Name name = propertyDescriptor.getName();
-        C12880j.m40222a((Object) name, "descriptor.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "descriptor.name");
         sb.append(descriptorRenderer.renderName(name, true));
         sb.append(": ");
         ReflectionObjectRenderer reflectionObjectRenderer = INSTANCE;
         KotlinType type = propertyDescriptor.getType();
-        C12880j.m40222a((Object) type, "descriptor.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "descriptor.type");
         sb.append(reflectionObjectRenderer.renderType(type));
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
         return sb2;
     }
 
@@ -177,7 +177,7 @@ public final class ReflectionObjectRenderer {
         }
         sb.append(typeParameterDescriptor.getName());
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
         return sb2;
     }
 }

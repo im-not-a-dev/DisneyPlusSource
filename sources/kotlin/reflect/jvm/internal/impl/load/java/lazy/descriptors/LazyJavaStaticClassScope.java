@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -45,15 +45,15 @@ public final class LazyJavaStaticClassScope extends LazyJavaStaticScope {
 
     private final PropertyDescriptor getRealOriginal(PropertyDescriptor propertyDescriptor) {
         Kind kind = propertyDescriptor.getKind();
-        C12880j.m40222a((Object) kind, "this.kind");
+        Intrinsics.checkReturnedValueIsNotNull((Object) kind, "this.kind");
         if (kind.isReal()) {
             return propertyDescriptor;
         }
         Collection<PropertyDescriptor> overriddenDescriptors = propertyDescriptor.getOverriddenDescriptors();
-        C12880j.m40222a((Object) overriddenDescriptors, "this.overriddenDescriptors");
+        Intrinsics.checkReturnedValueIsNotNull((Object) overriddenDescriptors, "this.overriddenDescriptors");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) overriddenDescriptors, 10));
         for (PropertyDescriptor propertyDescriptor2 : overriddenDescriptors) {
-            C12880j.m40222a((Object) propertyDescriptor2, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) propertyDescriptor2, "it");
             arrayList.add(getRealOriginal(propertyDescriptor2));
         }
         return (PropertyDescriptor) C13199w.m40599k(C13199w.m40579d(arrayList));
@@ -90,18 +90,18 @@ public final class LazyJavaStaticClassScope extends LazyJavaStaticScope {
     /* access modifiers changed from: protected */
     public void computeNonDeclaredFunctions(Collection<SimpleFunctionDescriptor> collection, Name name) {
         Collection resolveOverridesForStaticMembers = DescriptorResolverUtils.resolveOverridesForStaticMembers(name, getStaticFunctionsFromJavaSuperClasses(name, getOwnerDescriptor()), collection, getOwnerDescriptor(), getC().getComponents().getErrorReporter());
-        C12880j.m40222a((Object) resolveOverridesForStaticMembers, "resolveOverridesForStati…components.errorReporter)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resolveOverridesForStaticMembers, "resolveOverridesForStati…components.errorReporter)");
         collection.addAll(resolveOverridesForStaticMembers);
         if (!this.jClass.isEnum()) {
             return;
         }
-        if (C12880j.m40224a((Object) name, (Object) DescriptorUtils.ENUM_VALUE_OF)) {
+        if (Intrinsics.areEqual((Object) name, (Object) DescriptorUtils.ENUM_VALUE_OF)) {
             SimpleFunctionDescriptor createEnumValueOfMethod = DescriptorFactory.createEnumValueOfMethod(getOwnerDescriptor());
-            C12880j.m40222a((Object) createEnumValueOfMethod, "createEnumValueOfMethod(ownerDescriptor)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createEnumValueOfMethod, "createEnumValueOfMethod(ownerDescriptor)");
             collection.add(createEnumValueOfMethod);
-        } else if (C12880j.m40224a((Object) name, (Object) DescriptorUtils.ENUM_VALUES)) {
+        } else if (Intrinsics.areEqual((Object) name, (Object) DescriptorUtils.ENUM_VALUES)) {
             SimpleFunctionDescriptor createEnumValuesMethod = DescriptorFactory.createEnumValuesMethod(getOwnerDescriptor());
-            C12880j.m40222a((Object) createEnumValuesMethod, "createEnumValuesMethod(ownerDescriptor)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createEnumValuesMethod, "createEnumValuesMethod(ownerDescriptor)");
             collection.add(createEnumValuesMethod);
         }
     }
@@ -111,7 +111,7 @@ public final class LazyJavaStaticClassScope extends LazyJavaStaticScope {
         Set flatMapJavaStaticSupertypesScopes = flatMapJavaStaticSupertypesScopes(getOwnerDescriptor(), new LinkedHashSet(), new C12977xd2f8c9a5(name));
         if (!collection.isEmpty()) {
             Collection resolveOverridesForStaticMembers = DescriptorResolverUtils.resolveOverridesForStaticMembers(name, flatMapJavaStaticSupertypesScopes, collection, getOwnerDescriptor(), getC().getComponents().getErrorReporter());
-            C12880j.m40222a((Object) resolveOverridesForStaticMembers, "resolveOverridesForStati…components.errorReporter)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) resolveOverridesForStaticMembers, "resolveOverridesForStati…components.errorReporter)");
             collection.addAll(resolveOverridesForStaticMembers);
             return;
         }

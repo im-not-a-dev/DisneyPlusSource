@@ -41,7 +41,7 @@ import kotlin.Pair;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -280,7 +280,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
         /* renamed from: a */
         private final boolean m22740a(C7664b bVar) {
             C0538i childFragmentManager = bVar.getChildFragmentManager();
-            C12880j.m40222a((Object) childFragmentManager, "childFragmentManager");
+            Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "childFragmentManager");
             return childFragmentManager.mo3160f() != null;
         }
 
@@ -306,7 +306,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
                         View view = this.f16764a.getView();
                         View findFocus = view != null ? view.findFocus() : null;
                         View _$_findCachedViewById = this.f16764a._$_findCachedViewById(C10647a.globalNavAccessibilityFocusWorkaround);
-                        C12880j.m40222a((Object) _$_findCachedViewById, "globalNavAccessibilityFocusWorkaround");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "globalNavAccessibilityFocusWorkaround");
                         _$_findCachedViewById.setFocusable(a2);
                         DisneyTvNavigationBar disneyTvNavigationBar2 = (DisneyTvNavigationBar) this.f16764a._$_findCachedViewById(C10647a.menuNavigation);
                         if (!a2) {
@@ -315,7 +315,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
                             if (findFocus != null) {
                                 obj = findFocus.getTag(R.id.focusHelperHideNavOnViewFocus);
                             }
-                            if (C12880j.m40224a(obj, (Object) Boolean.valueOf(true))) {
+                            if (Intrinsics.areEqual(obj, (Object) Boolean.valueOf(true))) {
                                 bVar = C5669b.HIDDEN;
                             } else if (findFocus == null || !C7712v.m22751a(findFocus)) {
                                 bVar = C5669b.COLLAPSED;
@@ -375,14 +375,14 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
         C7684f fVar = this.f16749X;
         String str = "dpadHelper";
         if (fVar == null) {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         } else if (fVar.mo20598a(i)) {
             C7684f fVar2 = this.f16749X;
             if (fVar2 != null) {
                 return fVar2.mo20599a(getView(), i, (Function0<C13145v>) new C7704b<C13145v>(this));
             }
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         } else if (i == 4) {
             return ((DisneyTvNavigationBar) _$_findCachedViewById(C10647a.menuNavigation)).mo17493a(C5669b.EXPANDED);
@@ -400,7 +400,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
         if (b0Var != null) {
             return b0Var;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -410,7 +410,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
         if (fVar != null) {
             return fVar;
         }
-        C12880j.m40227c("avatarImages");
+        Intrinsics.throwUninitializedPropertyAccessException("avatarImages");
         throw null;
     }
 
@@ -420,7 +420,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
 
     public void onDestroyView() {
         FrameLayout frameLayout = (FrameLayout) _$_findCachedViewById(C10647a.globalNavContent);
-        C12880j.m40222a((Object) frameLayout, "globalNavContent");
+        Intrinsics.checkReturnedValueIsNotNull((Object) frameLayout, "globalNavContent");
         frameLayout.getViewTreeObserver().removeOnGlobalFocusChangeListener(this);
         super.onDestroyView();
         _$_clearFindViewByIdCache();
@@ -428,7 +428,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
 
     public void onGlobalFocusChanged(View view, View view2) {
         if (!mo20622r()) {
-            if (C12880j.m40224a(view2 != null ? view2.getTag(R.id.focusHelperHideNavOnViewFocus) : null, (Object) Boolean.valueOf(true))) {
+            if (Intrinsics.areEqual(view2 != null ? view2.getTag(R.id.focusHelperHideNavOnViewFocus) : null, (Object) Boolean.valueOf(true))) {
                 ((DisneyTvNavigationBar) _$_findCachedViewById(C10647a.menuNavigation)).mo17493a(C5669b.HIDDEN);
             } else if (view2 != null && !C7712v.m22751a(view2)) {
                 ((DisneyTvNavigationBar) _$_findCachedViewById(C10647a.menuNavigation)).mo17493a(C5669b.COLLAPSED);
@@ -448,10 +448,10 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
                 if (m1Var != null) {
                     C5755i.m18679a(this, m1Var, null, null, new C7706d(this), 6, null);
                     Context requireContext = requireContext();
-                    C12880j.m40222a((Object) requireContext, "requireContext()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
                     boolean a = C5837i.m18836a(requireContext);
                     View _$_findCachedViewById = _$_findCachedViewById(C10647a.globalNavAccessibilityFocusWorkaround);
-                    C12880j.m40222a((Object) _$_findCachedViewById, "globalNavAccessibilityFocusWorkaround");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "globalNavAccessibilityFocusWorkaround");
                     _$_findCachedViewById.setVisibility(a ? 0 : 8);
                     if (a) {
                         _$_findCachedViewById(C10647a.globalNavAccessibilityFocusWorkaround).setOnFocusChangeListener(new C7708e(this));
@@ -459,13 +459,13 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
                     }
                     return;
                 }
-                C12880j.m40227c("profileViewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("profileViewModel");
                 throw null;
             }
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
-        C12880j.m40227c("userProfileModeTracker");
+        Intrinsics.throwUninitializedPropertyAccessException("userProfileModeTracker");
         throw null;
     }
 
@@ -475,7 +475,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
         String str = "backgroundHelper";
         if (aVar != null) {
             View _$_findCachedViewById = _$_findCachedViewById(C10647a.globalNavBackground);
-            C12880j.m40222a((Object) _$_findCachedViewById, "globalNavBackground");
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "globalNavBackground");
             aVar.mo13766b(_$_findCachedViewById);
             DisneyTvNavigationBar disneyTvNavigationBar = (DisneyTvNavigationBar) _$_findCachedViewById(C10647a.menuNavigation);
             C7655b0 b0Var = this.f16747V;
@@ -491,23 +491,23 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
                             b0Var2.mo20581y().mo20632b();
                             ((DisneyTvNavigationBar) _$_findCachedViewById(C10647a.menuNavigation)).mo17493a(C5669b.COLLAPSED);
                         } else {
-                            C12880j.m40227c(str2);
+                            Intrinsics.throwUninitializedPropertyAccessException(str2);
                             throw null;
                         }
                     }
                     FrameLayout frameLayout = (FrameLayout) _$_findCachedViewById(C10647a.globalNavContent);
-                    C12880j.m40222a((Object) frameLayout, "globalNavContent");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) frameLayout, "globalNavContent");
                     frameLayout.getViewTreeObserver().addOnGlobalFocusChangeListener(this);
                     m22725s();
                     return;
                 }
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
-            C12880j.m40227c(str2);
+            Intrinsics.throwUninitializedPropertyAccessException(str2);
             throw null;
         }
-        C12880j.m40227c(str);
+        Intrinsics.throwUninitializedPropertyAccessException(str);
         throw null;
     }
 
@@ -517,7 +517,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("channelManager");
+        Intrinsics.throwUninitializedPropertyAccessException("channelManager");
         throw null;
     }
 
@@ -529,7 +529,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
     /* renamed from: r */
     public final boolean mo20622r() {
         C0538i childFragmentManager = getChildFragmentManager();
-        C12880j.m40222a((Object) childFragmentManager, "childFragmentManager");
+        Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "childFragmentManager");
         return !C7701s.m22724a(childFragmentManager);
     }
 
@@ -539,7 +539,7 @@ public final class C7702t extends C11890i implements C5864r, OnGlobalFocusChange
             layoutInflater = C5845m.m18866a(layoutInflater, 2132017924);
         }
         View inflate = layoutInflater.inflate(i, viewGroup, z);
-        C12880j.m40222a((Object) inflate, "kidsAwareInflater.inflat… container, attachToRoot)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "kidsAwareInflater.inflat… container, attachToRoot)");
         return inflate;
     }
 }

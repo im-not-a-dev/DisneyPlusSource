@@ -16,7 +16,7 @@ import java.util.ListIterator;
 import java.util.function.UnaryOperator;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12871f;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.p589f0.C12872a;
 import p163g.p500m.p501a.C11733i;
 
@@ -152,7 +152,7 @@ public final class DmcRelatedContent implements C6003u, List<C3626b>, Parcelable
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x002c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) mo17987a(), (java.lang.Object) r3.mo17987a()) != false) goto L_0x0031;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) mo17987a(), (java.lang.Object) r3.mo17987a()) != false) goto L_0x0031;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -164,15 +164,15 @@ public final class DmcRelatedContent implements C6003u, List<C3626b>, Parcelable
             com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent r3 = (com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent) r3
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.f> r0 = r2.f13822c
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.f> r1 = r3.f13822c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x002f
             com.bamtechmedia.dominguez.core.content.paging.DefaultPagingMetaData r0 = r2.m19180f0()
             com.bamtechmedia.dominguez.core.content.paging.DefaultPagingMetaData r1 = r3.m19180f0()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x002f
             java.lang.String r0 = r2.mo17987a()
             java.lang.String r3 = r3.mo17987a()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x002f
             goto L_0x0031
         L_0x002f:
@@ -187,7 +187,7 @@ public final class DmcRelatedContent implements C6003u, List<C3626b>, Parcelable
 
     public C3626b get(int i) {
         Object obj = this.f13822c.get(i);
-        C12880j.m40222a(obj, "get(...)");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "get(...)");
         return (C3626b) obj;
     }
 

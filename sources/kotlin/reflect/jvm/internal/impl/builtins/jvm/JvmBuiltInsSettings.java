@@ -12,7 +12,7 @@ import kotlin.C13142s;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12894x;
@@ -99,7 +99,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             LinkedHashSet linkedHashSet = new LinkedHashSet();
             for (JvmPrimitiveType wrapperFqName : c) {
                 String asString = wrapperFqName.getWrapperFqName().shortName().asString();
-                C12880j.m40222a((Object) asString, "it.wrapperFqName.shortName().asString()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) asString, "it.wrapperFqName.shortName().asString()");
                 String[] constructors = signatureBuildingComponents.constructors("Ljava/lang/String;");
                 C13196t.m40545a((Collection) linkedHashSet, (Iterable) signatureBuildingComponents.inJavaLang(asString, (String[]) Arrays.copyOf(constructors, constructors.length)));
             }
@@ -113,7 +113,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             LinkedHashSet linkedHashSet = new LinkedHashSet();
             for (JvmPrimitiveType jvmPrimitiveType : c) {
                 String asString = jvmPrimitiveType.getWrapperFqName().shortName().asString();
-                C12880j.m40222a((Object) asString, "it.wrapperFqName.shortName().asString()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) asString, "it.wrapperFqName.shortName().asString()");
                 StringBuilder sb = new StringBuilder();
                 sb.append(jvmPrimitiveType.getJavaKeywordName());
                 sb.append("Value()");
@@ -125,7 +125,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
 
         /* access modifiers changed from: private */
         public final boolean isArrayOrPrimitiveArray(FqNameUnsafe fqNameUnsafe) {
-            return C12880j.m40224a((Object) fqNameUnsafe, (Object) KotlinBuiltIns.FQ_NAMES.array) || KotlinBuiltIns.isPrimitiveArray(fqNameUnsafe);
+            return Intrinsics.areEqual((Object) fqNameUnsafe, (Object) KotlinBuiltIns.FQ_NAMES.array) || KotlinBuiltIns.isPrimitiveArray(fqNameUnsafe);
         }
 
         public final Set<String> getBLACK_LIST_METHOD_SIGNATURES() {
@@ -235,7 +235,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
         if (build != null) {
             return (SimpleFunctionDescriptor) build;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -243,7 +243,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
         ClassDescriptorImpl classDescriptorImpl = new ClassDescriptorImpl(new C12927xaea9d104(this, this.moduleDescriptor, new FqName("java.io")), Name.identifier("Serializable"), Modality.ABSTRACT, ClassKind.INTERFACE, C13183n.m40498a(new LazyWrappedType(storageManager, new C12928xf01ceaf8(this))), SourceElement.NO_SOURCE, false, storageManager);
         classDescriptorImpl.initialize(Empty.INSTANCE, C13188p0.m40531a(), null);
         SimpleType defaultType = classDescriptorImpl.getDefaultType();
-        C12880j.m40222a((Object) defaultType, "mockSerializableClass.defaultType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) defaultType, "mockSerializableClass.defaultType");
         return defaultType;
     }
 
@@ -266,7 +266,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
         SmartSet create = companion.create(arrayList);
         boolean isMutable = this.j2kClassMap.isMutable(classDescriptor);
         MemberScope unsubstitutedMemberScope = ((ClassDescriptor) this.javaAnalogueClassesWithCustomSupertypeCache.computeIfAbsent(DescriptorUtilsKt.getFqNameSafe(javaAnalogue), new C12929x1b86dd87(javaAnalogue, classDescriptor2))).getUnsubstitutedMemberScope();
-        C12880j.m40222a((Object) unsubstitutedMemberScope, "fakeJavaClassDescriptor.unsubstitutedMemberScope");
+        Intrinsics.checkReturnedValueIsNotNull((Object) unsubstitutedMemberScope, "fakeJavaClassDescriptor.unsubstitutedMemberScope");
         Iterable iterable = (Iterable) function1.invoke(unsubstitutedMemberScope);
         ArrayList arrayList2 = new ArrayList();
         for (Object next : iterable) {
@@ -274,7 +274,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             boolean z2 = false;
             if (simpleFunctionDescriptor.getKind() == Kind.DECLARATION && simpleFunctionDescriptor.getVisibility().isPublicAPI() && !KotlinBuiltIns.isDeprecated(simpleFunctionDescriptor)) {
                 Collection overriddenDescriptors = simpleFunctionDescriptor.getOverriddenDescriptors();
-                C12880j.m40222a((Object) overriddenDescriptors, "analogueMember.overriddenDescriptors");
+                Intrinsics.checkReturnedValueIsNotNull((Object) overriddenDescriptors, "analogueMember.overriddenDescriptors");
                 if (!(overriddenDescriptors instanceof Collection) || !overriddenDescriptors.isEmpty()) {
                     Iterator it = overriddenDescriptors.iterator();
                     while (true) {
@@ -282,9 +282,9 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
                             break;
                         }
                         FunctionDescriptor functionDescriptor = (FunctionDescriptor) it.next();
-                        C12880j.m40222a((Object) functionDescriptor, "it");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) functionDescriptor, "it");
                         DeclarationDescriptor containingDeclaration = functionDescriptor.getContainingDeclaration();
-                        C12880j.m40222a((Object) containingDeclaration, "it.containingDeclaration");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) containingDeclaration, "it.containingDeclaration");
                         if (create.contains(DescriptorUtilsKt.getFqNameSafe(containingDeclaration))) {
                             z = true;
                             break;
@@ -320,7 +320,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
         if (mapKotlinToJava != null) {
             FqName asSingleFqName = mapKotlinToJava.asSingleFqName();
             if (asSingleFqName != null) {
-                C12880j.m40222a((Object) asSingleFqName, "j2kClassMap.mapKotlinToJ…leFqName() ?: return null");
+                Intrinsics.checkReturnedValueIsNotNull((Object) asSingleFqName, "j2kClassMap.mapKotlinToJ…leFqName() ?: return null");
                 ClassDescriptor resolveClassByFqName = DescriptorUtilKt.resolveClassByFqName(getOwnerModuleDescriptor(), asSingleFqName, NoLookupLocation.FROM_BUILTINS);
                 if (!(resolveClassByFqName instanceof LazyJavaClassDescriptor)) {
                     resolveClassByFqName = null;
@@ -339,7 +339,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             C12894x xVar = new C12894x();
             xVar.f29534c = null;
             Object dfs = DFS.dfs(C13183n.m40498a(classDescriptor), new JvmBuiltInsSettings$getJdkMethodStatus$1(this), new JvmBuiltInsSettings$getJdkMethodStatus$2(computeJvmDescriptor$default, xVar));
-            C12880j.m40222a(dfs, "DFS.dfs<ClassDescriptor,…CONSIDERED\n            })");
+            Intrinsics.checkReturnedValueIsNotNull(dfs, "DFS.dfs<ClassDescriptor,…CONSIDERED\n            })");
             return (JDKMemberStatus) dfs;
         }
         throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
@@ -369,7 +369,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
                 return true;
             }
             Boolean ifAny = DFS.ifAny(C13183n.m40498a(simpleFunctionDescriptor), JvmBuiltInsSettings$isMutabilityViolation$1.INSTANCE, new JvmBuiltInsSettings$isMutabilityViolation$2(this));
-            C12880j.m40222a((Object) ifAny, "DFS.ifAny<CallableMember…lassDescriptor)\n        }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) ifAny, "DFS.ifAny<CallableMember…lassDescriptor)\n        }");
             return ifAny.booleanValue();
         }
         throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
@@ -378,11 +378,11 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
     private final boolean isTrivialCopyConstructorFor(ConstructorDescriptor constructorDescriptor, ClassDescriptor classDescriptor) {
         if (constructorDescriptor.getValueParameters().size() == 1) {
             List valueParameters = constructorDescriptor.getValueParameters();
-            C12880j.m40222a((Object) valueParameters, "valueParameters");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "valueParameters");
             Object k = C13199w.m40599k(valueParameters);
-            C12880j.m40222a(k, "valueParameters.single()");
+            Intrinsics.checkReturnedValueIsNotNull(k, "valueParameters.single()");
             ClassifierDescriptor declarationDescriptor = ((ValueParameterDescriptor) k).getType().getConstructor().getDeclarationDescriptor();
-            if (C12880j.m40224a((Object) declarationDescriptor != null ? DescriptorUtilsKt.getFqNameUnsafe(declarationDescriptor) : null, (Object) DescriptorUtilsKt.getFqNameUnsafe(classDescriptor))) {
+            if (Intrinsics.areEqual((Object) declarationDescriptor != null ? DescriptorUtilsKt.getFqNameUnsafe(declarationDescriptor) : null, (Object) DescriptorUtilsKt.getFqNameUnsafe(classDescriptor))) {
                 return true;
             }
         }
@@ -433,13 +433,13 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             java.lang.Object r8 = r6.next()
             r13 = r8
             kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor r13 = (kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor) r13
-            kotlin.jvm.internal.C12880j.m40222a(r13, r11)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r13, r11)
             kotlin.reflect.jvm.internal.impl.descriptors.Visibility r11 = r13.getVisibility()
             boolean r11 = r11.isPublicAPI()
             if (r11 == 0) goto L_0x00bc
             java.util.Collection r11 = r3.getConstructors()
             java.lang.String r15 = "defaultKotlinVersion.constructors"
-            kotlin.jvm.internal.C12880j.m40222a(r11, r15)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r11, r15)
             boolean r15 = r11 instanceof java.util.Collection
             if (r15 == 0) goto L_0x007d
             boolean r15 = r11.isEmpty()
@@ -455,7 +455,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             java.lang.Object r15 = r11.next()
             kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor r15 = (kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor) r15
             java.lang.String r14 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r15, r14)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r15, r14)
             boolean r14 = r5.invoke(r15, r13)
             if (r14 == 0) goto L_0x0081
             r14 = 0
@@ -499,7 +499,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             r7.setSubstitution(r8)
             java.util.Set<java.lang.String> r8 = WHITE_LIST_CONSTRUCTOR_SIGNATURES
             kotlin.reflect.jvm.internal.impl.load.kotlin.SignatureBuildingComponents r13 = kotlin.reflect.jvm.internal.impl.load.kotlin.SignatureBuildingComponents.INSTANCE
-            kotlin.jvm.internal.C12880j.m40222a(r6, r11)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r11)
             java.lang.String r6 = kotlin.reflect.jvm.internal.impl.load.kotlin.MethodSignatureMappingKt.computeJvmDescriptor$default(r6, r12, r12, r10, r9)
             java.lang.String r6 = r13.signature(r2, r6)
             boolean r6 = r8.contains(r6)
@@ -540,7 +540,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             r6 = this;
             kotlin.reflect.jvm.internal.impl.builtins.jvm.CloneableClassScope$Companion r0 = kotlin.reflect.jvm.internal.impl.builtins.jvm.CloneableClassScope.Companion
             kotlin.reflect.jvm.internal.impl.name.Name r0 = r0.getCLONE_NAME()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r7, r0)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r7, r0)
             r1 = 1
             if (r0 == 0) goto L_0x0088
             boolean r0 = r8 instanceof kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedClassDescriptor
@@ -551,7 +551,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Class r0 = r8.getClassProto()
             java.util.List r0 = r0.getFunctionList()
             java.lang.String r2 = "classDescriptor.classProto.functionList"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)
             boolean r2 = r0 instanceof java.util.Collection
             r3 = 0
             if (r2 == 0) goto L_0x0032
@@ -568,12 +568,12 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationContext r4 = r8.getC()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver r4 = r4.getNameResolver()
             java.lang.String r5 = "functionProto"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r5)
             int r2 = r2.getName()
             kotlin.reflect.jvm.internal.impl.name.Name r2 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.NameResolverUtilKt.getName(r4, r2)
             kotlin.reflect.jvm.internal.impl.builtins.jvm.CloneableClassScope$Companion r4 = kotlin.reflect.jvm.internal.impl.builtins.jvm.CloneableClassScope.Companion
             kotlin.reflect.jvm.internal.impl.name.Name r4 = r4.getCLONE_NAME()
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r2, r4)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r2, r4)
             if (r2 == 0) goto L_0x0036
             r3 = 1
         L_0x0064:
@@ -636,7 +636,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations r2 = r6.getNotConsideredDeprecation()
             kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor$CopyBuilder r2 = r3.setAdditionalAnnotations(r2)
             java.lang.String r5 = "setAdditionalAnnotations(notConsideredDeprecation)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r5)
             goto L_0x010f
         L_0x00ff:
             boolean r2 = kotlin.reflect.jvm.internal.impl.descriptors.ModalityKt.isFinalClass(r8)
@@ -645,7 +645,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
         L_0x0106:
             kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor$CopyBuilder r2 = r3.setHiddenForResolutionEverywhereBesideSupercalls()
             java.lang.String r5 = "setHiddenForResolutionEverywhereBesideSupercalls()"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r5)
         L_0x010f:
             kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor r2 = r3.build()
             if (r2 == 0) goto L_0x011e
@@ -656,7 +656,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             r0.add(r4)
             goto L_0x00a5
         L_0x011e:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r4
         L_0x0122:
             kotlin.s r7 = new kotlin.s
@@ -678,7 +678,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
         FqNameUnsafe fqNameUnsafe = DescriptorUtilsKt.getFqNameUnsafe(classDescriptor);
         if (Companion.isArrayOrPrimitiveArray(fqNameUnsafe)) {
             SimpleType cloneableType = getCloneableType();
-            C12880j.m40222a((Object) cloneableType, "cloneableType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) cloneableType, "cloneableType");
             return C13185o.m40520c(cloneableType, this.mockSerializableType);
         } else if (Companion.isSerializableInJava(fqNameUnsafe)) {
             return C13183n.m40498a(this.mockSerializableType);
@@ -699,13 +699,13 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
         String computeJvmDescriptor$default = MethodSignatureMappingKt.computeJvmDescriptor$default(simpleFunctionDescriptor, false, false, 3, null);
         LazyJavaClassMemberScope unsubstitutedMemberScope = javaAnalogue.getUnsubstitutedMemberScope();
         Name name = simpleFunctionDescriptor.getName();
-        C12880j.m40222a((Object) name, "functionDescriptor.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "functionDescriptor.name");
         Collection contributedFunctions = unsubstitutedMemberScope.getContributedFunctions(name, NoLookupLocation.FROM_BUILTINS);
         if (!(contributedFunctions instanceof Collection) || !contributedFunctions.isEmpty()) {
             Iterator it = contributedFunctions.iterator();
             while (true) {
                 if (it.hasNext()) {
-                    if (C12880j.m40224a((Object) MethodSignatureMappingKt.computeJvmDescriptor$default((SimpleFunctionDescriptor) it.next(), false, false, 3, null), (Object) computeJvmDescriptor$default)) {
+                    if (Intrinsics.areEqual((Object) MethodSignatureMappingKt.computeJvmDescriptor$default((SimpleFunctionDescriptor) it.next(), false, false, 3, null), (Object) computeJvmDescriptor$default)) {
                         z = true;
                         break;
                     }

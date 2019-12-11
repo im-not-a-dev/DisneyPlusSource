@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy;
 
 import java.util.EnumMap;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.AnnotationTypeQualifierResolver.QualifierApplicabilityType;
 import kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.JavaTypeQualifiers;
 import kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.NullabilityQualifierWithMigrationStatus;
@@ -19,7 +19,7 @@ public final class JavaTypeQualifiersByElementType {
         if (nullabilityQualifierWithMigrationStatus == null) {
             return null;
         }
-        C12880j.m40222a((Object) nullabilityQualifierWithMigrationStatus, "nullabilityQualifiers[ap…ilityType] ?: return null");
+        Intrinsics.checkReturnedValueIsNotNull((Object) nullabilityQualifierWithMigrationStatus, "nullabilityQualifiers[ap…ilityType] ?: return null");
         return new JavaTypeQualifiers(nullabilityQualifierWithMigrationStatus.getQualifier(), null, false, nullabilityQualifierWithMigrationStatus.isForWarningOnly());
     }
 

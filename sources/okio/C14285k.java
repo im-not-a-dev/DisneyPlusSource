@@ -4,7 +4,7 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: okio.k */
 /* compiled from: InflaterSource.kt */
@@ -113,7 +113,7 @@ public final class C14285k implements C14302x {
                 this.f31878W.setInput(sVar.f31900a, i2, this.f31879c);
                 return false;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
     }

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import p602m.p603a.p604a.p605a.C13432b;
+import p602m.p603a.p604a.p605a.CommandLine;
 import p602m.p603a.p604a.p605a.C13433c;
 import p602m.p603a.p604a.p605a.C13434d;
 import p602m.p603a.p604a.p605a.C13435e;
@@ -23,7 +23,7 @@ public class Dumper {
     }
 
     private int doDump(InputStream inputStream, PrintStream printStream, PrintStream printStream2, String[] strArr) throws C13444l, DumpException {
-        C13432b a = this.mParser.mo34648a(this.mGlobalOptions.options, strArr, true);
+        CommandLine a = this.mParser.mo34648a(this.mGlobalOptions.options, strArr, true);
         if (a.mo34647b(this.mGlobalOptions.optionHelp.mo34669f())) {
             dumpUsage(printStream);
             return 0;
@@ -50,7 +50,7 @@ public class Dumper {
         }
     }
 
-    private void dumpPluginOutput(InputStream inputStream, PrintStream printStream, PrintStream printStream2, C13432b bVar) throws DumpException {
+    private void dumpPluginOutput(InputStream inputStream, PrintStream printStream, PrintStream printStream2, CommandLine bVar) throws DumpException {
         ArrayList arrayList = new ArrayList(bVar.mo34644a());
         if (arrayList.size() >= 1) {
             String str = (String) arrayList.remove(0);

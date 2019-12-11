@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Single;
@@ -51,9 +51,9 @@ final class DefaultSubscriptionClient$getSubscriptions$2<T, R> implements Functi
         String subscriptions_get = SubscriptionServiceConfigurationKt.getSUBSCRIPTIONS_GET(Dust$Events.INSTANCE);
         Call a2 = C1691e.m7799a(a);
         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new C2052xb6b6b999(a2)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single g = b.mo30222c((Consumer<? super Disposable>) new C2053xb6b6b99a<Object>(serviceTransaction2, subscriptions_get)).mo30218b((Consumer<? super Throwable>) new C2054xb6b6b99b<Object>(a, serviceTransaction2, subscriptions_get)).mo30233g(new C2055xb6b6b99c(serviceTransaction2, subscriptions_get));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g.mo30233g(C20621.INSTANCE);
     }
 }

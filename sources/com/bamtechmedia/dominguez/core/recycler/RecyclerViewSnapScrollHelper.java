@@ -17,7 +17,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u0000 )2\u00020\u0001:\u0003)*+B\u0019\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u001d\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u0014H\u0001¢\u0006\u0002\b\u0015J\u000e\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0019J=\u0010\u001a\u001a\u00020\u00172\u0006\u0010\u001b\u001a\u00020\u00142\u0006\u0010\u001c\u001a\u00020\u00192%\b\u0002\u0010\u001d\u001a\u001f\u0012\u0013\u0012\u00110\u0014¢\u0006\f\b\u001f\u0012\b\b \u0012\u0004\b\b(!\u0012\u0004\u0012\u00020\u0005\u0018\u00010\u001eJ\"\u0010\"\u001a\u00020\u00172\u0006\u0010#\u001a\u00020$2\u0006\u0010\u0007\u001a\u00020\b2\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\nJ\u0010\u0010%\u001a\u00020\u00172\u0006\u0010&\u001a\u00020$H\u0016J\u0018\u0010'\u001a\u00020\u00172\u0006\u0010(\u001a\u00020\b2\u0006\u0010!\u001a\u00020\u0014H\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\bX\u000e¢\u0006\u0002\n\u0000R\u001c\u0010\t\u001a\u0004\u0018\u00010\nX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000e¨\u0006,"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "focusDirectionMapper", "Lcom/bamtechmedia/dominguez/core/focus/FocusDirectionMapper;", "isTelevision", "", "(Lcom/bamtechmedia/dominguez/core/focus/FocusDirectionMapper;Z)V", "recyclerView", "Landroidx/recyclerview/widget/RecyclerView;", "snapType", "Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper$SnapType;", "getSnapType", "()Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper$SnapType;", "setSnapType", "(Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper$SnapType;)V", "createSmoothScroller", "Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;", "context", "Landroid/content/Context;", "targetPosition", "", "createSmoothScroller$core_utils_release", "handleFocusChange", "", "newFocus", "Landroid/view/View;", "handleOnKeyDown", "keyCode", "currentFocus", "pinScrollWindowForPosition", "Lkotlin/Function1;", "Lkotlin/ParameterName;", "name", "position", "init", "lifecycleOwner", "Landroidx/lifecycle/LifecycleOwner;", "onDestroy", "owner", "scrollToPosition", "v", "Companion", "SmoothScroller", "SnapType", "core-utils_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -233,7 +233,7 @@ public final class RecyclerViewSnapScrollHelper implements C0710d {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13593a, (java.lang.Object) ((com.bamtechmedia.dominguez.core.recycler.RecyclerViewSnapScrollHelper.C5805c.C5808c) r2).f13593a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13593a, (java.lang.Object) ((com.bamtechmedia.dominguez.core.recycler.RecyclerViewSnapScrollHelper.C5805c.C5808c) r2).f13593a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -245,7 +245,7 @@ public final class RecyclerViewSnapScrollHelper implements C0710d {
                     com.bamtechmedia.dominguez.core.recycler.RecyclerViewSnapScrollHelper$c$c r2 = (com.bamtechmedia.dominguez.core.recycler.RecyclerViewSnapScrollHelper.C5805c.C5808c) r2
                     java.lang.Integer r0 = r1.f13593a
                     java.lang.Integer r2 = r2.f13593a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -322,7 +322,7 @@ public final class RecyclerViewSnapScrollHelper implements C0710d {
             if (((java.lang.Boolean) r1.invoke(java.lang.Integer.valueOf(r0))).booleanValue() == true) goto L_0x0057;
          */
         /* JADX WARNING: Code restructure failed: missing block: B:7:0x003c, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a(r4 != null ? r4.getTag(com.bamtechmedia.dominguez.core.utils.C5886z.focusHelperPinScrollWindow) : null, (java.lang.Object) java.lang.Boolean.valueOf(true)) != false) goto L_0x0057;
+            if (kotlin.jvm.internal.Intrinsics.areEqual(r4 != null ? r4.getTag(com.bamtechmedia.dominguez.core.utils.C5886z.focusHelperPinScrollWindow) : null, (java.lang.Object) java.lang.Boolean.valueOf(true)) != false) goto L_0x0057;
          */
         /* renamed from: a */
         /* Code decompiled incorrectly, please refer to instructions dump. */
@@ -353,7 +353,7 @@ public final class RecyclerViewSnapScrollHelper implements C0710d {
                 r4 = 0
             L_0x0034:
                 java.lang.Boolean r5 = java.lang.Boolean.valueOf(r3)
-                boolean r4 = kotlin.jvm.internal.C12880j.m40224a(r4, r5)
+                boolean r4 = kotlin.jvm.internal.Intrinsics.areEqual(r4, r5)
                 if (r4 == 0) goto L_0x003f
                 goto L_0x0057
             L_0x003f:
@@ -422,7 +422,7 @@ public final class RecyclerViewSnapScrollHelper implements C0710d {
             C0808o oVar = this.f13599U;
             RecyclerViewSnapScrollHelper recyclerViewSnapScrollHelper = this.f13602c;
             Context context = this.f13600V.getContext();
-            C12880j.m40222a((Object) context, "v.context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, "v.context");
             oVar.mo3877b(recyclerViewSnapScrollHelper.mo17707a(context, this.f13601W));
         }
     }
@@ -487,7 +487,7 @@ public final class RecyclerViewSnapScrollHelper implements C0710d {
             View c = recyclerView.mo4407c(view);
             if (c != null) {
                 int e = recyclerView.mo4430e(c);
-                if (C12880j.m40224a(view.getTag(C5886z.focusHelperPinScrollWindow), (Object) Boolean.valueOf(true))) {
+                if (Intrinsics.areEqual(view.getTag(C5886z.focusHelperPinScrollWindow), (Object) Boolean.valueOf(true))) {
                     e = 0;
                 }
                 m18770a(recyclerView, e);

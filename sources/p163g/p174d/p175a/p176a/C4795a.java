@@ -8,7 +8,7 @@ import com.bamnet.iap.BamnetIAPPurchase;
 import com.bamnet.iap.C1621a;
 import com.bamnet.iap.Market;
 import java.util.List;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.a.a.a */
 /* compiled from: BamPurchaseDelegate */
@@ -29,19 +29,19 @@ public class C4795a implements C4796b {
         try {
             this.f11934a.mo7218a(activity, str, aVar);
         } catch (Exception e) {
-            C14100a.m44521a(f11933b).mo35671b(e, "Exception during Paywall setup", new Object[0]);
+            Timber.m44521a(f11933b).mo35671b(e, "Exception during Paywall setup", new Object[0]);
         }
     }
 
     /* renamed from: a */
     public void mo16178a(List<String> list) {
-        C14100a.m44521a(f11933b).mo35666a(f11933b, TextUtils.join("::", list));
+        Timber.m44521a(f11933b).mo35666a(f11933b, TextUtils.join("::", list));
         this.f11934a.mo7221a(list);
     }
 
     /* renamed from: a */
     public void mo16173a(int i, int i2, Intent intent) {
-        C14100a.m44521a(f11933b).mo35666a(f11933b, "HANDLING IAP ACTIVITY RESULT");
+        Timber.m44521a(f11933b).mo35666a(f11933b, "HANDLING IAP ACTIVITY RESULT");
         this.f11934a.mo7222a(i, i2, intent);
     }
 
@@ -50,7 +50,7 @@ public class C4795a implements C4796b {
         try {
             this.f11934a.mo7220a(bamnetIAPProduct.mo7188f(), bamnetIAPProduct.mo7190h(), 1313, "");
         } catch (Exception e) {
-            C14100a.m44521a(f11933b).mo35671b(e, "Exception during Purchase", new Object[0]);
+            Timber.m44521a(f11933b).mo35671b(e, "Exception during Purchase", new Object[0]);
         }
     }
 
@@ -64,7 +64,7 @@ public class C4795a implements C4796b {
         try {
             this.f11934a.mo7216a();
         } catch (Exception e) {
-            C14100a.m44521a(f11933b).mo35671b(e, "Exception during Restore", new Object[0]);
+            Timber.m44521a(f11933b).mo35671b(e, "Exception during Restore", new Object[0]);
         }
     }
 

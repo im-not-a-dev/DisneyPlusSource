@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p394w0.C9586i;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -155,7 +155,7 @@ public final class Format implements Parcelable {
             i17 = 0;
         }
         this.f18367s0 = i17;
-        this.f18368t0 = C9554k0.m29451f(str6);
+        this.f18368t0 = Util.m29451f(str6);
         this.f18369u0 = i14;
     }
 
@@ -253,7 +253,7 @@ public final class Format implements Parcelable {
                 return false;
             }
         }
-        if (!(this.f18343V == format.f18343V && this.f18344W == format.f18344W && this.f18345X == format.f18345X && this.f18351c0 == format.f18351c0 && this.f18354f0 == format.f18354f0 && this.f18355g0 == format.f18355g0 && this.f18356h0 == format.f18356h0 && this.f18358j0 == format.f18358j0 && this.f18360l0 == format.f18360l0 && this.f18363o0 == format.f18363o0 && this.f18364p0 == format.f18364p0 && this.f18365q0 == format.f18365q0 && this.f18366r0 == format.f18366r0 && this.f18367s0 == format.f18367s0 && this.f18369u0 == format.f18369u0 && Float.compare(this.f18357i0, format.f18357i0) == 0 && Float.compare(this.f18359k0, format.f18359k0) == 0 && C9554k0.m29414a((Object) this.f18350c, (Object) format.f18350c) && C9554k0.m29414a((Object) this.f18342U, (Object) format.f18342U) && C9554k0.m29414a((Object) this.f18346Y, (Object) format.f18346Y) && C9554k0.m29414a((Object) this.f18348a0, (Object) format.f18348a0) && C9554k0.m29414a((Object) this.f18349b0, (Object) format.f18349b0) && C9554k0.m29414a((Object) this.f18368t0, (Object) format.f18368t0) && Arrays.equals(this.f18361m0, format.f18361m0) && C9554k0.m29414a((Object) this.f18347Z, (Object) format.f18347Z) && C9554k0.m29414a((Object) this.f18362n0, (Object) format.f18362n0) && C9554k0.m29414a((Object) this.f18353e0, (Object) format.f18353e0) && mo22607b(format))) {
+        if (!(this.f18343V == format.f18343V && this.f18344W == format.f18344W && this.f18345X == format.f18345X && this.f18351c0 == format.f18351c0 && this.f18354f0 == format.f18354f0 && this.f18355g0 == format.f18355g0 && this.f18356h0 == format.f18356h0 && this.f18358j0 == format.f18358j0 && this.f18360l0 == format.f18360l0 && this.f18363o0 == format.f18363o0 && this.f18364p0 == format.f18364p0 && this.f18365q0 == format.f18365q0 && this.f18366r0 == format.f18366r0 && this.f18367s0 == format.f18367s0 && this.f18369u0 == format.f18369u0 && Float.compare(this.f18357i0, format.f18357i0) == 0 && Float.compare(this.f18359k0, format.f18359k0) == 0 && Util.m29414a((Object) this.f18350c, (Object) format.f18350c) && Util.m29414a((Object) this.f18342U, (Object) format.f18342U) && Util.m29414a((Object) this.f18346Y, (Object) format.f18346Y) && Util.m29414a((Object) this.f18348a0, (Object) format.f18348a0) && Util.m29414a((Object) this.f18349b0, (Object) format.f18349b0) && Util.m29414a((Object) this.f18368t0, (Object) format.f18368t0) && Arrays.equals(this.f18361m0, format.f18361m0) && Util.m29414a((Object) this.f18347Z, (Object) format.f18347Z) && Util.m29414a((Object) this.f18362n0, (Object) format.f18362n0) && Util.m29414a((Object) this.f18353e0, (Object) format.f18353e0) && mo22607b(format))) {
             z = false;
         }
         return z;
@@ -341,7 +341,7 @@ public final class Format implements Parcelable {
         if (this.f18361m0 != null) {
             z = true;
         }
-        C9554k0.m29403a(parcel, z);
+        Util.m29403a(parcel, z);
         byte[] bArr = this.f18361m0;
         if (bArr != null) {
             parcel.writeByteArray(bArr);
@@ -540,8 +540,8 @@ public final class Format implements Parcelable {
             java.lang.String r3 = r0.f18346Y
             if (r3 != 0) goto L_0x0043
             java.lang.String r6 = r1.f18346Y
-            java.lang.String r6 = com.google.android.exoplayer2.p393v0.C9554k0.m29396a(r6, r2)
-            java.lang.String[] r9 = com.google.android.exoplayer2.p393v0.C9554k0.m29456j(r6)
+            java.lang.String r6 = com.google.android.exoplayer2.p393v0.Util.m29396a(r6, r2)
+            java.lang.String[] r9 = com.google.android.exoplayer2.p393v0.Util.m29456j(r6)
             int r9 = r9.length
             if (r9 != r7) goto L_0x0043
             r9 = r6
@@ -643,7 +643,7 @@ public final class Format implements Parcelable {
         this.f18357i0 = parcel.readFloat();
         this.f18358j0 = parcel.readInt();
         this.f18359k0 = parcel.readFloat();
-        this.f18361m0 = C9554k0.m29412a(parcel) ? parcel.createByteArray() : null;
+        this.f18361m0 = Util.m29412a(parcel) ? parcel.createByteArray() : null;
         this.f18360l0 = parcel.readInt();
         this.f18362n0 = (C9586i) parcel.readParcelable(C9586i.class.getClassLoader());
         this.f18363o0 = parcel.readInt();

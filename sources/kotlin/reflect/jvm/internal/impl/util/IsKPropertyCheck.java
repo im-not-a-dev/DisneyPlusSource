@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.util;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.ReflectionTypes;
 import kotlin.reflect.jvm.internal.impl.builtins.ReflectionTypes.Companion;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
@@ -21,13 +21,13 @@ final class IsKPropertyCheck implements Check {
     public boolean check(FunctionDescriptor functionDescriptor) {
         ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) functionDescriptor.getValueParameters().get(1);
         Companion companion = ReflectionTypes.Companion;
-        C12880j.m40222a((Object) valueParameterDescriptor, "secondParameter");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, "secondParameter");
         KotlinType createKPropertyStarType = companion.createKPropertyStarType(DescriptorUtilsKt.getModule(valueParameterDescriptor));
         if (createKPropertyStarType == null) {
             return false;
         }
         KotlinType type = valueParameterDescriptor.getType();
-        C12880j.m40222a((Object) type, "secondParameter.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "secondParameter.type");
         return TypeUtilsKt.isSubtypeOf(createKPropertyStarType, TypeUtilsKt.makeNotNullable(type));
     }
 

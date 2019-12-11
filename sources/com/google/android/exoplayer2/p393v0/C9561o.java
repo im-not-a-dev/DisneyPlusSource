@@ -20,7 +20,7 @@ public final class C9561o {
                 StringBuilder sb = new StringBuilder();
                 sb.append("glError ");
                 sb.append(GLU.gluErrorString(i));
-                C9563q.m29497b("GlUtil", sb.toString());
+                Log.m29497b("GlUtil", sb.toString());
                 i = glGetError;
             } else {
                 return;
@@ -97,6 +97,6 @@ public final class C9561o {
 
     /* renamed from: a */
     private static void m29485a(String str) {
-        C9563q.m29497b("GlUtil", str);
+        Log.m29497b("GlUtil", str);
     }
 }

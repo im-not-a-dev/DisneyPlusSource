@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.session.InternalSessionStateProvider;
 import com.bamtech.sdk4.internal.token.TokenExchangeRequest.TokenExchange;
 import com.bamtech.sdk4.token.AccessContext;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
@@ -61,7 +61,7 @@ final class DefaultTokenExchangeManager$exchangeDeviceToken$2<T, R> implements F
                 DefaultTokenExchangeManager$exchangeDeviceToken$2 defaultTokenExchangeManager$exchangeDeviceToken$22 = this.this$0;
                 DefaultTokenExchangeManager defaultTokenExchangeManager = defaultTokenExchangeManager$exchangeDeviceToken$22.this$0;
                 ServiceTransaction serviceTransaction = defaultTokenExchangeManager$exchangeDeviceToken$22.$transaction;
-                C12880j.m40222a((Object) th, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
                 defaultTokenExchangeManager.handleTokenError(serviceTransaction, th, this.this$0.this$0.internalSessionStateProvider.getCurrentInternalSessionState());
             }
         });

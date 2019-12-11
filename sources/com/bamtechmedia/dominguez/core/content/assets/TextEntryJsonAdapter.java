@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -19,10 +19,10 @@ public final class TextEntryJsonAdapter extends C11725h<TextEntry> {
     public TextEntryJsonAdapter(C11760v vVar) {
         String str = "field";
         C11739b a = C11739b.m37729a(str, "type", "language", "content", "sourceEntity");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"f…content\", \"sourceEntity\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"f…content\", \"sourceEntity\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"field\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"field\")");
         this.stringAdapter = a2;
     }
 

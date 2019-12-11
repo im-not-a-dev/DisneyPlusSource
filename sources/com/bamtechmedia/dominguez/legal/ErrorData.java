@@ -58,7 +58,7 @@ public final class ErrorData {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.entities, (java.lang.Object) r3.entities) != false) goto L_0x0029;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.entities, (java.lang.Object) r3.entities) != false) goto L_0x0029;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -70,15 +70,15 @@ public final class ErrorData {
             com.bamtechmedia.dominguez.legal.ErrorData r3 = (com.bamtechmedia.dominguez.legal.ErrorData) r3
             java.lang.String r0 = r2.type
             java.lang.String r1 = r3.type
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.util.List<com.bamtechmedia.dominguez.legal.api.LegalDisclosure> r0 = r2.disclosures
             java.util.List<com.bamtechmedia.dominguez.legal.api.LegalDisclosure> r1 = r3.disclosures
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.util.List<com.bamtechmedia.dominguez.legal.api.MarketingEntity> r0 = r2.entities
             java.util.List<com.bamtechmedia.dominguez.legal.api.MarketingEntity> r3 = r3.entities
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0027
             goto L_0x0029
         L_0x0027:

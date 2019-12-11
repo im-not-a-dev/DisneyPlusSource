@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.structure;
 
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.name.Name;
 
@@ -16,7 +16,7 @@ final class ReflectJavaClass$innerClassNames$2 extends C12881k implements Functi
     }
 
     public final Name invoke(Class<?> cls) {
-        C12880j.m40222a((Object) cls, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) cls, "it");
         String simpleName = cls.getSimpleName();
         if (!Name.isValidIdentifier(simpleName)) {
             simpleName = null;

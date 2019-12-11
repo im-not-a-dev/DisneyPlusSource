@@ -8,10 +8,10 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u00020\u0001B\u0007\b\u0007¢\u0006\u0002\u0010\u0002J\u0010\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u0011H\u0016J\u000e\u0010\u0012\u001a\u00020\u00042\u0006\u0010\u0013\u001a\u00020\u0004J\u0010\u0010\u0014\u001a\u00020\u000f2\u0006\u0010\u0015\u001a\u00020\u0016H\u0016J\u0010\u0010\u0017\u001a\u00020\u000f2\u0006\u0010\u0018\u001a\u00020\u0019H\u0002R\u001e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0004@BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007R\u001e\u0010\b\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0004@BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\u0007R\u001c\u0010\n\u001a\u0004\u0018\u00010\u0004X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\u0007\"\u0004\b\f\u0010\r¨\u0006\u001a"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/analytics/ActivePageTracker;", "Lcom/bamtechmedia/dominguez/analytics/ActivePageOverride;", "()V", "<set-?>", "", "activePage", "getActivePage", "()Ljava/lang/String;", "activeSection", "getActiveSection", "transactionId", "getTransactionId", "setTransactionId", "(Ljava/lang/String;)V", "registerBackStackListener", "", "fragment", "Landroidx/fragment/app/Fragment;", "replacePlaceholders", "value", "update", "analyticsSection", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsSection;", "updateActivePage", "activity", "Landroidx/fragment/app/FragmentActivity;", "analytics_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.analytics.b */
@@ -47,7 +47,7 @@ public final class C2336b implements C2334a {
             try {
                 C2336b bVar = this.f6540c;
                 C0532d requireActivity = this.f6539U.requireActivity();
-                C12880j.m40222a((Object) requireActivity, "fragment.requireActivity()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "fragment.requireActivity()");
                 bVar.m8823a(requireActivity);
             } catch (Exception unused) {
                 C5861q.m18905a("");
@@ -98,7 +98,7 @@ public final class C2336b implements C2334a {
 
         /* renamed from: a */
         public final void mo11450a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -106,7 +106,7 @@ public final class C2336b implements C2334a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -148,7 +148,7 @@ public final class C2336b implements C2334a {
         sb.append("', Active Section: '");
         sb.append(this.f6537b);
         sb.append('\'');
-        C14100a.m44529c(sb.toString(), new Object[0]);
+        Timber.m44529c(sb.toString(), new Object[0]);
     }
 
     /* renamed from: a */
@@ -177,7 +177,7 @@ public final class C2336b implements C2334a {
             r0.<init>()
             androidx.fragment.app.i r1 = r7.getSupportFragmentManager()
             java.lang.String r2 = "supportFragmentManager"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             androidx.fragment.app.Fragment r1 = r1.mo3160f()
         L_0x0012:
             java.lang.String r3 = "candidate.childFragmentManager"
@@ -196,7 +196,7 @@ public final class C2336b implements C2334a {
             r0.add(r4)
         L_0x002a:
             androidx.fragment.app.i r1 = r1.getChildFragmentManager()
-            kotlin.jvm.internal.C12880j.m40222a(r1, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r3)
             androidx.fragment.app.Fragment r1 = r1.mo3160f()
             goto L_0x0012
         L_0x0036:
@@ -209,7 +209,7 @@ public final class C2336b implements C2334a {
             java.util.ArrayList r0 = new java.util.ArrayList
             r0.<init>()
             androidx.fragment.app.i r7 = r7.getSupportFragmentManager()
-            kotlin.jvm.internal.C12880j.m40222a(r7, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r2)
             androidx.fragment.app.Fragment r7 = r7.mo3160f()
         L_0x0053:
             if (r7 == 0) goto L_0x0075
@@ -227,7 +227,7 @@ public final class C2336b implements C2334a {
             r0.add(r1)
         L_0x0069:
             androidx.fragment.app.i r7 = r7.getChildFragmentManager()
-            kotlin.jvm.internal.C12880j.m40222a(r7, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r3)
             androidx.fragment.app.Fragment r7 = r7.mo3160f()
             goto L_0x0053
         L_0x0075:
@@ -244,11 +244,11 @@ public final class C2336b implements C2334a {
             androidx.lifecycle.i$a r1 = androidx.lifecycle.C0715i.C0716a.ON_DESTROY
             com.uber.autodispose.android.lifecycle.b r0 = com.uber.autodispose.android.lifecycle.C10541b.m33255a(r0, r1)
             java.lang.String r1 = "AndroidLifecycleScopePro…om(\n    this, untilEvent)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.h r0 = p163g.p503n.p504a.C11793e.m37930a(r0)
             java.lang.Object r7 = r7.mo30215a(r0)
             java.lang.String r0 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r0)
             g.n.a.d0 r7 = (p163g.p503n.p504a.C11792d0) r7
             com.bamtechmedia.dominguez.analytics.b$b r0 = new com.bamtechmedia.dominguez.analytics.b$b
             r0.<init>(r6)

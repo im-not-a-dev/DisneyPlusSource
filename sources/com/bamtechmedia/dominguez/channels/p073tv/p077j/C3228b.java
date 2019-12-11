@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -183,7 +183,7 @@ public abstract class C3228b implements C3233d {
     /* renamed from: a */
     public final Maybe<List<C3224c>> mo12284a(C3676k kVar, Set<? extends ContentSetType> set) {
         Maybe<List<C3224c>> h = C3663f.m12492a(this.f8213a, kVar, null, 2, null).mo30233g(new C3229a(set)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C3230b<Object,Object>(this)).mo30233g(new C3231c(this)).mo30234h();
-        C12880j.m40222a((Object) h, "collectionsRemoteDataSou…}\n            }.toMaybe()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "collectionsRemoteDataSou…}\n            }.toMaybe()");
         return h;
     }
 
@@ -194,7 +194,7 @@ public abstract class C3228b implements C3233d {
             return C3767b.m12769a(this.f8214b, hVar.mo13604b(), hVar.mo13608e(), (String) null, true, 4, (Object) null);
         }
         Single<ContentSet> b = Single.m38399b(hVar);
-        C12880j.m40222a((Object) b, "Single.just(set)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(set)");
         return b;
     }
 }

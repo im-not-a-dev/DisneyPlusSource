@@ -104,7 +104,7 @@ public final class Participant implements Parcelable {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f9096W, (java.lang.Object) r3.f9096W) != false) goto L_0x0033;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f9096W, (java.lang.Object) r3.f9096W) != false) goto L_0x0033;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -116,19 +116,19 @@ public final class Participant implements Parcelable {
             com.bamtechmedia.dominguez.core.content.assets.Participant r3 = (com.bamtechmedia.dominguez.core.content.assets.Participant) r3
             java.lang.String r0 = r2.f9097c
             java.lang.String r1 = r3.f9097c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.lang.String r0 = r2.f9094U
             java.lang.String r1 = r3.f9094U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.lang.String r0 = r2.f9095V
             java.lang.String r1 = r3.f9095V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.lang.Integer r0 = r2.f9096W
             java.lang.Integer r3 = r3.f9096W
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0031
             goto L_0x0033
         L_0x0031:

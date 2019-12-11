@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.load.java;
 
 import java.util.List;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.name.Name;
 import kotlin.reflect.jvm.internal.impl.util.capitalizeDecapitalize.CapitalizeDecapitalizeKt;
 
@@ -10,7 +10,7 @@ import kotlin.reflect.jvm.internal.impl.util.capitalizeDecapitalize.CapitalizeDe
 public final class PropertiesConventionUtilKt {
     public static final List<Name> getPropertyNamesCandidatesByAccessorName(Name name) {
         String asString = name.asString();
-        C12880j.m40222a((Object) asString, "name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "name.asString()");
         if (JvmAbi.isGetterName(asString)) {
             return C13185o.m40517b((Object) propertyNameByGetMethodName(name));
         }
@@ -37,7 +37,7 @@ public final class PropertiesConventionUtilKt {
             return null;
         }
         String identifier = name.getIdentifier();
-        C12880j.m40222a((Object) identifier, "methodName.identifier");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "methodName.identifier");
         if (!C12832w.m40123b(identifier, str, false, 2, null) || identifier.length() == str.length()) {
             return null;
         }

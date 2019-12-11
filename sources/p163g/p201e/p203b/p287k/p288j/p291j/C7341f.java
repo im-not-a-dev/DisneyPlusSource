@@ -57,7 +57,7 @@ import kotlin.Pair;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p287k.C7310d;
 import p163g.p201e.p203b.p287k.C7312f;
@@ -72,7 +72,8 @@ import p163g.p509o.p510a.C11848c;
 import p163g.p509o.p510a.C11863k;
 import p512h.p513c.p514k.C11890i;
 
-@Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000b\u0018\u0000 \u00012\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u00052\u00020\u0006:\u0002\u0001B\u0005¢\u0006\u0002\u0010\u0007J\u0018\u0010{\u001a\u00020|2\u0006\u0010}\u001a\u00020~2\u0006\u0010\u001a\u00020 H\u0002J\n\u0010\u0001\u001a\u00030\u0001H\u0016J\u001c\u0010\u0001\u001a\u00020|2\b\u0010\u0001\u001a\u00030\u00012\u0007\u0010\u0001\u001a\u00020LH\u0002J\u0013\u0010\u0001\u001a\u00020\u00162\b\u0010\u0001\u001a\u00030\u0001H\u0016J\u0015\u0010\u0001\u001a\u00020|2\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0016J-\u0010\u0001\u001a\u0004\u0018\u00010 2\b\u0010\u0001\u001a\u00030\u00012\n\u0010\u0001\u001a\u0005\u0018\u00010\u00012\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0016J\t\u0010\u0001\u001a\u00020|H\u0016J\u001f\u0010\u0001\u001a\u00020|2\t\u0010\u0001\u001a\u0004\u0018\u00010 2\t\u0010\u0001\u001a\u0004\u0018\u00010 H\u0016J\u0011\u0010\u0001\u001a\u00020\u00162\u0006\u0010}\u001a\u00020~H\u0016J\t\u0010\u0001\u001a\u00020|H\u0016J\u001e\u0010\u0001\u001a\u00020|2\u0007\u0010\u0001\u001a\u00020 2\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0016J\r\u0010\u0001\u001a\u00020\u0016*\u00020 H\u0002R\u001e\u0010\b\u001a\u00020\t8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\n\u0010\u000b\"\u0004\b\f\u0010\rR$\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\u00100\u000f8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014R\u0011\u0010\u0015\u001a\u00020\u00168F¢\u0006\u0006\u001a\u0004\b\u0017\u0010\u0018R\u001e\u0010\u0019\u001a\u00020\u001a8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u001b\u0010\u001c\"\u0004\b\u001d\u0010\u001eR\u0018\u0010\u001f\u001a\u0004\u0018\u00010 8BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b!\u0010\"R\u001e\u0010#\u001a\u00020$8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b%\u0010&\"\u0004\b'\u0010(R\u001e\u0010)\u001a\u00020*8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b+\u0010,\"\u0004\b-\u0010.R\u001e\u0010/\u001a\u0002008\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b1\u00102\"\u0004\b3\u00104R\u0011\u00105\u001a\u0002068F¢\u0006\u0006\u001a\u0004\b7\u00108R\u001e\u00109\u001a\u00020:8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b;\u0010<\"\u0004\b=\u0010>R\u0014\u0010?\u001a\u00020 8VX\u0004¢\u0006\u0006\u001a\u0004\b@\u0010\"R\u001e\u0010A\u001a\u00020B8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bC\u0010D\"\u0004\bE\u0010FR\u0011\u0010G\u001a\u00020H8F¢\u0006\u0006\u001a\u0004\bI\u0010JR\u001e\u0010K\u001a\u00020L8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bM\u0010N\"\u0004\bO\u0010PR\u0014\u0010Q\u001a\u00020 8VX\u0004¢\u0006\u0006\u001a\u0004\bR\u0010\"R\u0013\u0010S\u001a\u0004\u0018\u00010T8F¢\u0006\u0006\u001a\u0004\bU\u0010VR\u0014\u0010W\u001a\u00020X8VX\u0004¢\u0006\u0006\u001a\u0004\bY\u0010ZR\u001e\u0010[\u001a\u00020\\8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b]\u0010^\"\u0004\b_\u0010`R\u001e\u0010a\u001a\u00020b8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bc\u0010d\"\u0004\be\u0010fR\u001e\u0010g\u001a\u00020h8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bi\u0010j\"\u0004\bk\u0010lR\u001e\u0010m\u001a\u00020n8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bo\u0010p\"\u0004\bq\u0010rR\u0014\u0010s\u001a\u00020 8VX\u0004¢\u0006\u0006\u001a\u0004\bt\u0010\"R\u001e\u0010u\u001a\u00020v8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bw\u0010x\"\u0004\by\u0010z¨\u0006\u0001"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/detail/movie/tv/MovieDetailTvFragment;", "Ldagger/android/support/DaggerFragment;", "Landroid/view/ViewTreeObserver$OnGlobalFocusChangeListener;", "Lcom/bamtechmedia/dominguez/core/utils/OnKeyDownHandler;", "Lcom/bamtechmedia/dominguez/detail/common/TvDetail;", "Lcom/bamtechmedia/dominguez/detail/common/offline/OfflineViewProvider;", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsStateProvider;", "()V", "accessibilityHelper", "Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailAccessibilityHelper;", "getAccessibilityHelper", "()Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailAccessibilityHelper;", "setAccessibilityHelper", "(Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailAccessibilityHelper;)V", "adapter", "Lcom/xwray/groupie/GroupAdapter;", "Lcom/xwray/groupie/ViewHolder;", "getAdapter", "()Lcom/xwray/groupie/GroupAdapter;", "setAdapter", "(Lcom/xwray/groupie/GroupAdapter;)V", "addToWatchlist", "", "getAddToWatchlist", "()Z", "contentDetailKeyDownHandler", "Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailTvKeyDownHandler;", "getContentDetailKeyDownHandler", "()Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailTvKeyDownHandler;", "setContentDetailKeyDownHandler", "(Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailTvKeyDownHandler;)V", "currentFocusButton", "Landroid/view/View;", "getCurrentFocusButton", "()Landroid/view/View;", "detailErrorStateHandler", "Lcom/bamtechmedia/dominguez/detail/common/error/DetailErrorStateHandler;", "getDetailErrorStateHandler", "()Lcom/bamtechmedia/dominguez/detail/common/error/DetailErrorStateHandler;", "setDetailErrorStateHandler", "(Lcom/bamtechmedia/dominguez/detail/common/error/DetailErrorStateHandler;)V", "detailImageLoader", "Lcom/bamtechmedia/dominguez/detail/common/tv/DetailImageLoader;", "getDetailImageLoader", "()Lcom/bamtechmedia/dominguez/detail/common/tv/DetailImageLoader;", "setDetailImageLoader", "(Lcom/bamtechmedia/dominguez/detail/common/tv/DetailImageLoader;)V", "detailsListContentManipulator", "Lcom/bamtechmedia/dominguez/detail/common/tv/DetailsListTvContentManipulator;", "getDetailsListContentManipulator", "()Lcom/bamtechmedia/dominguez/detail/common/tv/DetailsListTvContentManipulator;", "setDetailsListContentManipulator", "(Lcom/bamtechmedia/dominguez/detail/common/tv/DetailsListTvContentManipulator;)V", "familyId", "", "getFamilyId", "()Ljava/lang/String;", "focusHelper", "Lcom/bamtechmedia/dominguez/collections/CollectionViewFocusHelper;", "getFocusHelper", "()Lcom/bamtechmedia/dominguez/collections/CollectionViewFocusHelper;", "setFocusHelper", "(Lcom/bamtechmedia/dominguez/collections/CollectionViewFocusHelper;)V", "header", "getHeader", "headerSectionViewHolder", "Lcom/bamtechmedia/dominguez/detail/common/tv/TvDetailHeaderSectionViewHolder;", "getHeaderSectionViewHolder", "()Lcom/bamtechmedia/dominguez/detail/common/tv/TvDetailHeaderSectionViewHolder;", "setHeaderSectionViewHolder", "(Lcom/bamtechmedia/dominguez/detail/common/tv/TvDetailHeaderSectionViewHolder;)V", "initialTab", "Lcom/bamtechmedia/dominguez/core/content/InitialTab;", "getInitialTab", "()Lcom/bamtechmedia/dominguez/core/content/InitialTab;", "itemViewStateUserIntent", "Lcom/bamtechmedia/dominguez/detail/common/item/UserIntent;", "getItemViewStateUserIntent", "()Lcom/bamtechmedia/dominguez/detail/common/item/UserIntent;", "setItemViewStateUserIntent", "(Lcom/bamtechmedia/dominguez/detail/common/item/UserIntent;)V", "mainView", "getMainView", "movie", "Lcom/bamtechmedia/dominguez/core/content/Movie;", "getMovie", "()Lcom/bamtechmedia/dominguez/core/content/Movie;", "noConnectionView", "Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView;", "getNoConnectionView", "()Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView;", "offlineStateMonitor", "Lcom/bamtechmedia/dominguez/detail/common/offline/DetailOfflineStateMonitor;", "getOfflineStateMonitor", "()Lcom/bamtechmedia/dominguez/detail/common/offline/DetailOfflineStateMonitor;", "setOfflineStateMonitor", "(Lcom/bamtechmedia/dominguez/detail/common/offline/DetailOfflineStateMonitor;)V", "presenter", "Lcom/bamtechmedia/dominguez/detail/movie/tv/MovieDetailTvPresenter;", "getPresenter", "()Lcom/bamtechmedia/dominguez/detail/movie/tv/MovieDetailTvPresenter;", "setPresenter", "(Lcom/bamtechmedia/dominguez/detail/movie/tv/MovieDetailTvPresenter;)V", "recyclerViewSnapScrollHelper", "Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper;", "getRecyclerViewSnapScrollHelper", "()Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper;", "setRecyclerViewSnapScrollHelper", "(Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper;)V", "runtimeConverter", "Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;", "getRuntimeConverter", "()Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;", "setRuntimeConverter", "(Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;)V", "tabs", "getTabs", "viewModel", "Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;", "getViewModel", "()Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;", "setViewModel", "(Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;)V", "animate", "", "keyCode", "", "v", "getAnalyticsSection", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsSection;", "handleState", "state", "Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel$State;", "userIntent", "isHeaderItem", "group", "Lcom/xwray/groupie/Group;", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onCreateView", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "onDestroyView", "onGlobalFocusChanged", "oldFocus", "newFocus", "onKeyDown", "onStart", "onViewCreated", "view", "isFocusableButton", "Companion", "contentDetail_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
+@Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000b\u0018\u0000 \u00012\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u00052\u00020\u0006:\u0002\u0001B\u0005¢\u0006\u0002\u0010\u0007J\u0018\u0010{\u001a\u00020|2\u0006\u0010}\u001a\u00020~2\u0006\u0010\u001a\u00020 H\u0002J\n\u0010\u0001\u001a\u00030\u0001H\u0016J\u001c\u0010\u0001\u001a\u00020|2\b\u0010\u0001\u001a\u00030\u00012\u0007\u0010
+\u0001\u001a\u00020LH\u0002J\u0013\u0010\u0001\u001a\u00020\u00162\b\u0010\u0001\u001a\u00030\u0001H\u0016J\u0015\u0010\u0001\u001a\u00020|2\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0016J-\u0010\u0001\u001a\u0004\u0018\u00010 2\b\u0010\u0001\u001a\u00030\u00012\n\u0010\u0001\u001a\u0005\u0018\u00010\u00012\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0016J\t\u0010\u0001\u001a\u00020|H\u0016J\u001f\u0010\u0001\u001a\u00020|2\t\u0010\u0001\u001a\u0004\u0018\u00010 2\t\u0010\u0001\u001a\u0004\u0018\u00010 H\u0016J\u0011\u0010\u0001\u001a\u00020\u00162\u0006\u0010}\u001a\u00020~H\u0016J\t\u0010\u0001\u001a\u00020|H\u0016J\u001e\u0010\u0001\u001a\u00020|2\u0007\u0010\u0001\u001a\u00020 2\n\u0010\u0001\u001a\u0005\u0018\u00010\u0001H\u0016J\r\u0010\u0001\u001a\u00020\u0016*\u00020 H\u0002R\u001e\u0010\b\u001a\u00020\t8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\n\u0010\u000b\"\u0004\b\f\u0010\rR$\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\u00100\u000f8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014R\u0011\u0010\u0015\u001a\u00020\u00168F¢\u0006\u0006\u001a\u0004\b\u0017\u0010\u0018R\u001e\u0010\u0019\u001a\u00020\u001a8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u001b\u0010\u001c\"\u0004\b\u001d\u0010\u001eR\u0018\u0010\u001f\u001a\u0004\u0018\u00010 8BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b!\u0010\"R\u001e\u0010#\u001a\u00020$8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b%\u0010&\"\u0004\b'\u0010(R\u001e\u0010)\u001a\u00020*8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b+\u0010,\"\u0004\b-\u0010.R\u001e\u0010/\u001a\u0002008\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b1\u00102\"\u0004\b3\u00104R\u0011\u00105\u001a\u0002068F¢\u0006\u0006\u001a\u0004\b7\u00108R\u001e\u00109\u001a\u00020:8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b;\u0010<\"\u0004\b=\u0010>R\u0014\u0010?\u001a\u00020 8VX\u0004¢\u0006\u0006\u001a\u0004\b@\u0010\"R\u001e\u0010A\u001a\u00020B8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bC\u0010D\"\u0004\bE\u0010FR\u0011\u0010G\u001a\u00020H8F¢\u0006\u0006\u001a\u0004\bI\u0010JR\u001e\u0010K\u001a\u00020L8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bM\u0010N\"\u0004\bO\u0010PR\u0014\u0010Q\u001a\u00020 8VX\u0004¢\u0006\u0006\u001a\u0004\bR\u0010\"R\u0013\u0010S\u001a\u0004\u0018\u00010T8F¢\u0006\u0006\u001a\u0004\bU\u0010VR\u0014\u0010W\u001a\u00020X8VX\u0004¢\u0006\u0006\u001a\u0004\bY\u0010ZR\u001e\u0010[\u001a\u00020\\8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b]\u0010^\"\u0004\b_\u0010`R\u001e\u0010a\u001a\u00020b8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bc\u0010d\"\u0004\be\u0010fR\u001e\u0010g\u001a\u00020h8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bi\u0010j\"\u0004\bk\u0010lR\u001e\u0010m\u001a\u00020n8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bo\u0010p\"\u0004\bq\u0010rR\u0014\u0010s\u001a\u00020 8VX\u0004¢\u0006\u0006\u001a\u0004\bt\u0010\"R\u001e\u0010u\u001a\u00020v8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bw\u0010x\"\u0004\by\u0010z¨\u0006\u0001"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/detail/movie/tv/MovieDetailTvFragment;", "Ldagger/android/support/DaggerFragment;", "Landroid/view/ViewTreeObserver$OnGlobalFocusChangeListener;", "Lcom/bamtechmedia/dominguez/core/utils/OnKeyDownHandler;", "Lcom/bamtechmedia/dominguez/detail/common/TvDetail;", "Lcom/bamtechmedia/dominguez/detail/common/offline/OfflineViewProvider;", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsStateProvider;", "()V", "accessibilityHelper", "Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailAccessibilityHelper;", "getAccessibilityHelper", "()Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailAccessibilityHelper;", "setAccessibilityHelper", "(Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailAccessibilityHelper;)V", "adapter", "Lcom/xwray/groupie/GroupAdapter;", "Lcom/xwray/groupie/ViewHolder;", "getAdapter", "()Lcom/xwray/groupie/GroupAdapter;", "setAdapter", "(Lcom/xwray/groupie/GroupAdapter;)V", "addToWatchlist", "", "getAddToWatchlist", "()Z", "contentDetailKeyDownHandler", "Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailTvKeyDownHandler;", "getContentDetailKeyDownHandler", "()Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailTvKeyDownHandler;", "setContentDetailKeyDownHandler", "(Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailTvKeyDownHandler;)V", "currentFocusButton", "Landroid/view/View;", "getCurrentFocusButton", "()Landroid/view/View;", "detailErrorStateHandler", "Lcom/bamtechmedia/dominguez/detail/common/error/DetailErrorStateHandler;", "getDetailErrorStateHandler", "()Lcom/bamtechmedia/dominguez/detail/common/error/DetailErrorStateHandler;", "setDetailErrorStateHandler", "(Lcom/bamtechmedia/dominguez/detail/common/error/DetailErrorStateHandler;)V", "detailImageLoader", "Lcom/bamtechmedia/dominguez/detail/common/tv/DetailImageLoader;", "getDetailImageLoader", "()Lcom/bamtechmedia/dominguez/detail/common/tv/DetailImageLoader;", "setDetailImageLoader", "(Lcom/bamtechmedia/dominguez/detail/common/tv/DetailImageLoader;)V", "detailsListContentManipulator", "Lcom/bamtechmedia/dominguez/detail/common/tv/DetailsListTvContentManipulator;", "getDetailsListContentManipulator", "()Lcom/bamtechmedia/dominguez/detail/common/tv/DetailsListTvContentManipulator;", "setDetailsListContentManipulator", "(Lcom/bamtechmedia/dominguez/detail/common/tv/DetailsListTvContentManipulator;)V", "familyId", "", "getFamilyId", "()Ljava/lang/String;", "focusHelper", "Lcom/bamtechmedia/dominguez/collections/CollectionViewFocusHelper;", "getFocusHelper", "()Lcom/bamtechmedia/dominguez/collections/CollectionViewFocusHelper;", "setFocusHelper", "(Lcom/bamtechmedia/dominguez/collections/CollectionViewFocusHelper;)V", "header", "getHeader", "headerSectionViewHolder", "Lcom/bamtechmedia/dominguez/detail/common/tv/TvDetailHeaderSectionViewHolder;", "getHeaderSectionViewHolder", "()Lcom/bamtechmedia/dominguez/detail/common/tv/TvDetailHeaderSectionViewHolder;", "setHeaderSectionViewHolder", "(Lcom/bamtechmedia/dominguez/detail/common/tv/TvDetailHeaderSectionViewHolder;)V", "initialTab", "Lcom/bamtechmedia/dominguez/core/content/InitialTab;", "getInitialTab", "()Lcom/bamtechmedia/dominguez/core/content/InitialTab;", "itemViewStateUserIntent", "Lcom/bamtechmedia/dominguez/detail/common/item/UserIntent;", "getItemViewStateUserIntent", "()Lcom/bamtechmedia/dominguez/detail/common/item/UserIntent;", "setItemViewStateUserIntent", "(Lcom/bamtechmedia/dominguez/detail/common/item/UserIntent;)V", "mainView", "getMainView", "movie", "Lcom/bamtechmedia/dominguez/core/content/Movie;", "getMovie", "()Lcom/bamtechmedia/dominguez/core/content/Movie;", "noConnectionView", "Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView;", "getNoConnectionView", "()Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView;", "offlineStateMonitor", "Lcom/bamtechmedia/dominguez/detail/common/offline/DetailOfflineStateMonitor;", "getOfflineStateMonitor", "()Lcom/bamtechmedia/dominguez/detail/common/offline/DetailOfflineStateMonitor;", "setOfflineStateMonitor", "(Lcom/bamtechmedia/dominguez/detail/common/offline/DetailOfflineStateMonitor;)V", "presenter", "Lcom/bamtechmedia/dominguez/detail/movie/tv/MovieDetailTvPresenter;", "getPresenter", "()Lcom/bamtechmedia/dominguez/detail/movie/tv/MovieDetailTvPresenter;", "setPresenter", "(Lcom/bamtechmedia/dominguez/detail/movie/tv/MovieDetailTvPresenter;)V", "recyclerViewSnapScrollHelper", "Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper;", "getRecyclerViewSnapScrollHelper", "()Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper;", "setRecyclerViewSnapScrollHelper", "(Lcom/bamtechmedia/dominguez/core/recycler/RecyclerViewSnapScrollHelper;)V", "runtimeConverter", "Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;", "getRuntimeConverter", "()Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;", "setRuntimeConverter", "(Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;)V", "tabs", "getTabs", "viewModel", "Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;", "getViewModel", "()Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;", "setViewModel", "(Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;)V", "animate", "", "keyCode", "", "v", "getAnalyticsSection", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsSection;", "handleState", "state", "Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel$State;", "userIntent", "isHeaderItem", "group", "Lcom/xwray/groupie/Group;", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onCreateView", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "onDestroyView", "onGlobalFocusChanged", "oldFocus", "newFocus", "onKeyDown", "onStart", "onViewCreated", "view", "isFocusableButton", "Companion", "contentDetail_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.k.j.j.f */
 /* compiled from: MovieDetailTvFragment.kt */
 public final class C7341f extends C11890i implements OnGlobalFocusChangeListener, C5864r, C5904a0, C5995c, C2413n {
@@ -241,7 +242,7 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
                 a.requestFocus();
             }
             FocusSearchInterceptMotionLayout focusSearchInterceptMotionLayout = (FocusSearchInterceptMotionLayout) this.f16146c._$_findCachedViewById(C7310d.contentDetailMotionLayout);
-            C12880j.m40222a((Object) focusSearchInterceptMotionLayout, "contentDetailMotionLayout");
+            Intrinsics.checkReturnedValueIsNotNull((Object) focusSearchInterceptMotionLayout, "contentDetailMotionLayout");
             focusSearchInterceptMotionLayout.addOnLayoutChangeListener(new C7346a(this));
         }
     }
@@ -279,7 +280,7 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
             return view;
         }
         View _$_findCachedViewById = _$_findCachedViewById(C7310d.includeHeader);
-        C12880j.m40222a((Object) _$_findCachedViewById, "includeHeader");
+        Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "includeHeader");
         return (DefaultBookmarkButton) _$_findCachedViewById.findViewById(C7310d.startPlayerButton);
     }
 
@@ -309,14 +310,14 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
     /* renamed from: b */
     public NoConnectionView mo18038b() {
         NoConnectionView noConnectionView = (NoConnectionView) _$_findCachedViewById(C7310d.contentDetailNoConnectionView);
-        C12880j.m40222a((Object) noConnectionView, "contentDetailNoConnectionView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) noConnectionView, "contentDetailNoConnectionView");
         return noConnectionView;
     }
 
     /* renamed from: c */
     public View mo17810c() {
         View _$_findCachedViewById = _$_findCachedViewById(C7310d.includeTabs);
-        C12880j.m40222a((Object) _$_findCachedViewById, "includeTabs");
+        Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "includeTabs");
         return _$_findCachedViewById;
     }
 
@@ -330,14 +331,14 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
         if (bVar != null) {
             return bVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
     /* renamed from: l */
     public View mo17811l() {
         View _$_findCachedViewById = _$_findCachedViewById(C7310d.includeHeader);
-        C12880j.m40222a((Object) _$_findCachedViewById, "includeHeader");
+        Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "includeHeader");
         return _$_findCachedViewById;
     }
 
@@ -361,11 +362,11 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
             if (detailOfflineStateMonitor != null) {
                 lifecycle2.mo4134a(detailOfflineStateMonitor);
             } else {
-                C12880j.m40227c("offlineStateMonitor");
+                Intrinsics.throwUninitializedPropertyAccessException("offlineStateMonitor");
                 throw null;
             }
         } else {
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
     }
@@ -389,20 +390,20 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
             _$_clearFindViewByIdCache();
             return;
         }
-        C12880j.m40227c("headerSectionViewHolder");
+        Intrinsics.throwUninitializedPropertyAccessException("headerSectionViewHolder");
         throw null;
     }
 
     public void onGlobalFocusChanged(View view, View view2) {
         if (!isRemoving() && view2 != null) {
             Context requireContext = requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             if (C5837i.m18836a(requireContext)) {
                 RecyclerViewSnapScrollHelper recyclerViewSnapScrollHelper = this.f16137d0;
                 if (recyclerViewSnapScrollHelper != null) {
                     recyclerViewSnapScrollHelper.mo17709a(view2);
                 } else {
-                    C12880j.m40227c("recyclerViewSnapScrollHelper");
+                    Intrinsics.throwUninitializedPropertyAccessException("recyclerViewSnapScrollHelper");
                     throw null;
                 }
             }
@@ -416,7 +417,7 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
             C5755i.m18679a(this, bVar, null, null, new C7344c(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -429,22 +430,22 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
             if (cVar != null) {
                 RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C7310d.contentDetailRecyclerView);
                 String str2 = "contentDetailRecyclerView";
-                C12880j.m40222a((Object) recyclerView, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str2);
                 View _$_findCachedViewById = _$_findCachedViewById(C7310d.includeTabs);
                 String str3 = "includeTabs";
-                C12880j.m40222a((Object) _$_findCachedViewById, str3);
+                Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, str3);
                 FocusSearchInterceptTabLayout focusSearchInterceptTabLayout = (FocusSearchInterceptTabLayout) _$_findCachedViewById.findViewById(C7310d.detailTabLayout);
                 String str4 = "includeTabs.detailTabLayout";
-                C12880j.m40222a((Object) focusSearchInterceptTabLayout, str4);
+                Intrinsics.checkReturnedValueIsNotNull((Object) focusSearchInterceptTabLayout, str4);
                 fVar.mo17888a(cVar, recyclerView, (TabLayout) focusSearchInterceptTabLayout);
                 RecyclerView recyclerView2 = (RecyclerView) _$_findCachedViewById(C7310d.contentDetailRecyclerView);
-                C12880j.m40222a((Object) recyclerView2, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str2);
                 C11848c<C11863k> cVar2 = this.f16129V;
                 if (cVar2 != null) {
                     RecyclerViewExtKt.m18800a(this, recyclerView2, cVar2);
                     ((RecyclerView) _$_findCachedViewById(C7310d.contentDetailRecyclerView)).setHasFixedSize(true);
                     RecyclerView recyclerView3 = (RecyclerView) _$_findCachedViewById(C7310d.contentDetailRecyclerView);
-                    C12880j.m40222a((Object) recyclerView3, str2);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView3, str2);
                     recyclerView3.setClipToOutline(true);
                     C7352b bVar = this.f16128U;
                     if (bVar != null) {
@@ -455,7 +456,7 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
                             ((FocusSearchInterceptMotionLayout) _$_findCachedViewById(C7310d.contentDetailMotionLayout)).setTransitionDuration(0);
                             ((FocusSearchInterceptMotionLayout) _$_findCachedViewById(C7310d.contentDetailMotionLayout)).mo2142b(intValue, intValue);
                             FocusSearchInterceptMotionLayout focusSearchInterceptMotionLayout = (FocusSearchInterceptMotionLayout) _$_findCachedViewById(C7310d.contentDetailMotionLayout);
-                            C12880j.m40222a((Object) focusSearchInterceptMotionLayout, str5);
+                            Intrinsics.checkReturnedValueIsNotNull((Object) focusSearchInterceptMotionLayout, str5);
                             focusSearchInterceptMotionLayout.setProgress(1.0f);
                             if (intValue == C7310d.headerExpanded) {
                                 View t = m22006t();
@@ -468,46 +469,46 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
                         RecyclerViewSnapScrollHelper recyclerViewSnapScrollHelper = this.f16137d0;
                         if (recyclerViewSnapScrollHelper != null) {
                             C0722m viewLifecycleOwner = getViewLifecycleOwner();
-                            C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
                             RecyclerView recyclerView4 = (RecyclerView) _$_findCachedViewById(C7310d.contentDetailRecyclerView);
-                            C12880j.m40222a((Object) recyclerView4, str2);
+                            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView4, str2);
                             recyclerViewSnapScrollHelper.mo17710a(viewLifecycleOwner, recyclerView4, (C5805c) new C5808c(null, 1, null));
                             C5944a aVar = this.f16141h0;
                             String str6 = "accessibilityHelper";
                             if (aVar != null) {
                                 View _$_findCachedViewById2 = _$_findCachedViewById(C7310d.contentDetailAccessibilityFocusWorkaround);
-                                C12880j.m40222a((Object) _$_findCachedViewById2, "contentDetailAccessibilityFocusWorkaround");
+                                Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById2, "contentDetailAccessibilityFocusWorkaround");
                                 aVar.mo17872a(_$_findCachedViewById2, (Function0<C13145v>) new C7345d<C13145v>(this));
                                 C5944a aVar2 = this.f16141h0;
                                 if (aVar2 != null) {
                                     FocusSearchInterceptMotionLayout focusSearchInterceptMotionLayout2 = (FocusSearchInterceptMotionLayout) _$_findCachedViewById(C7310d.contentDetailMotionLayout);
-                                    C12880j.m40222a((Object) focusSearchInterceptMotionLayout2, str5);
+                                    Intrinsics.checkReturnedValueIsNotNull((Object) focusSearchInterceptMotionLayout2, str5);
                                     View _$_findCachedViewById3 = _$_findCachedViewById(C7310d.includeTabs);
-                                    C12880j.m40222a((Object) _$_findCachedViewById3, str3);
+                                    Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById3, str3);
                                     FocusSearchInterceptTabLayout focusSearchInterceptTabLayout2 = (FocusSearchInterceptTabLayout) _$_findCachedViewById3.findViewById(C7310d.detailTabLayout);
-                                    C12880j.m40222a((Object) focusSearchInterceptTabLayout2, str4);
+                                    Intrinsics.checkReturnedValueIsNotNull((Object) focusSearchInterceptTabLayout2, str4);
                                     aVar2.mo17873a(focusSearchInterceptMotionLayout2, focusSearchInterceptTabLayout2, new C7347e(this));
                                     return;
                                 }
-                                C12880j.m40227c(str6);
+                                Intrinsics.throwUninitializedPropertyAccessException(str6);
                                 throw null;
                             }
-                            C12880j.m40227c(str6);
+                            Intrinsics.throwUninitializedPropertyAccessException(str6);
                             throw null;
                         }
-                        C12880j.m40227c("recyclerViewSnapScrollHelper");
+                        Intrinsics.throwUninitializedPropertyAccessException("recyclerViewSnapScrollHelper");
                         throw null;
                     }
-                    C12880j.m40227c("viewModel");
+                    Intrinsics.throwUninitializedPropertyAccessException("viewModel");
                     throw null;
                 }
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
-        C12880j.m40227c("detailsListContentManipulator");
+        Intrinsics.throwUninitializedPropertyAccessException("detailsListContentManipulator");
         throw null;
     }
 
@@ -540,7 +541,7 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
         if (cVar != null) {
             return cVar;
         }
-        C12880j.m40227c("itemViewStateUserIntent");
+        Intrinsics.throwUninitializedPropertyAccessException("itemViewStateUserIntent");
         throw null;
     }
 
@@ -556,7 +557,7 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
     /* renamed from: a */
     public View mo18037a() {
         FocusSearchInterceptMotionLayout focusSearchInterceptMotionLayout = (FocusSearchInterceptMotionLayout) _$_findCachedViewById(C7310d.contentDetailMotionLayout);
-        C12880j.m40222a((Object) focusSearchInterceptMotionLayout, "contentDetailMotionLayout");
+        Intrinsics.checkReturnedValueIsNotNull((Object) focusSearchInterceptMotionLayout, "contentDetailMotionLayout");
         return focusSearchInterceptMotionLayout;
     }
 
@@ -576,7 +577,7 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
         m22001a(i, findFocus);
         C5950d dVar = this.f16135b0;
         if (dVar == null) {
-            C12880j.m40227c("contentDetailKeyDownHandler");
+            Intrinsics.throwUninitializedPropertyAccessException("contentDetailKeyDownHandler");
             throw null;
         } else if (dVar.mo17884a(i, findFocus, m22006t())) {
             return true;
@@ -589,13 +590,13 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
                     if (recyclerViewSnapScrollHelper != null) {
                         RecyclerViewSnapScrollHelper.m18771a(recyclerViewSnapScrollHelper, i, findFocus, null, 4, null);
                     } else {
-                        C12880j.m40227c("recyclerViewSnapScrollHelper");
+                        Intrinsics.throwUninitializedPropertyAccessException("recyclerViewSnapScrollHelper");
                         throw null;
                     }
                 }
                 return a;
             }
-            C12880j.m40227c("focusHelper");
+            Intrinsics.throwUninitializedPropertyAccessException("focusHelper");
             throw null;
         }
     }
@@ -616,10 +617,10 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
             C5910b bVar2 = this.f16136c0;
             if (bVar2 != null) {
                 C0532d requireActivity = requireActivity();
-                C12880j.m40222a((Object) requireActivity, "requireActivity()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
                 DetailOfflineStateMonitor detailOfflineStateMonitor2 = this.f16138e0;
                 if (detailOfflineStateMonitor2 == null) {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 } else if (!bVar2.mo17817a(bVar, requireActivity, !detailOfflineStateMonitor2.mo18033d())) {
                     C3692n i = bVar.mo20182i();
@@ -628,7 +629,7 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
                         if (eVar != null) {
                             eVar.mo17885a(this, i);
                         } else {
-                            C12880j.m40227c("detailImageLoader");
+                            Intrinsics.throwUninitializedPropertyAccessException("detailImageLoader");
                             throw null;
                         }
                     }
@@ -657,29 +658,29 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
                                             recyclerViewSnapScrollHelper.mo17711a(cVar2);
                                             return;
                                         }
-                                        C12880j.m40227c("recyclerViewSnapScrollHelper");
+                                        Intrinsics.throwUninitializedPropertyAccessException("recyclerViewSnapScrollHelper");
                                         throw null;
                                     }
-                                    C12880j.m40227c("detailsListContentManipulator");
+                                    Intrinsics.throwUninitializedPropertyAccessException("detailsListContentManipulator");
                                     throw null;
                                 }
-                                C12880j.m40227c(str2);
+                                Intrinsics.throwUninitializedPropertyAccessException(str2);
                                 throw null;
                             }
                             return;
                         }
-                        C12880j.m40227c(str2);
+                        Intrinsics.throwUninitializedPropertyAccessException(str2);
                         throw null;
                     }
-                    C12880j.m40227c("headerSectionViewHolder");
+                    Intrinsics.throwUninitializedPropertyAccessException("headerSectionViewHolder");
                     throw null;
                 }
             } else {
-                C12880j.m40227c("detailErrorStateHandler");
+                Intrinsics.throwUninitializedPropertyAccessException("detailErrorStateHandler");
                 throw null;
             }
         } else {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
     }
@@ -688,16 +689,16 @@ public final class C7341f extends C11890i implements OnGlobalFocusChangeListener
     /* renamed from: a */
     public final void m22001a(int i, View view) {
         ImageView imageView = (ImageView) _$_findCachedViewById(C7310d.contentDetailBlurredBackgroundImage);
-        C12880j.m40222a((Object) imageView, "contentDetailBlurredBackgroundImage");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "contentDetailBlurredBackgroundImage");
         boolean z = imageView.getDrawable() == null;
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         boolean z2 = C5837i.m18836a(requireContext) ? view.getId() == C7310d.videoDetailDescription : m22005a(view);
         C5950d dVar = this.f16135b0;
         if (dVar != null) {
             dVar.mo17883a(i, view, z, z2, new C7343b(this));
         } else {
-            C12880j.m40227c("contentDetailKeyDownHandler");
+            Intrinsics.throwUninitializedPropertyAccessException("contentDetailKeyDownHandler");
             throw null;
         }
     }

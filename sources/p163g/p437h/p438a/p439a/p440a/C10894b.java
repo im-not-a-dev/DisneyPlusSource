@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import com.disney.dominguez.navigation.core.C8436a;
 import com.disney.dominguez.navigation.core.C8436a.C8437a;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.h.a.a.a.b */
 /* compiled from: eventHandlers.kt */
@@ -25,7 +25,7 @@ public final class C10894b implements C8436a {
         } else if (aVar instanceof C10895c) {
             Function1 a = ((C10895c) aVar).mo28013a();
             C0532d requireActivity = this.f25825c.requireActivity();
-            C12880j.m40222a((Object) requireActivity, "fragment.requireActivity()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "fragment.requireActivity()");
             a.invoke(requireActivity);
         } else {
             StringBuilder sb = new StringBuilder();

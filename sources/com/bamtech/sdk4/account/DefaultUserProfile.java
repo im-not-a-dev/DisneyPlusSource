@@ -107,7 +107,7 @@ public final class DefaultUserProfile implements UserProfile {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x0036, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.metadata, (java.lang.Object) r3.metadata) != false) goto L_0x003b;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.metadata, (java.lang.Object) r3.metadata) != false) goto L_0x003b;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -119,19 +119,19 @@ public final class DefaultUserProfile implements UserProfile {
             com.bamtech.sdk4.account.DefaultUserProfile r3 = (com.bamtech.sdk4.account.DefaultUserProfile) r3
             java.lang.String r0 = r2.getProfileId()
             java.lang.String r1 = r3.getProfileId()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0039
             java.lang.String r0 = r2.getProfileName()
             java.lang.String r1 = r3.getProfileName()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0039
             java.util.Map<java.lang.String, java.lang.Object> r0 = r2.attributes
             java.util.Map<java.lang.String, java.lang.Object> r1 = r3.attributes
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0039
             java.util.Map<java.lang.String, java.lang.Object> r0 = r2.metadata
             java.util.Map<java.lang.String, java.lang.Object> r3 = r3.metadata
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0039
             goto L_0x003b
         L_0x0039:

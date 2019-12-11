@@ -7,7 +7,7 @@ import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationArgument;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaMethod;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaMethod.DefaultImpls;
@@ -37,7 +37,7 @@ public final class ReflectJavaMethod extends ReflectJavaMember implements JavaMe
 
     public List<ReflectJavaTypeParameter> getTypeParameters() {
         TypeVariable[] typeParameters = getMember().getTypeParameters();
-        C12880j.m40222a((Object) typeParameters, "member.typeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, "member.typeParameters");
         ArrayList arrayList = new ArrayList(typeParameters.length);
         for (TypeVariable reflectJavaTypeParameter : typeParameters) {
             arrayList.add(new ReflectJavaTypeParameter(reflectJavaTypeParameter));
@@ -47,9 +47,9 @@ public final class ReflectJavaMethod extends ReflectJavaMember implements JavaMe
 
     public List<JavaValueParameter> getValueParameters() {
         Type[] genericParameterTypes = getMember().getGenericParameterTypes();
-        C12880j.m40222a((Object) genericParameterTypes, "member.genericParameterTypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) genericParameterTypes, "member.genericParameterTypes");
         Annotation[][] parameterAnnotations = getMember().getParameterAnnotations();
-        C12880j.m40222a((Object) parameterAnnotations, "member.parameterAnnotations");
+        Intrinsics.checkReturnedValueIsNotNull((Object) parameterAnnotations, "member.parameterAnnotations");
         return getValueParameters(genericParameterTypes, parameterAnnotations, getMember().isVarArgs());
     }
 
@@ -60,7 +60,7 @@ public final class ReflectJavaMethod extends ReflectJavaMember implements JavaMe
     public ReflectJavaType getReturnType() {
         Factory factory = ReflectJavaType.Factory;
         Type genericReturnType = getMember().getGenericReturnType();
-        C12880j.m40222a((Object) genericReturnType, "member.genericReturnType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) genericReturnType, "member.genericReturnType");
         return factory.create(genericReturnType);
     }
 }

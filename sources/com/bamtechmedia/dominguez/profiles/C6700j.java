@@ -18,7 +18,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.C11969r;
@@ -182,7 +182,7 @@ public final class C6700j implements C6675i {
             /* renamed from: a */
             public final Single<List<C6669h>> apply(List<C6669h> list) {
                 List list2 = this.f15059c;
-                C12880j.m40222a((Object) list2, "localAvatars");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list2, "localAvatars");
                 return Single.m38399b(C13199w.m40583d((Collection) list, (Iterable) list2));
             }
         }
@@ -319,14 +319,14 @@ public final class C6700j implements C6675i {
     /* renamed from: b */
     public final Single<List<C6669h>> m20748b(List<String> list, List<C6669h> list2) {
         Single<List<C6669h>> i = m20747b(m20745a(list, list2)).mo30237i(C6710i.f15061c);
-        C12880j.m40222a((Object) i, "fetchAvatars(filterMissi…rorReturn { emptyList() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "fetchAvatars(filterMissi…rorReturn { emptyList() }");
         return i;
     }
 
     /* renamed from: c */
     private final Single<List<C6669h>> m20749c(List<String> list) {
         Single<List<C6669h>> k = this.f15049a.mo19303a().mo30231f(C6704d.f15054c).mo30150a((C11952h<? super T>) new C6705e<Object>(list)).mo30201k();
-        C12880j.m40222a((Object) k, "dao.avatarsOnce()\n      …) }\n            .toList()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) k, "dao.avatarsOnce()\n      …) }\n            .toList()");
         return k;
     }
 
@@ -334,9 +334,9 @@ public final class C6700j implements C6675i {
     /* renamed from: d */
     public final Completable m20750d(List<C6669h> list) {
         C11978b j = C11978b.m38573j();
-        C12880j.m40222a((Object) j, "CompletableSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "CompletableSubject.create()");
         Completable c = Completable.m38168c((Callable<?>) new C6711j<Object>(this, list));
-        C12880j.m40222a((Object) c, "Completable.fromCallable { dao.store(avatars) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.fromCallable { dao.store(avatars) }");
         C5826e0.m18822a(c, new C6712k(j), new C6713l(j));
         return j;
     }
@@ -344,28 +344,28 @@ public final class C6700j implements C6675i {
     /* renamed from: b */
     private final Single<List<C6669h>> m20747b(List<String> list) {
         Single<List<C6669h>> g = this.f15050b.mo13577a(AvatarByAvatarIdResponse.class, "core/AvatarByAvatarId", C13170i0.m40332a(C12907r.m40244a("avatarId", list)), null).mo30233g(C6702b.f15052c).mo30233g(new C6703c(this));
-        C12880j.m40222a((Object) g, "searchApi\n            .t…          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi\n            .t…          }\n            }");
         return g;
     }
 
     /* renamed from: a */
     public Single<C6653e> mo19404a(String str) {
         Single<C6653e> g = m20747b(C13183n.m40498a(str)).mo30233g(C6706f.f15056c);
-        C12880j.m40222a((Object) g, "fetchAvatars(listOf(avatarId)).map { it.first() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "fetchAvatars(listOf(avatarId)).map { it.first() }");
         return g;
     }
 
     /* renamed from: a */
     public Single<? extends List<C6653e>> mo19405a(List<String> list) {
         Single<? extends List<C6653e>> b = m20749c(list).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6707g<Object,Object>(this, list)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6709h<Object,Object>(this)).mo30220b(this.f15051c);
-        C12880j.m40222a((Object) b, "filterOutUnassignedAvata….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "filterOutUnassignedAvata….subscribeOn(ioScheduler)");
         return b;
     }
 
     /* renamed from: a */
     public Single<C3593a> mo19403a(C3593a aVar) {
         Single<C3593a> a = this.f15049a.mo19302a(m20741a(aVar, aVar.mo12845a(C3688j.CHARACTER, C3623a.f9125b0.mo13254f()))).mo30045a(aVar);
-        C12880j.m40222a((Object) a, "dao.add(createAvatarImpl…).toSingleDefault(avatar)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "dao.add(createAvatarImpl…).toSingleDefault(avatar)");
         return a;
     }
 

@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p362q0;
 import android.annotation.TargetApi;
 import android.media.MediaCodec.CryptoInfo;
 import android.media.MediaCodec.CryptoInfo.Pattern;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.q0.b */
 /* compiled from: CryptoInfo */
@@ -49,7 +49,7 @@ public final class C8874b {
     }
 
     public C8874b() {
-        this.f19010e = C9554k0.f22281a >= 24 ? new C8876b(this.f19009d) : null;
+        this.f19010e = Util.SDK_INT >= 24 ? new C8876b(this.f19009d) : null;
     }
 
     /* renamed from: a */
@@ -64,7 +64,7 @@ public final class C8874b {
         cryptoInfo.key = bArr;
         cryptoInfo.iv = bArr2;
         cryptoInfo.mode = i2;
-        if (C9554k0.f22281a >= 24) {
+        if (Util.SDK_INT >= 24) {
             this.f19010e.m25930a(i3, i4);
         }
     }

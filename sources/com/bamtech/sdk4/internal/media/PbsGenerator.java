@@ -29,7 +29,7 @@ public final class PbsGenerator {
             if (r10 == 0) goto L_0x0016
             return r10
         L_0x0016:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r1
         L_0x001a:
             java.lang.String r0 = r11.getDefaultPlaybackScenario()
@@ -181,7 +181,7 @@ public final class PbsGenerator {
         L_0x0147:
             com.bamtech.sdk4.media.AdInsertionStrategy r12 = r10.getAdInsertionStrategy()
             com.bamtech.sdk4.media.AdInsertionStrategy r0 = com.bamtech.sdk4.media.AdInsertionStrategy.NONE
-            boolean r12 = kotlin.jvm.internal.C12880j.m40224a(r12, r0)
+            boolean r12 = kotlin.jvm.internal.Intrinsics.areEqual(r12, r0)
             if (r12 == 0) goto L_0x0154
             goto L_0x016c
         L_0x0154:

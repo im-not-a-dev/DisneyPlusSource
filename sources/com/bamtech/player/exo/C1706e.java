@@ -27,7 +27,7 @@ import p163g.p174d.p178b.p184f0.C4958c;
 import p163g.p174d.p178b.p193j0.C5290d;
 import p163g.p174d.p178b.p193j0.C5291e;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtech.player.exo.e */
 /* compiled from: ExoVideoPlayer */
@@ -228,7 +228,7 @@ public class C1706e implements C5326w {
         C8670c cVar = new C8670c();
         Timeline currentTimeline = this.f5951a.getCurrentTimeline();
         if (currentTimeline.mo22667b() > 0) {
-            return C8883r.m25968b(currentTimeline.mo22663a(this.f5951a.getCurrentWindowIndex(), cVar).f18403e);
+            return C8883r.usToMs(currentTimeline.mo22663a(this.f5951a.getCurrentWindowIndex(), cVar).f18403e);
         }
         return 0;
     }
@@ -378,7 +378,7 @@ public class C1706e implements C5326w {
     /* renamed from: b */
     public void mo7614b(boolean z) {
         if (this.f5955e == null) {
-            C14100a.m44526b("Attempting to enable Closed Captions on a null surface view!", new Object[0]);
+            Timber.m44526b("Attempting to enable Closed Captions on a null surface view!", new Object[0]);
             return;
         }
         if (!z) {

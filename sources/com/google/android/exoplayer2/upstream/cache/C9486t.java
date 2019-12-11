@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream.cache;
 
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.io.File;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -97,7 +97,7 @@ final class C9486t extends C9470j {
         String name = file.getName();
         Matcher matcher = f22085a0.matcher(name);
         if (matcher.matches()) {
-            str = C9554k0.m29459m(matcher.group(1));
+            str = Util.m29459m(matcher.group(1));
             if (str == null) {
                 return null;
             }

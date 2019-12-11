@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.java.lazy.types;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -26,10 +26,10 @@ public final class JavaTypeResolverKt {
             return (KotlinType) function0.invoke();
         }
         List upperBounds = typeParameterDescriptor.getUpperBounds();
-        C12880j.m40222a((Object) upperBounds, "upperBounds");
+        Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds, "upperBounds");
         KotlinType kotlinType = (KotlinType) C13199w.m40589f(upperBounds);
         if (kotlinType.getConstructor().getDeclarationDescriptor() instanceof ClassDescriptor) {
-            C12880j.m40222a((Object) kotlinType, "firstUpperBound");
+            Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType, "firstUpperBound");
             return TypeUtilsKt.replaceArgumentsWithStarProjections(kotlinType);
         }
         if (typeParameterDescriptor2 != null) {
@@ -40,14 +40,14 @@ public final class JavaTypeResolverKt {
         if (declarationDescriptor != null) {
             while (true) {
                 TypeParameterDescriptor typeParameterDescriptor3 = (TypeParameterDescriptor) declarationDescriptor;
-                if (!(!C12880j.m40224a((Object) typeParameterDescriptor3, (Object) typeParameterDescriptor))) {
+                if (!(!Intrinsics.areEqual((Object) typeParameterDescriptor3, (Object) typeParameterDescriptor))) {
                     return (KotlinType) function0.invoke();
                 }
                 List upperBounds2 = typeParameterDescriptor3.getUpperBounds();
-                C12880j.m40222a((Object) upperBounds2, "current.upperBounds");
+                Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds2, "current.upperBounds");
                 KotlinType kotlinType2 = (KotlinType) C13199w.m40589f(upperBounds2);
                 if (kotlinType2.getConstructor().getDeclarationDescriptor() instanceof ClassDescriptor) {
-                    C12880j.m40222a((Object) kotlinType2, "nextUpperBound");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType2, "nextUpperBound");
                     return TypeUtilsKt.replaceArgumentsWithStarProjections(kotlinType2);
                 }
                 declarationDescriptor = kotlinType2.getConstructor().getDeclarationDescriptor();

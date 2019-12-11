@@ -11,7 +11,7 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
 import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -119,7 +119,7 @@ public final class C8744f extends C8872q implements Callback {
         if (looper == null) {
             handler = null;
         } else {
-            handler = C9554k0.m29393a(looper, (Callback) this);
+            handler = Util.m29393a(looper, (Callback) this);
         }
         this.f18560e0 = handler;
         C9537e.m29296a(cVar);

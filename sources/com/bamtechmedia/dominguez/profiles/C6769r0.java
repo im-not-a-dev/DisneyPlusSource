@@ -25,7 +25,7 @@ import java.util.HashMap;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -37,7 +37,7 @@ import p163g.p201e.p203b.p330z.C7946e;
 import p163g.p201e.p203b.p330z.C7948g;
 import p163g.p201e.p203b.p330z.C7950i;
 import p512h.p513c.p514k.C11890i;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000l\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\u0018\u0000 :2\u00020\u00012\u00020\u00022\u00020\u0003:\u0002:;B\u0005¢\u0006\u0002\u0010\u0004J*\u0010)\u001a\u00020*2\u0006\u0010+\u001a\u00020,2\u0006\u0010-\u001a\u00020.2\b\u0010/\u001a\u0004\u0018\u0001002\u0006\u00101\u001a\u00020\u0012H\u0016J\b\u00102\u001a\u00020\u0012H\u0016J&\u00103\u001a\u0004\u0018\u00010*2\u0006\u0010+\u001a\u00020,2\b\u0010/\u001a\u0004\u0018\u0001002\b\u00104\u001a\u0004\u0018\u000105H\u0016J\b\u00106\u001a\u000207H\u0016J\u001a\u00108\u001a\u0002072\u0006\u00109\u001a\u00020*2\b\u00104\u001a\u0004\u0018\u000105H\u0016R\u001e\u0010\u0005\u001a\u00020\u00068\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\nR\u001b\u0010\u000b\u001a\u00020\f8BX\u0002¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\r\u0010\u000eR\u001b\u0010\u0011\u001a\u00020\u00128FX\u0002¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0013\u0010\u0014R\u001e\u0010\u0017\u001a\u00020\u00188\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\u001cR\u001e\u0010\u001d\u001a\u00020\u001e8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u001f\u0010 \"\u0004\b!\u0010\"R\u001e\u0010#\u001a\u00020$8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b%\u0010&\"\u0004\b'\u0010(¨\u0006<"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/profiles/ProfilesHostFragment;", "Ldagger/android/support/DaggerFragment;", "Lcom/bamtechmedia/dominguez/core/utils/BackPressHandler;", "Lcom/bamtechmedia/dominguez/kidsmode/KidsModeInflater;", "()V", "backgroundHelper", "Lcom/bamtechmedia/dominguez/core/design/helper/BackgroundHelper;", "getBackgroundHelper", "()Lcom/bamtechmedia/dominguez/core/design/helper/BackgroundHelper;", "setBackgroundHelper", "(Lcom/bamtechmedia/dominguez/core/design/helper/BackgroundHelper;)V", "flow", "Lcom/bamtechmedia/dominguez/profiles/ProfilesHostFragment$ProfilesFlow;", "getFlow", "()Lcom/bamtechmedia/dominguez/profiles/ProfilesHostFragment$ProfilesFlow;", "flow$delegate", "Lcom/bamtechmedia/dominguez/core/utils/ParcelableFragmentArgumentDelegate;", "kidsMode", "", "getKidsMode", "()Z", "kidsMode$delegate", "Lcom/bamtechmedia/dominguez/core/utils/BooleanFragmentArgumentDelegate;", "profileHostRouter", "Lcom/bamtechmedia/dominguez/profiles/ProfileNavRouter;", "getProfileHostRouter", "()Lcom/bamtechmedia/dominguez/profiles/ProfileNavRouter;", "setProfileHostRouter", "(Lcom/bamtechmedia/dominguez/profiles/ProfileNavRouter;)V", "profilesHostViewModel", "Lcom/bamtechmedia/dominguez/profiles/ProfilesHostViewModel;", "getProfilesHostViewModel", "()Lcom/bamtechmedia/dominguez/profiles/ProfilesHostViewModel;", "setProfilesHostViewModel", "(Lcom/bamtechmedia/dominguez/profiles/ProfilesHostViewModel;)V", "userProfileModeTracker", "Lcom/bamtechmedia/dominguez/profiles/api/UserProfileModeTracker;", "getUserProfileModeTracker", "()Lcom/bamtechmedia/dominguez/profiles/api/UserProfileModeTracker;", "setUserProfileModeTracker", "(Lcom/bamtechmedia/dominguez/profiles/api/UserProfileModeTracker;)V", "inflateKidsModeLayout", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "resource", "", "container", "Landroid/view/ViewGroup;", "attachToRoot", "onBackPress", "onCreateView", "savedInstanceState", "Landroid/os/Bundle;", "onStart", "", "onViewCreated", "view", "Companion", "ProfilesFlow", "profiles_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.profiles.r0 */
@@ -281,12 +281,12 @@ public final class C6769r0 extends C11890i implements C5818b, C7736f {
         }
         View inflate = layoutInflater.inflate(i, viewGroup, z);
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         Window window = requireActivity.getWindow();
-        C12880j.m40222a((Object) window, "requireActivity().window");
-        C12880j.m40222a((Object) inflate, "view");
+        Intrinsics.checkReturnedValueIsNotNull((Object) window, "requireActivity().window");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "view");
         Context context = inflate.getContext();
-        C12880j.m40222a((Object) context, "view.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "view.context");
         window.setNavigationBarColor(C5837i.m18835a(context, C7942a.navBarBackground, null, false, 6, null));
         return inflate;
     }
@@ -296,7 +296,7 @@ public final class C6769r0 extends C11890i implements C5818b, C7736f {
         StringBuilder sb = new StringBuilder();
         sb.append("## Profiles: onBackPressed during flow: -> ");
         sb.append(m20863p());
-        C14100a.m44522a(sb.toString(), new Object[0]);
+        Timber.m44522a(sb.toString(), new Object[0]);
         return false;
     }
 
@@ -317,7 +317,7 @@ public final class C6769r0 extends C11890i implements C5818b, C7736f {
     public void onStart() {
         super.onStart();
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         C5816a.m18808a(requireActivity);
     }
 
@@ -326,7 +326,7 @@ public final class C6769r0 extends C11890i implements C5818b, C7736f {
         C3848a aVar = this.f15151X;
         if (aVar != null) {
             View _$_findCachedViewById = _$_findCachedViewById(C7946e.profilesBackground);
-            C12880j.m40222a((Object) _$_findCachedViewById, "profilesBackground");
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "profilesBackground");
             aVar.mo13766b(_$_findCachedViewById);
             if (bundle == null) {
                 C6969y0 y0Var = this.f15150W;
@@ -339,7 +339,7 @@ public final class C6769r0 extends C11890i implements C5818b, C7736f {
                         if (h0Var != null) {
                             h0Var.mo19393a();
                         } else {
-                            C12880j.m40227c(str);
+                            Intrinsics.throwUninitializedPropertyAccessException(str);
                             throw null;
                         }
                     } else if (p instanceof C6778d) {
@@ -350,11 +350,11 @@ public final class C6769r0 extends C11890i implements C5818b, C7736f {
                             if (h0Var2 != null) {
                                 C6672a.m20689a(h0Var2, false, false, true, 2, null);
                             } else {
-                                C12880j.m40227c(str);
+                                Intrinsics.throwUninitializedPropertyAccessException(str);
                                 throw null;
                             }
                         } else {
-                            C12880j.m40227c("userProfileModeTracker");
+                            Intrinsics.throwUninitializedPropertyAccessException("userProfileModeTracker");
                             throw null;
                         }
                     } else if (p instanceof C6772a) {
@@ -362,7 +362,7 @@ public final class C6769r0 extends C11890i implements C5818b, C7736f {
                         if (h0Var3 != null) {
                             C6672a.m20688a(h0Var3, false, false, null, true, null, 0, 54, null);
                         } else {
-                            C12880j.m40227c(str);
+                            Intrinsics.throwUninitializedPropertyAccessException(str);
                             throw null;
                         }
                     } else if (p instanceof C6776c) {
@@ -370,17 +370,17 @@ public final class C6769r0 extends C11890i implements C5818b, C7736f {
                         if (h0Var4 != null) {
                             C6672a.m20687a(h0Var4, false, true, 1, null);
                         } else {
-                            C12880j.m40227c(str);
+                            Intrinsics.throwUninitializedPropertyAccessException(str);
                             throw null;
                         }
                     }
                 } else {
-                    C12880j.m40227c("profilesHostViewModel");
+                    Intrinsics.throwUninitializedPropertyAccessException("profilesHostViewModel");
                     throw null;
                 }
             }
         } else {
-            C12880j.m40227c("backgroundHelper");
+            Intrinsics.throwUninitializedPropertyAccessException("backgroundHelper");
             throw null;
         }
     }

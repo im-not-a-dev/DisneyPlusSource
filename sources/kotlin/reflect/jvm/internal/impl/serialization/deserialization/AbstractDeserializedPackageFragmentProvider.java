@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 import java.util.Collection;
 import java.util.List;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentProvider;
@@ -35,7 +35,7 @@ public abstract class AbstractDeserializedPackageFragmentProvider implements Pac
         if (deserializationComponents != null) {
             return deserializationComponents;
         }
-        C12880j.m40227c("components");
+        Intrinsics.throwUninitializedPropertyAccessException("components");
         throw null;
     }
 

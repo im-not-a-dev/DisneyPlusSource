@@ -26,7 +26,7 @@ public class C12716a {
                 java.lang.Class<java.lang.Throwable> r0 = java.lang.Throwable.class
                 java.lang.reflect.Method[] r1 = r0.getMethods()
                 java.lang.String r2 = "throwableClass.methods"
-                kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
                 int r2 = r1.length
                 r3 = 0
                 r4 = 0
@@ -34,17 +34,17 @@ public class C12716a {
                 if (r4 >= r2) goto L_0x0046
                 r5 = r1[r4]
                 java.lang.String r6 = "it"
-                kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
                 java.lang.String r6 = r5.getName()
                 java.lang.String r7 = "addSuppressed"
-                boolean r6 = kotlin.jvm.internal.C12880j.m40224a(r6, r7)
+                boolean r6 = kotlin.jvm.internal.Intrinsics.areEqual(r6, r7)
                 if (r6 == 0) goto L_0x003f
                 java.lang.Class[] r6 = r5.getParameterTypes()
                 java.lang.String r7 = "it.parameterTypes"
-                kotlin.jvm.internal.C12880j.m40222a(r6, r7)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r7)
                 java.lang.Object r6 = kotlin.p590y.C13174k.m40411k(r6)
                 java.lang.Class r6 = (java.lang.Class) r6
-                boolean r6 = kotlin.jvm.internal.C12880j.m40224a(r6, r0)
+                boolean r6 = kotlin.jvm.internal.Intrinsics.areEqual(r6, r0)
                 if (r6 == 0) goto L_0x003f
                 r6 = 1
                 goto L_0x0040

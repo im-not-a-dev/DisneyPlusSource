@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.kotlin;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceFile;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Package;
 import kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver;
@@ -35,7 +35,7 @@ public final class JvmPackagePartSource implements DeserializedContainerSource {
             r0.knownJvmBinaryClass = r7
             kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite$GeneratedExtension<kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Package, java.lang.Integer> r1 = kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.packageModuleName
             java.lang.String r2 = "JvmProtoBuf.packageModuleName"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             java.lang.Object r1 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.ProtoBufUtilKt.getExtensionOrNull(r3, r1)
             java.lang.Integer r1 = (java.lang.Integer) r1
             if (r1 == 0) goto L_0x0027
@@ -58,7 +58,7 @@ public final class JvmPackagePartSource implements DeserializedContainerSource {
 
     public SourceFile getContainingFile() {
         SourceFile sourceFile = SourceFile.NO_SOURCE_FILE;
-        C12880j.m40222a((Object) sourceFile, "SourceFile.NO_SOURCE_FILE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceFile, "SourceFile.NO_SOURCE_FILE");
         return sourceFile;
     }
 
@@ -80,9 +80,9 @@ public final class JvmPackagePartSource implements DeserializedContainerSource {
 
     public final Name getSimpleName() {
         String internalName = this.className.getInternalName();
-        C12880j.m40222a((Object) internalName, "className.internalName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) internalName, "className.internalName");
         Name identifier = Name.identifier(C12833x.m40161b(internalName, '/', (String) null, 2, (Object) null));
-        C12880j.m40222a((Object) identifier, "Name.identifier(classNam….substringAfterLast('/'))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(classNam….substringAfterLast('/'))");
         return identifier;
     }
 
@@ -96,7 +96,7 @@ public final class JvmPackagePartSource implements DeserializedContainerSource {
 
     public JvmPackagePartSource(KotlinJvmBinaryClass kotlinJvmBinaryClass, Package packageR, NameResolver nameResolver, IncompatibleVersionErrorData<JvmMetadataVersion> incompatibleVersionErrorData, boolean z) {
         JvmClassName byClassId = JvmClassName.byClassId(kotlinJvmBinaryClass.getClassId());
-        C12880j.m40222a((Object) byClassId, "JvmClassName.byClassId(kotlinClass.classId)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) byClassId, "JvmClassName.byClassId(kotlinClass.classId)");
         String multifileClassName = kotlinJvmBinaryClass.getClassHeader().getMultifileClassName();
         JvmClassName jvmClassName = null;
         if (multifileClassName != null) {

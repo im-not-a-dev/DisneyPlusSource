@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -22,12 +22,12 @@ final class AbstractTypeAliasDescriptor$isInner$1 extends C12881k implements Fun
     }
 
     public final boolean invoke(UnwrappedType unwrappedType) {
-        C12880j.m40222a((Object) unwrappedType, "type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) unwrappedType, "type");
         if (KotlinTypeKt.isError(unwrappedType)) {
             return false;
         }
         ClassifierDescriptor declarationDescriptor = unwrappedType.getConstructor().getDeclarationDescriptor();
-        if ((declarationDescriptor instanceof TypeParameterDescriptor) && (C12880j.m40224a((Object) ((TypeParameterDescriptor) declarationDescriptor).getContainingDeclaration(), (Object) this.this$0) ^ true)) {
+        if ((declarationDescriptor instanceof TypeParameterDescriptor) && (Intrinsics.areEqual((Object) ((TypeParameterDescriptor) declarationDescriptor).getContainingDeclaration(), (Object) this.this$0) ^ true)) {
             return true;
         }
         return false;

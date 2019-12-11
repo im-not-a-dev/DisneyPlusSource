@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.core.lifecycle.C5765a.C5766a.C5769c;
 import com.bamtechmedia.dominguez.core.p087h.C3828d;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p286j.C7300k;
 import p163g.p201e.p203b.p286j.C7301l;
 import p512h.C11868a;
@@ -54,7 +54,7 @@ public final class MainActivityBackgroundResponder extends BackgroundResponder {
             if (intent != null) {
                 kVar.mo20102a(intent, !this.f8069V);
             } else {
-                C12880j.m40227c("currentIntent");
+                Intrinsics.throwUninitializedPropertyAccessException("currentIntent");
                 throw null;
             }
         }

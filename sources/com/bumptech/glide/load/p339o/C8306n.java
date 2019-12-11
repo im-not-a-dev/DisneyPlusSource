@@ -39,8 +39,8 @@ public interface C8306n<Model, Data> {
     }
 
     /* renamed from: a */
-    C8307a<Data> mo19951a(Model model, int i, int i2, C8115i iVar);
+    C8307a<Data> mo19951a(ModelMODEL, int i, int i2, C8115i iVar);
 
     /* renamed from: a */
-    boolean mo19953a(Model model);
+    boolean mo19953a(ModelMODEL);
 }

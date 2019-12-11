@@ -7,7 +7,7 @@ import androidx.lifecycle.C0710d;
 import androidx.lifecycle.C0722m;
 import com.uber.autodispose.android.lifecycle.C10541b;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p278h.p279k.C7248c;
 import p163g.p201e.p203b.p278h.p280l.C7252a;
 import p163g.p503n.p504a.C11790c0;
@@ -104,11 +104,11 @@ public final class CtvActivationLifecycleObserver implements C0710d {
     /* renamed from: f */
     public void mo4131f(C0722m mVar) {
         Maybe c = this.f13668U.mo30202a((C11952h<? super T>) C5887a.f13671c).mo30123c((Consumer<? super T>) new C5888b<Object>(this));
-        C12880j.m40222a((Object) c, "config.filter { it.enabl…bled = true\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "config.filter { it.enabl…bled = true\n            }");
         C10541b a = C10541b.m33254a(mVar);
-        C12880j.m40222a((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
         Object a2 = c.mo30112a((C11957k<T, ? extends R>) C11793e.m37930a((C11790c0) a));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11844z) a2).mo29928a();
     }
 }

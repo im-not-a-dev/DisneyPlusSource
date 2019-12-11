@@ -4,7 +4,7 @@ import java.io.Serializable;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p573a0.C12688f.C12689a;
 import kotlin.p573a0.C12688f.C12691b;
@@ -52,7 +52,7 @@ public final class C12681b implements C12688f, Serializable {
 
     /* renamed from: a */
     private final boolean m39796a(C12691b bVar) {
-        return C12880j.m40224a((Object) get(bVar.getKey()), (Object) bVar);
+        return Intrinsics.areEqual((Object) get(bVar.getKey()), (Object) bVar);
     }
 
     /* renamed from: b */

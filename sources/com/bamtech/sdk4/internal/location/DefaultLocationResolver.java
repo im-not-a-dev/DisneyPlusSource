@@ -8,7 +8,7 @@ import com.bamtech.sdk4.location.GeoProvider;
 import com.bamtech.sdk4.service.BadRequestException;
 import java.util.UUID;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -43,7 +43,7 @@ public final class DefaultLocationResolver implements LocationResolver {
 
     public Single<? extends GeoLocation> getLocation(ServiceTransaction serviceTransaction) {
         Single<? extends GeoLocation> a = this.configurationProvider.getLocationConfiguration(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultLocationResolver$getLocation$1<Object,Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…      }\n                }");
         return a;
     }
 }

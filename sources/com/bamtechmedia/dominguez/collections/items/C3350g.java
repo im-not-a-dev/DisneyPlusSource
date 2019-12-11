@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p171c.p172a.p173a.C4793a;
 import p163g.p201e.p202a.C5364g;
 import p163g.p509o.p510a.C11853e;
@@ -214,8 +214,8 @@ public final class C3350g extends C11866a {
         if (this != obj) {
             if (obj instanceof C3350g) {
                 C3350g gVar = (C3350g) obj;
-                if (C12880j.m40224a((Object) this.f8436c, (Object) gVar.f8436c) && C12880j.m40224a((Object) this.f8428U, (Object) gVar.f8428U) && C12880j.m40224a((Object) this.f8429V, (Object) gVar.f8429V)) {
-                    if (!(this.f8430W == gVar.f8430W) || !C12880j.m40224a((Object) this.f8431X, (Object) gVar.f8431X) || !C12880j.m40224a((Object) this.f8432Y, (Object) gVar.f8432Y) || !C12880j.m40224a((Object) this.f8433Z, (Object) gVar.f8433Z) || !C12880j.m40224a((Object) this.f8434a0, (Object) gVar.f8434a0) || !C12880j.m40224a((Object) this.f8435b0, (Object) gVar.f8435b0) || !C12880j.m40224a((Object) this.f8437c0, (Object) gVar.f8437c0) || !C12880j.m40224a((Object) this.f8438d0, (Object) gVar.f8438d0) || !C12880j.m40224a((Object) this.f8439e0, (Object) gVar.f8439e0)) {
+                if (Intrinsics.areEqual((Object) this.f8436c, (Object) gVar.f8436c) && Intrinsics.areEqual((Object) this.f8428U, (Object) gVar.f8428U) && Intrinsics.areEqual((Object) this.f8429V, (Object) gVar.f8429V)) {
+                    if (!(this.f8430W == gVar.f8430W) || !Intrinsics.areEqual((Object) this.f8431X, (Object) gVar.f8431X) || !Intrinsics.areEqual((Object) this.f8432Y, (Object) gVar.f8432Y) || !Intrinsics.areEqual((Object) this.f8433Z, (Object) gVar.f8433Z) || !Intrinsics.areEqual((Object) this.f8434a0, (Object) gVar.f8434a0) || !Intrinsics.areEqual((Object) this.f8435b0, (Object) gVar.f8435b0) || !Intrinsics.areEqual((Object) this.f8437c0, (Object) gVar.f8437c0) || !Intrinsics.areEqual((Object) this.f8438d0, (Object) gVar.f8438d0) || !Intrinsics.areEqual((Object) this.f8439e0, (Object) gVar.f8439e0)) {
                         return false;
                     }
                 }
@@ -228,7 +228,7 @@ public final class C3350g extends C11866a {
     public Object getChangePayload(C11853e<?> eVar) {
         C3626b bVar = this.f8429V;
         if (eVar != null) {
-            return new C3351a(!C12880j.m40224a((Object) bVar, (Object) ((C3350g) eVar).f8429V));
+            return new C3351a(!Intrinsics.areEqual((Object) bVar, (Object) ((C3350g) eVar).f8429V));
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.CollectionListItem");
     }
@@ -377,7 +377,7 @@ public final class C3350g extends C11866a {
             com.bamtechmedia.dominguez.collections.items.j r3 = r0.f8435b0
             android.view.View r4 = r1.itemView
             java.lang.String r5 = "itemView"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r5)
             com.bamtechmedia.dominguez.core.content.assets.b r5 = r0.f8429V
             r3.mo12470a(r4, r5)
             android.view.View r3 = r17.mo20994a()
@@ -429,7 +429,7 @@ public final class C3350g extends C11866a {
             r6 = r2
             com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView r6 = (com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView) r6
             java.lang.String r2 = "thumbnailImage"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r2)
             com.bamtechmedia.dominguez.core.content.assets.b r3 = r0.f8429V
             com.bamtechmedia.dominguez.collections.o0.j r4 = r0.f8436c
             java.lang.String r4 = r4.mo12628h()
@@ -449,7 +449,7 @@ public final class C3350g extends C11866a {
             int r5 = p163g.p201e.p202a.C5363f.thumbnailImage
             android.view.View r4 = r4.findViewById(r5)
             com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView r4 = (com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView) r4
-            kotlin.jvm.internal.C12880j.m40222a(r4, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r2)
             int r2 = com.bamtechmedia.dominguez.collections.p080o0.C3446k.m11762a(r3, r4)
             java.lang.Integer r10 = java.lang.Integer.valueOf(r2)
             r11 = 0
@@ -477,7 +477,7 @@ public final class C3350g extends C11866a {
             int r2 = p163g.p201e.p202a.C5363f.metaData
             android.view.View r1 = r1.findViewById(r2)
             android.widget.TextView r1 = (android.widget.TextView) r1
-            kotlin.jvm.internal.C12880j.m40222a(r1, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r4)
             com.bamtechmedia.dominguez.core.content.assets.b r2 = r0.f8429V
             com.bamtechmedia.dominguez.core.content.b r2 = (com.bamtechmedia.dominguez.core.content.C3651b) r2
             java.lang.CharSequence r2 = r0.m11529a(r2)
@@ -488,7 +488,7 @@ public final class C3350g extends C11866a {
             int r2 = p163g.p201e.p202a.C5363f.metaData
             android.view.View r1 = r1.findViewById(r2)
             android.widget.TextView r1 = (android.widget.TextView) r1
-            kotlin.jvm.internal.C12880j.m40222a(r1, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r4)
             r1.setText(r3)
         L_0x0120:
             return

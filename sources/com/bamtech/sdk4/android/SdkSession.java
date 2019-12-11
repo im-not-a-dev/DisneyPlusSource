@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.android.AndroidSdkComponent.Builder;
 import com.bamtech.sdk4.internal.android.DaggerAndroidSdkComponent;
 import com.bamtech.sdk4.media.MediaCapabilitiesProvider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.JodaTimeAndroid;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00032\u00020\u0001:\u0001\u0003B\u0007\b\u0001¢\u0006\u0002\u0010\u0002¨\u0006\u0004"}, mo31007d2 = {"Lcom/bamtech/sdk4/android/SdkSession;", "Lcom/bamtech/sdk4/internal/BaseSession;", "()V", "Companion", "sdk_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -23,7 +23,7 @@ public final class SdkSession extends BaseSession {
         public final Bootstrapper bootstrapper(Application application, MediaCapabilitiesProvider mediaCapabilitiesProvider) {
             JodaTimeAndroid.init(application);
             Builder builder = DaggerAndroidSdkComponent.builder();
-            C12880j.m40222a((Object) builder, "DaggerAndroidSdkComponent.builder()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) builder, "DaggerAndroidSdkComponent.builder()");
             return new Bootstrapper(application, builder, mediaCapabilitiesProvider);
         }
 

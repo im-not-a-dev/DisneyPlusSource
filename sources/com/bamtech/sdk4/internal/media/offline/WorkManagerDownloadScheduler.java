@@ -11,7 +11,7 @@ import com.bamtech.sdk4.service.ServiceException;
 import java.io.IOException;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.reactivestreams.C14313b;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
@@ -76,14 +76,14 @@ public final class WorkManagerDownloadScheduler implements DownloadScheduler {
 
     public Single<Boolean> isQueueFull(ServiceTransaction serviceTransaction, DownloadSettings downloadSettings, boolean z) {
         Single<Boolean> a = this.mediaStorage.getAll(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new WorkManagerDownloadScheduler$isQueueFull$1<Object,Object>(z, downloadSettings));
-        C12880j.m40222a((Object) a, "mediaStorage.getAll(tran…nloads)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "mediaStorage.getAll(tran…nloads)\n                }");
         return a;
     }
 
     public Completable queueDownload(ServiceTransaction serviceTransaction, DownloadSettings downloadSettings, CachedMedia cachedMedia) {
         ExoCachedMedia exoCachedMedia = (ExoCachedMedia) cachedMedia;
         Completable b = Completable.m38163b((C14313b<? extends CompletableSource>) new WorkManagerDownloadScheduler$queueDownload$1<Object>(this, cachedMedia, serviceTransaction, downloadSettings));
-        C12880j.m40222a((Object) b, "Completable.mergeDelayEr…)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.mergeDelayEr…)\n            }\n        }");
         return b;
     }
 
@@ -94,13 +94,13 @@ public final class WorkManagerDownloadScheduler implements DownloadScheduler {
         Completable b = this.exoCachedMediaHelper.downloadMediaLicenseAsync(serviceTransaction, exoCachedMedia).mo30217b((Function<? super T, ? extends CompletableSource>) new WorkManagerDownloadScheduler$renewLicense$1<Object,Object>(this, serviceTransaction, license, audioLicense));
         WorkManagerDownloadScheduler$renewLicense$2 workManagerDownloadScheduler$renewLicense$2 = new WorkManagerDownloadScheduler$renewLicense$2(this, cachedMedia, serviceTransaction, license, audioLicense);
         Completable a = b.mo30036a((Consumer<? super Throwable>) workManagerDownloadScheduler$renewLicense$2);
-        C12880j.m40222a((Object) a, "exoCachedMediaHelper.dow…Await()\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "exoCachedMediaHelper.dow…Await()\n                }");
         return a;
     }
 
     public Completable rescheduleRequestedDownloads(ServiceTransaction serviceTransaction) {
         Completable b = Completable.m38162b((Callable<? extends CompletableSource>) new WorkManagerDownloadScheduler$rescheduleRequestedDownloads$1<Object>(this, serviceTransaction, (DownloadSettings) this.mediaStorage.getDownloadSettings(serviceTransaction).mo30224c()));
-        C12880j.m40222a((Object) b, "Completable.defer {\n    …              }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.defer {\n    …              }\n        }");
         return b;
     }
 }

@@ -3,7 +3,7 @@ package kotlinx.coroutines.internal;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p573a0.C12688f;
 import kotlin.p573a0.C12688f.C12691b;
@@ -155,7 +155,7 @@ public final class C13283u {
         if (fold != null) {
             return fold;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

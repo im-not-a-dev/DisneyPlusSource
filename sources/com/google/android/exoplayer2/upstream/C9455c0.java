@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.upstream.C9442a0.C9447e;
 import java.io.Closeable;
 import java.io.IOException;
@@ -82,7 +82,7 @@ public final class C9455c0<T> implements C9447e {
             C9537e.m29296a(uri);
             this.f21979e = this.f21978d.mo23036a(uri, nVar);
         } finally {
-            C9554k0.m29406a((Closeable) nVar);
+            Util.m29406a((Closeable) nVar);
         }
     }
 

@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.annotations;
 import java.util.Map;
 import kotlin.C12897k;
 import kotlin.Lazy;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -40,7 +40,7 @@ public final class BuiltInAnnotationDescriptor implements AnnotationDescriptor {
 
     public SourceElement getSource() {
         SourceElement sourceElement = SourceElement.NO_SOURCE;
-        C12880j.m40222a((Object) sourceElement, "SourceElement.NO_SOURCE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement, "SourceElement.NO_SOURCE");
         return sourceElement;
     }
 

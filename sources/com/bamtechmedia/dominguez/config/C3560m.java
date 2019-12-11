@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.config;
 
 import java.net.PasswordAuthentication;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
 
 /* renamed from: com.bamtechmedia.dominguez.config.m */
@@ -36,7 +36,7 @@ public final class C3560m implements C3558l {
             passwordAuthentication = null;
         } else {
             char[] charArray = str.toCharArray();
-            C12880j.m40222a((Object) charArray, "(this as java.lang.String).toCharArray()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) charArray, "(this as java.lang.String).toCharArray()");
             passwordAuthentication = new PasswordAuthentication(str, charArray);
         }
         f8888a = passwordAuthentication;

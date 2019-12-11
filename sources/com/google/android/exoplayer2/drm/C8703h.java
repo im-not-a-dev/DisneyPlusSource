@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.drm;
 
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,19 +11,19 @@ import org.json.JSONObject;
 final class C8703h {
     /* renamed from: a */
     public static byte[] m25219a(byte[] bArr) {
-        if (C9554k0.f22281a >= 27) {
+        if (Util.SDK_INT >= 27) {
             return bArr;
         }
-        return C9554k0.m29447d(m25218a(C9554k0.m29399a(bArr)));
+        return Util.m29447d(m25218a(Util.m29399a(bArr)));
     }
 
     /* renamed from: b */
     public static byte[] m25221b(byte[] bArr) {
-        if (C9554k0.f22281a >= 27) {
+        if (Util.SDK_INT >= 27) {
             return bArr;
         }
         try {
-            JSONObject jSONObject = new JSONObject(C9554k0.m29399a(bArr));
+            JSONObject jSONObject = new JSONObject(Util.m29399a(bArr));
             StringBuilder sb = new StringBuilder("{\"keys\":[");
             JSONArray jSONArray = jSONObject.getJSONArray("keys");
             for (int i = 0; i < jSONArray.length(); i++) {
@@ -40,12 +40,12 @@ final class C8703h {
                 sb.append("\"}");
             }
             sb.append("]}");
-            return C9554k0.m29447d(sb.toString());
+            return Util.m29447d(sb.toString());
         } catch (JSONException e) {
             StringBuilder sb2 = new StringBuilder();
             sb2.append("Failed to adjust response data: ");
-            sb2.append(C9554k0.m29399a(bArr));
-            C9563q.m29496a("ClearKeyUtil", sb2.toString(), e);
+            sb2.append(Util.m29399a(bArr));
+            Log.m29496a("ClearKeyUtil", sb2.toString(), e);
             return bArr;
         }
     }

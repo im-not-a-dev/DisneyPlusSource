@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -21,13 +21,13 @@ public final class MilestoneAttributesJsonAdapter extends C11725h<MilestoneAttri
         String str = "startMillis";
         String str2 = "type";
         C11739b a = C11739b.m37729a(str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"type\", \"startMillis\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"type\", \"startMillis\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…tions.emptySet(), \"type\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…tions.emptySet(), \"type\")");
         this.stringAdapter = a2;
         C11725h<Long> a3 = vVar.mo29869a((Type) Long.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a3, "moshi.adapter<Long?>(Lon…mptySet(), \"startMillis\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<Long?>(Lon…mptySet(), \"startMillis\")");
         this.nullableLongAdapter = a3;
     }
 

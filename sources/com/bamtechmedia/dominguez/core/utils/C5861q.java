@@ -1,6 +1,6 @@
 package com.bamtechmedia.dominguez.core.utils;
 
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.q */
 /* compiled from: NoOp.kt */
@@ -15,6 +15,6 @@ public final class C5861q {
 
     /* renamed from: a */
     public static final void m18905a(String str) {
-        C14100a.m44522a(str, new Object[0]);
+        Timber.m44522a(str, new Object[0]);
     }
 }

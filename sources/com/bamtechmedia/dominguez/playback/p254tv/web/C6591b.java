@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.core.utils.C5880u;
 import com.disney.disneyplus.R;
 import java.util.HashMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p412c.C10647a;
 import p512h.p513c.p514k.C11890i;
 
@@ -67,28 +67,28 @@ public final class C6591b extends C11890i implements C6596f {
     /* renamed from: a */
     public void mo19238a(boolean z) {
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C10647a.loadingIndicator);
-        C12880j.m40222a((Object) progressBar, "loadingIndicator");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "loadingIndicator");
         progressBar.setVisibility(z ? 0 : 8);
     }
 
     /* renamed from: b */
     public final void mo19239b(int i) {
         TextView textView = (TextView) _$_findCachedViewById(C10647a.titleView);
-        C12880j.m40222a((Object) textView, "titleView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "titleView");
         textView.setText(C5880u.m18936a(i));
     }
 
     /* renamed from: c */
     public void mo19240c(String str) {
         TextView textView = (TextView) _$_findCachedViewById(C10647a.content);
-        C12880j.m40222a((Object) textView, "content");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "content");
         textView.setText(str);
     }
 
     /* renamed from: d */
     public void mo19241d(String str) {
         TextView textView = (TextView) _$_findCachedViewById(C10647a.tempUrlDisplay);
-        C12880j.m40222a((Object) textView, "tempUrlDisplay");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "tempUrlDisplay");
         textView.setText(str);
     }
 
@@ -123,7 +123,7 @@ public final class C6591b extends C11890i implements C6596f {
             }
             return;
         }
-        C12880j.m40227c("presenter");
+        Intrinsics.throwUninitializedPropertyAccessException("presenter");
         throw null;
     }
 }

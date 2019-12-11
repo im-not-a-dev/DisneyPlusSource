@@ -3,7 +3,7 @@ package kotlin.p581d0;
 import java.lang.annotation.Annotation;
 import kotlin.C13142s;
 import kotlin.jvm.internal.C12866d;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KClass;
 
@@ -199,7 +199,7 @@ public final class C12731a {
     /* renamed from: a */
     public static final <T extends Annotation> KClass<? extends T> m39868a(T t) {
         Class annotationType = t.annotationType();
-        C12880j.m40222a((Object) annotationType, "(this as java.lang.annot…otation).annotationType()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) annotationType, "(this as java.lang.annot…otation).annotationType()");
         KClass<? extends T> a = m39867a(annotationType);
         if (a != null) {
             return a;

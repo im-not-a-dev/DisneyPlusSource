@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.detail.common;
 import com.bamtechmedia.dominguez.core.content.assets.UserMediaMeta;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -22,13 +22,13 @@ public final class BookmarkHitJsonAdapter extends C11725h<BookmarkHit> {
         String str = "userMeta";
         String str2 = "contentId";
         C11739b a = C11739b.m37729a(str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"contentId\", \"userMeta\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"contentId\", \"userMeta\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St….emptySet(), \"contentId\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St….emptySet(), \"contentId\")");
         this.stringAdapter = a2;
         C11725h<UserMediaMeta> a3 = vVar.mo29869a((Type) UserMediaMeta.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a3, "moshi.adapter<UserMediaM…s.emptySet(), \"userMeta\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<UserMediaM…s.emptySet(), \"userMeta\")");
         this.userMediaMetaAdapter = a3;
     }
 

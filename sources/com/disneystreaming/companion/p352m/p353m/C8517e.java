@@ -39,7 +39,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.p575i.p576a.C12702b;
@@ -132,7 +132,7 @@ public final class C8517e extends C8491b implements C8486i {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f18143b, (java.lang.Object) r3.f18143b) != false) goto L_0x001f;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f18143b, (java.lang.Object) r3.f18143b) != false) goto L_0x001f;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r3) {
@@ -144,11 +144,11 @@ public final class C8517e extends C8491b implements C8486i {
                     com.disneystreaming.companion.m.m.e$a$a r3 = (com.disneystreaming.companion.p352m.p353m.C8517e.C8518a.C8519a) r3
                     java.util.Date r0 = r2.f18142a
                     java.util.Date r1 = r3.f18142a
-                    boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                    boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                     if (r0 == 0) goto L_0x001d
                     java.util.Date r0 = r2.f18143b
                     java.util.Date r3 = r3.f18143b
-                    boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                    boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                     if (r3 == 0) goto L_0x001d
                     goto L_0x001f
                 L_0x001d:
@@ -1655,7 +1655,7 @@ public final class C8517e extends C8491b implements C8486i {
 
     /* renamed from: a */
     public void mo21776a(Message message, String str) {
-        if (message.getVersion() == 1 && !(!C12880j.m40224a((Object) message.getPayload().getAppId(), (Object) mo21825l().getAppId())) && !mo21824k().contains(str)) {
+        if (message.getVersion() == 1 && !(!Intrinsics.areEqual((Object) message.getPayload().getAppId(), (Object) mo21825l().getAppId())) && !mo21824k().contains(str)) {
             C8476c cVar = C8476c.f18029a;
             StringBuilder sb = new StringBuilder();
             sb.append("Message of type ");
@@ -1815,7 +1815,7 @@ public final class C8517e extends C8491b implements C8486i {
             datagramSocket.receive(datagramPacket);
             if (datagramPacket.getLength() > 0) {
                 Charset charset = StandardCharsets.UTF_8;
-                C12880j.m40222a((Object) charset, "StandardCharsets.UTF_8");
+                Intrinsics.checkReturnedValueIsNotNull((Object) charset, "StandardCharsets.UTF_8");
                 String str = new String(bArr, charset);
                 boolean z = false;
                 String a = C12832w.m40117a(str, String.valueOf((char) 0), "", false, 4, (Object) null);
@@ -1830,9 +1830,9 @@ public final class C8517e extends C8491b implements C8486i {
                     Message message = (Message) a2;
                     if (message != null) {
                         InetAddress address = datagramPacket.getAddress();
-                        C12880j.m40222a((Object) address, "packet.address");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) address, "packet.address");
                         String hostAddress = address.getHostAddress();
-                        C12880j.m40222a((Object) hostAddress, "packet.address.hostAddress");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) hostAddress, "packet.address.hostAddress");
                         mo21776a(message, hostAddress);
                     }
                 } else {

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KClass;
 import kotlin.reflect.jvm.internal.KClassImpl;
 
@@ -10,7 +10,7 @@ import kotlin.reflect.jvm.internal.KClassImpl;
 public final class KClassesJvm {
     public static final String getJvmName(KClass<?> kClass) {
         String name = ((KClassImpl) kClass).getJClass().getName();
-        C12880j.m40222a((Object) name, "(this as KClassImpl).jClass.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "(this as KClassImpl).jClass.name");
         return name;
     }
 }

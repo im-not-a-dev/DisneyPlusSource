@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.Callable;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 import p520io.reactivex.p531y.p536e.p542f.C12478t;
@@ -47,7 +47,7 @@ public final class C2380a implements C2434c {
     /* renamed from: a */
     public Single<Map<String, String>> mo11521a() {
         Single<Map<String, String>> b = new C12478t(new C2381a(this)).mo30220b(this.f6605b);
-        C12880j.m40222a((Object) b, "SingleFromCallable {\n   ….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "SingleFromCallable {\n   ….subscribeOn(ioScheduler)");
         return b;
     }
 }

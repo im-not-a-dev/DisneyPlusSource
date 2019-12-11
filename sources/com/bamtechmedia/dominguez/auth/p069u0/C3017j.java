@@ -17,7 +17,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -31,7 +31,7 @@ import p520io.reactivex.disposables.CompositeDisposable;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0006\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001$B?\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010¢\u0006\u0002\u0010\u0011J,\u0010\u001a\u001a&\u0012\f\u0012\n \u001d*\u0004\u0018\u00010\u001c0\u001c \u001d*\u0012\u0012\f\u0012\n \u001d*\u0004\u0018\u00010\u001c0\u001c\u0018\u00010\u001b0\u001bH\u0002J\u0010\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020\u001cH\u0002J\u000e\u0010!\u001a\u00020\u001f2\u0006\u0010\"\u001a\u00020\u001cJ\u000e\u0010#\u001a\u00020\u001f2\u0006\u0010\"\u001a\u00020\u001cR\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\fX\u0004¢\u0006\u0002\n\u0000R$\u0010\u0012\u001a\u00020\u00138\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017\"\u0004\b\u0018\u0010\u0019R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000¨\u0006%"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/reset/PasswordResetViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/auth/reset/PasswordResetViewModel$State;", "passwordValidator", "Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;", "passwordResetAction", "Lcom/bamtechmedia/dominguez/auth/reset/PasswordResetAction;", "authSuccessAction", "Lcom/bamtechmedia/dominguez/auth/AuthSuccessAction;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "autoLogin", "Lcom/bamtechmedia/dominguez/auth/autologin/AutoLogin;", "errorRouter", "Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;", "analytics", "Lcom/bamtechmedia/dominguez/auth/otp/OtpAnalytics;", "(Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;Lcom/bamtechmedia/dominguez/auth/reset/PasswordResetAction;Lcom/bamtechmedia/dominguez/auth/AuthSuccessAction;Lcom/bamtech/sdk4/account/AccountApi;Lcom/bamtechmedia/dominguez/auth/autologin/AutoLogin;Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;Lcom/bamtechmedia/dominguez/auth/otp/OtpAnalytics;)V", "disposables", "Lio/reactivex/disposables/CompositeDisposable;", "disposables$annotations", "()V", "getDisposables$auth_release", "()Lio/reactivex/disposables/CompositeDisposable;", "setDisposables$auth_release", "(Lio/reactivex/disposables/CompositeDisposable;)V", "emailOnce", "Lio/reactivex/Single;", "", "kotlin.jvm.PlatformType", "handleResetSuccess", "", "newPassword", "resetPassword", "password", "updatePasswordStrength", "State", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.u0.j */
@@ -157,7 +157,7 @@ public final class C3017j extends C5741g<C3018a> {
                 if (obj instanceof C3018a) {
                     C3018a aVar = (C3018a) obj;
                     if (this.f7872a == aVar.f7872a) {
-                        if ((this.f7873b == aVar.f7873b) && C12880j.m40224a((Object) this.f7874c, (Object) aVar.f7874c) && C12880j.m40224a((Object) this.f7875d, (Object) aVar.f7875d)) {
+                        if ((this.f7873b == aVar.f7873b) && Intrinsics.areEqual((Object) this.f7874c, (Object) aVar.f7874c) && Intrinsics.areEqual((Object) this.f7875d, (Object) aVar.f7875d)) {
                             if (this.f7876e == aVar.f7876e) {
                                 return true;
                             }
@@ -294,7 +294,7 @@ public final class C3017j extends C5741g<C3018a> {
         public final void accept(String str) {
             C2760a c = this.f7881c.f7869f;
             if (c != null) {
-                C12880j.m40222a((Object) str, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) str, "it");
                 c.store(str, this.f7880U);
             }
         }
@@ -313,7 +313,7 @@ public final class C3017j extends C5741g<C3018a> {
 
         /* renamed from: a */
         public final void mo12034a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -321,7 +321,7 @@ public final class C3017j extends C5741g<C3018a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -449,7 +449,7 @@ public final class C3017j extends C5741g<C3018a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error resetting password", new Object[0]);
+            Timber.m44528b(th, "Error resetting password", new Object[0]);
             C7627a.m22614a(this.f7887c.f7870g, null, 1, null);
         }
     }
@@ -516,12 +516,12 @@ public final class C3017j extends C5741g<C3018a> {
             r1.<init>(r3)
             io.reactivex.Single r0 = r0.mo30209a(r1)
             java.lang.String r1 = "emailOnce()\n            …rdSuccess()\n            }"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.c0 r1 = r3.getViewModelScope()
             g.n.a.h r1 = p163g.p503n.p504a.C11793e.m37930a(r1)
             java.lang.Object r0 = r0.mo30215a(r1)
             java.lang.String r1 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.d0 r0 = (p163g.p503n.p504a.C11792d0) r0
             com.bamtechmedia.dominguez.auth.u0.j$d r1 = new com.bamtechmedia.dominguez.auth.u0.j$d
             r1.<init>(r3, r4)
@@ -542,7 +542,7 @@ public final class C3017j extends C5741g<C3018a> {
     public final void mo12019b(String str) {
         C3024f fVar = new C3024f(this);
         Object a = this.f7866c.mo11993a(str).mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C3030k(new C3027g(fVar)), new C3028h(this));
     }
 

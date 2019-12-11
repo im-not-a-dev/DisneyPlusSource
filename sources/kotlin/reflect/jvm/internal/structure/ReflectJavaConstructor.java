@@ -8,7 +8,7 @@ import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaConstructor;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaValueParameter;
 
@@ -27,7 +27,7 @@ public final class ReflectJavaConstructor extends ReflectJavaMember implements J
 
     public List<ReflectJavaTypeParameter> getTypeParameters() {
         TypeVariable[] typeParameters = getMember().getTypeParameters();
-        C12880j.m40222a((Object) typeParameters, "member.typeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, "member.typeParameters");
         ArrayList arrayList = new ArrayList(typeParameters.length);
         for (TypeVariable reflectJavaTypeParameter : typeParameters) {
             arrayList.add(new ReflectJavaTypeParameter(reflectJavaTypeParameter));
@@ -37,23 +37,23 @@ public final class ReflectJavaConstructor extends ReflectJavaMember implements J
 
     public List<JavaValueParameter> getValueParameters() {
         Type[] genericParameterTypes = getMember().getGenericParameterTypes();
-        C12880j.m40222a((Object) genericParameterTypes, "types");
+        Intrinsics.checkReturnedValueIsNotNull((Object) genericParameterTypes, "types");
         if (genericParameterTypes.length == 0) {
             return C13185o.m40513a();
         }
         Class declaringClass = getMember().getDeclaringClass();
-        C12880j.m40222a((Object) declaringClass, "klass");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaringClass, "klass");
         if (declaringClass.getDeclaringClass() != null && !Modifier.isStatic(declaringClass.getModifiers())) {
             genericParameterTypes = (Type[]) C13171j.m40340a((Object[]) genericParameterTypes, 1, genericParameterTypes.length);
         }
         Annotation[][] parameterAnnotations = getMember().getParameterAnnotations();
         if (parameterAnnotations.length >= genericParameterTypes.length) {
             if (parameterAnnotations.length > genericParameterTypes.length) {
-                C12880j.m40222a((Object) parameterAnnotations, "annotations");
+                Intrinsics.checkReturnedValueIsNotNull((Object) parameterAnnotations, "annotations");
                 parameterAnnotations = (Annotation[][]) C13171j.m40340a((Object[]) parameterAnnotations, parameterAnnotations.length - genericParameterTypes.length, parameterAnnotations.length);
             }
-            C12880j.m40222a((Object) genericParameterTypes, "realTypes");
-            C12880j.m40222a((Object) parameterAnnotations, "realAnnotations");
+            Intrinsics.checkReturnedValueIsNotNull((Object) genericParameterTypes, "realTypes");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameterAnnotations, "realAnnotations");
             return getValueParameters(genericParameterTypes, parameterAnnotations, getMember().isVarArgs());
         }
         StringBuilder sb = new StringBuilder();

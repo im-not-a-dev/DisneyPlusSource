@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.components.JavaResolverCache;
@@ -22,7 +22,7 @@ final class C12929x1b86dd87 extends C12881k implements Function0<LazyJavaClassDe
     public final LazyJavaClassDescriptor invoke() {
         LazyJavaClassDescriptor lazyJavaClassDescriptor = this.$javaAnalogueDescriptor;
         JavaResolverCache javaResolverCache = JavaResolverCache.EMPTY;
-        C12880j.m40222a((Object) javaResolverCache, "JavaResolverCache.EMPTY");
+        Intrinsics.checkReturnedValueIsNotNull((Object) javaResolverCache, "JavaResolverCache.EMPTY");
         return lazyJavaClassDescriptor.copy$descriptors_jvm(javaResolverCache, this.$kotlinMutableClassIfContainer);
     }
 }

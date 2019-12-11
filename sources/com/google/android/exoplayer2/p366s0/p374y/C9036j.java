@@ -10,7 +10,7 @@ import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
@@ -21,7 +21,7 @@ import net.danlew.android.joda.DateUtils;
 public final class C9036j implements C8912g {
 
     /* renamed from: n */
-    private static final int f19892n = C9554k0.m29428b("ID3");
+    private static final int f19892n = Util.m29428b("ID3");
 
     /* renamed from: a */
     private final int f19893a;

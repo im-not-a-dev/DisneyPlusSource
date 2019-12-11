@@ -6,7 +6,7 @@ import com.bamtech.shadow.gson.Gson;
 import com.bamtechmedia.dominguez.legal.DefaultLegalApi;
 import java.io.InputStream;
 import java.lang.reflect.Type;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14258u;
 import okio.BufferedSource;
 import okio.C14287m;
@@ -35,7 +35,7 @@ public final class C1689a implements Converter, C1684a {
 
     public <T> String serialize(T t) {
         String a = this.f5883a.mo11046a((Object) t);
-        C12880j.m40222a((Object) a, "gson.toJson(model)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "gson.toJson(model)");
         return a;
     }
 
@@ -45,7 +45,7 @@ public final class C1689a implements Converter, C1684a {
             return null;
         }
         InputStream g0 = C14287m.m45716a((C14302x) bufferedSource).mo36334g0();
-        C12880j.m40222a((Object) g0, "Okio.buffer(it).inputStream()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g0, "Okio.buffer(it).inputStream()");
         return mo7504a(g0, cls);
     }
 

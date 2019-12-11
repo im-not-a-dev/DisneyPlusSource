@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.profiles.p271y1;
 
 import android.view.View;
 import android.widget.TextView;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p330z.C7946e;
 import p163g.p201e.p203b.p330z.C7948g;
 import p163g.p509o.p510a.p511l.C11866a;
@@ -27,7 +27,7 @@ public final class C7018m extends C11866a {
         if (this != obj) {
             if (obj instanceof C7018m) {
                 C7018m mVar = (C7018m) obj;
-                if (C12880j.m40224a((Object) this.f15593c, (Object) mVar.f15593c)) {
+                if (Intrinsics.areEqual((Object) this.f15593c, (Object) mVar.f15593c)) {
                     if (this.f15592U == mVar.f15592U) {
                         return true;
                     }
@@ -65,14 +65,14 @@ public final class C7018m extends C11866a {
     public void bind(C11867b bVar, int i) {
         View view = bVar.itemView;
         String str = "viewHolder.itemView";
-        C12880j.m40222a((Object) view, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, str);
         TextView textView = (TextView) view.findViewById(C7946e.titleTextView);
-        C12880j.m40222a((Object) textView, "viewHolder.itemView.titleTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "viewHolder.itemView.titleTextView");
         textView.setText(this.f15593c);
         View view2 = bVar.itemView;
-        C12880j.m40222a((Object) view2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view2, str);
         TextView textView2 = (TextView) view2.findViewById(C7946e.descriptionTextView);
-        C12880j.m40222a((Object) textView2, "viewHolder.itemView.descriptionTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "viewHolder.itemView.descriptionTextView");
         textView2.setVisibility(this.f15592U ? 0 : 8);
     }
 }

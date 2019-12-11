@@ -11,7 +11,7 @@ import kotlin.C13145v;
 import kotlin.C13147x;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -117,7 +117,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                 sb.append(sb2.toString());
                 DescriptorRendererImpl descriptorRendererImpl = DescriptorRendererImpl.this;
                 PropertyDescriptor correspondingProperty = propertyAccessorDescriptor.getCorrespondingProperty();
-                C12880j.m40222a((Object) correspondingProperty, "descriptor.correspondingProperty");
+                Intrinsics.checkReturnedValueIsNotNull((Object) correspondingProperty, "descriptor.correspondingProperty");
                 descriptorRendererImpl.renderProperty(correspondingProperty, sb);
             } else if (i == 2) {
                 visitFunctionDescriptor((FunctionDescriptor) propertyAccessorDescriptor, sb);
@@ -293,13 +293,13 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                 sb.append(renderMessage("defined in"));
                 sb.append(str);
                 FqNameUnsafe fqName = DescriptorUtils.getFqName(containingDeclaration);
-                C12880j.m40222a((Object) fqName, "DescriptorUtils.getFqName(containingDeclaration)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "DescriptorUtils.getFqName(containingDeclaration)");
                 sb.append(fqName.isRoot() ? "root package" : renderFqName(fqName));
                 if (getWithSourceFileForTopLevel() && (containingDeclaration instanceof PackageFragmentDescriptor) && (declarationDescriptor instanceof DeclarationDescriptorWithSource)) {
                     SourceElement source = ((DeclarationDescriptorWithSource) declarationDescriptor).getSource();
-                    C12880j.m40222a((Object) source, "descriptor.source");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) source, "descriptor.source");
                     SourceFile containingFile = source.getContainingFile();
-                    C12880j.m40222a((Object) containingFile, "descriptor.source.containingFile");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) containingFile, "descriptor.source.containingFile");
                     String name = containingFile.getName();
                     if (name != null) {
                         sb.append(str);
@@ -330,7 +330,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:5:0x0032, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r0.toString(), (java.lang.Object) r8) == false) goto L_0x0034;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r0.toString(), (java.lang.Object) r8) == false) goto L_0x0034;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private final boolean differsOnlyInNullability(java.lang.String r7, java.lang.String r8) {
@@ -343,7 +343,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             r5 = 0
             r0 = r8
             java.lang.String r0 = kotlin.p588j0.C12832w.m40117a(r0, r1, r2, r3, r4, r5)
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r7, r0)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r7, r0)
             r1 = 0
             if (r0 != 0) goto L_0x0050
             r0 = 2
@@ -357,7 +357,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             r2 = 63
             r0.append(r2)
             java.lang.String r0 = r0.toString()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r8)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r8)
             if (r0 != 0) goto L_0x0050
         L_0x0034:
             java.lang.StringBuilder r0 = new java.lang.StringBuilder
@@ -368,7 +368,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             java.lang.String r7 = ")?"
             r0.append(r7)
             java.lang.String r7 = r0.toString()
-            boolean r7 = kotlin.jvm.internal.C12880j.m40224a(r7, r8)
+            boolean r7 = kotlin.jvm.internal.Intrinsics.areEqual(r7, r8)
             if (r7 == 0) goto L_0x0051
         L_0x0050:
             r1 = 1
@@ -420,11 +420,11 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         }
         CallableMemberDescriptor callableMemberDescriptor = (CallableMemberDescriptor) memberDescriptor;
         Collection overriddenDescriptors = callableMemberDescriptor.getOverriddenDescriptors();
-        C12880j.m40222a((Object) overriddenDescriptors, "this.overriddenDescriptors");
+        Intrinsics.checkReturnedValueIsNotNull((Object) overriddenDescriptors, "this.overriddenDescriptors");
         if ((!overriddenDescriptors.isEmpty()) && classDescriptor.getModality() != Modality.FINAL) {
             return Modality.OPEN;
         }
-        if (classDescriptor.getKind() != ClassKind.INTERFACE || !(!C12880j.m40224a((Object) callableMemberDescriptor.getVisibility(), (Object) Visibilities.PRIVATE))) {
+        if (classDescriptor.getKind() != ClassKind.INTERFACE || !(!Intrinsics.areEqual((Object) callableMemberDescriptor.getVisibility(), (Object) Visibilities.PRIVATE))) {
             return Modality.FINAL;
         }
         Modality modality = callableMemberDescriptor.getModality();
@@ -473,7 +473,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             r4 = 1
             if (r0 == 0) goto L_0x0043
             java.util.Collection r0 = r7.getOverriddenDescriptors()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)
             boolean r5 = r0 instanceof java.util.Collection
             if (r5 == 0) goto L_0x001f
             boolean r5 = r0.isEmpty()
@@ -488,7 +488,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             if (r5 == 0) goto L_0x001d
             java.lang.Object r5 = r0.next()
             kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor r5 = (kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor) r5
-            kotlin.jvm.internal.C12880j.m40222a(r5, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r1)
             boolean r5 = r5.isOperator()
             if (r5 == 0) goto L_0x0023
             r0 = 0
@@ -505,7 +505,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             boolean r5 = r7.isInfix()
             if (r5 == 0) goto L_0x0080
             java.util.Collection r5 = r7.getOverriddenDescriptors()
-            kotlin.jvm.internal.C12880j.m40222a(r5, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r2)
             boolean r2 = r5 instanceof java.util.Collection
             if (r2 == 0) goto L_0x005d
             boolean r2 = r5.isEmpty()
@@ -520,7 +520,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             if (r5 == 0) goto L_0x005b
             java.lang.Object r5 = r2.next()
             kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor r5 = (kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor) r5
-            kotlin.jvm.internal.C12880j.m40222a(r5, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r1)
             boolean r5 = r5.isInfix()
             if (r5 == 0) goto L_0x0061
             r1 = 0
@@ -594,7 +594,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             java.lang.Object r3 = r2.next()
             kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor r3 = (kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor) r3
             java.lang.String r4 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             kotlin.reflect.jvm.internal.impl.name.Name r3 = r3.getName()
             r8.add(r3)
             goto L_0x004e
@@ -705,11 +705,11 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
 
     private final void renderCapturedTypeParametersIfRequired(ClassifierDescriptorWithTypeParameters classifierDescriptorWithTypeParameters, StringBuilder sb) {
         List declaredTypeParameters = classifierDescriptorWithTypeParameters.getDeclaredTypeParameters();
-        C12880j.m40222a((Object) declaredTypeParameters, "classifier.declaredTypeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredTypeParameters, "classifier.declaredTypeParameters");
         TypeConstructor typeConstructor = classifierDescriptorWithTypeParameters.getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "classifier.typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "classifier.typeConstructor");
         List parameters = typeConstructor.getParameters();
-        C12880j.m40222a((Object) parameters, "classifier.typeConstructor.parameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "classifier.typeConstructor.parameters");
         if (getVerbose() && classifierDescriptorWithTypeParameters.isInner() && parameters.size() > declaredTypeParameters.size()) {
             sb.append(" /*captured type parameters: ");
             renderTypeParameterList(sb, parameters.subList(declaredTypeParameters.size(), parameters.size()));
@@ -725,15 +725,15 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             renderAnnotations$default(this, sb, classDescriptor, null, 2, null);
             if (!z) {
                 Visibility visibility = classDescriptor.getVisibility();
-                C12880j.m40222a((Object) visibility, "klass.visibility");
+                Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "klass.visibility");
                 renderVisibility(visibility, sb);
             }
             if (!(classDescriptor.getKind() == ClassKind.INTERFACE && classDescriptor.getModality() == Modality.ABSTRACT)) {
                 ClassKind kind = classDescriptor.getKind();
-                C12880j.m40222a((Object) kind, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) kind, str);
                 if (!kind.isSingleton() || classDescriptor.getModality() != Modality.FINAL) {
                     Modality modality = classDescriptor.getModality();
-                    C12880j.m40222a((Object) modality, "klass.modality");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) modality, "klass.modality");
                     renderModality(modality, sb, implicitModalityWithoutExtensions(classDescriptor));
                 }
             }
@@ -753,22 +753,22 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         }
         if (!z) {
             List declaredTypeParameters = classDescriptor.getDeclaredTypeParameters();
-            C12880j.m40222a((Object) declaredTypeParameters, "klass.declaredTypeParameters");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaredTypeParameters, "klass.declaredTypeParameters");
             renderTypeParameters(declaredTypeParameters, sb, false);
             renderCapturedTypeParametersIfRequired(classDescriptor, sb);
             ClassKind kind2 = classDescriptor.getKind();
-            C12880j.m40222a((Object) kind2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) kind2, str);
             if (!kind2.isSingleton() && getClassWithPrimaryConstructor()) {
                 ClassConstructorDescriptor unsubstitutedPrimaryConstructor = classDescriptor.getUnsubstitutedPrimaryConstructor();
                 if (unsubstitutedPrimaryConstructor != null) {
                     sb.append(" ");
                     renderAnnotations$default(this, sb, unsubstitutedPrimaryConstructor, null, 2, null);
                     Visibility visibility2 = unsubstitutedPrimaryConstructor.getVisibility();
-                    C12880j.m40222a((Object) visibility2, "primaryConstructor.visibility");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) visibility2, "primaryConstructor.visibility");
                     renderVisibility(visibility2, sb);
                     sb.append(renderKeyword("constructor"));
                     List valueParameters = unsubstitutedPrimaryConstructor.getValueParameters();
-                    C12880j.m40222a((Object) valueParameters, "primaryConstructor.valueParameters");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "primaryConstructor.valueParameters");
                     renderValueParameters(valueParameters, unsubstitutedPrimaryConstructor.hasSynthesizedParameterNames(), sb);
                 }
             }
@@ -791,16 +791,16 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             if (containingDeclaration != null) {
                 sb.append("of ");
                 Name name = containingDeclaration.getName();
-                C12880j.m40222a((Object) name, "containingDeclaration.name");
+                Intrinsics.checkReturnedValueIsNotNull((Object) name, "containingDeclaration.name");
                 sb.append(renderName(name, false));
             }
         }
-        if (getVerbose() || (!C12880j.m40224a((Object) declarationDescriptor.getName(), (Object) SpecialNames.DEFAULT_NAME_FOR_COMPANION_OBJECT))) {
+        if (getVerbose() || (!Intrinsics.areEqual((Object) declarationDescriptor.getName(), (Object) SpecialNames.DEFAULT_NAME_FOR_COMPANION_OBJECT))) {
             if (!getStartFromName()) {
                 renderSpaceIfNeeded(sb);
             }
             Name name2 = declarationDescriptor.getName();
-            C12880j.m40222a((Object) name2, "descriptor.name");
+            Intrinsics.checkReturnedValueIsNotNull((Object) name2, "descriptor.name");
             sb.append(renderName(name2, true));
         }
     }
@@ -825,7 +825,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             } else if (value instanceof NormalClass) {
                 NormalClass normalClass = (NormalClass) value;
                 String asString = normalClass.getClassId().asSingleFqName().asString();
-                C12880j.m40222a((Object) asString, "classValue.classId.asSingleFqName().asString()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) asString, "classValue.classId.asSingleFqName().asString()");
                 int arrayDimensions = normalClass.getArrayDimensions();
                 for (int i = 0; i < arrayDimensions; i++) {
                     StringBuilder sb2 = new StringBuilder();
@@ -849,7 +849,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         StringBuilder sb2 = sb;
         renderAnnotations$default(this, sb, constructorDescriptor, null, 2, null);
         Visibility visibility = constructorDescriptor.getVisibility();
-        C12880j.m40222a((Object) visibility, "constructor.visibility");
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "constructor.visibility");
         boolean renderVisibility = renderVisibility(visibility, sb2);
         renderMemberKind(constructorDescriptor, sb);
         boolean z = getRenderConstructorKeyword() || !constructorDescriptor.isPrimary() || renderVisibility;
@@ -857,7 +857,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             sb2.append(renderKeyword("constructor"));
         }
         ClassifierDescriptorWithTypeParameters containingDeclaration = constructorDescriptor.getContainingDeclaration();
-        C12880j.m40222a((Object) containingDeclaration, "constructor.containingDeclaration");
+        Intrinsics.checkReturnedValueIsNotNull((Object) containingDeclaration, "constructor.containingDeclaration");
         String str = "constructor.typeParameters";
         if (getSecondaryConstructorsAsPrimary()) {
             if (z) {
@@ -865,17 +865,17 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             }
             renderName(containingDeclaration, sb2, true);
             List typeParameters = constructorDescriptor.getTypeParameters();
-            C12880j.m40222a((Object) typeParameters, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, str);
             renderTypeParameters(typeParameters, sb2, false);
         }
         List valueParameters = constructorDescriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters, "constructor.valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "constructor.valueParameters");
         renderValueParameters(valueParameters, constructorDescriptor.hasSynthesizedParameterNames(), sb2);
         if (getRenderConstructorDelegation() && !constructorDescriptor.isPrimary() && (containingDeclaration instanceof ClassDescriptor)) {
             ClassConstructorDescriptor unsubstitutedPrimaryConstructor = ((ClassDescriptor) containingDeclaration).getUnsubstitutedPrimaryConstructor();
             if (unsubstitutedPrimaryConstructor != null) {
                 List valueParameters2 = unsubstitutedPrimaryConstructor.getValueParameters();
-                C12880j.m40222a((Object) valueParameters2, "primaryConstructor.valueParameters");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters2, "primaryConstructor.valueParameters");
                 ArrayList arrayList = new ArrayList();
                 for (Object next : valueParameters2) {
                     ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) next;
@@ -892,7 +892,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         }
         if (getSecondaryConstructorsAsPrimary()) {
             List typeParameters2 = constructorDescriptor.getTypeParameters();
-            C12880j.m40222a((Object) typeParameters2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters2, str);
             renderWhereSuffix(typeParameters2, sb2);
         }
     }
@@ -939,7 +939,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             if (!getStartFromDeclarationKeyword()) {
                 renderAnnotations$default(this, sb, functionDescriptor, null, 2, null);
                 Visibility visibility = functionDescriptor.getVisibility();
-                C12880j.m40222a((Object) visibility, "function.visibility");
+                Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "function.visibility");
                 renderVisibility(visibility, sb);
                 renderModalityForCallable(functionDescriptor, sb);
                 if (getIncludeAdditionalModifiers()) {
@@ -964,13 +964,13 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             sb.append(renderKeyword("fun"));
             sb.append(" ");
             List typeParameters = functionDescriptor.getTypeParameters();
-            C12880j.m40222a((Object) typeParameters, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, str);
             renderTypeParameters(typeParameters, sb, true);
             renderReceiver(functionDescriptor, sb);
         }
         renderName(functionDescriptor, sb, true);
         List valueParameters = functionDescriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters, "function.valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "function.valueParameters");
         renderValueParameters(valueParameters, functionDescriptor.hasSynthesizedParameterNames(), sb);
         renderReceiverAfterName(functionDescriptor, sb);
         KotlinType returnType = functionDescriptor.getReturnType();
@@ -979,7 +979,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             sb.append(returnType == null ? "[NULL]" : renderType(returnType));
         }
         List typeParameters2 = functionDescriptor.getTypeParameters();
-        C12880j.m40222a((Object) typeParameters2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters2, str);
         renderWhereSuffix(typeParameters2, sb);
     }
 
@@ -1032,7 +1032,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             }
             if (getParameterNamesInFunctionalTypes()) {
                 KotlinType type = typeProjection.getType();
-                C12880j.m40222a((Object) type, "typeProjection.type");
+                Intrinsics.checkReturnedValueIsNotNull((Object) type, "typeProjection.type");
                 name = FunctionTypesKt.extractParameterNameFromFunctionTypeArgument(type);
             } else {
                 name = null;
@@ -1061,7 +1061,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             ConstantValue compileTimeInitializer = variableDescriptor.getCompileTimeInitializer();
             if (compileTimeInitializer != null) {
                 sb.append(" = ");
-                C12880j.m40222a((Object) compileTimeInitializer, "constant");
+                Intrinsics.checkReturnedValueIsNotNull((Object) compileTimeInitializer, "constant");
                 sb.append(escape(renderConstant(compileTimeInitializer)));
             }
         }
@@ -1091,7 +1091,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             String name = callableMemberDescriptor.getKind().name();
             if (name != null) {
                 String lowerCase = name.toLowerCase();
-                C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
                 sb.append(lowerCase);
                 sb.append("*/ ");
             } else {
@@ -1116,7 +1116,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             String name = modality.name();
             if (name != null) {
                 String lowerCase = name.toLowerCase();
-                C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
                 renderModifier(sb, contains, lowerCase);
                 return;
             }
@@ -1127,7 +1127,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     private final void renderModalityForCallable(CallableMemberDescriptor callableMemberDescriptor, StringBuilder sb) {
         if ((!DescriptorUtils.isTopLevelDeclaration(callableMemberDescriptor) || callableMemberDescriptor.getModality() != Modality.FINAL) && !(getOverrideRenderingPolicy() == OverrideRenderingPolicy.RENDER_OVERRIDE && callableMemberDescriptor.getModality() == Modality.OPEN && overridesSomething(callableMemberDescriptor))) {
             Modality modality = callableMemberDescriptor.getModality();
-            C12880j.m40222a((Object) modality, "callable.modality");
+            Intrinsics.checkReturnedValueIsNotNull((Object) modality, "callable.modality");
             renderModality(modality, sb, implicitModalityWithoutExtensions(callableMemberDescriptor));
         }
     }
@@ -1195,7 +1195,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     private final void renderPackageHeader(FqName fqName, String str, StringBuilder sb) {
         sb.append(renderKeyword(str));
         FqNameUnsafe unsafe = fqName.toUnsafe();
-        C12880j.m40222a((Object) unsafe, "fqName.toUnsafe()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) unsafe, "fqName.toUnsafe()");
         String renderFqName = renderFqName(unsafe);
         if (renderFqName.length() > 0) {
             sb.append(" ");
@@ -1227,7 +1227,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptorWithTypeParameters r0 = r4.getClassifierDescriptor()
             kotlin.reflect.jvm.internal.impl.name.Name r0 = r0.getName()
             java.lang.String r1 = "possiblyInnerType.classifierDescriptor.name"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             r1 = 0
             java.lang.String r0 = r2.renderName(r0, r1)
             r3.append(r0)
@@ -1237,7 +1237,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptorWithTypeParameters r0 = r4.getClassifierDescriptor()
             kotlin.reflect.jvm.internal.impl.types.TypeConstructor r0 = r0.getTypeConstructor()
             java.lang.String r1 = "possiblyInnerType.classi…escriptor.typeConstructor"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.lang.String r0 = r2.renderTypeConstructor(r0)
             r3.append(r0)
         L_0x003a:
@@ -1256,7 +1256,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             if (!getStartFromDeclarationKeyword()) {
                 renderPropertyAnnotations(propertyDescriptor, sb);
                 Visibility visibility = propertyDescriptor.getVisibility();
-                C12880j.m40222a((Object) visibility, "property.visibility");
+                Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "property.visibility");
                 renderVisibility(visibility, sb);
                 boolean z = false;
                 renderModifier(sb, getModifiers().contains(DescriptorRendererModifier.CONST) && propertyDescriptor.isConst(), "const");
@@ -1271,19 +1271,19 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             }
             renderValVarPrefix(propertyDescriptor, sb);
             List typeParameters = propertyDescriptor.getTypeParameters();
-            C12880j.m40222a((Object) typeParameters, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, str);
             renderTypeParameters(typeParameters, sb, true);
             renderReceiver(propertyDescriptor, sb);
         }
         renderName(propertyDescriptor, sb, true);
         sb.append(": ");
         KotlinType type = propertyDescriptor.getType();
-        C12880j.m40222a((Object) type, "property.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "property.type");
         sb.append(renderType(type));
         renderReceiverAfterName(propertyDescriptor, sb);
         renderInitializer(propertyDescriptor, sb);
         List typeParameters2 = propertyDescriptor.getTypeParameters();
-        C12880j.m40222a((Object) typeParameters2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters2, str);
         renderWhereSuffix(typeParameters2, sb);
     }
 
@@ -1293,29 +1293,29 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             FieldDescriptor backingField = propertyDescriptor.getBackingField();
             String str = "it";
             if (backingField != null) {
-                C12880j.m40222a((Object) backingField, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) backingField, str);
                 renderAnnotations(sb, backingField, AnnotationUseSiteTarget.FIELD);
             }
             FieldDescriptor delegateField = propertyDescriptor.getDelegateField();
             if (delegateField != null) {
-                C12880j.m40222a((Object) delegateField, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) delegateField, str);
                 renderAnnotations(sb, delegateField, AnnotationUseSiteTarget.PROPERTY_DELEGATE_FIELD);
             }
             if (getPropertyAccessorRenderingPolicy() == PropertyAccessorRenderingPolicy.NONE) {
                 PropertyGetterDescriptor getter = propertyDescriptor.getGetter();
                 if (getter != null) {
-                    C12880j.m40222a((Object) getter, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) getter, str);
                     renderAnnotations(sb, getter, AnnotationUseSiteTarget.PROPERTY_GETTER);
                 }
                 PropertySetterDescriptor setter = propertyDescriptor.getSetter();
                 if (setter != null) {
-                    C12880j.m40222a((Object) setter, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) setter, str);
                     renderAnnotations(sb, setter, AnnotationUseSiteTarget.PROPERTY_SETTER);
-                    C12880j.m40222a((Object) setter, "setter");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) setter, "setter");
                     List valueParameters = setter.getValueParameters();
-                    C12880j.m40222a((Object) valueParameters, "setter.valueParameters");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "setter.valueParameters");
                     ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) C13199w.m40599k(valueParameters);
-                    C12880j.m40222a((Object) valueParameterDescriptor, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, str);
                     renderAnnotations(sb, valueParameterDescriptor, AnnotationUseSiteTarget.SETTER_PARAMETER);
                 }
             }
@@ -1327,7 +1327,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         if (extensionReceiverParameter != null) {
             renderAnnotations(sb, extensionReceiverParameter, AnnotationUseSiteTarget.RECEIVER);
             KotlinType type = extensionReceiverParameter.getType();
-            C12880j.m40222a((Object) type, "receiver.type");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "receiver.type");
             String renderType = renderType(type);
             if (shouldRenderAsPrettyFunctionType(type) && !TypeUtils.isNullableType(type)) {
                 StringBuilder sb2 = new StringBuilder();
@@ -1347,7 +1347,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             if (extensionReceiverParameter != null) {
                 sb.append(" on ");
                 KotlinType type = extensionReceiverParameter.getType();
-                C12880j.m40222a((Object) type, "receiver.type");
+                Intrinsics.checkReturnedValueIsNotNull((Object) type, "receiver.type");
                 sb.append(renderType(type));
             }
         }
@@ -1355,16 +1355,16 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
 
     private final void renderSimpleType(StringBuilder sb, SimpleType simpleType) {
         String str = "???";
-        if (C12880j.m40224a((Object) simpleType, (Object) TypeUtils.CANT_INFER_FUNCTION_PARAM_TYPE) || TypeUtils.isDontCarePlaceholder(simpleType)) {
+        if (Intrinsics.areEqual((Object) simpleType, (Object) TypeUtils.CANT_INFER_FUNCTION_PARAM_TYPE) || TypeUtils.isDontCarePlaceholder(simpleType)) {
             sb.append(str);
         } else if (ErrorUtils.isUninferredParameter(simpleType)) {
             if (getUninferredTypeParameterAsName()) {
                 TypeConstructor constructor = simpleType.getConstructor();
                 if (constructor != null) {
                     TypeParameterDescriptor typeParameterDescriptor = ((UninferredParameterTypeConstructor) constructor).getTypeParameterDescriptor();
-                    C12880j.m40222a((Object) typeParameterDescriptor, "(type.constructor as Uni…).typeParameterDescriptor");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) typeParameterDescriptor, "(type.constructor as Uni…).typeParameterDescriptor");
                     String name = typeParameterDescriptor.getName().toString();
-                    C12880j.m40222a((Object) name, "(type.constructor as Uni…escriptor.name.toString()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) name, "(type.constructor as Uni…escriptor.name.toString()");
                     sb.append(renderError(name));
                 } else {
                     throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.types.ErrorUtils.UninferredParameterTypeConstructor");
@@ -1393,9 +1393,9 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     private final void renderSuperTypes(ClassDescriptor classDescriptor, StringBuilder sb) {
         if (!getWithoutSuperTypes() && !KotlinBuiltIns.isNothing(classDescriptor.getDefaultType())) {
             TypeConstructor typeConstructor = classDescriptor.getTypeConstructor();
-            C12880j.m40222a((Object) typeConstructor, "klass.typeConstructor");
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "klass.typeConstructor");
             Collection supertypes = typeConstructor.getSupertypes();
-            C12880j.m40222a((Object) supertypes, "klass.typeConstructor.supertypes");
+            Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "klass.typeConstructor.supertypes");
             if (!supertypes.isEmpty() && (supertypes.size() != 1 || !KotlinBuiltIns.isAnyOrNullableAny((KotlinType) supertypes.iterator().next()))) {
                 renderSpaceIfNeeded(sb);
                 sb.append(": ");
@@ -1413,14 +1413,14 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     public final void renderTypeAlias(TypeAliasDescriptor typeAliasDescriptor, StringBuilder sb) {
         renderAnnotations$default(this, sb, typeAliasDescriptor, null, 2, null);
         Visibility visibility = typeAliasDescriptor.getVisibility();
-        C12880j.m40222a((Object) visibility, "typeAlias.visibility");
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "typeAlias.visibility");
         renderVisibility(visibility, sb);
         renderMemberModifiers(typeAliasDescriptor, sb);
         sb.append(renderKeyword("typealias"));
         sb.append(" ");
         renderName(typeAliasDescriptor, sb, true);
         List declaredTypeParameters = typeAliasDescriptor.getDeclaredTypeParameters();
-        C12880j.m40222a((Object) declaredTypeParameters, "typeAlias.declaredTypeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredTypeParameters, "typeAlias.declaredTypeParameters");
         renderTypeParameters(declaredTypeParameters, sb, false);
         renderCapturedTypeParametersIfRequired(typeAliasDescriptor, sb);
         sb.append(" = ");
@@ -1467,7 +1467,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             KotlinType kotlinType = (KotlinType) typeParameterDescriptor.getUpperBounds().iterator().next();
             if (!KotlinBuiltIns.isDefaultBound(kotlinType)) {
                 sb.append(str2);
-                C12880j.m40222a((Object) kotlinType, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType, str);
                 sb.append(renderType(kotlinType));
             }
         } else if (z) {
@@ -1478,7 +1478,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                     } else {
                         sb.append(" & ");
                     }
-                    C12880j.m40222a((Object) kotlinType2, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType2, str);
                     sb.append(renderType(kotlinType2));
                     z2 = false;
                 }
@@ -1602,7 +1602,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             r10.append(r8)
             goto L_0x00ae
         L_0x00aa:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r1
         L_0x00ae:
             return
@@ -1626,7 +1626,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
 
     private final void renderVariable(VariableDescriptor variableDescriptor, boolean z, StringBuilder sb, boolean z2) {
         KotlinType type = variableDescriptor.getType();
-        C12880j.m40222a((Object) type, "variable.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "variable.type");
         ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) (!(variableDescriptor instanceof ValueParameterDescriptor) ? null : variableDescriptor);
         KotlinType varargElementType = valueParameterDescriptor != null ? valueParameterDescriptor.getVarargElementType() : null;
         KotlinType kotlinType = varargElementType != null ? varargElementType : type;
@@ -1654,7 +1654,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         if (getNormalizedVisibilities()) {
             visibility = visibility.normalize();
         }
-        if (!getRenderDefaultVisibility() && C12880j.m40224a((Object) visibility, (Object) Visibilities.DEFAULT_VISIBILITY)) {
+        if (!getRenderDefaultVisibility() && Intrinsics.areEqual((Object) visibility, (Object) Visibilities.DEFAULT_VISIBILITY)) {
             return false;
         }
         sb.append(renderKeyword(visibility.getDisplayName()));
@@ -1667,14 +1667,14 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             ArrayList arrayList = new ArrayList(0);
             for (TypeParameterDescriptor typeParameterDescriptor : list) {
                 List upperBounds = typeParameterDescriptor.getUpperBounds();
-                C12880j.m40222a((Object) upperBounds, "typeParameter.upperBounds");
+                Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds, "typeParameter.upperBounds");
                 for (KotlinType kotlinType : C13199w.m40571c((Iterable) upperBounds, 1)) {
                     StringBuilder sb2 = new StringBuilder();
                     Name name = typeParameterDescriptor.getName();
-                    C12880j.m40222a((Object) name, "typeParameter.name");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) name, "typeParameter.name");
                     sb2.append(renderName(name, false));
                     sb2.append(" : ");
-                    C12880j.m40222a((Object) kotlinType, "it");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType, "it");
                     sb2.append(renderType(kotlinType));
                     arrayList.add(sb2.toString());
                 }
@@ -1696,16 +1696,16 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             if (str != null) {
                 String substring = str.substring(length);
                 String str7 = "(this as java.lang.String).substring(startIndex)";
-                C12880j.m40222a((Object) substring, str7);
+                Intrinsics.checkReturnedValueIsNotNull((Object) substring, str7);
                 int length2 = str4.length();
                 if (str3 != null) {
                     String substring2 = str3.substring(length2);
-                    C12880j.m40222a((Object) substring2, str7);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) substring2, str7);
                     StringBuilder sb = new StringBuilder();
                     sb.append(str5);
                     sb.append(substring);
                     String sb2 = sb.toString();
-                    if (C12880j.m40224a((Object) substring, (Object) substring2)) {
+                    if (Intrinsics.areEqual((Object) substring, (Object) substring2)) {
                         return sb2;
                     }
                     if (differsOnlyInNullability(substring, substring2)) {
@@ -1978,7 +1978,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             appendDefinedIn(sb, declarationDescriptor);
         }
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
         return sb2;
     }
 
@@ -2003,7 +2003,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             sb.append(" /* annotation class not found */");
         }
         String sb3 = sb.toString();
-        C12880j.m40222a((Object) sb3, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb3, "StringBuilder().apply(builderAction).toString()");
         return sb3;
     }
 
@@ -2020,7 +2020,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         if (!differsOnlyInNullability(str, str2)) {
             ClassifierNamePolicy classifierNamePolicy = getClassifierNamePolicy();
             ClassDescriptor collection = kotlinBuiltIns.getCollection();
-            C12880j.m40222a((Object) collection, "builtIns.collection");
+            Intrinsics.checkReturnedValueIsNotNull((Object) collection, "builtIns.collection");
             String b = C12833x.m40163b(classifierNamePolicy.renderClassifier(collection, this), "Collection", (String) null, 2, (Object) null);
             String str5 = "Mutable";
             StringBuilder sb = new StringBuilder();
@@ -2053,7 +2053,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             }
             ClassifierNamePolicy classifierNamePolicy2 = getClassifierNamePolicy();
             ClassDescriptor array = kotlinBuiltIns.getArray();
-            C12880j.m40222a((Object) array, "builtIns.array");
+            Intrinsics.checkReturnedValueIsNotNull((Object) array, "builtIns.array");
             String b2 = C12833x.m40163b(classifierNamePolicy2.renderClassifier(array, this), "Array", (String) null, 2, (Object) null);
             StringBuilder sb9 = new StringBuilder();
             sb9.append(b2);
@@ -2093,7 +2093,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
 
     public String renderFqName(FqNameUnsafe fqNameUnsafe) {
         List pathSegments = fqNameUnsafe.pathSegments();
-        C12880j.m40222a((Object) pathSegments, "fqName.pathSegments()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) pathSegments, "fqName.pathSegments()");
         return renderFqName(pathSegments);
     }
 
@@ -2128,7 +2128,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         StringBuilder sb = new StringBuilder();
         renderNormalizedType(sb, (KotlinType) getTypeNormalizer().invoke(kotlinType));
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
         return sb2;
     }
 
@@ -2141,7 +2141,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         appendTypeProjections(sb, list);
         sb.append(m40245gt());
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
         return sb2;
     }
 
@@ -2163,7 +2163,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         StringBuilder sb = new StringBuilder();
         appendTypeProjections(sb, C13183n.m40498a(typeProjection));
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
         return sb2;
     }
 
@@ -2230,7 +2230,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     /* access modifiers changed from: private */
     public final void renderName(DeclarationDescriptor declarationDescriptor, StringBuilder sb, boolean z) {
         Name name = declarationDescriptor.getName();
-        C12880j.m40222a((Object) name, "descriptor.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "descriptor.name");
         sb.append(renderName(name, z));
     }
 }

@@ -39,7 +39,7 @@ public final class C6828j {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f15270c, (java.lang.Object) r3.f15270c) != false) goto L_0x0029;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f15270c, (java.lang.Object) r3.f15270c) != false) goto L_0x0029;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -51,15 +51,15 @@ public final class C6828j {
             com.bamtechmedia.dominguez.profiles.s1.j r3 = (com.bamtechmedia.dominguez.profiles.p259s1.C6828j) r3
             java.lang.String r0 = r2.f15268a
             java.lang.String r1 = r3.f15268a
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.lang.String r0 = r2.f15269b
             java.lang.String r1 = r3.f15269b
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.lang.String r0 = r2.f15270c
             java.lang.String r3 = r3.f15270c
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0027
             goto L_0x0029
         L_0x0027:

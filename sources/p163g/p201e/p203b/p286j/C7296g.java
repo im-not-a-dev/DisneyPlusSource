@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.analytics.C2348e.C2349a;
 import com.bamtechmedia.dominguez.analytics.p059q0.C2450b;
 import com.bamtechmedia.dominguez.analytics.p059q0.C2451c;
 import kotlin.C12907r;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 import p520io.reactivex.Observable;
 import p520io.reactivex.subjects.C11983e;
@@ -37,7 +37,7 @@ public final class C7296g extends C0741y implements C7300k {
         this.f16049W = eVar;
         this.f16050X = cVar;
         PublishSubject q = PublishSubject.m38553q();
-        C12880j.m40222a((Object) q, "PublishSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) q, "PublishSubject.create()");
         this.f16051c = q;
     }
 
@@ -46,7 +46,7 @@ public final class C7296g extends C0741y implements C7300k {
         Uri data = intent.getData();
         if (data != null) {
             String uri = data.buildUpon().scheme("https").build().toString();
-            C12880j.m40222a((Object) uri, "uri.buildUpon().scheme(\"https\").build().toString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) uri, "uri.buildUpon().scheme(\"https\").build().toString()");
             this.f16047U = intent.getData() != null ? HttpUrl.m44643e(uri) : null;
             if (z) {
                 HttpUrl httpUrl = this.f16047U;

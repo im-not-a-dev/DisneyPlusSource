@@ -6,7 +6,7 @@ import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import java.io.IOException;
 public final class C9022f implements C8912g {
 
     /* renamed from: e */
-    private static final int f19809e = C9554k0.m29428b("ID3");
+    private static final int f19809e = Util.m29428b("ID3");
 
     /* renamed from: a */
     private final long f19810a;

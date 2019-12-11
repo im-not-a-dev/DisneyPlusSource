@@ -19,7 +19,7 @@ import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p135s.C4127b0;
 import p163g.p201e.p203b.p330z.C7946e;
 
@@ -285,7 +285,7 @@ public final class C6836a implements C6829k {
             if (pair != null) {
                 str2 = (String) pair.mo31016d();
             }
-            if (C12880j.m40224a((Object) str2, (Object) str)) {
+            if (Intrinsics.areEqual((Object) str2, (Object) str)) {
                 arrayList.add(next);
             }
         }

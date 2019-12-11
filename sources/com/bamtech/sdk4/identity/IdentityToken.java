@@ -2,7 +2,7 @@ package com.bamtech.sdk4.identity;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 
 @DontObfuscate
@@ -15,7 +15,7 @@ public interface IdentityToken {
     public static final class DefaultImpls {
         public static DateTime getExpiration(IdentityToken identityToken) {
             DateTime plusSeconds = identityToken.getIssuedAt().plusSeconds(identityToken.getExpiresIn());
-            C12880j.m40222a((Object) plusSeconds, "issuedAt.plusSeconds(expiresIn)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) plusSeconds, "issuedAt.plusSeconds(expiresIn)");
             return plusSeconds;
         }
     }

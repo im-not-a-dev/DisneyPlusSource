@@ -13,7 +13,7 @@ import javax.inject.Provider;
 import kotlin.C12907r;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 
@@ -80,11 +80,11 @@ public final class C2386e implements C2434c {
         this.f6620e = provider;
         this.f6621f = rVar;
         String networkOperatorName = telephonyManager.getNetworkOperatorName();
-        C12880j.m40222a((Object) networkOperatorName, "networkOperatorName");
-        C12880j.m40222a((Object) networkOperatorName, "telephonyManager.run { networkOperatorName }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) networkOperatorName, "networkOperatorName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) networkOperatorName, "telephonyManager.run { networkOperatorName }");
         this.f6616a = networkOperatorName;
         Object obj = this.f6620e.get();
-        C12880j.m40222a(obj, "localeProvider.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "localeProvider.get()");
         this.f6617b = ((Locale) obj).getLanguage();
     }
 
@@ -93,16 +93,16 @@ public final class C2386e implements C2434c {
     public final String m8924b() {
         String str = Build.MANUFACTURER;
         String str2 = Build.MODEL;
-        C12880j.m40222a((Object) str2, "model");
+        Intrinsics.checkReturnedValueIsNotNull((Object) str2, "model");
         String str3 = "null cannot be cast to non-null type java.lang.String";
         if (str2 != null) {
             String lowerCase = str2.toLowerCase();
             String str4 = "(this as java.lang.String).toLowerCase()";
-            C12880j.m40222a((Object) lowerCase, str4);
-            C12880j.m40222a((Object) str, "manufacturer");
+            Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, str4);
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, "manufacturer");
             if (str != null) {
                 String lowerCase2 = str.toLowerCase();
-                C12880j.m40222a((Object) lowerCase2, str4);
+                Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase2, str4);
                 if (C12832w.m40123b(lowerCase, lowerCase2, false, 2, null)) {
                     return C12832w.m40125f(str2);
                 }
@@ -128,14 +128,14 @@ public final class C2386e implements C2434c {
     /* renamed from: d */
     public final String m8928d() {
         String locale = ((Locale) this.f6620e.get()).toString();
-        C12880j.m40222a((Object) locale, "localeProvider.get().toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) locale, "localeProvider.get().toString()");
         return locale;
     }
 
     /* renamed from: a */
     public Single<Map<String, String>> mo11521a() {
         Single<Map<String, String>> b = Single.m38401c((Callable<? extends T>) new C2388b<Object>(this)).mo30220b(this.f6621f);
-        C12880j.m40222a((Object) b, "Single.fromCallable {\n  ….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.fromCallable {\n  ….subscribeOn(ioScheduler)");
         return b;
     }
 }

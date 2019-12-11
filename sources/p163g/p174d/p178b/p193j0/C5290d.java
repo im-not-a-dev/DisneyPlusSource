@@ -1,7 +1,7 @@
 package p163g.p174d.p178b.p193j0;
 
 import java.lang.ref.WeakReference;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.C5326w;
 
 /* renamed from: g.d.b.j0.d */
@@ -67,7 +67,7 @@ public class C5290d {
         if (!(obj instanceof C5290d)) {
             return false;
         }
-        return C12880j.m40224a(((C5290d) obj).f12659b, this.f12659b);
+        return Intrinsics.areEqual(((C5290d) obj).f12659b, this.f12659b);
     }
 
     /* renamed from: f */

@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11733i;
 import p163g.p500m.p501a.C11780y;
 import p520io.reactivex.Single;
@@ -43,7 +43,7 @@ public final class EpisodeDataSource {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13891a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.series.data.EpisodeDataSource.EpisodesResponse) r2).f13891a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13891a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.series.data.EpisodeDataSource.EpisodesResponse) r2).f13891a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -55,7 +55,7 @@ public final class EpisodeDataSource {
                 com.bamtechmedia.dominguez.detail.series.data.EpisodeDataSource$EpisodesResponse r2 = (com.bamtechmedia.dominguez.detail.series.data.EpisodeDataSource.EpisodesResponse) r2
                 java.util.List<com.bamtechmedia.dominguez.core.content.assets.b> r0 = r1.f13891a
                 java.util.List<com.bamtechmedia.dominguez.core.content.assets.b> r2 = r2.f13891a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -125,10 +125,10 @@ public final class EpisodeDataSource {
     public final Single<C3685g> mo18126a(String str, int i, int i2) {
         C3724a aVar = this.f13890a;
         ParameterizedType a = C11780y.m37894a((Type) Map.class, String.class, EpisodesResponse.class);
-        C12880j.m40222a((Object) a, "Types.newParameterizedTy…odesResponse::class.java)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Types.newParameterizedTy…odesResponse::class.java)");
         String str2 = "core/DmcVideos";
         Single<C3685g> g = C3726b.m12662a(aVar, a, str2, C13173j0.m40356a(C12907r.m40244a("seriesId", str), C12907r.m40244a("seasonSequenceNumber", Integer.valueOf(i)), C12907r.m40244a("episodeSequenceNumber", Integer.valueOf(i2))), null, 8, null).mo30233g(C6027a.f13892c);
-        C12880j.m40222a((Object) g, "searchApi.search<Map<Str…nce<Episode>()?.first() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.search<Map<Str…nce<Episode>()?.first() }");
         return g;
     }
 }

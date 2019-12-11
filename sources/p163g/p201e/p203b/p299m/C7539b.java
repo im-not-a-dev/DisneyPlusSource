@@ -2,7 +2,7 @@ package p163g.p201e.p203b.p299m;
 
 import androidx.fragment.app.C0532d;
 import androidx.fragment.app.C0538i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.e.b.m.b */
 /* compiled from: AlertDialogCallbackExt.kt */
@@ -10,7 +10,7 @@ public final class C7539b {
     /* renamed from: a */
     public static final void m22448a(C0532d dVar, int i, int i2) {
         C0538i supportFragmentManager = dVar.getSupportFragmentManager();
-        C12880j.m40222a((Object) supportFragmentManager, "supportFragmentManager");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager, "supportFragmentManager");
         if (!m22450a(supportFragmentManager, i, i2)) {
             if (!(dVar instanceof C7536a)) {
                 dVar = null;
@@ -25,7 +25,7 @@ public final class C7539b {
     /* renamed from: a */
     public static final void m22447a(C0532d dVar) {
         C0538i supportFragmentManager = dVar.getSupportFragmentManager();
-        C12880j.m40222a((Object) supportFragmentManager, "supportFragmentManager");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager, "supportFragmentManager");
         if (!m22449a(supportFragmentManager)) {
             if (!(dVar instanceof C7536a)) {
                 dVar = null;
@@ -49,7 +49,7 @@ public final class C7539b {
             if (r4 == 0) goto L_0x0019
             androidx.fragment.app.i r2 = r4.getChildFragmentManager()
             java.lang.String r3 = "child.childFragmentManager"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             boolean r2 = m22450a(r2, r5, r6)
             if (r2 == 0) goto L_0x0019
             r2 = 1
@@ -87,7 +87,7 @@ public final class C7539b {
             if (r4 == 0) goto L_0x0019
             androidx.fragment.app.i r2 = r4.getChildFragmentManager()
             java.lang.String r3 = "child.childFragmentManager"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             boolean r2 = m22449a(r2)
             if (r2 == 0) goto L_0x0019
             r2 = 1

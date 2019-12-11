@@ -15,7 +15,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p590y.C13180m;
 import p163g.p201e.p203b.p330z.C7944c;
@@ -68,7 +68,7 @@ public final class C7012k {
             if (this != obj) {
                 if (obj instanceof C7013a) {
                     C7013a aVar = (C7013a) obj;
-                    if (C12880j.m40224a((Object) this.f15580a, (Object) aVar.f15580a)) {
+                    if (Intrinsics.areEqual((Object) this.f15580a, (Object) aVar.f15580a)) {
                         if (this.f15581b == aVar.f15581b) {
                             return true;
                         }
@@ -161,7 +161,7 @@ public final class C7012k {
         boolean z2 = z;
         float dimension = this.f15576b.getResources().getDimension(C7944c.vader_grid_start_margin);
         Resources resources = this.f15576b.getResources();
-        C12880j.m40222a((Object) resources, "context.resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "context.resources");
         int i2 = (int) (((((float) resources.getDisplayMetrics().widthPixels) - (dimension * ((float) 2))) - ((float) (this.f15575a * 7))) / ((float) 7));
         List d = aVar.mo19449d();
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) d, 10));

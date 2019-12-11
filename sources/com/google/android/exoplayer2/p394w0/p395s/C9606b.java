@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.C8872q;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.nio.ByteBuffer;
 
@@ -98,7 +98,7 @@ public class C9606b extends C8872q {
                     float[] a = m29727a(eVar.f19023V);
                     if (a != null) {
                         C9605a aVar = this.f22464g0;
-                        C9554k0.m29394a(aVar);
+                        Util.castNonNull(aVar);
                         aVar.mo24423a(this.f22465h0 - this.f22463f0, a);
                     }
                 }

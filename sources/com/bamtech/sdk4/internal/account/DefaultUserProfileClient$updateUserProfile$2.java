@@ -16,7 +16,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.Dust$Events;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Single;
@@ -53,9 +53,9 @@ final class DefaultUserProfileClient$updateUserProfile$2<T, R> implements Functi
         String profile_update = AccountServiceConfigurationKt.getPROFILE_UPDATE(Dust$Events.INSTANCE);
         Call a2 = C1691e.m7799a(a);
         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new C1825xf7dde33b(a2)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single<Boolean> g = b.mo30222c((Consumer<? super Disposable>) new C1826xf7dde33c<Object>(serviceTransaction2, profile_update)).mo30218b((Consumer<? super Throwable>) new C1827xf7dde33d<Object>(a, serviceTransaction2, profile_update)).mo30233g(new C1828xf7dde33e(serviceTransaction2, profile_update));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g;
     }
 }

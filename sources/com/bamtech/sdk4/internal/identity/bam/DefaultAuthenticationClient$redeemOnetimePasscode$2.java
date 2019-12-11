@@ -15,7 +15,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.Dust$Events;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Single;
@@ -52,9 +52,9 @@ final class DefaultAuthenticationClient$redeemOnetimePasscode$2<T, R> implements
         String bam_redeem_one_time_passcode = BamIdentityServiceConfigurationKt.getBAM_REDEEM_ONE_TIME_PASSCODE(Dust$Events.INSTANCE);
         Call a2 = C1691e.m7799a(a);
         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new C1873xd13eb67f(a2)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single<OtpRedeemResponse> g = b.mo30222c((Consumer<? super Disposable>) new C1874xd13eb680<Object>(serviceTransaction2, bam_redeem_one_time_passcode)).mo30218b((Consumer<? super Throwable>) new C1875xd13eb681<Object>(a, serviceTransaction2, bam_redeem_one_time_passcode)).mo30233g(new C1876xd13eb682(serviceTransaction2, bam_redeem_one_time_passcode));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g;
     }
 }

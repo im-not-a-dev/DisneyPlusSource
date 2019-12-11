@@ -32,7 +32,7 @@ import javax.inject.Provider;
 import kotlin.C12898l;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.ReadableInstant;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0010\u0007\n\u0002\b\u0003\n\u0002\u0010\t\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\f\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\r\b\u0007\u0018\u0000 Q2\u00020\u00012\u00020\u0002:\u0001QBS\b\u0007\u0012\b\b\u0001\u0010\u0003\u001a\u00020\u0004\u0012\b\b\u0001\u0010\u0005\u001a\u00020\u0006\u0012\b\b\u0001\u0010\u0007\u001a\u00020\b\u0012\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\n\u0012\u0006\u0010\f\u001a\u00020\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\u0006\u0010\u0010\u001a\u00020\u0011\u0012\u0006\u0010\u0012\u001a\u00020\u0013¢\u0006\u0002\u0010\u0014J\u001c\u00107\u001a\u0002082\b\u00109\u001a\u0004\u0018\u00010:2\b\u0010;\u001a\u0004\u0018\u00010<H\u0007J\u001c\u0010=\u001a\u00020>2\b\u0010?\u001a\u0004\u0018\u00010@2\b\u0010A\u001a\u0004\u0018\u00010:H\u0016J\b\u0010B\u001a\u00020+H\u0002J\u0012\u0010C\u001a\u00020+2\b\u0010A\u001a\u0004\u0018\u00010:H\u0007J\r\u0010D\u001a\u00020EH\u0000¢\u0006\u0002\bFJ\b\u0010G\u001a\u00020>H\u0016J\u0010\u0010H\u001a\u00020>2\u0006\u0010I\u001a\u00020+H\u0016J \u0010J\u001a\u00020>2\u0006\u0010K\u001a\u00020$2\u0006\u0010L\u001a\u00020$2\u0006\u0010M\u001a\u00020 H\u0016J\b\u0010N\u001a\u00020>H\u0016J\u0010\u0010O\u001a\u00020>2\u0006\u0010P\u001a\u00020EH\u0007R\u0011\u0010\u0012\u001a\u00020\u0013¢\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0016R\u0011\u0010\u0007\u001a\u00020\b¢\u0006\b\n\u0000\u001a\u0004\b\u0017\u0010\u0018R\u0011\u0010\u000e\u001a\u00020\u000f¢\u0006\b\n\u0000\u001a\u0004\b\u0019\u0010\u001aR\u0011\u0010\u0003\u001a\u00020\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u001b\u0010\u001cR\u0011\u0010\u0010\u001a\u00020\u0011¢\u0006\b\n\u0000\u001a\u0004\b\u001d\u0010\u001eR\u001e\u0010!\u001a\u00020 2\u0006\u0010\u001f\u001a\u00020 @RX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\"\u0010#R\u001e\u0010%\u001a\u00020$2\u0006\u0010\u001f\u001a\u00020$@RX\u000e¢\u0006\b\n\u0000\u001a\u0004\b&\u0010'R\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b(\u0010)R$\u0010*\u001a\u00020+8\u0006@\u0006X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b,\u0010-\u001a\u0004\b*\u0010.\"\u0004\b/\u00100R\u0014\u00101\u001a\u00020+8VX\u0004¢\u0006\u0006\u001a\u0004\b1\u0010.R\u000e\u00102\u001a\u00020 X\u000e¢\u0006\u0002\n\u0000R\u0011\u0010\f\u001a\u00020\r¢\u0006\b\n\u0000\u001a\u0004\b3\u00104R\u0017\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\n¢\u0006\b\n\u0000\u001a\u0004\b5\u00106¨\u0006R"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/media/offline/workers/DefaultDownload;", "Lcom/bamtech/sdk4/internal/media/offline/workers/Download;", "Lcom/google/android/exoplayer2/offline/Downloader$ProgressListener;", "database", "Lcom/bamtech/sdk4/internal/media/offline/db/OfflineDatabase;", "downloader", "Lcom/google/android/exoplayer2/offline/Downloader;", "cachedMedia", "Lcom/bamtech/sdk4/internal/media/ExoCachedMedia;", "transactionProvider", "Ljavax/inject/Provider;", "Lcom/bamtech/sdk4/internal/service/ServiceTransaction;", "scheduler", "Lcom/bamtech/sdk4/internal/media/offline/DownloadScheduler;", "context", "Landroid/content/Context;", "databaseProvider", "Lcom/google/android/exoplayer2/database/DatabaseProvider;", "cacheProvider", "Lcom/bamtech/sdk4/internal/media/CacheProvider;", "(Lcom/bamtech/sdk4/internal/media/offline/db/OfflineDatabase;Lcom/google/android/exoplayer2/offline/Downloader;Lcom/bamtech/sdk4/internal/media/ExoCachedMedia;Ljavax/inject/Provider;Lcom/bamtech/sdk4/internal/media/offline/DownloadScheduler;Landroid/content/Context;Lcom/google/android/exoplayer2/database/DatabaseProvider;Lcom/bamtech/sdk4/internal/media/CacheProvider;)V", "getCacheProvider", "()Lcom/bamtech/sdk4/internal/media/CacheProvider;", "getCachedMedia", "()Lcom/bamtech/sdk4/internal/media/ExoCachedMedia;", "getContext", "()Landroid/content/Context;", "getDatabase", "()Lcom/bamtech/sdk4/internal/media/offline/db/OfflineDatabase;", "getDatabaseProvider", "()Lcom/google/android/exoplayer2/database/DatabaseProvider;", "<set-?>", "", "downloadPercentage", "getDownloadPercentage", "()F", "", "downloadedBytes", "getDownloadedBytes", "()J", "getDownloader", "()Lcom/google/android/exoplayer2/offline/Downloader;", "isCancelled", "", "isCancelled$annotations", "()V", "()Z", "setCancelled", "(Z)V", "isComplete", "reportedPercentage", "getScheduler", "()Lcom/bamtech/sdk4/internal/media/offline/DownloadScheduler;", "getTransactionProvider", "()Ljavax/inject/Provider;", "calculateRetryCount", "", "oldError", "Lcom/bamtech/sdk4/media/offline/DownloadError;", "uri", "", "cancel", "", "state", "Landroidx/work/WorkInfo$State;", "error", "debounce", "exceededRetryLimit", "getPersistedState", "Lcom/bamtech/sdk4/media/offline/DownloadStatus;", "getPersistedState$plugin_offline_media_release", "loadMedia", "onBytesTransferred", "forceUpdate", "onProgress", "contentLength", "bytesDownloaded", "percentDownloaded", "remove", "updateStatus", "status", "Companion", "plugin-offline-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -103,10 +103,10 @@ public final class DefaultDownload implements Download, C8805a {
             obj = Boolean.valueOf(str.equals(obj));
         }
         int i = 0;
-        if (C12880j.m40224a(obj, (Object) Boolean.valueOf(false)) || obj == null) {
+        if (Intrinsics.areEqual(obj, (Object) Boolean.valueOf(false)) || obj == null) {
             return 1;
         }
-        if (C12880j.m40224a(obj, (Object) Boolean.valueOf(true))) {
+        if (Intrinsics.areEqual(obj, (Object) Boolean.valueOf(true))) {
             if (downloadError != null) {
                 i = downloadError.getRetriesInitiated();
             }
@@ -130,7 +130,7 @@ public final class DefaultDownload implements Download, C8805a {
                     if ((this.cachedMedia.getStatus() instanceof Cancelled) || (this.cachedMedia.getStatus() instanceof Paused)) {
                         DownloadScheduler downloadScheduler = this.scheduler;
                         Object obj = this.transactionProvider.get();
-                        C12880j.m40222a(obj, "transactionProvider.get()");
+                        Intrinsics.checkReturnedValueIsNotNull(obj, "transactionProvider.get()");
                         downloadScheduler.rescheduleRequestedDownloads((ServiceTransaction) obj).mo30056g();
                     }
                 } else if (i == 3) {
@@ -162,7 +162,7 @@ public final class DefaultDownload implements Download, C8805a {
             }
             return z;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -214,7 +214,7 @@ public final class DefaultDownload implements Download, C8805a {
                 updateStatus(finished);
                 DownloadScheduler downloadScheduler = this.scheduler;
                 Object obj = this.transactionProvider.get();
-                C12880j.m40222a(obj, "transactionProvider.get()");
+                Intrinsics.checkReturnedValueIsNotNull(obj, "transactionProvider.get()");
                 downloadScheduler.rescheduleRequestedDownloads((ServiceTransaction) obj).mo30056g();
             }
         } catch (Throwable th) {
@@ -262,13 +262,13 @@ public final class DefaultDownload implements Download, C8805a {
         this.cacheProvider.removeCache(this.cachedMedia);
         ExoCachedMedia exoCachedMedia = this.cachedMedia;
         Context applicationContext = this.context.getApplicationContext();
-        C12880j.m40222a((Object) applicationContext, "context.applicationContext");
+        Intrinsics.checkReturnedValueIsNotNull((Object) applicationContext, "context.applicationContext");
         C9484s.m29158a(exoCachedMedia.getFileLocation(applicationContext), this.databaseProvider);
     }
 
     public final void updateStatus(DownloadStatus downloadStatus) {
         if (this.cachedMedia.getStatus().getTimestamp().compareTo((ReadableInstant) downloadStatus.getTimestamp()) <= 0) {
-            if (!(downloadStatus instanceof DownloadErrorStatus) || ((DownloadErrorStatus) downloadStatus).getError() != null || !C12880j.m40224a((Object) this.cachedMedia.getStatus().getName(), (Object) downloadStatus.getName())) {
+            if (!(downloadStatus instanceof DownloadErrorStatus) || ((DownloadErrorStatus) downloadStatus).getError() != null || !Intrinsics.areEqual((Object) this.cachedMedia.getStatus().getName(), (Object) downloadStatus.getName())) {
                 this.cachedMedia.setStatus(downloadStatus);
                 DownloadStatusEntryKt.updateEntry(this.cachedMedia.getStatus(), this.database.cachedMediaDao(), this.cachedMedia.getId());
             }

@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.utils;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: numbers.kt */
 public final class NumberWithRadix {
@@ -24,7 +24,7 @@ public final class NumberWithRadix {
         if (this != obj) {
             if (obj instanceof NumberWithRadix) {
                 NumberWithRadix numberWithRadix = (NumberWithRadix) obj;
-                if (C12880j.m40224a((Object) this.number, (Object) numberWithRadix.number)) {
+                if (Intrinsics.areEqual((Object) this.number, (Object) numberWithRadix.number)) {
                     if (this.radix == numberWithRadix.radix) {
                         return true;
                     }

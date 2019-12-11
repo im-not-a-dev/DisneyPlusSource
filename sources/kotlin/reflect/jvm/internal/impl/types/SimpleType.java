@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer;
@@ -30,7 +30,7 @@ public abstract class SimpleType extends UnwrappedType implements SimpleTypeMark
             sb.append("?");
         }
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
         return sb2;
     }
 }

@@ -8,7 +8,7 @@ import java.lang.reflect.Modifier;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -37,7 +37,7 @@ public final class AndroidExceptionPreHandler extends C12680a implements Corouti
     public void handleException(C12688f fVar, Throwable th) {
         Thread currentThread = Thread.currentThread();
         if (VERSION.SDK_INT >= 28) {
-            C12880j.m40222a((Object) currentThread, "thread");
+            Intrinsics.checkReturnedValueIsNotNull((Object) currentThread, "thread");
             currentThread.getUncaughtExceptionHandler().uncaughtException(currentThread, th);
             return;
         }
@@ -56,7 +56,7 @@ public final class AndroidExceptionPreHandler extends C12680a implements Corouti
         boolean z = false;
         try {
             Method declaredMethod = Thread.class.getDeclaredMethod("getUncaughtExceptionPreHandler", new Class[0]);
-            C12880j.m40222a((Object) declaredMethod, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaredMethod, "it");
             if (Modifier.isPublic(declaredMethod.getModifiers()) && Modifier.isStatic(declaredMethod.getModifiers())) {
                 z = true;
             }

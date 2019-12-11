@@ -13,7 +13,7 @@ import java.util.Map;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.C12853n;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p135s.C4127b0;
 import p096e.p121h.p135s.C4187x;
@@ -88,7 +88,7 @@ public final class C5977a extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13814V, (java.lang.Object) r3.f13814V) != false) goto L_0x0029;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13814V, (java.lang.Object) r3.f13814V) != false) goto L_0x0029;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -100,15 +100,15 @@ public final class C5977a extends C11866a {
             com.bamtechmedia.dominguez.detail.common.item.a r3 = (com.bamtechmedia.dominguez.detail.common.item.C5977a) r3
             com.bamtechmedia.dominguez.detail.common.e0.c r0 = r2.f13815c
             com.bamtechmedia.dominguez.detail.common.e0.c r1 = r3.f13815c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             com.bamtechmedia.dominguez.config.r0 r0 = r2.f13813U
             com.bamtechmedia.dominguez.config.r0 r1 = r3.f13813U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             com.bamtechmedia.dominguez.detail.common.g0.c r0 = r2.f13814V
             com.bamtechmedia.dominguez.detail.common.g0.c r3 = r3.f13814V
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0027
             goto L_0x0029
         L_0x0027:
@@ -156,10 +156,10 @@ public final class C5977a extends C11866a {
 
     public void bind(C11867b bVar, int i) {
         TextView textView = (TextView) bVar.mo20994a().findViewById(C7310d.browsable_details_item_title);
-        C12880j.m40222a((Object) textView, "browsable_details_item_title");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "browsable_details_item_title");
         textView.setText(this.f13815c.mo17835k());
         TextView textView2 = (TextView) bVar.mo20994a().findViewById(C7310d.browsable_details_item_description);
-        C12880j.m40222a((Object) textView2, "browsable_details_item_description");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "browsable_details_item_description");
         textView2.setText(this.f13815c.mo17826d());
         m19154a((DetailSection) bVar.mo20994a().findViewById(C7310d.browsable_details_section_duration), C3573a.m12035a(this.f13813U, C7313g.detail_duration, (Map) null, 2, (Object) null), this.f13815c.mo17829f());
         m19154a((DetailSection) bVar.mo20994a().findViewById(C7310d.browsable_details_section_release_date), C3573a.m12035a(this.f13813U, C7313g.detail_release_date, (Map) null, 2, (Object) null), this.f13815c.mo17834j());

@@ -49,7 +49,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -285,7 +285,7 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
         if (mVar != null) {
             return mVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -303,11 +303,11 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
 
     public void onGlobalFocusChanged(View view, View view2) {
         Object obj = null;
-        if (C12880j.m40224a(view != null ? view.getTag(C5363f.focusHelperTabView) : null, (Object) Boolean.valueOf(true))) {
+        if (Intrinsics.areEqual(view != null ? view.getTag(C5363f.focusHelperTabView) : null, (Object) Boolean.valueOf(true))) {
             if (view2 != null) {
                 obj = view2.getTag(C5363f.focusHelperGlobalNavItem);
             }
-            if (C12880j.m40224a(obj, (Object) Boolean.valueOf(true))) {
+            if (Intrinsics.areEqual(obj, (Object) Boolean.valueOf(true))) {
                 TabLayout w = m22811w();
                 if (w != null) {
                     w.setDescendantFocusability(DateUtils.FORMAT_NUMERIC_DATE);
@@ -323,7 +323,7 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
             C5755i.m18679a(this, mVar, null, null, new C7752g(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -333,15 +333,15 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
         C5852n0.m18884a(view, false, false, null, 7, null);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(C5363f.landingPageRecyclerView);
         String str = "view.landingPageRecyclerView";
-        C12880j.m40222a((Object) recyclerView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str);
         C3821b bVar = new C3821b(C3822a.f9509k.mo13746a(), new LinearInterpolator(), 250, 150);
         recyclerView.setItemAnimator(bVar);
         mo20655a(findViewById);
         RecyclerViewSnapScrollHelper r = mo12327r();
         C0722m viewLifecycleOwner = getViewLifecycleOwner();
-        C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+        Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
         RecyclerView recyclerView2 = (RecyclerView) view.findViewById(C5363f.landingPageRecyclerView);
-        C12880j.m40222a((Object) recyclerView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
         r.mo17710a(viewLifecycleOwner, recyclerView2, (C5805c) C5806a.f13590a);
         view.getViewTreeObserver().addOnGlobalFocusChangeListener(this);
         TabLayout w = m22811w();
@@ -349,11 +349,11 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
             C7742c cVar = this.f16817j0;
             if (cVar != null) {
                 FocusSearchInterceptConstraintLayout focusSearchInterceptConstraintLayout = (FocusSearchInterceptConstraintLayout) view.findViewById(C5363f.landingPageContainer);
-                C12880j.m40222a((Object) focusSearchInterceptConstraintLayout, "view.landingPageContainer");
+                Intrinsics.checkReturnedValueIsNotNull((Object) focusSearchInterceptConstraintLayout, "view.landingPageContainer");
                 cVar.mo20653a(focusSearchInterceptConstraintLayout, w);
                 return;
             }
-            C12880j.m40227c("accessibilityHelper");
+            Intrinsics.throwUninitializedPropertyAccessException("accessibilityHelper");
             throw null;
         }
     }
@@ -366,9 +366,9 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
     /* renamed from: a */
     public C3503a mo12229a(C11848c<C11863k> cVar) {
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.landingPageRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "landingPageRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "landingPageRecyclerView");
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C5363f.landingPageProgressBar);
-        C12880j.m40222a((Object) progressBar, "landingPageProgressBar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "landingPageProgressBar");
         C3503a aVar = new C3503a(cVar, recyclerView, progressBar, (NoConnectionView) _$_findCachedViewById(C5363f.landingNoConnection), null, null, 48, null);
         return aVar;
     }
@@ -389,12 +389,12 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
         DisneyTitleToolbar disneyTitleToolbar = (DisneyTitleToolbar) _$_findCachedViewById(C5363f.disneyToolbar);
         if (disneyTitleToolbar != null) {
             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.landingPageRecyclerView);
-            C12880j.m40222a((Object) recyclerView, "landingPageRecyclerView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "landingPageRecyclerView");
             C3848a aVar = this.f16816i0;
             if (aVar != null) {
                 DisneyTitleToolbar.m18445a(disneyTitleToolbar, recyclerView, aVar, null, null, null, 0, new C7751f(this), 60, null);
             } else {
-                C12880j.m40227c("backgroundHelper");
+                Intrinsics.throwUninitializedPropertyAccessException("backgroundHelper");
                 throw null;
             }
         }
@@ -409,12 +409,12 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
             if (mVar != null) {
                 mVar.mo20665a(a);
             } else {
-                C12880j.m40227c("viewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("viewModel");
                 throw null;
             }
         }
         TextView textView = (TextView) _$_findCachedViewById(C5363f.landingPageTextView);
-        C12880j.m40222a((Object) textView, "landingPageTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "landingPageTextView");
         C3658a a2 = bVar.mo12653a();
         if (a2 != null) {
             str = a2.getTitle();
@@ -468,14 +468,14 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
                 }
                 Context requireContext = requireContext();
                 String str = "requireContext()";
-                C12880j.m40222a((Object) requireContext, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, str);
                 if (C5837i.m18843e(requireContext)) {
                     i2 = C5366i.Disney_TextAppearance_FacetNav;
                 } else {
                     i2 = C5366i.Disney_TextAppearance_BodyCopyHeadline;
                 }
                 Context requireContext2 = requireContext();
-                C12880j.m40222a((Object) requireContext2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireContext2, str);
                 if (C5837i.m18843e(requireContext2)) {
                     i3 = C5366i.Disney_TextAppearance_H5;
                 } else {
@@ -486,9 +486,9 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
                     Integer valueOf = Integer.valueOf(i3);
                     Integer valueOf2 = Integer.valueOf(i2);
                     C0532d requireActivity = requireActivity();
-                    C12880j.m40222a((Object) requireActivity, "requireActivity()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
                     WindowManager windowManager = requireActivity.getWindowManager();
-                    C12880j.m40222a((Object) windowManager, "requireActivity().windowManager");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) windowManager, "requireActivity().windowManager");
                     aVar.mo17518a(w, i, valueOf, valueOf2, windowManager.getDefaultDisplay(), (Function1<? super C10341g, C13145v>) new C7747b<Object,C13145v>(this, bVar));
                     if (w.isFocused()) {
                         View a2 = C5842k0.m18857a(w, i);
@@ -497,7 +497,7 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
                         }
                     }
                 } else {
-                    C12880j.m40227c("tabLayoutHelper");
+                    Intrinsics.throwUninitializedPropertyAccessException("tabLayoutHelper");
                     throw null;
                 }
             }

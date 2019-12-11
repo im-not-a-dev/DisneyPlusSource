@@ -13,7 +13,7 @@ import com.bamtech.sdk4.session.ReauthorizationHandlerRegistry;
 import com.bamtech.sdk4.session.ReauthorizeMode;
 import com.bamtech.sdk4.session.RenewSessionTransformers;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
@@ -59,7 +59,7 @@ public final class DefaultAccountExtension implements AccountExtension, Reauthor
 
     public Completable authorize(ServiceTransaction serviceTransaction, IdentityToken identityToken) {
         Completable e = this.tokenProvider.ensureValidToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAccountExtension$authorize$1<Object,Object>(this, serviceTransaction, identityToken)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAccountExtension$authorize$2<Object,Object>(this, serviceTransaction)).mo30218b((Consumer<? super Throwable>) new DefaultAccountExtension$authorize$3<Object>(this, serviceTransaction)).mo30227d((Consumer<? super T>) DefaultAccountExtension$authorize$4.INSTANCE).mo30228e();
-        C12880j.m40222a((Object) e, "tokenProvider.ensureVali…         .ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "tokenProvider.ensureVali…         .ignoreElement()");
         return e;
     }
 
@@ -67,7 +67,7 @@ public final class DefaultAccountExtension implements AccountExtension, Reauthor
         Single accessToken = this.tokenProvider.getAccessToken(serviceTransaction);
         DefaultAccountExtension$createAccount$1 defaultAccountExtension$createAccount$1 = new DefaultAccountExtension$createAccount$1(this, serviceTransaction, identityToken, t, z);
         Completable a = accessToken.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultAccountExtension$createAccount$1).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultAccountExtension$createAccount$2<Object,Object>(this, serviceTransaction, identityToken)).mo30036a((Consumer<? super Throwable>) new DefaultAccountExtension$createAccount$3<Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…ring())\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…ring())\n                }");
         return a;
     }
 
@@ -81,7 +81,7 @@ public final class DefaultAccountExtension implements AccountExtension, Reauthor
 
     public <T extends Account> Single<T> getAccount(ServiceTransaction serviceTransaction, Class<T> cls) {
         Single<T> a = this.tokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAccountExtension$getAccount$1<Object,Object>(this, serviceTransaction, cls)).mo30206a(this.renewSessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 }

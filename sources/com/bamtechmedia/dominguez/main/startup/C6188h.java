@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.main.p235x.C6234e;
 import com.bamtechmedia.dominguez.profiles.C6626c0;
 import com.bamtechmedia.dominguez.profiles.C6667g1;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -131,7 +131,7 @@ public final class C6188h implements C6187g {
         /* renamed from: a */
         public final void accept(C6219d dVar) {
             C6234e b = this.f14199c.f14193c;
-            C12880j.m40222a((Object) dVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) dVar, "it");
             b.mo18829a(dVar);
         }
     }
@@ -146,7 +146,7 @@ public final class C6188h implements C6187g {
     public Completable mo18790a() {
         C5855o oVar = C5855o.f13640a;
         Completable e = this.f14191a.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) C6189a.f14194c).mo30202a((C11952h<? super T>) C6190b.f14195c).mo30129e(new C6191c(this)).mo30131f(C6192d.f14197c).mo30109a((SingleSource<? extends T>) Single.m38399b(C6225f.f14262a)).mo30237i(C6193e.f14198c).mo30227d((Consumer<? super T>) new C6194f<Object>(this)).mo30228e();
-        C12880j.m40222a((Object) e, "sessionOnce.flatMap { it…         .ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "sessionOnce.flatMap { it…         .ignoreElement()");
         return e;
     }
 }

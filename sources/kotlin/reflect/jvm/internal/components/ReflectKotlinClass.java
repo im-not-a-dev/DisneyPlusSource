@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.components;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinJvmBinaryClass;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinJvmBinaryClass.AnnotationVisitor;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinJvmBinaryClass.MemberVisitor;
@@ -44,7 +44,7 @@ public final class ReflectKotlinClass implements KotlinJvmBinaryClass {
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof ReflectKotlinClass) && C12880j.m40224a((Object) this.klass, (Object) ((ReflectKotlinClass) obj).klass);
+        return (obj instanceof ReflectKotlinClass) && Intrinsics.areEqual((Object) this.klass, (Object) ((ReflectKotlinClass) obj).klass);
     }
 
     public KotlinClassHeader getClassHeader() {
@@ -62,7 +62,7 @@ public final class ReflectKotlinClass implements KotlinJvmBinaryClass {
     public String getLocation() {
         StringBuilder sb = new StringBuilder();
         String name = this.klass.getName();
-        C12880j.m40222a((Object) name, "klass.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "klass.name");
         sb.append(C12832w.m40115a(name, '.', '/', false, 4, (Object) null));
         sb.append(".class");
         return sb.toString();

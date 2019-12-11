@@ -2,7 +2,7 @@ package kotlinx.coroutines;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlinx.coroutines.l0 */
 /* compiled from: DefaultExecutor.kt */
@@ -27,7 +27,7 @@ public final class C13330l0 extends C13405v0 implements Runnable {
         } catch (SecurityException unused) {
             l = Long.valueOf(1000);
         }
-        C12880j.m40222a((Object) l, "try {\n            java.l…AULT_KEEP_ALIVE\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) l, "try {\n            java.l…AULT_KEEP_ALIVE\n        }");
         f29764Y = timeUnit.toNanos(l.longValue());
     }
 

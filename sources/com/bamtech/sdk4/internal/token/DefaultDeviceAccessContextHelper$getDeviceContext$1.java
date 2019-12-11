@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.service.TransactionResult;
 import com.bamtech.sdk4.token.AccessContext;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
@@ -54,7 +54,7 @@ final class DefaultDeviceAccessContextHelper$getDeviceContext$1<V> implements Ca
         if (contextRetrievalInProgress != null) {
             return contextRetrievalInProgress;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

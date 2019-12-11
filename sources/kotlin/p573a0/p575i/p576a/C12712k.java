@@ -1,7 +1,7 @@
 package kotlin.p573a0.p575i.p576a;
 
 import kotlin.jvm.internal.C12878h;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.p573a0.C12683c;
 
@@ -26,7 +26,7 @@ public abstract class C12712k extends C12711j implements C12878h<Object>, C12713
             return super.toString();
         }
         String a = C12895y.m40228a((C12878h) this);
-        C12880j.m40222a((Object) a, "Reflection.renderLambdaToString(this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Reflection.renderLambdaToString(this)");
         return a;
     }
 }

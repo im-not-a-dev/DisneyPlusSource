@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeAliasDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -28,7 +28,7 @@ public final class AbstractTypeAliasDescriptor$typeConstructor$1 implements Type
 
     public Collection<KotlinType> getSupertypes() {
         Collection<KotlinType> supertypes = getDeclarationDescriptor().getUnderlyingType().getConstructor().getSupertypes();
-        C12880j.m40222a((Object) supertypes, "declarationDescriptor.un…pe.constructor.supertypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "declarationDescriptor.un…pe.constructor.supertypes");
         return supertypes;
     }
 

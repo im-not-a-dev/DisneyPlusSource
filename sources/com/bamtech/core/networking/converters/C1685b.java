@@ -2,7 +2,7 @@ package com.bamtech.core.networking.converters;
 
 import java.nio.charset.Charset;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 import okhttp3.C14258u;
 import okio.BufferedSource;
@@ -22,7 +22,7 @@ public final class C1685b implements Converter {
         Charset charset = C12801c.f29474a;
         if (str != null) {
             Object bytes = str.getBytes(charset);
-            C12880j.m40222a(bytes, "(this as java.lang.String).getBytes(charset)");
+            Intrinsics.checkReturnedValueIsNotNull(bytes, "(this as java.lang.String).getBytes(charset)");
             return bytes;
         }
         throw new C13142s("null cannot be cast to non-null type java.lang.String");

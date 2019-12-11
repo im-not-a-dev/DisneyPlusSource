@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
@@ -287,7 +287,7 @@ public final class AnnotationTypeQualifierResolver {
                         for (Entry entry : allValueArguments.entrySet()) {
                             Name name = (Name) entry.getKey();
                             ConstantValue constantValue = (ConstantValue) entry.getValue();
-                            if (C12880j.m40224a((Object) name, (Object) JvmAnnotationNames.DEFAULT_ANNOTATION_MEMBER_NAME)) {
+                            if (Intrinsics.areEqual((Object) name, (Object) JvmAnnotationNames.DEFAULT_ANNOTATION_MEMBER_NAME)) {
                                 list = mapConstantToQualifierApplicabilityTypes(constantValue);
                             } else {
                                 list = C13185o.m40513a();
@@ -322,10 +322,10 @@ public final class AnnotationTypeQualifierResolver {
                         }
                         return null;
                     }
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }

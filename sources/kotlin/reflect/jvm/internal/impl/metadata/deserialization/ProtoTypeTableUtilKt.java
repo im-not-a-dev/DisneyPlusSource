@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.metadata.deserialization;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Class;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Function;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Property;
@@ -27,7 +27,7 @@ public final class ProtoTypeTableUtilKt {
     public static final Type expandedType(TypeAlias typeAlias, TypeTable typeTable) {
         if (typeAlias.hasExpandedType()) {
             Type expandedType = typeAlias.getExpandedType();
-            C12880j.m40222a((Object) expandedType, "expandedType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) expandedType, "expandedType");
             return expandedType;
         } else if (typeAlias.hasExpandedTypeId()) {
             return typeTable.get(typeAlias.getExpandedTypeId());
@@ -73,7 +73,7 @@ public final class ProtoTypeTableUtilKt {
     public static final Type returnType(Function function, TypeTable typeTable) {
         if (function.hasReturnType()) {
             Type returnType = function.getReturnType();
-            C12880j.m40222a((Object) returnType, "returnType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) returnType, "returnType");
             return returnType;
         } else if (function.hasReturnTypeId()) {
             return typeTable.get(function.getReturnTypeId());
@@ -89,10 +89,10 @@ public final class ProtoTypeTableUtilKt {
         }
         if (supertypeList == null) {
             List<Integer> supertypeIdList = classR.getSupertypeIdList();
-            C12880j.m40222a((Object) supertypeIdList, "supertypeIdList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) supertypeIdList, "supertypeIdList");
             supertypeList = new ArrayList<>(C13187p.m40525a((Iterable) supertypeIdList, 10));
             for (Integer num : supertypeIdList) {
-                C12880j.m40222a((Object) num, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) num, "it");
                 supertypeList.add(typeTable.get(num.intValue()));
             }
         }
@@ -112,7 +112,7 @@ public final class ProtoTypeTableUtilKt {
     public static final Type underlyingType(TypeAlias typeAlias, TypeTable typeTable) {
         if (typeAlias.hasUnderlyingType()) {
             Type underlyingType = typeAlias.getUnderlyingType();
-            C12880j.m40222a((Object) underlyingType, "underlyingType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) underlyingType, "underlyingType");
             return underlyingType;
         } else if (typeAlias.hasUnderlyingTypeId()) {
             return typeTable.get(typeAlias.getUnderlyingTypeId());
@@ -128,10 +128,10 @@ public final class ProtoTypeTableUtilKt {
         }
         if (upperBoundList == null) {
             List<Integer> upperBoundIdList = typeParameter.getUpperBoundIdList();
-            C12880j.m40222a((Object) upperBoundIdList, "upperBoundIdList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) upperBoundIdList, "upperBoundIdList");
             upperBoundList = new ArrayList<>(C13187p.m40525a((Iterable) upperBoundIdList, 10));
             for (Integer num : upperBoundIdList) {
-                C12880j.m40222a((Object) num, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) num, "it");
                 upperBoundList.add(typeTable.get(num.intValue()));
             }
         }
@@ -165,7 +165,7 @@ public final class ProtoTypeTableUtilKt {
     public static final Type type(ValueParameter valueParameter, TypeTable typeTable) {
         if (valueParameter.hasType()) {
             Type type = valueParameter.getType();
-            C12880j.m40222a((Object) type, "type");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "type");
             return type;
         } else if (valueParameter.hasTypeId()) {
             return typeTable.get(valueParameter.getTypeId());
@@ -177,7 +177,7 @@ public final class ProtoTypeTableUtilKt {
     public static final Type returnType(Property property, TypeTable typeTable) {
         if (property.hasReturnType()) {
             Type returnType = property.getReturnType();
-            C12880j.m40222a((Object) returnType, "returnType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) returnType, "returnType");
             return returnType;
         } else if (property.hasReturnTypeId()) {
             return typeTable.get(property.getReturnTypeId());

@@ -5,7 +5,7 @@ import android.widget.ImageView;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p275a0.C7159g;
 import p163g.p201e.p203b.p275a0.C7159g.C7162c;
@@ -71,7 +71,7 @@ public final class C6657f {
             return this.f15000c.mo19958b(U, this.f14998a);
         }
         Completable h = Completable.m38169h();
-        C12880j.m40222a((Object) h, "Completable.complete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
         return h;
     }
 }

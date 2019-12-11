@@ -3,7 +3,7 @@ package p163g.p201e.p203b.p319v;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p299m.C7547h;
 import p163g.p201e.p203b.p299m.p300y.C7576g;
 
@@ -51,7 +51,7 @@ public final class C7909y implements C7908x {
     /* renamed from: b */
     private final void m23123b(boolean z) {
         Editor edit = this.f17043a.edit();
-        C12880j.m40222a((Object) edit, "editor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
         edit.putBoolean("subscriptionMessageRequested", z);
         edit.apply();
     }

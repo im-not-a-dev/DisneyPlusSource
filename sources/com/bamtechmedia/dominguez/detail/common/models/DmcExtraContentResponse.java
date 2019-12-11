@@ -26,7 +26,7 @@ public final class DmcExtraContentResponse {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13819a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.common.models.DmcExtraContentResponse) r2).f13819a) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13819a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.common.models.DmcExtraContentResponse) r2).f13819a) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -38,7 +38,7 @@ public final class DmcExtraContentResponse {
             com.bamtechmedia.dominguez.detail.common.models.DmcExtraContentResponse r2 = (com.bamtechmedia.dominguez.detail.common.models.DmcExtraContentResponse) r2
             com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent r0 = r1.f13819a
             com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent r2 = r2.f13819a
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:

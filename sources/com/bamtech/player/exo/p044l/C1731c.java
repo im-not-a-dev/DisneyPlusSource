@@ -41,7 +41,7 @@ import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.Locale;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtech.player.exo.l.c */
 /* compiled from: EventLogger */
@@ -199,7 +199,7 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
 
     /* renamed from: d */
     public void mo7744d(C8878d dVar) {
-        C14100a.m44522a("videoDisabled [%s]", m8007a());
+        Timber.m44522a("videoDisabled [%s]", m8007a());
     }
 
     public void onDownstreamFormatChanged(int i, MediaPeriodId mediaPeriodId, MediaLoadData mediaLoadData) {
@@ -219,7 +219,7 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
     }
 
     public void onLoadingChanged(boolean z) {
-        C14100a.m44522a("loading [%s]", Boolean.valueOf(z));
+        Timber.m44522a("loading [%s]", Boolean.valueOf(z));
     }
 
     public void onMediaPeriodCreated(int i, MediaPeriodId mediaPeriodId) {
@@ -232,15 +232,15 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
     }
 
     public void onPlayerError(ExoPlaybackException exoPlaybackException) {
-        C14100a.m44528b(exoPlaybackException, "playerFailed [%s]", m8007a());
+        Timber.m44528b(exoPlaybackException, "playerFailed [%s]", m8007a());
     }
 
     public void onPlayerStateChanged(boolean z, int i) {
-        C14100a.m44522a("state [%s, %s, %s]", m8007a(), Boolean.valueOf(z), m8016c(i));
+        Timber.m44522a("state [%s, %s, %s]", m8007a(), Boolean.valueOf(z), m8016c(i));
     }
 
     public void onPositionDiscontinuity(int i) {
-        C14100a.m44522a("positionDiscontinuity", new Object[0]);
+        Timber.m44522a("positionDiscontinuity", new Object[0]);
     }
 
     public void onReadingStarted(int i, MediaPeriodId mediaPeriodId) {
@@ -259,23 +259,23 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
         if (timeline != null) {
             int a = timeline.mo22653a();
             int b = timeline.mo22667b();
-            C14100a.m44522a("sourceInfo [periodCount=%d, windowCount=%d", Integer.valueOf(a), Integer.valueOf(b));
+            Timber.m44522a("sourceInfo [periodCount=%d, windowCount=%d", Integer.valueOf(a), Integer.valueOf(b));
             for (int i2 = 0; i2 < Math.min(a, 3); i2++) {
                 timeline.mo22660a(i2, this.f6012V);
-                C14100a.m44522a("  period [%s]", m8009a(this.f6012V.mo22683c()));
+                Timber.m44522a("  period [%s]", m8009a(this.f6012V.mo22683c()));
             }
             String str = "  ...";
             if (a > 3) {
-                C14100a.m44522a(str, new Object[0]);
+                Timber.m44522a(str, new Object[0]);
             }
             for (int i3 = 0; i3 < Math.min(b, 3); i3++) {
                 timeline.mo22663a(i3, this.f6011U);
-                C14100a.m44522a("  window [%s, %s, %s]", m8009a(this.f6011U.mo22692c()), Boolean.valueOf(this.f6011U.f18399a), Boolean.valueOf(this.f6011U.f18400b));
+                Timber.m44522a("  window [%s, %s, %s]", m8009a(this.f6011U.mo22692c()), Boolean.valueOf(this.f6011U.f18399a), Boolean.valueOf(this.f6011U.f18400b));
             }
             if (b > 3) {
-                C14100a.m44522a(str, new Object[0]);
+                Timber.m44522a(str, new Object[0]);
             }
-            C14100a.m44522a("]", new Object[0]);
+            Timber.m44522a("]", new Object[0]);
         }
     }
 
@@ -285,10 +285,10 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
         String str3;
         C9307a c = this.f6015c.mo24122c();
         if (c == null) {
-            C14100a.m44522a("Tracks []", new Object[0]);
+            Timber.m44522a("Tracks []", new Object[0]);
             return;
         }
-        C14100a.m44522a("Tracks [", new Object[0]);
+        Timber.m44522a("Tracks [", new Object[0]);
         int i = 0;
         while (true) {
             str = "      %s Track:%d, %s, supported=%s";
@@ -302,7 +302,7 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
             TrackGroupArray b = c.mo24130b(i);
             C9311j a = trackSelectionArray.mo24040a(i);
             if (b.f20170c > 0) {
-                C14100a.m44522a("  Renderer:%d [", Integer.valueOf(i));
+                Timber.m44522a("  Renderer:%d [", Integer.valueOf(i));
                 int i3 = 0;
                 while (i3 < b.f20170c) {
                     C9199j0 a2 = b.mo23531a(i3);
@@ -310,11 +310,11 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
                     Object[] objArr = new Object[i2];
                     objArr[0] = Integer.valueOf(i3);
                     objArr[c2] = a3;
-                    C14100a.m44522a("    Group:%d, adaptive_supported=%s [", objArr);
+                    Timber.m44522a("    Group:%d, adaptive_supported=%s [", objArr);
                     for (int i4 = 0; i4 < a2.f20833c; i4++) {
-                        C14100a.m44522a(str, m8010a(a, a2, i4), Integer.valueOf(i4), m8017c(a2.mo23902a(i4)), m8013b(c.mo24125a(i, i3, i4)));
+                        Timber.m44522a(str, m8010a(a, a2, i4), Integer.valueOf(i4), m8017c(a2.mo23902a(i4)), m8013b(c.mo24125a(i, i3, i4)));
                     }
-                    C14100a.m44522a(str3, new Object[0]);
+                    Timber.m44522a(str3, new Object[0]);
                     i3++;
                     i2 = 2;
                     c2 = 1;
@@ -327,32 +327,32 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
                         }
                         Metadata metadata = a.mo24066a(i5).f18347Z;
                         if (metadata != null) {
-                            C14100a.m44522a("    Metadata [", new Object[0]);
+                            Timber.m44522a("    Metadata [", new Object[0]);
                             m8011a(metadata, "      ");
-                            C14100a.m44522a(str3, new Object[0]);
+                            Timber.m44522a(str3, new Object[0]);
                             break;
                         }
                         i5++;
                     }
                 }
-                C14100a.m44522a(str2, new Object[0]);
+                Timber.m44522a(str2, new Object[0]);
             }
             i++;
         }
         TrackGroupArray b2 = c.mo24129b();
         if (b2.f20170c > 0) {
-            C14100a.m44522a("  Renderer:None [", new Object[0]);
+            Timber.m44522a("  Renderer:None [", new Object[0]);
             for (int i6 = 0; i6 < b2.f20170c; i6++) {
-                C14100a.m44522a("    Group:%d [", Integer.valueOf(i6));
+                Timber.m44522a("    Group:%d [", Integer.valueOf(i6));
                 C9199j0 a4 = b2.mo23531a(i6);
                 for (int i7 = 0; i7 < a4.f20833c; i7++) {
-                    C14100a.m44522a(str, m8014b(false), Integer.valueOf(i7), m8017c(a4.mo23902a(i7)), m8013b(0));
+                    Timber.m44522a(str, m8014b(false), Integer.valueOf(i7), m8017c(a4.mo23902a(i7)), m8013b(0));
                 }
-                C14100a.m44522a(str3, new Object[0]);
+                Timber.m44522a(str3, new Object[0]);
             }
-            C14100a.m44522a(str2, new Object[0]);
+            Timber.m44522a(str2, new Object[0]);
         }
-        C14100a.m44522a("]", new Object[0]);
+        Timber.m44522a("]", new Object[0]);
         m8015b();
     }
 
@@ -366,34 +366,34 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
 
     /* renamed from: a */
     public void mo7577a(Metadata metadata) {
-        C14100a.m44522a("onMetadata [", new Object[0]);
+        Timber.m44522a("onMetadata [", new Object[0]);
         m8011a(metadata, "  ");
-        C14100a.m44522a("]", new Object[0]);
+        Timber.m44522a("]", new Object[0]);
     }
 
     /* renamed from: b */
     public void mo7741b(C8878d dVar) {
-        C14100a.m44522a("audioEnabled [%s]", m8007a());
+        Timber.m44522a("audioEnabled [%s]", m8007a());
     }
 
     /* renamed from: a */
     public void mo7732a(int i) {
-        C14100a.m44522a("audioSessionId [%d]", Integer.valueOf(i));
+        Timber.m44522a("audioSessionId [%d]", Integer.valueOf(i));
     }
 
     /* renamed from: b */
     public void mo7742b(String str, long j, long j2) {
-        C14100a.m44522a("audioDecoderInitialized [%s, %s]", m8007a(), str);
+        Timber.m44522a("audioDecoderInitialized [%s, %s]", m8007a(), str);
     }
 
     /* renamed from: a */
     public void mo7738a(C8878d dVar) {
-        C14100a.m44522a("audioDisabled [%s]", m8007a());
+        Timber.m44522a("audioDisabled [%s]", m8007a());
     }
 
     /* renamed from: b */
     public void mo7740b(Format format) {
-        C14100a.m44522a("audioFormatChanged [%s, %s]", m8007a(), m8017c(format));
+        Timber.m44522a("audioFormatChanged [%s, %s]", m8007a(), m8017c(format));
     }
 
     /* renamed from: b */
@@ -401,53 +401,53 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
         String str = "On Device Audio: -----------";
         AudioManager audioManager = (AudioManager) this.f6014X.getSystemService("audio");
         try {
-            C14100a.m44529c(str, new Object[0]);
+            Timber.m44529c(str, new Object[0]);
             StringBuilder sb = new StringBuilder();
             sb.append("EAC3-JOC : ");
             boolean z = true;
             sb.append(!C9275d.m28139b("audio/eac3-joc", false, false).isEmpty());
-            C14100a.m44529c(sb.toString(), new Object[0]);
+            Timber.m44529c(sb.toString(), new Object[0]);
             StringBuilder sb2 = new StringBuilder();
             sb2.append("EAC3 : ");
             sb2.append(!C9275d.m28139b("audio/eac3", false, false).isEmpty());
-            C14100a.m44529c(sb2.toString(), new Object[0]);
+            Timber.m44529c(sb2.toString(), new Object[0]);
             StringBuilder sb3 = new StringBuilder();
             sb3.append("AAC : ");
             if (C9275d.m28139b("audio/mp4a-latm", false, false).isEmpty()) {
                 z = false;
             }
             sb3.append(z);
-            C14100a.m44529c(sb3.toString(), new Object[0]);
-            C14100a.m44529c(str, new Object[0]);
+            Timber.m44529c(sb3.toString(), new Object[0]);
+            Timber.m44529c(str, new Object[0]);
         } catch (C9278c e) {
             e.printStackTrace();
         }
-        C14100a.m44529c("HDMI Capabilities: -------------", new Object[0]);
+        Timber.m44529c("HDMI Capabilities: -------------", new Object[0]);
         StringBuilder sb4 = new StringBuilder();
         sb4.append("JOC: ");
         sb4.append(C8834j.m25613a(this.f6014X).mo23084a(18));
-        C14100a.m44529c(sb4.toString(), new Object[0]);
+        Timber.m44529c(sb4.toString(), new Object[0]);
         StringBuilder sb5 = new StringBuilder();
         sb5.append("eAC3: ");
         sb5.append(C8834j.m25613a(this.f6014X).mo23084a(6));
-        C14100a.m44529c(sb5.toString(), new Object[0]);
+        Timber.m44529c(sb5.toString(), new Object[0]);
         StringBuilder sb6 = new StringBuilder();
         sb6.append("AC3");
         sb6.append(C8834j.m25613a(this.f6014X).mo23084a(5));
-        C14100a.m44529c(sb6.toString(), new Object[0]);
+        Timber.m44529c(sb6.toString(), new Object[0]);
         StringBuilder sb7 = new StringBuilder();
         sb7.append("TruHD: ");
         sb7.append(C8834j.m25613a(this.f6014X).mo23084a(14));
-        C14100a.m44529c(sb7.toString(), new Object[0]);
+        Timber.m44529c(sb7.toString(), new Object[0]);
         StringBuilder sb8 = new StringBuilder();
         sb8.append("DTS: ");
         sb8.append(C8834j.m25613a(this.f6014X).mo23084a(7));
-        C14100a.m44529c(sb8.toString(), new Object[0]);
+        Timber.m44529c(sb8.toString(), new Object[0]);
         StringBuilder sb9 = new StringBuilder();
         sb9.append("FireTV: ");
         sb9.append(audioManager.getParameters("hdmi_encodings").toString());
-        C14100a.m44529c(sb9.toString(), new Object[0]);
-        C14100a.m44529c("Audio Capabilities: -------------", new Object[0]);
+        Timber.m44529c(sb9.toString(), new Object[0]);
+        Timber.m44529c("Audio Capabilities: -------------", new Object[0]);
     }
 
     /* renamed from: a */
@@ -457,22 +457,22 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
 
     /* renamed from: a */
     public void mo7739a(String str, long j, long j2) {
-        C14100a.m44522a("videoDecoderInitialized [%s, %s]", m8007a(), str);
+        Timber.m44522a("videoDecoderInitialized [%s, %s]", m8007a(), str);
     }
 
     /* renamed from: a */
     public void mo7737a(Format format) {
-        C14100a.m44522a("videoFormatChanged [%s, %s]", m8007a(), m8017c(format));
+        Timber.m44522a("videoFormatChanged [%s, %s]", m8007a(), m8017c(format));
     }
 
     /* renamed from: a */
     public void mo7734a(int i, long j) {
-        C14100a.m44522a("droppedFrames [%s, %d]", m8007a(), Integer.valueOf(i));
+        Timber.m44522a("droppedFrames [%s, %d]", m8007a(), Integer.valueOf(i));
     }
 
     /* renamed from: a */
     private void m8012a(String str, Exception exc) {
-        C14100a.m44528b(exc, "internalError [%s, %s]", m8007a(), str);
+        Timber.m44528b(exc, "internalError [%s, %s]", m8007a(), str);
     }
 
     /* renamed from: a */
@@ -481,28 +481,28 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
             C8737b a = metadata.mo22863a(i);
             if (a instanceof C8778l) {
                 C8778l lVar = (C8778l) a;
-                C14100a.m44522a("%s%s: owner=%s", str, lVar.f18626c, lVar.f18635U);
+                Timber.m44522a("%s%s: owner=%s", str, lVar.f18626c, lVar.f18635U);
             } else if (a instanceof C8768g) {
                 C8768g gVar = (C8768g) a;
-                C14100a.m44522a("%s%s: mimeType=%s, filename=%s, description=%s", str, gVar.f18626c, gVar.f18617U, gVar.f18618V, gVar.f18619W);
+                Timber.m44522a("%s%s: mimeType=%s, filename=%s, description=%s", str, gVar.f18626c, gVar.f18617U, gVar.f18618V, gVar.f18619W);
             } else if (a instanceof C8758b) {
                 C8758b bVar = (C8758b) a;
-                C14100a.m44522a("%s%s: mimeType=%s, description=%s", str, bVar.f18626c, bVar.f18598U, bVar.f18599V);
+                Timber.m44522a("%s%s: mimeType=%s, description=%s", str, bVar.f18626c, bVar.f18598U, bVar.f18599V);
             } else if (a instanceof C8780m) {
                 C8780m mVar = (C8780m) a;
-                C14100a.m44522a("%s%s: description=%s", str, mVar.f18626c, mVar.f18637U);
+                Timber.m44522a("%s%s: description=%s", str, mVar.f18626c, mVar.f18637U);
             } else if (a instanceof C8766f) {
                 C8766f fVar = (C8766f) a;
-                C14100a.m44522a("%s%s: language=%s description=%s", str, fVar.f18626c, fVar.f18614U, fVar.f18615V);
+                Timber.m44522a("%s%s: language=%s description=%s", str, fVar.f18626c, fVar.f18614U, fVar.f18615V);
             } else if (a instanceof C8773i) {
-                C14100a.m44522a("%s%s", str, ((C8773i) a).f18626c);
+                Timber.m44522a("%s%s", str, ((C8773i) a).f18626c);
             }
         }
     }
 
     /* renamed from: c */
     public void mo7743c(C8878d dVar) {
-        C14100a.m44522a("videoEnabled [%s]", m8007a());
+        Timber.m44522a("videoEnabled [%s]", m8007a());
     }
 
     /* renamed from: a */

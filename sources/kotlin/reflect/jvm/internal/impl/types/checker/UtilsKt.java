@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.types.checker;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
@@ -40,7 +40,7 @@ public final class UtilsKt {
             utilsKt$debugInfo$1$1.invoke(sb6.toString());
         }
         String sb7 = sb.toString();
-        C12880j.m40222a((Object) sb7, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb7, "StringBuilder().apply(builderAction).toString()");
         return sb7;
     }
 
@@ -106,7 +106,7 @@ public final class UtilsKt {
             kotlin.reflect.jvm.internal.impl.types.TypeSubstitutor r4 = r4.buildSubstitutor()
             kotlin.reflect.jvm.internal.impl.types.Variance r8 = kotlin.reflect.jvm.internal.impl.types.Variance.INVARIANT
             kotlin.reflect.jvm.internal.impl.types.KotlinType r1 = r4.safeSubstitute(r1, r8)
-            kotlin.jvm.internal.C12880j.m40222a(r1, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r5)
             kotlin.reflect.jvm.internal.impl.types.KotlinType r1 = approximate(r1)
             goto L_0x009d
         L_0x008a:
@@ -115,7 +115,7 @@ public final class UtilsKt {
             kotlin.reflect.jvm.internal.impl.types.TypeSubstitutor r4 = r4.buildSubstitutor()
             kotlin.reflect.jvm.internal.impl.types.Variance r8 = kotlin.reflect.jvm.internal.impl.types.Variance.INVARIANT
             kotlin.reflect.jvm.internal.impl.types.KotlinType r1 = r4.safeSubstitute(r1, r8)
-            kotlin.jvm.internal.C12880j.m40222a(r1, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r5)
         L_0x009d:
             if (r0 != 0) goto L_0x00a8
             boolean r0 = r3.isMarkedNullable()
@@ -168,7 +168,7 @@ public final class UtilsKt {
             kotlin.reflect.jvm.internal.impl.types.KotlinType r3 = (kotlin.reflect.jvm.internal.impl.types.KotlinType) r3
             kotlin.reflect.jvm.internal.impl.types.checker.SubtypePathNode r4 = new kotlin.reflect.jvm.internal.impl.types.checker.SubtypePathNode
             java.lang.String r5 = "immediateSupertype"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r5)
             r4.<init>(r3, r10)
             r0.add(r4)
             goto L_0x0102

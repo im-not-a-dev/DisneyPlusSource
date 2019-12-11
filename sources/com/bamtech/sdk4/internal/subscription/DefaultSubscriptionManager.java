@@ -5,7 +5,7 @@ import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import com.bamtech.sdk4.subscription.Subscription;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Single;
@@ -27,13 +27,13 @@ public final class DefaultSubscriptionManager implements SubscriptionManager, De
 
     public Single<List<Subscription>> getSubscriptions(ServiceTransaction serviceTransaction) {
         Single<List<Subscription>> a = this.tokenProvider.getAccessToken(serviceTransaction).mo30220b(C11934b.m38500b()).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultSubscriptionManager$getSubscriptions$1<Object,Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…to it))\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…to it))\n                }");
         return a;
     }
 
     public Completable linkSubscriptionsFromDevice(ServiceTransaction serviceTransaction) {
         Completable b = this.tokenProvider.getAccessToken(serviceTransaction).mo30220b(C11934b.m38500b()).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultSubscriptionManager$linkSubscriptionsFromDevice$1<Object,Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) b, "tokenProvider.getAccessT…to it))\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "tokenProvider.getAccessT…to it))\n                }");
         return b;
     }
 }

@@ -8,7 +8,7 @@ import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import com.bamtech.sdk4.location.GeoLocation;
 import com.bamtech.sdk4.media.adengine.AdvertisingIdProvider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Single;
@@ -61,13 +61,13 @@ public final class DefaultAdEngineManager implements AdEngineManager {
 
     public Single<AdEnginePayload> constructAdEnginePayload(ServiceTransaction serviceTransaction, AdEngineTrackingData adEngineTrackingData) {
         Single<AdEnginePayload> g = this.locationResolver.getLocation(serviceTransaction).mo30233g(new DefaultAdEngineManager$constructAdEnginePayload$1(this, serviceTransaction, adEngineTrackingData));
-        C12880j.m40222a((Object) g, "locationResolver.getLoca…      )\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "locationResolver.getLoca…      )\n                }");
         return g;
     }
 
     public Completable updateCookies(ServiceTransaction serviceTransaction, AdEngineTrackingData adEngineTrackingData) {
         Completable b = this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultAdEngineManager$updateCookies$1.INSTANCE).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultAdEngineManager$updateCookies$2<Object,Object>(this, serviceTransaction, adEngineTrackingData));
-        C12880j.m40222a((Object) b, "configurationProvider.ge…     }\n\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "configurationProvider.ge…     }\n\n                }");
         return b;
     }
 }

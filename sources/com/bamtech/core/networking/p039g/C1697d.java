@@ -6,7 +6,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtech.core.networking.g.d */
 /* compiled from: TLSSocketFactory.kt */
@@ -18,9 +18,9 @@ public final class C1697d extends SSLSocketFactory {
     public C1697d(X509TrustManager x509TrustManager) {
         SSLContext instance = SSLContext.getInstance("TLSv1.2");
         instance.init(null, new X509TrustManager[]{x509TrustManager}, null);
-        C12880j.m40222a((Object) instance, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) instance, "context");
         SSLSocketFactory socketFactory = instance.getSocketFactory();
-        C12880j.m40222a((Object) socketFactory, "context.socketFactory");
+        Intrinsics.checkReturnedValueIsNotNull((Object) socketFactory, "context.socketFactory");
         this.f5888a = socketFactory;
     }
 
@@ -40,13 +40,13 @@ public final class C1697d extends SSLSocketFactory {
 
     public String[] getDefaultCipherSuites() {
         String[] defaultCipherSuites = this.f5888a.getDefaultCipherSuites();
-        C12880j.m40222a((Object) defaultCipherSuites, "internalSSLSocketFactory.getDefaultCipherSuites()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) defaultCipherSuites, "internalSSLSocketFactory.getDefaultCipherSuites()");
         return defaultCipherSuites;
     }
 
     public String[] getSupportedCipherSuites() {
         String[] supportedCipherSuites = this.f5888a.getSupportedCipherSuites();
-        C12880j.m40222a((Object) supportedCipherSuites, "internalSSLSocketFactory…etSupportedCipherSuites()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supportedCipherSuites, "internalSSLSocketFactory…etSupportedCipherSuites()");
         return supportedCipherSuites;
     }
 

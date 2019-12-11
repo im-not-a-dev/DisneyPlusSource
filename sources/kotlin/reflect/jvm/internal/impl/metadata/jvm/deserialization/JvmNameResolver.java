@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13152b0;
 import kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver;
 import kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.StringTableTypes;
@@ -61,7 +61,7 @@ public final class JvmNameResolver implements NameResolver {
         List<Record> recordList = this.types.getRecordList();
         arrayList.ensureCapacity(recordList.size());
         for (Record record : recordList) {
-            C12880j.m40222a((Object) record, "record");
+            Intrinsics.checkReturnedValueIsNotNull((Object) record, "record");
             int range = record.getRange();
             for (int i = 0; i < range; i++) {
                 arrayList.add(record);
@@ -98,17 +98,17 @@ public final class JvmNameResolver implements NameResolver {
             List substringIndexList = record.getSubstringIndexList();
             Integer num = (Integer) substringIndexList.get(0);
             Integer num2 = (Integer) substringIndexList.get(1);
-            C12880j.m40222a((Object) num, "begin");
-            if (C12880j.m40217a(0, num.intValue()) <= 0) {
+            Intrinsics.checkReturnedValueIsNotNull((Object) num, "begin");
+            if (Intrinsics.compare(0, num.intValue()) <= 0) {
                 int intValue = num.intValue();
-                C12880j.m40222a((Object) num2, "end");
-                if (C12880j.m40217a(intValue, num2.intValue()) <= 0 && C12880j.m40217a(num2.intValue(), str.length()) <= 0) {
-                    C12880j.m40222a((Object) str, str4);
+                Intrinsics.checkReturnedValueIsNotNull((Object) num2, "end");
+                if (Intrinsics.compare(intValue, num2.intValue()) <= 0 && Intrinsics.compare(num2.intValue(), str.length()) <= 0) {
+                    Intrinsics.checkReturnedValueIsNotNull((Object) str, str4);
                     int intValue2 = num.intValue();
                     int intValue3 = num2.intValue();
                     if (str != null) {
                         str = str.substring(intValue2, intValue3);
-                        C12880j.m40222a((Object) str, str3);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) str, str3);
                     } else {
                         throw new C13142s(str2);
                     }
@@ -120,7 +120,7 @@ public final class JvmNameResolver implements NameResolver {
             List replaceCharList = record.getReplaceCharList();
             Integer num3 = (Integer) replaceCharList.get(0);
             Integer num4 = (Integer) replaceCharList.get(1);
-            C12880j.m40222a((Object) str5, str4);
+            Intrinsics.checkReturnedValueIsNotNull((Object) str5, str4);
             str5 = C12832w.m40115a(str5, (char) num3.intValue(), (char) num4.intValue(), false, 4, (Object) null);
         }
         String str6 = str5;
@@ -131,25 +131,25 @@ public final class JvmNameResolver implements NameResolver {
         int i3 = WhenMappings.$EnumSwitchMapping$0[operation.ordinal()];
         if (i3 != 1) {
             if (i3 == 2) {
-                C12880j.m40222a((Object) str6, str4);
+                Intrinsics.checkReturnedValueIsNotNull((Object) str6, str4);
                 str6 = C12832w.m40115a(str6, '$', '.', false, 4, (Object) null);
             } else if (i3 == 3) {
                 if (str6.length() >= 2) {
-                    C12880j.m40222a((Object) str6, str4);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) str6, str4);
                     int length = str6.length() - 1;
                     if (str6 != null) {
                         str6 = str6.substring(1, length);
-                        C12880j.m40222a((Object) str6, str3);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) str6, str3);
                     } else {
                         throw new C13142s(str2);
                     }
                 }
                 String str7 = str6;
-                C12880j.m40222a((Object) str7, str4);
+                Intrinsics.checkReturnedValueIsNotNull((Object) str7, str4);
                 str6 = C12832w.m40115a(str7, '$', '.', false, 4, (Object) null);
             }
         }
-        C12880j.m40222a((Object) str6, str4);
+        Intrinsics.checkReturnedValueIsNotNull((Object) str6, str4);
         return str6;
     }
 

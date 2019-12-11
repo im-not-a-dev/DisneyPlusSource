@@ -74,7 +74,7 @@ public interface C3502x {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:14:0x0042, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8790f, (java.lang.Object) r3.f8790f) != false) goto L_0x0047;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8790f, (java.lang.Object) r3.f8790f) != false) goto L_0x0047;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -86,27 +86,27 @@ public interface C3502x {
                 com.bamtechmedia.dominguez.collections.x$a r3 = (com.bamtechmedia.dominguez.collections.C3502x.C3503a) r3
                 g.o.a.c<g.o.a.k> r0 = r2.f8785a
                 g.o.a.c<g.o.a.k> r1 = r3.f8785a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 androidx.recyclerview.widget.RecyclerView r0 = r2.f8786b
                 androidx.recyclerview.widget.RecyclerView r1 = r3.f8786b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 android.widget.ProgressBar r0 = r2.f8787c
                 android.widget.ProgressBar r1 = r3.f8787c
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 com.bamtechmedia.dominguez.core.design.widgets.NoConnectionView r0 = r2.f8788d
                 com.bamtechmedia.dominguez.core.design.widgets.NoConnectionView r1 = r3.f8788d
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 android.view.View r0 = r2.f8789e
                 android.view.View r1 = r3.f8789e
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.util.List<g.o.a.b> r0 = r2.f8790f
                 java.util.List<g.o.a.b> r3 = r3.f8790f
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0045
                 goto L_0x0047
             L_0x0045:

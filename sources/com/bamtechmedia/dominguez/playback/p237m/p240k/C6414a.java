@@ -75,7 +75,7 @@ public final class C6414a {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:12:0x0038, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f14556e, (java.lang.Object) r3.f14556e) != false) goto L_0x003d;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f14556e, (java.lang.Object) r3.f14556e) != false) goto L_0x003d;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -87,23 +87,23 @@ public final class C6414a {
                 com.bamtechmedia.dominguez.playback.m.k.a$a r3 = (com.bamtechmedia.dominguez.playback.p237m.p240k.C6414a.C6415a) r3
                 androidx.constraintlayout.widget.ConstraintLayout r0 = r2.f14552a
                 androidx.constraintlayout.widget.ConstraintLayout r1 = r3.f14552a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x003b
                 android.widget.TextView r0 = r2.f14553b
                 android.widget.TextView r1 = r3.f14553b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x003b
                 android.widget.TextView r0 = r2.f14554c
                 android.widget.TextView r1 = r3.f14554c
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x003b
                 androidx.constraintlayout.widget.Group r0 = r2.f14555d
                 androidx.constraintlayout.widget.Group r1 = r3.f14555d
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x003b
                 androidx.constraintlayout.widget.ConstraintLayout r0 = r2.f14556e
                 androidx.constraintlayout.widget.ConstraintLayout r3 = r3.f14556e
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x003b
                 goto L_0x003d
             L_0x003b:

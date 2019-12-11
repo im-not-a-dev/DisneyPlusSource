@@ -5,7 +5,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.Set;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11725h.C11732g;
 import p163g.p500m.p501a.C11737m;
@@ -39,18 +39,18 @@ public final class C2682w implements C11732g {
                 return (GraphQlError) this.f7429a.fromJson(mVar);
             }
             String n = mVar.mo29779n();
-            C12880j.m40222a((Object) n, "reader.nextString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) n, "reader.nextString()");
             return new GraphQlError(n, null, 2, null);
         }
     }
 
     /* renamed from: a */
     public C11725h<?> mo11720a(Type type, Set<? extends Annotation> set, C11760v vVar) {
-        if (!C12880j.m40224a((Object) type, (Object) GraphQlError.class)) {
+        if (!Intrinsics.areEqual((Object) type, (Object) GraphQlError.class)) {
             return null;
         }
         C11725h a = vVar.mo29865a((C11732g) this, type, set);
-        C12880j.m40222a((Object) a, "moshi.nextAdapter(this, type, annotations)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "moshi.nextAdapter(this, type, annotations)");
         return new C2683a(a);
     }
 }

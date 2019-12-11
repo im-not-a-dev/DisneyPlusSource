@@ -33,7 +33,7 @@ public final class OnlineMediaItemPlaylist implements MediaItemPlaylist {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:18:0x0076, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) getAttributes(), (java.lang.Object) r3.getAttributes()) != false) goto L_0x007b;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) getAttributes(), (java.lang.Object) r3.getAttributes()) != false) goto L_0x007b;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -45,35 +45,35 @@ public final class OnlineMediaItemPlaylist implements MediaItemPlaylist {
             com.bamtech.sdk4.internal.media.OnlineMediaItemPlaylist r3 = (com.bamtech.sdk4.internal.media.OnlineMediaItemPlaylist) r3
             java.lang.String r0 = r2.getStreamUri()
             java.lang.String r1 = r3.getStreamUri()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0079
             com.bamtech.sdk4.internal.configuration.PlaylistType r0 = r2.getPlaylistType()
             com.bamtech.sdk4.internal.configuration.PlaylistType r1 = r3.getPlaylistType()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0079
             com.bamtech.sdk4.media.MediaPlayhead r0 = r2.getPlayhead()
             com.bamtech.sdk4.media.MediaPlayhead r1 = r3.getPlayhead()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0079
             java.util.Map r0 = r2.getTracking()
             java.util.Map r1 = r3.getTracking()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0079
             java.util.List r0 = r2.getVariants()
             java.util.List r1 = r3.getVariants()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0079
             java.util.List r0 = r2.getAudioRenditions()
             java.util.List r1 = r3.getAudioRenditions()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0079
             java.util.List r0 = r2.getSubtitleRenditions()
             java.util.List r1 = r3.getSubtitleRenditions()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0079
             com.bamtech.sdk4.internal.media.HlsPlaylistAttributes r0 = r2.getAttributes()
             com.bamtech.sdk4.internal.media.HlsPlaylistAttributes r3 = r3.getAttributes()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0079
             goto L_0x007b
         L_0x0079:

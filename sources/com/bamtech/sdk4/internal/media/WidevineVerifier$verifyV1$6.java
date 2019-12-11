@@ -4,7 +4,7 @@ import com.bamtech.sdk4.internal.media.WidevineVerifier.WidevineBlacklistStatus;
 import com.bamtech.sdk4.service.ServiceException;
 import com.bamtech.sdk4.service.ServiceExceptionCase.SecurityLevelInsufficient;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -21,7 +21,7 @@ final class WidevineVerifier$verifyV1$6<T, R> implements Function<Throwable, Sin
         if ((th instanceof ServiceException) && SecurityLevelInsufficient.INSTANCE.isInstance((ServiceException) th)) {
             return Single.m38399b(WidevineBlacklistStatus.Blacklisted);
         }
-        if (C12880j.m40224a((Object) "skip.drm.check", (Object) th.getMessage())) {
+        if (Intrinsics.areEqual((Object) "skip.drm.check", (Object) th.getMessage())) {
             return Single.m38399b(WidevineBlacklistStatus.Whitelisted);
         }
         return Single.m38399b(WidevineBlacklistStatus.Unknown);

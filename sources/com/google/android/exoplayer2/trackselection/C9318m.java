@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.trackselection;
 
 import com.google.android.exoplayer2.C8800n0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.trackselection.m */
 /* compiled from: TrackSelectorResult */
@@ -50,7 +50,7 @@ public final class C9318m {
         if (mVar == null) {
             return false;
         }
-        if (C9554k0.m29414a((Object) this.f21311b[i], (Object) mVar.f21311b[i]) && C9554k0.m29414a((Object) this.f21312c.mo24040a(i), (Object) mVar.f21312c.mo24040a(i))) {
+        if (Util.m29414a((Object) this.f21311b[i], (Object) mVar.f21311b[i]) && Util.m29414a((Object) this.f21312c.mo24040a(i), (Object) mVar.f21312c.mo24040a(i))) {
             z = true;
         }
         return z;

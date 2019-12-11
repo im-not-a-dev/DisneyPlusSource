@@ -21,7 +21,7 @@ import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import p163g.p503n.p504a.C11792d0;
 import p163g.p503n.p504a.C11793e;
@@ -87,7 +87,7 @@ public final class C3296f extends C5733a implements C3330h {
 
         /* renamed from: a */
         public final void mo12352a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -111,7 +111,7 @@ public final class C3296f extends C5733a implements C3330h {
         /* renamed from: a */
         public final void accept(C3676k kVar) {
             C3296f fVar = this.f8347c;
-            C12880j.m40222a((Object) kVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) kVar, "it");
             fVar.m11389f(kVar);
         }
     }
@@ -128,7 +128,7 @@ public final class C3296f extends C5733a implements C3330h {
 
         /* renamed from: a */
         public final void mo12354a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -152,7 +152,7 @@ public final class C3296f extends C5733a implements C3330h {
         /* renamed from: a */
         public final void accept(ContentSetType contentSetType) {
             C3296f fVar = this.f8349c;
-            C12880j.m40222a((Object) contentSetType, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) contentSetType, "it");
             fVar.m11386d(contentSetType);
         }
     }
@@ -169,7 +169,7 @@ public final class C3296f extends C5733a implements C3330h {
 
         /* renamed from: a */
         public final void mo12356a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -367,7 +367,7 @@ public final class C3296f extends C5733a implements C3330h {
             Map d = this.f8366c.f8340U;
             Pair a = C12907r.m40244a(c0Var.getProfileId(), this.f8365U);
             DateTime now = DateTime.now();
-            C12880j.m40222a((Object) now, "DateTime.now()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now()");
             d.put(a, now);
         }
     }
@@ -392,13 +392,13 @@ public final class C3296f extends C5733a implements C3330h {
         this.f8343X = i0Var;
         Object a = lVar.mo12596b().mo30079a((C11932e<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
         String str = "this.`as`(AutoDispose.autoDisposable(provider))";
-        C12880j.m40222a(a, str);
+        Intrinsics.checkReturnedValueIsNotNull(a, str);
         ((C11842x) a).mo29927a(new C3297a(this), C3298b.f8346c);
         Object a2 = lVar.mo12597c().mo30079a((C11932e<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a2, str);
+        Intrinsics.checkReturnedValueIsNotNull(a2, str);
         ((C11842x) a2).mo29927a(new C3299c(this), C3300d.f8348c);
         Object a3 = lVar.mo12593a().mo30079a((C11932e<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a3, str);
+        Intrinsics.checkReturnedValueIsNotNull(a3, str);
         ((C11842x) a3).mo29927a(new C3301e(this), C3302f.f8350c);
     }
 
@@ -408,7 +408,7 @@ public final class C3296f extends C5733a implements C3330h {
         Set keySet = this.f8344c.keySet();
         ArrayList<Pair> arrayList = new ArrayList<>();
         for (Object next : keySet) {
-            if (C12880j.m40224a((Object) (C3676k) ((Pair) next).mo31016d(), (Object) kVar)) {
+            if (Intrinsics.areEqual((Object) (C3676k) ((Pair) next).mo31016d(), (Object) kVar)) {
                 arrayList.add(next);
             }
         }
@@ -446,7 +446,7 @@ public final class C3296f extends C5733a implements C3330h {
     /* renamed from: b */
     public Maybe<C3658a> mo12344b(C3676k kVar) {
         Maybe<C3658a> c = this.f8342W.mo19381b().mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new C3303g<Object,Object>(this, kVar)).mo30131f(C3305h.f8355c).mo30123c((Consumer<? super T>) new C3306i<Object>(kVar));
-        C12880j.m40222a((Object) c, "profilesRepository.activ…g.value}' from cache\" } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "profilesRepository.activ…g.value}' from cache\" } }");
         return c;
     }
 
@@ -474,7 +474,7 @@ public final class C3296f extends C5733a implements C3330h {
     /* renamed from: a */
     public void mo12342a(C3676k kVar, C3658a aVar) {
         Object a = this.f8342W.mo19381b().mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C3309l(this, kVar, aVar), C3310m.f8362c);
     }
 
@@ -486,7 +486,7 @@ public final class C3296f extends C5733a implements C3330h {
     /* renamed from: b */
     public void mo12345b(ContentSetType contentSetType) {
         Object a = this.f8342W.mo19381b().mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C3307j(this, contentSetType), C3308k.f8358c);
     }
 
@@ -498,7 +498,7 @@ public final class C3296f extends C5733a implements C3330h {
     /* renamed from: a */
     public void mo12343a(ContentSetType contentSetType) {
         Object a = this.f8342W.mo19381b().mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C3312o(this, contentSetType), C3313p.f8367c);
     }
 
@@ -506,7 +506,7 @@ public final class C3296f extends C5733a implements C3330h {
     public Single<C3658a> mo12341a(C3676k kVar, Single<C3658a> single) {
         this.f8341V.put(kVar, single);
         Single<C3658a> d = single.mo30227d((Consumer<? super T>) new C3311n<Object>(this, kVar));
-        C12880j.m40222a((Object) d, "subscription.doOnSuccess…questCache.remove(slug) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "subscription.doOnSuccess…questCache.remove(slug) }");
         return d;
     }
 }

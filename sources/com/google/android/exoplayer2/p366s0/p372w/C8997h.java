@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p366s0.p372w;
 
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -16,7 +16,7 @@ import org.joda.time.DateTimeConstants;
 final class C8997h extends C8998i {
 
     /* renamed from: o */
-    private static final int f19743o = C9554k0.m29428b("Opus");
+    private static final int f19743o = Util.m29428b("Opus");
 
     /* renamed from: p */
     private static final byte[] f19744p = {79, 112, 117, 115, 72, 101, 97, 100};

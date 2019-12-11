@@ -29,7 +29,7 @@ public final class C12868e implements KClass<Object>, C12866d {
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof C12868e) && C12880j.m40224a((Object) C12731a.m39869b(this), (Object) C12731a.m39869b((KClass) obj));
+        return (obj instanceof C12868e) && Intrinsics.areEqual((Object) C12731a.m39869b(this), (Object) C12731a.m39869b((KClass) obj));
     }
 
     public List<Annotation> getAnnotations() {

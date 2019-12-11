@@ -3,7 +3,7 @@ package com.bamtech.sdk4.internal.media.offline.p047db.converters;
 import com.bamtech.sdk4.internal.media.HlsPlaylistVariant;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u000e\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n¢\u0006\u0002\b\u0004"}, mo31007d2 = {"<anonymous>", "", "variant", "Lcom/bamtech/sdk4/internal/media/HlsPlaylistVariant;", "invoke"}, mo31008k = 3, mo31009mv = {1, 1, 15})
@@ -69,7 +69,7 @@ final class HlsPlaylistVariantConverter$toString$1 extends C12881k implements Fu
         sb.append(audioCodec);
         sb.append(str);
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder()\n        …              .toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder()\n        …              .toString()");
         return sb2;
     }
 }

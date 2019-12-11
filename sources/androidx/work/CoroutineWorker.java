@@ -9,7 +9,7 @@ import kotlin.C12900n.C12902b;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.p575i.p576a.C12706f;
 import kotlin.p573a0.p575i.p576a.C12714m;
@@ -115,12 +115,12 @@ public abstract class CoroutineWorker extends ListenableWorker {
     public CoroutineWorker(Context context, WorkerParameters workerParameters) {
         super(context, workerParameters);
         SettableFuture<Result> d = SettableFuture.m5920d();
-        C12880j.m40222a((Object) d, "SettableFuture.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "SettableFuture.create()");
         this.f3991b = d;
         SettableFuture<Result> settableFuture = this.f3991b;
         C1009a aVar = new C1009a(this);
         TaskExecutor taskExecutor = getTaskExecutor();
-        C12880j.m40222a((Object) taskExecutor, "taskExecutor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) taskExecutor, "taskExecutor");
         settableFuture.mo5913a((Runnable) aVar, taskExecutor.mo5941c());
         this.f3992c = C13390r0.m41147a();
     }

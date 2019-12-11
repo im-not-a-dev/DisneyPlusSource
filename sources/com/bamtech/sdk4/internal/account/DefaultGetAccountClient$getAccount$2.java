@@ -13,7 +13,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.Dust$Events;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Single;
@@ -51,9 +51,9 @@ final class DefaultGetAccountClient$getAccount$2<T, R> implements Function<T, Si
         String account_current_account = AccountServiceConfigurationKt.getACCOUNT_CURRENT_ACCOUNT(Dust$Events.INSTANCE);
         Call a2 = C1691e.m7799a(a);
         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new C1782xc7ea50dc(a2)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single<Account> g = b.mo30222c((Consumer<? super Disposable>) new C1783xc7ea50dd<Object>(serviceTransaction2, account_current_account)).mo30218b((Consumer<? super Throwable>) new C1784xc7ea50de<Object>(a, serviceTransaction2, account_current_account)).mo30233g(new C1785xc7ea50df(serviceTransaction2, account_current_account));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g;
     }
 }

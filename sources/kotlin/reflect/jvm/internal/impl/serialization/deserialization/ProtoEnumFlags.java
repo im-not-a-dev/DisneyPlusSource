@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
 import kotlin.C12898l;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
 import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities;
@@ -174,7 +174,7 @@ public final class ProtoEnumFlags {
             }
         }
         visibility2 = Visibilities.PRIVATE;
-        C12880j.m40222a((Object) visibility2, "when (visibility) {\n    …isibilities.PRIVATE\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility2, "when (visibility) {\n    …isibilities.PRIVATE\n    }");
         return visibility2;
     }
 

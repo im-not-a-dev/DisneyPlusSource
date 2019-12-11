@@ -236,7 +236,7 @@ public final class C9546i {
                 return m29353a(Integer.parseInt(matcher2.group(1), 10), Integer.parseInt(matcher2.group(2), 10), Integer.parseInt(matcher2.group(3), 10));
             }
         } else {
-            Integer num = (Integer) f22271d.get(C9554k0.m29457k(replace));
+            Integer num = (Integer) f22271d.get(Util.m29457k(replace));
             if (num != null) {
                 return num.intValue();
             }

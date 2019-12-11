@@ -68,7 +68,7 @@ public final class PurchaseActivation {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.status, (java.lang.Object) r3.status) != false) goto L_0x0033;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.status, (java.lang.Object) r3.status) != false) goto L_0x0033;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -80,19 +80,19 @@ public final class PurchaseActivation {
             com.bamtech.sdk4.purchase.PurchaseActivation r3 = (com.bamtech.sdk4.purchase.PurchaseActivation) r3
             com.bamtech.sdk4.internal.service.ServiceError r0 = r2.reason
             com.bamtech.sdk4.internal.service.ServiceError r1 = r3.reason
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.lang.String r0 = r2.sku
             java.lang.String r1 = r3.sku
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.util.List<java.lang.String> r0 = r2.products
             java.util.List<java.lang.String> r1 = r3.products
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             com.bamtech.sdk4.purchase.ActivationStatus r0 = r2.status
             com.bamtech.sdk4.purchase.ActivationStatus r3 = r3.status
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0031
             goto L_0x0033
         L_0x0031:

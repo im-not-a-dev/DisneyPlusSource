@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.main.startup;
 import com.bamtechmedia.dominguez.config.C3524e;
 import com.bamtechmedia.dominguez.core.utils.C5855o;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Single;
@@ -47,7 +47,7 @@ public final class C6178b implements C6187g {
     public Completable mo18783a() {
         C5855o oVar = C5855o.f13640a;
         Completable b = this.f14176a.mo30217b((Function<? super T, ? extends CompletableSource>) new C6179a<Object,Object>(this));
-        C12880j.m40222a((Object) b, "appConfigMapOnce.flatMap…sionCheck.markVersion() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "appConfigMapOnce.flatMap…sionCheck.markVersion() }");
         return b;
     }
 }

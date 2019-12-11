@@ -124,7 +124,7 @@ public final class Image implements Parcelable {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:18:0x0056, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f9082a0, (java.lang.Object) r3.f9082a0) != false) goto L_0x005b;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f9082a0, (java.lang.Object) r3.f9082a0) != false) goto L_0x005b;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -136,35 +136,35 @@ public final class Image implements Parcelable {
             com.bamtechmedia.dominguez.core.content.assets.Image r3 = (com.bamtechmedia.dominguez.core.content.assets.Image) r3
             java.lang.String r0 = r2.f9083c
             java.lang.String r1 = r3.f9083c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.lang.String r0 = r2.f9076U
             java.lang.String r1 = r3.f9076U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.core.content.assets.a r0 = r2.f9077V
             com.bamtechmedia.dominguez.core.content.assets.a r1 = r3.f9077V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.lang.String r0 = r2.f9078W
             java.lang.String r1 = r3.f9078W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.lang.String r0 = r2.f9079X
             java.lang.String r1 = r3.f9079X
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.lang.Integer r0 = r2.f9080Y
             java.lang.Integer r1 = r3.f9080Y
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.lang.Integer r0 = r2.f9081Z
             java.lang.Integer r1 = r3.f9081Z
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.lang.String r0 = r2.f9082a0
             java.lang.String r3 = r3.f9082a0
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0059
             goto L_0x005b
         L_0x0059:

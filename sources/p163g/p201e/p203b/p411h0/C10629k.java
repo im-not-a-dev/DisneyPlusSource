@@ -34,7 +34,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p122j.C4025a;
 import p096e.p121h.p135s.C4127b0;
@@ -190,7 +190,7 @@ public final class C10629k extends C11890i implements C2413n {
         public final void mo27494a(C10641a aVar) {
             this.f25100c.m33360c(aVar.mo27502a());
             TextView textView = (TextView) this.f25100c._$_findCachedViewById(C10619c.welcomeDescriptionMain);
-            C12880j.m40222a((Object) textView, "welcomeDescriptionMain");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "welcomeDescriptionMain");
             textView.setText(C10638m.m33386a(this.f25100c.mo27489q(), "welcome_tagline_copy", aVar.mo27503b(), null, 4, null));
             if (aVar.mo27504c() == null) {
                 this.f25100c.m33361e(aVar.mo27503b());
@@ -232,11 +232,11 @@ public final class C10629k extends C11890i implements C2413n {
             if (cVar != null) {
                 int i = C10619c.welcomeContainer;
                 C0538i childFragmentManager = getChildFragmentManager();
-                C12880j.m40222a((Object) childFragmentManager, "childFragmentManager");
+                Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "childFragmentManager");
                 cVar.mo20550a(i, childFragmentManager);
                 return;
             }
-            C12880j.m40227c("offlineRouter");
+            Intrinsics.throwUninitializedPropertyAccessException("offlineRouter");
             throw null;
         }
     }
@@ -254,9 +254,9 @@ public final class C10629k extends C11890i implements C2413n {
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         WindowManager windowManager = requireActivity.getWindowManager();
-        C12880j.m40222a((Object) windowManager, "requireActivity().windowManager");
+        Intrinsics.checkReturnedValueIsNotNull((Object) windowManager, "requireActivity().windowManager");
         windowManager.getDefaultDisplay().getMetrics(displayMetrics);
         ImageView imageView = (ImageView) _$_findCachedViewById(C10619c.welcomeBackgroundImageView);
         if (imageView != null) {
@@ -267,19 +267,19 @@ public final class C10629k extends C11890i implements C2413n {
             C3800a.m12829a(imageView2, 0.0f, 0.0f, 0.9f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 300, 0, null, null, null, null, 258043, null);
         }
         TextView textView = (TextView) _$_findCachedViewById(C10619c.welcomeDescriptionMain);
-        C12880j.m40222a((Object) textView, "welcomeDescriptionMain");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "welcomeDescriptionMain");
         m33353a(this, textView, 0, null, 2, null);
         Button button = (Button) _$_findCachedViewById(C10619c.welcomeButtonSignUp);
-        C12880j.m40222a((Object) button, "welcomeButtonSignUp");
+        Intrinsics.checkReturnedValueIsNotNull((Object) button, "welcomeButtonSignUp");
         m33353a(this, button, 100, null, 2, null);
         TextView textView2 = (TextView) _$_findCachedViewById(C10619c.welcomeDescriptionSub1);
-        C12880j.m40222a((Object) textView2, "welcomeDescriptionSub1");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "welcomeDescriptionSub1");
         m33353a(this, textView2, 200, null, 2, null);
         ImageView imageView3 = (ImageView) _$_findCachedViewById(C10619c.welcomeBrandLogos);
-        C12880j.m40222a((Object) imageView3, "welcomeBrandLogos");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView3, "welcomeBrandLogos");
         m33353a(this, imageView3, 250, null, 2, null);
         View _$_findCachedViewById = _$_findCachedViewById(C10619c.welcomeButtonLogIn);
-        C12880j.m40222a((Object) _$_findCachedViewById, "welcomeButtonLogIn");
+        Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "welcomeButtonLogIn");
         m33352a(_$_findCachedViewById, 300, new C10631b(this));
         TextView textView3 = (TextView) _$_findCachedViewById(C10619c.ctvActivationText);
         if (textView3 != null) {
@@ -301,7 +301,7 @@ public final class C10629k extends C11890i implements C2413n {
         if (nVar != null) {
             nVar.mo27499d(true);
         } else {
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
     }
@@ -312,19 +312,19 @@ public final class C10629k extends C11890i implements C2413n {
         String str = "onboardingImageLoader";
         if (cVar != null) {
             ImageView imageView = (ImageView) _$_findCachedViewById(C10619c.welcomeBackgroundImageView);
-            C12880j.m40222a((Object) imageView, "welcomeBackgroundImageView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "welcomeBackgroundImageView");
             cVar.mo20783a(imageView);
             C7862c cVar2 = this.f25090c0;
             if (cVar2 != null) {
                 ImageView imageView2 = (ImageView) _$_findCachedViewById(C10619c.welcomeBrandLogos);
-                C12880j.m40222a((Object) imageView2, "welcomeBrandLogos");
+                Intrinsics.checkReturnedValueIsNotNull((Object) imageView2, "welcomeBrandLogos");
                 cVar2.mo20785b(imageView2);
                 Context requireContext = requireContext();
-                C12880j.m40222a((Object) requireContext, "requireContext()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
                 if (C5837i.m18843e(requireContext)) {
                     C7236b bVar = this.f25088a0;
                     if (bVar == null) {
-                        C12880j.m40227c("ctvActivationConfig");
+                        Intrinsics.throwUninitializedPropertyAccessException("ctvActivationConfig");
                         throw null;
                     } else if (bVar.mo20060a()) {
                         TextView textView = (TextView) _$_findCachedViewById(C10619c.ctvActivationText);
@@ -350,11 +350,11 @@ public final class C10629k extends C11890i implements C2413n {
                     }
                 }
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
     }
@@ -365,7 +365,7 @@ public final class C10629k extends C11890i implements C2413n {
         if (dVar != null) {
             return dVar.mo13695j();
         }
-        C12880j.m40227c("offlineState");
+        Intrinsics.throwUninitializedPropertyAccessException("offlineState");
         throw null;
     }
 
@@ -403,7 +403,7 @@ public final class C10629k extends C11890i implements C2413n {
         if (gVar != null) {
             return gVar;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
@@ -419,13 +419,13 @@ public final class C10629k extends C11890i implements C2413n {
     public void onStart() {
         super.onStart();
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         C5816a.m18808a(requireActivity);
         C10640n nVar = this.f25082U;
         if (nVar != null) {
             nVar.mo27501z();
         } else {
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
     }
@@ -433,9 +433,9 @@ public final class C10629k extends C11890i implements C2413n {
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         Window window = requireActivity.getWindow();
-        C12880j.m40222a((Object) window, "requireActivity().window");
+        Intrinsics.checkReturnedValueIsNotNull((Object) window, "requireActivity().window");
         window.setNavigationBarColor(C4025a.m13788a(requireContext(), C10618b.vader_grey2));
         m33360c(!m33364u());
         C10640n nVar = this.f25082U;
@@ -446,7 +446,7 @@ public final class C10629k extends C11890i implements C2413n {
             if (m33364u()) {
                 C10640n nVar2 = this.f25082U;
                 if (nVar2 == null) {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 } else if (!nVar2.mo27500y()) {
                     m33362s();
@@ -463,7 +463,7 @@ public final class C10629k extends C11890i implements C2413n {
             }
             return;
         }
-        C12880j.m40227c(str);
+        Intrinsics.throwUninitializedPropertyAccessException(str);
         throw null;
     }
 
@@ -473,7 +473,7 @@ public final class C10629k extends C11890i implements C2413n {
         if (eVar != null) {
             return eVar;
         }
-        C12880j.m40227c("emailHolder");
+        Intrinsics.throwUninitializedPropertyAccessException("emailHolder");
         throw null;
     }
 
@@ -483,7 +483,7 @@ public final class C10629k extends C11890i implements C2413n {
         if (mVar != null) {
             return mVar;
         }
-        C12880j.m40227c("presenter");
+        Intrinsics.throwUninitializedPropertyAccessException("presenter");
         throw null;
     }
 
@@ -493,7 +493,7 @@ public final class C10629k extends C11890i implements C2413n {
         if (fVar != null) {
             return fVar;
         }
-        C12880j.m40227c("router");
+        Intrinsics.throwUninitializedPropertyAccessException("router");
         throw null;
     }
 
@@ -510,15 +510,15 @@ public final class C10629k extends C11890i implements C2413n {
                 if (fVar != null) {
                     C2758a.m10407a(fVar, false, z, false, 4, null);
                 } else {
-                    C12880j.m40227c("router");
+                    Intrinsics.throwUninitializedPropertyAccessException("router");
                     throw null;
                 }
             } else {
-                C12880j.m40227c("emailHolder");
+                Intrinsics.throwUninitializedPropertyAccessException("emailHolder");
                 throw null;
             }
         } else {
-            C12880j.m40227c("analytics");
+            Intrinsics.throwUninitializedPropertyAccessException("analytics");
             throw null;
         }
     }
@@ -527,14 +527,14 @@ public final class C10629k extends C11890i implements C2413n {
     /* renamed from: e */
     public final void m33361e(String str) {
         Button button = (Button) _$_findCachedViewById(C10619c.welcomeButtonSignUp);
-        C12880j.m40222a((Object) button, "welcomeButtonSignUp");
+        Intrinsics.checkReturnedValueIsNotNull((Object) button, "welcomeButtonSignUp");
         C10638m mVar = this.f25093f0;
         String str2 = "presenter";
         if (mVar != null) {
             button.setText(C10638m.m33386a(mVar, "btn_login", str, null, 4, null));
             ((Button) _$_findCachedViewById(C10619c.welcomeButtonSignUp)).setOnClickListener(new C10632c(this));
             View _$_findCachedViewById = _$_findCachedViewById(C10619c.welcomeButtonLogIn);
-            C12880j.m40222a((Object) _$_findCachedViewById, "welcomeButtonLogIn");
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "welcomeButtonLogIn");
             _$_findCachedViewById.setVisibility(8);
             View _$_findCachedViewById2 = _$_findCachedViewById(C10619c.viewSeparator);
             if (_$_findCachedViewById2 != null) {
@@ -545,16 +545,16 @@ public final class C10629k extends C11890i implements C2413n {
                 C4127b0.m14131b(textView, false);
             }
             TextView textView2 = (TextView) _$_findCachedViewById(C10619c.welcomeDescriptionSub1);
-            C12880j.m40222a((Object) textView2, "welcomeDescriptionSub1");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "welcomeDescriptionSub1");
             C10638m mVar2 = this.f25093f0;
             if (mVar2 != null) {
                 textView2.setText(mVar2.mo27496a(str));
             } else {
-                C12880j.m40227c(str2);
+                Intrinsics.throwUninitializedPropertyAccessException(str2);
                 throw null;
             }
         } else {
-            C12880j.m40227c(str2);
+            Intrinsics.throwUninitializedPropertyAccessException(str2);
             throw null;
         }
     }
@@ -564,7 +564,7 @@ public final class C10629k extends C11890i implements C2413n {
     public final void m33357a(C10641a aVar) {
         Button button = (Button) _$_findCachedViewById(C10619c.welcomeButtonSignUp);
         String str = "welcomeButtonSignUp";
-        C12880j.m40222a((Object) button, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) button, str);
         C10638m mVar = this.f25093f0;
         String str2 = "presenter";
         if (mVar != null) {
@@ -587,15 +587,15 @@ public final class C10629k extends C11890i implements C2413n {
                 textView.setText(C10638m.m33386a(mVar2, "btn_login", aVar.mo27503b(), null, 4, null));
                 TextView textView2 = (TextView) _$_findCachedViewById(C10619c.welcomeDescriptionSub1);
                 String str3 = "welcomeDescriptionSub1";
-                C12880j.m40222a((Object) textView2, str3);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView2, str3);
                 C10638m mVar3 = this.f25093f0;
                 if (mVar3 != null) {
                     textView2.setText(mVar3.mo27495a(aVar));
                     TextView textView3 = (TextView) _$_findCachedViewById(C10619c.welcomeDescriptionSub1);
-                    C12880j.m40222a((Object) textView3, str3);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) textView3, str3);
                     textView3.setVisibility(0);
                     Button button2 = (Button) _$_findCachedViewById(C10619c.welcomeButtonSignUp);
-                    C12880j.m40222a((Object) button2, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) button2, str);
                     C10622f fVar = this.f25092e0;
                     if (fVar != null) {
                         button2.setContentDescription(fVar.mo27482a());
@@ -603,16 +603,16 @@ public final class C10629k extends C11890i implements C2413n {
                         _$_findCachedViewById(C10619c.welcomeButtonLogIn).setOnClickListener(new C10634e(this));
                         return;
                     }
-                    C12880j.m40227c("welcomeAccessibility");
+                    Intrinsics.throwUninitializedPropertyAccessException("welcomeAccessibility");
                     throw null;
                 }
-                C12880j.m40227c(str2);
+                Intrinsics.throwUninitializedPropertyAccessException(str2);
                 throw null;
             }
-            C12880j.m40227c(str2);
+            Intrinsics.throwUninitializedPropertyAccessException(str2);
             throw null;
         }
-        C12880j.m40227c(str2);
+        Intrinsics.throwUninitializedPropertyAccessException(str2);
         throw null;
     }
 
@@ -627,7 +627,7 @@ public final class C10629k extends C11890i implements C2413n {
     /* renamed from: a */
     private final void m33352a(View view, long j, Function0<C13145v> function0) {
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         C3800a.m12829a(view, 0.0f, 0.0f, 0.0f, 0.0f, null, null, 10.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 300, j + (C5837i.m18843e(requireContext) ? 200 : 0), null, null, function0, null, 184254, null);
     }
 }

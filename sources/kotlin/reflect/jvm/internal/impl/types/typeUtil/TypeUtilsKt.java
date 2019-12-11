@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.C13147x;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
@@ -44,7 +44,7 @@ public final class TypeUtilsKt {
 
     public static final KotlinBuiltIns getBuiltIns(KotlinType kotlinType) {
         KotlinBuiltIns builtIns = kotlinType.getConstructor().getBuiltIns();
-        C12880j.m40222a((Object) builtIns, "constructor.builtIns");
+        Intrinsics.checkReturnedValueIsNotNull((Object) builtIns, "constructor.builtIns");
         return builtIns;
     }
 
@@ -52,11 +52,11 @@ public final class TypeUtilsKt {
         Object obj;
         List upperBounds = typeParameterDescriptor.getUpperBounds();
         String str = "upperBounds";
-        C12880j.m40222a((Object) upperBounds, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds, str);
         boolean z = !upperBounds.isEmpty();
         if (!C13147x.f29590a || z) {
             List upperBounds2 = typeParameterDescriptor.getUpperBounds();
-            C12880j.m40222a((Object) upperBounds2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds2, str);
             Iterator it = upperBounds2.iterator();
             while (true) {
                 ClassDescriptor classDescriptor = null;
@@ -84,9 +84,9 @@ public final class TypeUtilsKt {
                 return kotlinType;
             }
             List upperBounds3 = typeParameterDescriptor.getUpperBounds();
-            C12880j.m40222a((Object) upperBounds3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds3, str);
             Object f = C13199w.m40589f(upperBounds3);
-            C12880j.m40222a(f, "upperBounds.first()");
+            Intrinsics.checkReturnedValueIsNotNull(f, "upperBounds.first()");
             return (KotlinType) f;
         }
         StringBuilder sb = new StringBuilder();
@@ -105,13 +105,13 @@ public final class TypeUtilsKt {
 
     public static final KotlinType makeNotNullable(KotlinType kotlinType) {
         KotlinType makeNotNullable = TypeUtils.makeNotNullable(kotlinType);
-        C12880j.m40222a((Object) makeNotNullable, "TypeUtils.makeNotNullable(this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) makeNotNullable, "TypeUtils.makeNotNullable(this)");
         return makeNotNullable;
     }
 
     public static final KotlinType makeNullable(KotlinType kotlinType) {
         KotlinType makeNullable = TypeUtils.makeNullable(kotlinType);
-        C12880j.m40222a((Object) makeNullable, "TypeUtils.makeNullable(this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) makeNullable, "TypeUtils.makeNullable(this)");
         return makeNullable;
     }
 
@@ -150,7 +150,7 @@ public final class TypeUtilsKt {
         L_0x002e:
             kotlin.reflect.jvm.internal.impl.types.TypeConstructor r6 = r5.getConstructor()
             java.util.List r6 = r6.getParameters()
-            kotlin.jvm.internal.C12880j.m40222a(r6, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r3)
             java.util.ArrayList r7 = new java.util.ArrayList
             int r8 = kotlin.p590y.C13187p.m40525a(r6, r2)
             r7.<init>(r8)
@@ -179,7 +179,7 @@ public final class TypeUtilsKt {
         L_0x007c:
             kotlin.reflect.jvm.internal.impl.types.TypeConstructor r6 = r0.getConstructor()
             java.util.List r6 = r6.getParameters()
-            kotlin.jvm.internal.C12880j.m40222a(r6, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r3)
             java.util.ArrayList r3 = new java.util.ArrayList
             int r2 = kotlin.p590y.C13187p.m40525a(r6, r2)
             r3.<init>(r2)
@@ -214,7 +214,7 @@ public final class TypeUtilsKt {
         L_0x00d2:
             kotlin.reflect.jvm.internal.impl.types.TypeConstructor r5 = r0.getConstructor()
             java.util.List r5 = r5.getParameters()
-            kotlin.jvm.internal.C12880j.m40222a(r5, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r3)
             java.util.ArrayList r3 = new java.util.ArrayList
             int r2 = kotlin.p590y.C13187p.m40525a(r5, r2)
             r3.<init>(r2)

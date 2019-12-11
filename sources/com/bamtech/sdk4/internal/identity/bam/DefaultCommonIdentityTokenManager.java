@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.configuration.ConfigurationProvider;
 import com.bamtech.sdk4.internal.core.Storage;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -28,7 +28,7 @@ public final class DefaultCommonIdentityTokenManager implements CommonIdentityTo
 
     public Single<IdentityToken> getIdentityToken(ServiceTransaction serviceTransaction) {
         Single<IdentityToken> a = this.configurationProvider.getServiceConfigurationExtras(serviceTransaction, DefaultCommonIdentityTokenManager$getIdentityToken$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultCommonIdentityTokenManager$getIdentityToken$2<Object,Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…      }\n                }");
         return a;
     }
 }

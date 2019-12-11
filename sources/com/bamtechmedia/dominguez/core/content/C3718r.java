@@ -22,7 +22,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p275a0.C7159g;
 import p163g.p201e.p203b.p275a0.C7159g.C7162c;
@@ -158,11 +158,11 @@ public final class C3718r implements C3716q {
         if (Y != null) {
             String lowerCase = Y.toLowerCase();
             String str2 = "(this as java.lang.String).toLowerCase()";
-            C12880j.m40222a((Object) lowerCase, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, str2);
             String Z = rating.mo13188Z();
             if (Z != null) {
                 String lowerCase2 = Z.toLowerCase();
-                C12880j.m40222a((Object) lowerCase2, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase2, str2);
                 return new Pair<>(lowerCase, lowerCase2);
             }
             throw new C13142s(str);
@@ -190,7 +190,7 @@ public final class C3718r implements C3716q {
         if (Y != null) {
             String lowerCase = Y.toLowerCase();
             String str2 = "(this as java.lang.String).toLowerCase()";
-            C12880j.m40222a((Object) lowerCase, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, str2);
             List<String> X = rating.mo13186X();
             ArrayList arrayList = new ArrayList();
             for (String str3 : X) {
@@ -201,7 +201,7 @@ public final class C3718r implements C3716q {
                 sb.append('_');
                 if (str3 != null) {
                     String lowerCase2 = str3.toLowerCase();
-                    C12880j.m40222a((Object) lowerCase2, str2);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase2, str2);
                     sb.append(lowerCase2);
                     String a = C3573a.m12036a(b, sb.toString(), (Map) null, 2, (Object) null);
                     if (a != null) {
@@ -239,7 +239,7 @@ public final class C3718r implements C3716q {
             arrayList3.add(this.f9295e.mo19958b(b2, new C3722d(this)));
         }
         Completable c = Completable.m38167c((Iterable<? extends CompletableSource>) arrayList3);
-        C12880j.m40222a((Object) c, "Completable.mergeDelayEr… iconHeight } }\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.mergeDelayEr… iconHeight } }\n        )");
         return c;
     }
 
@@ -261,13 +261,13 @@ public final class C3718r implements C3716q {
         Pair e = m12637e(rating);
         String str = (String) e.mo31013a();
         String str2 = (String) e.mo31014b();
-        boolean a = C12880j.m40224a((Object) str, (Object) "tvpg");
+        boolean a = Intrinsics.areEqual((Object) str, (Object) "tvpg");
         List<String> X = rating.mo13186X();
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) X, 10));
         for (String str3 : X) {
             if (str3 != null) {
                 String lowerCase = str3.toLowerCase();
-                C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
                 arrayList.add(m12634a(lowerCase, a, str, str2));
             } else {
                 throw new C13142s("null cannot be cast to non-null type java.lang.String");
@@ -305,7 +305,7 @@ public final class C3718r implements C3716q {
                 }
             } else {
                 SpannableStringBuilder append = spannableStringBuilder.append(str);
-                C12880j.m40222a((Object) append, "ratingsSpan.append(SPACE)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) append, "ratingsSpan.append(SPACE)");
                 return append;
             }
         }
@@ -369,7 +369,7 @@ public final class C3718r implements C3716q {
             r1.append(r12)
         L_0x006a:
             java.lang.String r12 = "SpannableStringBuilder(m…         })\n            }"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r12)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r12)
             return r0
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtechmedia.dominguez.core.content.C3718r.mo13546a(com.bamtechmedia.dominguez.core.content.n):android.text.Spannable");
@@ -404,7 +404,7 @@ public final class C3718r implements C3716q {
             r9 = this;
             java.lang.String r6 = r10.toString()
             java.lang.String r0 = "imageUri.toString()"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r0)
             android.text.SpannableStringBuilder r7 = new android.text.SpannableStringBuilder
             r7.<init>(r6)
             java.io.FileInputStream r8 = new java.io.FileInputStream
@@ -413,7 +413,7 @@ public final class C3718r implements C3716q {
             java.lang.String r10 = r10.toString()     // Catch:{ all -> 0x004f }
             android.graphics.drawable.Drawable r10 = android.graphics.drawable.Drawable.createFromStream(r8, r10)     // Catch:{ all -> 0x004f }
             java.lang.String r0 = "drawable"
-            kotlin.jvm.internal.C12880j.m40222a(r10, r0)     // Catch:{ all -> 0x004f }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r10, r0)     // Catch:{ all -> 0x004f }
             int r0 = r10.getIntrinsicWidth()     // Catch:{ all -> 0x004f }
             int r1 = r10.getIntrinsicHeight()     // Catch:{ all -> 0x004f }
             r2 = 0

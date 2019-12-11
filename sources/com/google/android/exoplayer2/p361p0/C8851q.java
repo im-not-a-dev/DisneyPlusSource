@@ -4,7 +4,7 @@ import android.media.AudioTrack;
 import android.os.SystemClock;
 import com.google.android.exoplayer2.C8883r;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.lang.reflect.Method;
 
 /* renamed from: com.google.android.exoplayer2.p0.q */
@@ -105,7 +105,7 @@ final class C8851q {
     public C8851q(C8852a aVar) {
         C9537e.m29296a(aVar);
         this.f18861a = aVar;
-        if (C9554k0.f22281a >= 18) {
+        if (Util.SDK_INT >= 18) {
             try {
                 this.f18872l = AudioTrack.class.getMethod("getLatency", null);
             } catch (NoSuchMethodException unused) {
@@ -128,7 +128,7 @@ final class C8851q {
                     AudioTrack audioTrack = this.f18863c;
                     C9537e.m29296a(audioTrack);
                     Integer num = (Integer) method.invoke(audioTrack, new Object[0]);
-                    C9554k0.m29394a(num);
+                    Util.castNonNull(num);
                     this.f18873m = (((long) num.intValue()) * 1000) - this.f18869i;
                     this.f18873m = Math.max(this.f18873m, 0);
                     if (this.f18873m > 5000000) {
@@ -192,7 +192,7 @@ final class C8851q {
         this.f18866f = new C8849p(audioTrack);
         this.f18867g = audioTrack.getSampleRate();
         this.f18868h = m25702a(i);
-        this.f18875o = C9554k0.m29450e(i);
+        this.f18875o = Util.m29450e(i);
         this.f18869i = this.f18875o ? m25705f((long) (i3 / i2)) : -9223372036854775807L;
         this.f18877q = 0;
         this.f18878r = 0;
@@ -240,7 +240,7 @@ final class C8851q {
         if (z && !this.f18874n && playState != 1) {
             C8852a aVar = this.f18861a;
             if (aVar != null) {
-                aVar.mo23150a(this.f18865e, C8883r.m25968b(this.f18869i));
+                aVar.mo23150a(this.f18865e, C8883r.usToMs(this.f18869i));
             }
         }
         return true;
@@ -265,7 +265,7 @@ final class C8851q {
             }
             playbackHeadPosition += this.f18879s;
         }
-        if (C9554k0.f22281a <= 29) {
+        if (Util.SDK_INT <= 29) {
             if (playbackHeadPosition == 0 && this.f18877q > 0 && playState == 3) {
                 if (this.f18883w == -9223372036854775807L) {
                     this.f18883w = SystemClock.elapsedRealtime();
@@ -386,6 +386,6 @@ final class C8851q {
 
     /* renamed from: a */
     private static boolean m25702a(int i) {
-        return C9554k0.f22281a < 23 && (i == 5 || i == 6);
+        return Util.SDK_INT < 23 && (i == 5 || i == 6);
     }
 }

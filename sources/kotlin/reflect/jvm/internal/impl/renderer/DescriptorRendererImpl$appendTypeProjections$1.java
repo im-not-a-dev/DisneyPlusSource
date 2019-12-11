@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.renderer;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
 import kotlin.reflect.jvm.internal.impl.types.TypeProjection;
@@ -22,7 +22,7 @@ final class DescriptorRendererImpl$appendTypeProjections$1 extends C12881k imple
         }
         DescriptorRendererImpl descriptorRendererImpl = this.this$0;
         KotlinType type = typeProjection.getType();
-        C12880j.m40222a((Object) type, "it.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "it.type");
         String renderType = descriptorRendererImpl.renderType(type);
         if (typeProjection.getProjectionKind() == Variance.INVARIANT) {
             return renderType;

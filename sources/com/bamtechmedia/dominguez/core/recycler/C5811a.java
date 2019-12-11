@@ -19,7 +19,7 @@ public final class C5811a<T> {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13603a, (java.lang.Object) ((com.bamtechmedia.dominguez.core.recycler.C5811a) r2).f13603a) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13603a, (java.lang.Object) ((com.bamtechmedia.dominguez.core.recycler.C5811a) r2).f13603a) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -31,7 +31,7 @@ public final class C5811a<T> {
             com.bamtechmedia.dominguez.core.recycler.a r2 = (com.bamtechmedia.dominguez.core.recycler.C5811a) r2
             java.util.List<T> r0 = r1.f13603a
             java.util.List<T> r2 = r2.f13603a
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:

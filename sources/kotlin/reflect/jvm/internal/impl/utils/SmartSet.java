@@ -11,7 +11,7 @@ import java.util.Set;
 import kotlin.C13142s;
 import kotlin.jvm.internal.C12861b;
 import kotlin.jvm.internal.C12865c0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.p589f0.C12875d;
 
 /* compiled from: SmartSet.kt */
@@ -99,7 +99,7 @@ public final class SmartSet<T> extends AbstractSet<T> {
         if (size() == 0) {
             this.data = t;
         } else if (size() == 1) {
-            if (C12880j.m40224a(this.data, (Object) t)) {
+            if (Intrinsics.areEqual(this.data, (Object) t)) {
                 return false;
             }
             this.data = new Object[]{this.data, t};
@@ -116,7 +116,7 @@ public final class SmartSet<T> extends AbstractSet<T> {
                     obj = a;
                 } else {
                     Object[] copyOf = Arrays.copyOf(objArr, size() + 1);
-                    C12880j.m40222a((Object) copyOf, "java.util.Arrays.copyOf(this, newSize)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) copyOf, "java.util.Arrays.copyOf(this, newSize)");
                     copyOf[copyOf.length - 1] = t;
                     obj = copyOf;
                 }
@@ -146,7 +146,7 @@ public final class SmartSet<T> extends AbstractSet<T> {
             return false;
         }
         if (size() == 1) {
-            return C12880j.m40224a(this.data, obj);
+            return Intrinsics.areEqual(this.data, obj);
         }
         if (size() < 5) {
             Object obj2 = this.data;

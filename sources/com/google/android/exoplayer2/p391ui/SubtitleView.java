@@ -9,7 +9,7 @@ import android.view.accessibility.CaptioningManager;
 import com.google.android.exoplayer2.p382u0.C9321a;
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9332k;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,7 +82,7 @@ public final class SubtitleView extends View implements C9332k {
 
     /* renamed from: b */
     public void mo24322b() {
-        setFractionalTextSize(((C9554k0.f22281a < 19 || isInEditMode()) ? 1.0f : getUserCaptionFontScaleV19()) * 0.0533f);
+        setFractionalTextSize(((Util.SDK_INT < 19 || isInEditMode()) ? 1.0f : getUserCaptionFontScaleV19()) * 0.0533f);
     }
 
     public void dispatchDraw(Canvas canvas) {
@@ -205,7 +205,7 @@ public final class SubtitleView extends View implements C9332k {
 
     /* renamed from: a */
     public void mo24320a() {
-        setStyle((C9554k0.f22281a < 19 || !m28773c() || isInEditMode()) ? C9321a.f21338g : getUserCaptionStyleV19());
+        setStyle((Util.SDK_INT < 19 || !m28773c() || isInEditMode()) ? C9321a.f21338g : getUserCaptionStyleV19());
     }
 
     /* renamed from: a */

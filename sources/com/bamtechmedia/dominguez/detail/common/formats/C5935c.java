@@ -12,7 +12,7 @@ import java.util.concurrent.Callable;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p275a0.C7159g;
 import p163g.p201e.p203b.p275a0.C7159g.C7162c;
@@ -101,7 +101,7 @@ public final class C5935c {
     /* renamed from: a */
     public final Single<CharSequence> mo17862a(List<C5928a> list) {
         Single<CharSequence> c = Single.m38401c((Callable<? extends T>) new C5937b<Object>(this, list));
-        C12880j.m40222a((Object) c, "Single.fromCallable {\n  …leStringBuilder\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Single.fromCallable {\n  …leStringBuilder\n        }");
         return c;
     }
 

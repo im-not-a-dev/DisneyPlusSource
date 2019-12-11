@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.resolve;
 
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.utils.SmartSet;
 
@@ -18,7 +18,7 @@ final class C13101x410e6287 extends C12881k implements Function1<H, C13145v> {
 
     public final void invoke(H h) {
         SmartSet smartSet = this.$conflictedHandles;
-        C12880j.m40222a((Object) h, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "it");
         smartSet.add(h);
     }
 }

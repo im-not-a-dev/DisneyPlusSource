@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.content.assets.o */
 /* compiled from: Milestones.kt */
@@ -43,7 +43,7 @@ public final class C3641o {
                 break;
             }
             obj = it.next();
-            if (C12880j.m40224a((Object) ((MilestoneAttributes) obj).mo13138Y(), (Object) C3639m.OFFSET.mo13283a())) {
+            if (Intrinsics.areEqual((Object) ((MilestoneAttributes) obj).mo13138Y(), (Object) C3639m.OFFSET.mo13283a())) {
                 break;
             }
         }
@@ -65,7 +65,7 @@ public final class C3641o {
                 break;
             }
             obj = it.next();
-            if (C12880j.m40224a((Object) ((Milestone) obj).mo13129Y(), (Object) nVar.mo13284a())) {
+            if (Intrinsics.areEqual((Object) ((Milestone) obj).mo13129Y(), (Object) nVar.mo13284a())) {
                 break;
             }
         }
@@ -84,7 +84,7 @@ public final class C3641o {
                 break;
             }
             obj2 = it2.next();
-            if (C12880j.m40224a((Object) ((MilestoneAttributes) obj2).mo13138Y(), (Object) C3639m.OFFSET.mo13283a())) {
+            if (Intrinsics.areEqual((Object) ((MilestoneAttributes) obj2).mo13138Y(), (Object) C3639m.OFFSET.mo13283a())) {
                 break;
             }
         }

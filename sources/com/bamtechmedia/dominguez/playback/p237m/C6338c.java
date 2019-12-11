@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.playback.p237m.p252q.C6501b;
 import com.bamtechmedia.dominguez.playback.p237m.p252q.C6501b.C6502a;
 import com.bamtechmedia.dominguez.playback.p237m.p252q.C6501b.C6506e;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u0000 \u00112\u00020\u0001:\u0001\u0011B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u000e\u0010\r\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\u000fJ\u0006\u0010\u0010\u001a\u00020\u0006R\u0011\u0010\u0005\u001a\u00020\u00068F¢\u0006\u0006\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\u00068F¢\u0006\u0006\u001a\u0004\b\t\u0010\bR\u0014\u0010\n\u001a\u00020\u00068BX\u0004¢\u0006\u0006\u001a\u0004\b\n\u0010\bR\u0014\u0010\u000b\u001a\u00020\u00068BX\u0004¢\u0006\u0006\u001a\u0004\b\u000b\u0010\bR\u0011\u0010\f\u001a\u00020\u00068F¢\u0006\u0006\u001a\u0004\b\f\u0010\bR\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0012"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/StateMediator;", "", "viewModel", "Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;", "(Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;)V", "areWaitingToShowRemainderOfRating", "", "getAreWaitingToShowRemainderOfRating", "()Z", "isRatingOverlayVisible", "isTrackSelectionOverlayLaunching", "isTrackSelectionOverlayVisible", "isUpNextDialogVisible", "isUpNextActionBlocked", "action", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextAction;", "shouldReShowRating", "Companion", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.m.c */
@@ -52,7 +52,7 @@ public final class C6338c {
     /* renamed from: a */
     public final boolean mo18972a() {
         C6336a aVar = (C6336a) this.f14440a.getCurrentState();
-        return C12880j.m40224a((Object) aVar != null ? aVar.mo18953b() : null, (Object) C6288c.f14357a);
+        return Intrinsics.areEqual((Object) aVar != null ? aVar.mo18953b() : null, (Object) C6288c.f14357a);
     }
 
     /* renamed from: b */

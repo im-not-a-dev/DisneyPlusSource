@@ -30,7 +30,7 @@ public final class LegalData {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.adult, (java.lang.Object) ((com.bamtechmedia.dominguez.legal.LegalData) r2).adult) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.adult, (java.lang.Object) ((com.bamtechmedia.dominguez.legal.LegalData) r2).adult) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -42,7 +42,7 @@ public final class LegalData {
             com.bamtechmedia.dominguez.legal.LegalData r2 = (com.bamtechmedia.dominguez.legal.LegalData) r2
             com.bamtechmedia.dominguez.legal.LegalDisclosures r0 = r1.adult
             com.bamtechmedia.dominguez.legal.LegalDisclosures r2 = r2.adult
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:

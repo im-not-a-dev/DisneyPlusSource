@@ -25,7 +25,7 @@ public final class C3341a {
             r3 = this;
             java.lang.String r0 = r4.mo12623d()
             java.lang.String r1 = "brand"
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             java.lang.String r1 = ""
             if (r0 == 0) goto L_0x0036
             int r4 = p163g.p201e.p202a.C5365h.a11y_home_brandtile

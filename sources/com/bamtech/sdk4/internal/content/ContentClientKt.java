@@ -4,7 +4,7 @@ import com.bamtech.sdk4.content.SearchOverrides;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -19,7 +19,7 @@ public final class ContentClientKt {
             String x_delorian_header = ContentClient.Companion.getX_DELORIAN_HEADER();
             String x_delorian_template = ContentClient.Companion.getX_DELORIAN_TEMPLATE();
             String abstractDateTime = new DateTime(longValue, DateTimeZone.UTC).toString();
-            C12880j.m40222a((Object) abstractDateTime, "DateTime(timeInMilliseco…eTimeZone.UTC).toString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) abstractDateTime, "DateTime(timeInMilliseco…eTimeZone.UTC).toString()");
             arrayList.add(new OptionalHeaderTemplate(x_delorian_header, x_delorian_template, abstractDateTime));
         }
         String countryCode = searchOverrides.getCountryCode();

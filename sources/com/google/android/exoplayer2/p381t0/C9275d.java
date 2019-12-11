@@ -10,8 +10,8 @@ import android.text.TextUtils;
 import android.util.Pair;
 import android.util.SparseIntArray;
 import com.bamtech.sdk4.internal.configuration.ContentServiceClientExtras;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -243,7 +243,7 @@ public final class C9275d {
             if (str.startsWith("OMX.google") || str.startsWith("c2.android")) {
                 return -1;
             }
-            return (C9554k0.f22281a >= 26 || !str.equals("OMX.MTK.AUDIO.DECODER.RAW")) ? 0 : 1;
+            return (Util.SDK_INT >= 26 || !str.equals("OMX.MTK.AUDIO.DECODER.RAW")) ? 0 : 1;
         }
     }
 
@@ -395,8 +395,8 @@ public final class C9275d {
             if (list != null) {
                 return list;
             }
-            ArrayList a = m28133a(bVar, C9554k0.f22281a >= 21 ? new C9281f(z, z2) : new C9280e());
-            if (z && a.isEmpty() && 21 <= C9554k0.f22281a && C9554k0.f22281a <= 23) {
+            ArrayList a = m28133a(bVar, Util.SDK_INT >= 21 ? new C9281f(z, z2) : new C9280e());
+            if (z && a.isEmpty() && 21 <= Util.SDK_INT && Util.SDK_INT <= 23) {
                 a = m28133a(bVar, (C9279d) new C9280e());
                 if (!a.isEmpty()) {
                     StringBuilder sb = new StringBuilder();
@@ -404,7 +404,7 @@ public final class C9275d {
                     sb.append(str);
                     sb.append(". Assuming: ");
                     sb.append(((C9270a) a.get(0)).f21082a);
-                    C9563q.m29500d("MediaCodecUtil", sb.toString());
+                    Log.m29500d("MediaCodecUtil", sb.toString());
                 }
             }
             m28134a(str, (List<C9270a>) a);
@@ -422,7 +422,7 @@ public final class C9275d {
             StringBuilder sb = new StringBuilder();
             sb.append(str2);
             sb.append(str);
-            C9563q.m29500d(str3, sb.toString());
+            Log.m29500d(str3, sb.toString());
             return null;
         }
         Matcher matcher = f21153a.matcher(strArr[1]);
@@ -430,7 +430,7 @@ public final class C9275d {
             StringBuilder sb2 = new StringBuilder();
             sb2.append(str2);
             sb2.append(str);
-            C9563q.m29500d(str3, sb2.toString());
+            Log.m29500d(str3, sb2.toString());
             return null;
         }
         String group = matcher.group(1);
@@ -439,7 +439,7 @@ public final class C9275d {
             StringBuilder sb3 = new StringBuilder();
             sb3.append("Unknown Dolby Vision profile string: ");
             sb3.append(group);
-            C9563q.m29500d(str3, sb3.toString());
+            Log.m29500d(str3, sb3.toString());
             return null;
         }
         String str4 = strArr[2];
@@ -450,7 +450,7 @@ public final class C9275d {
         StringBuilder sb4 = new StringBuilder();
         sb4.append("Unknown Dolby Vision level string: ");
         sb4.append(str4);
-        C9563q.m29500d(str3, sb4.toString());
+        Log.m29500d(str3, sb4.toString());
         return null;
     }
 
@@ -462,7 +462,7 @@ public final class C9275d {
             StringBuilder sb = new StringBuilder();
             sb.append(str2);
             sb.append(str);
-            C9563q.m29500d(str3, sb.toString());
+            Log.m29500d(str3, sb.toString());
             return null;
         }
         int i = 1;
@@ -471,7 +471,7 @@ public final class C9275d {
             StringBuilder sb2 = new StringBuilder();
             sb2.append(str2);
             sb2.append(str);
-            C9563q.m29500d(str3, sb2.toString());
+            Log.m29500d(str3, sb2.toString());
             return null;
         }
         String group = matcher.group(1);
@@ -482,7 +482,7 @@ public final class C9275d {
                 StringBuilder sb3 = new StringBuilder();
                 sb3.append("Unknown HEVC profile string: ");
                 sb3.append(group);
-                C9563q.m29500d(str3, sb3.toString());
+                Log.m29500d(str3, sb3.toString());
                 return null;
             }
         }
@@ -494,7 +494,7 @@ public final class C9275d {
         StringBuilder sb4 = new StringBuilder();
         sb4.append("Unknown HEVC level string: ");
         sb4.append(str4);
-        C9563q.m29500d(str3, sb4.toString());
+        Log.m29500d(str3, sb4.toString());
         return null;
     }
 
@@ -601,7 +601,7 @@ public final class C9275d {
             r17 = r10
             r1 = r11
         L_0x00a9:
-            int r6 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a     // Catch:{ Exception -> 0x00fb }
+            int r6 = com.google.android.exoplayer2.p393v0.Util.SDK_INT     // Catch:{ Exception -> 0x00fb }
             r7 = 23
             java.lang.String r8 = "MediaCodecUtil"
             if (r6 > r7) goto L_0x00d6
@@ -615,7 +615,7 @@ public final class C9275d {
             java.lang.String r1 = " (failed to query capabilities)"
             r0.append(r1)     // Catch:{ Exception -> 0x00fb }
             java.lang.String r0 = r0.toString()     // Catch:{ Exception -> 0x00fb }
-            com.google.android.exoplayer2.p393v0.C9563q.m29497b(r8, r0)     // Catch:{ Exception -> 0x00fb }
+            com.google.android.exoplayer2.p393v0.Log.m29497b(r8, r0)     // Catch:{ Exception -> 0x00fb }
         L_0x00d0:
             int r15 = r15 + 1
             r1 = r18
@@ -633,7 +633,7 @@ public final class C9275d {
             java.lang.String r1 = ")"
             r2.append(r1)     // Catch:{ Exception -> 0x00fb }
             java.lang.String r1 = r2.toString()     // Catch:{ Exception -> 0x00fb }
-            com.google.android.exoplayer2.p393v0.C9563q.m29497b(r8, r1)     // Catch:{ Exception -> 0x00fb }
+            com.google.android.exoplayer2.p393v0.Log.m29497b(r8, r1)     // Catch:{ Exception -> 0x00fb }
             throw r0     // Catch:{ Exception -> 0x00fb }
         L_0x00fa:
             return r5
@@ -660,7 +660,7 @@ public final class C9275d {
                     i2 = Math.max(m28128a(a2[i].level), i2);
                     i++;
                 }
-                i = Math.max(i2, C9554k0.f22281a >= 21 ? 345600 : 172800);
+                i = Math.max(i2, Util.SDK_INT >= 21 ? 345600 : 172800);
             }
             f21161i = i;
         }
@@ -769,16 +769,16 @@ public final class C9275d {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:29:0x0074, code lost:
-        if (com.google.android.exoplayer2.p393v0.C9554k0.f22282b.startsWith("HM") != false) goto L_0x0076;
+        if (com.google.android.exoplayer2.p393v0.Util.DEVICE.startsWith("HM") != false) goto L_0x0076;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:58:0x00fb, code lost:
-        if ("SO-02E".equals(com.google.android.exoplayer2.p393v0.C9554k0.f22282b) != false) goto L_0x00fd;
+        if ("SO-02E".equals(com.google.android.exoplayer2.p393v0.Util.DEVICE) != false) goto L_0x00fd;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:71:0x0130, code lost:
-        if ("C1605".equals(com.google.android.exoplayer2.p393v0.C9554k0.f22282b) != false) goto L_0x0132;
+        if ("C1605".equals(com.google.android.exoplayer2.p393v0.Util.DEVICE) != false) goto L_0x0132;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:96:0x01a1, code lost:
-        if ("SCV31".equals(com.google.android.exoplayer2.p393v0.C9554k0.f22282b) != false) goto L_0x01a3;
+        if ("SCV31".equals(com.google.android.exoplayer2.p393v0.Util.DEVICE) != false) goto L_0x01a3;
      */
     /* renamed from: b */
     /* Code decompiled incorrectly, please refer to instructions dump. */
@@ -793,7 +793,7 @@ public final class C9275d {
             if (r3 == 0) goto L_0x0013
             goto L_0x0215
         L_0x0013:
-            int r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             r5 = 21
             if (r3 >= r5) goto L_0x004a
             java.lang.String r3 = "CIPAACDecoder"
@@ -817,109 +817,109 @@ public final class C9275d {
         L_0x0049:
             return r0
         L_0x004a:
-            int r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             r5 = 18
             if (r3 >= r5) goto L_0x0077
             java.lang.String r3 = "OMX.MTK.AUDIO.DECODER.AAC"
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x0077
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "a70"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x0076
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22283c
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
             java.lang.String r5 = "Xiaomi"
             boolean r3 = r5.equals(r3)
             if (r3 == 0) goto L_0x0077
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "HM"
             boolean r3 = r3.startsWith(r5)
             if (r3 == 0) goto L_0x0077
         L_0x0076:
             return r0
         L_0x0077:
-            int r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             r5 = 16
             if (r3 != r5) goto L_0x00fe
             java.lang.String r3 = "OMX.qcom.audio.decoder.mp3"
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x00fe
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "dlxu"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "protou"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "ville"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "villeplus"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "villec2"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "gee"
             boolean r3 = r3.startsWith(r1)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "C6602"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "C6603"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "C6606"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "C6616"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "L36h"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "SO-02E"
             boolean r3 = r1.equals(r3)
             if (r3 == 0) goto L_0x00fe
         L_0x00fd:
             return r0
         L_0x00fe:
-            int r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             if (r3 != r5) goto L_0x0133
             java.lang.String r3 = "OMX.qcom.audio.decoder.aac"
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x0133
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "C1504"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x0132
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "C1505"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x0132
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "C1604"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x0132
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "C1605"
             boolean r3 = r5.equals(r3)
             if (r3 == 0) goto L_0x0133
         L_0x0132:
             return r0
         L_0x0133:
-            int r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             r5 = 24
             java.lang.String r1 = "samsung"
             if (r3 >= r5) goto L_0x01a4
@@ -930,79 +930,79 @@ public final class C9275d {
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x01a4
         L_0x014b:
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22283c
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
             boolean r3 = r1.equals(r3)
             if (r3 == 0) goto L_0x01a4
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "zeroflte"
             boolean r3 = r3.startsWith(r5)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "zerolte"
             boolean r3 = r3.startsWith(r5)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "zenlte"
             boolean r3 = r3.startsWith(r5)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "SC-05G"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "marinelteatt"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "404SC"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "SC-04G"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r5 = "SCV31"
             boolean r3 = r5.equals(r3)
             if (r3 == 0) goto L_0x01a4
         L_0x01a3:
             return r0
         L_0x01a4:
-            int r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             java.lang.String r5 = "jflte"
             r2 = 19
             if (r3 > r2) goto L_0x01ed
             java.lang.String r3 = "OMX.SEC.vp8.dec"
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x01ed
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22283c
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
             boolean r3 = r1.equals(r3)
             if (r3 == 0) goto L_0x01ed
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "d2"
             boolean r3 = r3.startsWith(r1)
             if (r3 != 0) goto L_0x01ec
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "serrano"
             boolean r3 = r3.startsWith(r1)
             if (r3 != 0) goto L_0x01ec
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             boolean r3 = r3.startsWith(r5)
             if (r3 != 0) goto L_0x01ec
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "santos"
             boolean r3 = r3.startsWith(r1)
             if (r3 != 0) goto L_0x01ec
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             java.lang.String r1 = "t0"
             boolean r3 = r3.startsWith(r1)
             if (r3 == 0) goto L_0x01ed
         L_0x01ec:
             return r0
         L_0x01ed:
-            int r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             if (r3 > r2) goto L_0x0202
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
             boolean r3 = r3.startsWith(r5)
             if (r3 == 0) goto L_0x0202
             java.lang.String r3 = "OMX.qcom.video.decoder.vp8"
@@ -1058,7 +1058,7 @@ public final class C9275d {
     private static void m28134a(String str, List<C9270a> list) {
         if ("audio/raw".equals(str)) {
             Collections.sort(list, new C9283h());
-        } else if (C9554k0.f22281a < 21 && list.size() > 1) {
+        } else if (Util.SDK_INT < 21 && list.size() > 1) {
             String str2 = ((C9270a) list.get(0)).f21082a;
             if ("OMX.SEC.mp3.dec".equals(str2) || "OMX.SEC.MP3.Decoder".equals(str2) || "OMX.brcm.audio.mp3.decoder".equals(str2)) {
                 Collections.sort(list, new C9282g());
@@ -1067,20 +1067,20 @@ public final class C9275d {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:5:0x0018, code lost:
-        if ("Nexus 10".equals(com.google.android.exoplayer2.p393v0.C9554k0.f22284d) != false) goto L_0x001a;
+        if ("Nexus 10".equals(com.google.android.exoplayer2.p393v0.Util.MODEL) != false) goto L_0x001a;
      */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private static boolean m28135a(java.lang.String r2) {
         /*
-            int r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             r1 = 22
             if (r0 > r1) goto L_0x002c
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "ODROID-XU3"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x001a
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "Nexus 10"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x002c
@@ -1110,7 +1110,7 @@ public final class C9275d {
             StringBuilder sb = new StringBuilder();
             sb.append(str2);
             sb.append(str);
-            C9563q.m29500d(str3, sb.toString());
+            Log.m29500d(str3, sb.toString());
             return null;
         }
         try {
@@ -1124,7 +1124,7 @@ public final class C9275d {
             StringBuilder sb2 = new StringBuilder();
             sb2.append(str2);
             sb2.append(str);
-            C9563q.m29500d(str3, sb2.toString());
+            Log.m29500d(str3, sb2.toString());
         }
         return null;
     }
@@ -1139,7 +1139,7 @@ public final class C9275d {
             StringBuilder sb = new StringBuilder();
             sb.append(str2);
             sb.append(str);
-            C9563q.m29500d(str3, sb.toString());
+            Log.m29500d(str3, sb.toString());
             return null;
         }
         try {
@@ -1154,7 +1154,7 @@ public final class C9275d {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(str2);
                 sb2.append(str);
-                C9563q.m29500d(str3, sb2.toString());
+                Log.m29500d(str3, sb2.toString());
                 return null;
             }
             int i3 = f21155c.get(i2, -1);
@@ -1162,7 +1162,7 @@ public final class C9275d {
                 StringBuilder sb3 = new StringBuilder();
                 sb3.append("Unknown AVC profile: ");
                 sb3.append(i2);
-                C9563q.m29500d(str3, sb3.toString());
+                Log.m29500d(str3, sb3.toString());
                 return null;
             }
             int i4 = f21156d.get(i, -1);
@@ -1172,13 +1172,13 @@ public final class C9275d {
             StringBuilder sb4 = new StringBuilder();
             sb4.append("Unknown AVC level: ");
             sb4.append(i);
-            C9563q.m29500d(str3, sb4.toString());
+            Log.m29500d(str3, sb4.toString());
             return null;
         } catch (NumberFormatException unused) {
             StringBuilder sb5 = new StringBuilder();
             sb5.append(str2);
             sb5.append(str);
-            C9563q.m29500d(str3, sb5.toString());
+            Log.m29500d(str3, sb5.toString());
             return null;
         }
     }

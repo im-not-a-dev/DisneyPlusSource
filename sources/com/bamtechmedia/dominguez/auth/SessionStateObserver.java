@@ -10,7 +10,7 @@ import com.bamtech.sdk4.session.SessionState;
 import com.bamtech.sdk4.session.SessionState.AuthenticationExpired;
 import com.uber.autodispose.android.lifecycle.C10541b;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p503n.p504a.C11786a0;
 import p163g.p503n.p504a.C11790c0;
 import p163g.p503n.p504a.C11793e;
@@ -94,7 +94,7 @@ public final class SessionStateObserver implements C0710d {
 
         /* renamed from: a */
         public final void mo11732a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -117,7 +117,7 @@ public final class SessionStateObserver implements C0710d {
     /* renamed from: b */
     public final void mo11728b() {
         C0722m i = C0733v.m3782i();
-        C12880j.m40222a((Object) i, "ProcessLifecycleOwner.get()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "ProcessLifecycleOwner.get()");
         i.getLifecycle().mo4134a(this);
     }
 
@@ -144,11 +144,11 @@ public final class SessionStateObserver implements C0710d {
     /* renamed from: b */
     public void mo4127b(C0722m mVar) {
         Observable a = this.f7439c.mo30225d((Function<? super T, ? extends ObservableSource<? extends R>>) C2688a.f7440c).mo30150a((C11952h<? super T>) C2689b.f7441c);
-        C12880j.m40222a((Object) a, "sessionOnce.flatMapObser…e.AuthenticationExpired }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "sessionOnce.flatMapObser…e.AuthenticationExpired }");
         C10541b a2 = C10541b.m33255a(mVar, C0716a.ON_DESTROY);
-        C12880j.m40222a((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
         Object a3 = a.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a((C11790c0) a2));
-        C12880j.m40222a(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a3).mo29915a(new C2690c(this), C2691d.f7443c);
     }
 }

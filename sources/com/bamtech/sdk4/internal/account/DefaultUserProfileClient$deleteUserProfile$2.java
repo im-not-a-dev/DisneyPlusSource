@@ -14,7 +14,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.Dust$Events;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Maybe;
@@ -52,9 +52,9 @@ final class DefaultUserProfileClient$deleteUserProfile$2<T, R> implements Functi
         String profile_delete = AccountServiceConfigurationKt.getPROFILE_DELETE(Dust$Events.INSTANCE);
         Call a2 = C1691e.m7799a(a);
         Maybe b = C1681c.m7780a(a, a2).mo30234h().mo30124c((C11945a) new C1794xafb91f2d(a2)).mo30119b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Maybe<CreateAccountGrantResponse> a3 = b.mo30116b((Consumer<? super Disposable>) new C1795xafb91f2e<Object>(serviceTransaction2, profile_delete)).mo30102a((Consumer<? super Throwable>) new C1796xafb91f2f<Object>(a, serviceTransaction2, profile_delete)).mo30103a((Function<? super T, ? extends MaybeSource<? extends R>>) new C1797xafb91f30<Object,Object>(serviceTransaction2, profile_delete));
-        C12880j.m40222a((Object) a3, "this.asMaybe()\n        .…)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "this.asMaybe()\n        .…)\n            }\n        }");
         return a3;
     }
 }

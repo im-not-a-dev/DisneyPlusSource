@@ -12,8 +12,8 @@ import android.text.style.StyleSpan;
 import android.text.style.TypefaceSpan;
 import android.text.style.UnderlineSpan;
 import com.google.android.exoplayer2.p382u0.p390t.C9382e.C9384b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -78,7 +78,7 @@ public final class C9385f {
                 trim = trim.substring(0, indexOf);
                 str2 = trim2;
             }
-            String[] a = C9554k0.m29423a(trim, "\\.");
+            String[] a = Util.m29423a(trim, "\\.");
             String str3 = a[0];
             if (a.length > 1) {
                 strArr = (String[]) Arrays.copyOfRange(a, 1, a.length);
@@ -223,7 +223,7 @@ public final class C9385f {
             r0.append(r6)
             java.lang.String r6 = r0.toString()
             java.lang.String r0 = "WebvttCueParser"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r0, r6)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r0, r6)
             r6 = 0
             return r6
         L_0x006e:
@@ -316,7 +316,7 @@ public final class C9385f {
             r0.append(r5)
             java.lang.String r5 = r0.toString()
             java.lang.String r0 = "WebvttCueParser"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r0, r5)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r0, r5)
             r5 = -2147483648(0xffffffff80000000, float:-0.0)
             return r5
         L_0x0056:
@@ -351,13 +351,13 @@ public final class C9385f {
                     sb.append(group);
                     sb.append(":");
                     sb.append(group2);
-                    C9563q.m29500d(str2, sb.toString());
+                    Log.m29500d(str2, sb.toString());
                 }
             } catch (NumberFormatException unused) {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("Skipping bad cue setting: ");
                 sb2.append(matcher.group());
-                C9563q.m29500d(str2, sb2.toString());
+                Log.m29500d(str2, sb2.toString());
             }
         }
     }
@@ -532,7 +532,7 @@ public final class C9385f {
             StringBuilder sb2 = new StringBuilder();
             sb2.append("Skipping cue with bad header: ");
             sb2.append(matcher.group());
-            C9563q.m29500d("WebvttCueParser", sb2.toString());
+            Log.m29500d("WebvttCueParser", sb2.toString());
             return false;
         }
     }
@@ -602,7 +602,7 @@ public final class C9385f {
             r6.append(r5)
             java.lang.String r5 = r6.toString()
             java.lang.String r6 = "WebvttCueParser"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r6, r5)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r6, r5)
             goto L_0x007e
         L_0x0067:
             r5 = 38
@@ -786,7 +786,7 @@ public final class C9385f {
         if (trim.isEmpty()) {
             return null;
         }
-        return C9554k0.m29437b(trim, "[ \\.]")[0];
+        return Util.m29437b(trim, "[ \\.]")[0];
     }
 
     /* renamed from: a */

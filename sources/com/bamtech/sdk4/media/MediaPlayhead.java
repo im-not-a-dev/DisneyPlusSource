@@ -68,7 +68,7 @@ public final class MediaPlayhead {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r4.contentId, (java.lang.Object) r5.contentId) != false) goto L_0x0033;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r4.contentId, (java.lang.Object) r5.contentId) != false) goto L_0x0033;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r5) {
@@ -84,15 +84,15 @@ public final class MediaPlayhead {
             if (r0 != 0) goto L_0x0031
             org.joda.time.DateTime r0 = r4.lastUpdated
             org.joda.time.DateTime r1 = r5.lastUpdated
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             com.bamtech.sdk4.media.MediaPlayheadStatus r0 = r4.status
             com.bamtech.sdk4.media.MediaPlayheadStatus r1 = r5.status
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.lang.String r0 = r4.contentId
             java.lang.String r5 = r5.contentId
-            boolean r5 = kotlin.jvm.internal.C12880j.m40224a(r0, r5)
+            boolean r5 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r5)
             if (r5 == 0) goto L_0x0031
             goto L_0x0033
         L_0x0031:

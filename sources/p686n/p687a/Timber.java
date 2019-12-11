@@ -7,7 +7,7 @@ import java.util.List;
 
 /* renamed from: n.a.a */
 /* compiled from: Timber */
-public final class C14100a {
+public final class Timber {
 
     /* renamed from: a */
     private static final C14102b[] f31122a = new C14102b[0];
@@ -29,70 +29,70 @@ public final class C14100a {
 
         /* renamed from: a */
         public void mo35666a(String str, Object... objArr) {
-            for (C14102b a : C14100a.f31124c) {
+            for (C14102b a : Timber.f31124c) {
                 a.mo35666a(str, objArr);
             }
         }
 
         /* renamed from: b */
         public void mo35670b(Throwable th) {
-            for (C14102b b : C14100a.f31124c) {
+            for (C14102b b : Timber.f31124c) {
                 b.mo35670b(th);
             }
         }
 
         /* renamed from: c */
         public void mo35672c(Throwable th, String str, Object... objArr) {
-            for (C14102b c : C14100a.f31124c) {
+            for (C14102b c : Timber.f31124c) {
                 c.mo35672c(th, str, objArr);
             }
         }
 
         /* renamed from: d */
         public void mo35673d(String str, Object... objArr) {
-            for (C14102b d : C14100a.f31124c) {
+            for (C14102b d : Timber.f31124c) {
                 d.mo35673d(str, objArr);
             }
         }
 
         /* renamed from: e */
         public void mo35674e(String str, Object... objArr) {
-            for (C14102b e : C14100a.f31124c) {
+            for (C14102b e : Timber.f31124c) {
                 e.mo35674e(str, objArr);
             }
         }
 
         /* renamed from: f */
         public void mo35675f(String str, Object... objArr) {
-            for (C14102b f : C14100a.f31124c) {
+            for (C14102b f : Timber.f31124c) {
                 f.mo35675f(str, objArr);
             }
         }
 
         /* renamed from: a */
         public void mo35668a(Throwable th, String str, Object... objArr) {
-            for (C14102b a : C14100a.f31124c) {
+            for (C14102b a : Timber.f31124c) {
                 a.mo35668a(th, str, objArr);
             }
         }
 
         /* renamed from: b */
         public void mo35669b(String str, Object... objArr) {
-            for (C14102b b : C14100a.f31124c) {
+            for (C14102b b : Timber.f31124c) {
                 b.mo35669b(str, objArr);
             }
         }
 
         /* renamed from: a */
         public void mo35667a(Throwable th) {
-            for (C14102b a : C14100a.f31124c) {
+            for (C14102b a : Timber.f31124c) {
                 a.mo35667a(th);
             }
         }
 
         /* renamed from: b */
         public void mo35671b(Throwable th, String str, Object... objArr) {
-            for (C14102b b : C14100a.f31124c) {
+            for (C14102b b : Timber.f31124c) {
                 b.mo35671b(th, str, objArr);
             }
         }
@@ -231,7 +231,7 @@ public final class C14100a {
         }
     }
 
-    private C14100a() {
+    private Timber() {
         throw new AssertionError("No instances.");
     }
 

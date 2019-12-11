@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: okio.m */
 /* compiled from: Okio.kt */
@@ -27,7 +27,7 @@ public final class C14287m {
     public static final C14302x m45727b(Socket socket) throws IOException {
         C14301w wVar = new C14301w(socket);
         InputStream inputStream = socket.getInputStream();
-        C12880j.m40222a((Object) inputStream, "getInputStream()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inputStream, "getInputStream()");
         return wVar.mo36403a((C14302x) new C14286l(inputStream, wVar));
     }
 
@@ -60,7 +60,7 @@ public final class C14287m {
     public static final C14300v m45723a(Socket socket) throws IOException {
         C14301w wVar = new C14301w(socket);
         OutputStream outputStream = socket.getOutputStream();
-        C12880j.m40222a((Object) outputStream, "getOutputStream()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) outputStream, "getOutputStream()");
         return wVar.mo36402a((C14300v) new C14290o(outputStream, wVar));
     }
 

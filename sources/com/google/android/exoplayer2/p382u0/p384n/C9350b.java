@@ -9,8 +9,8 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.util.SparseArray;
 import com.google.android.exoplayer2.p382u0.C9322b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -815,7 +815,7 @@ final class C9350b {
         int a3 = vVar.mo24660a(16);
         int c = vVar.mo24669c() + a3;
         if (a3 * 8 > vVar.mo24659a()) {
-            C9563q.m29500d("DvbParser", "Data field length exceeds limit");
+            Log.m29500d("DvbParser", "Data field length exceeds limit");
             vVar.mo24670c(vVar.mo24659a());
             return;
         }
@@ -957,7 +957,7 @@ final class C9350b {
             int i12 = a;
             double d3 = (double) (i4 - 128);
             double d4 = (double) (i3 - 128);
-            iArr[a2] = m28501a((byte) (255 - (i2 & 255)), C9554k0.m29382a((int) (d2 + (1.402d * d3)), 0, 255), C9554k0.m29382a((int) ((d2 - (0.34414d * d4)) - (d3 * 0.71414d)), 0, 255), C9554k0.m29382a((int) (d2 + (d4 * 1.772d)), 0, 255));
+            iArr[a2] = m28501a((byte) (255 - (i2 & 255)), Util.m29382a((int) (d2 + (1.402d * d3)), 0, 255), Util.m29382a((int) ((d2 - (0.34414d * d4)) - (d3 * 0.71414d)), 0, 255), Util.m29382a((int) (d2 + (d4 * 1.772d)), 0, 255));
             i9 = i11;
             a = i12;
             i7 = 8;

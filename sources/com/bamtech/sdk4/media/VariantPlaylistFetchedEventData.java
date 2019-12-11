@@ -30,7 +30,7 @@ public final class VariantPlaylistFetchedEventData implements BaseQosClientData 
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:22:0x006e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.serverRequest, (java.lang.Object) r3.serverRequest) != false) goto L_0x0073;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.serverRequest, (java.lang.Object) r3.serverRequest) != false) goto L_0x0073;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -42,43 +42,43 @@ public final class VariantPlaylistFetchedEventData implements BaseQosClientData 
             com.bamtech.sdk4.media.VariantPlaylistFetchedEventData r3 = (com.bamtech.sdk4.media.VariantPlaylistFetchedEventData) r3
             java.lang.String r0 = r2.getPlaybackSessionId()
             java.lang.String r1 = r3.getPlaybackSessionId()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0071
             java.lang.Boolean r0 = r2.offline
             java.lang.Boolean r1 = r3.offline
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0071
             java.lang.String r0 = r2.averageBandwidth
             java.lang.String r1 = r3.averageBandwidth
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0071
             java.lang.String r0 = r2.bandwidth
             java.lang.String r1 = r3.bandwidth
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0071
             java.lang.String r0 = r2.channels
             java.lang.String r1 = r3.channels
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0071
             java.lang.String r0 = r2.name
             java.lang.String r1 = r3.name
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0071
             java.lang.String r0 = r2.language
             java.lang.String r1 = r3.language
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0071
             java.lang.String r0 = r2.type
             java.lang.String r1 = r3.type
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0071
             java.lang.String r0 = r2.resolution
             java.lang.String r1 = r3.resolution
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0071
             com.bamtech.sdk4.media.ServerRequest r0 = r2.serverRequest
             com.bamtech.sdk4.media.ServerRequest r3 = r3.serverRequest
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0071
             goto L_0x0073
         L_0x0071:

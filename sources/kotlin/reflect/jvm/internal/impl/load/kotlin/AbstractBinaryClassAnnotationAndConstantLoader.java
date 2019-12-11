@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.UnsignedTypes;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.load.java.JvmAnnotationNames;
@@ -191,7 +191,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         } else if (messageLite instanceof Property) {
             ExtendableMessage extendableMessage = (ExtendableMessage) messageLite;
             GeneratedExtension<Property, JvmPropertySignature> generatedExtension = JvmProtoBuf.propertySignature;
-            C12880j.m40222a((Object) generatedExtension, "propertySignature");
+            Intrinsics.checkReturnedValueIsNotNull((Object) generatedExtension, "propertySignature");
             JvmPropertySignature jvmPropertySignature = (JvmPropertySignature) ProtoBufUtilKt.getExtensionOrNull(extendableMessage, generatedExtension);
             if (jvmPropertySignature != null) {
                 int i = WhenMappings.$EnumSwitchMapping$0[annotatedCallableKind.ordinal()];
@@ -203,13 +203,13 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
                     } else if (jvmPropertySignature.hasSetter()) {
                         kotlin.reflect.jvm.internal.impl.load.kotlin.MemberSignature.Companion companion3 = MemberSignature.Companion;
                         JvmMethodSignature setter = jvmPropertySignature.getSetter();
-                        C12880j.m40222a((Object) setter, "signature.setter");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) setter, "signature.setter");
                         memberSignature = companion3.fromMethod(nameResolver, setter);
                     }
                 } else if (jvmPropertySignature.hasGetter()) {
                     kotlin.reflect.jvm.internal.impl.load.kotlin.MemberSignature.Companion companion4 = MemberSignature.Companion;
                     JvmMethodSignature getter = jvmPropertySignature.getGetter();
-                    C12880j.m40222a((Object) getter, "signature.getter");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) getter, "signature.getter");
                     memberSignature = companion4.fromMethod(nameResolver, getter);
                 }
             }
@@ -226,7 +226,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
 
     private final MemberSignature getPropertySignature(Property property, NameResolver nameResolver, TypeTable typeTable, boolean z, boolean z2, boolean z3) {
         GeneratedExtension<Property, JvmPropertySignature> generatedExtension = JvmProtoBuf.propertySignature;
-        C12880j.m40222a((Object) generatedExtension, "propertySignature");
+        Intrinsics.checkReturnedValueIsNotNull((Object) generatedExtension, "propertySignature");
         JvmPropertySignature jvmPropertySignature = (JvmPropertySignature) ProtoBufUtilKt.getExtensionOrNull(property, generatedExtension);
         if (jvmPropertySignature != null) {
             if (z) {
@@ -238,7 +238,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
             } else if (z2 && jvmPropertySignature.hasSyntheticMethod()) {
                 kotlin.reflect.jvm.internal.impl.load.kotlin.MemberSignature.Companion companion = MemberSignature.Companion;
                 JvmMethodSignature syntheticMethod = jvmPropertySignature.getSyntheticMethod();
-                C12880j.m40222a((Object) syntheticMethod, "signature.syntheticMethod");
+                Intrinsics.checkReturnedValueIsNotNull((Object) syntheticMethod, "signature.syntheticMethod");
                 return companion.fromMethod(nameResolver, syntheticMethod);
             }
         }
@@ -260,7 +260,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
                     if (classR.getKind() == Kind.INTERFACE) {
                         KotlinClassFinder kotlinClassFinder2 = this.kotlinClassFinder;
                         ClassId createNestedClassId = classR.getClassId().createNestedClassId(Name.identifier("DefaultImpls"));
-                        C12880j.m40222a((Object) createNestedClassId, "container.classId.create…EFAULT_IMPLS_CLASS_NAME))");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) createNestedClassId, "container.classId.create…EFAULT_IMPLS_CLASS_NAME))");
                         return KotlinClassFinderKt.findKotlinClass(kotlinClassFinder2, createNestedClassId);
                     }
                 }
@@ -274,9 +274,9 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
                     if (facadeClassName != null) {
                         KotlinClassFinder kotlinClassFinder3 = this.kotlinClassFinder;
                         String internalName = facadeClassName.getInternalName();
-                        C12880j.m40222a((Object) internalName, "facadeClassName.internalName");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) internalName, "facadeClassName.internalName");
                         ClassId classId = ClassId.topLevel(new FqName(C12832w.m40115a(internalName, '/', '.', false, 4, (Object) null)));
-                        C12880j.m40222a((Object) classId, "ClassId.topLevel(FqName(…lName.replace('/', '.')))");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) classId, "ClassId.topLevel(FqName(…lName.replace('/', '.')))");
                         return KotlinClassFinderKt.findKotlinClass(kotlinClassFinder3, classId);
                     }
                 }
@@ -331,7 +331,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
     private final List<A> loadPropertyAnnotations(ProtoContainer protoContainer, Property property, PropertyRelatedElement propertyRelatedElement) {
         PropertyRelatedElement propertyRelatedElement2 = propertyRelatedElement;
         Boolean bool = Flags.IS_CONST.get(property.getFlags());
-        C12880j.m40222a((Object) bool, "Flags.IS_CONST.get(proto.flags)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.IS_CONST.get(proto.flags)");
         boolean booleanValue = bool.booleanValue();
         boolean isMovedFromInterfaceCompanion = JvmProtoBufUtil.isMovedFromInterfaceCompanion(property);
         if (propertyRelatedElement2 == PropertyRelatedElement.PROPERTY) {
@@ -407,7 +407,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         kotlin.reflect.jvm.internal.impl.load.kotlin.MemberSignature.Companion companion = MemberSignature.Companion;
         String string = protoContainer.getNameResolver().getString(enumEntry.getName());
         String asString = ((Class) protoContainer).getClassId().asString();
-        C12880j.m40222a((Object) asString, "(container as ProtoConta…Class).classId.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "(container as ProtoConta…Class).classId.asString()");
         return findClassAndLoadMemberAnnotations$default(this, protoContainer, companion.fromFieldNameAndDesc(string, ClassMapperLite.mapClass(asString)), false, false, null, false, 60, null);
     }
 
@@ -450,11 +450,11 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
 
     public List<A> loadTypeAnnotations(Type type, NameResolver nameResolver) {
         Object extension = type.getExtension(JvmProtoBuf.typeAnnotation);
-        C12880j.m40222a(extension, "proto.getExtension(JvmProtoBuf.typeAnnotation)");
+        Intrinsics.checkReturnedValueIsNotNull(extension, "proto.getExtension(JvmProtoBuf.typeAnnotation)");
         Iterable<Annotation> iterable = (Iterable) extension;
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) iterable, 10));
         for (Annotation annotation : iterable) {
-            C12880j.m40222a((Object) annotation, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) annotation, "it");
             arrayList.add(loadTypeAnnotation(annotation, nameResolver));
         }
         return arrayList;
@@ -462,11 +462,11 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
 
     public List<A> loadTypeParameterAnnotations(TypeParameter typeParameter, NameResolver nameResolver) {
         Object extension = typeParameter.getExtension(JvmProtoBuf.typeParameterAnnotation);
-        C12880j.m40222a(extension, "proto.getExtension(JvmPr….typeParameterAnnotation)");
+        Intrinsics.checkReturnedValueIsNotNull(extension, "proto.getExtension(JvmPr….typeParameterAnnotation)");
         Iterable<Annotation> iterable = (Iterable) extension;
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) iterable, 10));
         for (Annotation annotation : iterable) {
-            C12880j.m40222a((Object) annotation, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) annotation, "it");
             arrayList.add(loadTypeAnnotation(annotation, nameResolver));
         }
         return arrayList;

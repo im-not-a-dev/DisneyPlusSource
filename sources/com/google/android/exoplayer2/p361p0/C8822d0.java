@@ -1,22 +1,22 @@
 package com.google.android.exoplayer2.p361p0;
 
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.p0.d0 */
 /* compiled from: WavUtil */
 public final class C8822d0 {
 
     /* renamed from: a */
-    public static final int f18799a = C9554k0.m29428b("RIFF");
+    public static final int f18799a = Util.m29428b("RIFF");
 
     /* renamed from: b */
-    public static final int f18800b = C9554k0.m29428b("WAVE");
+    public static final int f18800b = Util.m29428b("WAVE");
 
     /* renamed from: c */
-    public static final int f18801c = C9554k0.m29428b("fmt ");
+    public static final int f18801c = Util.m29428b("fmt ");
 
     /* renamed from: d */
-    public static final int f18802d = C9554k0.m29428b("data");
+    public static final int f18802d = Util.m29428b("data");
 
     /* renamed from: a */
     public static int m25594a(int i, int i2) {
@@ -34,6 +34,6 @@ public final class C8822d0 {
                 return 536870912;
             }
         }
-        return C9554k0.m29424b(i2);
+        return Util.getPcmEncoding(i2);
     }
 }

@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p361p0;
 
 import com.google.android.exoplayer2.p361p0.C8840m.C8841a;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.nio.ByteBuffer;
 
 /* renamed from: com.google.android.exoplayer2.p0.c0 */
@@ -27,7 +27,7 @@ final class C8820c0 extends C8854s {
     private int f18793m;
 
     /* renamed from: n */
-    private byte[] f18794n = C9554k0.f22286f;
+    private byte[] f18794n = Util.EMPTY_BYTE_ARRAY;
 
     /* renamed from: o */
     private int f18795o;
@@ -70,7 +70,7 @@ final class C8820c0 extends C8854s {
     /* access modifiers changed from: protected */
     /* renamed from: k */
     public void mo23073k() {
-        this.f18794n = C9554k0.f22286f;
+        this.f18794n = Util.EMPTY_BYTE_ARRAY;
     }
 
     /* renamed from: l */
@@ -90,7 +90,7 @@ final class C8820c0 extends C8854s {
             if (i4 > 0) {
                 this.f18796p += (long) (i4 / this.f18791k);
             }
-            this.f18791k = C9554k0.m29425b(2, i2);
+            this.f18791k = Util.m29425b(2, i2);
             int i5 = this.f18790j;
             int i6 = this.f18791k;
             this.f18794n = new byte[(i5 * i6)];
@@ -129,9 +129,9 @@ final class C8820c0 extends C8854s {
                 int i2 = i - min;
                 int length = (this.f18795o + i2) - this.f18794n.length;
                 ByteBuffer a = mo23156a(length);
-                int a2 = C9554k0.m29382a(length, 0, this.f18795o);
+                int a2 = Util.m29382a(length, 0, this.f18795o);
                 a.put(this.f18794n, 0, a2);
-                int a3 = C9554k0.m29382a(length - a2, 0, i2);
+                int a3 = Util.m29382a(length - a2, 0, i2);
                 byteBuffer.limit(byteBuffer.position() + a3);
                 a.put(byteBuffer);
                 byteBuffer.limit(limit);

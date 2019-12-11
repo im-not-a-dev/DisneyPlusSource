@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
 import kotlin.reflect.jvm.internal.impl.name.Name;
 
@@ -20,7 +20,7 @@ public final class PackageFragmentProviderImpl implements PackageFragmentProvide
         Collection<PackageFragmentDescriptor> collection = this.packageFragments;
         ArrayList arrayList = new ArrayList();
         for (Object next : collection) {
-            if (C12880j.m40224a((Object) ((PackageFragmentDescriptor) next).getFqName(), (Object) fqName)) {
+            if (Intrinsics.areEqual((Object) ((PackageFragmentDescriptor) next).getFqName(), (Object) fqName)) {
                 arrayList.add(next);
             }
         }

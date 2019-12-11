@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.config.C3572r0;
 import com.bamtechmedia.dominguez.config.C3572r0.C3573a;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p204d.C5411n0;
 import p163g.p201e.p203b.p204d.C5413o0;
 import p163g.p509o.p510a.p511l.C11866a;
@@ -28,7 +28,7 @@ public final class C5500f extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13038U, (java.lang.Object) r3.f13038U) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13038U, (java.lang.Object) r3.f13038U) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -40,11 +40,11 @@ public final class C5500f extends C11866a {
             g.e.b.d.w0.f r3 = (p163g.p201e.p203b.p204d.p206w0.C5500f) r3
             java.util.List<com.bamtech.sdk4.subscription.Subscription> r0 = r2.f13039c
             java.util.List<com.bamtech.sdk4.subscription.Subscription> r1 = r3.f13039c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.bamtechmedia.dominguez.config.r0 r0 = r2.f13038U
             com.bamtechmedia.dominguez.config.r0 r3 = r3.f13038U
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:
@@ -102,10 +102,10 @@ public final class C5500f extends C11866a {
         Subscription subscription = (Subscription) obj;
         if (subscription != null) {
             TextView textView = (TextView) bVar.mo20994a().findViewById(C5411n0.subscription_title);
-            C12880j.m40222a((Object) textView, "viewHolder.subscription_title");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "viewHolder.subscription_title");
             textView.setText(C3573a.m12037b(this.f13038U, C5499e.m18288b(subscription), null, 2, null));
             TextView textView2 = (TextView) bVar.mo20994a().findViewById(C5411n0.subscription_copy);
-            C12880j.m40222a((Object) textView2, "viewHolder.subscription_copy");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "viewHolder.subscription_copy");
             textView2.setText(C3573a.m12037b(this.f13038U, C5499e.m18286a(subscription), null, 2, null));
         }
     }

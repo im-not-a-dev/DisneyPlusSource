@@ -15,7 +15,7 @@ import com.bamtechmedia.dominguez.profiles.C6667g1;
 import com.bamtechmedia.dominguez.profiles.C7019z;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p283i.p284a.p285a.C7284a;
 import p163g.p201e.p203b.p283i.p284a.p285a.C7285b;
 import p520io.reactivex.Completable;
@@ -158,7 +158,7 @@ public final class C6480e implements C5742a<C6336a> {
             }
         }
         Observable<C6336a> m = Observable.m38314m();
-        C12880j.m40222a((Object) m, "Observable.empty()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) m, "Observable.empty()");
         return m;
     }
 
@@ -172,7 +172,7 @@ public final class C6480e implements C5742a<C6336a> {
         C6341e eVar = r14;
         C6341e eVar2 = new C6341e(null, null, null, null, 15, null);
         Observable<C6336a> b = Observable.m38309b(C6336a.m19906a(aVar2, null, null, null, bVar, null, false, null, false, 0, cVar, eVar, playbackContext2, null, false, false, 29079, null));
-        C12880j.m40222a((Object) b, "Observable.just(\n       …t\n            )\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Observable.just(\n       …t\n            )\n        )");
         if (!mo19136a(this.f14669a, this.f14671c)) {
             return b;
         }
@@ -180,10 +180,10 @@ public final class C6480e implements C5742a<C6336a> {
         C3693o oVar = this.f14669a;
         if (oVar != null) {
             Observable<C6336a> a = aVar3.mo19231a(oVar).mo30043a((ObservableSource<T>) b);
-            C12880j.m40222a((Object) a, "upNextContentRemover.del…n(updatedStateObservable)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "upNextContentRemover.del…n(updatedStateObservable)");
             return a;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

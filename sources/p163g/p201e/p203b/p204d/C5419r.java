@@ -13,7 +13,7 @@ import kotlin.Pair;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -24,7 +24,7 @@ import p520io.reactivex.Single;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.p524d0.C11920c;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\u0003\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001\u0011B\u001d\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b¢\u0006\u0002\u0010\tJ\u0010\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000fH\u0002J\u0006\u0010\u0010\u001a\u00020\rR\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u000e¢\u0006\u0002\n\u0000¨\u0006\u0012"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/account/AccountSettingsViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/account/AccountSettingsViewModel$State;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "subscriptionApi", "Lcom/bamtech/sdk4/subscription/SubscriptionApi;", "offlineState", "Lcom/bamtechmedia/dominguez/core/OfflineState;", "(Lcom/bamtech/sdk4/account/AccountApi;Lcom/bamtech/sdk4/subscription/SubscriptionApi;Lcom/bamtechmedia/dominguez/core/OfflineState;)V", "whenOnlineDisposable", "Lio/reactivex/disposables/Disposable;", "onError", "", "throwable", "", "refreshAccount", "State", "account_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.d.r */
@@ -151,7 +151,7 @@ public final class C5419r extends C5741g<C5420a> {
             if (this != obj) {
                 if (obj instanceof C5420a) {
                     C5420a aVar = (C5420a) obj;
-                    if (C12880j.m40224a((Object) this.f12933a, (Object) aVar.f12933a) && C12880j.m40224a((Object) this.f12934b, (Object) aVar.f12934b)) {
+                    if (Intrinsics.areEqual((Object) this.f12933a, (Object) aVar.f12933a) && Intrinsics.areEqual((Object) this.f12934b, (Object) aVar.f12934b)) {
                         if (this.f12935c == aVar.f12935c) {
                             if (this.f12936d == aVar.f12936d) {
                                 if (this.f12937e == aVar.f12937e) {
@@ -274,7 +274,7 @@ public final class C5419r extends C5741g<C5420a> {
 
         /* renamed from: a */
         public final void mo17161a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -282,7 +282,7 @@ public final class C5419r extends C5741g<C5420a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -408,13 +408,13 @@ public final class C5419r extends C5741g<C5420a> {
 
     /* renamed from: y */
     public final void mo17150y() {
-        C14100a.m44522a("refreshAccount", new Object[0]);
+        Timber.m44522a("refreshAccount", new Object[0]);
         Single g = this.f12930b.getAccount().mo30134g();
-        C12880j.m40222a((Object) g, "accountApi.getAccount().toSingle()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "accountApi.getAccount().toSingle()");
         Single c = C11920c.m38475a(g, this.f12931c.getSubscriptions()).mo30222c((Consumer<? super Disposable>) new C5424e<Object>(this));
-        C12880j.m40222a((Object) c, "accountApi.getAccount().…opy(isLoading = true) } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "accountApi.getAccount().…opy(isLoading = true) } }");
         Object a = c.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C5426f(this), new C5432t(new C5428g(this)));
     }
 
@@ -433,7 +433,7 @@ public final class C5419r extends C5741g<C5420a> {
             r0 = 0
             java.lang.Object[] r0 = new java.lang.Object[r0]
             java.lang.String r1 = "Refresh Account failed"
-            p686n.p687a.C14100a.m44528b(r4, r1, r0)
+            p686n.p687a.Timber.m44528b(r4, r1, r0)
             g.e.b.d.r$b r4 = new g.e.b.d.r$b
             r4.<init>(r3)
             r3.updateState(r4)
@@ -448,7 +448,7 @@ public final class C5419r extends C5741g<C5420a> {
             g.n.a.h r0 = p163g.p503n.p504a.C11793e.m37930a(r0)
             java.lang.Object r4 = r4.mo30048a(r0)
             java.lang.String r0 = "this.`as`(AutoDispose.au…isposable<Any>(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
             g.n.a.v r4 = (p163g.p503n.p504a.C11839v) r4
             g.e.b.d.r$c r0 = new g.e.b.d.r$c
             r0.<init>(r3)

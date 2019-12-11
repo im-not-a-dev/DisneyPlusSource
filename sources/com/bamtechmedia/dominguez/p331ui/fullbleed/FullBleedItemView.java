@@ -18,7 +18,7 @@ import com.bamtechmedia.dominguez.p331ui.pagingbehaviour.C8092b.C8093a;
 import com.bamtechmedia.dominguez.p331ui.pagingbehaviour.pageindicator.PageIndicatorView;
 import java.util.HashMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5363f;
 import p163g.p201e.p202a.C5364g;
 
@@ -88,7 +88,7 @@ public final class FullBleedItemView extends ConstraintLayout implements C8093a 
         Rect rect = new Rect();
         view.getGlobalVisibleRect(rect);
         Resources resources = getResources();
-        C12880j.m40222a((Object) resources, "resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "resources");
         DisplayMetrics displayMetrics = resources.getDisplayMetrics();
         boolean intersects = rect.intersects(0, 0, displayMetrics.widthPixels, displayMetrics.heightPixels);
         if (!isShown() || !intersects) {
@@ -134,13 +134,13 @@ public final class FullBleedItemView extends ConstraintLayout implements C8093a 
 
     public final Button getDetailsButton() {
         Button button = (Button) mo2145c(C5363f.btn_see_details);
-        C12880j.m40222a((Object) button, "btn_see_details");
+        Intrinsics.checkReturnedValueIsNotNull((Object) button, "btn_see_details");
         return button;
     }
 
     public final AspectRatioImageView getFullBleedLogo() {
         AspectRatioImageView aspectRatioImageView = (AspectRatioImageView) mo2145c(C5363f.logo);
-        C12880j.m40222a((Object) aspectRatioImageView, "logo");
+        Intrinsics.checkReturnedValueIsNotNull((Object) aspectRatioImageView, "logo");
         return aspectRatioImageView;
     }
 

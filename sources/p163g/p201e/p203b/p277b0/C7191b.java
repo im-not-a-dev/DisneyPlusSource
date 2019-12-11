@@ -19,8 +19,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
-import p686n.p687a.C14100a;
+import kotlin.jvm.internal.Intrinsics;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010$\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0004\u0018\u0000  2\u00020\u0001:\u0001 B\u001d\u0012\u0006\u0010\u0002\u001a\u00020\u0001\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0002\u0010\u0007J\b\u0010\b\u001a\u00020\tH\u0002J\u0010\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\tH\u0002J\u000f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000e0\rH\u0001J\u000e\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u00100\rH\u0016J\t\u0010\u0011\u001a\u00020\u0012H\u0001J\b\u0010\u0013\u001a\u00020\tH\u0002J$\u0010\u0014\u001a\u00020\t2\u0006\u0010\u0015\u001a\u00020\u00162\u0012\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0019\u0012\u0004\u0012\u00020\u00190\u0018H\u0002J6\u0010\u001a\u001a\u00020\t2\u0006\u0010\u001b\u001a\u00020\u00192\u0006\u0010\u001c\u001a\u00020\u001d2\u0012\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0019\u0012\u0004\u0012\u00020\u00190\u00182\b\b\u0002\u0010\u000b\u001a\u00020\tH\u0002J\b\u0010\u001e\u001a\u00020\tH\u0016J\t\u0010\u001f\u001a\u00020\tH\u0001R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0001X\u0004¢\u0006\u0002\n\u0000¨\u0006!"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/sdk/ConfigurableMediaCapabilitiesProvider;", "Lcom/bamtech/sdk4/media/MediaCapabilitiesProvider;", "mediaCapabilitiesProvider", "context", "Landroid/content/Context;", "config", "Lcom/bamtechmedia/dominguez/sdk/MediaCapabilitiesConfig;", "(Lcom/bamtech/sdk4/media/MediaCapabilitiesProvider;Landroid/content/Context;Lcom/bamtechmedia/dominguez/sdk/MediaCapabilitiesConfig;)V", "doesAudioCapabilitiesSupportJOC", "", "doesScreenMeetHDRRequirements", "requiresHDR", "getSupportedCodecs", "", "Lcom/bamtech/sdk4/media/SupportedCodec;", "getSupportedHdrTypes", "Lcom/bamtech/sdk4/media/HdrType;", "getWidevineSecurityLevel", "Lcom/bamtech/sdk4/internal/configuration/WidevineSecurityLevel;", "isAmazonDeviceReportingAtmosSupport", "isSupported", "availableLevel", "Landroid/media/MediaCodecInfo$CodecProfileLevel;", "supportedProfiles", "", "", "supports", "hdrType", "mimeType", "", "supportsAtmos", "supportsMultiCodecMaster", "Companion", "sdk_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.b0.b */
@@ -88,7 +88,7 @@ public final class C7191b implements MediaCapabilitiesProvider {
             android.hardware.display.DisplayManager r0 = (android.hardware.display.DisplayManager) r0
             android.view.Display[] r0 = r0.getDisplays()
             java.lang.String r3 = "displayManager.displays"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             int r3 = r0.length
             r4 = 0
         L_0x0028:
@@ -127,7 +127,7 @@ public final class C7191b implements MediaCapabilitiesProvider {
             android.view.WindowManager r0 = (android.view.WindowManager) r0
             android.view.Display r0 = r0.getDefaultDisplay()
             java.lang.String r3 = "windowManager.defaultDisplay"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             android.view.Display$HdrCapabilities r0 = r0.getHdrCapabilities()
             if (r0 == 0) goto L_0x0079
             int[] r0 = r0.getSupportedHdrTypes()
@@ -140,7 +140,7 @@ public final class C7191b implements MediaCapabilitiesProvider {
             boolean r10 = r6.m21770a(r10)
             java.util.List r8 = com.google.android.exoplayer2.p381t0.C9275d.m28139b(r8, r2, r1)
             java.lang.String r0 = "MediaCodecUtil.getDecode…os(mimeType, true, false)"
-            kotlin.jvm.internal.C12880j.m40222a(r8, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r0)
             java.util.ArrayList r0 = new java.util.ArrayList
             r0.<init>()
             java.util.Iterator r8 = r8.iterator()
@@ -150,10 +150,10 @@ public final class C7191b implements MediaCapabilitiesProvider {
             if (r3 == 0) goto L_0x00b2
             java.lang.Object r3 = r8.next()
             com.google.android.exoplayer2.t0.a r3 = (com.google.android.exoplayer2.p381t0.C9270a) r3
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             android.media.MediaCodecInfo$CodecProfileLevel[] r3 = r3.mo24013a()
             java.lang.String r4 = "it.profileLevels"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             java.util.List r3 = kotlin.p590y.C13174k.m40412l(r3)
             kotlin.p590y.C13196t.m40545a(r0, r3)
             goto L_0x0090
@@ -170,7 +170,7 @@ public final class C7191b implements MediaCapabilitiesProvider {
             if (r0 == 0) goto L_0x00b8
             java.lang.Object r0 = r8.next()
             android.media.MediaCodecInfo$CodecProfileLevel r0 = (android.media.MediaCodecInfo.CodecProfileLevel) r0
-            kotlin.jvm.internal.C12880j.m40222a(r0, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r4)
             boolean r0 = r6.m21769a(r0, r9)
             if (r0 == 0) goto L_0x00be
             r8 = 1
@@ -195,7 +195,7 @@ public final class C7191b implements MediaCapabilitiesProvider {
         Object systemService = this.f15898b.getSystemService("audio");
         if (systemService != null) {
             String parameters = ((AudioManager) systemService).getParameters("hdmi_encodings");
-            C12880j.m40222a((Object) parameters, "manager.getParameters(AMAZON_HDMI_ENCODINGS)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "manager.getParameters(AMAZON_HDMI_ENCODINGS)");
             return C12833x.m40154a((CharSequence) parameters, (CharSequence) "atmos", false, 2, (Object) null);
         }
         throw new C13142s("null cannot be cast to non-null type android.media.AudioManager");
@@ -227,7 +227,7 @@ public final class C7191b implements MediaCapabilitiesProvider {
         StringBuilder sb = new StringBuilder();
         sb.append("Supported HDR types: ");
         sb.append(arrayList);
-        C14100a.m44522a(sb.toString(), new Object[0]);
+        Timber.m44522a(sb.toString(), new Object[0]);
         return arrayList;
     }
 
@@ -246,7 +246,7 @@ public final class C7191b implements MediaCapabilitiesProvider {
                     break;
                 }
                 HdrType hdrType = (HdrType) it.next();
-                if (C12880j.m40224a((Object) hdrType, (Object) HdrType.HDR10) || C12880j.m40224a((Object) hdrType, (Object) HdrType.DOLBY_VISION)) {
+                if (Intrinsics.areEqual((Object) hdrType, (Object) HdrType.HDR10) || Intrinsics.areEqual((Object) hdrType, (Object) HdrType.DOLBY_VISION)) {
                     z2 = true;
                     continue;
                 } else {
@@ -283,13 +283,13 @@ public final class C7191b implements MediaCapabilitiesProvider {
         }
         Resources resources = this.f15898b.getResources();
         String str = "context.resources";
-        C12880j.m40222a((Object) resources, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, str);
         Configuration configuration = resources.getConfiguration();
         if (configuration != null && configuration.isScreenHdr()) {
             return true;
         }
         Resources resources2 = this.f15898b.getResources();
-        C12880j.m40222a((Object) resources2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources2, str);
         Configuration configuration2 = resources2.getConfiguration();
         if (configuration2 == null || !configuration2.isScreenWideColorGamut()) {
             return false;

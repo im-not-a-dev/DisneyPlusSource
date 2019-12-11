@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.core.utils;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.C11945a;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.f0 */
@@ -16,6 +16,6 @@ final class C5832f0 implements C11945a {
     }
 
     public final /* synthetic */ void run() {
-        C12880j.m40222a(this.f13618a.invoke(), "invoke(...)");
+        Intrinsics.checkReturnedValueIsNotNull(this.f13618a.invoke(), "invoke(...)");
     }
 }

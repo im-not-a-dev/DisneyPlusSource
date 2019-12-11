@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11760v;
 import p520io.reactivex.Single;
@@ -147,7 +147,7 @@ public final class C3733e implements C3732d {
     /* renamed from: a */
     public Single<List<Suggestion>> mo13582a(String str) {
         Single<List<Suggestion>> g = DefaultImpls.query$default(this.f9326a, new Persisted("autoSuggestPersisted", "core/suggest").variables(C13173j0.m40356a(C12907r.m40244a("index", "disney"), C12907r.m40244a("prefix", str), C12907r.m40244a("preferredLanguage", this.f9327b.getCode()))).build(), null, 2, null).mo30233g(new C3735b(this.f9328c.mo29866a(SearchSuggestionResponse.class))).mo30233g(C3736c.f9330c).mo30233g(C3737d.f9331c).mo30231f(C3738e.f9332c).mo30201k().mo30233g(C3739f.f9333c);
-        C12880j.m40222a((Object) g, "searchSuggestionApi.quer…y { it.type.sortOrder } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchSuggestionApi.quer…y { it.type.sortOrder } }");
         return g;
     }
 }

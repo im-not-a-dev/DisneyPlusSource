@@ -7,7 +7,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants;
 import com.bamtech.sdk4.media.adapters.QOSPlaybackEventListener;
 import java.util.UUID;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0007\u0018\u0000 \u000f2\u00020\u0001:\u0001\u000fB\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u0010\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eH\u0017R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\n¨\u0006\u0010"}, mo31007d2 = {"Lcom/bamtech/sdk4/media/DefaultQOSPlaybackEventListener;", "Lcom/bamtech/sdk4/media/adapters/QOSPlaybackEventListener;", "eventBuffer", "Lcom/bamtech/sdk4/internal/telemetry/EventBuffer;", "dustConstants", "Lcom/bamtech/sdk4/internal/telemetry/dust/DustClientConstants;", "(Lcom/bamtech/sdk4/internal/telemetry/EventBuffer;Lcom/bamtech/sdk4/internal/telemetry/dust/DustClientConstants;)V", "getDustConstants", "()Lcom/bamtech/sdk4/internal/telemetry/dust/DustClientConstants;", "getEventBuffer", "()Lcom/bamtech/sdk4/internal/telemetry/EventBuffer;", "onEvent", "", "event", "Lcom/bamtech/sdk4/media/BaseQosClientData;", "Companion", "extension-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: QOSEvent.kt */
@@ -95,7 +95,7 @@ public final class DefaultQOSPlaybackEventListener implements QOSPlaybackEventLi
             String string = Companion.getString(baseQosClientData);
             EventBuffer eventBuffer2 = this.eventBuffer;
             UUID randomUUID = UUID.randomUUID();
-            C12880j.m40222a((Object) randomUUID, "UUID.randomUUID()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) randomUUID, "UUID.randomUUID()");
             DefaultDustClientData defaultDustClientData = new DefaultDustClientData(randomUUID, string, "urn:bamtech:dust:bamsdk:event:qos", baseQosClientData, this.dustConstants);
             DefaultImpls.postEvent$default(eventBuffer2, new QOSEvent(null, defaultDustClientData), null, 2, null);
         }

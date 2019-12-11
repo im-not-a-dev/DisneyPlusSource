@@ -58,7 +58,7 @@ public final class C14291p implements C14302x {
             if (r0 != r3) goto L_0x001e
             goto L_0x001f
         L_0x001a:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r2
         L_0x001e:
             r1 = 0
@@ -79,7 +79,7 @@ public final class C14291p implements C14302x {
             r8.f31888V = r0
             goto L_0x0040
         L_0x003c:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r2
         L_0x0040:
             okio.Buffer r0 = r8.f31892c

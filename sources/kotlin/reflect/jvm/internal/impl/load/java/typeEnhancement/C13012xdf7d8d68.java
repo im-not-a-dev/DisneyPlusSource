@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
@@ -21,9 +21,9 @@ final class C13012xdf7d8d68 extends C12881k implements Function1<CallableMemberD
 
     public final KotlinType invoke(CallableMemberDescriptor callableMemberDescriptor) {
         Object obj = callableMemberDescriptor.getValueParameters().get(this.f29566$p.getIndex());
-        C12880j.m40222a(obj, "it.valueParameters[p.index]");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "it.valueParameters[p.index]");
         KotlinType type = ((ValueParameterDescriptor) obj).getType();
-        C12880j.m40222a((Object) type, "it.valueParameters[p.index].type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "it.valueParameters[p.index].type");
         return type;
     }
 }

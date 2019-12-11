@@ -90,7 +90,7 @@ public final class C9566t {
         if (str == null) {
             return null;
         }
-        for (String d : C9554k0.m29456j(str)) {
+        for (String d : Util.m29456j(str)) {
             String d2 = m29511d(d);
             if (d2 != null && m29517j(d2)) {
                 return d2;
@@ -217,7 +217,7 @@ public final class C9566t {
         if (str == null) {
             return null;
         }
-        String k = C9554k0.m29457k(str.trim());
+        String k = Util.m29457k(str.trim());
         if (k.startsWith("avc1") || k.startsWith("avc3")) {
             return "video/avc";
         }
@@ -241,7 +241,7 @@ public final class C9566t {
                 String substring = k.substring(5);
                 if (substring.length() >= 2) {
                     try {
-                        str2 = m29507a(Integer.parseInt(C9554k0.m29458l(substring.substring(0, 2)), 16));
+                        str2 = m29507a(Integer.parseInt(Util.m29458l(substring.substring(0, 2)), 16));
                     } catch (NumberFormatException unused) {
                     }
                 }
@@ -338,7 +338,7 @@ public final class C9566t {
         if (str == null) {
             return null;
         }
-        for (String d : C9554k0.m29456j(str)) {
+        for (String d : Util.m29456j(str)) {
             String d2 = m29511d(d);
             if (d2 != null && m29519l(d2)) {
                 return d2;

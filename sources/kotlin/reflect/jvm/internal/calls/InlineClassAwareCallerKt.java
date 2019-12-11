@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.calls;
 
 import java.lang.reflect.Method;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.KotlinReflectionInternalError;
 import kotlin.reflect.jvm.internal.UtilKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
@@ -55,7 +55,7 @@ public final class InlineClassAwareCallerKt {
             if (r0 != 0) goto L_0x005a
             java.util.List r0 = r6.getValueParameters()
             java.lang.String r3 = "descriptor.valueParameters"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             boolean r3 = r0 instanceof java.util.Collection
             if (r3 == 0) goto L_0x001d
             boolean r3 = r0.isEmpty()
@@ -71,10 +71,10 @@ public final class InlineClassAwareCallerKt {
             java.lang.Object r3 = r0.next()
             kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor r3 = (kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor) r3
             java.lang.String r4 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             kotlin.reflect.jvm.internal.impl.types.KotlinType r3 = r3.getType()
             java.lang.String r4 = "it.type"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             boolean r3 = kotlin.reflect.jvm.internal.impl.resolve.InlineClassesUtilsKt.isInlineClassType(r3)
             if (r3 == 0) goto L_0x0021
             r0 = 1
@@ -112,7 +112,7 @@ public final class InlineClassAwareCallerKt {
     public static final Method getBoxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) {
         try {
             Method declaredMethod = cls.getDeclaredMethod("box-impl", new Class[]{getUnboxMethod(cls, callableMemberDescriptor).getReturnType()});
-            C12880j.m40222a((Object) declaredMethod, "getDeclaredMethod(\"box\" …d(descriptor).returnType)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaredMethod, "getDeclaredMethod(\"box\" …d(descriptor).returnType)");
             return declaredMethod;
         } catch (NoSuchMethodException unused) {
             StringBuilder sb = new StringBuilder();
@@ -151,7 +151,7 @@ public final class InlineClassAwareCallerKt {
     public static final Method getUnboxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) {
         try {
             Method declaredMethod = cls.getDeclaredMethod("unbox-impl", new Class[0]);
-            C12880j.m40222a((Object) declaredMethod, "getDeclaredMethod(\"unbox…FOR_INLINE_CLASS_MEMBERS)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaredMethod, "getDeclaredMethod(\"unbox…FOR_INLINE_CLASS_MEMBERS)");
             return declaredMethod;
         } catch (NoSuchMethodException unused) {
             StringBuilder sb = new StringBuilder();

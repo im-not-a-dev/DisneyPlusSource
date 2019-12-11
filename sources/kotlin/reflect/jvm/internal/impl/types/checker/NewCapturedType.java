@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.types.checker;
 
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
 import kotlin.reflect.jvm.internal.impl.types.ErrorUtils;
@@ -40,7 +40,7 @@ public final class NewCapturedType extends SimpleType implements CapturedTypeMar
 
     public MemberScope getMemberScope() {
         MemberScope createErrorScope = ErrorUtils.createErrorScope("No member resolution should be done on captured type!", true);
-        C12880j.m40222a((Object) createErrorScope, "ErrorUtils.createErrorSc…on captured type!\", true)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createErrorScope, "ErrorUtils.createErrorSc…on captured type!\", true)");
         return createErrorScope;
     }
 

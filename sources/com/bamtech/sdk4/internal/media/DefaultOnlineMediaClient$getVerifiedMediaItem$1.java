@@ -23,7 +23,7 @@ import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function4;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Single;
@@ -64,9 +64,9 @@ final class DefaultOnlineMediaClient$getVerifiedMediaItem$1<T, R> implements Fun
                 final DefaultOnlineMediaClient$getVerifiedMediaItem$1$3$qosCallback$1 defaultOnlineMediaClient$getVerifiedMediaItem$1$3$qosCallback$1 = new DefaultOnlineMediaClient$getVerifiedMediaItem$1$3$qosCallback$1(this);
                 final MediaServiceConfiguration mediaServiceConfiguration = (MediaServiceConfiguration) pair.mo31015c();
                 DrmServiceConfiguration drmServiceConfiguration = (DrmServiceConfiguration) pair.mo31016d();
-                if (C12880j.m40224a((Object) this.this$0.$descriptor.getDrmType(), (Object) DrmType.WIDEVINE)) {
+                if (Intrinsics.areEqual((Object) this.this$0.$descriptor.getDrmType(), (Object) DrmType.WIDEVINE)) {
                     uuid = UUID.fromString("edef8ba9-79d6-4ace-a3c8-27dcd51d21ed");
-                } else if (C12880j.m40224a((Object) this.this$0.$descriptor.getDrmType(), (Object) DrmType.PLAYREADY) || drmServiceConfiguration.getExtras().getPlayReadyPreferred()) {
+                } else if (Intrinsics.areEqual((Object) this.this$0.$descriptor.getDrmType(), (Object) DrmType.PLAYREADY) || drmServiceConfiguration.getExtras().getPlayReadyPreferred()) {
                     uuid = UUID.fromString("9a04f079-9840-4286-ab92-e65be0885f95");
                 } else {
                     uuid = null;
@@ -74,7 +74,7 @@ final class DefaultOnlineMediaClient$getVerifiedMediaItem$1<T, R> implements Fun
                 PbsGenerator pbsGenerator = this.this$0.this$0.getPbsGenerator();
                 DefaultOnlineMediaClient$getVerifiedMediaItem$1 defaultOnlineMediaClient$getVerifiedMediaItem$1 = this.this$0;
                 MediaDescriptor mediaDescriptor = defaultOnlineMediaClient$getVerifiedMediaItem$1.$descriptor;
-                final Map a = C13173j0.m40356a(C12907r.m40244a("{accessToken}", str), C12907r.m40244a("{scenario}", pbsGenerator.generateScenario$sdk_core_api_release(mediaDescriptor, mediaServiceConfiguration, defaultOnlineMediaClient$getVerifiedMediaItem$1.$allowL1 || C12880j.m40224a((Object) mediaDescriptor.getDrmType(), (Object) DrmType.PLAYREADY))));
+                final Map a = C13173j0.m40356a(C12907r.m40244a("{accessToken}", str), C12907r.m40244a("{scenario}", pbsGenerator.generateScenario$sdk_core_api_release(mediaDescriptor, mediaServiceConfiguration, defaultOnlineMediaClient$getVerifiedMediaItem$1.$allowL1 || Intrinsics.areEqual((Object) mediaDescriptor.getDrmType(), (Object) DrmType.PLAYREADY))));
                 return this.this$0.this$0.configurationProvider.getServiceLink(this.this$0.$transaction, C19281.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new Function<T, SingleSource<? extends R>>(this) {
                     final /* synthetic */ C19273 this$0;
 
@@ -95,9 +95,9 @@ final class DefaultOnlineMediaClient$getVerifiedMediaItem$1<T, R> implements Fun
                         String media_payload = MediaServiceConfigurationKt.getMEDIA_PAYLOAD(Dust$Events.INSTANCE);
                         Call a2 = C1691e.m7799a(a);
                         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new C1917xe8445876(a2)).mo30220b(C11934b.m38500b());
-                        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
                         Single<Stream> g = b.mo30222c((Consumer<? super Disposable>) new C1918xe8445877<Object>(serviceTransaction2, media_payload)).mo30218b((Consumer<? super Throwable>) new C1919xe8445878<Object>(a, serviceTransaction2, media_payload)).mo30233g(new C1920xe8445879(serviceTransaction2, media_payload));
-                        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
                         return g;
                     }
                 }).mo30233g(new Function<T, R>(this) {

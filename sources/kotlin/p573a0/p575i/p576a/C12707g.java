@@ -1,7 +1,7 @@
 package kotlin.p573a0.p575i.p576a;
 
 import java.lang.reflect.Field;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlin.a0.i.a.g */
 /* compiled from: DebugMetadata.kt */
@@ -15,7 +15,7 @@ public final class C12707g {
     private static final int m39843b(C12701a aVar) {
         try {
             Field declaredField = aVar.getClass().getDeclaredField("label");
-            C12880j.m40222a((Object) declaredField, "field");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaredField, "field");
             declaredField.setAccessible(true);
             Object obj = declaredField.get(aVar);
             if (!(obj instanceof Integer)) {

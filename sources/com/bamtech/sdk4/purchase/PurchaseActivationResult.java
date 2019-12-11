@@ -5,7 +5,7 @@ import com.bamtech.sdk4.internal.service.ServiceError;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @DontObfuscate
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b7\u0018\u00002\u00020\u0001:\u0002\t\nB\u000f\b\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0010\u0010\u0007\u001a\u00020\u00002\u0006\u0010\b\u001a\u00020\u0003H&R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006\u0001\u0002\u000b\f¨\u0006\r"}, mo31007d2 = {"Lcom/bamtech/sdk4/purchase/PurchaseActivationResult;", "", "needsRefresh", "", "(Z)V", "getNeedsRefresh", "()Z", "copy", "refresh", "PurchaseFailureActivationResult", "PurchaseSuccessActivationResult", "Lcom/bamtech/sdk4/purchase/PurchaseActivationResult$PurchaseSuccessActivationResult;", "Lcom/bamtech/sdk4/purchase/PurchaseActivationResult$PurchaseFailureActivationResult;", "extension-iap"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -34,12 +34,12 @@ public abstract class PurchaseActivationResult {
             if (this == obj) {
                 return true;
             }
-            if (!C12880j.m40224a((Object) PurchaseFailureActivationResult.class, (Object) obj != null ? obj.getClass() : null)) {
+            if (!Intrinsics.areEqual((Object) PurchaseFailureActivationResult.class, (Object) obj != null ? obj.getClass() : null)) {
                 return false;
             }
             if (obj != null) {
                 PurchaseFailureActivationResult purchaseFailureActivationResult = (PurchaseFailureActivationResult) obj;
-                return getNeedsRefresh() == purchaseFailureActivationResult.getNeedsRefresh() && this.temporaryAccessGranted == purchaseFailureActivationResult.temporaryAccessGranted && !(C12880j.m40224a((Object) this.errors, (Object) purchaseFailureActivationResult.errors) ^ true);
+                return getNeedsRefresh() == purchaseFailureActivationResult.getNeedsRefresh() && this.temporaryAccessGranted == purchaseFailureActivationResult.temporaryAccessGranted && !(Intrinsics.areEqual((Object) this.errors, (Object) purchaseFailureActivationResult.errors) ^ true);
             }
             throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.purchase.PurchaseActivationResult.PurchaseFailureActivationResult");
         }
@@ -89,12 +89,12 @@ public abstract class PurchaseActivationResult {
             if (this == obj) {
                 return true;
             }
-            if (!C12880j.m40224a((Object) PurchaseSuccessActivationResult.class, (Object) obj != null ? obj.getClass() : null)) {
+            if (!Intrinsics.areEqual((Object) PurchaseSuccessActivationResult.class, (Object) obj != null ? obj.getClass() : null)) {
                 return false;
             }
             if (obj != null) {
                 PurchaseSuccessActivationResult purchaseSuccessActivationResult = (PurchaseSuccessActivationResult) obj;
-                return getNeedsRefresh() == purchaseSuccessActivationResult.getNeedsRefresh() && !(C12880j.m40224a((Object) this.invalid, (Object) purchaseSuccessActivationResult.invalid) ^ true) && !(C12880j.m40224a((Object) this.purchases, (Object) purchaseSuccessActivationResult.purchases) ^ true);
+                return getNeedsRefresh() == purchaseSuccessActivationResult.getNeedsRefresh() && !(Intrinsics.areEqual((Object) this.invalid, (Object) purchaseSuccessActivationResult.invalid) ^ true) && !(Intrinsics.areEqual((Object) this.purchases, (Object) purchaseSuccessActivationResult.purchases) ^ true);
             }
             throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.purchase.PurchaseActivationResult.PurchaseSuccessActivationResult");
         }

@@ -7,7 +7,7 @@ import com.bamtech.sdk4.media.offline.DownloadSettings;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.MaybeSource;
@@ -29,32 +29,32 @@ public final class RoomMediaStorage implements MediaStorage {
 
     public Maybe<CachedMedia> get(ServiceTransaction serviceTransaction, String str) {
         Maybe<CachedMedia> b = Maybe.m38256a((Callable<? extends MaybeSource<? extends T>>) new RoomMediaStorage$get$1<Object>(this, str)).mo30119b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "Maybe.defer {\n          …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Maybe.defer {\n          …scribeOn(Schedulers.io())");
         return b;
     }
 
     public Single<? extends List<CachedMedia>> getAll(ServiceTransaction serviceTransaction) {
         Single<? extends List<CachedMedia>> b = Single.m38401c((Callable<? extends T>) new RoomMediaStorage$getAll$1<Object>(this)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "Single.fromCallable { db…scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.fromCallable { db…scribeOn(Schedulers.io())");
         return b;
     }
 
     public Single<DownloadSettings> getDownloadSettings(ServiceTransaction serviceTransaction) {
         Single<DownloadSettings> b = Single.m38401c((Callable<? extends T>) new RoomMediaStorage$getDownloadSettings$1<Object>(this)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "Single.fromCallable { db…scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.fromCallable { db…scribeOn(Schedulers.io())");
         return b;
     }
 
     public Completable markLicenseForRemoval(ServiceTransaction serviceTransaction, String str, byte[] bArr, byte[] bArr2, boolean z) {
         RoomMediaStorage$markLicenseForRemoval$1 roomMediaStorage$markLicenseForRemoval$1 = new RoomMediaStorage$markLicenseForRemoval$1(this, str, bArr, bArr2, z);
         Completable c = Completable.m38166c((C11945a) roomMediaStorage$markLicenseForRemoval$1);
-        C12880j.m40222a((Object) c, "Completable.fromAction {…= permanently))\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.fromAction {…= permanently))\n        }");
         return c;
     }
 
     public Completable store(ServiceTransaction serviceTransaction, CachedMedia cachedMedia) {
         Completable b = Completable.m38166c((C11945a) new RoomMediaStorage$store$1(this, cachedMedia)).mo30051b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "Completable.fromAction {…scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.fromAction {…scribeOn(Schedulers.io())");
         return b;
     }
 }

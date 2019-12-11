@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p394w0;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.w0.i */
@@ -93,7 +93,7 @@ public final class C9586i implements Parcelable {
         parcel.writeInt(this.f22379c);
         parcel.writeInt(this.f22375U);
         parcel.writeInt(this.f22376V);
-        C9554k0.m29403a(parcel, this.f22377W != null);
+        Util.m29403a(parcel, this.f22377W != null);
         byte[] bArr = this.f22377W;
         if (bArr != null) {
             parcel.writeByteArray(bArr);
@@ -104,6 +104,6 @@ public final class C9586i implements Parcelable {
         this.f22379c = parcel.readInt();
         this.f22375U = parcel.readInt();
         this.f22376V = parcel.readInt();
-        this.f22377W = C9554k0.m29412a(parcel) ? parcel.createByteArray() : null;
+        this.f22377W = Util.m29412a(parcel) ? parcel.createByteArray() : null;
     }
 }

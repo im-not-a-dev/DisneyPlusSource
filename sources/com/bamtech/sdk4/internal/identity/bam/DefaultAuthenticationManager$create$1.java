@@ -4,7 +4,7 @@ import com.bamtech.sdk4.identity.IdentityToken;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
@@ -35,18 +35,18 @@ final class DefaultAuthenticationManager$create$1<V> implements Callable<SingleS
             if (this.this$0.authenticateProcess != null) {
                 single = this.this$0.authenticateProcess;
                 if (single == null) {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             } else {
                 DefaultAuthenticationManager defaultAuthenticationManager = this.this$0;
                 DefaultAuthenticationManager defaultAuthenticationManager2 = this.this$0;
                 Single g = this.this$0.accessTokenProvider.getAccessToken(this.$transaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C1879x94164f0b<Object,Object>(this)).mo30218b((Consumer<? super Throwable>) new C1881x94164f0c<Object>(this)).mo30226d().mo30233g(DefaultAuthenticationManager$create$1$1$3.INSTANCE);
-                C12880j.m40222a((Object) g, "accessTokenProvider.getA…                        }");
+                Intrinsics.checkReturnedValueIsNotNull((Object) g, "accessTokenProvider.getA…                        }");
                 defaultAuthenticationManager.authenticateProcess = defaultAuthenticationManager2.releaseLockOnTerminate(g);
                 single = this.this$0.authenticateProcess;
                 if (single == null) {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }

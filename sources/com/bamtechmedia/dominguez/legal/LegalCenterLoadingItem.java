@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.legal;
 
 import android.view.View;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11853e;
 import p163g.p509o.p510a.p511l.C11866a;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -36,7 +36,7 @@ public final class LegalCenterLoadingItem extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.code, (java.lang.Object) ((com.bamtechmedia.dominguez.legal.LegalCenterLoadingItem) r2).code) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.code, (java.lang.Object) ((com.bamtechmedia.dominguez.legal.LegalCenterLoadingItem) r2).code) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -48,7 +48,7 @@ public final class LegalCenterLoadingItem extends C11866a {
             com.bamtechmedia.dominguez.legal.LegalCenterLoadingItem r2 = (com.bamtechmedia.dominguez.legal.LegalCenterLoadingItem) r2
             java.lang.String r0 = r1.code
             java.lang.String r2 = r2.code
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:
@@ -78,7 +78,7 @@ public final class LegalCenterLoadingItem extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof LegalCenterLoadingItem) && C12880j.m40224a((Object) ((LegalCenterLoadingItem) eVar).code, (Object) this.code);
+        return (eVar instanceof LegalCenterLoadingItem) && Intrinsics.areEqual((Object) ((LegalCenterLoadingItem) eVar).code, (Object) this.code);
     }
 
     public String toString() {
@@ -98,7 +98,7 @@ public final class LegalCenterLoadingItem extends C11866a {
 
     public void bind(C11867b bVar, int i) {
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         view.getLayoutParams().height = this.code == null ? -1 : -2;
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import kotlin.C13142s;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.MappingUtilKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
@@ -135,14 +135,14 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
                 if (r3 == 0) goto L_0x00e0
                 kotlin.reflect.jvm.internal.impl.types.TypeConstructor r4 = r3.getTypeConstructor()
                 java.lang.String r5 = "classDescriptor.typeConstructor"
-                kotlin.jvm.internal.C12880j.m40222a(r4, r5)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r5)
                 java.util.List r4 = r4.getParameters()
                 int r4 = r4.size()
                 kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassDescriptor r5 = kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassDescriptor.this
                 kotlin.reflect.jvm.internal.impl.types.TypeConstructor r5 = r5.getTypeConstructor()
                 java.util.List r5 = r5.getParameters()
                 java.lang.String r6 = "getTypeConstructor().parameters"
-                kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
                 int r6 = r5.size()
                 r7 = 10
                 if (r6 != r4) goto L_0x0096
@@ -158,7 +158,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
                 kotlin.reflect.jvm.internal.impl.types.TypeProjectionImpl r4 = new kotlin.reflect.jvm.internal.impl.types.TypeProjectionImpl
                 kotlin.reflect.jvm.internal.impl.types.Variance r5 = kotlin.reflect.jvm.internal.impl.types.Variance.INVARIANT
                 java.lang.String r6 = "parameter"
-                kotlin.jvm.internal.C12880j.m40222a(r2, r6)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r6)
                 kotlin.reflect.jvm.internal.impl.types.SimpleType r2 = r2.getDefaultType()
                 r4.<init>(r5, r2)
                 r0.add(r4)
@@ -171,7 +171,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
                 kotlin.reflect.jvm.internal.impl.types.Variance r2 = kotlin.reflect.jvm.internal.impl.types.Variance.INVARIANT
                 java.lang.Object r5 = kotlin.p590y.C13199w.m40599k(r5)
                 java.lang.String r6 = "typeParameters.single()"
-                kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
                 kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor r5 = (kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor) r5
                 kotlin.reflect.jvm.internal.impl.types.SimpleType r5 = r5.getDefaultType()
                 r0.<init>(r2, r5)
@@ -205,7 +205,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
         private final FqName getPurelyImplementsFqNameFromAnnotation() {
             Annotations annotations = LazyJavaClassDescriptor.this.getAnnotations();
             FqName fqName = JvmAnnotationNames.PURELY_IMPLEMENTS_ANNOTATION;
-            C12880j.m40222a((Object) fqName, "JvmAnnotationNames.PURELY_IMPLEMENTS_ANNOTATION");
+            Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "JvmAnnotationNames.PURELY_IMPLEMENTS_ANNOTATION");
             AnnotationDescriptor findAnnotation = annotations.findAnnotation(fqName);
             FqName fqName2 = null;
             if (findAnnotation != null) {
@@ -249,7 +249,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
                 if (purelyImplementedSupertype != null) {
                     obj = purelyImplementedSupertype.getConstructor();
                 }
-                if (!C12880j.m40224a((Object) constructor, obj) && !KotlinBuiltIns.isAnyOrNullableAny(transformJavaType)) {
+                if (!Intrinsics.areEqual((Object) constructor, obj) && !KotlinBuiltIns.isAnyOrNullableAny(transformJavaType)) {
                     arrayList.add(transformJavaType);
                 }
             }
@@ -290,7 +290,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
 
         public String toString() {
             String asString = LazyJavaClassDescriptor.this.getName().asString();
-            C12880j.m40222a((Object) asString, "name.asString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) asString, "name.asString()");
             return asString;
         }
 
@@ -310,7 +310,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
         LazyJavaResolverContext lazyJavaResolverContext = this.f29557c;
         LazyJavaResolverContext replaceComponents = ContextKt.replaceComponents(lazyJavaResolverContext, lazyJavaResolverContext.getComponents().replace(javaResolverCache));
         DeclarationDescriptor containingDeclaration = getContainingDeclaration();
-        C12880j.m40222a((Object) containingDeclaration, "containingDeclaration");
+        Intrinsics.checkReturnedValueIsNotNull((Object) containingDeclaration, "containingDeclaration");
         return new LazyJavaClassDescriptor(replaceComponents, containingDeclaration, this.jClass, classDescriptor);
     }
 
@@ -359,8 +359,8 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
     }
 
     public Visibility getVisibility() {
-        Visibility visibility2 = (!C12880j.m40224a((Object) this.visibility, (Object) Visibilities.PRIVATE) || this.jClass.getOuterClass() != null) ? this.visibility : JavaVisibilities.PACKAGE_VISIBILITY;
-        C12880j.m40222a((Object) visibility2, "if (visibility == Visibi…ISIBILITY else visibility");
+        Visibility visibility2 = (!Intrinsics.areEqual((Object) this.visibility, (Object) Visibilities.PRIVATE) || this.jClass.getOuterClass() != null) ? this.visibility : JavaVisibilities.PACKAGE_VISIBILITY;
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility2, "if (visibility == Visibi…ISIBILITY else visibility");
         return visibility2;
     }
 

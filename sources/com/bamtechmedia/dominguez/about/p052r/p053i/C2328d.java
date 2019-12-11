@@ -10,7 +10,7 @@ import com.bamtechmedia.dominguez.about.C2284o;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p509o.p510a.p511l.C11866a;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -69,7 +69,7 @@ public final class C2328d extends C11866a {
 
         public final void onCheckedChanged(CompoundButton compoundButton, boolean z) {
             Editor edit = this.f6496a.f6489U.edit();
-            C12880j.m40222a((Object) edit, "editor");
+            Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
             edit.putBoolean(this.f6496a.f6490V, z);
             edit.apply();
             this.f6496a.f6493Y.invoke();
@@ -91,9 +91,9 @@ public final class C2328d extends C11866a {
         if (this != obj) {
             if (obj instanceof C2328d) {
                 C2328d dVar = (C2328d) obj;
-                if ((this.f6494c == dVar.f6494c) && C12880j.m40224a((Object) this.f6489U, (Object) dVar.f6489U) && C12880j.m40224a((Object) this.f6490V, (Object) dVar.f6490V)) {
+                if ((this.f6494c == dVar.f6494c) && Intrinsics.areEqual((Object) this.f6489U, (Object) dVar.f6489U) && Intrinsics.areEqual((Object) this.f6490V, (Object) dVar.f6490V)) {
                     if (this.f6491W == dVar.f6491W) {
-                        if (!(this.f6492X == dVar.f6492X) || !C12880j.m40224a((Object) this.f6493Y, (Object) dVar.f6493Y)) {
+                        if (!(this.f6492X == dVar.f6492X) || !Intrinsics.areEqual((Object) this.f6493Y, (Object) dVar.f6493Y)) {
                             return false;
                         }
                     }

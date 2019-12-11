@@ -13,7 +13,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 import p163g.p201e.p203b.p287k.C7310d;
 
@@ -61,7 +61,7 @@ public final class C5944a {
         /* renamed from: a */
         public View mo17542a(View view, int i, View view2) {
             this.f13752a.invoke(Integer.valueOf(i), view);
-            if (!C12880j.m40224a((Object) view2, (Object) this.f13753b)) {
+            if (!Intrinsics.areEqual((Object) view2, (Object) this.f13753b)) {
                 return null;
             }
             this.f13753b.setDescendantFocusability(DateUtils.FORMAT_NUMERIC_DATE);
@@ -77,7 +77,7 @@ public final class C5944a {
     /* renamed from: a */
     public final void mo17872a(View view, Function0<C13145v> function0) {
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "view.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "view.context");
         boolean a = C5837i.m18836a(context);
         view.setVisibility(a ? 0 : 8);
         if (a) {
@@ -89,19 +89,19 @@ public final class C5944a {
     /* renamed from: a */
     public final void mo17873a(FocusSearchInterceptMotionLayout focusSearchInterceptMotionLayout, TabLayout tabLayout, Function2<? super Integer, ? super View, C13145v> function2) {
         Context context = focusSearchInterceptMotionLayout.getContext();
-        C12880j.m40222a((Object) context, "view.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "view.context");
         boolean a = C5837i.m18836a(context);
         TextView textView = (TextView) focusSearchInterceptMotionLayout.findViewById(C7310d.metaData);
-        C12880j.m40222a((Object) textView, "view.metaData");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "view.metaData");
         m19074a((View) textView, a);
         TextView textView2 = (TextView) focusSearchInterceptMotionLayout.findViewById(C7310d.formatAvailability);
-        C12880j.m40222a((Object) textView2, "view.formatAvailability");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "view.formatAvailability");
         m19074a((View) textView2, a);
         TextView textView3 = (TextView) focusSearchInterceptMotionLayout.findViewById(C7310d.featuredEpisodeTitle);
-        C12880j.m40222a((Object) textView3, "view.featuredEpisodeTitle");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView3, "view.featuredEpisodeTitle");
         m19074a((View) textView3, a);
         TextView textView4 = (TextView) focusSearchInterceptMotionLayout.findViewById(C7310d.videoDetailDescription);
-        C12880j.m40222a((Object) textView4, "view.videoDetailDescription");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView4, "view.videoDetailDescription");
         m19074a((View) textView4, a);
         if (a && this.f13750a) {
             focusSearchInterceptMotionLayout.setFocusSearchInterceptor(new C5946b(function2, tabLayout));

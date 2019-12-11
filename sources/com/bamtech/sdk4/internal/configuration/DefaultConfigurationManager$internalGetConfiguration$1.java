@@ -4,7 +4,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.concurrent.Callable;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 
@@ -28,10 +28,10 @@ final class DefaultConfigurationManager$internalGetConfiguration$1<V> implements
             Configuration access$getConfiguration$p = this.this$0.configuration;
             if (access$getConfiguration$p != null) {
                 Single<Configuration> b = Single.m38399b(access$getConfiguration$p);
-                C12880j.m40222a((Object) b, "Single.just(configuration!!)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(configuration!!)");
                 return b;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         } else if (!access$isConfigurationValid) {
             return this.this$0.fetchConfiguration(this.$transaction);

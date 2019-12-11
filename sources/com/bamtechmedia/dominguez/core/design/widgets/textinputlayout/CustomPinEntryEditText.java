@@ -40,7 +40,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p586h0.C12754b;
 import kotlin.p590y.C13162e0;
@@ -204,7 +204,7 @@ public final class CustomPinEntryEditText extends C0238i {
 
         public final void onAnimationUpdate(ValueAnimator valueAnimator) {
             Paint a = this.f13389a.f13371i0;
-            C12880j.m40222a((Object) valueAnimator, "animation");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueAnimator, "animation");
             Object animatedValue = valueAnimator.getAnimatedValue();
             if (animatedValue != null) {
                 a.setTextSize(((Float) animatedValue).floatValue());
@@ -409,10 +409,10 @@ public final class CustomPinEntryEditText extends C0238i {
             this.f13376n0 = C0492a.m2652i(drawable);
             Resources resources = context.getResources();
             String str = "resources";
-            C12880j.m40222a((Object) resources, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) resources, str);
             this.f13378p0 = TypedValue.applyDimension(1, 1.0f, resources.getDisplayMetrics());
             Resources resources2 = context.getResources();
-            C12880j.m40222a((Object) resources2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) resources2, str);
             this.f13379q0 = TypedValue.applyDimension(1, 2.0f, resources2.getDisplayMetrics());
             this.f13382t0 = new float[1];
             TypedArray obtainStyledAttributes = context.getTheme().obtainStyledAttributes(attributeSet, C3843m.CustomPinEntryEditText, 0, 0);
@@ -447,18 +447,18 @@ public final class CustomPinEntryEditText extends C0238i {
                 Paint paint = this.f13371i0;
                 ColorStateList textColors = getTextColors();
                 String str2 = "textColors";
-                C12880j.m40222a((Object) textColors, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textColors, str2);
                 paint.setColor(textColors.getDefaultColor());
                 Paint paint2 = this.f13370h0;
                 ColorStateList textColors2 = getTextColors();
-                C12880j.m40222a((Object) textColors2, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textColors2, str2);
                 paint2.setColor(textColors2.getDefaultColor());
                 this.f13372j0.setColor(getCurrentHintTextColor());
                 return;
             }
             return;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -498,9 +498,9 @@ public final class CustomPinEntryEditText extends C0238i {
     /* renamed from: a */
     private final void m18578a() {
         TextPaint paint = getPaint();
-        C12880j.m40222a((Object) paint, "paint");
+        Intrinsics.checkReturnedValueIsNotNull((Object) paint, "paint");
         ValueAnimator ofFloat = ValueAnimator.ofFloat(new float[]{1.0f, paint.getTextSize()});
-        C12880j.m40222a((Object) ofFloat, "valueAnimator");
+        Intrinsics.checkReturnedValueIsNotNull((Object) ofFloat, "valueAnimator");
         ofFloat.setDuration(200);
         ofFloat.setInterpolator(new OvershootInterpolator());
         ofFloat.addUpdateListener(new C5698f(this));

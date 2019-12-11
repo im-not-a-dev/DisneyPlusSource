@@ -14,6 +14,6 @@ import p163g.p413f.p414a.p418s.C10711d;
 public final class C8101a extends C10711d {
     /* renamed from: a */
     public void mo19914a(Context context, C10652e eVar, C10659l lVar) {
-        lVar.mo27557b(C8292g.class, InputStream.class, (C8308o<? extends Model, ? extends Data>) new C8104a<Object,Object>());
+        lVar.mo27557b(C8292g.class, InputStream.class, (C8308o<? extendsMODEL, ? extends Data>) new C8104a<Object,Object>());
     }
 }

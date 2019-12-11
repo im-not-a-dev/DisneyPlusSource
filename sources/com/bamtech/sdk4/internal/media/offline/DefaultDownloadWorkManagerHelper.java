@@ -30,7 +30,7 @@ import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Triple;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.functions.C11945a;
 
@@ -65,7 +65,7 @@ public final class DefaultDownloadWorkManagerHelper implements DownloadWorkManag
         C1028a aVar = new C1028a();
         aVar.mo5682a(C1036i.CONNECTED);
         C1027c a = aVar.mo5684a();
-        C12880j.m40222a((Object) a, "Constraints.Builder()\n  …TED)\n            .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Constraints.Builder()\n  …TED)\n            .build()");
         RenewalInterval renewalInterval = LicenseUtils.INSTANCE.getRenewalInterval(j);
         C1019a aVar2 = new C1019a(RenewLicensesWorker.class, renewalInterval.getInterval(), TimeUnit.SECONDS, renewalInterval.getFlex(), TimeUnit.SECONDS);
         C1019a aVar3 = (C1019a) aVar2.mo5956a(a);
@@ -75,9 +75,9 @@ public final class DefaultDownloadWorkManagerHelper implements DownloadWorkManag
             aVar4.mo5591a((String) pair.mo31015c(), pair.mo31016d());
         }
         Data a2 = aVar4.mo5594a();
-        C12880j.m40222a((Object) a2, "dataBuilder.build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "dataBuilder.build()");
         C1166l a3 = ((C1019a) ((C1019a) aVar3.mo5954a(a2)).mo5957a("sdk-license-worker")).mo5958a();
-        C12880j.m40222a((Object) a3, "PeriodicWorkRequestBuild…TAG)\n            .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "PeriodicWorkRequestBuild…TAG)\n            .build()");
         return (PeriodicWorkRequest) a3;
     }
 
@@ -92,7 +92,7 @@ public final class DefaultDownloadWorkManagerHelper implements DownloadWorkManag
             aVar.mo5686c(false);
         }
         C1027c a = aVar.mo5684a();
-        C12880j.m40222a((Object) a, "Constraints.Builder()\n  …\n                .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Constraints.Builder()\n  …\n                .build()");
         C1015a aVar2 = new C1015a(DownloadMediaWorker.class);
         Pair[] pairArr = {C12907r.m40244a("MEDIA_ID", exoCachedMedia.getId())};
         C1011a aVar3 = new C1011a();
@@ -100,9 +100,9 @@ public final class DefaultDownloadWorkManagerHelper implements DownloadWorkManag
             aVar3.mo5591a((String) pair.mo31015c(), pair.mo31016d());
         }
         Data a2 = aVar3.mo5594a();
-        C12880j.m40222a((Object) a2, "dataBuilder.build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "dataBuilder.build()");
         C1166l a3 = ((C1015a) ((C1015a) ((C1015a) ((C1015a) ((C1015a) aVar2.mo5954a(a2)).mo5956a(a)).mo5957a(exoCachedMedia.getId())).mo5957a("sdk-download-worker")).mo5955a(C1024a.LINEAR, 5, TimeUnit.SECONDS)).mo5958a();
-        C12880j.m40222a((Object) a3, "OneTimeWorkRequestBuilde…\n                .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "OneTimeWorkRequestBuilde…\n                .build()");
         return (OneTimeWorkRequest) a3;
     }
 
@@ -119,7 +119,7 @@ public final class DefaultDownloadWorkManagerHelper implements DownloadWorkManag
 
     public Completable removeAllLicenses(List<Triple<String, String, String>> list) {
         Completable c = Completable.m38166c((C11945a) new DefaultDownloadWorkManagerHelper$removeAllLicenses$1(this, list));
-        C12880j.m40222a((Object) c, "Completable.fromAction {…rker).enqueue()\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.fromAction {…rker).enqueue()\n        }");
         return c;
     }
 
@@ -132,7 +132,7 @@ public final class DefaultDownloadWorkManagerHelper implements DownloadWorkManag
         C1028a aVar = new C1028a();
         aVar.mo5682a(C1036i.CONNECTED);
         C1027c a = aVar.mo5684a();
-        C12880j.m40222a((Object) a, "Constraints.Builder()\n  …\n                .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Constraints.Builder()\n  …\n                .build()");
         String str = "release_old_licenses";
         this.workManager.mo5638a(str, C1031e.KEEP, (PeriodicWorkRequest) ((C1019a) ((C1019a) new C1019a(ReleaseLicensesPeriodicWorker.class, 1, TimeUnit.DAYS).mo5956a(a)).mo5957a("sdk-license-worker")).mo5958a());
     }
@@ -145,7 +145,7 @@ public final class DefaultDownloadWorkManagerHelper implements DownloadWorkManag
             z = false;
         }
         if (!z2 && !z) {
-            C12880j.m40222a((Object) l, "minimalRenewalFrequency");
+            Intrinsics.checkReturnedValueIsNotNull((Object) l, "minimalRenewalFrequency");
             this.workManager.mo5638a("renew_licenses", (j == -1 || z2) ? C1031e.KEEP : C1031e.REPLACE, buildRenewLicensesWorker(l.longValue()));
         }
     }

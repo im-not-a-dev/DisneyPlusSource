@@ -11,7 +11,7 @@ import javax.inject.Provider;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p275a0.C7159g;
 import p163g.p201e.p203b.p275a0.C7159g.C7161b;
@@ -68,10 +68,10 @@ public final class C7864d implements C7862c {
             cVar.mo19987a((C10731h) ((C10731h) new C10731h().mo19928a(C8227j.f17609c)).mo19934b(Integer.MIN_VALUE));
             Context context = this.f16992U.getContext();
             String str = "imageView.context";
-            C12880j.m40222a((Object) context, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, str);
             if (!C5837i.m18842d(context)) {
                 Context context2 = this.f16992U.getContext();
-                C12880j.m40222a((Object) context2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) context2, str);
                 if (!C5837i.m18843e(context2)) {
                     f = ((float) this.f16993c.m23053e()) - (this.f16993c.f16989a.getDimension(C7903s.padding_extra_large) * ((float) 2));
                     cVar.mo19996e(Integer.valueOf((int) f));
@@ -230,7 +230,7 @@ public final class C7864d implements C7862c {
     /* renamed from: d */
     private final String m23052d() {
         String string = this.f16989a.getString(C7906v.welcome_screen_suffix);
-        C12880j.m40222a((Object) string, "resources.getString(R.st…ng.welcome_screen_suffix)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) string, "resources.getString(R.st…ng.welcome_screen_suffix)");
         return string;
     }
 
@@ -243,7 +243,7 @@ public final class C7864d implements C7862c {
     /* renamed from: b */
     private final String m23050b() {
         String string = this.f16989a.getString(C7906v.complete_purchase_suffix);
-        C12880j.m40222a((Object) string, "resources.getString(R.st…complete_purchase_suffix)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) string, "resources.getString(R.st…complete_purchase_suffix)");
         return string;
     }
 

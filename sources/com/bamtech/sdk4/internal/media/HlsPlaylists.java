@@ -88,7 +88,7 @@ public final class HlsPlaylists {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x0038, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.renditions, (java.lang.Object) r3.renditions) != false) goto L_0x003d;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.renditions, (java.lang.Object) r3.renditions) != false) goto L_0x003d;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -100,23 +100,23 @@ public final class HlsPlaylists {
             com.bamtech.sdk4.internal.media.HlsPlaylists r3 = (com.bamtech.sdk4.internal.media.HlsPlaylists) r3
             java.lang.String r0 = r2.complete
             java.lang.String r1 = r3.complete
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             java.lang.String r0 = r2.slide
             java.lang.String r1 = r3.slide
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             com.bamtech.sdk4.internal.media.HlsPlaylistAttributes r0 = r2.attributes
             com.bamtech.sdk4.internal.media.HlsPlaylistAttributes r1 = r3.attributes
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             java.util.List<com.bamtech.sdk4.internal.media.HlsPlaylistVariant> r0 = r2.variants
             java.util.List<com.bamtech.sdk4.internal.media.HlsPlaylistVariant> r1 = r3.variants
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             com.bamtech.sdk4.internal.media.Renditions r0 = r2.renditions
             com.bamtech.sdk4.internal.media.Renditions r3 = r3.renditions
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x003b
             goto L_0x003d
         L_0x003b:

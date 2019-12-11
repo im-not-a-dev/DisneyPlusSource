@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.C8735m0;
 import com.google.android.exoplayer2.C8800n0;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.source.TrackGroupArray;
@@ -119,7 +119,7 @@ public abstract class C9306f extends TrackSelector {
                 if (i4 == 0) {
                     obj = str;
                 } else {
-                    z |= !C9554k0.m29414a(obj, (Object) str);
+                    z |= !Util.m29414a(obj, (Object) str);
                 }
                 i5 = Math.min(i5, this.f21292f[i][i2][i3] & 24);
                 i3++;
@@ -172,13 +172,13 @@ public abstract class C9306f extends TrackSelector {
         int[] iArr4 = new int[m0VarArr.length];
         for (int i5 = 0; i5 < m0VarArr.length; i5++) {
             int i6 = iArr2[i5];
-            trackGroupArrayArr[i5] = new TrackGroupArray((C9199j0[]) C9554k0.m29420a((T[]) j0VarArr[i5], i6));
-            iArr3[i5] = (int[][]) C9554k0.m29420a((T[]) iArr3[i5], i6);
+            trackGroupArrayArr[i5] = new TrackGroupArray((C9199j0[]) Util.m29420a((T[]) j0VarArr[i5], i6));
+            iArr3[i5] = (int[][]) Util.m29420a((T[]) iArr3[i5], i6);
             iArr4[i5] = m0VarArr[i5].mo22860f();
         }
         int[] iArr5 = a;
         int[][][] iArr6 = iArr3;
-        C9307a aVar = new C9307a(iArr4, trackGroupArrayArr, iArr5, iArr6, new TrackGroupArray((C9199j0[]) C9554k0.m29420a((T[]) j0VarArr[m0VarArr.length], iArr2[m0VarArr.length])));
+        C9307a aVar = new C9307a(iArr4, trackGroupArrayArr, iArr5, iArr6, new TrackGroupArray((C9199j0[]) Util.m29420a((T[]) j0VarArr[m0VarArr.length], iArr2[m0VarArr.length])));
         Pair a4 = mo24082a(aVar, iArr3, a);
         return new C9318m((C8800n0[]) a4.first, (C9311j[]) a4.second, aVar);
     }

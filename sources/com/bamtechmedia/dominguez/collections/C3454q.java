@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.core.content.paging.C3702e;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\bf\u0018\u00002\u00020\u00012\u00020\u0002:\u0002\u0017\u0018J\u0010\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nH&J\b\u0010\u000b\u001a\u00020\bH&J$\u0010\f\u001a\u00020\b2\u0006\u0010\r\u001a\u00020\u000e2\u0012\u0010\u000f\u001a\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\b0\u0010H&J\b\u0010\u0012\u001a\u00020\bH&J\u0010\u0010\u0013\u001a\u00020\b2\u0006\u0010\u0003\u001a\u00020\u0004H&J\u0010\u0010\u0014\u001a\u00020\b2\u0006\u0010\u0015\u001a\u00020\u0016H&R\u0012\u0010\u0003\u001a\u00020\u0004X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0019"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/collections/CollectionViewModel;", "Lcom/bamtechmedia/dominguez/collections/items/ShelfBindListener;", "Lcom/bamtechmedia/dominguez/core/content/paging/PagingListener;", "slug", "Lcom/bamtechmedia/dominguez/core/content/collections/Slug;", "getSlug", "()Lcom/bamtechmedia/dominguez/core/content/collections/Slug;", "filterAssets", "", "filter", "Lcom/bamtechmedia/dominguez/collections/CollectionFilter;", "invalidateCollection", "observeUntilOnStop", "owner", "Landroidx/lifecycle/LifecycleOwner;", "consumer", "Lkotlin/Function1;", "Lcom/bamtechmedia/dominguez/collections/CollectionViewModel$State;", "refresh", "syncCollectionsByCache", "syncContentSetByCache", "contentSetType", "Lcom/bamtechmedia/dominguez/core/content/sets/ContentSetType;", "Factory", "State", "collectionsApi_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.collections.q */
@@ -126,9 +126,9 @@ public interface C3454q extends C3374o, C3702e {
             if (this != obj) {
                 if (obj instanceof C3456b) {
                     C3456b bVar = (C3456b) obj;
-                    if (C12880j.m40224a((Object) this.f8717b, (Object) bVar.f8717b) && C12880j.m40224a((Object) this.f8718c, (Object) bVar.f8718c) && C12880j.m40224a((Object) this.f8719d, (Object) bVar.f8719d)) {
+                    if (Intrinsics.areEqual((Object) this.f8717b, (Object) bVar.f8717b) && Intrinsics.areEqual((Object) this.f8718c, (Object) bVar.f8718c) && Intrinsics.areEqual((Object) this.f8719d, (Object) bVar.f8719d)) {
                         if (this.f8720e == bVar.f8720e) {
-                            if (!(this.f8721f == bVar.f8721f) || !C12880j.m40224a((Object) this.f8722g, (Object) bVar.f8722g)) {
+                            if (!(this.f8721f == bVar.f8721f) || !Intrinsics.areEqual((Object) this.f8722g, (Object) bVar.f8722g)) {
                                 return false;
                             }
                         }

@@ -14,7 +14,7 @@ import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Triple;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.C11945a;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\b\n\u0000\n\u0002\u0010\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001H\n¢\u0006\u0002\b\u0002"}, mo31007d2 = {"<anonymous>", "", "run"}, mo31008k = 3, mo31009mv = {1, 1, 15})
@@ -54,9 +54,9 @@ final class DefaultDownloadWorkManagerHelper$removeAllLicenses$1 implements C119
                         aVar2.mo5591a((String) pair.mo31015c(), pair.mo31016d());
                     }
                     Data a = aVar2.mo5594a();
-                    C12880j.m40222a((Object) a, "dataBuilder.build()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a, "dataBuilder.build()");
                     C1166l a2 = ((C1015a) aVar.mo5954a(a)).mo5958a();
-                    C12880j.m40222a((Object) a2, "OneTimeWorkRequestBuilde…                 .build()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a2, "OneTimeWorkRequestBuilde…                 .build()");
                     this.this$0.workManager.mo5641a("releaseAllLicenses", C1032f.KEEP, (OneTimeWorkRequest) a2).mo5759a();
                     return;
                 }

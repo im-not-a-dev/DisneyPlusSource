@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import org.reactivestreams.C14314c;
 import p163g.p201e.p203b.p204d.C5407l0;
@@ -27,7 +27,7 @@ import p520io.reactivex.C11932e;
 import p520io.reactivex.C11957k;
 import p520io.reactivex.Flowable;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001\u001bB=\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010¢\u0006\u0002\u0010\u0011J \u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00140\u00132\u0006\u0010\u0015\u001a\u00020\u00162\b\b\u0002\u0010\u0017\u001a\u00020\fH\u0002J\u0010\u0010\u0018\u001a\u00020\u00192\u0006\u0010\u0015\u001a\u00020\u0016H\u0002J\u0006\u0010\u001a\u001a\u00020\u0019R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000¨\u0006\u001c"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/options/OptionsViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/options/OptionsViewModel$State;", "router", "Lcom/bamtechmedia/dominguez/options/OptionsRouter;", "profilesRepository", "Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "optionsItemProvider", "Lcom/bamtechmedia/dominguez/options/OptionsItemProvider;", "isTelevision", "", "buildInfo", "Lcom/bamtechmedia/dominguez/core/BuildInfo;", "accountSettingsChecker", "Lcom/bamtechmedia/dominguez/account/AccountSettingsViewedChecker;", "(Lcom/bamtechmedia/dominguez/options/OptionsRouter;Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;Lcom/bamtech/sdk4/account/AccountApi;Lcom/bamtechmedia/dominguez/options/OptionsItemProvider;ZLcom/bamtechmedia/dominguez/core/BuildInfo;Lcom/bamtechmedia/dominguez/account/AccountSettingsViewedChecker;)V", "createOptions", "", "Lcom/xwray/groupie/kotlinandroidextensions/Item;", "profile", "Lcom/bamtechmedia/dominguez/profiles/Profile;", "showVerifyBadge", "loadAccountInfo", "", "refreshOptions", "State", "core_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.t.s */
@@ -88,7 +88,7 @@ public final class C7793s extends C5741g<C7794a> {
             if (this != obj) {
                 if (obj instanceof C7794a) {
                     C7794a aVar = (C7794a) obj;
-                    if (C12880j.m40224a((Object) this.f16883a, (Object) aVar.f16883a)) {
+                    if (Intrinsics.areEqual((Object) this.f16883a, (Object) aVar.f16883a)) {
                         if (this.f16884b == aVar.f16884b) {
                             return true;
                         }
@@ -163,7 +163,7 @@ public final class C7793s extends C5741g<C7794a> {
                 C7793s sVar = bVar.f16886c;
                 C6626c0 c0Var = bVar.f16885U;
                 DefaultAccount defaultAccount = this.f16887U;
-                C12880j.m40222a((Object) defaultAccount, SubjectTokenTypes.ACCOUNT);
+                Intrinsics.checkReturnedValueIsNotNull((Object) defaultAccount, SubjectTokenTypes.ACCOUNT);
                 return new C7794a(sVar.m22879a(c0Var, !C5407l0.m18172b(defaultAccount)), false, 2, null);
             }
         }
@@ -269,7 +269,7 @@ public final class C7793s extends C5741g<C7794a> {
         /* renamed from: a */
         public final void accept(C6626c0 c0Var) {
             C7793s sVar = this.f16894c;
-            C12880j.m40222a((Object) c0Var, "profile");
+            Intrinsics.checkReturnedValueIsNotNull((Object) c0Var, "profile");
             sVar.m22882a(c0Var);
         }
     }
@@ -286,7 +286,7 @@ public final class C7793s extends C5741g<C7794a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
     }
 
@@ -305,9 +305,9 @@ public final class C7793s extends C5741g<C7794a> {
     /* renamed from: y */
     public final void mo20699y() {
         Flowable c = this.f16877b.mo19377a().mo30061a().mo30089c((Consumer<? super C14314c>) new C7799d<Object>(this));
-        C12880j.m40222a((Object) c, "profilesRepository.activ…State(loading = true) } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "profilesRepository.activ…State(loading = true) } }");
         Object a = c.mo30079a((C11932e<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11842x) a).mo29927a(new C7801e(this), C7802f.f16895c);
     }
 
@@ -315,7 +315,7 @@ public final class C7793s extends C5741g<C7794a> {
     /* renamed from: a */
     public final void m22882a(C6626c0 c0Var) {
         Object a = this.f16878c.getAccount().mo30112a((C11957k<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11844z) a).mo29929a(new C7795b(this, c0Var), new C7797c(this, c0Var));
     }
 

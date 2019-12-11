@@ -13,7 +13,7 @@ import com.google.android.exoplayer2.database.DatabaseProvider;
 import com.google.android.exoplayer2.p393v0.C9530b0;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9539f;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
 import java.io.DataInputStream;
@@ -414,7 +414,7 @@ class C9475m {
                     }
                     dataOutputStream.writeInt(i);
                     this.f22060e.mo24609a(dataOutputStream);
-                    C9554k0.m29406a((Closeable) null);
+                    Util.m29406a((Closeable) null);
                 } catch (InvalidKeyException e) {
                     e = e;
                     throw new IllegalStateException(e);
@@ -423,13 +423,13 @@ class C9475m {
                     throw new IllegalStateException(e);
                 } catch (Throwable th) {
                     th = th;
-                    C9554k0.m29406a((Closeable) dataOutputStream);
+                    Util.m29406a((Closeable) dataOutputStream);
                     throw th;
                 }
             } catch (Throwable th2) {
                 th = th2;
                 dataOutputStream = null;
-                C9554k0.m29406a((Closeable) dataOutputStream);
+                Util.m29406a((Closeable) dataOutputStream);
                 throw th;
             }
         }
@@ -497,7 +497,7 @@ class C9475m {
                 if (r6 == 0) goto L_0x0060
                 javax.crypto.Cipher r6 = r10.f22057b     // Catch:{ IOException -> 0x00a7, all -> 0x00a5 }
                 if (r6 != 0) goto L_0x0036
-                com.google.android.exoplayer2.p393v0.C9554k0.m29406a(r4)
+                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
                 return r2
             L_0x0036:
                 r6 = 16
@@ -558,13 +558,13 @@ class C9475m {
                 if (r12 != 0) goto L_0x0099
                 goto L_0x009d
             L_0x0099:
-                com.google.android.exoplayer2.p393v0.C9554k0.m29406a(r4)
+                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
                 return r1
             L_0x009d:
-                com.google.android.exoplayer2.p393v0.C9554k0.m29406a(r4)
+                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
                 return r2
             L_0x00a1:
-                com.google.android.exoplayer2.p393v0.C9554k0.m29406a(r4)
+                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
                 return r2
             L_0x00a5:
                 r11 = move-exception
@@ -576,14 +576,14 @@ class C9475m {
                 r4 = r0
             L_0x00ab:
                 if (r4 == 0) goto L_0x00b0
-                com.google.android.exoplayer2.p393v0.C9554k0.m29406a(r4)
+                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
             L_0x00b0:
                 throw r11
             L_0x00b1:
                 r4 = r0
             L_0x00b2:
                 if (r4 == 0) goto L_0x00b7
-                com.google.android.exoplayer2.p393v0.C9554k0.m29406a(r4)
+                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
             L_0x00b7:
                 return r2
             */
@@ -814,7 +814,7 @@ class C9475m {
             int readInt2 = dataInputStream.readInt();
             if (readInt2 >= 0) {
                 int min = Math.min(readInt2, 10485760);
-                byte[] bArr = C9554k0.f22286f;
+                byte[] bArr = Util.EMPTY_BYTE_ARRAY;
                 int i2 = min;
                 int i3 = 0;
                 while (i3 != readInt2) {
@@ -847,7 +847,7 @@ class C9475m {
     /* renamed from: e */
     public static Cipher m29075e() throws NoSuchPaddingException, NoSuchAlgorithmException {
         String str = "AES/CBC/PKCS5PADDING";
-        if (C9554k0.f22281a == 18) {
+        if (Util.SDK_INT == 18) {
             try {
                 return Cipher.getInstance(str, "BC");
             } catch (Throwable unused) {

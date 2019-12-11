@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import android.text.TextUtils;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.trackselection.k */
 /* compiled from: TrackSelectionParameters */
@@ -128,13 +128,13 @@ public class C9314k implements Parcelable {
         parcel.writeString(this.f21304c);
         parcel.writeString(this.f21300U);
         parcel.writeInt(this.f21301V);
-        C9554k0.m29403a(parcel, this.f21302W);
+        Util.m29403a(parcel, this.f21302W);
         parcel.writeInt(this.f21303X);
     }
 
     C9314k(String str, String str2, int i, boolean z, int i2) {
-        this.f21304c = C9554k0.m29451f(str);
-        this.f21300U = C9554k0.m29451f(str2);
+        this.f21304c = Util.m29451f(str);
+        this.f21300U = Util.m29451f(str2);
         this.f21301V = i;
         this.f21302W = z;
         this.f21303X = i2;
@@ -144,7 +144,7 @@ public class C9314k implements Parcelable {
         this.f21304c = parcel.readString();
         this.f21300U = parcel.readString();
         this.f21301V = parcel.readInt();
-        this.f21302W = C9554k0.m29412a(parcel);
+        this.f21302W = Util.m29412a(parcel);
         this.f21303X = parcel.readInt();
     }
 }

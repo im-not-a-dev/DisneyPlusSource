@@ -2,7 +2,7 @@ package p163g.p201e.p203b.p319v.p320a0;
 
 import com.bamnet.iap.BamnetIAPProduct;
 import com.bamtech.sdk4.paywall.Product;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.Period;
 import org.joda.time.format.ISOPeriodFormat;
 
@@ -29,7 +29,7 @@ public final class C7822c implements C7823d {
     /* renamed from: b */
     public String mo20730b() {
         String c = this.f16914b.mo7185c();
-        C12880j.m40222a((Object) c, "iapProduct.localisedPrice");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "iapProduct.localisedPrice");
         return c;
     }
 
@@ -49,7 +49,7 @@ public final class C7822c implements C7823d {
         if (b == null) {
             return null;
         }
-        C12880j.m40222a((Object) b, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "it");
         if (b.length() > 0) {
             return ISOPeriodFormat.standard().parsePeriod(b);
         }
@@ -57,7 +57,7 @@ public final class C7822c implements C7823d {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f16914b, (java.lang.Object) r3.f16914b) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f16914b, (java.lang.Object) r3.f16914b) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -69,11 +69,11 @@ public final class C7822c implements C7823d {
             g.e.b.v.a0.c r3 = (p163g.p201e.p203b.p319v.p320a0.C7822c) r3
             com.bamtech.sdk4.paywall.Product r0 = r2.f16913a
             com.bamtech.sdk4.paywall.Product r1 = r3.f16913a
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.bamnet.iap.BamnetIAPProduct r0 = r2.f16914b
             com.bamnet.iap.BamnetIAPProduct r3 = r3.f16914b
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:

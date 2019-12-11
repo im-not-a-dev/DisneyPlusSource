@@ -38,7 +38,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p122j.C4025a;
 import p096e.p121h.p135s.C4127b0;
@@ -254,13 +254,13 @@ public final class C5449c extends C11890i implements C2413n, C7717x {
             ((FieldInputLayout) this.f12972c._$_findCachedViewById(C5411n0.newEmailInput)).setInputTextValue(this.f12972c.getViewModel().mo17209y());
             C5704a.m18600a((FieldInputLayout) this.f12972c._$_findCachedViewById(C5411n0.newEmailInput), new C5456a(this), new C5457b(this), C13183n.m40498a((ConstraintLayout) this.f12972c._$_findCachedViewById(C5411n0.changeEmailLayout)), false, 8, null);
             Context requireContext = this.f12972c.requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             if (!C5837i.m18843e(requireContext)) {
                 FieldInputLayout fieldInputLayout = (FieldInputLayout) this.f12972c._$_findCachedViewById(C5411n0.newEmailInput);
                 String a = C5880u.m18936a(C5415p0.email_new);
                 if (a != null) {
                     String lowerCase = a.toLowerCase();
-                    C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
                     fieldInputLayout.setTitle(C12832w.m40125f(lowerCase));
                     return;
                 }
@@ -511,7 +511,7 @@ public final class C5449c extends C11890i implements C2413n, C7717x {
         OnboardingToolbar onboardingToolbar = (OnboardingToolbar) _$_findCachedViewById(C5411n0.changeEmailOnboardingToolbar);
         if (onboardingToolbar != null) {
             C0532d requireActivity = requireActivity();
-            C12880j.m40222a((Object) requireActivity, "requireActivity()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
             onboardingToolbar.mo17459a(requireActivity, getView(), (NestedScrollView) _$_findCachedViewById(C5411n0.changeEmailScrollView), (ConstraintLayout) _$_findCachedViewById(C5411n0.changeEmailLayout), false, new C5464i(this));
         }
         OnboardingToolbar onboardingToolbar2 = (OnboardingToolbar) _$_findCachedViewById(C5411n0.changeEmailOnboardingToolbar);
@@ -553,10 +553,10 @@ public final class C5449c extends C11890i implements C2413n, C7717x {
                 eVar.mo17206a(inputTextValue, str);
                 return;
             }
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
@@ -593,7 +593,7 @@ public final class C5449c extends C11890i implements C2413n, C7717x {
         if (eVar != null) {
             return eVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -603,14 +603,14 @@ public final class C5449c extends C11890i implements C2413n, C7717x {
         if (bVar != null) {
             return bVar;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         View inflate = layoutInflater.inflate(C5413o0.fragment_account_change_email, viewGroup, false);
         this.f12966Z = inflate.findViewById(C5411n0.forgotPassword);
-        C12880j.m40222a((Object) inflate, "view");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "view");
         return inflate;
     }
 
@@ -627,7 +627,7 @@ public final class C5449c extends C11890i implements C2413n, C7717x {
             C5755i.m18679a(this, eVar, null, null, new C5461f(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -661,13 +661,13 @@ public final class C5449c extends C11890i implements C2413n, C7717x {
             int a = C12833x.m40132a((CharSequence) spannableStringBuilder, str, 0, false, 6, (Object) null);
             spannableStringBuilder.setSpan(new ForegroundColorSpan(C4025a.m13788a(requireContext(), C5409m0.vader_white)), a, str.length() + a, 34);
             spannableString = SpannableString.valueOf(spannableStringBuilder);
-            C12880j.m40222a((Object) spannableString, "SpannableString.valueOf(this)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) spannableString, "SpannableString.valueOf(this)");
         } else {
             spannableString = null;
         }
         if (spannableString != null) {
             TextView textView = (TextView) _$_findCachedViewById(C5411n0.current_email);
-            C12880j.m40222a((Object) textView, "current_email");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "current_email");
             textView.setText(spannableString);
         }
     }

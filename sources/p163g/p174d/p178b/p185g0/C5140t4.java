@@ -21,7 +21,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p174d.p178b.C5300m;
@@ -144,7 +144,7 @@ public final class C5140t4 extends C5170v3 {
 
         public void onReceive(Context context, Intent intent) {
             if (intent != null) {
-                if (!(!C12880j.m40224a((Object) "media_control", (Object) intent.getAction()))) {
+                if (!(!Intrinsics.areEqual((Object) "media_control", (Object) intent.getAction()))) {
                     int intExtra = intent.getIntExtra("control_type", 0);
                     if (intExtra == 1) {
                         this.f12461a.mo7598Y();

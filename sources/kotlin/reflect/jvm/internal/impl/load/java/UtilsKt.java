@@ -32,7 +32,7 @@ public final class UtilsKt {
             kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope r4 = r0.getUnsubstitutedInnerClassesScope()
             kotlin.reflect.jvm.internal.impl.name.Name r5 = kotlin.reflect.jvm.internal.impl.name.Name.identifier(r5)
             java.lang.String r0 = "Name.identifier(value)"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r0)
             kotlin.reflect.jvm.internal.impl.incremental.components.NoLookupLocation r0 = kotlin.reflect.jvm.internal.impl.incremental.components.NoLookupLocation.FROM_BACKEND
             kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor r4 = r4.getContributedClassifier(r5, r0)
             boolean r5 = r4 instanceof kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor

@@ -5,7 +5,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.internal.telemetry.dust.DustExtensionsKt;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.C11945a;
@@ -34,15 +34,15 @@ public final class DefaultConfigurationManager implements ConfigurationManager {
     /* access modifiers changed from: private */
     public final Single<Configuration> fetchConfiguration(ServiceTransaction serviceTransaction) {
         Single g = this.configurationClient.getConfiguration(serviceTransaction, this.embeddedConfiguration.getBootstrapLink(this.bootstrapConfiguration)).mo30233g(new DefaultConfigurationManager$fetchConfiguration$1(this, serviceTransaction));
-        C12880j.m40222a((Object) g, "configurationClient.getC…     it\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "configurationClient.getC…     it\n                }");
         Single<Configuration> h = DustExtensionsKt.withDust$default(g, serviceTransaction, ConfigurationManagerKt.getCONFIGURATION_FETCH(), (Object) null, 4, (Object) null).mo30235h(new DefaultConfigurationManager$fetchConfiguration$2(this));
-        C12880j.m40222a((Object) h, "configurationClient.getC…on>(it)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "configurationClient.getC…on>(it)\n                }");
         return h;
     }
 
     private final Single<Configuration> internalGetConfiguration(ServiceTransaction serviceTransaction) {
         Single<Configuration> d = Single.m38396a((Callable<? extends SingleSource<? extends T>>) new DefaultConfigurationManager$internalGetConfiguration$1<Object>(this, serviceTransaction)).mo30219b((C11945a) new DefaultConfigurationManager$internalGetConfiguration$2(this)).mo30226d();
-        C12880j.m40222a((Object) d, "Single.defer {\n         …\n                .cache()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "Single.defer {\n         …\n                .cache()");
         return d;
     }
 

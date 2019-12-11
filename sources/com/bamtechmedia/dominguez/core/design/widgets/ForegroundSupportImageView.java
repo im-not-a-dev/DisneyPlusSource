@@ -10,7 +10,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import com.bamtechmedia.dominguez.core.p088i.C3843m;
 import com.bamtechmedia.dominguez.core.p088i.p090o.C3846a;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0012\u0010\u000b\u001a\u00020\f2\b\u0010\r\u001a\u0004\u0018\u00010\u000eH\u0016J\b\u0010\u000f\u001a\u00020\fH\u0014J\b\u0010\u0010\u001a\u00020\fH\u0016J\u0018\u0010\u0011\u001a\u00020\f2\u0006\u0010\u0012\u001a\u00020\u00072\u0006\u0010\u0013\u001a\u00020\u0007H\u0014J(\u0010\u0014\u001a\u00020\f2\u0006\u0010\u0015\u001a\u00020\u00072\u0006\u0010\u0016\u001a\u00020\u00072\u0006\u0010\u0017\u001a\u00020\u00072\u0006\u0010\u0018\u001a\u00020\u0007H\u0014J\u0012\u0010\u0019\u001a\u00020\f2\b\b\u0001\u0010\u001a\u001a\u00020\u0007H\u0016J\u0012\u0010\u001b\u001a\u00020\f2\b\u0010\u001c\u001a\u0004\u0018\u00010\u001dH\u0016J\u0010\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020!H\u0014R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000¨\u0006\""}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/design/widgets/ForegroundSupportImageView;", "Landroidx/appcompat/widget/AppCompatImageView;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "foregroundDrawableCompat", "Lcom/bamtechmedia/dominguez/core/design/compat/ForegroundDrawableCompat;", "draw", "", "canvas", "Landroid/graphics/Canvas;", "drawableStateChanged", "jumpDrawablesToCurrentState", "onMeasure", "widthMeasureSpec", "heightMeasureSpec", "onSizeChanged", "w", "h", "oldw", "oldh", "setImageResource", "resId", "setImageURI", "uri", "Landroid/net/Uri;", "verifyDrawable", "", "who", "Landroid/graphics/drawable/Drawable;", "lib_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -84,7 +84,7 @@ public final class ForegroundSupportImageView extends AppCompatImageView {
         super(context, attributeSet, i);
         this.f13243V = new C3846a(this);
         int[] iArr = C3843m.ForegroundSupportImageView;
-        C12880j.m40222a((Object) iArr, "R.styleable.ForegroundSupportImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) iArr, "R.styleable.ForegroundSupportImageView");
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, 0, 0);
         this.f13243V.mo13759a(obtainStyledAttributes.getDrawable(C3843m.ForegroundSupportImageView_foreground));
         obtainStyledAttributes.recycle();

@@ -14,9 +14,9 @@ import com.google.android.exoplayer2.Timeline.C8670c;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9542g;
 import com.google.android.exoplayer2.p393v0.C9547i0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9562p;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
 import com.google.android.exoplayer2.source.C9141f0;
@@ -196,7 +196,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
                 if (i2 != 0) {
                     return i2;
                 }
-                return C9554k0.m29426b(this.f22558V, cVar.f22558V);
+                return Util.compareLong(this.f22558V, cVar.f22558V);
             }
         }
     }
@@ -817,17 +817,17 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
             }
             m29840j();
         } catch (ExoPlaybackException e) {
-            C9563q.m29496a(str, "Playback error.", e);
+            Log.m29496a(str, "Playback error.", e);
             this.f22529b0.obtainMessage(2, e).sendToTarget();
             m29807a(true, false, false);
             m29840j();
         } catch (IOException e2) {
-            C9563q.m29496a(str, "Source error.", e2);
+            Log.m29496a(str, "Source error.", e2);
             this.f22529b0.obtainMessage(2, ExoPlaybackException.m24861a(e2)).sendToTarget();
             m29807a(false, false, false);
             m29840j();
         } catch (OutOfMemoryError | RuntimeException e3) {
-            C9563q.m29496a(str, "Internal runtime error.", e3);
+            Log.m29496a(str, "Internal runtime error.", e3);
             if (e3 instanceof OutOfMemoryError) {
                 exoPlaybackException = ExoPlaybackException.m24863a((OutOfMemoryError) e3);
             } else {
@@ -995,7 +995,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
     /* renamed from: a */
     public synchronized void mo22649a(PlayerMessage playerMessage) {
         if (this.f22544p0) {
-            C9563q.m29500d("ExoPlayerImplInternal", "Ignoring messages sent after release.");
+            Log.m29500d("ExoPlayerImplInternal", "Ignoring messages sent after release.");
             playerMessage.mo22636a(false);
             return;
         }
@@ -1184,10 +1184,10 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
         L_0x008c:
             r4 = r12
         L_0x008d:
-            long r6 = com.google.android.exoplayer2.C8883r.m25968b(r4)     // Catch:{ all -> 0x00de }
+            long r6 = com.google.android.exoplayer2.C8883r.usToMs(r4)     // Catch:{ all -> 0x00de }
             com.google.android.exoplayer2.h0 r0 = r1.f22541m0     // Catch:{ all -> 0x00de }
             long r10 = r0.f18545m     // Catch:{ all -> 0x00de }
-            long r10 = com.google.android.exoplayer2.C8883r.m25968b(r10)     // Catch:{ all -> 0x00de }
+            long r10 = com.google.android.exoplayer2.C8883r.usToMs(r10)     // Catch:{ all -> 0x00de }
             int r0 = (r6 > r10 ? 1 : (r6 == r10 ? 0 : -1))
             if (r0 != 0) goto L_0x00b8
             com.google.android.exoplayer2.h0 r0 = r1.f22541m0     // Catch:{ all -> 0x00de }
@@ -1250,7 +1250,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
         try {
             m29821c(playerMessage);
         } catch (ExoPlaybackException e) {
-            C9563q.m29496a("ExoPlayerImplInternal", "Unexpected error delivering message on external thread.", e);
+            Log.m29496a("ExoPlayerImplInternal", "Unexpected error delivering message on external thread.", e);
             throw new RuntimeException(e);
         }
     }
@@ -1467,7 +1467,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
             r0 = move-exception
         L_0x0025:
             java.lang.String r7 = "Disable failed."
-            com.google.android.exoplayer2.p393v0.C9563q.m29496a(r6, r7, r0)
+            com.google.android.exoplayer2.p393v0.Log.m29496a(r6, r7, r0)
         L_0x002a:
             int r5 = r5 + 1
             goto L_0x0018
@@ -1485,7 +1485,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
             r0 = move-exception
             r7 = r0
             java.lang.String r0 = "Reset failed."
-            com.google.android.exoplayer2.p393v0.C9563q.m29496a(r6, r0, r7)
+            com.google.android.exoplayer2.p393v0.Log.m29496a(r6, r0, r7)
         L_0x0042:
             int r5 = r5 + 1
             goto L_0x0033
@@ -1635,7 +1635,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
     private boolean m29810a(C9619c cVar) {
         Object obj = cVar.f22559W;
         if (obj == null) {
-            Pair a = m29795a(new C9621e(cVar.f22560c.mo22643g(), cVar.f22560c.mo22645i(), C8883r.m25967a(cVar.f22560c.mo22641e())), false);
+            Pair a = m29795a(new C9621e(cVar.f22560c.mo22643g(), cVar.f22560c.mo22645i(), C8883r.msToUs(cVar.f22560c.mo22641e())), false);
             if (a == null) {
                 return false;
             }

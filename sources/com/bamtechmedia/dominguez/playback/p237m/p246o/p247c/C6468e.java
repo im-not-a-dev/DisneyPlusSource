@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.core.utils.C5884x;
 import com.bamtechmedia.dominguez.playback.common.contentrating.C6284a;
 import com.bamtechmedia.dominguez.playback.common.contentrating.C6285b.C6290e;
 import com.bamtechmedia.dominguez.playback.p237m.C6336a;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Observable;
 
 /* renamed from: com.bamtechmedia.dominguez.playback.m.o.c.e */
@@ -32,7 +32,7 @@ public final class C6468e implements C5742a<C6336a> {
         C6290e eVar = r1;
         C6290e eVar2 = new C6290e(this.f14663a, this.f14664b);
         Observable<C6336a> b = Observable.m38309b(C6336a.m19906a(aVar3, null, null, null, eVar, null, false, null, false, 0, null, null, null, null, false, false, 24567, null));
-        C12880j.m40222a((Object) b, "Observable.just(\n       …e\n            )\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Observable.just(\n       …e\n            )\n        )");
         return b;
     }
 }

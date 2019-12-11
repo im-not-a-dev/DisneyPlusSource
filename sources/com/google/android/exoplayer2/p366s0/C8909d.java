@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p366s0;
 
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.upstream.DataSource;
 import java.io.EOFException;
 import java.io.IOException;
@@ -50,7 +50,7 @@ public final class C8909d implements C8913h {
         int i2 = this.f19133f + i;
         byte[] bArr = this.f19132e;
         if (i2 > bArr.length) {
-            this.f19132e = Arrays.copyOf(this.f19132e, C9554k0.m29382a(bArr.length * 2, DateUtils.FORMAT_ABBREV_MONTH + i2, i2 + DateUtils.FORMAT_ABBREV_ALL));
+            this.f19132e = Arrays.copyOf(this.f19132e, Util.m29382a(bArr.length * 2, DateUtils.FORMAT_ABBREV_MONTH + i2, i2 + DateUtils.FORMAT_ABBREV_ALL));
         }
     }
 

@@ -46,7 +46,7 @@ public final class C2811k implements C2809j {
                 r2 = this;
                 androidx.fragment.app.i r0 = r3.getSupportFragmentManager()
                 java.lang.String r1 = "supportFragmentManager"
-                kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
                 androidx.fragment.app.Fragment r0 = r0.mo3160f()
                 if (r0 == 0) goto L_0x0016
                 androidx.fragment.app.i r0 = r0.getChildFragmentManager()
@@ -56,7 +56,7 @@ public final class C2811k implements C2809j {
                 androidx.fragment.app.i r0 = r3.getSupportFragmentManager()
             L_0x001a:
                 java.lang.String r3 = "primaryNavigationFragmen…?: supportFragmentManager"
-                kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
                 com.bamtechmedia.dominguez.auth.r0.e$a r3 = com.bamtechmedia.dominguez.auth.p066r0.C2797e.f7551c0
                 boolean r1 = r2.f7567c
                 com.bamtechmedia.dominguez.auth.r0.e r3 = r3.mo11809a(r1)

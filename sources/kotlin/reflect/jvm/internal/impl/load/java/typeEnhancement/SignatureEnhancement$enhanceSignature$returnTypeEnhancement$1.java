@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
@@ -19,7 +19,7 @@ final class SignatureEnhancement$enhanceSignature$returnTypeEnhancement$1 extend
         if (returnType != null) {
             return returnType;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

@@ -10,7 +10,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -48,7 +48,7 @@ import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.p525e0.C11934b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001BW\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\b\u0010\r\u001a\u0004\u0018\u00010\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0012\u0012\u0006\u0010\u0013\u001a\u00020\u0014\u0012\u0006\u0010\u0015\u001a\u00020\u0016¢\u0006\u0002\u0010\u0017J\u0006\u0010!\u001a\u00020\"J\b\u0010#\u001a\u00020\"H\u0002J\u0010\u0010$\u001a\u00020\"2\u0006\u0010%\u001a\u00020&H\u0002J\u0010\u0010'\u001a\u00020\"2\u0006\u0010(\u001a\u00020)H\u0002J\u0010\u0010*\u001a\u00020\"2\u0006\u0010%\u001a\u00020+H\u0002J\u0010\u0010,\u001a\u00020\"2\u0006\u0010-\u001a\u00020.H\u0002J\b\u0010/\u001a\u00020\"H\u0002J\u0006\u00100\u001a\u00020\"J\u0006\u00101\u001a\u00020\"J\b\u00102\u001a\u00020\"H\u0016J\u0016\u00103\u001a\u00020\"2\u0006\u00104\u001a\u0002052\u0006\u00106\u001a\u000207J\b\u00108\u001a\u000209H\u0002J\b\u0010:\u001a\u00020\u001eH\u0002J\u0006\u0010;\u001a\u00020\"J\u0010\u0010<\u001a\u00020\"2\u0006\u0010(\u001a\u00020)H\u0002R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0018\u001a\u00020\u0012X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\u001cR\u000e\u0010\u0013\u001a\u00020\u0014X\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u0011\u001a\u00020\u0012¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u001aR\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u0016\u0010\u001d\u001a\u0004\u0018\u00010\u001e8BX\u0004¢\u0006\u0006\u001a\u0004\b\u001f\u0010 R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000¨\u0006="}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/purchase/PaywallViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/purchase/PaywallState;", "paywallListener", "Lcom/bamtechmedia/dominguez/paywall/PaywallListener;", "marketHolder", "Lcom/bamtechmedia/dominguez/purchase/MarketHolder;", "mainScheduler", "Lio/reactivex/Scheduler;", "subscriptionMessage", "Lcom/bamtechmedia/dominguez/paywall/SubscriptionMessage;", "paywallRepository", "Lcom/bamtechmedia/dominguez/paywall/PaywallRepository;", "contentLicenseRenewal", "Lcom/bamtechmedia/dominguez/offline/ContentLicenseRenewal;", "type", "Lcom/bamtechmedia/dominguez/paywall/ui/PaywallFragment$Type;", "isDevSkipEnabled", "", "errorHandler", "Lcom/bamtechmedia/dominguez/purchase/PaywallErrorHandler;", "paywallAnalytics", "Lcom/bamtechmedia/dominguez/purchase/PaywallAnalytics;", "(Lcom/bamtechmedia/dominguez/paywall/PaywallListener;Lcom/bamtechmedia/dominguez/purchase/MarketHolder;Lio/reactivex/Scheduler;Lcom/bamtechmedia/dominguez/paywall/SubscriptionMessage;Lcom/bamtechmedia/dominguez/paywall/PaywallRepository;Lcom/bamtechmedia/dominguez/offline/ContentLicenseRenewal;Lcom/bamtechmedia/dominguez/paywall/ui/PaywallFragment$Type;ZLcom/bamtechmedia/dominguez/purchase/PaywallErrorHandler;Lcom/bamtechmedia/dominguez/purchase/PaywallAnalytics;)V", "entranceAnimationAlreadyDone", "getEntranceAnimationAlreadyDone", "()Z", "setEntranceAnimationAlreadyDone", "(Z)V", "servicesInteractor", "Lcom/bamtechmedia/dominguez/paywall/PaywallServicesInteractor;", "getServicesInteractor", "()Lcom/bamtechmedia/dominguez/paywall/PaywallServicesInteractor;", "confirmLoginStatus", "", "fetchPaywall", "handleSuccessfulState", "serviceEvent", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent;", "linkSubscriptionsToAccount", "accessStatus", "Lcom/bamtech/sdk4/purchase/AccessStatus;", "mapErrorState", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$Error;", "mapServiceEventFatalError", "throwable", "", "observePaywall", "observePaywallEvents", "onAccessGranted", "onCleared", "purchaseClicked", "activity", "Landroid/app/Activity;", "product", "Lcom/bamtechmedia/dominguez/paywall/model/PaywallProduct;", "renewLicenses", "Lio/reactivex/Completable;", "requireServiceInteractor", "restoreClicked", "setActiveSubscription", "paywall_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.purchase.v */
@@ -191,7 +191,7 @@ public final class C7084v extends C5741g<C7083u> {
         /* renamed from: a */
         public final void accept(Throwable th) {
             C7061p a = this.f15720c.f15714j;
-            C12880j.m40222a((Object) th, "throwable");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "throwable");
             if (!a.mo19839b(th)) {
                 this.f15720c.f15714j.mo19838a(th);
             }
@@ -298,7 +298,7 @@ public final class C7084v extends C5741g<C7083u> {
         /* renamed from: a */
         public final void accept(Throwable th) {
             C7061p a = this.f15726c.f15714j;
-            C12880j.m40222a((Object) th, "throwable");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "throwable");
             a.mo19838a(th);
             this.f15726c.updateState(C7096a.f15727c);
         }
@@ -462,7 +462,7 @@ public final class C7084v extends C5741g<C7083u> {
         }
 
         public final void run() {
-            C14100a.m44522a("RenewLicenses Completed", new Object[0]);
+            Timber.m44522a("RenewLicenses Completed", new Object[0]);
         }
     }
 
@@ -479,7 +479,7 @@ public final class C7084v extends C5741g<C7083u> {
 
         /* renamed from: a */
         public final void mo19897a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -487,7 +487,7 @@ public final class C7084v extends C5741g<C7083u> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -569,7 +569,7 @@ public final class C7084v extends C5741g<C7083u> {
     /* renamed from: E */
     private final void m21463E() {
         Object a = C7886a.m23101b(this.f15710f, false, 1, null).mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C7087c(this), new C7089d(this));
     }
 
@@ -595,7 +595,7 @@ public final class C7084v extends C5741g<C7083u> {
             }
         }
         Completable h = Completable.m38169h();
-        C12880j.m40222a((Object) h, "Completable.complete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
         return h;
     }
 
@@ -616,9 +616,9 @@ public final class C7084v extends C5741g<C7083u> {
     /* renamed from: B */
     public final void mo19874B() {
         Observable a = this.f15707c.mo19808d().mo30171b(C11934b.m38500b()).mo30151a(this.f15708d);
-        C12880j.m40222a((Object) a, "marketHolder.serviceEven….observeOn(mainScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "marketHolder.serviceEven….observeOn(mainScheduler)");
         Object a2 = a.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a2).mo29915a(new C7109w(new C7099l(this)), new C7109w(new C7100m(this)));
     }
 
@@ -642,12 +642,12 @@ public final class C7084v extends C5741g<C7083u> {
             r1.<init>(r4)
             io.reactivex.Completable r0 = r0.mo30050b(r1)
             java.lang.String r1 = "renewLicenses()\n        …ested(true)\n            }"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.c0 r1 = r4.getViewModelScope()
             g.n.a.h r1 = p163g.p503n.p504a.C11793e.m37930a(r1)
             java.lang.Object r0 = r0.mo30048a(r1)
             java.lang.String r1 = "this.`as`(AutoDispose.au…isposable<Any>(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.v r0 = (p163g.p503n.p504a.C11839v) r0
             com.bamtechmedia.dominguez.purchase.v$p r1 = com.bamtechmedia.dominguez.purchase.C7084v.C7104p.f15733a
             com.bamtechmedia.dominguez.purchase.v$q r2 = com.bamtechmedia.dominguez.purchase.C7084v.C7105q.f15734c
@@ -685,7 +685,7 @@ public final class C7084v extends C5741g<C7083u> {
     /* renamed from: y */
     public final void mo19879y() {
         Object a = this.f15710f.mo19840a().mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
         ((C11839v) a).mo29926a(new C7085a(this), new C7086b(this));
     }
 
@@ -726,7 +726,7 @@ public final class C7084v extends C5741g<C7083u> {
         } else if (pVar instanceof C7898k) {
             updateState(C7092f.f15723c);
             this.f15714j.mo19836a();
-        } else if ((pVar instanceof C7890c) || C12880j.m40224a((Object) pVar, (Object) C7896i.f17023a)) {
+        } else if ((pVar instanceof C7890c) || Intrinsics.areEqual((Object) pVar, (Object) C7896i.f17023a)) {
             mo19875C();
         } else if (pVar instanceof C7892e) {
             this.f15715k.mo19832c();
@@ -737,7 +737,7 @@ public final class C7084v extends C5741g<C7083u> {
     /* access modifiers changed from: private */
     /* renamed from: a */
     public final void m21474a(Throwable th) {
-        C14100a.m44530c(th, "Error observing Paywall Events.", new Object[0]);
+        Timber.m44530c(th, "Error observing Paywall Events.", new Object[0]);
         this.f15714j.mo19838a(th);
         updateState(C7098k.f15729c);
     }
@@ -751,7 +751,7 @@ public final class C7084v extends C5741g<C7083u> {
     /* renamed from: a */
     private final void m21469a(AccessStatus accessStatus) {
         Object a = m21467I().mo20738a(accessStatus).mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
         ((C11839v) a).mo29926a(new C7094h(this), new C7095i(this));
     }
 }

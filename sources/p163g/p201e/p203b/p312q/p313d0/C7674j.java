@@ -14,7 +14,7 @@ import com.bamtechmedia.dominguez.core.p218n.C5792f;
 import com.bamtechmedia.dominguez.playback.p236l.C6334b;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p287k.p288j.p291j.C7341f;
 import p163g.p201e.p203b.p287k.p293k.C7396f;
@@ -83,7 +83,7 @@ public final class C7674j implements C7673i, C3653c {
         Object newInstance = jVar.mo20603Y().newInstance();
         Fragment fragment = (Fragment) newInstance;
         fragment.setArguments(jVar != null ? jVar.mo20602X() : null);
-        C12880j.m40222a(newInstance, "item.fragmentClass.newIn…agmentArguments\n        }");
+        Intrinsics.checkReturnedValueIsNotNull(newInstance, "item.fragmentClass.newIn…agmentArguments\n        }");
         fVar.mo17696a(fragment);
     }
 

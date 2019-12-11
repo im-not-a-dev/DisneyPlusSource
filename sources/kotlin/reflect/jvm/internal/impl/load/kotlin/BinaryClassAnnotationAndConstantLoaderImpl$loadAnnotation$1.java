@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.kotlin;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptorImpl;
@@ -58,12 +58,12 @@ public final class BinaryClassAnnotationAndConstantLoaderImpl$loadAnnotation$1 i
         ArrayList arrayList = new ArrayList();
         BinaryClassAnnotationAndConstantLoaderImpl binaryClassAnnotationAndConstantLoaderImpl = this.this$0;
         SourceElement sourceElement = SourceElement.NO_SOURCE;
-        C12880j.m40222a((Object) sourceElement, "SourceElement.NO_SOURCE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement, "SourceElement.NO_SOURCE");
         AnnotationArgumentVisitor loadAnnotation = binaryClassAnnotationAndConstantLoaderImpl.loadAnnotation(classId, sourceElement, arrayList);
         if (loadAnnotation != null) {
             return new C13015xe59bb5e1(this, loadAnnotation, name, arrayList);
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

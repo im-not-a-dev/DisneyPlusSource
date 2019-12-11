@@ -7,7 +7,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.p587i0.C12775h;
@@ -119,13 +119,13 @@ public final class C12815k implements Serializable {
 
     public String toString() {
         String pattern = this.f29495c.toString();
-        C12880j.m40222a((Object) pattern, "nativePattern.toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) pattern, "nativePattern.toString()");
         return pattern;
     }
 
     public C12815k(String str) {
         Pattern compile = Pattern.compile(str);
-        C12880j.m40222a((Object) compile, "Pattern.compile(pattern)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) compile, "Pattern.compile(pattern)");
         this(compile);
     }
 
@@ -144,28 +144,28 @@ public final class C12815k implements Serializable {
 
     public C12815k(String str, C12820m mVar) {
         Pattern compile = Pattern.compile(str, f29494U.m40041a(mVar.mo31144a()));
-        C12880j.m40222a((Object) compile, "Pattern.compile(pattern,…nicodeCase(option.value))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) compile, "Pattern.compile(pattern,…nicodeCase(option.value))");
         this(compile);
     }
 
     /* renamed from: a */
     public final C12808i mo31137a(CharSequence charSequence, int i) {
         Matcher matcher = this.f29495c.matcher(charSequence);
-        C12880j.m40222a((Object) matcher, "nativePattern.matcher(input)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) matcher, "nativePattern.matcher(input)");
         return C12819l.m40048b(matcher, i, charSequence);
     }
 
     /* renamed from: b */
     public final C12808i mo31140b(CharSequence charSequence) {
         Matcher matcher = this.f29495c.matcher(charSequence);
-        C12880j.m40222a((Object) matcher, "nativePattern.matcher(input)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) matcher, "nativePattern.matcher(input)");
         return C12819l.m40049b(matcher, charSequence);
     }
 
     /* renamed from: a */
     public final String mo31136a(CharSequence charSequence, String str) {
         String replaceAll = this.f29495c.matcher(charSequence).replaceAll(str);
-        C12880j.m40222a((Object) replaceAll, "nativePattern.matcher(in…).replaceAll(replacement)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) replaceAll, "nativePattern.matcher(in…).replaceAll(replacement)");
         return replaceAll;
     }
 }

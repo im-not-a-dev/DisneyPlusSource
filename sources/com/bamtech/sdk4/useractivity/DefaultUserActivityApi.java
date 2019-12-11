@@ -7,7 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.functions.C11945a;
 
@@ -39,7 +39,7 @@ public final class DefaultUserActivityApi implements UserActivityApi {
 
     public Completable trackEvent(GlimpseEvent glimpseEvent, Map<String, ? extends Object> map) {
         Completable c = Completable.m38166c((C11945a) new DefaultUserActivityApi$trackEvent$1(this, map, glimpseEvent));
-        C12880j.m40222a((Object) c, "Completable.fromAction {…      payload))\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.fromAction {…      payload))\n        }");
         return c;
     }
 }

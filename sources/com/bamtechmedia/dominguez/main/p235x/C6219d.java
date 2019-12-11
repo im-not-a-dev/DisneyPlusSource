@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.main.p235x;
 
 import com.bamtechmedia.dominguez.profiles.C6626c0;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u000e\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019B%\b\u0002\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0005\u001a\u00020\u0003¢\u0006\u0002\u0010\u0006J\u0010\u0010\n\u001a\u00020\u00032\u0006\u0010\u000b\u001a\u00020\u0000H\u0016R\u0011\u0010\u0005\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0007R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\u0007R\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\u0007\u0001\u000e\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&'¨\u0006("}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/main/state/MainActivityState;", "", "startIapConnection", "", "stopIapConnection", "isLoggedIn", "(ZZZ)V", "()Z", "getStartIapConnection", "getStopIapConnection", "canChangeTo", "newState", "BadState", "Expired", "InitFailed", "Loading", "LoggedIn", "LoggedOut", "NeverSubscribed", "NewUser", "OldVersion", "PickProfile", "PreviouslySubscribed", "RetryInit", "StartGlobalNav", "Subscribed", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$LoggedOut;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$Loading;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$RetryInit;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$InitFailed;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$OldVersion;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$BadState;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$Expired;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$LoggedIn;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$NewUser;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$NeverSubscribed;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$PreviouslySubscribed;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$Subscribed;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$PickProfile;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState$StartGlobalNav;", "mainAppApi_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.main.x.d */
@@ -32,7 +32,7 @@ public abstract class C6219d {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f14256a, (java.lang.Object) ((com.bamtechmedia.dominguez.main.p235x.C6219d.C6220a) r2).f14256a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f14256a, (java.lang.Object) ((com.bamtechmedia.dominguez.main.p235x.C6219d.C6220a) r2).f14256a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -44,7 +44,7 @@ public abstract class C6219d {
                 com.bamtechmedia.dominguez.main.x.d$a r2 = (com.bamtechmedia.dominguez.main.p235x.C6219d.C6220a) r2
                 java.lang.String r0 = r1.f14256a
                 java.lang.String r2 = r2.f14256a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -87,7 +87,7 @@ public abstract class C6219d {
 
         /* renamed from: a */
         public boolean mo18812a(C6219d dVar) {
-            return C12880j.m40224a((Object) dVar, (Object) C6225f.f14262a);
+            return Intrinsics.areEqual((Object) dVar, (Object) C6225f.f14262a);
         }
     }
 
@@ -162,7 +162,7 @@ public abstract class C6219d {
             if (this != obj) {
                 if (obj instanceof C6223d) {
                     C6223d dVar = (C6223d) obj;
-                    if (C12880j.m40224a((Object) this.f14259a, (Object) dVar.f14259a)) {
+                    if (Intrinsics.areEqual((Object) this.f14259a, (Object) dVar.f14259a)) {
                         if (this.f14260b == dVar.f14260b) {
                             return true;
                         }
@@ -324,7 +324,7 @@ public abstract class C6219d {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f14269a, (java.lang.Object) ((com.bamtechmedia.dominguez.main.p235x.C6219d.C6232m) r2).f14269a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f14269a, (java.lang.Object) ((com.bamtechmedia.dominguez.main.p235x.C6219d.C6232m) r2).f14269a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -336,7 +336,7 @@ public abstract class C6219d {
                 com.bamtechmedia.dominguez.main.x.d$m r2 = (com.bamtechmedia.dominguez.main.p235x.C6219d.C6232m) r2
                 com.bamtechmedia.dominguez.profiles.c0 r0 = r1.f14269a
                 com.bamtechmedia.dominguez.profiles.c0 r2 = r2.f14269a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:

@@ -1,7 +1,7 @@
 package kotlinx.coroutines;
 
 import java.util.concurrent.CancellationException;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlinx.coroutines.l1 */
 /* compiled from: Exceptions.kt */
@@ -19,7 +19,7 @@ public final class C13331l1 extends CancellationException implements C13412x<C13
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x002c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r3.getCause(), (java.lang.Object) getCause()) != false) goto L_0x0031;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r3.getCause(), (java.lang.Object) getCause()) != false) goto L_0x0031;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -31,15 +31,15 @@ public final class C13331l1 extends CancellationException implements C13412x<C13
             kotlinx.coroutines.l1 r3 = (kotlinx.coroutines.C13331l1) r3
             java.lang.String r0 = r3.getMessage()
             java.lang.String r1 = r2.getMessage()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x002f
             kotlinx.coroutines.k1 r0 = r3.f29766c
             kotlinx.coroutines.k1 r1 = r2.f29766c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x002f
             java.lang.Throwable r3 = r3.getCause()
             java.lang.Throwable r0 = r2.getCause()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r3, r0)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r3, r0)
             if (r3 == 0) goto L_0x002f
             goto L_0x0031
         L_0x002f:
@@ -58,7 +58,7 @@ public final class C13331l1 extends CancellationException implements C13412x<C13
             return this;
         }
         Throwable fillInStackTrace = super.fillInStackTrace();
-        C12880j.m40222a((Object) fillInStackTrace, "super.fillInStackTrace()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fillInStackTrace, "super.fillInStackTrace()");
         return fillInStackTrace;
     }
 
@@ -69,7 +69,7 @@ public final class C13331l1 extends CancellationException implements C13412x<C13
             Throwable cause = getCause();
             return hashCode + (cause != null ? cause.hashCode() : 0);
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -90,7 +90,7 @@ public final class C13331l1 extends CancellationException implements C13412x<C13
         if (message != null) {
             return new C13331l1(message, this, this.f29766c);
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

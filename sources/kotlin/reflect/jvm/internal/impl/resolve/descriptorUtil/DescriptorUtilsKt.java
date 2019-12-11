@@ -5,7 +5,7 @@ import java.util.LinkedHashSet;
 import kotlin.C13142s;
 import kotlin.C13147x;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12894x;
 import kotlin.p587i0.C12775h;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
@@ -38,7 +38,7 @@ public final class DescriptorUtilsKt {
 
     static {
         Name identifier = Name.identifier("value");
-        C12880j.m40222a((Object) identifier, "Name.identifier(\"value\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(\"value\")");
         RETENTION_PARAMETER_NAME = identifier;
     }
 
@@ -49,19 +49,19 @@ public final class DescriptorUtilsKt {
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         DescriptorUtilsKt$computeSealedSubclasses$1 descriptorUtilsKt$computeSealedSubclasses$1 = new DescriptorUtilsKt$computeSealedSubclasses$1(classDescriptor, linkedHashSet);
         DeclarationDescriptor containingDeclaration = classDescriptor.getContainingDeclaration();
-        C12880j.m40222a((Object) containingDeclaration, "sealedClass.containingDeclaration");
+        Intrinsics.checkReturnedValueIsNotNull((Object) containingDeclaration, "sealedClass.containingDeclaration");
         if (containingDeclaration instanceof PackageFragmentDescriptor) {
             descriptorUtilsKt$computeSealedSubclasses$1.invoke(((PackageFragmentDescriptor) containingDeclaration).getMemberScope(), false);
         }
         MemberScope unsubstitutedInnerClassesScope = classDescriptor.getUnsubstitutedInnerClassesScope();
-        C12880j.m40222a((Object) unsubstitutedInnerClassesScope, "sealedClass.unsubstitutedInnerClassesScope");
+        Intrinsics.checkReturnedValueIsNotNull((Object) unsubstitutedInnerClassesScope, "sealedClass.unsubstitutedInnerClassesScope");
         descriptorUtilsKt$computeSealedSubclasses$1.invoke(unsubstitutedInnerClassesScope, true);
         return linkedHashSet;
     }
 
     public static final boolean declaresOrInheritsDefaultValue(ValueParameterDescriptor valueParameterDescriptor) {
         Boolean ifAny = DFS.ifAny(C13183n.m40498a(valueParameterDescriptor), DescriptorUtilsKt$declaresOrInheritsDefaultValue$1.INSTANCE, DescriptorUtilsKt$declaresOrInheritsDefaultValue$2.INSTANCE);
-        C12880j.m40222a((Object) ifAny, "DFS.ifAny(\n        listO…eclaresDefaultValue\n    )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) ifAny, "DFS.ifAny(\n        listO…eclaresDefaultValue\n    )");
         return ifAny.booleanValue();
     }
 
@@ -128,19 +128,19 @@ public final class DescriptorUtilsKt {
 
     public static final FqName getFqNameSafe(DeclarationDescriptor declarationDescriptor) {
         FqName fqNameSafe = DescriptorUtils.getFqNameSafe(declarationDescriptor);
-        C12880j.m40222a((Object) fqNameSafe, "DescriptorUtils.getFqNameSafe(this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqNameSafe, "DescriptorUtils.getFqNameSafe(this)");
         return fqNameSafe;
     }
 
     public static final FqNameUnsafe getFqNameUnsafe(DeclarationDescriptor declarationDescriptor) {
         FqNameUnsafe fqName = DescriptorUtils.getFqName(declarationDescriptor);
-        C12880j.m40222a((Object) fqName, "DescriptorUtils.getFqName(this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "DescriptorUtils.getFqName(this)");
         return fqName;
     }
 
     public static final ModuleDescriptor getModule(DeclarationDescriptor declarationDescriptor) {
         ModuleDescriptor containingModule = DescriptorUtils.getContainingModule(declarationDescriptor);
-        C12880j.m40222a((Object) containingModule, "DescriptorUtils.getContainingModule(this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) containingModule, "DescriptorUtils.getContainingModule(this)");
         return containingModule;
     }
 
@@ -157,7 +157,7 @@ public final class DescriptorUtilsKt {
             return callableMemberDescriptor;
         }
         PropertyDescriptor correspondingProperty = ((PropertyAccessorDescriptor) callableMemberDescriptor).getCorrespondingProperty();
-        C12880j.m40222a((Object) correspondingProperty, "correspondingProperty");
+        Intrinsics.checkReturnedValueIsNotNull((Object) correspondingProperty, "correspondingProperty");
         return correspondingProperty;
     }
 
@@ -180,10 +180,10 @@ public final class DescriptorUtilsKt {
         boolean z = !fqName.isRoot();
         if (!C13147x.f29590a || z) {
             FqName parent = fqName.parent();
-            C12880j.m40222a((Object) parent, "topLevelClassFqName.parent()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parent, "topLevelClassFqName.parent()");
             MemberScope memberScope = moduleDescriptor.getPackage(parent).getMemberScope();
             Name shortName = fqName.shortName();
-            C12880j.m40222a((Object) shortName, "topLevelClassFqName.shortName()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) shortName, "topLevelClassFqName.shortName()");
             ClassifierDescriptor contributedClassifier = memberScope.getContributedClassifier(shortName, lookupLocation);
             if (!(contributedClassifier instanceof ClassDescriptor)) {
                 contributedClassifier = null;

@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.main.p235x;
 import com.bamtechmedia.dominguez.main.p235x.C6219d.C6222c;
 import com.bamtechmedia.dominguez.main.p235x.C6219d.C6223d;
 import com.bamtechmedia.dominguez.main.p235x.C6219d.C6231l;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11907a;
 import p520io.reactivex.Flowable;
 import p520io.reactivex.subjects.C11976a;
@@ -34,7 +34,7 @@ public final class C6234e {
         L_0x000c:
             io.reactivex.subjects.a r2 = p520io.reactivex.subjects.C11976a.m38563p()
             java.lang.String r0 = "BehaviorSubject.create()"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r0)
         L_0x0015:
             r1.f14271a = r2
             return
@@ -55,7 +55,7 @@ public final class C6234e {
     /* renamed from: c */
     public final Flowable<C6219d> mo18831c() {
         Flowable<C6219d> a = this.f14271a.mo30135a(C11907a.LATEST);
-        C12880j.m40222a((Object) a, "subject.toFlowable(LATEST)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "subject.toFlowable(LATEST)");
         return a;
     }
 

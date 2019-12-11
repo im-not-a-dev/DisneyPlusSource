@@ -6,7 +6,7 @@ import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaTypeParameter;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
 import kotlin.reflect.jvm.internal.impl.name.Name;
@@ -22,7 +22,7 @@ public final class ReflectJavaTypeParameter extends ReflectJavaElement implement
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof ReflectJavaTypeParameter) && C12880j.m40224a((Object) this.typeVariable, (Object) ((ReflectJavaTypeParameter) obj).typeVariable);
+        return (obj instanceof ReflectJavaTypeParameter) && Intrinsics.areEqual((Object) this.typeVariable, (Object) ((ReflectJavaTypeParameter) obj).typeVariable);
     }
 
     public AnnotatedElement getElement() {
@@ -35,7 +35,7 @@ public final class ReflectJavaTypeParameter extends ReflectJavaElement implement
 
     public Name getName() {
         Name identifier = Name.identifier(this.typeVariable.getName());
-        C12880j.m40222a((Object) identifier, "Name.identifier(typeVariable.name)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(typeVariable.name)");
         return identifier;
     }
 
@@ -65,12 +65,12 @@ public final class ReflectJavaTypeParameter extends ReflectJavaElement implement
 
     public List<ReflectJavaClassifierType> getUpperBounds() {
         Type[] bounds = this.typeVariable.getBounds();
-        C12880j.m40222a((Object) bounds, "typeVariable.bounds");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bounds, "typeVariable.bounds");
         ArrayList arrayList = new ArrayList(bounds.length);
         for (Type reflectJavaClassifierType : bounds) {
             arrayList.add(new ReflectJavaClassifierType(reflectJavaClassifierType));
         }
         ReflectJavaClassifierType reflectJavaClassifierType2 = (ReflectJavaClassifierType) C13199w.m40600l((List) arrayList);
-        return C12880j.m40224a((Object) reflectJavaClassifierType2 != null ? reflectJavaClassifierType2.getReflectType() : null, (Object) Object.class) ? C13185o.m40513a() : arrayList;
+        return Intrinsics.areEqual((Object) reflectJavaClassifierType2 != null ? reflectJavaClassifierType2.getReflectType() : null, (Object) Object.class) ? C13185o.m40513a() : arrayList;
     }
 }

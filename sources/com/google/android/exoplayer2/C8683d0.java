@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2;
 
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9141f0;
 import com.google.android.exoplayer2.source.C9231q;
@@ -335,7 +335,7 @@ final class C8683d0 {
         try {
             mediaSource.mo23492a(((C9231q) a0Var).f20938c);
         } catch (RuntimeException e) {
-            C9563q.m29496a("MediaPeriodHolder", "Period release failed.", e);
+            Log.m29496a("MediaPeriodHolder", "Period release failed.", e);
         }
     }
 }

@@ -2,7 +2,7 @@ package okio.p698z;
 
 import java.util.Arrays;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okio.ByteString;
 import okio.C14271a;
 import okio.C14272b;
@@ -68,7 +68,7 @@ public final class C14306a {
                 if (b <= b3) {
                     byte[] b4 = byteString.mo36379b();
                     byte[] copyOf = Arrays.copyOf(b4, b4.length);
-                    C12880j.m40222a((Object) copyOf, "java.util.Arrays.copyOf(this, size)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) copyOf, "java.util.Arrays.copyOf(this, size)");
                     copyOf[i] = (byte) (b + 32);
                     for (int i2 = i + 1; i2 < copyOf.length; i2++) {
                         byte b5 = copyOf[i2];
@@ -87,7 +87,7 @@ public final class C14306a {
     public static final byte[] m45844g(ByteString byteString) {
         byte[] b = byteString.mo36379b();
         byte[] copyOf = Arrays.copyOf(b, b.length);
-        C12880j.m40222a((Object) copyOf, "java.util.Arrays.copyOf(this, size)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) copyOf, "java.util.Arrays.copyOf(this, size)");
         return copyOf;
     }
 
@@ -123,7 +123,7 @@ public final class C14306a {
         String m = byteString.mo36394m();
         if (m != null) {
             String substring = m.substring(0, a);
-            C12880j.m40222a((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
             String a2 = C12832w.m40117a(C12832w.m40117a(C12832w.m40117a(substring, "\\", "\\\\", false, 4, (Object) null), "\n", "\\n", false, 4, (Object) null), "\r", "\\r", false, 4, (Object) null);
             if (a < m.length()) {
                 StringBuilder sb3 = new StringBuilder();
@@ -282,7 +282,7 @@ public final class C14306a {
     /* renamed from: a */
     public static final ByteString m45832a(byte[] bArr) {
         byte[] copyOf = Arrays.copyOf(bArr, bArr.length);
-        C12880j.m40222a((Object) copyOf, "java.util.Arrays.copyOf(this, size)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) copyOf, "java.util.Arrays.copyOf(this, size)");
         return new ByteString(copyOf);
     }
 

@@ -1,7 +1,7 @@
 package com.bamtech.core.logging;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Observable;
 import p520io.reactivex.subjects.PublishSubject;
 
@@ -21,7 +21,7 @@ public final class DefaultLogger implements LogDispatcher, LogPublisher {
     }
 
     private final void dispatch(LogEvent<?> logEvent) {
-        if (!C12880j.m40224a((Object) logEvent.getLevel(), (Object) LogLevel.NONE)) {
+        if (!Intrinsics.areEqual((Object) logEvent.getLevel(), (Object) LogLevel.NONE)) {
             if (this.debugEnabled || logEvent.getLevel().compareTo(LogLevel.DEBUG) < 0) {
                 this.subject.onNext(logEvent);
             }
@@ -58,7 +58,7 @@ public final class DefaultLogger implements LogDispatcher, LogPublisher {
             this.subject = PublishSubject.m38553q();
         }
         PublishSubject<LogEvent<?>> publishSubject = this.subject;
-        C12880j.m40222a((Object) publishSubject, "subject");
+        Intrinsics.checkReturnedValueIsNotNull((Object) publishSubject, "subject");
         return publishSubject;
     }
 

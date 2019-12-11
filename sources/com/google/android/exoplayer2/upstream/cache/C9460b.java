@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.upstream.cache;
 
 import com.google.android.exoplayer2.p393v0.C9530b0;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.upstream.C9504k;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import com.google.android.exoplayer2.upstream.cache.Cache.C9457a;
@@ -62,7 +62,7 @@ public final class C9460b implements C9504k {
         C9537e.m29302b(j > 0 || j == -1, "fragmentSize must be positive or C.LENGTH_UNSET.");
         int i2 = (j > -1 ? 1 : (j == -1 ? 0 : -1));
         if (i2 != 0 && j < 2097152) {
-            C9563q.m29500d("CacheDataSink", "fragmentSize is below the minimum recommended value of 2097152. This may cause poor cache performance.");
+            Log.m29500d("CacheDataSink", "fragmentSize is below the minimum recommended value of 2097152. This may cause poor cache performance.");
         }
         C9537e.m29296a(cache);
         this.f21981a = cache;
@@ -79,13 +79,13 @@ public final class C9460b implements C9504k {
         if (outputStream != null) {
             try {
                 outputStream.flush();
-                C9554k0.m29406a((Closeable) this.f21987g);
+                Util.m29406a((Closeable) this.f21987g);
                 this.f21987g = null;
                 File file = this.f21986f;
                 this.f21986f = null;
                 this.f21981a.mo24480a(file, this.f21989i);
             } catch (Throwable th) {
-                C9554k0.m29406a((Closeable) this.f21987g);
+                Util.m29406a((Closeable) this.f21987g);
                 this.f21987g = null;
                 File file2 = this.f21986f;
                 this.f21986f = null;

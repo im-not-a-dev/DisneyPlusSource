@@ -4,7 +4,7 @@ import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9323c;
 import com.google.android.exoplayer2.p382u0.C9327g;
 import com.google.android.exoplayer2.p382u0.p390t.C9382e.C9384b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,13 +14,13 @@ import java.util.Collections;
 public final class C9379b extends C9323c {
 
     /* renamed from: p */
-    private static final int f21619p = C9554k0.m29428b("payl");
+    private static final int f21619p = Util.m29428b("payl");
 
     /* renamed from: q */
-    private static final int f21620q = C9554k0.m29428b("sttg");
+    private static final int f21620q = Util.m29428b("sttg");
 
     /* renamed from: r */
-    private static final int f21621r = C9554k0.m29428b("vttc");
+    private static final int f21621r = Util.m29428b("vttc");
 
     /* renamed from: n */
     private final C9572w f21622n = new C9572w();
@@ -61,7 +61,7 @@ public final class C9379b extends C9323c {
                 int i3 = wVar.mo24698i();
                 int i4 = i - 8;
                 int i5 = i2 - 8;
-                String a = C9554k0.m29400a(wVar.f22333a, wVar.mo24688c(), i5);
+                String a = Util.m29400a(wVar.f22333a, wVar.mo24688c(), i5);
                 wVar.mo24695f(i5);
                 i = i4 - i5;
                 if (i3 == f21620q) {

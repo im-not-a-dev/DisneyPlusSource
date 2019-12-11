@@ -9,7 +9,7 @@ import java.util.List;
 import kotlin.C12898l;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.KParameter;
 import kotlin.reflect.jvm.internal.JvmFunctionSignature.FakeJavaAnnotationConstructor;
@@ -47,7 +47,7 @@ final class KFunctionImpl$caller$2 extends C12881k implements Function0<Caller<?
                     if (name2 != null) {
                         arrayList.add(name2);
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 }
@@ -67,7 +67,7 @@ final class KFunctionImpl$caller$2 extends C12881k implements Function0<Caller<?
             Class jClass2 = this.this$0.getContainer().getJClass();
             ArrayList arrayList2 = new ArrayList(C13187p.m40525a((Iterable) methods, 10));
             for (Method method : methods) {
-                C12880j.m40222a((Object) method, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "it");
                 arrayList2.add(method.getName());
             }
             AnnotationConstructorCaller annotationConstructorCaller2 = new AnnotationConstructorCaller(jClass2, arrayList2, CallMode.POSITIONAL_CALL, Origin.JAVA, methods);

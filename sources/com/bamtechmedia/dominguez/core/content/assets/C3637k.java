@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.content.assets.k */
 /* compiled from: ImageExt.kt */
@@ -25,7 +25,7 @@ public final class C3637k {
             }
             obj = it.next();
             Image image = (Image) obj;
-            if (!C12880j.m40224a((Object) image.mo13086W(), (Object) str) || !C12880j.m40224a((Object) image.mo13087X(), (Object) aVar)) {
+            if (!Intrinsics.areEqual((Object) image.mo13086W(), (Object) str) || !Intrinsics.areEqual((Object) image.mo13087X(), (Object) aVar)) {
                 z = false;
                 continue;
             } else {

@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -25,16 +25,16 @@ public final class LanguageJsonAdapter extends C11725h<Language> {
         String str2 = "trackType";
         String str3 = "name";
         C11739b a = C11739b.m37729a(str3, str2, "renditionName", "language", str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"n…, \"language\", \"features\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"n…, \"language\", \"features\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str3);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String?>(S…tions.emptySet(), \"name\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String?>(S…tions.emptySet(), \"name\")");
         this.nullableStringAdapter = a2;
         C11725h<String> a3 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a3, "moshi.adapter<String>(St….emptySet(), \"trackType\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<String>(St….emptySet(), \"trackType\")");
         this.stringAdapter = a3;
         C11725h<List<String>> a4 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, String.class), C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a4, "moshi.adapter<List<Strin…s.emptySet(), \"features\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<List<Strin…s.emptySet(), \"features\")");
         this.nullableListOfStringAdapter = a4;
     }
 

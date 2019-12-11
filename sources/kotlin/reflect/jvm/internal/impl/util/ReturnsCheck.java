@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.util;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
@@ -51,7 +51,7 @@ public abstract class ReturnsCheck implements Check {
     }
 
     public boolean check(FunctionDescriptor functionDescriptor) {
-        return C12880j.m40224a((Object) functionDescriptor.getReturnType(), (Object) (KotlinType) this.type.invoke(DescriptorUtilsKt.getBuiltIns(functionDescriptor)));
+        return Intrinsics.areEqual((Object) functionDescriptor.getReturnType(), (Object) (KotlinType) this.type.invoke(DescriptorUtilsKt.getBuiltIns(functionDescriptor)));
     }
 
     public String getDescription() {

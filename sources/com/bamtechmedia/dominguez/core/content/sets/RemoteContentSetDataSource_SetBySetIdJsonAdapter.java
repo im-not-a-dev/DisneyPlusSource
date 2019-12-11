@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content.sets;
 import com.bamtechmedia.dominguez.core.content.sets.RemoteContentSetDataSource.SetBySetId;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11737m.C11739b;
@@ -18,10 +18,10 @@ public final class RemoteContentSetDataSource_SetBySetIdJsonAdapter extends C117
 
     public RemoteContentSetDataSource_SetBySetIdJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("SetBySetId");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"SetBySetId\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"SetBySetId\")");
         this.options = a;
         C11725h<ContentSet> a2 = vVar.mo29869a((Type) ContentSet.class, C13188p0.m40531a(), "set");
-        C12880j.m40222a((Object) a2, "moshi.adapter<ContentSet…ctions.emptySet(), \"set\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<ContentSet…ctions.emptySet(), \"set\")");
         this.nullableContentSetAdapter = a2;
     }
 

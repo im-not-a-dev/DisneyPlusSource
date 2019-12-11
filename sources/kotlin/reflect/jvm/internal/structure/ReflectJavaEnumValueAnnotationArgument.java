@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.structure;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaEnumValueAnnotationArgument;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
 import kotlin.reflect.jvm.internal.impl.name.Name;
@@ -25,7 +25,7 @@ public final class ReflectJavaEnumValueAnnotationArgument extends ReflectJavaAnn
         if (!cls.isEnum()) {
             cls = cls.getEnclosingClass();
         }
-        C12880j.m40222a((Object) cls, "enumClass");
+        Intrinsics.checkReturnedValueIsNotNull((Object) cls, "enumClass");
         return ReflectClassUtilKt.getClassId(cls);
     }
 }

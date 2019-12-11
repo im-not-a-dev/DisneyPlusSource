@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.token.AccountTokenExchangeProvider;
 import com.bamtech.sdk4.session.RenewSessionTransformers;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.MaybeSource;
@@ -48,43 +48,43 @@ public final class DefaultUserProfileExtension implements UserProfileExtension {
         Single accessToken = this.tokenProvider.getAccessToken(serviceTransaction);
         DefaultUserProfileExtension$createUserProfile$1 defaultUserProfileExtension$createUserProfile$1 = new DefaultUserProfileExtension$createUserProfile$1(this, serviceTransaction, str, u, v, cls);
         Single<T> a = accessToken.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultUserProfileExtension$createUserProfile$1).mo30206a(this.sessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 
     public Completable deleteUserProfile(ServiceTransaction serviceTransaction, UserProfile userProfile) {
         Completable a = this.tokenProvider.getAccessToken(serviceTransaction).mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new DefaultUserProfileExtension$deleteUserProfile$1<Object,Object>(this, serviceTransaction, userProfile)).mo30117b((C11945a) new DefaultUserProfileExtension$deleteUserProfile$2(this, userProfile)).mo30114b((Function<? super T, ? extends CompletableSource>) new DefaultUserProfileExtension$deleteUserProfile$3<Object,Object>(this, serviceTransaction)).mo30035a(this.sessionTransformers.completableRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 
     public <T extends UserProfile> Single<T> getActiveUserProfile(ServiceTransaction serviceTransaction, Class<T> cls) {
         Single<T> a = this.tokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileExtension$getActiveUserProfile$1<Object,Object>(this, serviceTransaction, cls)).mo30206a(this.sessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 
     public <T extends UserProfile> Single<T> getUserProfile(ServiceTransaction serviceTransaction, String str, Class<T> cls) {
         Single<T> a = this.tokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileExtension$getUserProfile$1<Object,Object>(this, serviceTransaction, str, cls)).mo30206a(this.sessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 
     public <T extends UserProfile> Single<List<T>> getUserProfiles(ServiceTransaction serviceTransaction, Class<? extends List<? extends T>> cls) {
         Single<List<T>> a = this.tokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileExtension$getUserProfiles$1<Object,Object>(this, serviceTransaction, cls)).mo30206a(this.sessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 
     public Completable setActiveUserProfile(ServiceTransaction serviceTransaction, UserProfile userProfile) {
         Completable a = this.tokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileExtension$setActiveUserProfile$1<Object,Object>(this, serviceTransaction, userProfile)).mo30227d((Consumer<? super T>) new DefaultUserProfileExtension$setActiveUserProfile$2<Object>(this, userProfile)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileExtension$setActiveUserProfile$3<Object,Object>(this, serviceTransaction)).mo30228e().mo30035a(this.sessionTransformers.completableRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 
     public <T extends UserProfile> Single<T> updateUserProfile(ServiceTransaction serviceTransaction, T t, Class<T> cls) {
         Single<T> a = this.tokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileExtension$updateUserProfile$1<Object,Object>(this, serviceTransaction, t)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileExtension$updateUserProfile$2<Object,Object>(this, serviceTransaction)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileExtension$updateUserProfile$3<Object,Object>(this, serviceTransaction, t, cls)).mo30206a(this.sessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 }

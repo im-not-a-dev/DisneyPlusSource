@@ -1,17 +1,17 @@
 package kotlin.jvm.internal;
 
 import java.util.Arrays;
-import kotlin.C12738f;
-import kotlin.C13144u;
+import kotlin.KotlinNullPointerException;
+import kotlin.UninitializedPropertyAccessException;
 
 /* renamed from: kotlin.jvm.internal.j */
 /* compiled from: Intrinsics */
-public class C12880j {
-    private C12880j() {
+public class Intrinsics {
+    private Intrinsics() {
     }
 
     /* renamed from: a */
-    public static int m40217a(int i, int i2) {
+    public static int compare(int i, int i2) {
         if (i < i2) {
             return -1;
         }
@@ -19,49 +19,48 @@ public class C12880j {
     }
 
     /* renamed from: a */
-    public static void m40220a() {
-        C12738f fVar = new C12738f();
-        m40218a((T) fVar);
+    public static void throwNpe() {
+        KotlinNullPointerException fVar = new KotlinNullPointerException();
+        sanitizeStackTrace((T) fVar);
         throw fVar;
     }
 
     /* renamed from: b */
-    public static void m40226b(String str) {
-        C13144u uVar = new C13144u(str);
-        m40218a((T) uVar);
+    public static void throwUninitializedProperty(String str) {
+        UninitializedPropertyAccessException uVar = new UninitializedPropertyAccessException(str);
+        sanitizeStackTrace((T) uVar);
         throw uVar;
     }
 
     /* renamed from: c */
-    public static void m40227c(String str) {
+    public static void throwUninitializedPropertyAccessException(String str) {
         StringBuilder sb = new StringBuilder();
         sb.append("lateinit property ");
         sb.append(str);
         sb.append(" has not been initialized");
-        m40226b(sb.toString());
+        throwUninitializedProperty(sb.toString());
         throw null;
     }
 
     /* renamed from: a */
-    public static void m40222a(Object obj, String str) {
+    public static void checkReturnedValueIsNotNull(Object obj, String str) {
         if (obj == null) {
             StringBuilder sb = new StringBuilder();
             sb.append(str);
             sb.append(" must not be null");
             IllegalStateException illegalStateException = new IllegalStateException(sb.toString());
-            m40218a((T) illegalStateException);
+            sanitizeStackTrace((T) illegalStateException);
             throw illegalStateException;
         }
     }
 
     /* renamed from: b */
-    public static void m40225b() {
-        m40223a("This function has a reified type parameter and thus can only be inlined at compilation time, not called directly.");
-        throw null;
+    public static void throwUndefinedForReified() {
+        throwUndefinedForReified("This function has a reified type parameter and thus can only be inlined at compilation time, not called directly.");
     }
 
     /* renamed from: a */
-    public static boolean m40224a(Object obj, Object obj2) {
+    public static boolean areEqual(Object obj, Object obj2) {
         if (obj == null) {
             return obj2 == null;
         }
@@ -69,24 +68,24 @@ public class C12880j {
     }
 
     /* renamed from: a */
-    public static void m40223a(String str) {
+    public static void throwUndefinedForReified(String str) {
         throw new UnsupportedOperationException(str);
     }
 
     /* renamed from: a */
-    public static void m40221a(int i, String str) {
-        m40225b();
+    public static void reifiedOperationMarker(int i, String str) {
+        throwUndefinedForReified();
         throw null;
     }
 
     /* renamed from: a */
-    private static <T extends Throwable> T m40218a(T t) {
-        m40219a(t, C12880j.class.getName());
+    private static <T extends Throwable> T sanitizeStackTrace(T t) {
+        sanitizeStackTrace(t, Intrinsics.class.getName());
         return t;
     }
 
     /* renamed from: a */
-    static <T extends Throwable> T m40219a(T t, String str) {
+    static <T extends Throwable> T sanitizeStackTrace(T t, String str) {
         StackTraceElement[] stackTrace = t.getStackTrace();
         int length = stackTrace.length;
         int i = -1;

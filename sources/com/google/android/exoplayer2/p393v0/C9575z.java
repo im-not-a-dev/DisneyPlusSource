@@ -66,7 +66,7 @@ public final class C9575z {
                 i2 = Integer.MIN_VALUE;
             } else {
                 Object peek = this.f22341b.peek();
-                C9554k0.m29394a(peek);
+                Util.castNonNull(peek);
                 i2 = ((Integer) peek).intValue();
             }
             this.f22342c = i2;

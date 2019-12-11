@@ -1,6 +1,6 @@
 package kotlin.p588j0;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlin.j0.a0 */
 /* compiled from: StringBuilderJVM.kt */
@@ -15,7 +15,7 @@ final class C12799a0 {
         if (property != null) {
             f29473a = property;
         } else {
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
     }

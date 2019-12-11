@@ -2,7 +2,7 @@ package kotlinx.coroutines;
 
 import kotlin.C12900n;
 import kotlin.C12903o;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlinx.coroutines.s */
 /* compiled from: CompletedExceptionally.kt */
@@ -17,7 +17,7 @@ public final class C13395s {
         if (b != null) {
             return new C13389r(b, false, 2, null);
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

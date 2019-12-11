@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.legal.api;
 import android.os.Parcel;
 import android.os.Parcelable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u000f\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\b\u0018\u00002\u00020\u0001B'\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0003¢\u0006\u0002\u0010\bJ\t\u0010\u000f\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0010\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0011\u001a\u00020\u0006HÆ\u0003J\u000b\u0010\u0012\u001a\u0004\u0018\u00010\u0003HÆ\u0003J3\u0010\u0013\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00032\b\b\u0002\u0010\u0005\u001a\u00020\u00062\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0003HÆ\u0001J\t\u0010\u0014\u001a\u00020\u0006HÖ\u0001J\u0013\u0010\u0015\u001a\u00020\u00162\b\u0010\u0017\u001a\u0004\u0018\u00010\u0018HÖ\u0003J\t\u0010\u0019\u001a\u00020\u0006HÖ\u0001J\t\u0010\u001a\u001a\u00020\u0003HÖ\u0001J\u0019\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\u0006HÖ\u0001R\u0013\u0010\u0007\u001a\u0004\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\nR\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\nR\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000e¨\u0006 "}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/legal/api/LegalLink;", "Landroid/os/Parcelable;", "href", "", "label", "start", "", "documentCode", "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V", "getDocumentCode", "()Ljava/lang/String;", "getHref", "getLabel", "getStart", "()I", "component1", "component2", "component3", "component4", "copy", "describeContents", "equals", "", "other", "", "hashCode", "toString", "writeToParcel", "", "parcel", "Landroid/os/Parcel;", "flags", "legalApi_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: LegalDataModels.kt */
@@ -76,8 +76,8 @@ public final class LegalLink implements Parcelable {
         if (this != obj) {
             if (obj instanceof LegalLink) {
                 LegalLink legalLink = (LegalLink) obj;
-                if (C12880j.m40224a((Object) this.href, (Object) legalLink.href) && C12880j.m40224a((Object) this.label, (Object) legalLink.label)) {
-                    if (!(this.start == legalLink.start) || !C12880j.m40224a((Object) this.documentCode, (Object) legalLink.documentCode)) {
+                if (Intrinsics.areEqual((Object) this.href, (Object) legalLink.href) && Intrinsics.areEqual((Object) this.label, (Object) legalLink.label)) {
+                    if (!(this.start == legalLink.start) || !Intrinsics.areEqual((Object) this.documentCode, (Object) legalLink.documentCode)) {
                         return false;
                     }
                 }

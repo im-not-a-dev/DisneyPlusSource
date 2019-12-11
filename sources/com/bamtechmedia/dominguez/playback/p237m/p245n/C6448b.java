@@ -8,7 +8,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p174d.p178b.C5300m;
@@ -109,9 +109,9 @@ public final class C6448b {
     /* renamed from: a */
     public final void mo19102a(C5300m mVar, C11790c0 c0Var) {
         Observable a = mVar.mo17024d0().mo30150a((C11952h<? super T>) new C6449a<Object>(this));
-        C12880j.m40222a((Object) a, "events.onPlaybackExcepti…dDisplayErrorDialog(it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "events.onPlaybackExcepti…dDisplayErrorDialog(it) }");
         Object a2 = a.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(c0Var));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a2).mo29915a(new C6452c(new C6450b(this)), C6451c.f14638c);
     }
 

@@ -1,6 +1,6 @@
 package com.bamtechmedia.dominguez.detail.common.formats;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.detail.common.formats.a */
 /* compiled from: AvailableFeatureData.kt */
@@ -45,7 +45,7 @@ public final class C5928a {
             if (r3 == 0) goto L_0x0024
             java.lang.String r0 = com.bamtechmedia.dominguez.core.utils.C5838i0.m18844a(r3)
         L_0x0024:
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r2, r0)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r2, r0)
             if (r0 == 0) goto L_0x002c
             r0 = r1
             goto L_0x002f
@@ -88,8 +88,8 @@ public final class C5928a {
         if (this != obj) {
             if (obj instanceof C5928a) {
                 C5928a aVar = (C5928a) obj;
-                if (C12880j.m40224a((Object) this.f13724b, (Object) aVar.f13724b)) {
-                    if (!(this.f13725c == aVar.f13725c) || !C12880j.m40224a((Object) this.f13726d, (Object) aVar.f13726d)) {
+                if (Intrinsics.areEqual((Object) this.f13724b, (Object) aVar.f13724b)) {
+                    if (!(this.f13725c == aVar.f13725c) || !Intrinsics.areEqual((Object) this.f13726d, (Object) aVar.f13726d)) {
                         return false;
                     }
                 }

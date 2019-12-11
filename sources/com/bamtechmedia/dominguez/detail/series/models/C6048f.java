@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.detail.series.models;
 
 import com.bamtech.sdk4.bookmarks.Bookmark;
 import com.bamtechmedia.dominguez.core.content.C3685g;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.detail.series.models.f */
 /* compiled from: SeriesUserData.kt */
@@ -61,7 +61,7 @@ public final class C6048f {
         if (this != obj) {
             if (obj instanceof C6048f) {
                 C6048f fVar = (C6048f) obj;
-                if (!(this.f13934a == fVar.f13934a) || !C12880j.m40224a((Object) this.f13935b, (Object) fVar.f13935b) || !C12880j.m40224a((Object) this.f13936c, (Object) fVar.f13936c)) {
+                if (!(this.f13934a == fVar.f13934a) || !Intrinsics.areEqual((Object) this.f13935b, (Object) fVar.f13935b) || !Intrinsics.areEqual((Object) this.f13936c, (Object) fVar.f13936c)) {
                     return false;
                 }
             }

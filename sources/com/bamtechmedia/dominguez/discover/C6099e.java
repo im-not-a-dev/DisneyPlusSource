@@ -25,7 +25,7 @@ import com.bamtechmedia.dominguez.p331ui.fullbleed.FullBleedItemView.C8077a;
 import com.google.common.base.Optional;
 import java.util.HashMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5363f;
 import p163g.p201e.p202a.C5364g;
 import p163g.p201e.p203b.p312q.C7700r;
@@ -83,7 +83,7 @@ public final class C6099e extends C3280a implements C7700r, C8077a, C5814b {
             if (this.f14042a.getBackground() == null) {
                 C3848a w = this.f14043b.mo12238w();
                 ImageView imageView = this.f14042a;
-                C12880j.m40222a((Object) windowInsets, "insets");
+                Intrinsics.checkReturnedValueIsNotNull((Object) windowInsets, "insets");
                 w.mo13765a(imageView, windowInsets.getSystemWindowInsetTop());
             }
             return windowInsets;
@@ -120,9 +120,9 @@ public final class C6099e extends C3280a implements C7700r, C8077a, C5814b {
     /* renamed from: a */
     public C3503a mo12229a(C11848c<C11863k> cVar) {
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.discoverRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "discoverRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "discoverRecyclerView");
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C5363f.discoverProgressBar);
-        C12880j.m40222a((Object) progressBar, "discoverProgressBar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "discoverProgressBar");
         C3503a aVar = new C3503a(cVar, recyclerView, progressBar, (NoConnectionView) _$_findCachedViewById(C5363f.discoverNoConnectionView), null, null, 48, null);
         return aVar;
     }
@@ -143,7 +143,7 @@ public final class C6099e extends C3280a implements C7700r, C8077a, C5814b {
             }
             return;
         }
-        C12880j.m40227c("castIntroLifecycleObserver");
+        Intrinsics.throwUninitializedPropertyAccessException("castIntroLifecycleObserver");
         throw null;
     }
 
@@ -168,21 +168,21 @@ public final class C6099e extends C3280a implements C7700r, C8077a, C5814b {
                     view.setOnApplyWindowInsetsListener(new C6100a(imageView, this, view));
                 }
                 C0722m viewLifecycleOwner = getViewLifecycleOwner();
-                C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+                Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
                 C0715i lifecycle = viewLifecycleOwner.getLifecycle();
                 C3431b bVar = this.f14038l0;
                 if (bVar != null) {
                     lifecycle.mo4134a(bVar);
                 } else {
-                    C12880j.m40227c("autoPagingLifecycleHelper");
+                    Intrinsics.throwUninitializedPropertyAccessException("autoPagingLifecycleHelper");
                     throw null;
                 }
             } else {
-                C12880j.m40227c("scrollBehaviour");
+                Intrinsics.throwUninitializedPropertyAccessException("scrollBehaviour");
                 throw null;
             }
         } else {
-            C12880j.m40227c("castButtonHandler");
+            Intrinsics.throwUninitializedPropertyAccessException("castButtonHandler");
             throw null;
         }
     }
@@ -193,7 +193,7 @@ public final class C6099e extends C3280a implements C7700r, C8077a, C5814b {
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
@@ -203,7 +203,7 @@ public final class C6099e extends C3280a implements C7700r, C8077a, C5814b {
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("backgroundHelper");
+        Intrinsics.throwUninitializedPropertyAccessException("backgroundHelper");
         throw null;
     }
 }

@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.util;
 import java.util.Arrays;
 import java.util.Collection;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12815k;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.name.Name;
@@ -41,12 +41,12 @@ public final class Checks {
     }
 
     public final boolean isApplicable(FunctionDescriptor functionDescriptor) {
-        if (this.name != null && (!C12880j.m40224a((Object) functionDescriptor.getName(), (Object) this.name))) {
+        if (this.name != null && (!Intrinsics.areEqual((Object) functionDescriptor.getName(), (Object) this.name))) {
             return false;
         }
         if (this.regex != null) {
             String asString = functionDescriptor.getName().asString();
-            C12880j.m40222a((Object) asString, "functionDescriptor.name.asString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) asString, "functionDescriptor.name.asString()");
             if (!this.regex.mo31141c(asString)) {
                 return false;
             }

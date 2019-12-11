@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.util.capitalizeDecapitalize;
 
 import java.util.Iterator;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: capitalizeDecapitalize.kt */
 public final class CapitalizeDecapitalizeKt {
@@ -14,7 +14,7 @@ public final class CapitalizeDecapitalizeKt {
         if ('a' <= charAt && 'z' >= charAt) {
             char upperCase = Character.toUpperCase(charAt);
             String substring = str.substring(1);
-            C12880j.m40222a((Object) substring, "(this as java.lang.String).substring(startIndex)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.String).substring(startIndex)");
             StringBuilder sb = new StringBuilder();
             sb.append(String.valueOf(upperCase));
             sb.append(substring);
@@ -31,7 +31,7 @@ public final class CapitalizeDecapitalizeKt {
         if ('A' <= charAt && 'Z' >= charAt) {
             char lowerCase = Character.toLowerCase(charAt);
             String substring = str.substring(1);
-            C12880j.m40222a((Object) substring, "(this as java.lang.String).substring(startIndex)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.String).substring(startIndex)");
             StringBuilder sb = new StringBuilder();
             sb.append(String.valueOf(lowerCase));
             sb.append(substring);
@@ -64,10 +64,10 @@ public final class CapitalizeDecapitalizeKt {
                 int intValue = num.intValue() - 1;
                 StringBuilder sb = new StringBuilder();
                 String substring = str.substring(0, intValue);
-                C12880j.m40222a((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
                 sb.append(toLowerCase(substring, z));
                 String substring2 = str.substring(intValue);
-                C12880j.m40222a((Object) substring2, "(this as java.lang.String).substring(startIndex)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) substring2, "(this as java.lang.String).substring(startIndex)");
                 sb.append(substring2);
                 return sb.toString();
             }
@@ -89,7 +89,7 @@ public final class CapitalizeDecapitalizeKt {
         }
         if (str != null) {
             String lowerCase = str.toLowerCase();
-            C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
             return lowerCase;
         }
         throw new C13142s("null cannot be cast to non-null type java.lang.String");
@@ -106,7 +106,7 @@ public final class CapitalizeDecapitalizeKt {
             sb.append(charAt);
         }
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "builder.toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "builder.toString()");
         return sb2;
     }
 }

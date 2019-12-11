@@ -7,7 +7,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.token.Grant;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -29,7 +29,7 @@ public final class DefaultDeviceClient implements DeviceClient {
 
     public Single<? extends Grant> register(ServiceTransaction serviceTransaction, Device device, Map<String, String> map) {
         Single<? extends Grant> a = this.locationResolver.getLocation(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultDeviceClient$register$1<Object,Object>(this, serviceTransaction, map, this.converters.getIdentity().serialize(device)));
-        C12880j.m40222a((Object) a, "locationResolver.getLoca…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "locationResolver.getLoca…      }\n                }");
         return a;
     }
 }

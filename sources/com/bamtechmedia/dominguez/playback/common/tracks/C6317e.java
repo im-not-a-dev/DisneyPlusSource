@@ -22,7 +22,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.p193j0.C5285a;
 import p163g.p174d.p178b.p193j0.C5286b;
 import p163g.p174d.p178b.p193j0.C5288c;
@@ -84,7 +84,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
             if (this != obj) {
                 if (obj instanceof C6318a) {
                     C6318a aVar = (C6318a) obj;
-                    if (C12880j.m40224a((Object) this.f14408a, (Object) aVar.f14408a)) {
+                    if (Intrinsics.areEqual((Object) this.f14408a, (Object) aVar.f14408a)) {
                         if (this.f14409b == aVar.f14409b) {
                             if (this.f14410c == aVar.f14410c) {
                                 return true;
@@ -167,9 +167,9 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
     public void bind(C11863k kVar, int i, List<? extends Object> list) {
         View view = kVar.itemView;
         String str = "viewHolder.itemView";
-        C12880j.m40222a((Object) view, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, str);
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "viewHolder.itemView.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "viewHolder.itemView.context");
         boolean e = C5837i.m18843e(context);
         if (!list.isEmpty()) {
             Object obj = list.get(0);
@@ -180,18 +180,18 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
             }
         } else {
             View view2 = kVar.itemView;
-            C12880j.m40222a((Object) view2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) view2, str);
             TextView textView = (TextView) view2.findViewById(C6327f.rowTitleText);
-            C12880j.m40222a((Object) textView, "viewHolder.itemView.rowTitleText");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "viewHolder.itemView.rowTitleText");
             textView.setText(mo18937a());
         }
         View view3 = kVar.itemView;
-        C12880j.m40222a((Object) view3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view3, str);
         C5852n0.m18888b(view3, this.f14406X);
         View view4 = kVar.itemView;
-        C12880j.m40222a((Object) view4, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view4, str);
         ImageView imageView = (ImageView) view4.findViewById(C6327f.checkBoxImageView);
-        C12880j.m40222a((Object) imageView, "viewHolder.itemView.checkBoxImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "viewHolder.itemView.checkBoxImageView");
         imageView.setSelected(m19893b());
         kVar.mo30014c().setOnClickListener(this);
         if (e) {
@@ -207,7 +207,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
             C6317e eVar2 = (C6317e) eVar;
             C5290d dVar = eVar2.f14403U;
             boolean z = true;
-            boolean z2 = !C12880j.m40224a((Object) dVar.mo16867a(), (Object) this.f14403U.mo16867a());
+            boolean z2 = !Intrinsics.areEqual((Object) dVar.mo16867a(), (Object) this.f14403U.mo16867a());
             if (eVar2.m19893b() == this.f14407c) {
                 z = false;
             }
@@ -222,7 +222,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
 
     public boolean isSameAs(C11853e<?> eVar) {
         if (eVar != null) {
-            return C12880j.m40224a((Object) ((C6317e) eVar).f14403U.mo16867a(), (Object) this.f14403U.mo16867a());
+            return Intrinsics.areEqual((Object) ((C6317e) eVar).f14403U.mo16867a(), (Object) this.f14403U.mo16867a());
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.playback.common.tracks.SelectablePlaybackTrackItem");
     }
@@ -240,14 +240,14 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
     /* renamed from: a */
     private final boolean m19891a(C11863k kVar) {
         View view = kVar.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         return ((ConstraintLayout) view.findViewById(C6327f.playTrackTvConstraintLayout)).hasFocus();
     }
 
     /* renamed from: b */
     private final void m19892b(C11863k kVar) {
         View view = kVar.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(C6327f.playTrackTvConstraintLayout);
         if (constraintLayout != null) {
             constraintLayout.setOnFocusChangeListener(new C6319b(this, kVar));
@@ -258,7 +258,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
     public final void mo18938a(C11863k kVar, boolean z) {
         int i;
         View view = kVar.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         TextView textView = (TextView) view.findViewById(C6327f.rowTitleText);
         if (z && m19893b()) {
             i = C6331j.Disney_TextAppearance_TrackItem_SelectedFocused;
@@ -331,7 +331,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
                     if (view2 != null) {
                         ConstraintLayout constraintLayout2 = (ConstraintLayout) view2;
                         Context context = constraintLayout.getContext();
-                        C12880j.m40222a((Object) context, str2);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) context, str2);
                         m19889a(constraintLayout2, context.getResources().getDimensionPixelSize(C6325d.checkmark_visible_left_margin));
                         return;
                     }
@@ -340,7 +340,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
             } else if (view != null) {
                 ConstraintLayout constraintLayout3 = (ConstraintLayout) view;
                 Context context2 = constraintLayout.getContext();
-                C12880j.m40222a((Object) context2, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) context2, str2);
                 m19889a(constraintLayout3, context2.getResources().getDimensionPixelSize(C6325d.checkmark_invisible_left_margin));
             } else {
                 throw new C13142s(str);

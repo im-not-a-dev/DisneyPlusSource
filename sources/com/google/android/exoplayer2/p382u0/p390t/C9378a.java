@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p382u0.p390t;
 
 import android.text.TextUtils;
 import com.google.android.exoplayer2.p393v0.C9546i;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -271,7 +271,7 @@ final class C9378a {
                 }
                 str = str.substring(0, indexOf);
             }
-            String[] a = C9554k0.m29423a(str, "\\.");
+            String[] a = Util.m29423a(str, "\\.");
             String str2 = a[0];
             int indexOf2 = str2.indexOf(35);
             if (indexOf2 != -1) {

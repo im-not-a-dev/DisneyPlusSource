@@ -19,7 +19,7 @@ public final class ApproximationBounds<T> {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.upper, (java.lang.Object) r3.upper) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.upper, (java.lang.Object) r3.upper) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -31,11 +31,11 @@ public final class ApproximationBounds<T> {
             kotlin.reflect.jvm.internal.impl.types.typesApproximation.ApproximationBounds r3 = (kotlin.reflect.jvm.internal.impl.types.typesApproximation.ApproximationBounds) r3
             T r0 = r2.lower
             T r1 = r3.lower
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             T r0 = r2.upper
             T r3 = r3.upper
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:

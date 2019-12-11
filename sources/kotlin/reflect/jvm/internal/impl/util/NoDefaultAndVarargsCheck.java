@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.util;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
@@ -19,12 +19,12 @@ final class NoDefaultAndVarargsCheck implements Check {
     public boolean check(FunctionDescriptor functionDescriptor) {
         boolean z;
         List<ValueParameterDescriptor> valueParameters = functionDescriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters, "functionDescriptor.valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "functionDescriptor.valueParameters");
         if ((valueParameters instanceof Collection) && valueParameters.isEmpty()) {
             return true;
         }
         for (ValueParameterDescriptor valueParameterDescriptor : valueParameters) {
-            C12880j.m40222a((Object) valueParameterDescriptor, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, "it");
             if (DescriptorUtilsKt.declaresOrInheritsDefaultValue(valueParameterDescriptor) || valueParameterDescriptor.getVarargElementType() != null) {
                 z = false;
                 continue;

@@ -13,7 +13,7 @@ import com.bamtech.sdk4.purchase.RetryHandler;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -50,13 +50,13 @@ public final class DefaultPurchaseManager implements PurchaseManager {
 
     private final Single<? extends PurchaseActivationResult> executeReceipt(ServiceTransaction serviceTransaction, ReceiptClaim receiptClaim, RetryHandler retryHandler, Function2<? super Map<String, String>, ? super ReceiptClaimBody, ? extends Single<? extends PurchaseActivationResult>> function2) {
         Single<? extends PurchaseActivationResult> a = this.tokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultPurchaseManager$executeReceipt$1<Object,Object>(receiptClaim, retryHandler, function2, receiptClaim.getClaimBody())).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultPurchaseManager$executeReceipt$2<Object,Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…ponse }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…ponse }\n                }");
         return a;
     }
 
     private final Single<AccessStatus> getAccessStatus(ServiceTransaction serviceTransaction, RetryHandler retryHandler, Single<? extends PurchaseActivationResult> single) {
         Single<AccessStatus> a = single.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultPurchaseManager$getAccessStatus$1<Object,Object>(this, serviceTransaction, retryHandler));
-        C12880j.m40222a((Object) a, "activationResult\n       …tion) }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "activationResult\n       …tion) }\n                }");
         return a;
     }
 

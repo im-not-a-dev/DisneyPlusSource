@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.profiles.C6629d0;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p330z.C7946e;
 import p163g.p201e.p203b.p330z.C7948g;
 
@@ -49,7 +49,7 @@ public final class C6970a implements C7005h {
             this.f15488U.f15487c.invoke();
             ImageView imageView = (ImageView) this.f15489c.findViewById(C7946e.addProfileRing);
             ImageView imageView2 = imageView;
-            C12880j.m40222a((Object) imageView, "addProfileRing");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "addProfileRing");
             C3800a.m12829a(imageView2, 0.0f, 1.0f, 0.0f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 200, 0, null, null, null, null, 258044, null);
         }
     }
@@ -64,7 +64,7 @@ public final class C6970a implements C7005h {
         if (this != obj) {
             if (obj instanceof C6970a) {
                 C6970a aVar = (C6970a) obj;
-                if (!(this.f15485a == aVar.f15485a) || !C12880j.m40224a((Object) this.f15486b, (Object) aVar.f15486b) || !C12880j.m40224a((Object) this.f15487c, (Object) aVar.f15487c)) {
+                if (!(this.f15485a == aVar.f15485a) || !Intrinsics.areEqual((Object) this.f15486b, (Object) aVar.f15486b) || !Intrinsics.areEqual((Object) this.f15487c, (Object) aVar.f15487c)) {
                     return false;
                 }
             }
@@ -111,9 +111,9 @@ public final class C6970a implements C7005h {
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(mo19725a(), viewGroup, false);
         inflate.setOnClickListener(new C6971a(inflate, this));
         ConstraintLayout constraintLayout = (ConstraintLayout) inflate.findViewById(C7946e.addProfileViewItemContainer);
-        C12880j.m40222a((Object) constraintLayout, "addProfileViewItemContainer");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "addProfileViewItemContainer");
         constraintLayout.setContentDescription(this.f15486b.mo19294a(this.f15485a));
-        C12880j.m40222a((Object) inflate, "LayoutInflater.from(pare…tem(isEditMode)\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "LayoutInflater.from(pare…tem(isEditMode)\n        }");
         return inflate;
     }
 }

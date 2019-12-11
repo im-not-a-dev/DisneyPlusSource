@@ -2,7 +2,7 @@ package com.bamtech.sdk4.internal.token;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -22,7 +22,7 @@ public final class TokenExchangeResponse {
         this.expiresIn = l;
         this.refreshToken = str3;
         DateTime now = DateTime.now(DateTimeZone.UTC);
-        C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
         this.generatedOn = now;
     }
 

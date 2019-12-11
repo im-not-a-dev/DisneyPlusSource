@@ -8,7 +8,7 @@ import p163g.p174d.p178b.p185g0.C5271z3;
 import p520io.reactivex.Observable;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.b.g0.v5.d */
 /* compiled from: AudioFocusDelegate */
@@ -46,17 +46,17 @@ public class C5175d implements C5271z3, OnAudioFocusChangeListener {
 
     public void onAudioFocusChange(int i) {
         if (i == -3) {
-            C14100a.m44529c("Audio Focus Lost (Can Duck)", new Object[0]);
+            Timber.m44529c("Audio Focus Lost (Can Duck)", new Object[0]);
         } else if (i == -2) {
-            C14100a.m44529c("Audio Focus Lost (Transient)", new Object[0]);
+            Timber.m44529c("Audio Focus Lost (Transient)", new Object[0]);
             this.f12499U = this.f12500c.mo7609a();
             this.f12500c.mo7611b();
         } else if (i == -1) {
-            C14100a.m44529c("Audio Focus Lost", new Object[0]);
+            Timber.m44529c("Audio Focus Lost", new Object[0]);
             this.f12499U = this.f12500c.mo7609a();
             this.f12500c.mo7611b();
         } else if (i == 1) {
-            C14100a.m44529c("Audio Focus Gained", new Object[0]);
+            Timber.m44529c("Audio Focus Gained", new Object[0]);
             mo16676a();
         }
     }

@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.purchase;
 
 import com.bamtechmedia.dominguez.paywall.exceptions.PaywallError;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p319v.p320a0.C7820a;
 import p163g.p201e.p203b.p319v.p320a0.C7823d;
 
@@ -99,9 +99,9 @@ public final class C7083u {
         if (this != obj) {
             if (obj instanceof C7083u) {
                 C7083u uVar = (C7083u) obj;
-                if (C12880j.m40224a((Object) this.f15700a, (Object) uVar.f15700a)) {
+                if (Intrinsics.areEqual((Object) this.f15700a, (Object) uVar.f15700a)) {
                     if (this.f15701b == uVar.f15701b) {
-                        if ((this.f15702c == uVar.f15702c) && C12880j.m40224a((Object) this.f15703d, (Object) uVar.f15703d)) {
+                        if ((this.f15702c == uVar.f15702c) && Intrinsics.areEqual((Object) this.f15703d, (Object) uVar.f15703d)) {
                             if (this.f15704e == uVar.f15704e) {
                                 return true;
                             }

@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.components;
 
 import java.util.Set;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.JavaClassFinder;
 import kotlin.reflect.jvm.internal.impl.load.java.JavaClassFinder.Request;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass;
@@ -24,9 +24,9 @@ public final class ReflectJavaClassFinder implements JavaClassFinder {
     public JavaClass findClass(Request request) {
         ClassId classId = request.getClassId();
         FqName packageFqName = classId.getPackageFqName();
-        C12880j.m40222a((Object) packageFqName, "classId.packageFqName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) packageFqName, "classId.packageFqName");
         String asString = classId.getRelativeClassName().asString();
-        C12880j.m40222a((Object) asString, "classId.relativeClassName.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "classId.relativeClassName.asString()");
         String a = C12832w.m40115a(asString, '.', '$', false, 4, (Object) null);
         if (!packageFqName.isRoot()) {
             StringBuilder sb = new StringBuilder();

@@ -11,7 +11,7 @@ import com.bamtech.sdk4.session.SessionInfoExtension;
 import com.bamtech.sdk4.session.SessionProfileInfo;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import p520io.reactivex.Flowable;
 import p520io.reactivex.Maybe;
@@ -58,10 +58,10 @@ public final class DefaultPlayheadRecorder implements PlayheadRecorder {
                 sb.append(str2);
                 DefaultImpls.log$default(serviceTransaction, this, simpleName, sb.toString(), null, false, 24, null);
                 Flowable<String> i = Flowable.m38209i();
-                C12880j.m40222a((Object) i, "Flowable.empty<String>()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) i, "Flowable.empty<String>()");
                 return i;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         SessionProfileInfo profile = ((SessionInfo) SessionInfoExtension.DefaultImpls.getSessionInfo$default(this.sessionInfoExtension, serviceTransaction, false, 2, null).mo30224c()).getProfile();
@@ -72,13 +72,13 @@ public final class DefaultPlayheadRecorder implements PlayheadRecorder {
         Maybe a = Maybe.m38256a((Callable<? extends MaybeSource<? extends T>>) new C2102x2a49a5d4<Object>(str4));
         C2103x2a49a5d5 defaultPlayheadRecorder$recordPlayheadAndBookmark$playheadMaybe$2 = new C2103x2a49a5d5(this, serviceTransaction, str, j, j2);
         Maybe c = a.mo30123c((Consumer<? super T>) defaultPlayheadRecorder$recordPlayheadAndBookmark$playheadMaybe$2);
-        C12880j.m40222a((Object) c, "Maybe.defer {\n          …t))\n                    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Maybe.defer {\n          …t))\n                    }");
         Single fetchBookmarks = this.localBookmarkStore.fetchBookmarks(serviceTransaction, C13183n.m40498a(str));
         C2099x4c5bd572 defaultPlayheadRecorder$recordPlayheadAndBookmark$bookmarkMaybe$1 = new C2099x4c5bd572(this, j, j2, str4, str);
         Maybe f = fetchBookmarks.mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) defaultPlayheadRecorder$recordPlayheadAndBookmark$bookmarkMaybe$1).mo30123c((Consumer<? super T>) new C2100x4c5bd573<Object>(this)).mo30131f(C2101x4c5bd574.INSTANCE);
-        C12880j.m40222a((Object) f, "localBookmarkStore.fetch…    .map { it.profileId }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) f, "localBookmarkStore.fetch…    .map { it.profileId }");
         Flowable<String> a2 = Maybe.m38251a((MaybeSource<? extends T>) c, (MaybeSource<? extends T>) f);
-        C12880j.m40222a((Object) a2, "Maybe.concat(playheadMaybe, bookmarkMaybe)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "Maybe.concat(playheadMaybe, bookmarkMaybe)");
         return a2;
     }
 }

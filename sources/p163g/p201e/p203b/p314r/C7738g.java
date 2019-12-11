@@ -4,7 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.e.b.r.g */
 /* compiled from: KidsModeInflaterExt.kt */
@@ -20,7 +20,7 @@ public final class C7738g {
     /* renamed from: a */
     public static final View m22801a(Fragment fragment, int i, ViewGroup viewGroup, boolean z) {
         LayoutInflater layoutInflater = fragment.getLayoutInflater();
-        C12880j.m40222a((Object) layoutInflater, "this.layoutInflater");
+        Intrinsics.checkReturnedValueIsNotNull((Object) layoutInflater, "this.layoutInflater");
         return m22803a(fragment, layoutInflater, i, viewGroup, z);
     }
 
@@ -33,7 +33,7 @@ public final class C7738g {
             }
             if (parentFragment == null) {
                 View inflate = layoutInflater.inflate(i, viewGroup, z);
-                C12880j.m40222a((Object) inflate, "inflater.inflate(resourc… container, attachToRoot)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "inflater.inflate(resourc… container, attachToRoot)");
                 return inflate;
             }
             fragment = parentFragment;

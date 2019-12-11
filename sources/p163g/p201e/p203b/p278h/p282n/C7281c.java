@@ -16,7 +16,7 @@ import kotlin.C12907r;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -101,7 +101,7 @@ public final class C7281c implements C5892c {
         RxRequesterCompanion c = mo20097c();
         C8545a aVar = new C8545a(str2);
         String uuid = UUID.randomUUID().toString();
-        C12880j.m40222a((Object) uuid, "UUID.randomUUID().toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) uuid, "UUID.randomUUID().toString()");
         Payload payload = new Payload(aVar, uuid, null, null, null, map, 28, null);
         return c.send(payload, str, C8489l.SOCKET);
     }

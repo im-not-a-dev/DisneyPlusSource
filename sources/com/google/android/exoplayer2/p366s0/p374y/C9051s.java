@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.s0.y.s */
@@ -77,7 +77,7 @@ public final class C9051s implements C9042o {
                         this.f20047a.mo24695f(3);
                         this.f20051e = this.f20047a.mo24710u() + 10;
                     } else {
-                        C9563q.m29500d("Id3Reader", "Discarding invalid ID3 tag");
+                        Log.m29500d("Id3Reader", "Discarding invalid ID3 tag");
                         this.f20049c = false;
                         return;
                     }

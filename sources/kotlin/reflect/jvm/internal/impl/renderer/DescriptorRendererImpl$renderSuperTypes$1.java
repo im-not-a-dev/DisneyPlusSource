@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.renderer;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
 
@@ -16,7 +16,7 @@ final class DescriptorRendererImpl$renderSuperTypes$1 extends C12881k implements
 
     public final String invoke(KotlinType kotlinType) {
         DescriptorRendererImpl descriptorRendererImpl = this.this$0;
-        C12880j.m40222a((Object) kotlinType, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType, "it");
         return descriptorRendererImpl.renderType(kotlinType);
     }
 }

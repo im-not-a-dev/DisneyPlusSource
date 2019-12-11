@@ -17,7 +17,7 @@ import com.bamtechmedia.dominguez.core.utils.C5837i;
 import com.bamtechmedia.dominguez.core.utils.C5880u;
 import java.util.HashMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\u0018\u0000 \u00122\u00020\u0001:\u0001\u0012B\u001b\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005¢\u0006\u0002\u0010\u0006J\u000e\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nJ\u000e\u0010\u000b\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\rJ\u0010\u0010\u000b\u001a\u00020\b2\b\b\u0001\u0010\u000e\u001a\u00020\u000fJ\u000e\u0010\u000b\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\nJ\u0006\u0010\u0010\u001a\u00020\bJ\u0006\u0010\u0011\u001a\u00020\b¨\u0006\u0013"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/design/widgets/LoadingButton;", "Landroid/widget/ViewFlipper;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "setContentDescription", "", "contentDescription", "", "setText", "text", "Landroid/text/Spannable;", "title", "", "start", "stop", "Companion", "lib_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: LoadingButton.kt */
@@ -80,13 +80,13 @@ public final class LoadingButton extends ViewFlipper {
 
     public final void setContentDescription(String str) {
         TextView textView = (TextView) mo17424a(C3838h.buttonTextView);
-        C12880j.m40222a((Object) textView, "buttonTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "buttonTextView");
         textView.setContentDescription(str);
     }
 
     public final void setText(int i) {
         TextView textView = (TextView) mo17424a(C3838h.buttonTextView);
-        C12880j.m40222a((Object) textView, "buttonTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "buttonTextView");
         C5880u.m18941a(textView, i);
     }
 
@@ -95,7 +95,7 @@ public final class LoadingButton extends ViewFlipper {
         LayoutInflater.from(context).inflate(C3840j.loading_button, this, true);
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, new int[]{16843087, 16843379}, 0, 0);
         TextView textView = (TextView) mo17424a(C3838h.buttonTextView);
-        C12880j.m40222a((Object) textView, "buttonTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "buttonTextView");
         textView.setText(obtainStyledAttributes.getText(0));
         int resourceId = obtainStyledAttributes.getResourceId(1, -1);
         if (resourceId != -1) {
@@ -111,13 +111,13 @@ public final class LoadingButton extends ViewFlipper {
 
     public final void setText(String str) {
         TextView textView = (TextView) mo17424a(C3838h.buttonTextView);
-        C12880j.m40222a((Object) textView, "buttonTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "buttonTextView");
         textView.setText(str);
     }
 
     public final void setText(Spannable spannable) {
         TextView textView = (TextView) mo17424a(C3838h.buttonTextView);
-        C12880j.m40222a((Object) textView, "buttonTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "buttonTextView");
         textView.setText(spannable);
     }
 }

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
@@ -31,9 +31,9 @@ final class TypeAliasConstructorDescriptorImpl$withDispatchReceiver$2 extends C1
         TypeAliasConstructorDescriptorImpl typeAliasConstructorDescriptorImpl = this.this$0;
         Annotations annotations = classConstructorDescriptor.getAnnotations();
         Kind kind = this.$underlyingConstructorDescriptor.getKind();
-        C12880j.m40222a((Object) kind, "underlyingConstructorDescriptor.kind");
+        Intrinsics.checkReturnedValueIsNotNull((Object) kind, "underlyingConstructorDescriptor.kind");
         SourceElement source = this.this$0.getTypeAliasDescriptor().getSource();
-        C12880j.m40222a((Object) source, "typeAliasDescriptor.source");
+        Intrinsics.checkReturnedValueIsNotNull((Object) source, "typeAliasDescriptor.source");
         TypeAliasConstructorDescriptorImpl typeAliasConstructorDescriptorImpl2 = new TypeAliasConstructorDescriptorImpl(storageManager, typeAliasDescriptor, classConstructorDescriptor, typeAliasConstructorDescriptorImpl, annotations, kind, source, null);
         TypeSubstitutor access$getTypeSubstitutorForUnderlyingClass = TypeAliasConstructorDescriptorImpl.Companion.getTypeSubstitutorForUnderlyingClass(this.this$0.getTypeAliasDescriptor());
         if (access$getTypeSubstitutorForUnderlyingClass == null) {

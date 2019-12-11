@@ -11,7 +11,7 @@ import java.lang.reflect.Proxy;
 import java.util.Arrays;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.reactivestreams.C14313b;
 import p520io.reactivex.C11959m;
 import p520io.reactivex.Completable;
@@ -94,10 +94,10 @@ public final class C7178a0 implements C7234z {
             /* renamed from: a */
             public final void accept(C11959m<Object> mVar) {
                 C7178a0 a0Var = this.f15873c.f15870a;
-                C12880j.m40222a((Object) mVar, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) mVar, "it");
                 Throwable a = mVar.mo30266a();
                 Method method = this.f15872U;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 a0Var.m21753a(a, method);
             }
         }
@@ -127,7 +127,7 @@ public final class C7178a0 implements C7234z {
                 C7178a0 a0Var = bVar.f15870a;
                 PluginApi pluginApi = session.getPluginApi(bVar.f15871b);
                 Method method = this.f15874U;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 Object a = a0Var.m21750a((Object) pluginApi, method, this.f15875V);
                 if (a != null) {
                     return (Completable) a;
@@ -155,7 +155,7 @@ public final class C7178a0 implements C7234z {
             public final void accept(Throwable th) {
                 C7178a0 a0Var = this.f15878c.f15870a;
                 Method method = this.f15877U;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 a0Var.m21753a(th, method);
             }
         }
@@ -185,7 +185,7 @@ public final class C7178a0 implements C7234z {
                 C7178a0 a0Var = bVar.f15870a;
                 PluginApi pluginApi = session.getPluginApi(bVar.f15871b);
                 Method method = this.f15879U;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 Object a = a0Var.m21750a((Object) pluginApi, method, this.f15880V);
                 if (a != null) {
                     return (Single) a;
@@ -213,7 +213,7 @@ public final class C7178a0 implements C7234z {
             public final void accept(Object obj, Throwable th) {
                 C7178a0 a0Var = this.f15882a.f15870a;
                 Method method = this.f15883b;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 a0Var.m21753a(th, method);
             }
         }
@@ -243,7 +243,7 @@ public final class C7178a0 implements C7234z {
                 C7178a0 a0Var = bVar.f15870a;
                 PluginApi pluginApi = session.getPluginApi(bVar.f15871b);
                 Method method = this.f15884U;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 Object a = a0Var.m21750a((Object) pluginApi, method, this.f15885V);
                 if (a != null) {
                     return (Observable) a;
@@ -270,10 +270,10 @@ public final class C7178a0 implements C7234z {
             /* renamed from: a */
             public final void accept(C11959m<Object> mVar) {
                 C7178a0 a0Var = this.f15888c.f15870a;
-                C12880j.m40222a((Object) mVar, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) mVar, "it");
                 Throwable a = mVar.mo30266a();
                 Method method = this.f15887U;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 a0Var.m21753a(a, method);
             }
         }
@@ -303,7 +303,7 @@ public final class C7178a0 implements C7234z {
                 C7178a0 a0Var = bVar.f15870a;
                 PluginApi pluginApi = session.getPluginApi(bVar.f15871b);
                 Method method = this.f15889U;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 Object a = a0Var.m21750a((Object) pluginApi, method, this.f15890V);
                 if (a != null) {
                     return (Maybe) a;
@@ -331,7 +331,7 @@ public final class C7178a0 implements C7234z {
             public final void accept(Object obj, Throwable th) {
                 C7178a0 a0Var = this.f15892a.f15870a;
                 Method method = this.f15893b;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 a0Var.m21753a(th, method);
             }
         }
@@ -361,7 +361,7 @@ public final class C7178a0 implements C7234z {
                 C7178a0 a0Var = bVar.f15870a;
                 PluginApi pluginApi = session.getPluginApi(bVar.f15871b);
                 Method method = this.f15894U;
-                C12880j.m40222a((Object) method, "method");
+                Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                 Object a = a0Var.m21750a((Object) pluginApi, method, this.f15895V);
                 if (a != null) {
                     return (Flowable) a;
@@ -377,25 +377,25 @@ public final class C7178a0 implements C7234z {
 
         public final Object invoke(Object obj, Method method, Object[] objArr) {
             C7178a0 a0Var = this.f15870a;
-            C12880j.m40222a((Object) method, "method");
+            Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
             a0Var.m21754a(method, this.f15871b, objArr);
             Single a = C7178a0.f15866e.mo20025a();
             if (a == null) {
                 a = this.f15870a.f15867a.mo20041e();
             }
-            if (C12880j.m40224a((Object) method.getReturnType(), (Object) Completable.class)) {
+            if (Intrinsics.areEqual((Object) method.getReturnType(), (Object) Completable.class)) {
                 return a.mo30217b((Function<? super T, ? extends CompletableSource>) new C7182b<Object,Object>(this, method, objArr)).mo30049b((Consumer<? super Throwable>) new C7183c<Object>(this, method));
             }
-            if (C12880j.m40224a((Object) method.getReturnType(), (Object) Single.class)) {
+            if (Intrinsics.areEqual((Object) method.getReturnType(), (Object) Single.class)) {
                 return a.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C7184d<Object,Object>(this, method, objArr)).mo30210a((C11946b<? super T, ? super Throwable>) new C7185e<Object,Object>(this, method));
             }
-            if (C12880j.m40224a((Object) method.getReturnType(), (Object) Observable.class)) {
+            if (Intrinsics.areEqual((Object) method.getReturnType(), (Object) Observable.class)) {
                 return a.mo30225d((Function<? super T, ? extends ObservableSource<? extends R>>) new C7186f<Object,Object>(this, method, objArr)).mo30166b((Consumer<? super C11959m<T>>) new C7187g<Object>(this, method));
             }
-            if (C12880j.m40224a((Object) method.getReturnType(), (Object) Maybe.class)) {
+            if (Intrinsics.areEqual((Object) method.getReturnType(), (Object) Maybe.class)) {
                 return a.mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new C7188h<Object,Object>(this, method, objArr)).mo30105a((C11946b<? super T, ? super Throwable>) new C7189i<Object,Object>(this, method));
             }
-            if (C12880j.m40224a((Object) method.getReturnType(), (Object) Flowable.class)) {
+            if (Intrinsics.areEqual((Object) method.getReturnType(), (Object) Flowable.class)) {
                 return a.mo30229e(new C7190j(this, method, objArr)).mo30064a((Consumer<? super C11959m<T>>) new C7181a<Object>(this, method));
             }
             try {
@@ -459,7 +459,7 @@ public final class C7178a0 implements C7234z {
             com.bamtech.sdk4.service.ErrorReason r1 = (com.bamtech.sdk4.service.ErrorReason) r1
             java.lang.String r1 = r1.getCode()
             java.lang.String r3 = "access-token.invalid"
-            boolean r1 = kotlin.jvm.internal.C12880j.m40224a(r1, r3)
+            boolean r1 = kotlin.jvm.internal.Intrinsics.areEqual(r1, r3)
             if (r1 == 0) goto L_0x001e
             r0 = 1
         L_0x0037:
@@ -471,7 +471,7 @@ public final class C7178a0 implements C7234z {
             r0.append(r6)
             java.lang.String r0 = r0.toString()
             java.lang.Object[] r1 = new java.lang.Object[r2]
-            p686n.p687a.C14100a.m44528b(r5, r0, r1)
+            p686n.p687a.Timber.m44528b(r5, r0, r1)
             com.bamtechmedia.dominguez.auth.l0 r0 = r4.f15868b
             r0.mo11743a()
         L_0x0054:

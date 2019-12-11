@@ -19,7 +19,7 @@ import java.util.List;
 import org.json.JSONException;
 import p163g.p166b.p169b.p170a.C4790a;
 import p163g.p166b.p169b.p170a.C4790a.C4791a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamnet.iap.c.d.d */
 /* compiled from: IabHelper */
@@ -358,7 +358,7 @@ public class C1662d {
         StringBuilder sb = new StringBuilder();
         sb.append("In-app billing warning: ");
         sb.append(str);
-        C14100a.m44532e(sb.toString(), new Object[0]);
+        Timber.m44532e(sb.toString(), new Object[0]);
     }
 
     /* access modifiers changed from: 0000 */
@@ -367,13 +367,13 @@ public class C1662d {
         StringBuilder sb = new StringBuilder();
         sb.append("In-app billing error: ");
         sb.append(str);
-        C14100a.m44526b(sb.toString(), new Object[0]);
+        Timber.m44526b(sb.toString(), new Object[0]);
     }
 
     /* access modifiers changed from: 0000 */
     /* renamed from: c */
     public void mo7313c(String str) {
-        C14100a.m44522a(str, new Object[0]);
+        Timber.m44522a(str, new Object[0]);
     }
 
     /* access modifiers changed from: 0000 */

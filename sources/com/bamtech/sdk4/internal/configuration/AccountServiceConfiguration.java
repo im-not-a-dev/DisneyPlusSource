@@ -15,7 +15,7 @@ public final class AccountServiceConfiguration implements ServiceConfiguration {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x0022, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) getExtras(), (java.lang.Object) r3.getExtras()) != false) goto L_0x0027;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) getExtras(), (java.lang.Object) r3.getExtras()) != false) goto L_0x0027;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -27,11 +27,11 @@ public final class AccountServiceConfiguration implements ServiceConfiguration {
             com.bamtech.sdk4.internal.configuration.AccountServiceConfiguration r3 = (com.bamtech.sdk4.internal.configuration.AccountServiceConfiguration) r3
             com.bamtech.sdk4.internal.configuration.ServiceClientDefinition r0 = r2.getClient()
             com.bamtech.sdk4.internal.configuration.ServiceClientDefinition r1 = r3.getClient()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0025
             com.bamtech.sdk4.internal.configuration.NullServiceExtras r0 = r2.getExtras()
             com.bamtech.sdk4.internal.configuration.NullServiceExtras r3 = r3.getExtras()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0025
             goto L_0x0027
         L_0x0025:

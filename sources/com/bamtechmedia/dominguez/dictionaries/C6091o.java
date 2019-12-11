@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12808i;
 import kotlin.p588j0.C12815k;
 import kotlin.p588j0.C12820m;
@@ -65,7 +65,7 @@ public final class C6091o implements C3572r0 {
     /* renamed from: a */
     public String mo12772a(int i, Map<String, ? extends Object> map) {
         String string = this.f14022a.getString(i);
-        C12880j.m40222a((Object) string, "resources.getString(resourceId)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) string, "resources.getString(resourceId)");
         return mo12775b(string, map);
     }
 

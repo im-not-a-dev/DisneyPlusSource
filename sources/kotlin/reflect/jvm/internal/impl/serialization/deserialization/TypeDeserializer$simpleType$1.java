@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 import java.util.Collection;
 import java.util.List;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Type;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Type.Argument;
@@ -20,7 +20,7 @@ final class TypeDeserializer$simpleType$1 extends C12881k implements Function1<T
 
     public final List<Argument> invoke(Type type) {
         List argumentList = type.getArgumentList();
-        C12880j.m40222a((Object) argumentList, "argumentList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) argumentList, "argumentList");
         Type outerType = ProtoTypeTableUtilKt.outerType(type, this.this$0.f29576c.getTypeTable());
         List invoke = outerType != null ? invoke(outerType) : null;
         if (invoke == null) {

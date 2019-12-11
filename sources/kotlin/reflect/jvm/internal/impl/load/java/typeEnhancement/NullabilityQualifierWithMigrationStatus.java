@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: signatureEnhancement.kt */
 public final class NullabilityQualifierWithMigrationStatus {
@@ -30,7 +30,7 @@ public final class NullabilityQualifierWithMigrationStatus {
         if (this != obj) {
             if (obj instanceof NullabilityQualifierWithMigrationStatus) {
                 NullabilityQualifierWithMigrationStatus nullabilityQualifierWithMigrationStatus = (NullabilityQualifierWithMigrationStatus) obj;
-                if (C12880j.m40224a((Object) this.qualifier, (Object) nullabilityQualifierWithMigrationStatus.qualifier)) {
+                if (Intrinsics.areEqual((Object) this.qualifier, (Object) nullabilityQualifierWithMigrationStatus.qualifier)) {
                     if (this.isForWarningOnly == nullabilityQualifierWithMigrationStatus.isForWarningOnly) {
                         return true;
                     }

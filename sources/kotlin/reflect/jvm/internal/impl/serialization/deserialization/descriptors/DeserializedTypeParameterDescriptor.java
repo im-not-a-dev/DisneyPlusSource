@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.serialization.deserialization.descripto
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.SupertypeLoopChecker.EMPTY;
@@ -35,7 +35,7 @@ public final class DeserializedTypeParameterDescriptor extends AbstractLazyTypeP
         Name name = NameResolverUtilKt.getName(deserializationContext.getNameResolver(), typeParameter.getName());
         ProtoEnumFlags protoEnumFlags = ProtoEnumFlags.INSTANCE;
         Variance variance = typeParameter.getVariance();
-        C12880j.m40222a((Object) variance, "proto.variance");
+        Intrinsics.checkReturnedValueIsNotNull((Object) variance, "proto.variance");
         super(storageManager, containingDeclaration, name, protoEnumFlags.variance(variance), typeParameter.getReified(), i, SourceElement.NO_SOURCE, EMPTY.INSTANCE);
         this.f29579c = deserializationContext;
         this.proto = typeParameter;

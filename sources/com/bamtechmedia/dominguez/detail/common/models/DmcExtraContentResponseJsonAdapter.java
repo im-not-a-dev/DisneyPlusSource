@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.detail.common.models;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -18,10 +18,10 @@ public final class DmcExtraContentResponseJsonAdapter extends C11725h<DmcExtraCo
 
     public DmcExtraContentResponseJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("DmcExtras");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"DmcExtras\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"DmcExtras\")");
         this.options = a;
         C11725h<DmcExtraContent> a2 = vVar.mo29869a((Type) DmcExtraContent.class, C13188p0.m40531a(), "extrasContent");
-        C12880j.m40222a((Object) a2, "moshi.adapter<DmcExtraCo…tySet(), \"extrasContent\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<DmcExtraCo…tySet(), \"extrasContent\")");
         this.dmcExtraContentAdapter = a2;
     }
 

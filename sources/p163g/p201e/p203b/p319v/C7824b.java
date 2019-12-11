@@ -31,7 +31,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.LocalDateTime;
 import p163g.p174d.p175a.p176a.C4796b;
 import p163g.p174d.p175a.p176a.C4797c;
@@ -58,7 +58,7 @@ import p520io.reactivex.CompletableSource;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.subjects.C11976a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000Ä\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\b\t\n\u0002\u0010\u0003\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u0000 ]2\u00020\u00012\u00020\u00022\u00020\u0003:\u0001]BE\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0006\u0010\f\u001a\u00020\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\u0006\u0010\u0010\u001a\u00020\u0011\u0012\u0006\u0010\u0012\u001a\u00020\u0013¢\u0006\u0002\u0010\u0014J\u0012\u0010+\u001a\u00020\r2\b\u0010,\u001a\u0004\u0018\u00010-H\u0002J\u0012\u0010.\u001a\u00020/2\b\u00100\u001a\u0004\u0018\u000101H\u0016J\b\u00102\u001a\u000203H\u0016J\"\u00104\u001a\u0002032\u0006\u00105\u001a\u0002062\u0006\u00107\u001a\u0002062\b\u00108\u001a\u0004\u0018\u000109H\u0016J\u0010\u0010:\u001a\u0002032\u0006\u0010;\u001a\u00020<H\u0016J\u001a\u0010=\u001a\u0002032\u0006\u0010;\u001a\u00020<2\b\u0010,\u001a\u0004\u0018\u00010-H\u0016J \u0010>\u001a\u0002032\u0006\u0010;\u001a\u00020<2\u000e\u0010?\u001a\n\u0012\u0004\u0012\u00020-\u0018\u00010@H\u0016J&\u0010A\u001a\u0002032\u0006\u0010;\u001a\u00020<2\u0014\u0010B\u001a\u0010\u0012\u0004\u0012\u00020\r\u0012\u0004\u0012\u00020\u001b\u0018\u00010\u001aH\u0016J&\u0010C\u001a\u0002032\u0006\u0010;\u001a\u00020<2\u0014\u0010B\u001a\u0010\u0012\u0004\u0012\u00020\r\u0012\u0004\u0012\u00020\u001b\u0018\u00010\u001aH\u0016J&\u0010D\u001a\u0002032\u0006\u0010;\u001a\u00020<2\u0014\u0010E\u001a\u0010\u0012\u0004\u0012\u00020\r\u0012\u0004\u0012\u00020-\u0018\u00010\u001aH\u0016J&\u0010F\u001a\u0002032\u0006\u0010;\u001a\u00020<2\u0014\u0010?\u001a\u0010\u0012\u0004\u0012\u00020\r\u0012\u0004\u0012\u00020-\u0018\u00010\u001aH\u0016J\u0012\u0010G\u001a\u0002032\b\u00100\u001a\u0004\u0018\u000101H\u0016J\u0012\u0010H\u001a\u0002032\b\u0010I\u001a\u0004\u0018\u00010JH\u0016J\u001a\u0010K\u001a\u0002032\b\u00100\u001a\u0004\u0018\u0001012\u0006\u0010L\u001a\u00020\u0016H\u0016J\u001a\u0010M\u001a\u0002032\b\u0010I\u001a\u0004\u0018\u00010J2\u0006\u0010L\u001a\u00020\u0016H\u0016J\u0010\u0010N\u001a\u0002032\u0006\u0010O\u001a\u00020/H\u0002J\u0018\u0010,\u001a\u0002032\u0006\u0010P\u001a\u00020Q2\u0006\u0010R\u001a\u00020\u001bH\u0016J\u001a\u0010S\u001a\u0004\u0018\u00010T2\u0006\u00100\u001a\u0002012\u0006\u0010U\u001a\u00020VH\u0002J\u0016\u0010W\u001a\u0002032\f\u0010X\u001a\b\u0012\u0004\u0012\u00020\r0@H\u0016J\b\u0010Y\u001a\u000203H\u0016J\b\u0010Z\u001a\u000203H\u0016J\b\u0010[\u001a\u000203H\u0016J\u0010\u0010\\\u001a\u0002032\u0006\u0010P\u001a\u00020QH\u0016R\u000e\u0010\f\u001a\u00020\rX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u0015\u001a\u00020\u00168F¢\u0006\u0006\u001a\u0004\b\u0017\u0010\u0018R\u000e\u0010\u0012\u001a\u00020\u0013X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0019\u001a\u000e\u0012\u0004\u0012\u00020\r\u0012\u0004\u0012\u00020\u001b0\u001aX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u0016X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\u0016X\u000e¢\u0006\u0002\n\u0000R&\u0010\u001e\u001a\u0004\u0018\u00010\u001f8\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b \u0010!\u001a\u0004\b\"\u0010#\"\u0004\b$\u0010%R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010&\u001a\b\u0012\u0004\u0012\u00020(0'X\u0004¢\u0006\b\n\u0000\u001a\u0004\b)\u0010*R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000¨\u0006^"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/paywall/DmgzPaywallService;", "Lcom/bamnet/iap/BamnetIAPListener;", "Lcom/bamtech/paywall/purchase/RedemptionListener;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServicesInteractor;", "marketHolder", "Lcom/bamtechmedia/dominguez/purchase/MarketHolder;", "purchaseDelegate", "Lcom/bamtech/paywall/purchase/PurchaseDelegate;", "redemptionDelegate", "Lcom/bamtech/paywall/redemption/RedemptionDelegate;", "subscriptionApi", "Lcom/bamtech/sdk4/subscription/SubscriptionApi;", "base64Key", "", "paywallAnalyticsStore", "Lcom/bamtechmedia/dominguez/analytics/PaywallAnalyticsStore;", "errorLocalization", "Lcom/bamtechmedia/dominguez/error/ErrorLocalization;", "lifecycle", "Landroidx/lifecycle/Lifecycle;", "(Lcom/bamtechmedia/dominguez/purchase/MarketHolder;Lcom/bamtech/paywall/purchase/PurchaseDelegate;Lcom/bamtech/paywall/redemption/RedemptionDelegate;Lcom/bamtech/sdk4/subscription/SubscriptionApi;Ljava/lang/String;Lcom/bamtechmedia/dominguez/analytics/PaywallAnalyticsStore;Lcom/bamtechmedia/dominguez/error/ErrorLocalization;Landroidx/lifecycle/Lifecycle;)V", "iabReady", "", "getIabReady", "()Z", "productMap", "", "Lcom/bamnet/iap/BamnetIAPProduct;", "productsRequestInProgress", "purchaseInProgress", "queuedIabOperation", "Lio/reactivex/functions/Action;", "queuedIabOperation$annotations", "()V", "getQueuedIabOperation$paywall_release", "()Lio/reactivex/functions/Action;", "setQueuedIabOperation$paywall_release", "(Lio/reactivex/functions/Action;)V", "serviceEvents", "Lio/reactivex/subjects/BehaviorSubject;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent;", "getServiceEvents", "()Lio/reactivex/subjects/BehaviorSubject;", "getProductPurchaseName", "purchase", "Lcom/bamnet/iap/BamnetIAPPurchase;", "linkSubscriptions", "Lio/reactivex/Completable;", "accessStatus", "Lcom/bamtech/sdk4/purchase/AccessStatus;", "notifyAccessGrantedFromTempAccess", "", "onActivityResult", "requestCode", "", "resultCode", "data", "Landroid/content/Intent;", "onIabSetupFinished", "result", "Lcom/bamnet/iap/BamnetIAPResult;", "onPurchase", "onPurchasesCompleted", "purchases", "", "onQueryInventoryFinished", "products", "onQueryProductsFinished", "onQueryPurchaseHistoryFinished", "purchaseHistory", "onQueryPurchasesFinished", "onRedemptionComplete", "onRedemptionError", "throwable", "", "onRestoreComplete", "fromTempAccess", "onRestoreError", "onTempAccessGranted", "hasBecomePermanentCompletable", "activity", "Landroid/app/Activity;", "product", "purchaseFailedEvent", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$Error;", "error", "Lcom/bamtechmedia/dominguez/paywall/exceptions/PaywallError;", "queryProducts", "productSkus", "resetServiceEvents", "resolveTempAccess", "restore", "setup", "Companion", "paywall_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.v.b */
@@ -127,7 +127,7 @@ public final class C7824b implements C1621a, C4797c, C7900q {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44530c(th, "Account linking failed.", new Object[0]);
+            Timber.m44530c(th, "Account linking failed.", new Object[0]);
         }
     }
 
@@ -142,7 +142,7 @@ public final class C7824b implements C1621a, C4797c, C7900q {
         }
 
         public final void run() {
-            C14100a.m44522a("Accounts successfully linked.", new Object[0]);
+            Timber.m44522a("Accounts successfully linked.", new Object[0]);
         }
     }
 
@@ -190,14 +190,14 @@ public final class C7824b implements C1621a, C4797c, C7900q {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
     }
 
     static {
         new C7825a(null);
         String localDateTime = LocalDateTime.now().toString();
-        C12880j.m40222a((Object) localDateTime, "LocalDateTime.now().toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) localDateTime, "LocalDateTime.now().toString()");
         f16915m = localDateTime;
     }
 
@@ -240,7 +240,7 @@ public final class C7824b implements C1621a, C4797c, C7900q {
             this.f16920e.mo19807b().set(true);
         } else if (!this.f16916a) {
             this.f16916a = true;
-            C14100a.m44522a("Running restore operation.", new Object[0]);
+            Timber.m44522a("Running restore operation.", new Object[0]);
             this.f16921f.mo16172a();
         }
     }
@@ -257,7 +257,7 @@ public final class C7824b implements C1621a, C4797c, C7900q {
             this.f16925j.mo11476d(f16915m);
             C2350e0 e0Var = this.f16925j;
             String c = bamnetIAPProduct.mo7185c();
-            C12880j.m40222a((Object) c, "product.localisedPrice");
+            Intrinsics.checkReturnedValueIsNotNull((Object) c, "product.localisedPrice");
             e0Var.mo11478e(c);
             this.f16921f.mo16174a(activity, bamnetIAPProduct);
         }
@@ -288,7 +288,7 @@ public final class C7824b implements C1621a, C4797c, C7900q {
             z = false;
         }
         objArr[0] = Integer.valueOf(z ? 0 : map.size());
-        C14100a.m44522a(sb2, objArr);
+        Timber.m44522a(sb2, objArr);
         mo20744b().onNext(new C7889b(C6258g.f14297a, "Error querying inventory."));
     }
 
@@ -307,15 +307,15 @@ public final class C7824b implements C1621a, C4797c, C7900q {
     /* renamed from: a */
     public Completable mo20738a(AccessStatus accessStatus) {
         if (accessStatus == null || !accessStatus.isTemporary()) {
-            C14100a.m44522a("Attempting to link account.", new Object[0]);
+            Timber.m44522a("Attempting to link account.", new Object[0]);
             Completable b = this.f16923h.linkSubscriptionsFromDeviceToAccount().mo30036a((Consumer<? super Throwable>) C7826b.f16928c).mo30050b((C11945a) C7827c.f16929a);
-            C12880j.m40222a((Object) b, "subscriptionApi.linkSubs… successfully linked.\") }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "subscriptionApi.linkSubs… successfully linked.\") }");
             return b;
         }
         mo20744b().onNext(C7898k.f17025a);
         m22927a(accessStatus.getHasBecomePermanent());
         Completable i = Completable.m38170i();
-        C12880j.m40222a((Object) i, "Completable.never()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "Completable.never()");
         return i;
     }
 
@@ -349,11 +349,11 @@ public final class C7824b implements C1621a, C4797c, C7900q {
     /* renamed from: a */
     private final void m22927a(Completable completable) {
         Completable a = completable.mo30034a((CompletableSource) Completable.m38162b((Callable<? extends CompletableSource>) new C7828d<Object>(this)));
-        C12880j.m40222a((Object) a, "hasBecomePermanentComple… { linkSubscriptions() })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "hasBecomePermanentComple… { linkSubscriptions() })");
         C10541b a2 = C10541b.m33252a(this.f16927l, C0716a.ON_DESTROY);
-        C12880j.m40222a((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
         Object a3 = a.mo30048a((C11912b<? extends R>) C11793e.m37930a((C11790c0) a2));
-        C12880j.m40222a(a3, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a3, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
         ((C11839v) a3).mo29926a(new C7829e(this), C7830f.f16932c);
     }
 
@@ -371,14 +371,14 @@ public final class C7824b implements C1621a, C4797c, C7900q {
             BamnetIAPPurchase bamnetIAPPurchase = (BamnetIAPPurchase) C13199w.m40589f((List) list);
             C2350e0 e0Var = this.f16925j;
             String e = bamnetIAPPurchase.mo7210e();
-            C12880j.m40222a((Object) e, "purchase.sku");
+            Intrinsics.checkReturnedValueIsNotNull((Object) e, "purchase.sku");
             e0Var.mo11470a(e);
             this.f16925j.mo11472b(m22926a(bamnetIAPPurchase));
             this.f16925j.mo11474c(f16915m);
             StringBuilder sb = new StringBuilder();
             sb.append("Purchase receipt: ");
             sb.append(bamnetIAPPurchase.mo7208c());
-            C14100a.m44522a(sb.toString(), new Object[0]);
+            Timber.m44522a(sb.toString(), new Object[0]);
             this.f16921f.mo16177a(bamnetIAPPurchase);
             mo20744b().onNext(new C7892e(bamnetIAPPurchase));
             this.f16922g.mo16184a(bamnetIAPResult, bamnetIAPPurchase);
@@ -398,14 +398,14 @@ public final class C7824b implements C1621a, C4797c, C7900q {
         } else {
             C2350e0 e0Var = this.f16925j;
             String e = bamnetIAPPurchase.mo7210e();
-            C12880j.m40222a((Object) e, "purchase.sku");
+            Intrinsics.checkReturnedValueIsNotNull((Object) e, "purchase.sku");
             e0Var.mo11470a(e);
             this.f16925j.mo11472b(m22926a(bamnetIAPPurchase));
             this.f16925j.mo11474c(f16915m);
             StringBuilder sb = new StringBuilder();
             sb.append("Purchase receipt: ");
             sb.append(bamnetIAPPurchase.mo7208c());
-            C14100a.m44522a(sb.toString(), new Object[0]);
+            Timber.m44522a(sb.toString(), new Object[0]);
             this.f16921f.mo16177a(bamnetIAPPurchase);
             mo20744b().onNext(new C7892e(bamnetIAPPurchase));
             this.f16922g.mo16184a(bamnetIAPResult, bamnetIAPPurchase);
@@ -460,7 +460,7 @@ public final class C7824b implements C1621a, C4797c, C7900q {
             this.f16920e.mo19806a((C7900q) this);
             mo20744b().onNext(C7895h.f17022a);
             List list = (List) this.f16920e.mo19810f().get();
-            C12880j.m40222a((Object) list, "skusRequested");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "skusRequested");
             if (!list.isEmpty()) {
                 mo20743a(list);
             }
@@ -478,7 +478,7 @@ public final class C7824b implements C1621a, C4797c, C7900q {
             a = "No Message";
         }
         sb.append(a);
-        C14100a.m44526b(sb.toString(), new Object[0]);
+        Timber.m44526b(sb.toString(), new Object[0]);
         mo20744b().onNext(new C7889b(C6257f.f14296a, bamnetIAPResult.mo7211a()));
     }
 
@@ -549,12 +549,12 @@ public final class C7824b implements C1621a, C4797c, C7900q {
                 ServiceError reason = purchaseActivation.getReason();
                 if (reason != null) {
                     UUID randomUUID = UUID.randomUUID();
-                    C12880j.m40222a((Object) randomUUID, "UUID.randomUUID()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) randomUUID, "UUID.randomUUID()");
                     ServiceRequestException serviceRequestException = new ServiceRequestException(randomUUID, C13183n.m40498a(reason), null, 4, null);
                     StringBuilder sb = new StringBuilder();
                     sb.append("Purchase failed: ");
                     sb.append(paywallError);
-                    C14100a.m44528b(serviceRequestException, sb.toString(), new Object[0]);
+                    Timber.m44528b(serviceRequestException, sb.toString(), new Object[0]);
                     return new C7889b(paywallError, this.f16926k.mo20537a((Throwable) serviceRequestException));
                 }
             }

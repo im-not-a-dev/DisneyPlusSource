@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.KClassImpl.Data;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -21,7 +21,7 @@ final class KClassImpl$Data$typeParameters$2 extends C12881k implements Function
 
     public final List<KTypeParameterImpl> invoke() {
         List<TypeParameterDescriptor> declaredTypeParameters = this.this$0.getDescriptor().getDeclaredTypeParameters();
-        C12880j.m40222a((Object) declaredTypeParameters, "descriptor.declaredTypeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredTypeParameters, "descriptor.declaredTypeParameters");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) declaredTypeParameters, 10));
         for (TypeParameterDescriptor kTypeParameterImpl : declaredTypeParameters) {
             arrayList.add(new KTypeParameterImpl(kTypeParameterImpl));

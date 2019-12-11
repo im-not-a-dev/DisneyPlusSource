@@ -7,7 +7,7 @@ import com.bamtech.sdk4.media.offline.CachedMedia;
 import com.bamtech.sdk4.media.offline.DownloadStatus.MissingCache;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.functions.Function;
@@ -31,7 +31,7 @@ final class DefaultOfflineMediaClient$getMediaItem$1<T, R> implements Function<T
 
     public final CachedMedia apply(CachedMedia cachedMedia) {
         ExoCachedMedia exoCachedMedia = (ExoCachedMedia) cachedMedia;
-        if (C12880j.m40224a((Object) exoCachedMedia.isCacheIncomplete(new Function1<ExoCachedMedia, Long>(this.this$0.cacheProvider) {
+        if (Intrinsics.areEqual((Object) exoCachedMedia.isCacheIncomplete(new Function1<ExoCachedMedia, Long>(this.this$0.cacheProvider) {
             public final String getName() {
                 return "calcBytesForCachedMedia";
             }

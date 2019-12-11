@@ -9,7 +9,7 @@ import com.bamtech.sdk4.service.ServiceExceptionCase.InvalidPassword;
 import com.bamtechmedia.dominguez.auth.p061o0.p062h.C2750c;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
 import p163g.p201e.p203b.p307o.C7619i;
 import p520io.reactivex.Completable;
@@ -17,7 +17,7 @@ import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Observable;
 import p520io.reactivex.ObservableSource;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0003\n\u0002\b\u0004\u0018\u00002\u00020\u0001:\u0001\u001aB'\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\u0018\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u000eH\u0002J+\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00120\u00112\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0013\u001a\u00020\u000eH\u0000¢\u0006\u0002\b\u0014J\u0010\u0010\u0015\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0017H\u0002J\u001e\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\u00120\u00112\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0013\u001a\u00020\u000eH\u0002J \u0010\u0019\u001a\n\u0012\u0004\u0012\u00020\u0012\u0018\u00010\u00112\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0013\u001a\u00020\u000eH\u0002R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006\u001b"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/account/password/ChangePasswordAction;", "", "identityApi", "Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "passwordValidator", "Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;", "errorLocalization", "Lcom/bamtechmedia/dominguez/error/ErrorLocalization;", "(Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;Lcom/bamtech/sdk4/account/AccountApi;Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;Lcom/bamtechmedia/dominguez/error/ErrorLocalization;)V", "authenticateIfNecessary", "Lio/reactivex/Completable;", "email", "", "currentPassword", "changePassword", "Lio/reactivex/Observable;", "Lcom/bamtechmedia/dominguez/account/password/ChangePasswordAction$ActionState;", "newPassword", "changePassword$account_release", "mapIdpExceptionToActionState", "error", "", "validateAndChangePassword", "validateInputs", "ActionState", "account_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.d.x0.a */
@@ -64,7 +64,7 @@ public final class C5503a {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13044a, (java.lang.Object) ((p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5505a) r2).f13044a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13044a, (java.lang.Object) ((p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5505a) r2).f13044a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -76,7 +76,7 @@ public final class C5503a {
                     g.e.b.d.x0.a$a$a r2 = (p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5505a) r2
                     java.lang.String r0 = r1.f13044a
                     java.lang.String r2 = r2.f13044a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -143,7 +143,7 @@ public final class C5503a {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13046a, (java.lang.Object) ((p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5507c) r2).f13046a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13046a, (java.lang.Object) ((p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5507c) r2).f13046a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -155,7 +155,7 @@ public final class C5503a {
                     g.e.b.d.x0.a$a$c r2 = (p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5507c) r2
                     java.lang.String r0 = r1.f13046a
                     java.lang.String r2 = r2.f13046a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -203,7 +203,7 @@ public final class C5503a {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13047a, (java.lang.Object) ((p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5508d) r2).f13047a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13047a, (java.lang.Object) ((p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5508d) r2).f13047a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -215,7 +215,7 @@ public final class C5503a {
                     g.e.b.d.x0.a$a$d r2 = (p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5508d) r2
                     java.lang.String r0 = r1.f13047a
                     java.lang.String r2 = r2.f13047a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -263,7 +263,7 @@ public final class C5503a {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13048a, (java.lang.Object) ((p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5509e) r2).f13048a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13048a, (java.lang.Object) ((p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5509e) r2).f13048a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -275,7 +275,7 @@ public final class C5503a {
                     g.e.b.d.x0.a$a$e r2 = (p163g.p201e.p203b.p204d.p207x0.C5503a.C5504a.C5509e) r2
                     java.lang.String r0 = r1.f13048a
                     java.lang.String r2 = r2.f13048a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -343,7 +343,7 @@ public final class C5503a {
 
         /* renamed from: a */
         public final C5504a apply(Throwable th) {
-            C14100a.m44530c(th, "Error attempting to change password with BamIdentityApi!", new Object[0]);
+            Timber.m44530c(th, "Error attempting to change password with BamIdentityApi!", new Object[0]);
             return this.f13050c.m18291a(th);
         }
     }
@@ -366,7 +366,7 @@ public final class C5503a {
             }
         }
         Observable<C5504a> a2 = this.f13040a.updatePassword(str, str2).mo30043a((ObservableSource<T>) Observable.m38309b(new C5507c(str2)));
-        C12880j.m40222a((Object) a2, "identityApi.updatePasswo…assword) as ActionState))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "identityApi.updatePasswo…assword) as ActionState))");
         return a2;
     }
 
@@ -395,7 +395,7 @@ public final class C5503a {
         C5506b bVar = C5506b.f13045a;
         if (bVar != null) {
             Observable<C5504a> i = a.mo30176c((ObservableSource<? extends T>) Observable.m38309b(bVar)).mo30198i(new C5511c(this));
-            C12880j.m40222a((Object) i, "authenticateIfNecessary(…(error)\n                }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) i, "authenticateIfNecessary(…(error)\n                }");
             return i;
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.account.password.ChangePasswordAction.ActionState");
@@ -405,11 +405,11 @@ public final class C5503a {
     private final Completable m18292a(String str, String str2) {
         if (this.f13040a.requiresAuthentication()) {
             Completable b = this.f13040a.authenticate(str, str2).mo30217b((Function<? super T, ? extends CompletableSource>) new C5510b<Object,Object>(this));
-            C12880j.m40222a((Object) b, "identityApi.authenticate…tApi.authorize(idToken) }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "identityApi.authenticate…tApi.authorize(idToken) }");
             return b;
         }
         Completable h = Completable.m38169h();
-        C12880j.m40222a((Object) h, "Completable.complete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
         return h;
     }
 
@@ -419,10 +419,10 @@ public final class C5503a {
         C7619i b = this.f13043d.mo20538b(th);
         String a = b.mo20543a();
         ServiceExceptionCase b2 = b.mo20544b();
-        if (C12880j.m40224a((Object) b2, (Object) InvalidCredentials.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) b2, (Object) InvalidCredentials.INSTANCE)) {
             return new C5509e(a);
         }
-        if (C12880j.m40224a((Object) b2, (Object) InvalidPassword.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) b2, (Object) InvalidPassword.INSTANCE)) {
             return new C5508d(a);
         }
         return new C5505a(a);

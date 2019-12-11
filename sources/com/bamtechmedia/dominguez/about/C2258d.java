@@ -14,7 +14,7 @@ import java.util.HashMap;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p314r.C7738g;
 import p163g.p509o.p510a.C11847b;
@@ -106,7 +106,7 @@ public final class C2258d extends C11890i {
         if (cVar != null) {
             return cVar;
         }
-        C12880j.m40227c("adapter");
+        Intrinsics.throwUninitializedPropertyAccessException("adapter");
         throw null;
     }
 
@@ -116,7 +116,7 @@ public final class C2258d extends C11890i {
         if (aboutPresenter != null) {
             return aboutPresenter;
         }
-        C12880j.m40227c("presenter");
+        Intrinsics.throwUninitializedPropertyAccessException("presenter");
         throw null;
     }
 
@@ -136,7 +136,7 @@ public final class C2258d extends C11890i {
             C5741g.observeInLifecycle$default(fVar, this, null, null, new C2259a(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -147,12 +147,12 @@ public final class C2258d extends C11890i {
             findViewById.setOnClickListener(new C2260b(this));
         }
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C2283n.aboutRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "aboutRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "aboutRecyclerView");
         C11848c<C11863k> cVar = this.f6388W;
         if (cVar != null) {
             RecyclerViewExtKt.m18800a(this, recyclerView, cVar);
         } else {
-            C12880j.m40227c("adapter");
+            Intrinsics.throwUninitializedPropertyAccessException("adapter");
             throw null;
         }
     }
@@ -169,16 +169,16 @@ public final class C2258d extends C11890i {
                     if (aboutPresenter != null) {
                         cVar.mo29963a((Collection<? extends C11847b>) aboutPresenter.mo11296a(dVar));
                     } else {
-                        C12880j.m40227c("presenter");
+                        Intrinsics.throwUninitializedPropertyAccessException("presenter");
                         throw null;
                     }
                 } else {
-                    C12880j.m40227c("adapter");
+                    Intrinsics.throwUninitializedPropertyAccessException("adapter");
                     throw null;
                 }
             }
         } else {
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
     }

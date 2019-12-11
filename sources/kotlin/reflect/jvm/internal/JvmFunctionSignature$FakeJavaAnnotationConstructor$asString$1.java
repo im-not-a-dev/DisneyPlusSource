@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal;
 import java.lang.reflect.Method;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.structure.ReflectClassUtilKt;
 
@@ -17,9 +17,9 @@ final class JvmFunctionSignature$FakeJavaAnnotationConstructor$asString$1 extend
     }
 
     public final String invoke(Method method) {
-        C12880j.m40222a((Object) method, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) method, "it");
         Class returnType = method.getReturnType();
-        C12880j.m40222a((Object) returnType, "it.returnType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) returnType, "it.returnType");
         return ReflectClassUtilKt.getDesc(returnType);
     }
 }

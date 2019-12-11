@@ -5,7 +5,7 @@ import androidx.lifecycle.C0722m;
 import androidx.lifecycle.C0733v;
 import com.bamtechmedia.dominguez.core.p087h.C3824a;
 import com.bamtechmedia.dominguez.core.p087h.C3824a.C3825a;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.lifecycle.c */
 /* compiled from: AppPresenceInitializationAction.kt */
@@ -29,7 +29,7 @@ public final class C5771c implements C3824a {
     /* renamed from: a */
     public void mo11495a(Application application) {
         C0722m mVar = this.f13530a;
-        C12880j.m40222a((Object) mVar, "processLifecycleOwner");
+        Intrinsics.checkReturnedValueIsNotNull((Object) mVar, "processLifecycleOwner");
         mVar.getLifecycle().mo4134a(this.f13531b);
         application.registerActivityLifecycleCallbacks(this.f13531b);
     }

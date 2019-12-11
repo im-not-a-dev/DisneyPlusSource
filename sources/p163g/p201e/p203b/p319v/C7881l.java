@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.auth.p066r0.C2793c;
 import com.bamtechmedia.dominguez.auth.p066r0.C2793c.C2794a;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p319v.C7885o.C7886a;
 import p520io.reactivex.Completable;
 
@@ -53,7 +53,7 @@ public final class C7881l implements C2793c {
     /* renamed from: a */
     public Completable mo11570a() {
         Completable c = Completable.m38168c((Callable<?>) new C7882a<Object>(this));
-        C12880j.m40222a((Object) c, "Completable.fromCallable…pository.clearPaywall() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.fromCallable…pository.clearPaywall() }");
         return c;
     }
 }

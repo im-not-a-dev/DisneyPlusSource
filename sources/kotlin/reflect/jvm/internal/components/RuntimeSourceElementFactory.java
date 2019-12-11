@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.components;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceFile;
 import kotlin.reflect.jvm.internal.impl.load.java.sources.JavaSourceElement;
 import kotlin.reflect.jvm.internal.impl.load.java.sources.JavaSourceElementFactory;
@@ -24,7 +24,7 @@ public final class RuntimeSourceElementFactory implements JavaSourceElementFacto
 
         public SourceFile getContainingFile() {
             SourceFile sourceFile = SourceFile.NO_SOURCE_FILE;
-            C12880j.m40222a((Object) sourceFile, "SourceFile.NO_SOURCE_FILE");
+            Intrinsics.checkReturnedValueIsNotNull((Object) sourceFile, "SourceFile.NO_SOURCE_FILE");
             return sourceFile;
         }
 

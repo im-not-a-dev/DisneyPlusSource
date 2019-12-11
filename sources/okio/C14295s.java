@@ -2,7 +2,7 @@ package okio;
 
 import com.bamtech.sdk4.internal.configuration.ContentServiceClientExtras;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 2}, mo31006d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u000b\b\u0000\u0018\u0000 \u00192\u00020\u0001:\u0001\u0019B\u0007\b\u0016¢\u0006\u0002\u0010\u0002B/\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\t¢\u0006\u0002\u0010\u000bJ\u0006\u0010\u000e\u001a\u00020\u000fJ\b\u0010\u0010\u001a\u0004\u0018\u00010\u0000J\u000e\u0010\u0011\u001a\u00020\u00002\u0006\u0010\u0012\u001a\u00020\u0000J\u0006\u0010\u0013\u001a\u00020\u0000J\u000e\u0010\u0014\u001a\u00020\u00002\u0006\u0010\u0015\u001a\u00020\u0006J\u0006\u0010\u0016\u001a\u00020\u0000J\u0016\u0010\u0017\u001a\u00020\u000f2\u0006\u0010\u0018\u001a\u00020\u00002\u0006\u0010\u0015\u001a\u00020\u0006R\u0010\u0010\u0003\u001a\u00020\u00048\u0006X\u0004¢\u0006\u0002\n\u0000R\u0012\u0010\u0007\u001a\u00020\u00068\u0006@\u0006X\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\f\u001a\u0004\u0018\u00010\u00008\u0006@\u0006X\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\n\u001a\u00020\t8\u0006@\u0006X\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u0005\u001a\u00020\u00068\u0006@\u0006X\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\r\u001a\u0004\u0018\u00010\u00008\u0006@\u0006X\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\b\u001a\u00020\t8\u0006@\u0006X\u000e¢\u0006\u0002\n\u0000¨\u0006\u001a"}, mo31007d2 = {"Lokio/Segment;", "", "()V", "data", "", "pos", "", "limit", "shared", "", "owner", "([BIIZZ)V", "next", "prev", "compact", "", "pop", "push", "segment", "sharedCopy", "split", "byteCount", "unsharedCopy", "writeTo", "sink", "Companion", "jvm"}, mo31008k = 1, mo31009mv = {1, 1, 11})
 /* renamed from: okio.s */
@@ -61,7 +61,7 @@ public final class C14295s {
             this.f31905f = sVar;
             return sVar;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -81,10 +81,10 @@ public final class C14295s {
                 this.f31906g = null;
                 return sVar;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -121,7 +121,7 @@ public final class C14295s {
                 sVar2.mo36459a(sVar);
                 return sVar;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         throw new IllegalArgumentException("byteCount out of range".toString());
@@ -133,7 +133,7 @@ public final class C14295s {
         if (this.f31906g != this) {
             C14295s sVar = this.f31906g;
             if (sVar == null) {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             } else if (sVar.f31904e) {
                 int i2 = this.f31902c - this.f31901b;
@@ -144,7 +144,7 @@ public final class C14295s {
                             if (sVar != null) {
                                 i = sVar.f31901b;
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                         }
@@ -156,15 +156,15 @@ public final class C14295s {
                                 C14297t.m45789a(this);
                                 return;
                             }
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                         return;
                     }
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         } else {

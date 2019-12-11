@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.structure;
 import java.lang.reflect.Type;
 import java.lang.reflect.WildcardType;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaWildcardType;
 import kotlin.reflect.jvm.internal.structure.ReflectJavaType.Factory;
 
@@ -18,8 +18,8 @@ public final class ReflectJavaWildcardType extends ReflectJavaType implements Ja
 
     public boolean isExtends() {
         Type[] upperBounds = getReflectType().getUpperBounds();
-        C12880j.m40222a((Object) upperBounds, "reflectType.upperBounds");
-        return !C12880j.m40224a((Object) (Type) C13174k.m40406f(upperBounds), (Object) Object.class);
+        Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds, "reflectType.upperBounds");
+        return !Intrinsics.areEqual((Object) (Type) C13174k.m40406f(upperBounds), (Object) Object.class);
     }
 
     public ReflectJavaType getBound() {
@@ -32,20 +32,20 @@ public final class ReflectJavaWildcardType extends ReflectJavaType implements Ja
             throw new UnsupportedOperationException(sb.toString());
         } else if (lowerBounds.length == 1) {
             Factory factory = ReflectJavaType.Factory;
-            C12880j.m40222a((Object) lowerBounds, "lowerBounds");
+            Intrinsics.checkReturnedValueIsNotNull((Object) lowerBounds, "lowerBounds");
             Object j = C13174k.m40410j(lowerBounds);
-            C12880j.m40222a(j, "lowerBounds.single()");
+            Intrinsics.checkReturnedValueIsNotNull(j, "lowerBounds.single()");
             return factory.create((Type) j);
         } else if (upperBounds.length != 1) {
             return null;
         } else {
-            C12880j.m40222a((Object) upperBounds, "upperBounds");
+            Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds, "upperBounds");
             Type type = (Type) C13174k.m40410j(upperBounds);
-            if (!(!C12880j.m40224a((Object) type, (Object) Object.class))) {
+            if (!(!Intrinsics.areEqual((Object) type, (Object) Object.class))) {
                 return null;
             }
             Factory factory2 = ReflectJavaType.Factory;
-            C12880j.m40222a((Object) type, "ub");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "ub");
             return factory2.create(type);
         }
     }

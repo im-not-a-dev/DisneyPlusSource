@@ -4,7 +4,7 @@ import com.bamtech.sdk4.internal.configuration.ConfigurationProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.functions.Function;
@@ -20,7 +20,7 @@ public final class DefaultAdEngineClient implements AdEngineClient {
 
     public Completable updateCookies(ServiceTransaction serviceTransaction, Map<String, String> map, Map<String, String> map2) {
         Completable b = this.configurationProvider.getServiceLink(serviceTransaction, DefaultAdEngineClient$updateCookies$1.INSTANCE).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultAdEngineClient$updateCookies$2<Object,Object>(map2, map, serviceTransaction));
-        C12880j.m40222a((Object) b, "configurationProvider.ge…_TOKEN)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "configurationProvider.ge…_TOKEN)\n                }");
         return b;
     }
 }

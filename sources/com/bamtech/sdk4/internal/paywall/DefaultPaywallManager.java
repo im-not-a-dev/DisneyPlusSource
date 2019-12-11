@@ -4,7 +4,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import com.bamtech.sdk4.paywall.Paywall;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -23,7 +23,7 @@ public final class DefaultPaywallManager implements PaywallManager {
 
     public Single<Paywall> getPaywall(ServiceTransaction serviceTransaction) {
         Single<Paywall> a = this.accessTokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultPaywallManager$getPaywall$1<Object,Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) a, "accessToken.flatMap {\n  …tion, tokenMap)\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "accessToken.flatMap {\n  …tion, tokenMap)\n        }");
         return a;
     }
 }

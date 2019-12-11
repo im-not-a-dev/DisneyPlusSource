@@ -131,7 +131,7 @@ class C8312q<Model, Data> implements C8306n<Model, Data> {
     }
 
     /* renamed from: a */
-    public C8307a<Data> mo19951a(Model model, int i, int i2, C8115i iVar) {
+    public C8307a<Data> mo19951a(ModelMODEL, int i, int i2, C8115i iVar) {
         int size = this.f17779a.size();
         ArrayList arrayList = new ArrayList(size);
         C8111g gVar = null;
@@ -160,7 +160,7 @@ class C8312q<Model, Data> implements C8306n<Model, Data> {
     }
 
     /* renamed from: a */
-    public boolean mo19953a(Model model) {
+    public boolean mo19953a(ModelMODEL) {
         for (C8306n a : this.f17779a) {
             if (a.mo19953a(model)) {
                 return true;

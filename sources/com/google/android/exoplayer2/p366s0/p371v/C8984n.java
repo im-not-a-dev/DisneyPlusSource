@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p366s0.p371v;
 
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 
 /* renamed from: com.google.android.exoplayer2.s0.v.n */
 /* compiled from: TrackEncryptionBox */
@@ -79,7 +79,7 @@ public final class C8984n {
         sb.append("Unsupported protection scheme type '");
         sb.append(str);
         sb.append("'. Assuming AES-CTR crypto mode.");
-        C9563q.m29500d("TrackEncryptionBox", sb.toString());
+        Log.m29500d("TrackEncryptionBox", sb.toString());
         return 1;
     }
 }

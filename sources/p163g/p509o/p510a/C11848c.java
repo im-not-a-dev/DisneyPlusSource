@@ -144,7 +144,7 @@ public class C11848c<VH extends C11863k> extends C0797g<VH> implements C11852d {
             }
         }
         StringBuilder sb = new StringBuilder();
-        sb.append("Could not find model for view type: ");
+        sb.append("Could not findMODEL for view type: ");
         sb.append(i);
         throw new IllegalStateException(sb.toString());
     }

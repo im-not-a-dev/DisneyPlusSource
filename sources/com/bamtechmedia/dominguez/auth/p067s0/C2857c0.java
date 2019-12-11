@@ -10,7 +10,7 @@ import com.bamtechmedia.dominguez.core.utils.C5839j;
 import com.bamtechmedia.dominguez.core.utils.C5883w;
 import java.util.HashMap;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -68,7 +68,7 @@ public final class C2857c0 extends C2889o {
             if (eVar != null) {
                 eVar.mo11773b();
             } else {
-                C12880j.m40227c("passwordResetRouter");
+                Intrinsics.throwUninitializedPropertyAccessException("passwordResetRouter");
                 throw null;
             }
         } else if (bVar.mo11907a()) {
@@ -76,7 +76,7 @@ public final class C2857c0 extends C2889o {
             if (cVar != null) {
                 cVar.mo11764a();
             } else {
-                C12880j.m40227c("authHostRouter");
+                Intrinsics.throwUninitializedPropertyAccessException("authHostRouter");
                 throw null;
             }
         }

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.concurrent.Callable;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.CacheControl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request.C14113a;
@@ -79,14 +79,14 @@ public final class C5562f {
     /* renamed from: c */
     private final OkHttpClient m18367c() {
         Object obj = this.f13121a.get();
-        C12880j.m40222a(obj, "clientProvider.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "clientProvider.get()");
         return (OkHttpClient) obj;
     }
 
     /* renamed from: a */
     public final Single<Boolean> mo17320a() {
         Single<Boolean> c = Single.m38401c((Callable<? extends T>) new C5564b<Object>(this));
-        C12880j.m40222a((Object) c, "Single.fromCallable {\n  …      connected\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Single.fromCallable {\n  …      connected\n        }");
         return c;
     }
 }

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.types;
 
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 
 /* compiled from: RawType.kt */
@@ -17,6 +17,6 @@ final class RawTypeImpl$render$1 extends C12881k implements Function2<String, St
     }
 
     public final boolean invoke(String str, String str2) {
-        return C12880j.m40224a((Object) str, (Object) C12833x.m40137a(str2, (CharSequence) "out ")) || C12880j.m40224a((Object) str2, (Object) "*");
+        return Intrinsics.areEqual((Object) str, (Object) C12833x.m40137a(str2, (CharSequence) "out ")) || Intrinsics.areEqual((Object) str2, (Object) "*");
     }
 }

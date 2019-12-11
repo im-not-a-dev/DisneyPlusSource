@@ -2,7 +2,7 @@ package kotlin;
 
 import java.io.Serializable;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlin.w */
 /* compiled from: Lazy.kt */
@@ -30,7 +30,7 @@ public final class C13146w<T> implements Lazy<T>, Serializable {
                 this.f29588U = function0.invoke();
                 this.f29589c = null;
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }

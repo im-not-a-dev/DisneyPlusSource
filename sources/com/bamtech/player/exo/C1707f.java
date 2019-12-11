@@ -5,7 +5,7 @@ import android.widget.TextView;
 import com.bamtech.player.exo.p042j.C1722c;
 import com.google.android.exoplayer2.p391ui.C9402d;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.C5280i;
 import p163g.p174d.p178b.C5284j;
 import p163g.p174d.p178b.C5300m;
@@ -32,7 +32,7 @@ public final class C1707f implements C5284j {
             C1706e eVar = (C1706e) d;
             C1708g y = eVar.mo7644y();
             C5300m b = iVar.mo7537b();
-            C12880j.m40222a((Object) b, "engine.getEvents()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "engine.getEvents()");
             new C1722c(eVar, b);
             TextView textView = this.f5963b;
             if (textView != null) {
@@ -41,7 +41,7 @@ public final class C1707f implements C5284j {
                 if (dVar != null) {
                     dVar.mo24345e();
                 } else {
-                    C12880j.m40227c("debugTextHelper");
+                    Intrinsics.throwUninitializedPropertyAccessException("debugTextHelper");
                     throw null;
                 }
             }

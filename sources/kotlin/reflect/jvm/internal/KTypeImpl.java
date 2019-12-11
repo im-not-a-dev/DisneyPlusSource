@@ -6,7 +6,7 @@ import java.util.List;
 import kotlin.C12899m;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12888r;
 import kotlin.jvm.internal.C12889s;
 import kotlin.jvm.internal.C12890t;
@@ -72,7 +72,7 @@ public final class KTypeImpl implements KType {
                 if (typeProjection != null) {
                     KotlinType type2 = typeProjection.getType();
                     if (type2 != null) {
-                        C12880j.m40222a((Object) type2, "type.arguments.singleOrN…return KClassImpl(jClass)");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) type2, "type.arguments.singleOrN…return KClassImpl(jClass)");
                         KClassifier convert = convert(type2);
                         if (convert != null) {
                             return new KClassImpl(ReflectClassUtilKt.createArrayType(C12731a.m39866a(KTypesJvm.getJvmErasure(convert))));
@@ -107,7 +107,7 @@ public final class KTypeImpl implements KType {
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof KTypeImpl) && C12880j.m40224a((Object) this.type, (Object) ((KTypeImpl) obj).type);
+        return (obj instanceof KTypeImpl) && Intrinsics.areEqual((Object) this.type, (Object) ((KTypeImpl) obj).type);
     }
 
     public List<Annotation> getAnnotations() {

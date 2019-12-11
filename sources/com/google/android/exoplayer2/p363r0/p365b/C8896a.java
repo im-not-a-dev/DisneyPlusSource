@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p363r0.p365b;
 import android.net.Uri;
 import com.google.android.exoplayer2.C8672a0;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9574y;
 import com.google.android.exoplayer2.upstream.C9497h;
 import com.google.android.exoplayer2.upstream.C9507m;
@@ -144,7 +144,7 @@ public class C8896a extends C9497h implements HttpDataSource {
             if (bArr != null) {
                 xVar = C14262x.m45502a((C14258u) null, bArr);
             } else if (dataSpec.f21939b == 2) {
-                xVar = C14262x.m45502a((C14258u) null, C9554k0.f22286f);
+                xVar = C14262x.m45502a((C14258u) null, Util.EMPTY_BYTE_ARRAY);
             }
             aVar.mo35841a(dataSpec.mo24451a(), xVar);
             return aVar.mo35846a();
@@ -161,7 +161,7 @@ public class C8896a extends C9497h implements HttpDataSource {
                 if (j != j2) {
                     int min = (int) Math.min(j2 - j, (long) f19074s.length);
                     InputStream inputStream = this.f19083m;
-                    C9554k0.m29394a(inputStream);
+                    Util.castNonNull(inputStream);
                     int read = inputStream.read(f19074s, 0, min);
                     if (Thread.currentThread().isInterrupted()) {
                         throw new InterruptedIOException();
@@ -284,7 +284,7 @@ public class C8896a extends C9497h implements HttpDataSource {
             i2 = (int) Math.min((long) i2, j2);
         }
         InputStream inputStream = this.f19083m;
-        C9554k0.m29394a(inputStream);
+        Util.castNonNull(inputStream);
         int read = inputStream.read(bArr, i, i2);
         if (read != -1) {
             this.f19088r += (long) read;

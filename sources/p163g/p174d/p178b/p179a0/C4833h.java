@@ -2,7 +2,7 @@ package p163g.p174d.p178b.p179a0;
 
 import java.io.File;
 import java.io.RandomAccessFile;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.d.b.a0.h */
 /* compiled from: RandomAccessFileWrapper.kt */
@@ -42,7 +42,7 @@ public final class C4833h {
         if (randomAccessFile != null) {
             return randomAccessFile;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

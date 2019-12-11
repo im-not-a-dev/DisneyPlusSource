@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
 
@@ -23,7 +23,7 @@ public abstract class ConstantValue<T> {
             if (constantValue != null) {
                 obj2 = constantValue.getValue();
             }
-            if (!C12880j.m40224a(value2, obj2)) {
+            if (!Intrinsics.areEqual(value2, obj2)) {
                 return false;
             }
         }

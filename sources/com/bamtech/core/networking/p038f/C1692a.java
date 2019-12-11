@@ -1,7 +1,7 @@
 package com.bamtech.core.networking.p038f;
 
 import java.io.IOException;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Interceptor;
 import okhttp3.Interceptor.Chain;
 import okhttp3.Request.C14113a;
@@ -24,7 +24,7 @@ public final class C1692a implements Interceptor {
         f.mo35839a(str);
         f.mo35840a(str, this.f5884a);
         Response a = chain.mo35780a(f.mo35846a());
-        C12880j.m40222a((Object) a, "chain.proceed(requestWithUserAgent)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "chain.proceed(requestWithUserAgent)");
         return a;
     }
 }

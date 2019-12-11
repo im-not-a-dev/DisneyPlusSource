@@ -1,6 +1,6 @@
 package com.bamtechmedia.dominguez.core.utils.p223t0;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14258u;
 import okhttp3.C14262x;
 import okhttp3.OkHttpClient;
@@ -16,7 +16,7 @@ public final class C5879c {
     /* renamed from: a */
     public static final Single<Response> m18933a(Request request, OkHttpClient okHttpClient) {
         Single<Response> b = new C5876a(okHttpClient.mo35727a(request)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "CallExecuteSingle(client…scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "CallExecuteSingle(client…scribeOn(Schedulers.io())");
         return b;
     }
 
@@ -32,7 +32,7 @@ public final class C5879c {
         aVar.mo35847b();
         aVar.mo35848b(str);
         Request a = aVar.mo35846a();
-        C12880j.m40222a((Object) a, "Request.Builder().get().url(url).build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Request.Builder().get().url(url).build()");
         return m18933a(a, okHttpClient);
     }
 }

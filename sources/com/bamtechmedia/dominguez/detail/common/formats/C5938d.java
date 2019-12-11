@@ -18,7 +18,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12865c0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\t\u0018\u0000 \u001d2\u00020\u0001:\u0001\u001dB'\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\b\u0010\u000b\u001a\u00020\fH\u0002J\u001a\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e2\f\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000eJ\u001a\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e2\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000eJ(\u0010\u0013\u001a\u00020\f2\u0006\u0010\u0014\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0017\u001a\u00020\u00152\u0006\u0010\u0018\u001a\u00020\u0015H\u0002J\u000e\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000eH\u0002J\u0010\u0010\u001a\u001a\u00020\f2\u0006\u0010\u001b\u001a\u00020\fH\u0002J\b\u0010\u001c\u001a\u00020\fH\u0002R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006\u001e"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/detail/common/formats/DetailMediaContentMapper;", "", "mediaCapabilitiesProvider", "Lcom/bamtech/sdk4/media/MediaCapabilitiesProvider;", "context", "Landroid/content/Context;", "playbackOverrideApi", "Lcom/bamtechmedia/dominguez/playback/api/PlaybackOverrideApi;", "contentDetailConfig", "Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;", "(Lcom/bamtech/sdk4/media/MediaCapabilitiesProvider;Landroid/content/Context;Lcom/bamtechmedia/dominguez/playback/api/PlaybackOverrideApi;Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;)V", "audioSupportFiveOne", "", "combineAtmosAndVision", "", "Lcom/bamtechmedia/dominguez/detail/common/formats/AvailableFeatureData;", "availableFeatureData", "findDeviceCapableFormats", "playableAvailableFeatureData", "isSizeGreaterThanDimensions", "width", "", "height", "firstDimension", "secondDimension", "mapDeviceSupportedFeaturesToAvailableFeatureData", "supports4k", "supportsDolbyVision", "supportsHd", "Companion", "contentDetail_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.detail.common.formats.d */
@@ -76,12 +76,12 @@ public final class C5938d {
                 return true;
             }
             for (MediaCodecInfo mediaCodecInfo : new MediaCodecList(1).getCodecInfos()) {
-                C12880j.m40222a((Object) mediaCodecInfo, "codecInfo");
+                Intrinsics.checkReturnedValueIsNotNull((Object) mediaCodecInfo, "codecInfo");
                 if (!mediaCodecInfo.isEncoder()) {
                     String[] supportedTypes = mediaCodecInfo.getSupportedTypes();
-                    C12880j.m40222a((Object) supportedTypes, "supportedTypes");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) supportedTypes, "supportedTypes");
                     for (String a : supportedTypes) {
-                        if (C12880j.m40224a((Object) a, (Object) "audio/eac3")) {
+                        if (Intrinsics.areEqual((Object) a, (Object) "audio/eac3")) {
                             return true;
                         }
                     }
@@ -112,9 +112,9 @@ public final class C5938d {
             return false;
         }
         C5942a[] b = C5941e.m19069b(this.f13746b, defaultDisplay);
-        C12880j.m40222a((Object) b, "DisplayCompat.getSupportedModes(context, display)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "DisplayCompat.getSupportedModes(context, display)");
         for (C5942a aVar : b) {
-            C12880j.m40222a((Object) aVar, "mode");
+            Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "mode");
             if (m19056a(aVar.mo17869b(), aVar.mo17868a(), 720, 1280)) {
                 return true;
             }
@@ -135,7 +135,7 @@ public final class C5938d {
                     if (!it.hasNext()) {
                         break;
                     }
-                    if (C12880j.m40224a((Object) aVar.mo17850b(), (Object) ((C5928a) it.next()).mo17850b())) {
+                    if (Intrinsics.areEqual((Object) aVar.mo17850b(), (Object) ((C5928a) it.next()).mo17850b())) {
                         z = true;
                         break;
                     }
@@ -156,11 +156,11 @@ public final class C5938d {
         if (!this.f13747c.mo18949a()) {
             z = false;
             for (HdrType hdrType : supportedHdrTypes) {
-                if (C12880j.m40224a((Object) hdrType, (Object) HdrType.DOLBY_VISION)) {
+                if (Intrinsics.areEqual((Object) hdrType, (Object) HdrType.DOLBY_VISION)) {
                     arrayList.add(new C5928a("image_media_feature_dolby_vision", true, "dolby_vision"));
                     z = true;
                 }
-                if (C12880j.m40224a((Object) hdrType, (Object) HdrType.HDR10)) {
+                if (Intrinsics.areEqual((Object) hdrType, (Object) HdrType.HDR10)) {
                     arrayList.add(new C5928a("media_feature_hdr_10", false, "hdr_10"));
                 }
             }
@@ -199,7 +199,7 @@ public final class C5938d {
             Display defaultDisplay = windowManager.getDefaultDisplay();
             if (defaultDisplay != null) {
                 C5942a[] b = C5941e.m19069b(this.f13746b, defaultDisplay);
-                C12880j.m40222a((Object) b, "DisplayCompat.getSupportedModes(context, display)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "DisplayCompat.getSupportedModes(context, display)");
                 int length = b.length;
                 int i = 0;
                 while (true) {
@@ -207,7 +207,7 @@ public final class C5938d {
                         break;
                     }
                     C5942a aVar = b[i];
-                    C12880j.m40222a((Object) aVar, "mode");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "mode");
                     if (m19056a(aVar.mo17869b(), aVar.mo17868a(), 3840, 2160)) {
                         z2 = true;
                         break;
@@ -239,7 +239,7 @@ public final class C5938d {
             }
             Object next = it.next();
             C5928a aVar = (C5928a) next;
-            if (!(!C12880j.m40224a((Object) aVar.mo17850b(), (Object) str2)) || !(!C12880j.m40224a((Object) aVar.mo17850b(), (Object) str))) {
+            if (!(!Intrinsics.areEqual((Object) aVar.mo17850b(), (Object) str2)) || !(!Intrinsics.areEqual((Object) aVar.mo17850b(), (Object) str))) {
                 z = false;
             }
             if (z) {

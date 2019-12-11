@@ -44,7 +44,7 @@ import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p135s.C4127b0;
 import p163g.p201e.p203b.p287k.C7309c;
@@ -186,7 +186,7 @@ public final class C7410a extends C11866a {
             /* renamed from: b */
             public void mo20265b(C7410a aVar, C11867b bVar) {
                 TextView textView = (TextView) bVar.mo20994a().findViewById(C7310d.videoDetailDescription);
-                C12880j.m40222a((Object) textView, "holder.videoDetailDescription");
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView, "holder.videoDetailDescription");
                 C5844l0.m18865a(textView, (CharSequence) aVar.f16273X, false, 2, (Object) null);
             }
         }
@@ -227,7 +227,7 @@ public final class C7410a extends C11866a {
                 C3685g a = aVar.f16270U;
                 if (a != null) {
                     TextView textView = (TextView) bVar.mo20994a().findViewById(C7310d.featuredEpisodeTitle);
-                    C12880j.m40222a((Object) textView, "holder.featuredEpisodeTitle");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) textView, "holder.featuredEpisodeTitle");
                     C5844l0.m18865a(textView, (CharSequence) aVar.f16288l0.mo12775b("season_episode_title_placeholder", C13173j0.m40356a(C12907r.m40244a("S", String.valueOf(a.mo12876F())), C12907r.m40244a("E", String.valueOf(a.mo12878I())), C12907r.m40244a("TITLE", a.getTitle()))), false, 2, (Object) null);
                 }
             }
@@ -267,7 +267,7 @@ public final class C7410a extends C11866a {
             /* renamed from: b */
             public void mo20265b(C7410a aVar, C11867b bVar) {
                 TextView textView = (TextView) bVar.mo20994a().findViewById(C7310d.formatAvailability);
-                C12880j.m40222a((Object) textView, "holder.formatAvailability");
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView, "holder.formatAvailability");
                 C5844l0.m18865a(textView, aVar.f16276a0, false, 2, (Object) null);
             }
         }
@@ -361,7 +361,7 @@ public final class C7410a extends C11866a {
             /* renamed from: b */
             public void mo20265b(C7410a aVar, C11867b bVar) {
                 TextView textView = (TextView) bVar.mo20994a().findViewById(C7310d.metaData);
-                C12880j.m40222a((Object) textView, "holder.metaData");
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView, "holder.metaData");
                 C5844l0.m18865a(textView, (CharSequence) aVar.f16277b0, false, 2, (Object) null);
             }
         }
@@ -468,7 +468,7 @@ public final class C7410a extends C11866a {
             /* renamed from: a */
             public void mo20263a(C7410a aVar, C11867b bVar) {
                 View findViewById = bVar.itemView.findViewById(C7310d.startPlayerButton);
-                C12880j.m40222a((Object) findViewById, "playerButton");
+                Intrinsics.checkReturnedValueIsNotNull((Object) findViewById, "playerButton");
                 m22205a(aVar, findViewById, (DefaultBookmarkButton) bVar.mo20994a().findViewById(C7310d.restartButton));
                 int i = C7310d.focusHelperExpandContentDetailHeaderOnFocus;
                 Boolean valueOf = Boolean.valueOf(true);
@@ -488,7 +488,7 @@ public final class C7410a extends C11866a {
             /* renamed from: b */
             public void mo20265b(C7410a aVar, C11867b bVar) {
                 C5897a aVar2 = (C5897a) bVar.itemView.findViewById(C7310d.startPlayerButton);
-                C12880j.m40222a((Object) aVar2, "playerButton");
+                Intrinsics.checkReturnedValueIsNotNull((Object) aVar2, "playerButton");
                 aVar2.setVisibility(aVar.f16278c ? 0 : 8);
                 if (aVar.f16279c0 != null) {
                     aVar2.setState(aVar.f16279c0);
@@ -546,7 +546,7 @@ public final class C7410a extends C11866a {
             /* renamed from: b */
             public void mo20265b(C7410a aVar, C11867b bVar) {
                 TextView textView = (TextView) bVar.mo20994a().findViewById(C7310d.promoLabelTextView);
-                C12880j.m40222a((Object) textView, "holder.promoLabelTextView");
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView, "holder.promoLabelTextView");
                 C5844l0.m18865a(textView, (CharSequence) aVar.f16275Z, false, 2, (Object) null);
             }
         }
@@ -590,19 +590,19 @@ public final class C7410a extends C11866a {
             public void mo20265b(C7410a aVar, C11867b bVar) {
                 if (aVar.f16278c) {
                     View view = bVar.itemView;
-                    C12880j.m40222a((Object) view, "holder.itemView");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) view, "holder.itemView");
                     Context context = view.getContext();
-                    C12880j.m40222a((Object) context, "holder.itemView.context");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) context, "holder.itemView.context");
                     if (C5837i.m18843e(context)) {
                         View findViewById = bVar.itemView.findViewById(C7310d.startPlayerButton);
                         ImageView imageView = (ImageView) bVar.itemView.findViewById(C7310d.watchlistButton);
-                        C12880j.m40222a((Object) findViewById, "playerButton");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) findViewById, "playerButton");
                         boolean z = true;
                         if (findViewById.getVisibility() == 0) {
                             findViewById.requestFocus();
                             return;
                         }
-                        C12880j.m40222a((Object) imageView, "addWatchlistButton");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "addWatchlistButton");
                         if (imageView.getVisibility() != 0) {
                             z = false;
                         }
@@ -717,7 +717,7 @@ public final class C7410a extends C11866a {
             public void mo20265b(C7410a aVar, C11867b bVar) {
                 int i;
                 ImageView imageView = (ImageView) bVar.itemView.findViewById(C7310d.watchlistButton);
-                C12880j.m40222a((Object) imageView, "addWatchlistButton");
+                Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "addWatchlistButton");
                 Boolean j = aVar.f16281e0.mo20253j();
                 int i2 = 0;
                 Boolean valueOf = Boolean.valueOf(true);
@@ -725,10 +725,10 @@ public final class C7410a extends C11866a {
                     i2 = 8;
                 }
                 imageView.setVisibility(i2);
-                if (!C12880j.m40224a((Object) Boolean.valueOf(imageView.isSelected()), (Object) aVar.f16281e0.mo20253j())) {
-                    imageView.setSelected(C12880j.m40224a((Object) aVar.f16281e0.mo20253j(), (Object) valueOf));
+                if (!Intrinsics.areEqual((Object) Boolean.valueOf(imageView.isSelected()), (Object) aVar.f16281e0.mo20253j())) {
+                    imageView.setSelected(Intrinsics.areEqual((Object) aVar.f16281e0.mo20253j(), (Object) valueOf));
                 }
-                if (C12880j.m40224a((Object) aVar.f16281e0.mo20253j(), (Object) valueOf)) {
+                if (Intrinsics.areEqual((Object) aVar.f16281e0.mo20253j(), (Object) valueOf)) {
                     i = C7313g.a11y_details_watchlist_remove;
                 } else {
                     i = C7313g.a11y_details_watchlist;
@@ -1058,7 +1058,7 @@ public final class C7410a extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:22:0x006a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f16290n0, (java.lang.Object) r3.f16290n0) != false) goto L_0x006f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f16290n0, (java.lang.Object) r3.f16290n0) != false) goto L_0x006f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -1070,43 +1070,43 @@ public final class C7410a extends C11866a {
             g.e.b.k.k.q.a r3 = (p163g.p201e.p203b.p287k.p293k.p294q.C7410a) r3
             g.e.b.k.k.o r0 = r2.f16281e0
             g.e.b.k.k.o r1 = r3.f16281e0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x006d
             com.bamtechmedia.dominguez.core.i.p.c r0 = r2.f16282f0
             com.bamtechmedia.dominguez.core.i.p.c r1 = r3.f16282f0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x006d
             g.e.b.k.k.t.a r0 = r2.f16283g0
             g.e.b.k.k.t.a r1 = r3.f16283g0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x006d
             com.bamtechmedia.dominguez.detail.common.e r0 = r2.f16284h0
             com.bamtechmedia.dominguez.detail.common.e r1 = r3.f16284h0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x006d
             com.bamtechmedia.dominguez.core.content.c r0 = r2.f16285i0
             com.bamtechmedia.dominguez.core.content.c r1 = r3.f16285i0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x006d
             g.e.b.k.k.p r0 = r2.f16286j0
             g.e.b.k.k.p r1 = r3.f16286j0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x006d
             g.e.b.k.k.d r0 = r2.f16287k0
             g.e.b.k.k.d r1 = r3.f16287k0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x006d
             com.bamtechmedia.dominguez.config.r0 r0 = r2.f16288l0
             com.bamtechmedia.dominguez.config.r0 r1 = r3.f16288l0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x006d
             com.bamtechmedia.dominguez.detail.common.r r0 = r2.f16289m0
             com.bamtechmedia.dominguez.detail.common.r r1 = r3.f16289m0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x006d
             com.bamtechmedia.dominguez.detail.common.g0.c r0 = r2.f16290n0
             com.bamtechmedia.dominguez.detail.common.g0.c r3 = r3.f16290n0
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x006d
             goto L_0x006f
         L_0x006d:
@@ -1131,7 +1131,7 @@ public final class C7410a extends C11866a {
         ArrayList arrayList = new ArrayList();
         for (Object next : list) {
             C7411a aVar2 = (C7411a) next;
-            if (!C12880j.m40224a(aVar2.mo20262a().invoke(aVar), aVar2.mo20262a().invoke(this))) {
+            if (!Intrinsics.areEqual(aVar2.mo20262a().invoke(aVar), aVar2.mo20262a().invoke(this))) {
                 arrayList.add(next);
             }
         }
@@ -1170,7 +1170,7 @@ public final class C7410a extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof C7410a) && C12880j.m40224a((Object) ((C7410a) eVar).f16274Y.mo12903f(), (Object) this.f16274Y.mo12903f());
+        return (eVar instanceof C7410a) && Intrinsics.areEqual((Object) ((C7410a) eVar).f16274Y.mo12903f(), (Object) this.f16274Y.mo12903f());
     }
 
     public String toString() {

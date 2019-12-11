@@ -12,7 +12,7 @@ import androidx.constraintlayout.widget.Group;
 import com.bamtech.player.exo.ExoSurfaceView;
 import com.bamtechmedia.dominguez.playback.C6327f;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.C5273h;
 import p163g.p174d.p178b.p200z.C5342b.C5343a;
 import p163g.p174d.p178b.p200z.C5347c.C5348a;
@@ -66,14 +66,14 @@ public final class C6558b extends C5273h {
     /* renamed from: L */
     public final List<View> mo19211L() {
         ConstraintLayout constraintLayout = (ConstraintLayout) this.f14818a.findViewById(C6327f.bottomBarContainer);
-        C12880j.m40222a((Object) constraintLayout, "activity.bottomBarContainer");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "activity.bottomBarContainer");
         return C13183n.m40498a(constraintLayout);
     }
 
     /* renamed from: M */
     public final List<View> mo19212M() {
         ConstraintLayout constraintLayout = (ConstraintLayout) this.f14818a.findViewById(C6327f.topBarContainer);
-        C12880j.m40222a((Object) constraintLayout, "activity.topBarContainer");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "activity.topBarContainer");
         return C13183n.m40498a(constraintLayout);
     }
 
@@ -135,31 +135,31 @@ public final class C6558b extends C5273h {
     /* renamed from: s */
     public List<View> mo16824s() {
         TextView textView = (TextView) this.f14818a.findViewById(C6327f.currentTimeTextView);
-        C12880j.m40222a((Object) textView, "activity.currentTimeTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "activity.currentTimeTextView");
         TextView textView2 = (TextView) this.f14818a.findViewById(C6327f.remainingTimeTextView);
-        C12880j.m40222a((Object) textView2, "activity.remainingTimeTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "activity.remainingTimeTextView");
         ConstraintLayout constraintLayout = (ConstraintLayout) this.f14818a.findViewById(C6327f.topBarContainer);
-        C12880j.m40222a((Object) constraintLayout, "activity.topBarContainer");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "activity.topBarContainer");
         ImageView imageView = (ImageView) this.f14818a.findViewById(C6327f.jumpBackwardButton);
-        C12880j.m40222a((Object) imageView, "activity.jumpBackwardButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "activity.jumpBackwardButton");
         ImageView imageView2 = (ImageView) this.f14818a.findViewById(C6327f.jumpForwardButton);
-        C12880j.m40222a((Object) imageView2, "activity.jumpForwardButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView2, "activity.jumpForwardButton");
         ImageView imageView3 = (ImageView) this.f14818a.findViewById(C6327f.playPauseButton);
-        C12880j.m40222a((Object) imageView3, "activity.playPauseButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView3, "activity.playPauseButton");
         return C13185o.m40520c(textView, textView2, constraintLayout, imageView, imageView2, imageView3);
     }
 
     /* renamed from: t */
     public ImageView mo16825t() {
         ImageView imageView = (ImageView) this.f14818a.findViewById(C6327f.ff_speed);
-        C12880j.m40222a((Object) imageView, "activity.ff_speed");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "activity.ff_speed");
         return imageView;
     }
 
     /* renamed from: w */
     public ImageView mo16828w() {
         ImageView imageView = (ImageView) this.f14818a.findViewById(C6327f.rw_speed);
-        C12880j.m40222a((Object) imageView, "activity.rw_speed");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "activity.rw_speed");
         return imageView;
     }
 

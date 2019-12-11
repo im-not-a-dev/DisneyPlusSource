@@ -14,7 +14,7 @@ import p163g.p413f.p414a.p418s.C10710c;
 public class OkHttpGlideModule implements C10710c {
     /* renamed from: a */
     public void mo21138a(Context context, C10652e eVar, C10659l lVar) {
-        lVar.mo27557b(C8292g.class, InputStream.class, (C8308o<? extends Model, ? extends Data>) new C8104a<Object,Object>());
+        lVar.mo27557b(C8292g.class, InputStream.class, (C8308o<? extendsMODEL, ? extends Data>) new C8104a<Object,Object>());
     }
 
     /* renamed from: a */

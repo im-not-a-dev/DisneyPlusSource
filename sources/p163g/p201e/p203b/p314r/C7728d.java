@@ -13,7 +13,7 @@ import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -171,7 +171,7 @@ public final class C7728d implements C7727c {
         this.f16796d = dVar;
         this.f16797e = rVar;
         C10723a b = ((C10731h) ((C10731h) new C10731h().mo19924a(C8106b.PREFER_ARGB_8888)).mo19928a(C8227j.f17608b)).mo19934b(Integer.MIN_VALUE);
-        C12880j.m40222a((Object) b, "RequestOptions()\n       …ide(Target.SIZE_ORIGINAL)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "RequestOptions()\n       …ide(Target.SIZE_ORIGINAL)");
         this.f16795c = (C10731h) b;
     }
 
@@ -194,14 +194,14 @@ public final class C7728d implements C7727c {
     /* renamed from: b */
     public Completable mo20645b() {
         Completable b = Completable.m38162b((Callable<? extends CompletableSource>) new C7732d<Object>(this)).mo30051b(this.f16797e);
-        C12880j.m40222a((Object) b, "Completable.defer {\n    …ribeOn(prefetchScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.defer {\n    …ribeOn(prefetchScheduler)");
         return b;
     }
 
     /* renamed from: a */
     public Completable mo20643a() {
         Completable b = Completable.m38162b((Callable<? extends CompletableSource>) new C7731c<Object>(this)).mo30051b(this.f16797e);
-        C12880j.m40222a((Object) b, "Completable.defer {\n    …ribeOn(prefetchScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.defer {\n    …ribeOn(prefetchScheduler)");
         return b;
     }
 
@@ -214,7 +214,7 @@ public final class C7728d implements C7727c {
     /* renamed from: a */
     public final String m22785a(boolean z) {
         Resources resources = this.f16796d.getResources();
-        C12880j.m40222a((Object) resources, "activity.resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "activity.resources");
         int i = resources.getDisplayMetrics().densityDpi;
         String str = i <= 160 ? "mdpi" : i <= 240 ? "hdpi" : i <= 320 ? "xhdpi" : i <= 480 ? "xxhdpi" : "xxxhdpi";
         String str2 = z ? "anakin" : "ga";

@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.detail.series.models.C6046d;
 import com.google.common.base.Optional;
 import java.util.Iterator;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p287k.p293k.p297t.C7454a;
 import p163g.p201e.p203b.p287k.p293k.p297t.C7454a.C7468g;
 import p163g.p201e.p203b.p407e0.C10601l;
@@ -19,7 +19,7 @@ import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001B?\b\u0007\u0012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\b\b\u0001\u0010\r\u001a\u00020\u000e¢\u0006\u0002\u0010\u000fJ \u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u00132\u0006\u0010\u0014\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u0015H\u0002J\u0018\u0010\u0017\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u00132\u0006\u0010\u0018\u001a\u00020\u0015H\u0002J\u0018\u0010\u0019\u001a\u00020\u00112\u0006\u0010\u001a\u001a\u00020\u001b2\u0006\u0010\u0012\u001a\u00020\u0013H\u0002J\u000e\u0010\u001c\u001a\u00020\u00112\u0006\u0010\u001a\u001a\u00020\u001bJ\u0010\u0010\u001d\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0013H\u0002J\u0018\u0010\u001e\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u00132\u0006\u0010\u001a\u001a\u00020\u001bH\u0002R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000¨\u0006\u001f"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/detail/series/SeriesDeepLinkActionHandler;", "", "downloadDelegate", "Lcom/google/common/base/Optional;", "Lcom/bamtechmedia/dominguez/detail/series/data/SeriesDownloadDelegate;", "watchlistRepository", "Lcom/bamtechmedia/dominguez/watchlist/WatchlistRepository;", "episodeDataSource", "Lcom/bamtechmedia/dominguez/detail/series/data/EpisodeDataSource;", "arguments", "Lcom/bamtechmedia/dominguez/detail/series/SeriesDetailArguments;", "router", "Lcom/bamtechmedia/dominguez/detail/series/SeriesDetailRouter;", "isTelevision", "", "(Lcom/google/common/base/Optional;Lcom/bamtechmedia/dominguez/watchlist/WatchlistRepository;Lcom/bamtechmedia/dominguez/detail/series/data/EpisodeDataSource;Lcom/bamtechmedia/dominguez/detail/series/SeriesDetailArguments;Lcom/bamtechmedia/dominguez/detail/series/SeriesDetailRouter;Z)V", "downloadEpisode", "Lio/reactivex/Completable;", "seriesDetail", "Lcom/bamtechmedia/dominguez/detail/series/models/SeriesDetail;", "seasonSequenceNumber", "", "episodeSequenceNumber", "downloadSeason", "seasonNumber", "handleDeepLink", "viewModel", "Lcom/bamtechmedia/dominguez/detail/series/viewmodel/SeriesDetailViewModel;", "handleDeepLinks", "handleDownload", "handleWatchlist", "contentDetail_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.k.k.c */
@@ -68,7 +68,7 @@ public final class C7383c {
             sb.append(this.f16227c);
             sb.append('E');
             sb.append(this.f16226U);
-            C14100a.m44522a(sb.toString(), new Object[0]);
+            Timber.m44522a(sb.toString(), new Object[0]);
         }
     }
 
@@ -202,7 +202,7 @@ public final class C7383c {
     /* renamed from: a */
     public final Completable mo20211a(C7454a aVar) {
         Completable b = aVar.getState().mo30150a((C11952h<? super T>) C7387d.f16233c).mo30193g(C7388e.f16234c).mo30186d().mo30217b((Function<? super T, ? extends CompletableSource>) new C7389f<Object,Object>(this, aVar));
-        C12880j.m40222a((Object) b, "viewModel.state\n        …DeepLink(viewModel, it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "viewModel.state\n        …DeepLink(viewModel, it) }");
         return b;
     }
 
@@ -210,7 +210,7 @@ public final class C7383c {
     /* renamed from: a */
     public final Completable m22119a(C7454a aVar, C6046d dVar) {
         Completable a = Completable.m38157a(m22117a(dVar, aVar), m22114a(dVar));
-        C12880j.m40222a((Object) a, "Completable.mergeArray(\n…d(seriesDetail)\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.mergeArray(\n…d(seriesDetail)\n        )");
         return a;
     }
 
@@ -218,11 +218,11 @@ public final class C7383c {
     private final Completable m22117a(C6046d dVar, C7454a aVar) {
         if (this.f16223d.mo20229X()) {
             Completable b = this.f16221b.mo27467a(dVar.mo18288d0().mo12903f()).mo30050b((C11945a) new C7390g(aVar));
-            C12880j.m40222a((Object) b, "watchlistRepository.addI…tState(newState = true) }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "watchlistRepository.addI…tState(newState = true) }");
             return b;
         }
         Completable h = Completable.m38169h();
-        C12880j.m40222a((Object) h, "Completable.complete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
         return h;
     }
 
@@ -230,7 +230,7 @@ public final class C7383c {
     private final Completable m22114a(C6046d dVar) {
         if (!this.f16223d.mo20230Y() || this.f16225f) {
             Completable h = Completable.m38169h();
-            C12880j.m40222a((Object) h, "Completable.complete()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
             return h;
         } else if (this.f16223d.mo20227F() != 0 && this.f16223d.mo20228I() != 0) {
             return m22116a(dVar, this.f16223d.mo20227F(), this.f16223d.mo20228I());
@@ -239,7 +239,7 @@ public final class C7383c {
                 return m22115a(dVar, this.f16223d.mo20227F());
             }
             Completable a = Completable.m38154a((Throwable) new IllegalArgumentException("No season and optional episode number was specified"));
-            C12880j.m40222a((Object) a, "Completable.error(Illega…e number was specified\"))");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.error(Illega…e number was specified\"))");
             return a;
         }
     }
@@ -269,18 +269,18 @@ public final class C7383c {
         C3789t tVar = (C3789t) obj;
         if (tVar != null) {
             Completable c = Completable.m38166c((C11945a) new C7386c(this, dVar, tVar));
-            C12880j.m40222a((Object) c, "Completable.fromAction {…sDetail.series, season) }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.fromAction {…sDetail.series, season) }");
             return c;
         }
         Completable h = Completable.m38169h();
-        C12880j.m40222a((Object) h, "Completable.complete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
         return h;
     }
 
     /* renamed from: a */
     private final Completable m22116a(C6046d dVar, int i, int i2) {
         Completable b = this.f16222c.mo18126a(dVar.mo18288d0().mo13025D(), i, i2).mo30222c((Consumer<? super Disposable>) new C7384a<Object>(i, i2)).mo30217b((Function<? super T, ? extends CompletableSource>) new C7385b<Object,Object>(this, dVar));
-        C12880j.m40222a((Object) b, "episodeDataSource.episod…etail.series, it, null) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "episodeDataSource.episod…etail.series, it, null) }");
         return b;
     }
 }

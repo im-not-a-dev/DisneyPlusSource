@@ -13,7 +13,7 @@ import com.disney.dominguez.navigation.core.ViewModelNavEventHandler.Observer;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p437h.p438a.p439a.p440a.C10894b;
 
@@ -37,7 +37,7 @@ public final class C5792f extends C5786d {
         /* renamed from: a */
         public final C5792f mo17699a(Fragment fragment, int i) {
             C0741y a = C0703a0.m3720b(fragment).mo4180a(ViewModelNavEventHandler.class);
-            C12880j.m40222a((Object) a, "ViewModelProviders.of(fr…EventHandler::class.java)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "ViewModelProviders.of(fr…EventHandler::class.java)");
             ViewModelNavEventHandler viewModelNavEventHandler = (ViewModelNavEventHandler) a;
             if (!viewModelNavEventHandler.mo21647y().contains(Integer.valueOf(fragment.getLifecycle().hashCode()))) {
                 fragment.getLifecycle().mo4134a(new Observer(viewModelNavEventHandler, new C10894b(fragment)));
@@ -73,7 +73,7 @@ public final class C5792f extends C5786d {
         /* renamed from: a */
         public final void mo17700a(Fragment fragment) {
             C0538i childFragmentManager = fragment.getChildFragmentManager();
-            C12880j.m40222a((Object) childFragmentManager, "childFragmentManager");
+            Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "childFragmentManager");
             Fragment f = childFragmentManager.mo3160f();
             if (f != null) {
                 Fragment targetFragment = f.getTargetFragment();
@@ -110,10 +110,10 @@ public final class C5792f extends C5786d {
         public final void mo17701a(Fragment fragment) {
             fragment.getChildFragmentManager().mo3156b();
             C0538i childFragmentManager = fragment.getChildFragmentManager();
-            C12880j.m40222a((Object) childFragmentManager, "childFragmentManager");
+            Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "childFragmentManager");
             if (childFragmentManager.mo3157c() > 0) {
                 C0539a b = fragment.getChildFragmentManager().mo3154b(0);
-                C12880j.m40222a((Object) b, "childFragmentManager.getBackStackEntryAt(0)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "childFragmentManager.getBackStackEntryAt(0)");
                 fragment.getChildFragmentManager().mo3148a(b.getId(), 1);
             }
             C0564o a = fragment.getChildFragmentManager().mo3147a();

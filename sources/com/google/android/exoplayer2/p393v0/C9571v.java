@@ -17,7 +17,7 @@ public final class C9571v {
     private int f22332d;
 
     public C9571v() {
-        this.f22329a = C9554k0.f22286f;
+        this.f22329a = Util.EMPTY_BYTE_ARRAY;
     }
 
     /* renamed from: g */

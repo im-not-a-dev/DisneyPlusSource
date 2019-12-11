@@ -4,7 +4,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p520io.reactivex.Observable;
 import p520io.reactivex.Single;
@@ -87,7 +87,7 @@ public final class C11922d {
             if (r1 != r0) goto L_0x000e
             io.reactivex.functions.Consumer r1 = p520io.reactivex.p531y.p533b.C12015a.m38648b()
             java.lang.String r0 = "Functions.emptyConsumer()"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r0)
             goto L_0x0018
         L_0x000e:
             if (r1 == 0) goto L_0x0016
@@ -115,7 +115,7 @@ public final class C11922d {
             if (r1 != r0) goto L_0x000c
             io.reactivex.functions.Consumer<java.lang.Throwable> r1 = p520io.reactivex.p531y.p533b.C12015a.f27746e
             java.lang.String r0 = "Functions.ON_ERROR_MISSING"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r0)
             goto L_0x0016
         L_0x000c:
             if (r1 == 0) goto L_0x0014
@@ -143,7 +143,7 @@ public final class C11922d {
             if (r1 != r0) goto L_0x000c
             io.reactivex.functions.a r1 = p520io.reactivex.p531y.p533b.C12015a.f27744c
             java.lang.String r0 = "Functions.EMPTY_ACTION"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r0)
             goto L_0x0016
         L_0x000c:
             if (r1 == 0) goto L_0x0014
@@ -186,7 +186,7 @@ public final class C11922d {
     /* renamed from: a */
     public static final <T> Disposable m38476a(Observable<T> observable, Function1<? super Throwable, C13145v> function1, Function0<C13145v> function0, Function1<? super T, C13145v> function12) {
         Disposable a = observable.mo30158a(m38480a(function12), m38482b(function1), m38481a(function0));
-        C12880j.m40222a((Object) a, "subscribe(onNext.asConsu…ete.asOnCompleteAction())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "subscribe(onNext.asConsu…ete.asOnCompleteAction())");
         return a;
     }
 
@@ -213,7 +213,7 @@ public final class C11922d {
     /* renamed from: a */
     public static final <T> Disposable m38478a(Single<T> single, Function1<? super Throwable, C13145v> function1, Function1<? super T, C13145v> function12) {
         Disposable a = single.mo30214a(m38480a(function12), m38482b(function1));
-        C12880j.m40222a((Object) a, "subscribe(onSuccess.asCo…rror.asOnErrorConsumer())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "subscribe(onSuccess.asCo…rror.asOnErrorConsumer())");
         return a;
     }
 }

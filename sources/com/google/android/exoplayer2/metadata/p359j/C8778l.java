@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.metadata.p359j;
 
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.metadata.j.l */
@@ -46,7 +46,7 @@ public final class C8778l extends C8773i {
             return false;
         }
         C8778l lVar = (C8778l) obj;
-        if (!C9554k0.m29414a((Object) this.f18635U, (Object) lVar.f18635U) || !Arrays.equals(this.f18636V, lVar.f18636V)) {
+        if (!Util.m29414a((Object) this.f18635U, (Object) lVar.f18635U) || !Arrays.equals(this.f18636V, lVar.f18636V)) {
             z = false;
         }
         return z;
@@ -73,10 +73,10 @@ public final class C8778l extends C8773i {
     C8778l(Parcel parcel) {
         super("PRIV");
         String readString = parcel.readString();
-        C9554k0.m29394a(readString);
+        Util.castNonNull(readString);
         this.f18635U = readString;
         byte[] createByteArray = parcel.createByteArray();
-        C9554k0.m29394a(createByteArray);
+        Util.castNonNull(createByteArray);
         this.f18636V = createByteArray;
     }
 }

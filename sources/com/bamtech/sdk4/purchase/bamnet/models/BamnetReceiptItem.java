@@ -9,7 +9,7 @@ import com.bamtech.sdk4.purchase.bamnet.BamnetClaimException;
 import java.nio.charset.Charset;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 import org.json.JSONObject;
 
@@ -103,41 +103,41 @@ public abstract class BamnetReceiptItem {
                 String str = "receipt.receiptJSON";
                 if (i == 1) {
                     JSONObject d = bamnetIAPPurchase.mo7209d();
-                    C12880j.m40222a((Object) d, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) d, str);
                     return new AmazonReceipt(BamnetReceiptItemKt.safeGetString(d, BamnetReceiptItem.Companion.getAMAZON_RECEIPT_ID()));
                 } else if (i == 2) {
                     JSONObject d2 = bamnetIAPPurchase.mo7209d();
-                    C12880j.m40222a((Object) d2, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) d2, str);
                     String safeGetString = BamnetReceiptItemKt.safeGetString(d2, BamnetReceiptItem.Companion.getGOOGLE_SIGNATURE());
                     String c = bamnetIAPPurchase.mo7208c();
-                    C12880j.m40222a((Object) c, "receipt.originalJson");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) c, "receipt.originalJson");
                     Charset charset = C12801c.f29474a;
                     if (c != null) {
                         byte[] bytes = c.getBytes(charset);
-                        C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
                         String encodeToString = Base64.encodeToString(bytes, 2);
                         JSONObject d3 = bamnetIAPPurchase.mo7209d();
-                        C12880j.m40222a((Object) d3, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) d3, str);
                         String safeGetString2 = BamnetReceiptItemKt.safeGetString(d3, BamnetReceiptItem.Companion.getGOOGLE_PRODUCT_ID());
                         JSONObject d4 = bamnetIAPPurchase.mo7209d();
-                        C12880j.m40222a((Object) d4, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) d4, str);
                         String safeGetString3 = BamnetReceiptItemKt.safeGetString(d4, BamnetReceiptItem.Companion.getGOOGLE_PACKAGE_NAME());
                         JSONObject d5 = bamnetIAPPurchase.mo7209d();
-                        C12880j.m40222a((Object) d5, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) d5, str);
                         String safeGetString4 = BamnetReceiptItemKt.safeGetString(d5, BamnetReceiptItem.Companion.getGOOGLE_PURCHASE_TOKEN());
-                        C12880j.m40222a((Object) encodeToString, "encodedJson");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) encodeToString, "encodedJson");
                         GoogleReceipt googleReceipt = new GoogleReceipt(safeGetString2, safeGetString3, safeGetString, safeGetString4, encodeToString);
                         return googleReceipt;
                     }
                     throw new C13142s("null cannot be cast to non-null type java.lang.String");
                 } else if (i == 3) {
                     String e = bamnetIAPPurchase.mo7210e();
-                    C12880j.m40222a((Object) e, "receipt.sku");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) e, "receipt.sku");
                     JSONObject d6 = bamnetIAPPurchase.mo7209d();
-                    C12880j.m40222a((Object) d6, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) d6, str);
                     String safeGetString5 = BamnetReceiptItemKt.safeGetString(d6, BamnetReceiptItem.Companion.getMOCK_USER_ID());
                     JSONObject d7 = bamnetIAPPurchase.mo7209d();
-                    C12880j.m40222a((Object) d7, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) d7, str);
                     return new MockReceipt(e, safeGetString5, BamnetReceiptItemKt.safeGetString(d7, BamnetReceiptItem.Companion.getMOCK_RECEIPT_ID()));
                 }
             }

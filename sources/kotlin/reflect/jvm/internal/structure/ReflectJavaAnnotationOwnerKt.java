@@ -4,7 +4,7 @@ import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p581d0.C12731a;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
 
@@ -21,7 +21,7 @@ public final class ReflectJavaAnnotationOwnerKt {
                 break;
             }
             annotation = annotationArr[i];
-            if (C12880j.m40224a((Object) ReflectClassUtilKt.getClassId(C12731a.m39866a(C12731a.m39868a(annotation))).asSingleFqName(), (Object) fqName)) {
+            if (Intrinsics.areEqual((Object) ReflectClassUtilKt.getClassId(C12731a.m39866a(C12731a.m39868a(annotation))).asSingleFqName(), (Object) fqName)) {
                 break;
             }
             i++;

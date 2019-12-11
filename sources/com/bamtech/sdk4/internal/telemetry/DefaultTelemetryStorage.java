@@ -10,7 +10,7 @@ import java.util.Map.Entry;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 import okio.BufferedSource;
 import okio.C14287m;
@@ -116,7 +116,7 @@ public final class DefaultTelemetryStorage implements TelemetryStorage {
 
     public final List<String> getSortedFileNames() {
         String[] list = this.dustDir.list();
-        C12880j.m40222a((Object) list, "list");
+        Intrinsics.checkReturnedValueIsNotNull((Object) list, "list");
         if (list != null) {
             C13171j.m40344b(list);
             return C13174k.m40390b((Object[]) list, getBatchLimit());

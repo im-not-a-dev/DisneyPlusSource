@@ -3,7 +3,7 @@ package com.bamtech.sdk4.internal.service;
 import com.bamtech.sdk4.internal.configuration.BootstrapConfiguration;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00032\u00020\u0001:\u0001\u0003B\u0005¢\u0006\u0002\u0010\u0002¨\u0006\u0004"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/service/ServiceTransactionModule;", "", "()V", "Companion", "sdk-configuration"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: ServiceTransactionModule.kt */
@@ -19,11 +19,11 @@ public final class ServiceTransactionModule {
         public final ServiceTransaction transaction(BootstrapConfiguration bootstrapConfiguration, Provider<DefaultServiceTransaction> provider, Provider<DebugServiceTransaction> provider2) {
             if (bootstrapConfiguration.getDebugEnabled()) {
                 Object obj = provider2.get();
-                C12880j.m40222a(obj, "debug.get()");
+                Intrinsics.checkReturnedValueIsNotNull(obj, "debug.get()");
                 return (ServiceTransaction) obj;
             }
             Object obj2 = provider.get();
-            C12880j.m40222a(obj2, "default.get()");
+            Intrinsics.checkReturnedValueIsNotNull(obj2, "default.get()");
             return (ServiceTransaction) obj2;
         }
 

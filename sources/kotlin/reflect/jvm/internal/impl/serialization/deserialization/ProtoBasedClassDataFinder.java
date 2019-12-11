@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Class;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.PackageFragment;
@@ -25,12 +25,12 @@ public final class ProtoBasedClassDataFinder implements ClassDataFinder {
         this.metadataVersion = binaryVersion;
         this.classSource = function1;
         List class_List = packageFragment.getClass_List();
-        C12880j.m40222a((Object) class_List, "proto.class_List");
+        Intrinsics.checkReturnedValueIsNotNull((Object) class_List, "proto.class_List");
         LinkedHashMap linkedHashMap = new LinkedHashMap(C12762h.m39913a(C13173j0.m40349a(C13187p.m40525a((Iterable) class_List, 10)), 16));
         for (Object next : class_List) {
             Class classR = (Class) next;
             NameResolver nameResolver3 = this.nameResolver;
-            C12880j.m40222a((Object) classR, "klass");
+            Intrinsics.checkReturnedValueIsNotNull((Object) classR, "klass");
             linkedHashMap.put(NameResolverUtilKt.getClassId(nameResolver3, classR.getFqName()), next);
         }
         this.classIdToProto = linkedHashMap;

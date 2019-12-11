@@ -8,7 +8,7 @@ import com.disney.dominguez.navigation.core.C8436a;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p437h.p438a.p439a.p440a.C10896d;
 
@@ -104,13 +104,13 @@ public class C5786d implements C5783b {
             if (this.f13560c == 0) {
                 Function1 function1 = this.f13559U;
                 Context requireContext = fragment.requireContext();
-                C12880j.m40222a((Object) requireContext, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, str);
                 fragment.startActivity((Intent) function1.invoke(requireContext));
                 return;
             }
             Function1 function12 = this.f13559U;
             Context requireContext2 = fragment.requireContext();
-            C12880j.m40222a((Object) requireContext2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext2, str);
             fragment.startActivityForResult((Intent) function12.invoke(requireContext2), this.f13560c);
         }
 

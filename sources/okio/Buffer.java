@@ -10,11 +10,12 @@ import java.nio.channels.ByteChannel;
 import java.nio.charset.Charset;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 import net.danlew.android.joda.DateUtils;
 
-@Metadata(mo31005bv = {1, 0, 2}, mo31006d1 = {"\u0000¶\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u001a\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u0005\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u0012\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0010\n\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0018\u0018\u0000 \u00012\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u0004:\u0004\u0001\u0001B\u0005¢\u0006\u0002\u0010\u0005J\b\u0010\u0006\u001a\u00020\u0000H\u0016J\u0006\u0010\u0011\u001a\u00020\u0012J\b\u0010\u0013\u001a\u00020\u0000H\u0016J\b\u0010\u0014\u001a\u00020\u0012H\u0016J\u0006\u0010\u0015\u001a\u00020\fJ$\u0010\u0016\u001a\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u00182\b\b\u0002\u0010\u0019\u001a\u00020\f2\b\b\u0002\u0010\u001a\u001a\u00020\fH\u0007J\"\u0010\u0016\u001a\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u00002\b\b\u0002\u0010\u0019\u001a\u00020\f2\b\b\u0002\u0010\u001a\u001a\u00020\fJ\u0010\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u001eH\u0002J\b\u0010\u001f\u001a\u00020\u0000H\u0016J\b\u0010 \u001a\u00020\u0000H\u0016J\u0013\u0010!\u001a\u00020\"2\b\u0010#\u001a\u0004\u0018\u00010$H\u0002J\b\u0010%\u001a\u00020\"H\u0016J\b\u0010&\u001a\u00020\u0012H\u0016J\u0016\u0010'\u001a\u00020(2\u0006\u0010)\u001a\u00020\fH\u0002¢\u0006\u0002\b*J\u0015\u0010*\u001a\u00020(2\u0006\u0010+\u001a\u00020\fH\u0007¢\u0006\u0002\b,J\b\u0010-\u001a\u00020.H\u0016J\u0018\u0010/\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u00100\u001a\u00020\u001cH\u0002J\u000e\u00101\u001a\u00020\u001c2\u0006\u00100\u001a\u00020\u001cJ\u000e\u00102\u001a\u00020\u001c2\u0006\u00100\u001a\u00020\u001cJ\u000e\u00103\u001a\u00020\u001c2\u0006\u00100\u001a\u00020\u001cJ\u0010\u00104\u001a\u00020\f2\u0006\u00105\u001a\u00020(H\u0016J\u0018\u00104\u001a\u00020\f2\u0006\u00105\u001a\u00020(2\u0006\u00106\u001a\u00020\fH\u0016J \u00104\u001a\u00020\f2\u0006\u00105\u001a\u00020(2\u0006\u00106\u001a\u00020\f2\u0006\u00107\u001a\u00020\fH\u0016J\u0010\u00104\u001a\u00020\f2\u0006\u00108\u001a\u00020\u001cH\u0016J\u0018\u00104\u001a\u00020\f2\u0006\u00108\u001a\u00020\u001c2\u0006\u00106\u001a\u00020\fH\u0016J\u0010\u00109\u001a\u00020\f2\u0006\u0010:\u001a\u00020\u001cH\u0016J\u0018\u00109\u001a\u00020\f2\u0006\u0010:\u001a\u00020\u001c2\u0006\u00106\u001a\u00020\fH\u0016J\b\u0010;\u001a\u00020<H\u0016J\b\u0010=\u001a\u00020\"H\u0016J\u0006\u0010>\u001a\u00020\u001cJ\b\u0010?\u001a\u00020\u0018H\u0016J\b\u0010@\u001a\u00020\u0001H\u0016J\u0018\u0010A\u001a\u00020\"2\u0006\u0010\u0019\u001a\u00020\f2\u0006\u00108\u001a\u00020\u001cH\u0016J(\u0010A\u001a\u00020\"2\u0006\u0010\u0019\u001a\u00020\f2\u0006\u00108\u001a\u00020\u001c2\u0006\u0010B\u001a\u00020.2\u0006\u0010\u001a\u001a\u00020.H\u0016J0\u0010A\u001a\u00020\"2\u0006\u0010C\u001a\u00020\n2\u0006\u0010D\u001a\u00020.2\u0006\u00108\u001a\u00020E2\u0006\u0010B\u001a\u00020.2\u0006\u0010F\u001a\u00020.H\u0002J\u0010\u0010G\u001a\u00020.2\u0006\u0010H\u001a\u00020IH\u0016J\u0010\u0010G\u001a\u00020.2\u0006\u0010H\u001a\u00020EH\u0016J \u0010G\u001a\u00020.2\u0006\u0010H\u001a\u00020E2\u0006\u0010\u0019\u001a\u00020.2\u0006\u0010\u001a\u001a\u00020.H\u0016J\u0018\u0010G\u001a\u00020\f2\u0006\u0010H\u001a\u00020\u00002\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0010\u0010J\u001a\u00020\f2\u0006\u0010H\u001a\u00020KH\u0016J\u0012\u0010L\u001a\u00020M2\b\b\u0002\u0010N\u001a\u00020MH\u0007J\b\u0010O\u001a\u00020(H\u0016J\b\u0010P\u001a\u00020EH\u0016J\u0010\u0010P\u001a\u00020E2\u0006\u0010\u001a\u001a\u00020\fH\u0016J\b\u0010Q\u001a\u00020\u001cH\u0016J\u0010\u0010Q\u001a\u00020\u001c2\u0006\u0010\u001a\u001a\u00020\fH\u0016J\b\u0010R\u001a\u00020\fH\u0016J\u000e\u0010S\u001a\u00020\u00002\u0006\u0010T\u001a\u00020<J\u0016\u0010S\u001a\u00020\u00002\u0006\u0010T\u001a\u00020<2\u0006\u0010\u001a\u001a\u00020\fJ \u0010S\u001a\u00020\u00122\u0006\u0010T\u001a\u00020<2\u0006\u0010\u001a\u001a\u00020\f2\u0006\u0010U\u001a\u00020\"H\u0002J\u0010\u0010V\u001a\u00020\u00122\u0006\u0010H\u001a\u00020EH\u0016J\u0018\u0010V\u001a\u00020\u00122\u0006\u0010H\u001a\u00020\u00002\u0006\u0010\u001a\u001a\u00020\fH\u0016J\b\u0010W\u001a\u00020\fH\u0016J\b\u0010X\u001a\u00020.H\u0016J\b\u0010Y\u001a\u00020.H\u0016J\b\u0010Z\u001a\u00020\fH\u0016J\b\u0010[\u001a\u00020\fH\u0016J\b\u0010\\\u001a\u00020]H\u0016J\b\u0010^\u001a\u00020]H\u0016J\u0010\u0010_\u001a\u00020\u001e2\u0006\u0010`\u001a\u00020aH\u0016J\u0018\u0010_\u001a\u00020\u001e2\u0006\u0010\u001a\u001a\u00020\f2\u0006\u0010`\u001a\u00020aH\u0016J\u0012\u0010b\u001a\u00020M2\b\b\u0002\u0010N\u001a\u00020MH\u0007J\b\u0010c\u001a\u00020\u001eH\u0016J\u0010\u0010c\u001a\u00020\u001e2\u0006\u0010\u001a\u001a\u00020\fH\u0016J\b\u0010d\u001a\u00020.H\u0016J\n\u0010e\u001a\u0004\u0018\u00010\u001eH\u0016J\u0015\u0010e\u001a\u00020\u001e2\u0006\u0010f\u001a\u00020\fH\u0000¢\u0006\u0002\bgJ\b\u0010h\u001a\u00020\u001eH\u0016J\u0010\u0010h\u001a\u00020\u001e2\u0006\u0010i\u001a\u00020\fH\u0016J\u0010\u0010j\u001a\u00020\"2\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0010\u0010k\u001a\u00020\u00122\u0006\u0010\u001a\u001a\u00020\fH\u0016J8\u0010l\u001a\u0002Hm\"\u0004\b\u0000\u0010m2\u0006\u00106\u001a\u00020\f2\u001a\u0010n\u001a\u0016\u0012\u0006\u0012\u0004\u0018\u00010\n\u0012\u0004\u0012\u00020\f\u0012\u0004\u0012\u0002Hm0oH\b¢\u0006\u0002\u0010pJ\u0010\u0010q\u001a\u00020.2\u0006\u0010r\u001a\u00020sH\u0016J\u001f\u0010t\u001a\u00020.2\u0006\u0010r\u001a\u00020s2\b\b\u0002\u0010u\u001a\u00020\"H\u0000¢\u0006\u0002\bvJ\u0006\u0010w\u001a\u00020\u001cJ\u0006\u0010x\u001a\u00020\u001cJ\u0006\u0010y\u001a\u00020\u001cJ\r\u0010\r\u001a\u00020\fH\u0007¢\u0006\u0002\bzJ\u0010\u0010{\u001a\u00020\u00122\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0006\u0010|\u001a\u00020\u001cJ\u000e\u0010|\u001a\u00020\u001c2\u0006\u0010\u001a\u001a\u00020.J\b\u0010}\u001a\u00020~H\u0016J\b\u0010\u001a\u00020\u001eH\u0016J\u0018\u0010\u0001\u001a\u00020\n2\u0007\u0010\u0001\u001a\u00020.H\u0000¢\u0006\u0003\b\u0001J\u0012\u0010\u0001\u001a\u00020.2\u0007\u0010\u0001\u001a\u00020IH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020EH\u0016J\"\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020E2\u0006\u0010\u0019\u001a\u00020.2\u0006\u0010\u001a\u001a\u00020.H\u0016J\u001a\u0010\u0001\u001a\u00020\u00122\u0007\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\u001cH\u0016J\u001b\u0010\u0001\u001a\u00020\u00022\b\u0010\u0001\u001a\u00030\u00012\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0013\u0010\u0001\u001a\u00020\f2\b\u0010\u0001\u001a\u00030\u0001H\u0016J\u0011\u0010\u0001\u001a\u00020\u00002\u0006\u00105\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016J\u001a\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\u001e2\u0006\u0010`\u001a\u00020aH\u0016J,\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\u001e2\u0007\u0010\u0001\u001a\u00020.2\u0007\u0010\u0001\u001a\u00020.2\u0006\u0010`\u001a\u00020aH\u0016J\u001b\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u00182\b\b\u0002\u0010\u001a\u001a\u00020\fH\u0007J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\u001eH\u0016J$\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\u001e2\u0007\u0010\u0001\u001a\u00020.2\u0007\u0010\u0001\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016R\u0014\u0010\u0006\u001a\u00020\u00008VX\u0004¢\u0006\u0006\u001a\u0004\b\u0007\u0010\bR\u0014\u0010\t\u001a\u0004\u0018\u00010\n8\u0000@\u0000X\u000e¢\u0006\u0002\n\u0000R&\u0010\r\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\f8\u0007@@X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\u000e\"\u0004\b\u000f\u0010\u0010¨\u0006\u0001"}, mo31007d2 = {"Lokio/Buffer;", "Lokio/BufferedSource;", "Lokio/BufferedSink;", "", "Ljava/nio/channels/ByteChannel;", "()V", "buffer", "getBuffer", "()Lokio/Buffer;", "head", "Lokio/Segment;", "<set-?>", "", "size", "()J", "setSize$jvm", "(J)V", "clear", "", "clone", "close", "completeSegmentByteCount", "copyTo", "out", "Ljava/io/OutputStream;", "offset", "byteCount", "digest", "Lokio/ByteString;", "algorithm", "", "emit", "emitCompleteSegments", "equals", "", "other", "", "exhausted", "flush", "get", "", "pos", "getByte", "index", "-deprecated_getByte", "hashCode", "", "hmac", "key", "hmacSha1", "hmacSha256", "hmacSha512", "indexOf", "b", "fromIndex", "toIndex", "bytes", "indexOfElement", "targetBytes", "inputStream", "Ljava/io/InputStream;", "isOpen", "md5", "outputStream", "peek", "rangeEquals", "bytesOffset", "segment", "segmentPos", "", "bytesLimit", "read", "sink", "Ljava/nio/ByteBuffer;", "readAll", "Lokio/Sink;", "readAndWriteUnsafe", "Lokio/Buffer$UnsafeCursor;", "unsafeCursor", "readByte", "readByteArray", "readByteString", "readDecimalLong", "readFrom", "input", "forever", "readFully", "readHexadecimalUnsignedLong", "readInt", "readIntLe", "readLong", "readLongLe", "readShort", "", "readShortLe", "readString", "charset", "Ljava/nio/charset/Charset;", "readUnsafe", "readUtf8", "readUtf8CodePoint", "readUtf8Line", "newline", "readUtf8Line$jvm", "readUtf8LineStrict", "limit", "request", "require", "seek", "T", "lambda", "Lkotlin/Function2;", "(JLkotlin/jvm/functions/Function2;)Ljava/lang/Object;", "select", "options", "Lokio/Options;", "selectPrefix", "selectTruncated", "selectPrefix$jvm", "sha1", "sha256", "sha512", "-deprecated_size", "skip", "snapshot", "timeout", "Lokio/Timeout;", "toString", "writableSegment", "minimumCapacity", "writableSegment$jvm", "write", "source", "byteString", "Lokio/Source;", "writeAll", "writeByte", "writeDecimalLong", "v", "writeHexadecimalUnsignedLong", "writeInt", "i", "writeIntLe", "writeLong", "writeLongLe", "writeShort", "s", "writeShortLe", "writeString", "string", "beginIndex", "endIndex", "writeTo", "writeUtf8", "writeUtf8CodePoint", "codePoint", "Companion", "UnsafeCursor", "jvm"}, mo31008k = 1, mo31009mv = {1, 1, 11})
+@Metadata(mo31005bv = {1, 0, 2}, mo31006d1 = {"\u0000¶\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u001a\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u0005\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u0012\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0010\n\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0018\u0018\u0000 \u00012\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u0004:\u0004\u0001\u0001B\u0005¢\u0006\u0002\u0010\u0005J\b\u0010\u0006\u001a\u00020\u0000H\u0016J\u0006\u0010\u0011\u001a\u00020\u0012J\b\u0010\u0013\u001a\u00020\u0000H\u0016J\b\u0010\u0014\u001a\u00020\u0012H\u0016J\u0006\u0010\u0015\u001a\u00020\fJ$\u0010\u0016\u001a\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u00182\b\b\u0002\u0010\u0019\u001a\u00020\f2\b\b\u0002\u0010\u001a\u001a\u00020\fH\u0007J\"\u0010\u0016\u001a\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u00002\b\b\u0002\u0010\u0019\u001a\u00020\f2\b\b\u0002\u0010\u001a\u001a\u00020\fJ\u0010\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u001eH\u0002J\b\u0010\u001f\u001a\u00020\u0000H\u0016J\b\u0010 \u001a\u00020\u0000H\u0016J\u0013\u0010!\u001a\u00020\"2\b\u0010#\u001a\u0004\u0018\u00010$H\u0002J\b\u0010%\u001a\u00020\"H\u0016J\b\u0010&\u001a\u00020\u0012H\u0016J\u0016\u0010'\u001a\u00020(2\u0006\u0010)\u001a\u00020\fH\u0002¢\u0006\u0002\b*J\u0015\u0010*\u001a\u00020(2\u0006\u0010+\u001a\u00020\fH\u0007¢\u0006\u0002\b,J\b\u0010-\u001a\u00020.H\u0016J\u0018\u0010/\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u00100\u001a\u00020\u001cH\u0002J\u000e\u00101\u001a\u00020\u001c2\u0006\u00100\u001a\u00020\u001cJ\u000e\u00102\u001a\u00020\u001c2\u0006\u00100\u001a\u00020\u001cJ\u000e\u00103\u001a\u00020\u001c2\u0006\u00100\u001a\u00020\u001cJ\u0010\u00104\u001a\u00020\f2\u0006\u00105\u001a\u00020(H\u0016J\u0018\u00104\u001a\u00020\f2\u0006\u00105\u001a\u00020(2\u0006\u00106\u001a\u00020\fH\u0016J \u00104\u001a\u00020\f2\u0006\u00105\u001a\u00020(2\u0006\u00106\u001a\u00020\f2\u0006\u00107\u001a\u00020\fH\u0016J\u0010\u00104\u001a\u00020\f2\u0006\u00108\u001a\u00020\u001cH\u0016J\u0018\u00104\u001a\u00020\f2\u0006\u00108\u001a\u00020\u001c2\u0006\u00106\u001a\u00020\fH\u0016J\u0010\u00109\u001a\u00020\f2\u0006\u0010:\u001a\u00020\u001cH\u0016J\u0018\u00109\u001a\u00020\f2\u0006\u0010:\u001a\u00020\u001c2\u0006\u00106\u001a\u00020\fH\u0016J\b\u0010;\u001a\u00020<H\u0016J\b\u0010=\u001a\u00020\"H\u0016J\u0006\u0010>\u001a\u00020\u001cJ\b\u0010?\u001a\u00020\u0018H\u0016J\b\u0010@\u001a\u00020\u0001H\u0016J\u0018\u0010A\u001a\u00020\"2\u0006\u0010\u0019\u001a\u00020\f2\u0006\u00108\u001a\u00020\u001cH\u0016J(\u0010A\u001a\u00020\"2\u0006\u0010\u0019\u001a\u00020\f2\u0006\u00108\u001a\u00020\u001c2\u0006\u0010B\u001a\u00020.2\u0006\u0010\u001a\u001a\u00020.H\u0016J0\u0010A\u001a\u00020\"2\u0006\u0010C\u001a\u00020\n2\u0006\u0010D\u001a\u00020.2\u0006\u00108\u001a\u00020E2\u0006\u0010B\u001a\u00020.2\u0006\u0010F\u001a\u00020.H\u0002J\u0010\u0010G\u001a\u00020.2\u0006\u0010H\u001a\u00020IH\u0016J\u0010\u0010G\u001a\u00020.2\u0006\u0010H\u001a\u00020EH\u0016J \u0010G\u001a\u00020.2\u0006\u0010H\u001a\u00020E2\u0006\u0010\u0019\u001a\u00020.2\u0006\u0010\u001a\u001a\u00020.H\u0016J\u0018\u0010G\u001a\u00020\f2\u0006\u0010H\u001a\u00020\u00002\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0010\u0010J\u001a\u00020\f2\u0006\u0010H\u001a\u00020KH\u0016J\u0012\u0010L\u001a\u00020M2\b\b\u0002\u0010N\u001a\u00020MH\u0007J\b\u0010O\u001a\u00020(H\u0016J\b\u0010P\u001a\u00020EH\u0016J\u0010\u0010P\u001a\u00020E2\u0006\u0010\u001a\u001a\u00020\fH\u0016J\b\u0010Q\u001a\u00020\u001cH\u0016J\u0010\u0010Q\u001a\u00020\u001c2\u0006\u0010\u001a\u001a\u00020\fH\u0016J\b\u0010R\u001a\u00020\fH\u0016J\u000e\u0010S\u001a\u00020\u00002\u0006\u0010T\u001a\u00020<J\u0016\u0010S\u001a\u00020\u00002\u0006\u0010T\u001a\u00020<2\u0006\u0010\u001a\u001a\u00020\fJ \u0010S\u001a\u00020\u00122\u0006\u0010T\u001a\u00020<2\u0006\u0010\u001a\u001a\u00020\f2\u0006\u0010U\u001a\u00020\"H\u0002J\u0010\u0010V\u001a\u00020\u00122\u0006\u0010H\u001a\u00020EH\u0016J\u0018\u0010V\u001a\u00020\u00122\u0006\u0010H\u001a\u00020\u00002\u0006\u0010\u001a\u001a\u00020\fH\u0016J\b\u0010W\u001a\u00020\fH\u0016J\b\u0010X\u001a\u00020.H\u0016J\b\u0010Y\u001a\u00020.H\u0016J\b\u0010Z\u001a\u00020\fH\u0016J\b\u0010[\u001a\u00020\fH\u0016J\b\u0010\\\u001a\u00020]H\u0016J\b\u0010^\u001a\u00020]H\u0016J\u0010\u0010_\u001a\u00020\u001e2\u0006\u0010`\u001a\u00020aH\u0016J\u0018\u0010_\u001a\u00020\u001e2\u0006\u0010\u001a\u001a\u00020\f2\u0006\u0010`\u001a\u00020aH\u0016J\u0012\u0010b\u001a\u00020M2\b\b\u0002\u0010N\u001a\u00020MH\u0007J\b\u0010c\u001a\u00020\u001eH\u0016J\u0010\u0010c\u001a\u00020\u001e2\u0006\u0010\u001a\u001a\u00020\fH\u0016J\b\u0010d\u001a\u00020.H\u0016J\n\u0010e\u001a\u0004\u0018\u00010\u001eH\u0016J\u0015\u0010e\u001a\u00020\u001e2\u0006\u0010f\u001a\u00020\fH\u0000¢\u0006\u0002\bgJ\b\u0010h\u001a\u00020\u001eH\u0016J\u0010\u0010h\u001a\u00020\u001e2\u0006\u0010i\u001a\u00020\fH\u0016J\u0010\u0010j\u001a\u00020\"2\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0010\u0010k\u001a\u00020\u00122\u0006\u0010\u001a\u001a\u00020\fH\u0016J8\u0010l\u001a\u0002Hm\"\u0004\b\u0000\u0010m2\u0006\u00106\u001a\u00020\f2\u001a\u0010n\u001a\u0016\u0012\u0006\u0012\u0004\u0018\u00010\n\u0012\u0004\u0012\u00020\f\u0012\u0004\u0012\u0002Hm0oH\b¢\u0006\u0002\u0010pJ\u0010\u0010q\u001a\u00020.2\u0006\u0010r\u001a\u00020sH\u0016J\u001f\u0010t\u001a\u00020.2\u0006\u0010r\u001a\u00020s2\b\b\u0002\u0010u\u001a\u00020\"H\u0000¢\u0006\u0002\bvJ\u0006\u0010w\u001a\u00020\u001cJ\u0006\u0010x\u001a\u00020\u001cJ\u0006\u0010y\u001a\u00020\u001cJ\r\u0010\r\u001a\u00020\fH\u0007¢\u0006\u0002\bzJ\u0010\u0010{\u001a\u00020\u00122\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0006\u0010|\u001a\u00020\u001cJ\u000e\u0010|\u001a\u00020\u001c2\u0006\u0010\u001a\u001a\u00020.J\b\u0010}\u001a\u00020~H\u0016J\b\u0010\u001a\u00020\u001eH\u0016J\u0018\u0010\u0001\u001a\u00020\n2\u0007\u0010\u0001\u001a\u00020.H\u0000¢\u0006\u0003\b\u0001J\u0012\u0010\u0001\u001a\u00020.2\u0007\u0010\u0001\u001a\u00020IH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020EH\u0016J\"\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020E2\u0006\u0010\u0019\u001a\u00020.2\u0006\u0010\u001a\u001a\u00020.H\u0016J\u001a\u0010\u0001\u001a\u00020\u00122\u0007\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010
+\u0001\u001a\u00020\u001cH\u0016J\u001b\u0010\u0001\u001a\u00020\u00022\b\u0010\u0001\u001a\u00030\u00012\u0006\u0010\u001a\u001a\u00020\fH\u0016J\u0013\u0010\u0001\u001a\u00020\f2\b\u0010\u0001\u001a\u00030\u0001H\u0016J\u0011\u0010\u0001\u001a\u00020\u00002\u0006\u00105\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\fH\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016J\u001a\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\u001e2\u0006\u0010`\u001a\u00020aH\u0016J,\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\u001e2\u0007\u0010\u0001\u001a\u00020.2\u0007\u0010\u0001\u001a\u00020.2\u0006\u0010`\u001a\u00020aH\u0016J\u001b\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u0017\u001a\u00020\u00182\b\b\u0002\u0010\u001a\u001a\u00020\fH\u0007J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\u001eH\u0016J$\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020\u001e2\u0007\u0010\u0001\u001a\u00020.2\u0007\u0010\u0001\u001a\u00020.H\u0016J\u0012\u0010\u0001\u001a\u00020\u00002\u0007\u0010\u0001\u001a\u00020.H\u0016R\u0014\u0010\u0006\u001a\u00020\u00008VX\u0004¢\u0006\u0006\u001a\u0004\b\u0007\u0010\bR\u0014\u0010\t\u001a\u0004\u0018\u00010\n8\u0000@\u0000X\u000e¢\u0006\u0002\n\u0000R&\u0010\r\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\f8\u0007@@X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\u000e\"\u0004\b\u000f\u0010\u0010¨\u0006\u0001"}, mo31007d2 = {"Lokio/Buffer;", "Lokio/BufferedSource;", "Lokio/BufferedSink;", "", "Ljava/nio/channels/ByteChannel;", "()V", "buffer", "getBuffer", "()Lokio/Buffer;", "head", "Lokio/Segment;", "<set-?>", "", "size", "()J", "setSize$jvm", "(J)V", "clear", "", "clone", "close", "completeSegmentByteCount", "copyTo", "out", "Ljava/io/OutputStream;", "offset", "byteCount", "digest", "Lokio/ByteString;", "algorithm", "", "emit", "emitCompleteSegments", "equals", "", "other", "", "exhausted", "flush", "get", "", "pos", "getByte", "index", "-deprecated_getByte", "hashCode", "", "hmac", "key", "hmacSha1", "hmacSha256", "hmacSha512", "indexOf", "b", "fromIndex", "toIndex", "bytes", "indexOfElement", "targetBytes", "inputStream", "Ljava/io/InputStream;", "isOpen", "md5", "outputStream", "peek", "rangeEquals", "bytesOffset", "segment", "segmentPos", "", "bytesLimit", "read", "sink", "Ljava/nio/ByteBuffer;", "readAll", "Lokio/Sink;", "readAndWriteUnsafe", "Lokio/Buffer$UnsafeCursor;", "unsafeCursor", "readByte", "readByteArray", "readByteString", "readDecimalLong", "readFrom", "input", "forever", "readFully", "readHexadecimalUnsignedLong", "readInt", "readIntLe", "readLong", "readLongLe", "readShort", "", "readShortLe", "readString", "charset", "Ljava/nio/charset/Charset;", "readUnsafe", "readUtf8", "readUtf8CodePoint", "readUtf8Line", "newline", "readUtf8Line$jvm", "readUtf8LineStrict", "limit", "request", "require", "seek", "T", "lambda", "Lkotlin/Function2;", "(JLkotlin/jvm/functions/Function2;)Ljava/lang/Object;", "select", "options", "Lokio/Options;", "selectPrefix", "selectTruncated", "selectPrefix$jvm", "sha1", "sha256", "sha512", "-deprecated_size", "skip", "snapshot", "timeout", "Lokio/Timeout;", "toString", "writableSegment", "minimumCapacity", "writableSegment$jvm", "write", "source", "byteString", "Lokio/Source;", "writeAll", "writeByte", "writeDecimalLong", "v", "writeHexadecimalUnsignedLong", "writeInt", "i", "writeIntLe", "writeLong", "writeLongLe", "writeShort", "s", "writeShortLe", "writeString", "string", "beginIndex", "endIndex", "writeTo", "writeUtf8", "writeUtf8CodePoint", "codePoint", "Companion", "UnsafeCursor", "jvm"}, mo31008k = 1, mo31009mv = {1, 1, 11})
 /* compiled from: Buffer.kt */
 public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteChannel {
 
@@ -111,7 +112,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
     static {
         new C14267a(null);
         byte[] bytes = "0123456789abcdef".getBytes(C12801c.f29474a);
-        C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
         f31846V = bytes;
     }
 
@@ -286,7 +287,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
         L_0x00bb:
             return r3
         L_0x00bc:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             r1 = 0
             throw r1
         L_0x00c1:
@@ -362,7 +363,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                         if (sVar != null) {
                             i = sVar.f31901b;
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     }
@@ -371,7 +372,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                         if (sVar2 != null) {
                             i2 = sVar2.f31901b;
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     }
@@ -380,10 +381,10 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                 }
                 return true;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -518,7 +519,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
             r15.f31847U = r2
             return r4
         L_0x00b2:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             r0 = 0
             throw r0
         L_0x00b7:
@@ -554,7 +555,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
             }
             sVar = sVar.f31905f;
             if (sVar == null) {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         } while (sVar != this.f31848c);
@@ -633,7 +634,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                 }
                 return b;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         throw new EOFException();
@@ -678,7 +679,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                 }
                 return b3;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         throw new EOFException();
@@ -707,7 +708,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                 }
                 return (short) b;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         throw new EOFException();
@@ -752,10 +753,10 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                 }
                 return j;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -776,7 +777,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
             if (sVar2 != null) {
                 sVar2.f31906g = sVar2;
                 if (sVar2 == null) {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 } else if (sVar2 != null) {
                     sVar2.f31905f = sVar2.f31906g;
@@ -788,35 +789,35 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                             if (sVar5 != null) {
                                 C14295s sVar6 = sVar5.f31906g;
                                 if (sVar6 == null) {
-                                    C12880j.m40220a();
+                                    Intrinsics.throwNpe();
                                     throw null;
                                 } else if (sVar4 != null) {
                                     sVar6.mo36459a(sVar4.mo36463c());
                                     sVar4 = sVar4.f31905f;
                                 } else {
-                                    C12880j.m40220a();
+                                    Intrinsics.throwNpe();
                                     throw null;
                                 }
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                         }
                         buffer.f31847U = this.f31847U;
                         return buffer;
                     }
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         } else {
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
     }
@@ -1074,25 +1075,25 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                             if (sVar3 != null) {
                                 sVar3.mo36459a(c);
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                         j2 -= (long) (c.f31902c - c.f31901b);
                         sVar = sVar.f31905f;
                         j = 0;
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 }
                 return this;
             }
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -1179,10 +1180,10 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                     }
                     return sVar;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         } else {
@@ -1239,7 +1240,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                             } else if (sVar3 != null) {
                                 sVar = sVar3.f31906g;
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                             if (sVar != null && sVar.f31904e) {
@@ -1251,7 +1252,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                                         this.f31847U += j;
                                         return;
                                     }
-                                    C12880j.m40220a();
+                                    Intrinsics.throwNpe();
                                     throw null;
                                 }
                             }
@@ -1259,7 +1260,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                             if (sVar5 != null) {
                                 buffer.f31848c = sVar5.mo36458a((int) j);
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                         }
@@ -1278,26 +1279,26 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                                     sVar8.mo36459a(sVar6);
                                     sVar6.mo36460a();
                                 } else {
-                                    C12880j.m40220a();
+                                    Intrinsics.throwNpe();
                                     throw null;
                                 }
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                             buffer.f31847U -= j2;
                             this.f31847U += j2;
                             j -= j2;
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
@@ -1311,7 +1312,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
         C14273c.m45651a(this.f31847U, j, 1);
         C14295s sVar = this.f31848c;
         if (sVar == null) {
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         } else if (mo36335h() - j < j) {
             long h = mo36335h();
@@ -1320,14 +1321,14 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                 if (sVar != null) {
                     h -= (long) (sVar.f31902c - sVar.f31901b);
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
             if (sVar != null) {
                 return sVar.f31900a[(int) ((((long) sVar.f31901b) + j) - h)];
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         } else {
             long j2 = 0;
@@ -1340,13 +1341,13 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                     if (sVar != null) {
                         j2 = j3;
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 } else if (sVar != null) {
                     return sVar.f31900a[(int) ((((long) i2) + j) - j2)];
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
@@ -1427,11 +1428,11 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                                         sVar2 = null;
                                     }
                                 } else {
-                                    C12880j.m40220a();
+                                    Intrinsics.throwNpe();
                                     throw null;
                                 }
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                         }
@@ -1458,7 +1459,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                                     bArr2 = bArr3;
                                     sVar2 = sVar4 == sVar ? null : sVar4;
                                 } else {
-                                    C12880j.m40220a();
+                                    Intrinsics.throwNpe();
                                     throw null;
                                 }
                             } else {
@@ -1507,7 +1508,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                     if (sVar != null) {
                         j2 -= (long) (sVar.f31902c - sVar.f31901b);
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 }
@@ -1530,7 +1531,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                             if (sVar != null) {
                                 j2 = j;
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                         }
@@ -1555,7 +1556,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                             if (sVar != null) {
                                 j2 = j;
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                         }
@@ -1585,7 +1586,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                                 if (sVar != null) {
                                     j3 = j;
                                 } else {
-                                    C12880j.m40220a();
+                                    Intrinsics.throwNpe();
                                     throw null;
                                 }
                             }
@@ -1611,7 +1612,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                                 if (sVar != null) {
                                     j3 = j;
                                 } else {
-                                    C12880j.m40220a();
+                                    Intrinsics.throwNpe();
                                     throw null;
                                 }
                             }
@@ -1623,7 +1624,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                 if (sVar != null) {
                     j3 = j4;
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
@@ -1681,7 +1682,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                 }
                 return str;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
     }
@@ -1826,14 +1827,14 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                     sb.append(" > ");
                     sb.append(str.length());
                     throw new IllegalArgumentException(sb.toString().toString());
-                } else if (C12880j.m40224a((Object) charset, (Object) C12801c.f29474a)) {
+                } else if (Intrinsics.areEqual((Object) charset, (Object) C12801c.f29474a)) {
                     return m45553a(str, i, i2);
                 } else {
                     String substring = str.substring(i, i2);
-                    C12880j.m40222a((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
                     if (substring != null) {
                         byte[] bytes = substring.getBytes(charset);
-                        C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
                         return write(bytes, 0, bytes.length);
                     }
                     throw new C13142s("null cannot be cast to non-null type java.lang.String");
@@ -1931,7 +1932,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                     if (sVar != null) {
                         j3 -= (long) (sVar.f31902c - sVar.f31901b);
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 }
@@ -1953,7 +1954,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                         j3 = j4;
                         j8 = -1;
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 }
@@ -1966,7 +1967,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                     if (sVar != null) {
                         j6 = j9;
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 } else if (sVar == null) {
@@ -1986,7 +1987,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                         if (sVar != null) {
                             j6 = j4;
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     }
@@ -2034,7 +2035,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                         if (sVar2 != null) {
                             h -= (long) (sVar2.f31902c - sVar2.f31901b);
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     }
@@ -2074,7 +2075,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                             size = i;
                             j5 = j2;
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     }
@@ -2088,7 +2089,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                             buffer = this;
                             j3 = j6;
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     } else if (sVar2 == null) {
@@ -2116,7 +2117,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                                 j3 = j2;
                                 j7 = j8;
                             } else {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                         }
@@ -2148,7 +2149,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                     i = i5;
                     i4 = sVar.f31902c;
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }

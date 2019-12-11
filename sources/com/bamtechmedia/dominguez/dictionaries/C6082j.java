@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -110,7 +110,7 @@ public final class C6082j {
     /* renamed from: a */
     public final Single<List<Dictionary>> mo18357a(List<String> list, String str) {
         Single<List<Dictionary>> a = this.f14001b.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6083a<Object,Object>(this, list, str));
-        C12880j.m40222a((Object) a, "configOnce.flatMap { con…nMap, language)\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configOnce.flatMap { con…nMap, language)\n        }");
         return a;
     }
 
@@ -127,14 +127,14 @@ public final class C6082j {
         }
         pairArr[2] = C12907r.m40244a("dictionary", arrayList);
         Single<List<Dictionary>> g = aVar.mo13577a(DictionariesResponse.class, "core/Dictionaries", C13173j0.m40356a(pairArr), null).mo30233g(C6084b.f14006c);
-        C12880j.m40222a((Object) g, "searchApi.typedSearch<Di…{ it.data?.dictionaries }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.typedSearch<Di…{ it.data?.dictionaries }");
         return g;
     }
 
     /* renamed from: a */
     public final Single<List<Dictionary>> mo18356a(String str) {
         Single<List<Dictionary>> a = this.f14001b.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6085c<Object,Object>(this, str));
-        C12880j.m40222a((Object) a, "configOnce.flatMap { dic…eyVersionMap, language) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configOnce.flatMap { dic…eyVersionMap, language) }");
         return a;
     }
 }

@@ -14,7 +14,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p503n.p504a.C11792d0;
@@ -187,7 +187,7 @@ public final class C6677i1 implements C6667g1 {
         /* renamed from: a */
         public final void accept(List<C6659f0> list) {
             C6639c c = this.f15040c.f15031a;
-            C12880j.m40222a((Object) list, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "it");
             c.mo19317b(list);
         }
     }
@@ -377,7 +377,7 @@ public final class C6677i1 implements C6667g1 {
 
         /* renamed from: a */
         public final void accept(List<C6659f0> list) {
-            C12880j.m40222a((Object) list, "profiles");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "profiles");
             for (C6659f0 f0Var : list) {
                 if (f0Var.mo19357a()) {
                     this.f15043c.f15034d.mo11566a(f0Var.getProfileId(), C6666g0.m20662a(f0Var), f0Var.mo19354R());
@@ -493,7 +493,7 @@ public final class C6677i1 implements C6667g1 {
         /* renamed from: a */
         public final void accept(List<C6659f0> list) {
             C6639c c = this.f15047c.f15031a;
-            C12880j.m40222a((Object) list, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "it");
             c.mo19317b(list);
         }
     }
@@ -512,7 +512,7 @@ public final class C6677i1 implements C6667g1 {
         /* renamed from: a */
         public final C6659f0 apply(List<C6659f0> list) {
             for (C6659f0 f0Var : list) {
-                if (C12880j.m40224a((Object) f0Var.getProfileId(), (Object) this.f15048c.getProfileId())) {
+                if (Intrinsics.areEqual((Object) f0Var.getProfileId(), (Object) this.f15048c.getProfileId())) {
                     return f0Var;
                 }
             }
@@ -597,7 +597,7 @@ public final class C6677i1 implements C6667g1 {
     /* renamed from: e */
     public final Single<List<C6659f0>> m20712e() {
         Single<List<C6659f0>> d = this.f15033c.mo19472a().mo30227d((Consumer<? super T>) new C6691n<Object>(this));
-        C12880j.m40222a((Object) d, "remoteProfiles.profilesO…)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "remoteProfiles.profilesO…)\n            }\n        }");
         return d;
     }
 
@@ -607,14 +607,14 @@ public final class C6677i1 implements C6667g1 {
         if (z) {
             mo19383d();
         }
-        C12880j.m40222a((Object) b, "dao.profilesStream()\n   …estRefresh) { refresh() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "dao.profilesStream()\n   …estRefresh) { refresh() }");
         return b;
     }
 
     /* renamed from: b */
     public Single<? extends C6626c0> mo19381b() {
         Single<? extends C6626c0> b = this.f15031a.mo19314a().mo30220b(this.f15036f);
-        C12880j.m40222a((Object) b, "dao.activeProfileOnce()\n….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "dao.activeProfileOnce()\n….subscribeOn(ioScheduler)");
         return b;
     }
 
@@ -622,16 +622,16 @@ public final class C6677i1 implements C6667g1 {
     public Single<? extends C6626c0> mo19382c() {
         Single b = mo19381b();
         Single<? extends C6626c0> h = b.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6686i<Object,Object>(this)).mo30235h(new C6687j(b));
-        C12880j.m40222a((Object) h, "localActiveProfile\n     …xt { localActiveProfile }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "localActiveProfile\n     …xt { localActiveProfile }");
         return h;
     }
 
     /* renamed from: d */
     public Completable mo19383d() {
         C11978b j = C11978b.m38573j();
-        C12880j.m40222a((Object) j, "CompletableSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "CompletableSubject.create()");
         Completable e = m20712e().mo30227d((Consumer<? super T>) new C6715j1<Object>(new C6688k(this.f15031a))).mo30228e();
-        C12880j.m40222a((Object) e, "remoteProfilesOnce()\n   …         .ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "remoteProfilesOnce()\n   …         .ignoreElement()");
         C5826e0.m18822a(e, new C6689l(j), new C6690m(j));
         return j;
     }
@@ -639,7 +639,7 @@ public final class C6677i1 implements C6667g1 {
     /* renamed from: a */
     public Flowable<? extends C6626c0> mo19377a() {
         Flowable<? extends C6626c0> b = this.f15031a.mo19316b().mo30086b(this.f15036f);
-        C12880j.m40222a((Object) b, "dao.activeProfileStream(….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "dao.activeProfileStream(….subscribeOn(ioScheduler)");
         return b;
     }
 
@@ -650,9 +650,9 @@ public final class C6677i1 implements C6667g1 {
             C3724a.f9310a.mo13579a(Long.valueOf(System.currentTimeMillis() + a.longValue()));
         }
         C11978b j = C11978b.m38573j();
-        C12880j.m40222a((Object) j, "CompletableSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "CompletableSubject.create()");
         Completable b = this.f15033c.mo19476b(c0Var).mo30034a((CompletableSource) this.f15031a.mo19313a(c0Var.getProfileId())).mo30050b((C11945a) new C6692o(this, c0Var));
-        C12880j.m40222a((Object) b, "remoteProfiles.setActive…e.kidsOnly)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "remoteProfiles.setActive…e.kidsOnly)\n            }");
         C5826e0.m18822a(b, new C6693p(j), new C6694q(j));
         return j;
     }
@@ -660,13 +660,13 @@ public final class C6677i1 implements C6667g1 {
     /* renamed from: a */
     public Single<C6626c0> mo19380a(String str, C6654e0 e0Var, C6653e eVar) {
         C11981d k = C11981d.m38579k();
-        C12880j.m40222a((Object) k, "SingleSubject.create<Profile>()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) k, "SingleSubject.create<Profile>()");
         Single a = this.f15033c.mo19475a(str, e0Var).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6679b<Object,Object>(this)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6680c<Object,Object>(this, eVar));
-        C12880j.m40222a((Object) a, "remoteProfiles.create(pr…oSingleDefault(profile) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "remoteProfiles.create(pr…oSingleDefault(profile) }");
         Completable i = Completable.m38170i();
-        C12880j.m40222a((Object) i, "Completable.never()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "Completable.never()");
         Object a2 = a.mo30215a((C11974s<T, ? extends R>) C11793e.m37931a((CompletableSource) i));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(scope))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(scope))");
         ((C11792d0) a2).mo29920a(new C6715j1(new C6681d(k)), new C6715j1(new C6682e(k)));
         return k;
     }
@@ -674,13 +674,13 @@ public final class C6677i1 implements C6667g1 {
     /* renamed from: a */
     public Single<C6626c0> mo19379a(C6626c0 c0Var, String str, C6654e0 e0Var) {
         C11981d k = C11981d.m38579k();
-        C12880j.m40222a((Object) k, "SingleSubject.create<Profile>()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) k, "SingleSubject.create<Profile>()");
         Single g = this.f15033c.mo19474a(c0Var, str, e0Var).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6695r<Object,Object>(this)).mo30227d((Consumer<? super T>) new C6696s<Object>(this)).mo30233g(new C6697t(c0Var));
-        C12880j.m40222a((Object) g, "remoteProfiles.update(pr… == profile.profileId } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "remoteProfiles.update(pr… == profile.profileId } }");
         Completable i = Completable.m38170i();
-        C12880j.m40222a((Object) i, "Completable.never()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "Completable.never()");
         Object a = g.mo30215a((C11974s<T, ? extends R>) C11793e.m37931a((CompletableSource) i));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(scope))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(scope))");
         ((C11792d0) a).mo29920a(new C6715j1(new C6698u(k)), new C6715j1(new C6699v(k)));
         return k;
     }
@@ -688,9 +688,9 @@ public final class C6677i1 implements C6667g1 {
     /* renamed from: a */
     public Completable mo19376a(String str) {
         C11978b j = C11978b.m38573j();
-        C12880j.m40222a((Object) j, "CompletableSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "CompletableSubject.create()");
         Completable e = this.f15033c.mo19471a(str).mo30044a((SingleSource<T>) m20712e()).mo30227d((Consumer<? super T>) new C6683f<Object>(this)).mo30228e();
-        C12880j.m40222a((Object) e, "remoteProfiles.delete(pr…         .ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "remoteProfiles.delete(pr…         .ignoreElement()");
         C5826e0.m18822a(e, new C6684g(j), new C6685h(j));
         return j;
     }

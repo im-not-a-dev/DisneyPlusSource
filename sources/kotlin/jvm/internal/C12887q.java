@@ -16,7 +16,7 @@ public final class C12887q implements C12866d {
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof C12887q) && C12880j.m40224a((Object) getJClass(), (Object) ((C12887q) obj).getJClass());
+        return (obj instanceof C12887q) && Intrinsics.areEqual((Object) getJClass(), (Object) ((C12887q) obj).getJClass());
     }
 
     public Class<?> getJClass() {

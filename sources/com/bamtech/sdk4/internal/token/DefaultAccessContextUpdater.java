@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.session.InternalSessionStateProvider;
 import com.bamtech.sdk4.token.AccessContext;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Maybe;
@@ -47,8 +47,8 @@ public final class DefaultAccessContextUpdater implements AccessContextUpdater, 
         Single b = this.tokenExchangeManager.exchangeExternalAccountToken(serviceTransaction, str).mo30227d((Consumer<? super T>) new DefaultAccessContextUpdater$authorizeExternalGrantInternal$1<Object>(this, serviceTransaction)).mo30218b((Consumer<? super Throwable>) new DefaultAccessContextUpdater$authorizeExternalGrantInternal$2<Object>(this, serviceTransaction)).mo30219b((C11945a) new DefaultAccessContextUpdater$authorizeExternalGrantInternal$3(this));
         this.deviceAccessContextHelper.setContextRetrievalInProgress(b);
         Completable e = b.mo30228e();
-        C12880j.m40222a((Object) e, "it.ignoreElement()");
-        C12880j.m40222a((Object) e, "tokenExchangeManager.exc…ement()\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "it.ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "tokenExchangeManager.exc…ement()\n                }");
         return e;
     }
 
@@ -77,14 +77,14 @@ public final class DefaultAccessContextUpdater implements AccessContextUpdater, 
             if (accessContext2 != null) {
                 single = Single.m38399b(accessContext2.getAccessToken());
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         } else {
             single = getOrUpdate(serviceTransaction, true).mo30235h(new DefaultAccessContextUpdater$ensureValidToken$1(this, serviceTransaction)).mo30233g(DefaultAccessContextUpdater$ensureValidToken$2.INSTANCE);
         }
         Single<String> b = single.mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "when {\n            isVal…scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "when {\n            isVal…scribeOn(Schedulers.io())");
         return b;
     }
 
@@ -102,14 +102,14 @@ public final class DefaultAccessContextUpdater implements AccessContextUpdater, 
             single = this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultAccessContextUpdater$getAccessToken$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAccessContextUpdater$getAccessToken$2<Object,Object>(this, currentInternalSessionState, serviceTransaction));
         }
         Single<String> b = single.mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "when (sessionState) {\n  …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "when (sessionState) {\n  …scribeOn(Schedulers.io())");
         return b;
     }
 
     public synchronized Single<TransactionResult<AccessContext>> getOrUpdate(ServiceTransaction serviceTransaction, boolean z) {
         Single<TransactionResult<AccessContext>> b;
         b = Single.m38396a((Callable<? extends SingleSource<? extends T>>) new DefaultAccessContextUpdater$getOrUpdate$1<Object>(this, z, serviceTransaction)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "Single.defer {\n\n        …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.defer {\n\n        …scribeOn(Schedulers.io())");
         return b;
     }
 
@@ -120,11 +120,11 @@ public final class DefaultAccessContextUpdater implements AccessContextUpdater, 
         String accessToken = accessContext2 != null ? accessContext2.getAccessToken() : null;
         if (accessToken == null || !isValid) {
             Maybe<String> h = Maybe.m38259h();
-            C12880j.m40222a((Object) h, "Maybe.empty<JWT>()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "Maybe.empty<JWT>()");
             return h;
         }
         Maybe<String> c = Maybe.m38258c(accessToken);
-        C12880j.m40222a((Object) c, "Maybe.just(token)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Maybe.just(token)");
         return c;
     }
 
@@ -134,7 +134,7 @@ public final class DefaultAccessContextUpdater implements AccessContextUpdater, 
 
     public Single<TransactionResult<AccessContext>> reset(ServiceTransaction serviceTransaction) {
         Single<TransactionResult<AccessContext>> b = Single.m38396a((Callable<? extends SingleSource<? extends T>>) new DefaultAccessContextUpdater$reset$1<Object>(this, serviceTransaction)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "Single.defer {\n         …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.defer {\n         …scribeOn(Schedulers.io())");
         return b;
     }
 

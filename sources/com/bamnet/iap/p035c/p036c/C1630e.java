@@ -32,7 +32,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p590y.C13166g0;
 import p520io.reactivex.C11969r;
@@ -46,7 +46,7 @@ import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.p525e0.C11934b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000¸\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010%\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010!\n\u0000\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\b\u0000\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003B\r\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u0010\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020$H\u0002J\r\u0010%\u001a\u00020&H\u0000¢\u0006\u0002\b'J\u0015\u0010(\u001a\u00020&2\u0006\u0010)\u001a\u00020*H\u0000¢\u0006\u0002\b+J\u0016\u0010,\u001a\u00020&2\f\u0010-\u001a\b\u0012\u0004\u0012\u00020*0.H\u0002J\u001d\u0010/\u001a\u00020&2\u0006\u00100\u001a\u0002012\u0006\u00102\u001a\u00020\u001fH\u0000¢\u0006\u0002\b3J\u001c\u00104\u001a\u00020&2\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u0016\u0012\u0004\u0012\u00020706H\u0002J\b\u00108\u001a\u00020&H\u0016J\u0012\u00109\u001a\u00020&2\b\u0010:\u001a\u0004\u0018\u00010;H\u0016J\b\u0010<\u001a\u00020&H\u0014J\"\u0010=\u001a\u00020&2\b\u0010:\u001a\u0004\u0018\u00010;2\u000e\u0010>\u001a\n\u0012\u0004\u0012\u00020$\u0018\u00010?H\u0016J\u0010\u0010@\u001a\u00020A2\u0006\u0010#\u001a\u00020*H\u0002J\r\u0010B\u001a\u00020&H\u0000¢\u0006\u0002\bCJ\u001b\u0010D\u001a\u00020&2\f\u0010E\u001a\b\u0012\u0004\u0012\u00020\u001f0.H\u0000¢\u0006\u0002\bFJ\r\u0010G\u001a\u00020&H\u0000¢\u0006\u0002\bHJ\u001c\u0010I\u001a\u00020J2\b\b\u0002\u0010K\u001a\u00020L2\b\b\u0002\u0010M\u001a\u00020\u001fH\u0002J\u0015\u0010N\u001a\u00020&2\u0006\u0010\u0013\u001a\u00020\u0014H\u0000¢\u0006\u0002\bOR\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\u000f\u001a\u00020\u00108@X\u0004¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0012R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0015\u001a\u0004\u0018\u00010\u0016X\u000e¢\u0006\u0002\n\u0000R\u001a\u0010\u0017\u001a\u00020\u0018X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\u001cR\u001a\u0010\u001d\u001a\u000e\u0012\u0004\u0012\u00020\u001f\u0012\u0004\u0012\u00020 0\u001eX\u0004¢\u0006\u0002\n\u0000¨\u0006P"}, mo31007d2 = {"Lcom/bamnet/iap/google/billing/GoogleBillingViewModel;", "Landroidx/lifecycle/AndroidViewModel;", "Lcom/android/billingclient/api/PurchasesUpdatedListener;", "Lcom/android/billingclient/api/BillingClientStateListener;", "application", "Landroid/app/Application;", "(Landroid/app/Application;)V", "backgroundScheduler", "Lio/reactivex/Scheduler;", "billingClient", "Lcom/android/billingclient/api/BillingClient;", "billingMapper", "Lcom/bamnet/iap/google/billing/BillingMapper;", "disposables", "Lio/reactivex/disposables/CompositeDisposable;", "isReady", "", "isReady$google_iap_release", "()Z", "listener", "Lcom/bamnet/iap/BamnetIAPListener;", "observableBillingClient", "Lcom/bamnet/iap/google/billing/ObservableBillingClient;", "options", "Lcom/bamnet/iap/MarketOptions;", "getOptions$google_iap_release", "()Lcom/bamnet/iap/MarketOptions;", "setOptions$google_iap_release", "(Lcom/bamnet/iap/MarketOptions;)V", "skuDetailMap", "", "", "Lcom/android/billingclient/api/SkuDetails;", "bamnetProductType", "Lcom/bamnet/iap/BamnetIAPProduct$BamnetIAPProductType;", "purchase", "Lcom/android/billingclient/api/Purchase;", "clear", "", "clear$google_iap_release", "consumePurchase", "bamnetIAPPurchase", "Lcom/bamnet/iap/BamnetIAPPurchase;", "consumePurchase$google_iap_release", "consumePurchases", "purchaseList", "", "launchBillingFlow", "activity", "Landroid/app/Activity;", "sku", "launchBillingFlow$google_iap_release", "observe", "block", "Lkotlin/Function1;", "Lio/reactivex/disposables/Disposable;", "onBillingServiceDisconnected", "onBillingSetupFinished", "billingResult", "Lcom/android/billingclient/api/BillingResult;", "onCleared", "onPurchasesUpdated", "purchases", "", "performConsumption", "Lio/reactivex/Completable;", "queryCachedPurchases", "queryCachedPurchases$google_iap_release", "queryProducts", "skuList", "queryProducts$google_iap_release", "queryPurchaseHistory", "queryPurchaseHistory$google_iap_release", "resultOk", "Lcom/bamnet/iap/BamnetIAPResult;", "responseCode", "", "message", "startBillingClient", "startBillingClient$google_iap_release", "google-iap_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamnet.iap.c.c.e */
@@ -110,7 +110,7 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Successfully consumed list of purchases: ");
                 sb.append(this.f5760a.f5758V);
-                C14100a.m44522a(sb.toString(), new Object[0]);
+                Timber.m44522a(sb.toString(), new Object[0]);
             }
         }
 
@@ -130,7 +130,7 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Error consuming list of purchases: ");
                 sb.append(this.f5761c.f5758V);
-                C14100a.m44530c(th, sb.toString(), new Object[0]);
+                Timber.m44530c(th, sb.toString(), new Object[0]);
             }
         }
 
@@ -149,7 +149,7 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
                 if (array != null) {
                     CompletableSource[] completableSourceArr = (CompletableSource[]) array;
                     Disposable a = Completable.m38157a((CompletableSource[]) Arrays.copyOf(completableSourceArr, completableSourceArr.length)).mo30051b(this.f5759c.f5755a0).mo30047a(new C1632a(this), new C1633b(this));
-                    C12880j.m40222a((Object) a, "Completable.mergeArray(*…\")\n                    })");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.mergeArray(*…\")\n                    })");
                     return a;
                 }
                 throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
@@ -262,10 +262,10 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
 
             /* renamed from: a */
             public final void accept(Throwable th) {
-                C14100a.m44528b(th, "Error fetching cached purchases.", new Object[0]);
+                Timber.m44528b(th, "Error fetching cached purchases.", new Object[0]);
                 C1621a c = this.f5767c.f5762c.f5751W;
                 if (c != null) {
-                    C12880j.m40222a((Object) th, "it");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
                     c.mo7227a(C1627b.m7595a(th), null);
                 }
             }
@@ -279,7 +279,7 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
         /* renamed from: a */
         public final Disposable invoke(C1647g gVar) {
             Disposable a = gVar.mo7284a().mo30220b(this.f5762c.f5755a0).mo30233g(new C1635a(this)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C1636b<Object,Object>(this)).mo30214a((Consumer<? super T>) new C1638c<Object>(this), (Consumer<? super Throwable>) new C1639d<Object>(this));
-            C12880j.m40222a((Object) a, "client.queryPurchases()\n…l)\n                    })");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "client.queryPurchases()\n…l)\n                    })");
             return a;
         }
     }
@@ -324,12 +324,12 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
 
             /* renamed from: a */
             public final void accept(List<? extends C1433s> list) {
-                C12880j.m40222a((Object) list, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list, "it");
                 ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) list, 10));
                 for (C1433s sVar : list) {
                     Map d = this.f5771c.f5769c.f5753Y;
                     String g = sVar.mo6534g();
-                    C12880j.m40222a((Object) g, "skuDetails.sku");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) g, "skuDetails.sku");
                     d.put(g, sVar);
                     arrayList.add(C13145v.f29587a);
                 }
@@ -386,10 +386,10 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
 
             /* renamed from: a */
             public final void accept(Throwable th) {
-                C14100a.m44530c(th, "Error fetching products", new Object[0]);
+                Timber.m44530c(th, "Error fetching products", new Object[0]);
                 C1621a c = this.f5774c.f5769c.f5751W;
                 if (c != null) {
-                    C12880j.m40222a((Object) th, "it");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
                     c.mo7228b(C1627b.m7595a(th), null);
                 }
             }
@@ -404,7 +404,7 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
         /* renamed from: a */
         public final Disposable invoke(C1647g gVar) {
             Disposable a = gVar.mo7285a(this.f5768U).mo30220b(this.f5769c.f5755a0).mo30233g(C1641a.f5770c).mo30227d((Consumer<? super T>) new C1642b<Object>(this)).mo30233g(new C1643c(this)).mo30214a((Consumer<? super T>) new C1644d<Object>(this), (Consumer<? super Throwable>) new C1645e<Object>(this));
-            C12880j.m40222a((Object) a, "client.queryProducts(sku…l)\n                    })");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "client.queryProducts(sku…l)\n                    })");
             return a;
         }
     }
@@ -413,7 +413,7 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
         super(application);
         this.f5754Z = new C1626a(application);
         C11969r b = C11934b.m38500b();
-        C12880j.m40222a((Object) b, "Schedulers.io()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Schedulers.io()");
         this.f5755a0 = b;
         this.f5756b0 = C1622b.f5738c.mo7233a();
     }
@@ -516,7 +516,7 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
                 if (dVar3 != null) {
                     this.f5752X = new C1647g(dVar3);
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
@@ -616,7 +616,7 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
         L_0x0046:
             io.reactivex.Completable r1 = p520io.reactivex.Completable.m38169h()
             java.lang.String r5 = "Completable.complete()"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r5)
         L_0x004f:
             return r1
         */

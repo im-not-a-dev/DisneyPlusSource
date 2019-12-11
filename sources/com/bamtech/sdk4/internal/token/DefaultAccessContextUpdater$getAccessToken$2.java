@@ -11,7 +11,7 @@ import com.bamtech.sdk4.service.UnauthorizedException;
 import com.bamtech.sdk4.token.AccessContext;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -44,7 +44,7 @@ final class DefaultAccessContextUpdater$getAccessToken$2<T, R> implements Functi
                 if (accessContext != null) {
                     return Single.m38399b(accessContext.getAccessToken());
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             } else if (this.$sessionState instanceof Failed) {
                 ServiceTransaction serviceTransaction2 = this.$transaction;

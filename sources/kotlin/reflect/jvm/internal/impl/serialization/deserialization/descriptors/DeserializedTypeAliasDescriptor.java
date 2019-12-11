@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.serialization.deserialization.descripto
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -47,7 +47,7 @@ public final class DeserializedTypeAliasDescriptor extends AbstractTypeAliasDesc
 
     public DeserializedTypeAliasDescriptor(StorageManager storageManager2, DeclarationDescriptor declarationDescriptor, Annotations annotations, Name name, Visibility visibility, TypeAlias typeAlias, NameResolver nameResolver2, TypeTable typeTable2, VersionRequirementTable versionRequirementTable2, DeserializedContainerSource deserializedContainerSource) {
         SourceElement sourceElement = SourceElement.NO_SOURCE;
-        C12880j.m40222a((Object) sourceElement, "SourceElement.NO_SOURCE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement, "SourceElement.NO_SOURCE");
         super(declarationDescriptor, annotations, name, sourceElement, visibility);
         this.storageManager = storageManager2;
         this.proto = typeAlias;
@@ -81,7 +81,7 @@ public final class DeserializedTypeAliasDescriptor extends AbstractTypeAliasDesc
         if (simpleType != null) {
             return simpleType;
         }
-        C12880j.m40227c("defaultTypeImpl");
+        Intrinsics.throwUninitializedPropertyAccessException("defaultTypeImpl");
         throw null;
     }
 
@@ -90,7 +90,7 @@ public final class DeserializedTypeAliasDescriptor extends AbstractTypeAliasDesc
         if (simpleType != null) {
             return simpleType;
         }
-        C12880j.m40227c("expandedType");
+        Intrinsics.throwUninitializedPropertyAccessException("expandedType");
         throw null;
     }
 
@@ -109,7 +109,7 @@ public final class DeserializedTypeAliasDescriptor extends AbstractTypeAliasDesc
         if (list != null) {
             return list;
         }
-        C12880j.m40227c("typeConstructorParameters");
+        Intrinsics.throwUninitializedPropertyAccessException("typeConstructorParameters");
         throw null;
     }
 
@@ -122,7 +122,7 @@ public final class DeserializedTypeAliasDescriptor extends AbstractTypeAliasDesc
         if (simpleType != null) {
             return simpleType;
         }
-        C12880j.m40227c("underlyingType");
+        Intrinsics.throwUninitializedPropertyAccessException("underlyingType");
         throw null;
     }
 
@@ -154,19 +154,19 @@ public final class DeserializedTypeAliasDescriptor extends AbstractTypeAliasDesc
         }
         StorageManager storageManager2 = getStorageManager();
         DeclarationDescriptor containingDeclaration = getContainingDeclaration();
-        C12880j.m40222a((Object) containingDeclaration, "containingDeclaration");
+        Intrinsics.checkReturnedValueIsNotNull((Object) containingDeclaration, "containingDeclaration");
         Annotations annotations = getAnnotations();
-        C12880j.m40222a((Object) annotations, "annotations");
+        Intrinsics.checkReturnedValueIsNotNull((Object) annotations, "annotations");
         Name name = getName();
-        C12880j.m40222a((Object) name, "name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "name");
         DeserializedTypeAliasDescriptor deserializedTypeAliasDescriptor = new DeserializedTypeAliasDescriptor(storageManager2, containingDeclaration, annotations, name, getVisibility(), getProto(), getNameResolver(), getTypeTable(), getVersionRequirementTable(), getContainerSource());
         List declaredTypeParameters = getDeclaredTypeParameters();
         KotlinType safeSubstitute = typeSubstitutor.safeSubstitute(getUnderlyingType(), Variance.INVARIANT);
         String str = "substitutor.safeSubstitu…Type, Variance.INVARIANT)";
-        C12880j.m40222a((Object) safeSubstitute, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) safeSubstitute, str);
         SimpleType asSimpleType = TypeSubstitutionKt.asSimpleType(safeSubstitute);
         KotlinType safeSubstitute2 = typeSubstitutor.safeSubstitute(getExpandedType(), Variance.INVARIANT);
-        C12880j.m40222a((Object) safeSubstitute2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) safeSubstitute2, str);
         deserializedTypeAliasDescriptor.initialize(declaredTypeParameters, asSimpleType, TypeSubstitutionKt.asSimpleType(safeSubstitute2), getCoroutinesExperimentalCompatibilityMode());
         return deserializedTypeAliasDescriptor;
     }

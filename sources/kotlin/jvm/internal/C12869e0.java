@@ -51,7 +51,7 @@ public final class C12869e0 implements KType {
     public boolean equals(Object obj) {
         if (obj instanceof C12869e0) {
             C12869e0 e0Var = (C12869e0) obj;
-            if (C12880j.m40224a((Object) getClassifier(), (Object) e0Var.getClassifier()) && C12880j.m40224a((Object) getArguments(), (Object) e0Var.getArguments()) && isMarkedNullable() == e0Var.isMarkedNullable()) {
+            if (Intrinsics.areEqual((Object) getClassifier(), (Object) e0Var.getClassifier()) && Intrinsics.areEqual((Object) getArguments(), (Object) e0Var.getArguments()) && isMarkedNullable() == e0Var.isMarkedNullable()) {
                 return true;
             }
         }
@@ -123,28 +123,28 @@ public final class C12869e0 implements KType {
 
     /* renamed from: a */
     private final String m40211a(Class<?> cls) {
-        if (C12880j.m40224a((Object) cls, (Object) boolean[].class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) boolean[].class)) {
             return "kotlin.BooleanArray";
         }
-        if (C12880j.m40224a((Object) cls, (Object) char[].class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) char[].class)) {
             return "kotlin.CharArray";
         }
-        if (C12880j.m40224a((Object) cls, (Object) byte[].class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) byte[].class)) {
             return "kotlin.ByteArray";
         }
-        if (C12880j.m40224a((Object) cls, (Object) short[].class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) short[].class)) {
             return "kotlin.ShortArray";
         }
-        if (C12880j.m40224a((Object) cls, (Object) int[].class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) int[].class)) {
             return "kotlin.IntArray";
         }
-        if (C12880j.m40224a((Object) cls, (Object) float[].class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) float[].class)) {
             return "kotlin.FloatArray";
         }
-        if (C12880j.m40224a((Object) cls, (Object) long[].class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) long[].class)) {
             return "kotlin.LongArray";
         }
-        return C12880j.m40224a((Object) cls, (Object) double[].class) ? "kotlin.DoubleArray" : "kotlin.Array";
+        return Intrinsics.areEqual((Object) cls, (Object) double[].class) ? "kotlin.DoubleArray" : "kotlin.Array";
     }
 
     /* access modifiers changed from: private */

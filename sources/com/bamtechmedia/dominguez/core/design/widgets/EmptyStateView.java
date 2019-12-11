@@ -19,7 +19,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p122j.p124d.C4043g;
 
@@ -161,10 +161,10 @@ public final class EmptyStateView extends LinearLayout {
     public final void setButtonText(String str) {
         Button button = (Button) mo17408a(C3838h.emptyStateButton);
         String str2 = "emptyStateButton";
-        C12880j.m40222a((Object) button, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) button, str2);
         button.setText(str);
         Button button2 = (Button) mo17408a(C3838h.emptyStateButton);
-        C12880j.m40222a((Object) button2, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) button2, str2);
         int i = 0;
         if (!(!(str == null || str.length() == 0))) {
             i = 8;
@@ -174,7 +174,7 @@ public final class EmptyStateView extends LinearLayout {
 
     public final void setDescription(String str) {
         TextView textView = (TextView) mo17408a(C3838h.emptyStateTvDetails);
-        C12880j.m40222a((Object) textView, "emptyStateTvDetails");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "emptyStateTvDetails");
         textView.setText(str);
     }
 
@@ -189,10 +189,10 @@ public final class EmptyStateView extends LinearLayout {
     public final void setTitleText(String str) {
         TextView textView = (TextView) mo17408a(C3838h.emptyStateTvTitle);
         String str2 = "emptyStateTvTitle";
-        C12880j.m40222a((Object) textView, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, str2);
         textView.setText(str);
         TextView textView2 = (TextView) mo17408a(C3838h.emptyStateTvTitle);
-        C12880j.m40222a((Object) textView2, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, str2);
         int i = 0;
         if (!(!(str == null || str.length() == 0))) {
             i = 8;
@@ -206,7 +206,7 @@ public final class EmptyStateView extends LinearLayout {
         setOrientation(1);
         setGravity(17);
         int[] iArr = C3843m.EmptyStateView;
-        C12880j.m40222a((Object) iArr, "R.styleable.EmptyStateView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) iArr, "R.styleable.EmptyStateView");
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, 0, 0);
         m18471a(obtainStyledAttributes, C3843m.EmptyStateView_titleText, false, new C5636a(this));
         setImageDrawable(obtainStyledAttributes.getResourceId(C3843m.EmptyStateView_imgSrc, 0));
@@ -225,7 +225,7 @@ public final class EmptyStateView extends LinearLayout {
         }
         if (i2 > -1) {
             Context context = getContext();
-            C12880j.m40222a((Object) context, "context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
             function1.invoke(C5880u.m18938a(context, i2));
         }
     }

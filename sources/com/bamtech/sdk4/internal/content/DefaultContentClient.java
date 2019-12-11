@@ -24,7 +24,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -58,8 +58,8 @@ public final class DefaultContentClient implements ContentClient {
         String method = handleSearchOverrides.getMethod();
         if (method != null) {
             String upperCase = method.toUpperCase();
-            C12880j.m40222a((Object) upperCase, "(this as java.lang.String).toUpperCase()");
-            if (createQueryUrl.getHref().length() > contentServiceConfiguration.getClient().getExtras().getUrlSizeLimit() || !C12880j.m40224a((Object) upperCase, (Object) GraphQlRequest.Companion.getGET())) {
+            Intrinsics.checkReturnedValueIsNotNull((Object) upperCase, "(this as java.lang.String).toUpperCase()");
+            if (createQueryUrl.getHref().length() > contentServiceConfiguration.getClient().getExtras().getUrlSizeLimit() || !Intrinsics.areEqual((Object) upperCase, (Object) GraphQlRequest.Companion.getGET())) {
                 pair = C12907r.m40244a(createQueryUrl2, graphQlRequest.createPostContent(graphQlResponseConverter));
             } else {
                 pair = C12907r.m40244a(createQueryUrl, null);
@@ -84,7 +84,7 @@ public final class DefaultContentClient implements ContentClient {
         Single a = C11920c.m38475a(this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultContentClient$query$1.INSTANCE), this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultContentClient$query$2.INSTANCE));
         DefaultContentClient$query$3 defaultContentClient$query$3 = new DefaultContentClient$query$3(this, graphQlRequest, serviceTransaction, map, list, map2);
         Single<String> a2 = a.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultContentClient$query$3);
-        C12880j.m40222a((Object) a2, "configurationProvider.ge…_QUERY)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "configurationProvider.ge…_QUERY)\n                }");
         return a2;
     }
 
@@ -97,7 +97,7 @@ public final class DefaultContentClient implements ContentClient {
         Single a = C11920c.m38475a(this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultContentClient$typedQuery$1$1.INSTANCE), this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultContentClient$typedQuery$1$2.INSTANCE));
         DefaultContentClient$typedQuery$$inlined$with$lambda$1 defaultContentClient$typedQuery$$inlined$with$lambda$1 = new DefaultContentClient$typedQuery$$inlined$with$lambda$1(converter, graphQlHandler, graphQlErrorHandler, this, serviceTransaction2, type2, graphQlRequest, map, list, map2);
         Single<GraphQlResponse<T>> a2 = a.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultContentClient$typedQuery$$inlined$with$lambda$1);
-        C12880j.m40222a((Object) a2, "configurationProvider.ge…ED)\n                    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "configurationProvider.ge…ED)\n                    }");
         return a2;
     }
 }

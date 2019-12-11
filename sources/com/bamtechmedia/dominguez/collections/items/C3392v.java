@@ -153,7 +153,7 @@ public final class C3392v {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:30:0x0092, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8564n, (java.lang.Object) r3.f8564n) != false) goto L_0x0097;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8564n, (java.lang.Object) r3.f8564n) != false) goto L_0x0097;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -165,59 +165,59 @@ public final class C3392v {
             com.bamtechmedia.dominguez.collections.items.v r3 = (com.bamtechmedia.dominguez.collections.items.C3392v) r3
             java.lang.String r0 = r2.f8551a
             java.lang.String r1 = r3.f8551a
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             java.lang.String r0 = r2.f8552b
             java.lang.String r1 = r3.f8552b
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             com.bamtechmedia.dominguez.collections.o0.j r0 = r2.f8553c
             com.bamtechmedia.dominguez.collections.o0.j r1 = r3.f8553c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             com.bamtechmedia.dominguez.core.content.paging.c<com.bamtechmedia.dominguez.core.content.assets.b> r0 = r2.f8554d
             com.bamtechmedia.dominguez.core.content.paging.c<com.bamtechmedia.dominguez.core.content.assets.b> r1 = r3.f8554d
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             java.util.List<g.o.a.l.a> r0 = r2.f8555e
             java.util.List<g.o.a.l.a> r1 = r3.f8555e
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             com.bamtechmedia.dominguez.collections.items.o r0 = r2.f8556f
             com.bamtechmedia.dominguez.collections.items.o r1 = r3.f8556f
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             com.bamtechmedia.dominguez.collections.k0 r0 = r2.f8557g
             com.bamtechmedia.dominguez.collections.k0 r1 = r3.f8557g
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             com.bamtechmedia.dominguez.collections.items.ShelfFragmentHelper r0 = r2.f8558h
             com.bamtechmedia.dominguez.collections.items.ShelfFragmentHelper r1 = r3.f8558h
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             com.bamtechmedia.dominguez.collections.f r0 = r2.f8559i
             com.bamtechmedia.dominguez.collections.f r1 = r3.f8559i
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             javax.inject.Provider<g.o.a.c<g.o.a.l.b>> r0 = r2.f8560j
             javax.inject.Provider<g.o.a.c<g.o.a.l.b>> r1 = r3.f8560j
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             com.bamtechmedia.dominguez.core.content.paging.e r0 = r2.f8561k
             com.bamtechmedia.dominguez.core.content.paging.e r1 = r3.f8561k
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             com.bamtechmedia.dominguez.core.utils.e r0 = r2.f8562l
             com.bamtechmedia.dominguez.core.utils.e r1 = r3.f8562l
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             com.bamtechmedia.dominguez.collections.o0.g r0 = r2.f8563m
             com.bamtechmedia.dominguez.collections.o0.g r1 = r3.f8563m
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0095
             java.util.Set<java.lang.Integer> r0 = r2.f8564n
             java.util.Set<java.lang.Integer> r3 = r3.f8564n
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0095
             goto L_0x0097
         L_0x0095:

@@ -56,7 +56,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -195,7 +195,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
             eVar.m11088a((ImageView) eVar._$_findCachedViewById(C5363f.brandLogoImageView), aVar, aVar2, "title", "titleAspectRatio");
             this.f8146c.m11091a(aVar2, aVar);
             Context requireContext = this.f8146c.requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             if (!C5837i.m18843e(requireContext)) {
                 C3176e eVar2 = this.f8146c;
                 eVar2.m11088a((ImageView) eVar2._$_findCachedViewById(C5363f.brandTopLogoImageView), aVar, aVar2, "title", "titleAspectRatio");
@@ -263,7 +263,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
         public final void invoke() {
             C5759b w = this.f8149c.mo12238w();
             RecyclerView recyclerView = (RecyclerView) this.f8149c._$_findCachedViewById(C5363f.brandRecyclerView);
-            C12880j.m40222a((Object) recyclerView, "brandRecyclerView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "brandRecyclerView");
             View a = w.mo17645a(recyclerView);
             if (a != null) {
                 a.requestFocus();
@@ -348,7 +348,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
         public final void invoke() {
             RecyclerView recyclerView = (RecyclerView) this.f8153c._$_findCachedViewById(C5363f.brandRecyclerView);
             String str = "brandRecyclerView";
-            C12880j.m40222a((Object) recyclerView, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str);
             if (recyclerView.isFocused()) {
                 BrandPageAnimationHelper brandPageAnimationHelper = (BrandPageAnimationHelper) this.f8153c.mo12237v().mo27107c();
                 if (brandPageAnimationHelper != null) {
@@ -356,7 +356,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
                 }
                 C5759b w = this.f8153c.mo12238w();
                 RecyclerView recyclerView2 = (RecyclerView) this.f8153c._$_findCachedViewById(C5363f.brandRecyclerView);
-                C12880j.m40222a((Object) recyclerView2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
                 View a = w.mo17645a(recyclerView2);
                 if (a != null) {
                     a.requestFocus();
@@ -372,7 +372,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
     /* renamed from: A */
     private final void m11087A() {
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         if (!C5837i.m18843e(requireActivity)) {
             Fragment fragment = this.f8142q0;
             if (fragment != null) {
@@ -406,7 +406,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
             }
             return;
         }
-        C12880j.m40227c("profilesMemoryCache");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesMemoryCache");
         throw null;
     }
 
@@ -417,7 +417,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
         if (cVar != null) {
             cVar.mo20439a(Integer.valueOf(C5365h.error_collection_unavailable), Integer.valueOf(C5365h.btn_action1_collection_unavailable));
         } else {
-            C12880j.m40227c("deepLinkDialog");
+            Intrinsics.throwUninitializedPropertyAccessException("deepLinkDialog");
             throw null;
         }
     }
@@ -425,7 +425,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
     /* renamed from: z */
     private final void m11096z() {
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         if (!C5837i.m18843e(requireActivity)) {
             this.f8142q0 = C5839j.m18845a(getFragmentManager());
             Fragment fragment = this.f8142q0;
@@ -486,24 +486,24 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
             this.f8141p0 = true;
             Context requireContext = requireContext();
             String str = "requireContext()";
-            C12880j.m40222a((Object) requireContext, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, str);
             if (!C5837i.m18843e(requireContext)) {
                 Context requireContext2 = requireContext();
-                C12880j.m40222a((Object) requireContext2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireContext2, str);
                 String str2 = "contentTransitionAnimation";
                 if (C5837i.m18842d(requireContext2)) {
                     C3807b bVar = this.f8137l0;
                     if (bVar != null) {
                         return bVar.mo13710a(new C3181e(this));
                     }
-                    C12880j.m40227c(str2);
+                    Intrinsics.throwUninitializedPropertyAccessException(str2);
                     throw null;
                 }
                 C3807b bVar2 = this.f8137l0;
                 if (bVar2 != null) {
                     return bVar2.mo13712b(new C3182f(this));
                 }
-                C12880j.m40227c(str2);
+                Intrinsics.throwUninitializedPropertyAccessException(str2);
                 throw null;
             }
         }
@@ -513,7 +513,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
     /* renamed from: n */
     public Single<C2378m> mo11486n() {
         Single<C2378m> g = super.mo11486n().mo30233g(C3178b.f8144c);
-        C12880j.m40222a((Object) g, "valueAnalytics.map {\n   …)\n            )\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "valueAnalytics.map {\n   …)\n            )\n        }");
         return g;
     }
 
@@ -539,7 +539,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
             C5755i.m18679a(this, g0Var, null, null, new C3185i(this), 6, null);
             return;
         }
-        C12880j.m40227c("motionLayoutViewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("motionLayoutViewModel");
         throw null;
     }
 
@@ -560,28 +560,28 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
             C3807b bVar = this.f8137l0;
             if (bVar != null) {
                 View _$_findCachedViewById2 = _$_findCachedViewById(C5363f.brandMainLayout);
-                C12880j.m40222a((Object) _$_findCachedViewById2, "brandMainLayout");
+                Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById2, "brandMainLayout");
                 C0532d requireActivity = requireActivity();
-                C12880j.m40222a((Object) requireActivity, "requireActivity()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
                 bVar.mo13709a(_$_findCachedViewById, _$_findCachedViewById2, requireActivity);
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         }
         RecyclerViewSnapScrollHelper r = mo12327r();
         C0722m viewLifecycleOwner = getViewLifecycleOwner();
         String str2 = "viewLifecycleOwner";
-        C12880j.m40222a((Object) viewLifecycleOwner, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, str2);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(C5363f.brandRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "view.brandRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "view.brandRecyclerView");
         r.mo17710a(viewLifecycleOwner, recyclerView, (C5805c) new C5808c(Integer.valueOf(C5361d.padding_extra_small)));
         Optional<BrandPageAnimationHelper> optional = this.f8134i0;
         if (optional != null) {
             BrandPageAnimationHelper brandPageAnimationHelper = (BrandPageAnimationHelper) optional.mo27107c();
             if (brandPageAnimationHelper != null) {
                 C0722m viewLifecycleOwner2 = getViewLifecycleOwner();
-                C12880j.m40222a((Object) viewLifecycleOwner2, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner2, str2);
                 viewLifecycleOwner2.getLifecycle().mo4134a(brandPageAnimationHelper);
             }
             View _$_findCachedViewById3 = _$_findCachedViewById(C5363f.brandMainLayout);
@@ -595,35 +595,35 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
                 if (g0Var != null) {
                     g0Var.mo12382a(motionLayout);
                 } else {
-                    C12880j.m40227c(str3);
+                    Intrinsics.throwUninitializedPropertyAccessException(str3);
                     throw null;
                 }
             }
             C3327g0 g0Var2 = this.f8133h0;
             if (g0Var2 == null) {
-                C12880j.m40227c(str3);
+                Intrinsics.throwUninitializedPropertyAccessException(str3);
                 throw null;
             } else if (g0Var2.mo12384y()) {
                 Context requireContext = requireContext();
                 String str4 = "requireContext()";
-                C12880j.m40222a((Object) requireContext, str4);
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, str4);
                 if (C5837i.m18842d(requireContext)) {
                     C3807b bVar2 = this.f8137l0;
                     if (bVar2 != null) {
                         bVar2.mo13708a();
                     } else {
-                        C12880j.m40227c(str);
+                        Intrinsics.throwUninitializedPropertyAccessException(str);
                         throw null;
                     }
                 } else {
                     Context requireContext2 = requireContext();
-                    C12880j.m40222a((Object) requireContext2, str4);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) requireContext2, str4);
                     if (!C5837i.m18843e(requireContext2)) {
                         C3807b bVar3 = this.f8137l0;
                         if (bVar3 != null) {
                             bVar3.mo13711b();
                         } else {
-                            C12880j.m40227c(str);
+                            Intrinsics.throwUninitializedPropertyAccessException(str);
                             throw null;
                         }
                     }
@@ -632,12 +632,12 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
                 if (g0Var3 != null) {
                     g0Var3.mo12383d(false);
                 } else {
-                    C12880j.m40227c(str3);
+                    Intrinsics.throwUninitializedPropertyAccessException(str3);
                     throw null;
                 }
             }
         } else {
-            C12880j.m40227c("brandPageAnimationHelper");
+            Intrinsics.throwUninitializedPropertyAccessException("brandPageAnimationHelper");
             throw null;
         }
     }
@@ -648,7 +648,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
         if (optional != null) {
             return optional;
         }
-        C12880j.m40227c("brandPageAnimationHelper");
+        Intrinsics.throwUninitializedPropertyAccessException("brandPageAnimationHelper");
         throw null;
     }
 
@@ -658,7 +658,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
         if (bVar != null) {
             return bVar;
         }
-        C12880j.m40227c("focusFinder");
+        Intrinsics.throwUninitializedPropertyAccessException("focusFinder");
         throw null;
     }
 
@@ -670,9 +670,9 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
     /* renamed from: a */
     public C3503a mo12229a(C11848c<C11863k> cVar) {
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.brandRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "brandRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "brandRecyclerView");
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C5363f.brandProgressBar);
-        C12880j.m40222a((Object) progressBar, "brandProgressBar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "brandProgressBar");
         C3503a aVar = new C3503a(cVar, recyclerView, progressBar, (NoConnectionView) _$_findCachedViewById(C5363f.brandNoConnectionView), null, null, 48, null);
         return aVar;
     }
@@ -680,7 +680,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
     /* renamed from: a */
     public boolean mo12232a(int i) {
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         boolean z = false;
         if (C5837i.m18843e(requireContext)) {
             View view = getView();
@@ -688,7 +688,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
                 View findFocus = view.findFocus();
                 if (findFocus != null) {
                     boolean z2 = i == 20 || i == 21 || i == 22;
-                    if (!C12880j.m40224a((Object) findFocus, (Object) (RecyclerView) _$_findCachedViewById(C5363f.brandRecyclerView)) || !z2) {
+                    if (!Intrinsics.areEqual((Object) findFocus, (Object) (RecyclerView) _$_findCachedViewById(C5363f.brandRecyclerView)) || !z2) {
                         z = mo12323a(i, findFocus, false);
                     } else {
                         Optional<BrandPageAnimationHelper> optional = this.f8134i0;
@@ -700,17 +700,17 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
                             C5759b bVar = this.f8136k0;
                             if (bVar != null) {
                                 RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.brandRecyclerView);
-                                C12880j.m40222a((Object) recyclerView, "brandRecyclerView");
+                                Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "brandRecyclerView");
                                 View a = bVar.mo17645a(recyclerView);
                                 if (a != null) {
                                     z = a.requestFocus();
                                 }
                                 return z;
                             }
-                            C12880j.m40227c("focusFinder");
+                            Intrinsics.throwUninitializedPropertyAccessException("focusFinder");
                             throw null;
                         }
-                        C12880j.m40227c("brandPageAnimationHelper");
+                        Intrinsics.throwUninitializedPropertyAccessException("brandPageAnimationHelper");
                         throw null;
                     }
                 }
@@ -728,7 +728,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
                 m11095y();
             } else {
                 View _$_findCachedViewById = _$_findCachedViewById(C5363f.brandMainLayout);
-                C12880j.m40222a((Object) _$_findCachedViewById, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, str);
                 _$_findCachedViewById.setVisibility(8);
             }
             View _$_findCachedViewById2 = _$_findCachedViewById(C5363f.blockingView);
@@ -737,7 +737,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
             }
         } else {
             View _$_findCachedViewById3 = _$_findCachedViewById(C5363f.brandMainLayout);
-            C12880j.m40222a((Object) _$_findCachedViewById3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById3, str);
             _$_findCachedViewById3.setVisibility(0);
         }
         if (!this.f8139n0 && bVar.mo12653a() != null) {
@@ -756,7 +756,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
                             z = true;
                         }
                     } else {
-                        C12880j.m40227c("profilesMemoryCache");
+                        Intrinsics.throwUninitializedPropertyAccessException("profilesMemoryCache");
                         throw null;
                     }
                 }
@@ -766,12 +766,12 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
                     m11093b(bVar);
                 }
             } else {
-                C12880j.m40227c("brandPageAnimationHelper");
+                Intrinsics.throwUninitializedPropertyAccessException("brandPageAnimationHelper");
                 throw null;
             }
         }
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         view.postDelayed(new C3184h(function0), (!C5837i.m18842d(requireContext) || this.f8139n0) ? 0 : 350);
     }
 
@@ -789,7 +789,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
                 }
                 return;
             }
-            C12880j.m40227c("brandPageAnimationHelper");
+            Intrinsics.throwUninitializedPropertyAccessException("brandPageAnimationHelper");
             throw null;
         }
     }
@@ -799,7 +799,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
     public final void m11091a(C3433a aVar, C3658a aVar2) {
         C3433a aVar3 = aVar;
         String string = getResources().getString(C5365h.collection_size_qualifier);
-        C12880j.m40222a((Object) string, "resources.getString(R.st…ollection_size_qualifier)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) string, "resources.getString(R.st…ollection_size_qualifier)");
         C3623a aVar4 = new C3623a(((Number) aVar3.mo12607a("backgroundAspectRatio", string)).floatValue());
         View _$_findCachedViewById = _$_findCachedViewById(C5363f.brandBackgroundImageView);
         if (!(_$_findCachedViewById instanceof AspectRatioImageView)) {
@@ -815,7 +815,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
             Image a = aVar2.mo12846a((String) aVar3.mo12606a("background"), aVar4);
             int a2 = C3849b.m12935a(C3849b.f9526a, aVar4.mo13242X(), 0, 2, null);
             Context requireContext = requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             C5763b.m18702a(imageView, a, a2, null, null, C5837i.m18843e(requireContext), false, false, 108, null);
             return;
         }

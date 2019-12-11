@@ -13,12 +13,12 @@ public final class DescriptorUtilKt {
         L_0x0008:
             kotlin.reflect.jvm.internal.impl.name.FqName r0 = r6.parent()
             java.lang.String r2 = "fqName.parent()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)
             kotlin.reflect.jvm.internal.impl.descriptors.PackageViewDescriptor r0 = r5.getPackage(r0)
             kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope r0 = r0.getMemberScope()
             kotlin.reflect.jvm.internal.impl.name.Name r3 = r6.shortName()
             java.lang.String r4 = "fqName.shortName()"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor r0 = r0.getContributedClassifier(r3, r7)
             boolean r3 = r0 instanceof kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor
             if (r3 != 0) goto L_0x002b
@@ -29,13 +29,13 @@ public final class DescriptorUtilKt {
             return r0
         L_0x0030:
             kotlin.reflect.jvm.internal.impl.name.FqName r0 = r6.parent()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)
             kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor r5 = resolveClassByFqName(r5, r0, r7)
             if (r5 == 0) goto L_0x004f
             kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope r5 = r5.getUnsubstitutedInnerClassesScope()
             if (r5 == 0) goto L_0x004f
             kotlin.reflect.jvm.internal.impl.name.Name r6 = r6.shortName()
-            kotlin.jvm.internal.C12880j.m40222a(r6, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r4)
             kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor r5 = r5.getContributedClassifier(r6, r7)
             goto L_0x0050
         L_0x004f:

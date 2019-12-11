@@ -9,16 +9,16 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Pair;
 import com.google.android.exoplayer2.C8883r;
-import com.google.android.exoplayer2.drm.C8712n;
+import com.google.android.exoplayer2.drm.ExoMediaCrypto;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
 import com.google.android.exoplayer2.drm.DrmSession.C8694a;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.KeyRequest;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.ProvisionRequest;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9557m;
 import com.google.android.exoplayer2.p393v0.C9557m.C9558a;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -29,7 +29,7 @@ import java.util.UUID;
 @TargetApi(18)
 /* renamed from: com.google.android.exoplayer2.drm.i */
 /* compiled from: DefaultDrmSession */
-class C8704i<T extends C8712n> implements DrmSession<T> {
+class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
 
     /* renamed from: a */
     public final List<C8692b> f18483a;
@@ -72,7 +72,7 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
     private HandlerThread f18495m;
 
     /* renamed from: n */
-    private C8705a f18496n;
+    private PostResponseHandler f18496n;
 
     /* renamed from: o */
     private T f18497o;
@@ -95,14 +95,14 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
     @SuppressLint({"HandlerLeak"})
     /* renamed from: com.google.android.exoplayer2.drm.i$a */
     /* compiled from: DefaultDrmSession */
-    private class C8705a extends Handler {
-        public C8705a(Looper looper) {
+    private class PostResponseHandler extends Handler {
+        public PostResponseHandler(Looper looper) {
             super(looper);
         }
 
         /* access modifiers changed from: 0000 */
         /* renamed from: a */
-        public void mo22801a(int i, Object obj, boolean z) {
+        public void post(int i, Object obj, boolean z) {
             obtainMessage(i, z ? 1 : 0, 0, obj).sendToTarget();
         }
 
@@ -111,38 +111,38 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
             try {
                 int i = message.what;
                 if (i == 0) {
-                    e = C8704i.this.f18490h.executeProvisionRequest(C8704i.this.f18491i, (ProvisionRequest) obj);
+                    e = DefaultDrmSession.this.f18490h.executeProvisionRequest(DefaultDrmSession.this.f18491i, (ProvisionRequest) obj);
                 } else if (i == 1) {
-                    e = C8704i.this.f18490h.executeKeyRequest(C8704i.this.f18491i, (KeyRequest) obj);
+                    e = DefaultDrmSession.this.f18490h.executeKeyRequest(DefaultDrmSession.this.f18491i, (KeyRequest) obj);
                 } else {
                     throw new RuntimeException();
                 }
             } catch (Exception e) {
                 e = e;
-                if (m25249a(message)) {
+                if (maybeRetryRequest(message)) {
                     return;
                 }
             }
-            C8704i.this.f18492j.obtainMessage(message.what, Pair.create(obj, e)).sendToTarget();
+            DefaultDrmSession.this.f18492j.obtainMessage(message.what, Pair.create(obj, e)).sendToTarget();
         }
 
         /* renamed from: a */
-        private boolean m25249a(Message message) {
+        private boolean maybeRetryRequest(Message message) {
             if (!(message.arg1 == 1)) {
                 return false;
             }
             int i = message.arg2 + 1;
-            if (i > C8704i.this.f18489g) {
+            if (i > DefaultDrmSession.this.f18489g) {
                 return false;
             }
             Message obtain = Message.obtain(message);
             obtain.arg2 = i;
-            sendMessageDelayed(obtain, m25248a(i));
+            sendMessageDelayed(obtain, getRetryDelayMillis(i));
             return true;
         }
 
         /* renamed from: a */
-        private long m25248a(int i) {
+        private long getRetryDelayMillis(int i) {
             return (long) Math.min((i - 1) * 1000, 5000);
         }
     }
@@ -161,27 +161,27 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
             Object obj2 = pair.second;
             int i = message.what;
             if (i == 0) {
-                C8704i.this.m25230b(obj, obj2);
+                DefaultDrmSession.this.m25230b(obj, obj2);
             } else if (i == 1) {
-                C8704i.this.m25225a(obj, obj2);
+                DefaultDrmSession.this.m25225a(obj, obj2);
             }
         }
     }
 
     /* renamed from: com.google.android.exoplayer2.drm.i$c */
     /* compiled from: DefaultDrmSession */
-    public interface C8707c<T extends C8712n> {
+    public interface C8707c<T extends ExoMediaCrypto> {
         /* renamed from: a */
         void mo22742a();
 
         /* renamed from: a */
-        void mo22745a(C8704i<T> iVar);
+        void mo22745a(DefaultDrmSession<T> iVar);
 
         /* renamed from: a */
         void mo22746a(Exception exc);
     }
 
-    public C8704i(UUID uuid, ExoMediaDrm<T> exoMediaDrm, C8707c<T> cVar, List<C8692b> list, int i, byte[] bArr, HashMap<String, String> hashMap, C8715q qVar, Looper looper, C9557m<C8709k> mVar, int i2) {
+    public DefaultDrmSession(UUID uuid, ExoMediaDrm<T> exoMediaDrm, C8707c<T> cVar, List<C8692b> list, int i, byte[] bArr, HashMap<String, String> hashMap, C8715q qVar, Looper looper, C9557m<C8709k> mVar, int i2) {
         if (i == 1 || i == 3) {
             C9537e.m29296a(bArr);
         }
@@ -204,12 +204,12 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
         this.f18492j = new C8706b<>(looper);
         this.f18495m = new HandlerThread("DrmRequestHandler");
         this.f18495m.start();
-        this.f18496n = new C8705a<>(this.f18495m.getLooper());
+        this.f18496n = new PostResponseHandler<>(this.f18495m.getLooper());
     }
 
     /* renamed from: i */
     private long m25233i() {
-        if (!C8883r.f19045d.equals(this.f18491i)) {
+        if (!C8883r.WIDEVINE_UUID.equals(this.f18491i)) {
             return Long.MAX_VALUE;
         }
         Pair a = C8717s.m25263a(this);
@@ -227,18 +227,19 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
     /* renamed from: k */
     private void m25235k() {
         if (this.f18486d == 0 && this.f18493k == 4) {
-            C9554k0.m29394a(this.f18499q);
+            Util.castNonNull(this.f18499q);
             m25226a(false);
         }
     }
 
     /* renamed from: l */
-    private boolean m25236l() {
+    private boolean restoreKeys() {
         try {
+			// mediaDrm.restoreKeys(sessionId, offlineLicenseKeySetId);
             this.f18484b.mo22780a(this.f18499q, this.f18500r);
             return true;
         } catch (Exception e) {
-            C9563q.m29496a("DefaultDrmSession", "Error trying to restore Widevine keys.", e);
+            Log.m29496a("DefaultDrmSession", "Error trying to restore Widevine keys.", e);
             m25229b(e);
             return false;
         }
@@ -273,7 +274,7 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
     /* renamed from: g */
     public void mo22799g() {
         this.f18502t = this.f18484b.mo22776a();
-        this.f18496n.mo22801a(0, this.f18502t, true);
+        this.f18496n.post(0, this.f18502t, true);
     }
 
     public final C8694a getError() {
@@ -379,13 +380,13 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
         if (i == 0 || i == 1) {
             if (this.f18500r == null) {
                 m25227a(this.f18499q, 1, z);
-            } else if (this.f18493k == 4 || m25236l()) {
+            } else if (this.f18493k == 4 || restoreKeys()) {
                 long i2 = m25233i();
                 if (this.f18486d == 0 && i2 <= 60) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Offline license has expired or will expire soon. Remaining seconds: ");
                     sb.append(i2);
-                    C9563q.m29495a("DefaultDrmSession", sb.toString());
+                    Log.m29495a("DefaultDrmSession", sb.toString());
                     m25227a(this.f18499q, 2, z);
                 } else if (i2 <= 0) {
                     m25229b((Exception) new C8714p());
@@ -397,13 +398,13 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
         } else if (i != 2) {
             if (i == 3) {
                 C9537e.m29296a(this.f18500r);
-                if (m25236l()) {
+                if (restoreKeys()) {
                     m25227a(this.f18500r, 3, z);
                 }
             }
         } else if (this.f18500r == null) {
             m25227a(this.f18499q, 2, z);
-        } else if (m25236l()) {
+        } else if (restoreKeys()) {
             m25227a(this.f18499q, 2, z);
         }
     }
@@ -439,7 +440,7 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
     private void m25227a(byte[] bArr, int i, boolean z) {
         try {
             this.f18501s = this.f18484b.mo22775a(bArr, this.f18483a, i, this.f18487e);
-            this.f18496n.mo22801a(1, this.f18501s, z);
+            this.f18496n.post(1, this.f18501s, z);
         } catch (Exception e) {
             m25232c(e);
         }
@@ -459,7 +460,7 @@ class C8704i<T extends C8712n> implements DrmSession<T> {
                 if (this.f18486d == 3) {
                     ExoMediaDrm<T> exoMediaDrm = this.f18484b;
                     byte[] bArr2 = this.f18500r;
-                    C9554k0.m29394a(bArr2);
+                    Util.castNonNull(bArr2);
                     exoMediaDrm.mo22783b(bArr2, bArr);
                     this.f18488f.mo24648a((C9558a<T>) C8701f.f18481a);
                 } else {

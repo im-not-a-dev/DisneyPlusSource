@@ -30,7 +30,7 @@ import kotlin.C12898l;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p135s.C4121a0;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001:\u0001!B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\b\u0010\u000f\u001a\u00020\u0010H\u0002J\u0012\u0010\u0011\u001a\u00020\u00102\b\u0010\u0012\u001a\u0004\u0018\u00010\u0013H\u0014J\u000e\u0010\u0014\u001a\u00020\n2\u0006\u0010\u0015\u001a\u00020\u0016J\u001a\u0010\u0017\u001a\u00020\n2\u0006\u0010\u0018\u001a\u00020\u00072\b\b\u0002\u0010\u0019\u001a\u00020\nH\u0002J\u001a\u0010\u001a\u001a\u00020\u0010*\u00020\u001b2\f\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\u00100\u001dH\u0014J\f\u0010\u001e\u001a\u00020\u0010*\u00020\u001bH\u0014J\u0014\u0010\u001f\u001a\u00020\u0010*\u00020\u001b2\u0006\u0010 \u001a\u00020\nH\u0014R\u0014\u0010\t\u001a\u00020\n8BX\u0004¢\u0006\u0006\u001a\u0004\b\t\u0010\u000bR\u0019\u0010\f\u001a\u00020\u0007*\u00020\u00078Â\u0002X\u0004¢\u0006\u0006\u001a\u0004\b\r\u0010\u000e¨\u0006\""}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/design/widgets/disneynavigationbar/DisneyTvNavigationBar;", "Lcom/bamtechmedia/dominguez/core/design/widgets/disneynavigationbar/DisneyNavigationBar;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "isExpanded", "", "()Z", "accessibilityImportanceState", "getAccessibilityImportanceState", "(I)I", "registerAccessibilityDelegate", "", "setNavigationBackground", "backgroundHelper", "Lcom/bamtechmedia/dominguez/core/design/helper/BackgroundHelper;", "setState", "navState", "Lcom/bamtechmedia/dominguez/core/design/widgets/disneynavigationbar/DisneyTvNavigationBar$NavState;", "translateNavState", "state", "animate", "setPlatformRelatedItem", "Landroid/view/View;", "onClick", "Lkotlin/Function0;", "setPlatformRelatedProfileItem", "updatePlatformRelatedItem", "isSelected", "NavState", "lib_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -156,11 +156,11 @@ public final class DisneyTvNavigationBar extends C5673a {
 
         public final void onFocusChange(View view, boolean z) {
             ImageView imageView = (ImageView) this.f13316c.findViewById(C3838h.profileImageFocus);
-            C12880j.m40222a((Object) imageView, "profileImageFocus");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "profileImageFocus");
             float f = 1.0f;
             imageView.setAlpha(z ? 1.0f : 0.0f);
             ImageView imageView2 = (ImageView) this.f13316c.findViewById(C3838h.profileImage);
-            C12880j.m40222a((Object) imageView2, "profileImage");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView2, "profileImage");
             if (!z) {
                 f = 0.6f;
             }
@@ -216,7 +216,7 @@ public final class DisneyTvNavigationBar extends C5673a {
     public void setNavigationBackground(C3848a aVar) {
         if (aVar != null) {
             View c = mo2145c(C3838h.sideMenuGradientBackground);
-            C12880j.m40222a((Object) c, "sideMenuGradientBackground");
+            Intrinsics.checkReturnedValueIsNotNull((Object) c, "sideMenuGradientBackground");
             aVar.mo13764a(c);
         }
     }
@@ -240,7 +240,7 @@ public final class DisneyTvNavigationBar extends C5673a {
     public final boolean mo17493a(C5669b bVar) {
         Object obj;
         Context context = getContext();
-        C12880j.m40222a((Object) context, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
         if (C5837i.m18843e(context)) {
             int i = C5680c.$EnumSwitchMapping$0[bVar.ordinal()];
             if (i == 1) {
@@ -257,7 +257,7 @@ public final class DisneyTvNavigationBar extends C5673a {
             } else if (!m18522c()) {
                 m18521a(this, C3838h.expanded, false, 2, null);
                 LinearLayout linearLayout = (LinearLayout) mo2145c(C3838h.iconLayout);
-                C12880j.m40222a((Object) linearLayout, "iconLayout");
+                Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, "iconLayout");
                 Iterator it = C4121a0.m14117a(linearLayout).iterator();
                 while (true) {
                     if (!it.hasNext()) {
@@ -265,7 +265,7 @@ public final class DisneyTvNavigationBar extends C5673a {
                         break;
                     }
                     obj = it.next();
-                    if (C12880j.m40224a(((View) obj).getTag(), (Object) Integer.valueOf(getSelectedMenuItem()))) {
+                    if (Intrinsics.areEqual(((View) obj).getTag(), (Object) Integer.valueOf(getSelectedMenuItem()))) {
                         break;
                     }
                 }
@@ -315,7 +315,7 @@ public final class DisneyTvNavigationBar extends C5673a {
     /* renamed from: a */
     public final boolean m18518a(int i, boolean z) {
         LinearLayout linearLayout = (LinearLayout) mo2145c(C3838h.iconLayout);
-        C12880j.m40222a((Object) linearLayout, "iconLayout");
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, "iconLayout");
         Iterator it = C4121a0.m14117a(linearLayout).iterator();
         while (true) {
             boolean z2 = false;
@@ -345,7 +345,7 @@ public final class DisneyTvNavigationBar extends C5673a {
             MotionLayout motionLayout2 = (MotionLayout) mo2145c(C3838h.sideMenuAnimation);
             if (motionLayout2 != null) {
                 MotionLayout motionLayout3 = (MotionLayout) mo2145c(C3838h.sideMenuAnimation);
-                C12880j.m40222a((Object) motionLayout3, "sideMenuAnimation");
+                Intrinsics.checkReturnedValueIsNotNull((Object) motionLayout3, "sideMenuAnimation");
                 motionLayout2.mo2142b(motionLayout3.getCurrentState(), i);
             }
             MotionLayout motionLayout4 = (MotionLayout) mo2145c(C3838h.sideMenuAnimation);
@@ -357,10 +357,10 @@ public final class DisneyTvNavigationBar extends C5673a {
                 motionLayout5.mo2146d();
             }
             ConstraintLayout constraintLayout = (ConstraintLayout) mo2145c(C3838h.sideMenu);
-            C12880j.m40222a((Object) constraintLayout, "sideMenu");
+            Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "sideMenu");
             constraintLayout.setAlpha((i == C3838h.expanded || i == C3838h.collapsed) ? 1.0f : 0.0f);
             ImageView imageView = (ImageView) mo2145c(C3838h.profileImage);
-            C12880j.m40222a((Object) imageView, "profileImage");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "profileImage");
             if (i != C3838h.expanded) {
                 f = 0.0f;
             }

@@ -10,14 +10,14 @@ import p163g.p413f.p414a.p423v.C10760b;
 
 /* renamed from: com.bumptech.glide.load.o.v */
 /* compiled from: UnitModelLoader */
-public class C8328v<Model> implements C8306n<Model, Model> {
+public class C8328v<Model> implements C8306n<Model,MODEL> {
 
     /* renamed from: a */
     private static final C8328v<?> f17805a = new C8328v<>();
 
     /* renamed from: com.bumptech.glide.load.o.v$a */
     /* compiled from: UnitModelLoader */
-    public static class C8329a<Model> implements C8308o<Model, Model> {
+    public static class C8329a<Model> implements C8308o<Model,MODEL> {
 
         /* renamed from: a */
         private static final C8329a<?> f17806a = new C8329a<>();
@@ -28,7 +28,7 @@ public class C8328v<Model> implements C8306n<Model, Model> {
         }
 
         /* renamed from: a */
-        public C8306n<Model, Model> mo19954a(C8314r rVar) {
+        public C8306n<Model,MODEL> mo19954a(C8314r rVar) {
             return C8328v.m24192a();
         }
 
@@ -42,14 +42,14 @@ public class C8328v<Model> implements C8306n<Model, Model> {
     private static class C8330b<Model> implements C8122d<Model> {
 
         /* renamed from: c */
-        private final Model f17807c;
+        private finalMODEL f17807c;
 
-        C8330b(Model model) {
-            this.f17807c = model;
+        C8330b(ModelMODEL) {
+            this.f17807c =MODEL;
         }
 
         /* renamed from: a */
-        public void mo21141a(C10657j jVar, C8123a<? super Model> aVar) {
+        public void mo21141a(C10657j jVar, C8123a<? superMODEL> aVar) {
             aVar.mo21180a(this.f17807c);
         }
 
@@ -76,12 +76,12 @@ public class C8328v<Model> implements C8306n<Model, Model> {
     }
 
     /* renamed from: a */
-    public boolean mo19953a(Model model) {
+    public boolean mo19953a(ModelMODEL) {
         return true;
     }
 
     /* renamed from: a */
-    public C8307a<Model> mo19951a(Model model, int i, int i2, C8115i iVar) {
+    public C8307a<Model> mo19951a(ModelMODEL, int i, int i2, C8115i iVar) {
         return new C8307a<>(new C10760b(model), new C8330b(model));
     }
 }

@@ -13,7 +13,7 @@ import com.bamtech.sdk4.media.offline.OfflineMediaPlugin;
 import java.util.List;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000j\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 <2\u00020\u0001:\u0001<B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u0010\u00104\u001a\u0002052\u0006\u00106\u001a\u00020&H\u0002J\b\u00107\u001a\u000208H\u0016J\f\u00109\u001a\u00020:*\u00020;H\u0002R$\u0010\u0007\u001a\u00020\b8\u0000@\u0000X.¢\u0006\u0014\n\u0000\u0012\u0004\b\t\u0010\n\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR$\u0010\u000f\u001a\u00020\u00108\u0000@\u0000X.¢\u0006\u0014\n\u0000\u0012\u0004\b\u0011\u0010\n\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015R$\u0010\u0016\u001a\u00020\u00178\u0000@\u0000X.¢\u0006\u0014\n\u0000\u0012\u0004\b\u0018\u0010\n\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\u001cR$\u0010\u001d\u001a\u00020\u001e8\u0000@\u0000X.¢\u0006\u0014\n\u0000\u0012\u0004\b\u001f\u0010\n\u001a\u0004\b \u0010!\"\u0004\b\"\u0010#R.\u0010$\u001a\f\u0012\u0004\u0012\u00020&0%j\u0002`'8\u0000@\u0000X.¢\u0006\u0014\n\u0000\u0012\u0004\b(\u0010\n\u001a\u0004\b)\u0010*\"\u0004\b+\u0010,R$\u0010-\u001a\u00020.8\u0006@\u0006X.¢\u0006\u0014\n\u0000\u0012\u0004\b/\u0010\n\u001a\u0004\b0\u00101\"\u0004\b2\u00103¨\u0006="}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/media/offline/workers/RenewLicensesWorker;", "Landroidx/work/Worker;", "context", "Landroid/content/Context;", "parameters", "Landroidx/work/WorkerParameters;", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "database", "Lcom/bamtech/sdk4/internal/media/offline/db/OfflineDatabase;", "database$annotations", "()V", "getDatabase$plugin_offline_media_release", "()Lcom/bamtech/sdk4/internal/media/offline/db/OfflineDatabase;", "setDatabase$plugin_offline_media_release", "(Lcom/bamtech/sdk4/internal/media/offline/db/OfflineDatabase;)V", "downloadWorkManager", "Lcom/bamtech/sdk4/internal/media/offline/DownloadWorkManagerHelper;", "downloadWorkManager$annotations", "getDownloadWorkManager$plugin_offline_media_release", "()Lcom/bamtech/sdk4/internal/media/offline/DownloadWorkManagerHelper;", "setDownloadWorkManager$plugin_offline_media_release", "(Lcom/bamtech/sdk4/internal/media/offline/DownloadWorkManagerHelper;)V", "exoCachedMediaHelper", "Lcom/bamtech/sdk4/internal/media/offline/ExoCachedMediaHelper;", "exoCachedMediaHelper$annotations", "getExoCachedMediaHelper$plugin_offline_media_release", "()Lcom/bamtech/sdk4/internal/media/offline/ExoCachedMediaHelper;", "setExoCachedMediaHelper$plugin_offline_media_release", "(Lcom/bamtech/sdk4/internal/media/offline/ExoCachedMediaHelper;)V", "licenseManager", "Lcom/bamtech/sdk4/internal/media/offline/WidevineLicenseManager;", "licenseManager$annotations", "getLicenseManager$plugin_offline_media_release", "()Lcom/bamtech/sdk4/internal/media/offline/WidevineLicenseManager;", "setLicenseManager$plugin_offline_media_release", "(Lcom/bamtech/sdk4/internal/media/offline/WidevineLicenseManager;)V", "transactionProvider", "Ljavax/inject/Provider;", "Lcom/bamtech/sdk4/internal/service/ServiceTransaction;", "Lcom/bamtech/sdk4/internal/service/ServiceTransactionProvider;", "transactionProvider$annotations", "getTransactionProvider$plugin_offline_media_release", "()Ljavax/inject/Provider;", "setTransactionProvider$plugin_offline_media_release", "(Ljavax/inject/Provider;)V", "userAgent", "", "userAgent$annotations", "getUserAgent", "()Ljava/lang/String;", "setUserAgent", "(Ljava/lang/String;)V", "checkJobInterval", "", "transaction", "doWork", "Landroidx/work/ListenableWorker$Result;", "shouldRenewLicense", "", "Lcom/bamtech/sdk4/internal/media/offline/db/CachedMediaEntry;", "Companion", "plugin-offline-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: RenewLicensesWorker.kt */
@@ -52,7 +52,7 @@ public final class RenewLicensesWorker extends Worker {
         if (downloadWorkManagerHelper != null) {
             downloadWorkManagerHelper.startPeriodicLicenseRenewal(serviceTransaction, a);
         } else {
-            C12880j.m40227c("downloadWorkManager");
+            Intrinsics.throwUninitializedPropertyAccessException("downloadWorkManager");
             throw null;
         }
     }
@@ -92,7 +92,7 @@ public final class RenewLicensesWorker extends Worker {
             org.joda.time.DateTime r4 = r7.getLastLicenseRenewal()
             if (r4 == 0) goto L_0x0042
             java.lang.String r4 = "hoursSinceLastRenewal"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r4)
             int r0 = r0.getHours()
             r4 = 2
             if (r0 < r4) goto L_0x0040
@@ -168,11 +168,11 @@ public final class RenewLicensesWorker extends Worker {
             if (r0 == 0) goto L_0x0044
             r0.cancelPeriodicRenewal()
             androidx.work.ListenableWorker$Result r0 = androidx.work.ListenableWorker.Result.m5470c()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r12)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r12)
             return r0
         L_0x0044:
             java.lang.String r0 = "downloadWorkManager"
-            kotlin.jvm.internal.C12880j.m40227c(r0)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)
             throw r5
         L_0x004a:
             java.util.ArrayList r6 = new java.util.ArrayList
@@ -228,7 +228,7 @@ public final class RenewLicensesWorker extends Worker {
             byte[] r21 = r10.getAudioLicense()
             com.bamtech.sdk4.internal.media.offline.ExoCachedMediaHelper r0 = r1.exoCachedMediaHelper     // Catch:{ all -> 0x010c }
             if (r0 == 0) goto L_0x0100
-            kotlin.jvm.internal.C12880j.m40222a(r14, r6)     // Catch:{ all -> 0x010c }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r14, r6)     // Catch:{ all -> 0x010c }
             r18 = 0
             com.bamtech.sdk4.internal.media.offline.workers.RenewLicensesWorker$doWork$1 r19 = com.bamtech.sdk4.internal.media.offline.workers.RenewLicensesWorker$doWork$1.INSTANCE     // Catch:{ all -> 0x010c }
             r20 = 8
@@ -255,13 +255,13 @@ public final class RenewLicensesWorker extends Worker {
             r7 = 1
             goto L_0x016a
         L_0x00fc:
-            kotlin.jvm.internal.C12880j.m40227c(r15)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r15)
             throw r5
         L_0x0100:
             r23 = r9
             r24 = r10
             r27 = r12
-            kotlin.jvm.internal.C12880j.m40227c(r3)     // Catch:{ all -> 0x010a }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)     // Catch:{ all -> 0x010a }
             throw r5
         L_0x010a:
             r0 = move-exception
@@ -295,7 +295,7 @@ public final class RenewLicensesWorker extends Worker {
             goto L_0x0159
         L_0x0144:
             r8 = r24
-            kotlin.jvm.internal.C12880j.m40227c(r2)     // Catch:{ all -> 0x01c7 }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r2)     // Catch:{ all -> 0x01c7 }
             throw r5
         L_0x014a:
             r8 = r24
@@ -327,7 +327,7 @@ public final class RenewLicensesWorker extends Worker {
             r0.release(r9, r6)     // Catch:{ all -> 0x017f }
             goto L_0x01b7
         L_0x017b:
-            kotlin.jvm.internal.C12880j.m40227c(r2)     // Catch:{ all -> 0x017f }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r2)     // Catch:{ all -> 0x017f }
             throw r5
         L_0x017f:
             r0 = move-exception
@@ -355,7 +355,7 @@ public final class RenewLicensesWorker extends Worker {
             r0.store(r10)
             goto L_0x01b7
         L_0x01b3:
-            kotlin.jvm.internal.C12880j.m40227c(r15)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r15)
             throw r5
         L_0x01b7:
             r12 = r27
@@ -363,11 +363,11 @@ public final class RenewLicensesWorker extends Worker {
             r13 = 1
             goto L_0x007c
         L_0x01bd:
-            kotlin.jvm.internal.C12880j.m40227c(r15)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r15)
             throw r5
         L_0x01c1:
             r8 = r24
-            kotlin.jvm.internal.C12880j.m40227c(r3)     // Catch:{ all -> 0x01c7 }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)     // Catch:{ all -> 0x01c7 }
             throw r5
         L_0x01c7:
             r0 = move-exception
@@ -378,7 +378,7 @@ public final class RenewLicensesWorker extends Worker {
         L_0x01cc:
             com.bamtech.sdk4.internal.media.offline.db.OfflineDatabase r2 = r1.database
             if (r2 != 0) goto L_0x01d4
-            kotlin.jvm.internal.C12880j.m40227c(r15)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r15)
             throw r5
         L_0x01d4:
             com.bamtech.sdk4.internal.media.offline.db.CachedMediaDao r2 = r2.cachedMediaDao()
@@ -387,7 +387,7 @@ public final class RenewLicensesWorker extends Worker {
             throw r0
         L_0x01e0:
             r27 = r12
-            kotlin.jvm.internal.C12880j.m40222a(r14, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r14, r6)
             r1.checkJobInterval(r14)
             java.lang.StringBuilder r0 = new java.lang.StringBuilder
             r0.<init>()
@@ -400,7 +400,7 @@ public final class RenewLicensesWorker extends Worker {
         L_0x01f9:
             androidx.work.ListenableWorker$Result r2 = androidx.work.ListenableWorker.Result.m5470c()
             r3 = r27
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
         L_0x0202:
             r0.append(r2)
             java.lang.String r0 = r0.toString()
@@ -410,15 +410,15 @@ public final class RenewLicensesWorker extends Worker {
             goto L_0x0218
         L_0x0211:
             androidx.work.ListenableWorker$Result r0 = androidx.work.ListenableWorker.Result.m5470c()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
         L_0x0218:
             return r0
         L_0x0219:
-            kotlin.jvm.internal.C12880j.m40227c(r15)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r15)
             throw r5
         L_0x021d:
             java.lang.String r0 = "transactionProvider"
-            kotlin.jvm.internal.C12880j.m40227c(r0)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)
             throw r5
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtech.sdk4.internal.media.offline.workers.RenewLicensesWorker.doWork():androidx.work.ListenableWorker$Result");

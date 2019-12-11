@@ -19,7 +19,7 @@ import java.util.Set;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11848c;
 import p163g.p509o.p510a.C11863k;
 
@@ -97,7 +97,7 @@ public final class C2277j extends C0108i {
             if (keySet != null) {
                 collection = new ArrayList(C13187p.m40525a((Iterable) keySet, 10));
                 for (String str : keySet) {
-                    C12880j.m40222a((Object) str, "it");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) str, "it");
                     Bundle arguments2 = getArguments();
                     C2331e eVar = new C2331e(str, String.valueOf(arguments2 != null ? arguments2.get(str) : null), null, 4, null);
                     collection.add(eVar);
@@ -121,7 +121,7 @@ public final class C2277j extends C0108i {
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C2283n.config_recycler);
-        C12880j.m40222a((Object) recyclerView, "config_recycler");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "config_recycler");
         RecyclerViewExtKt.m18800a(this, recyclerView, this.f6413c);
     }
 }

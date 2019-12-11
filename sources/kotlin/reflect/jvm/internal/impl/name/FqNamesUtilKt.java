@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.name;
 
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: FqNamesUtil.kt */
 public final class FqNamesUtilKt {
@@ -17,13 +17,13 @@ public final class FqNamesUtilKt {
     }
 
     public static final boolean isSubpackageOf(FqName fqName, FqName fqName2) {
-        if (C12880j.m40224a((Object) fqName, (Object) fqName2) || fqName2.isRoot()) {
+        if (Intrinsics.areEqual((Object) fqName, (Object) fqName2) || fqName2.isRoot()) {
             return true;
         }
         String asString = fqName.asString();
-        C12880j.m40222a((Object) asString, "this.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "this.asString()");
         String asString2 = fqName2.asString();
-        C12880j.m40222a((Object) asString2, "packageName.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString2, "packageName.asString()");
         return isSubpackageOf(asString, asString2);
     }
 
@@ -61,17 +61,17 @@ public final class FqNamesUtilKt {
         if (!isSubpackageOf(fqName, fqName2) || fqName2.isRoot()) {
             return fqName;
         }
-        if (C12880j.m40224a((Object) fqName, (Object) fqName2)) {
+        if (Intrinsics.areEqual((Object) fqName, (Object) fqName2)) {
             FqName fqName3 = FqName.ROOT;
-            C12880j.m40222a((Object) fqName3, "FqName.ROOT");
+            Intrinsics.checkReturnedValueIsNotNull((Object) fqName3, "FqName.ROOT");
             return fqName3;
         }
         String asString = fqName.asString();
-        C12880j.m40222a((Object) asString, "asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "asString()");
         int length = fqName2.asString().length() + 1;
         if (asString != null) {
             String substring = asString.substring(length);
-            C12880j.m40222a((Object) substring, "(this as java.lang.String).substring(startIndex)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.String).substring(startIndex)");
             return new FqName(substring);
         }
         throw new C13142s("null cannot be cast to non-null type java.lang.String");

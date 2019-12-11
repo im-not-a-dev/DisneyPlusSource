@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.structure;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaArrayAnnotationArgument;
 import kotlin.reflect.jvm.internal.impl.name.Name;
 import kotlin.reflect.jvm.internal.structure.ReflectJavaAnnotationArgument.Factory;
@@ -30,7 +30,7 @@ public final class ReflectJavaArrayAnnotationArgument extends ReflectJavaAnnotat
                 arrayList.add(factory.create(obj, null));
                 i++;
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }

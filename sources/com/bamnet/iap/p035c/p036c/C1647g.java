@@ -17,7 +17,7 @@ import com.bamnet.iap.p035c.C1624a;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11914c;
 import p520io.reactivex.C11986t;
 import p520io.reactivex.C11988v;
@@ -66,7 +66,7 @@ public final class C1647g {
             /* renamed from: a */
             public final void mo6437a(C1417h hVar) {
                 C1647g gVar = this.f5781c.f5778a;
-                C12880j.m40222a((Object) hVar, "result");
+                Intrinsics.checkReturnedValueIsNotNull((Object) hVar, "result");
                 if (gVar.m7647a(hVar.mo6504b())) {
                     this.f5780U.onComplete();
                 } else {
@@ -116,7 +116,7 @@ public final class C1647g {
             /* renamed from: a */
             public final void mo6438a(C1417h hVar, String str) {
                 C1647g gVar = this.f5785c.f5782a;
-                C12880j.m40222a((Object) hVar, "billingResult");
+                Intrinsics.checkReturnedValueIsNotNull((Object) hVar, "billingResult");
                 if (gVar.m7647a(hVar.mo6504b())) {
                     this.f5784U.onComplete();
                 } else {
@@ -169,7 +169,7 @@ public final class C1647g {
             /* renamed from: a */
             public final void mo6439a(C1417h hVar, List<C1433s> list) {
                 C1647g gVar = this.f5790c.f5786a;
-                C12880j.m40222a((Object) hVar, "billingResult");
+                Intrinsics.checkReturnedValueIsNotNull((Object) hVar, "billingResult");
                 if (gVar.m7647a(hVar.mo6504b())) {
                     C11986t tVar = this.f5789U;
                     if (list == null) {
@@ -215,16 +215,16 @@ public final class C1647g {
         public final void mo7288a(C11986t<C1658i> tVar) {
             C1427a a = this.f5791a.f5777a.mo6457a(this.f5792b);
             C1647g gVar = this.f5791a;
-            C12880j.m40222a((Object) a, "billingPurchaseResult");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "billingPurchaseResult");
             if (gVar.m7647a(a.mo6526c())) {
                 List b = a.mo6525b();
-                C12880j.m40222a((Object) b, "billingPurchaseResult.purchasesList");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "billingPurchaseResult.purchasesList");
                 tVar.onSuccess(new C1658i(b));
                 return;
             }
             C1647g gVar2 = this.f5791a;
             C1417h a2 = a.mo6524a();
-            C12880j.m40222a((Object) a2, "billingPurchaseResult.billingResult");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a2, "billingPurchaseResult.billingResult");
             tVar.onError(gVar2.m7643a(a2, this.f5792b));
         }
     }
@@ -264,11 +264,11 @@ public final class C1647g {
     public final Completable mo7286b(C1624a aVar) {
         if (aVar.mo7244i()) {
             Completable h = Completable.m38169h();
-            C12880j.m40222a((Object) h, "Completable.complete()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
             return h;
         }
         Completable a = Completable.m38151a((C11914c) new C1650b(this, aVar));
-        C12880j.m40222a((Object) a, "create { emitter ->\n    …}\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "create { emitter ->\n    …}\n            }\n        }");
         return a;
     }
 
@@ -278,7 +278,7 @@ public final class C1647g {
         Single a2 = m7646a("subs", list);
         C11918b bVar = C11918b.f27600a;
         Single<Pair<C1657h, C1657h>> a3 = Single.m38390a((SingleSource<? extends T1>) a, (SingleSource<? extends T2>) a2, (C11947c<? super T1, ? super T2, ? extends R>) new C1655e<Object,Object,Object>());
-        C12880j.m40222a((Object) a3, "Single.zip(s1, s2, BiFun…-> zipper.invoke(t, u) })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "Single.zip(s1, s2, BiFun…-> zipper.invoke(t, u) })");
         return a3;
     }
 
@@ -288,7 +288,7 @@ public final class C1647g {
         Single a2 = m7645a("subs");
         C11918b bVar = C11918b.f27600a;
         Single<Pair<C1658i, C1658i>> a3 = Single.m38390a((SingleSource<? extends T1>) a, (SingleSource<? extends T2>) a2, (C11947c<? super T1, ? super T2, ? extends R>) new C1656f<Object,Object,Object>());
-        C12880j.m40222a((Object) a3, "Single.zip(s1, s2, BiFun…-> zipper.invoke(t, u) })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "Single.zip(s1, s2, BiFun…-> zipper.invoke(t, u) })");
         return a3;
     }
 
@@ -296,11 +296,11 @@ public final class C1647g {
     public final Completable mo7283a(C1624a aVar) {
         if (aVar.mo7244i()) {
             Completable h = Completable.m38169h();
-            C12880j.m40222a((Object) h, "Completable.complete()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
             return h;
         }
         Completable a = Completable.m38151a((C11914c) new C1648a(this, aVar));
-        C12880j.m40222a((Object) a, "create { emitter ->\n    …}\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "create { emitter ->\n    …}\n            }\n        }");
         return a;
     }
 
@@ -310,14 +310,14 @@ public final class C1647g {
         c.mo6549a(list);
         c.mo6548a(str);
         Single<C1657h> a = Single.m38392a((C11988v<T>) new C1652c<T>(this, c.mo6550a(), str));
-        C12880j.m40222a((Object) a, "Single.create { emitter …}\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.create { emitter …}\n            }\n        }");
         return a;
     }
 
     /* renamed from: a */
     private final Single<C1658i> m7645a(String str) {
         Single<C1658i> a = Single.m38392a((C11988v<T>) new C1654d<T>(this, str));
-        C12880j.m40222a((Object) a, "Single.create { emitter …)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.create { emitter …)\n            }\n        }");
         return a;
     }
 

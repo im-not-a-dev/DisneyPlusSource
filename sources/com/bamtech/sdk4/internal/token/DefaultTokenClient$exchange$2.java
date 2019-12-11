@@ -15,7 +15,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.Dust$Events;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14262x;
 import okhttp3.Call;
 import okhttp3.FormBody;
@@ -59,15 +59,15 @@ final class DefaultTokenClient$exchange$2<T, R> implements Function<T, SingleSou
                 DefaultTokenClient$exchange$2 defaultTokenClient$exchange$22 = this.this$0;
                 DefaultResponseTransformer defaultResponseTransformer = new DefaultResponseTransformer(new C2089x793fbcd3(new ResponseHandler[]{new C2087xd2d1bd44(defaultTokenClient$exchange$2.this$0.converters.getSnake()), defaultTokenClient$exchange$22.this$0.errorResponseHandler(defaultTokenClient$exchange$22.$transaction)}, serviceTransaction), new C2090x793fbcd4(serviceTransaction));
                 FormBody formBody = formBody;
-                C12880j.m40222a((Object) formBody, "body");
+                Intrinsics.checkReturnedValueIsNotNull((Object) formBody, "body");
                 Request a = C1691e.m7797a(updateTemplates$default, client, (ResponseTransformer<? extends OUT>) defaultResponseTransformer, (C14262x) formBody, ConfigurationKt.toDustConfigSettings(configuration));
                 ServiceTransaction serviceTransaction2 = this.this$0.$transaction;
                 String token_exchange = TokenServiceConfigurationKt.getTOKEN_EXCHANGE(Dust$Events.INSTANCE);
                 Call a2 = C1691e.m7799a(a);
                 Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new DefaultTokenClient$exchange$2$2$$special$$inlined$toSingle$1(a2)).mo30220b(C11934b.m38500b());
-                C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
                 Single<TokenExchangeResponse> g = b.mo30222c((Consumer<? super Disposable>) new DefaultTokenClient$exchange$2$2$$special$$inlined$toSingle$2<Object>(serviceTransaction2, token_exchange)).mo30218b((Consumer<? super Throwable>) new DefaultTokenClient$exchange$2$2$$special$$inlined$toSingle$3<Object>(a, serviceTransaction2, token_exchange)).mo30233g(new DefaultTokenClient$exchange$2$2$$special$$inlined$toSingle$4(serviceTransaction2, token_exchange));
-                C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+                Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
                 return g;
             }
         });

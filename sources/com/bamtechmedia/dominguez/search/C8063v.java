@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11847b;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\b\u0004\u0018\u00002\u00020\u0001:\u0001\u0014B)\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\b\b\u0001\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\"\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000e2\u0012\u0010\u000f\u001a\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u00110\u0010J\u0010\u0010\u0012\u001a\u00020\t2\b\u0010\u0013\u001a\u0004\u0018\u00010\u000eR\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0015"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/search/SearchPresenter;", "", "searchItemFactory", "Lcom/bamtechmedia/dominguez/search/SearchItemFactory;", "collectionItemsFactory", "Lcom/bamtechmedia/dominguez/collections/items/CollectionItemsFactory;", "dictionary", "Lcom/bamtechmedia/dominguez/config/StringDictionary;", "isTelevision", "", "(Lcom/bamtechmedia/dominguez/search/SearchItemFactory;Lcom/bamtechmedia/dominguez/collections/items/CollectionItemsFactory;Lcom/bamtechmedia/dominguez/config/StringDictionary;Z)V", "createViewState", "Lcom/bamtechmedia/dominguez/search/SearchPresenter$ViewState;", "newState", "Lcom/bamtechmedia/dominguez/search/SearchViewModel$State;", "trackExtraMap", "", "", "isExploreCollection", "state", "ViewState", "search_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -99,9 +99,9 @@ public final class C8063v {
             if (this != obj) {
                 if (obj instanceof C8064a) {
                     C8064a aVar = (C8064a) obj;
-                    if (C12880j.m40224a((Object) this.f17260a, (Object) aVar.f17260a) && C12880j.m40224a((Object) this.f17261b, (Object) aVar.f17261b)) {
+                    if (Intrinsics.areEqual((Object) this.f17260a, (Object) aVar.f17260a) && Intrinsics.areEqual((Object) this.f17261b, (Object) aVar.f17261b)) {
                         if (this.f17262c == aVar.f17262c) {
-                            if ((this.f17263d == aVar.f17263d) && C12880j.m40224a((Object) this.f17264e, (Object) aVar.f17264e)) {
+                            if ((this.f17263d == aVar.f17263d) && Intrinsics.areEqual((Object) this.f17264e, (Object) aVar.f17264e)) {
                                 if (this.f17265f == aVar.f17265f) {
                                     if (this.f17266g == aVar.f17266g) {
                                         return true;
@@ -213,7 +213,7 @@ public final class C8063v {
                 C8064a aVar2 = new C8064a(C13199w.m40583d((Collection) C13183n.m40498a(new C7974b(C3573a.m12035a(this.f17258c, C8051q.explore_label, (Map) null, 2, (Object) null))), (Iterable) a), null, false, false, null, false, false, 126, null);
                 return aVar2;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         Map<String, String> map2 = map;

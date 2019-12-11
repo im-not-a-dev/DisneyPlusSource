@@ -29,7 +29,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p201e.p203b.p278h.C7244i;
@@ -49,7 +49,7 @@ import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.subjects.C11978b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0007\u0018\u00002\u00020\u00012\u00020\u0002BK\u0012\f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0006\u0010\f\u001a\u00020\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\u0006\u0010\u0010\u001a\u00020\u0011\u0012\u0006\u0010\u0012\u001a\u00020\u0013¢\u0006\u0002\u0010\u0014J\u0010\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020#H\u0016J\u0018\u0010$\u001a\u00020!2\u0006\u0010%\u001a\u00020&2\u0006\u0010'\u001a\u00020(H\u0016J\u0010\u0010)\u001a\u00020!2\u0006\u0010*\u001a\u00020+H\u0002J\u0010\u0010,\u001a\u00020!2\u0006\u0010\"\u001a\u00020-H\u0016J\u0018\u0010.\u001a\u00020!2\u0006\u0010/\u001a\u00020&2\u0006\u00100\u001a\u00020&H\u0002J\b\u00101\u001a\u00020!H\u0016R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0015\u001a\u0004\u0018\u00010\u0016X\u000e¢\u0006\u0002\n\u0000R$\u0010\u0019\u001a\u00020\u00182\u0006\u0010\u0017\u001a\u00020\u0018@VX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\u001b\"\u0004\b\u001c\u0010\u001dR\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\rX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u001e\u001a\u0004\u0018\u00010\u001fX\u000e¢\u0006\u0002\n\u0000¨\u00062"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/ctvactivation/tv/RequesterViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/AutoDisposeViewModel;", "Lcom/bamtechmedia/dominguez/ctvactivation/common/CtvActivatorViewModel;", "sessionOnce", "Lio/reactivex/Single;", "Lcom/bamtech/sdk4/Session;", "activator", "Lcom/bamtechmedia/dominguez/ctvactivation/api/TvCtvActivator;", "identityApi", "Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "logInAction", "Lcom/bamtechmedia/dominguez/auth/login/LogInAction;", "authListener", "Lcom/bamtechmedia/dominguez/auth/api/AuthListener;", "dialogRouter", "Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;", "ctvActivationRouter", "Lcom/bamtechmedia/dominguez/ctvactivation/common/CtvActivationRouter;", "(Lio/reactivex/Single;Lcom/bamtechmedia/dominguez/ctvactivation/api/TvCtvActivator;Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;Lcom/bamtech/sdk4/account/AccountApi;Lcom/bamtechmedia/dominguez/auth/login/LogInAction;Lcom/bamtechmedia/dominguez/auth/api/AuthListener;Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;Lcom/bamtechmedia/dominguez/ctvactivation/common/CtvActivationRouter;)V", "dismissSubject", "Lio/reactivex/subjects/CompletableSubject;", "value", "", "enabled", "getEnabled", "()Z", "setEnabled", "(Z)V", "sessionState", "Lcom/bamtech/sdk4/session/SessionState;", "handleCompanionEvent", "", "event", "Lcom/disneystreaming/companion/messaging/MessagingEvent;", "handleDisconnect", "host", "", "type", "Lcom/disneystreaming/companion/service/ServiceType;", "handleErrorEvent", "error", "Lcom/disneystreaming/companion/messaging/MessagingEvent$Error;", "handleIncomingMessageEvent", "Lcom/disneystreaming/companion/messaging/MessagingEvent$MessageReceived;", "sendMessage", "to", "request", "update", "ctvActivation_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.h.n.a */
@@ -136,7 +136,7 @@ public final class C7260a extends C5733a implements C7248c {
 
         /* renamed from: a */
         public final void mo20086a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -144,7 +144,7 @@ public final class C7260a extends C5733a implements C7248c {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -203,7 +203,7 @@ public final class C7260a extends C5733a implements C7248c {
 
         /* renamed from: a */
         public final void mo20089a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -211,7 +211,7 @@ public final class C7260a extends C5733a implements C7248c {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -370,7 +370,7 @@ public final class C7260a extends C5733a implements C7248c {
 
         /* renamed from: a */
         public final void mo20093a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -406,7 +406,7 @@ public final class C7260a extends C5733a implements C7248c {
 
         /* renamed from: a */
         public final void mo20094a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -442,7 +442,7 @@ public final class C7260a extends C5733a implements C7248c {
 
         /* renamed from: a */
         public final void mo20095a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -478,7 +478,7 @@ public final class C7260a extends C5733a implements C7248c {
 
         /* renamed from: a */
         public final void mo20096a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -516,7 +516,7 @@ public final class C7260a extends C5733a implements C7248c {
             g.n.a.h r3 = p163g.p503n.p504a.C11793e.m37930a(r3)
             java.lang.Object r2 = r2.mo30161a(r3)
             java.lang.String r3 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             g.n.a.a0 r2 = (p163g.p503n.p504a.C11786a0) r2
             g.e.b.h.n.a$a r4 = new g.e.b.h.n.a$a
             r4.<init>(r0)
@@ -533,11 +533,11 @@ public final class C7260a extends C5733a implements C7248c {
             g.e.b.h.n.a$c r2 = p163g.p201e.p203b.p278h.p282n.C7260a.C7263c.f15998c
             io.reactivex.Observable r1 = r1.mo30225d(r2)
             java.lang.String r2 = "sessionOnce.flatMapObser… it.watchSessionState() }"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             g.n.a.c0 r2 = r0.getViewModelScope()
             g.n.a.h r2 = p163g.p503n.p504a.C11793e.m37930a(r2)
             java.lang.Object r1 = r1.mo30161a(r2)
-            kotlin.jvm.internal.C12880j.m40222a(r1, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r3)
             g.n.a.a0 r1 = (p163g.p503n.p504a.C11786a0) r1
             g.e.b.h.n.a$d r2 = new g.e.b.h.n.a$d
             r2.<init>(r0)
@@ -571,12 +571,12 @@ public final class C7260a extends C5733a implements C7248c {
         String str = "this.`as`(AutoDispose.au…isposable<Any>(provider))";
         if (mo20083y()) {
             Object a = this.f15989W.mo20066d().mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-            C12880j.m40222a(a, str);
+            Intrinsics.checkReturnedValueIsNotNull(a, str);
             ((C11839v) a).mo29926a(C7276n.f16014a, C7277o.f16015c);
             return;
         }
         Object a2 = this.f15989W.mo20065b().mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a2, str);
+        Intrinsics.checkReturnedValueIsNotNull(a2, str);
         ((C11839v) a2).mo29926a(C7278p.f16016a, C7279q.f16017c);
     }
 
@@ -596,7 +596,7 @@ public final class C7260a extends C5733a implements C7248c {
                 if (deviceName != null) {
                     aVar.mo20061a(deviceName, this.f15987U);
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
@@ -639,16 +639,16 @@ public final class C7260a extends C5733a implements C7248c {
                     String str2 = context2 != null ? (String) C13173j0.m40359b(context2, (Object) "password") : null;
                     if (str2 != null) {
                         Completable a2 = bamIdentityApi.authenticate(str, str2).mo30217b((Function<? super T, ? extends CompletableSource>) new C7266f<Object,Object>(this)).mo30036a((Consumer<? super Throwable>) new C7267g<Object>(this, fVar)).mo30050b((C11945a) new C7268h(this, fVar)).mo30034a((CompletableSource) Completable.m38162b((Callable<? extends CompletableSource>) new C7269i<Object>(this, fVar)));
-                        C12880j.m40222a((Object) a2, "identityApi.authenticate…                       })");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "identityApi.authenticate…                       })");
                         Object a3 = a2.mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-                        C12880j.m40222a(a3, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+                        Intrinsics.checkReturnedValueIsNotNull(a3, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
                         ((C11839v) a3).mo29926a(C7272j.f16010a, C7273k.f16011c);
                         return;
                     }
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -658,7 +658,7 @@ public final class C7260a extends C5733a implements C7248c {
     /* renamed from: a */
     public final void m21874a(String str, String str2) {
         Object a = C7250a.m21858a(this.f15989W, str, str2, null, 4, null).mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
         ((C11839v) a).mo29926a(C7274l.f16012a, C7275m.f16013c);
     }
 

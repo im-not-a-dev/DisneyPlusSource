@@ -24,7 +24,7 @@ public abstract class MessageType {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f18235a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessageType.C8545a) r2).f18235a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f18235a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessageType.C8545a) r2).f18235a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -36,7 +36,7 @@ public abstract class MessageType {
                 com.disneystreaming.companion.messaging.MessageType$a r2 = (com.disneystreaming.companion.messaging.MessageType.C8545a) r2
                 java.lang.String r0 = r1.f18235a
                 java.lang.String r2 = r2.f18235a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:

@@ -7,7 +7,7 @@ import com.bamtech.sdk4.content.GraphQlResponseConverter;
 import com.bamtech.sdk4.content.custom.GraphQlRequestBuilder.Base;
 import com.bamtech.sdk4.internal.configuration.ContentExtras;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 import okhttp3.HttpUrl.Builder;
 
@@ -65,10 +65,10 @@ public abstract class GraphQlRequest {
         HttpUrl e = HttpUrl.m44643e(prepareUrl(link.getHref(), contentExtras));
         if (e != null) {
             Builder i = e.mo35758i();
-            if (C12880j.m40224a((Object) str, (Object) GET)) {
-                C12880j.m40222a((Object) i, "httpBuilder");
+            if (Intrinsics.areEqual((Object) str, (Object) GET)) {
+                Intrinsics.checkReturnedValueIsNotNull((Object) i, "httpBuilder");
                 updateQueryParameters(i, graphQlResponseConverter);
-            } else if (!C12880j.m40224a((Object) str, (Object) POST)) {
+            } else if (!Intrinsics.areEqual((Object) str, (Object) POST)) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Method: ");
                 sb.append(str);
@@ -77,7 +77,7 @@ public abstract class GraphQlRequest {
             }
             return link.updateTemplates(C13173j0.m40350a(), i.mo35772a().toString()).toLinkBuilder().mo7438c(str).mo7432a();
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

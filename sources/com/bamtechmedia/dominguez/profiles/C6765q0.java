@@ -5,7 +5,7 @@ import com.bamtechmedia.dominguez.core.p218n.C5773a;
 import com.bamtechmedia.dominguez.profiles.C6769r0.C6770a;
 import com.bamtechmedia.dominguez.profiles.C6769r0.C6771b.C6774b;
 import com.bamtechmedia.dominguez.profiles.C6769r0.C6771b.C6778d;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.profiles.q0 */
 /* compiled from: ProfilesGlobalNavRouterImpl.kt */
@@ -37,7 +37,7 @@ public final class C6765q0 implements C6761p0 {
     public void close() {
         C5773a aVar = this.f15140b;
         String str = this.f15139a;
-        C12880j.m40222a((Object) str, "hostBackStackName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) str, "hostBackStackName");
         aVar.mo17669a(str);
     }
 

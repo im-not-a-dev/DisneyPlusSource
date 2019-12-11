@@ -6,7 +6,7 @@ import com.bamtech.sdk4.session.SessionInfoExtension;
 import com.bamtech.sdk4.session.SessionInfoExtension.DefaultImpls;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.C11945a;
@@ -25,7 +25,7 @@ public final class DefaultLocalBookmarkStore implements LocalBookmarkStore {
 
     public Single<List<Bookmark>> fetchBookmarks(ServiceTransaction serviceTransaction, List<String> list) {
         Single<List<Bookmark>> g = DefaultImpls.getSessionInfo$default(this.sessionManager, serviceTransaction, false, 2, null).mo30233g(DefaultLocalBookmarkStore$fetchBookmarks$1.INSTANCE).mo30233g(new DefaultLocalBookmarkStore$fetchBookmarks$2(this, list));
-        C12880j.m40222a((Object) g, "sessionManager.getSessio…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "sessionManager.getSessio…      }\n                }");
         return g;
     }
 
@@ -77,7 +77,7 @@ public final class DefaultLocalBookmarkStore implements LocalBookmarkStore {
             com.bamtech.sdk4.bookmarks.Bookmark r10 = (com.bamtech.sdk4.bookmarks.Bookmark) r10
             java.lang.String r11 = r7.getContentId()
             java.lang.String r10 = r10.getContentId()
-            boolean r10 = kotlin.jvm.internal.C12880j.m40224a(r11, r10)
+            boolean r10 = kotlin.jvm.internal.Intrinsics.areEqual(r11, r10)
             if (r10 == 0) goto L_0x003d
             r5 = r9
         L_0x0059:
@@ -158,7 +158,7 @@ public final class DefaultLocalBookmarkStore implements LocalBookmarkStore {
             com.bamtech.sdk4.bookmarks.Bookmark r12 = (com.bamtech.sdk4.bookmarks.Bookmark) r12
             java.lang.String r12 = r12.getContentId()
             java.lang.String r13 = r9.getContentId()
-            boolean r12 = kotlin.jvm.internal.C12880j.m40224a(r12, r13)
+            boolean r12 = kotlin.jvm.internal.Intrinsics.areEqual(r12, r13)
             if (r12 == 0) goto L_0x00fd
             goto L_0x011a
         L_0x0119:
@@ -172,7 +172,7 @@ public final class DefaultLocalBookmarkStore implements LocalBookmarkStore {
             if (r10 != 0) goto L_0x0145
             java.lang.Long r10 = r11.getCcMedia()
             java.lang.Long r12 = r9.getCcMedia()
-            boolean r10 = kotlin.jvm.internal.C12880j.m40224a(r10, r12)
+            boolean r10 = kotlin.jvm.internal.Intrinsics.areEqual(r10, r12)
             r10 = r10 ^ r4
             if (r10 != 0) goto L_0x0145
             long r10 = r11.getRuntime()
@@ -207,7 +207,7 @@ public final class DefaultLocalBookmarkStore implements LocalBookmarkStore {
             com.bamtech.sdk4.bookmarks.Bookmark r10 = (com.bamtech.sdk4.bookmarks.Bookmark) r10
             java.lang.String r10 = r10.getContentId()
             java.lang.String r11 = r8.getContentId()
-            boolean r10 = kotlin.jvm.internal.C12880j.m40224a(r10, r11)
+            boolean r10 = kotlin.jvm.internal.Intrinsics.areEqual(r10, r11)
             if (r10 == 0) goto L_0x0168
             goto L_0x0185
         L_0x0184:
@@ -249,13 +249,13 @@ public final class DefaultLocalBookmarkStore implements LocalBookmarkStore {
 
     public Completable removeAllBookmarks() {
         Completable c = Completable.m38166c((C11945a) new DefaultLocalBookmarkStore$removeAllBookmarks$1(this));
-        C12880j.m40222a((Object) c, "Completable.fromAction {…eAllBookmarks()\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.fromAction {…eAllBookmarks()\n        }");
         return c;
     }
 
     public Completable removeBookmarksForProfile(String str) {
         Completable c = Completable.m38166c((C11945a) new DefaultLocalBookmarkStore$removeBookmarksForProfile$1(this, str));
-        C12880j.m40222a((Object) c, "Completable.fromAction {…file(profileId)\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.fromAction {…file(profileId)\n        }");
         return c;
     }
 }

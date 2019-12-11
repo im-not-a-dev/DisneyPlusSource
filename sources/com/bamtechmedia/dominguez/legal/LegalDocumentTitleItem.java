@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.legal;
 import com.bamtechmedia.dominguez.legal.api.LegalDocument;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11853e;
 import p163g.p509o.p510a.p511l.C11866a;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -140,8 +140,8 @@ public final class LegalDocumentTitleItem extends C11866a {
         if (this != obj) {
             if (obj instanceof LegalDocumentTitleItem) {
                 LegalDocumentTitleItem legalDocumentTitleItem = (LegalDocumentTitleItem) obj;
-                if (C12880j.m40224a((Object) this.document, (Object) legalDocumentTitleItem.document)) {
-                    if (!(this.open == legalDocumentTitleItem.open) || !C12880j.m40224a((Object) this.viewModel, (Object) legalDocumentTitleItem.viewModel)) {
+                if (Intrinsics.areEqual((Object) this.document, (Object) legalDocumentTitleItem.document)) {
+                    if (!(this.open == legalDocumentTitleItem.open) || !Intrinsics.areEqual((Object) this.viewModel, (Object) legalDocumentTitleItem.viewModel)) {
                         return false;
                     }
                 }
@@ -156,7 +156,7 @@ public final class LegalDocumentTitleItem extends C11866a {
         if (eVar != null) {
             LegalDocumentTitleItem legalDocumentTitleItem = (LegalDocumentTitleItem) eVar;
             boolean z = true;
-            boolean z2 = !C12880j.m40224a((Object) title, (Object) legalDocumentTitleItem.document.getTitle());
+            boolean z2 = !Intrinsics.areEqual((Object) title, (Object) legalDocumentTitleItem.document.getTitle());
             if (this.open == legalDocumentTitleItem.open) {
                 z = false;
             }
@@ -186,7 +186,7 @@ public final class LegalDocumentTitleItem extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof LegalDocumentTitleItem) && C12880j.m40224a((Object) ((LegalDocumentTitleItem) eVar).document.getDocumentCode(), (Object) this.document.getDocumentCode());
+        return (eVar instanceof LegalDocumentTitleItem) && Intrinsics.areEqual((Object) ((LegalDocumentTitleItem) eVar).document.getDocumentCode(), (Object) this.document.getDocumentCode());
     }
 
     public String toString() {
@@ -253,7 +253,7 @@ public final class LegalDocumentTitleItem extends C11866a {
             android.view.View r6 = r6.findViewById(r2)
             android.widget.TextView r6 = (android.widget.TextView) r6
             java.lang.String r2 = "holder.legal_title"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r2)
             com.bamtechmedia.dominguez.legal.api.LegalDocument r2 = r4.document
             java.lang.String r2 = r2.getTitle()
             r6.setText(r2)
@@ -294,7 +294,7 @@ public final class LegalDocumentTitleItem extends C11866a {
             if (r0 == 0) goto L_0x009a
             android.view.View r6 = r5.itemView
             java.lang.String r7 = "holder.itemView"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r7)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r7)
             boolean r7 = r4.open
             r6.setActivated(r7)
         L_0x009a:

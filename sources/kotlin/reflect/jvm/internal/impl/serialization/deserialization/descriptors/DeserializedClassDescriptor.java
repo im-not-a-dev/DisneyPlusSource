@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -108,13 +108,13 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
         public DeserializedClassMemberScope() {
             DeserializationContext c = DeserializedClassDescriptor.this.getC();
             List functionList = DeserializedClassDescriptor.this.getClassProto().getFunctionList();
-            C12880j.m40222a((Object) functionList, "classProto.functionList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) functionList, "classProto.functionList");
             List propertyList = DeserializedClassDescriptor.this.getClassProto().getPropertyList();
-            C12880j.m40222a((Object) propertyList, "classProto.propertyList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) propertyList, "classProto.propertyList");
             List typeAliasList = DeserializedClassDescriptor.this.getClassProto().getTypeAliasList();
-            C12880j.m40222a((Object) typeAliasList, "classProto.typeAliasList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeAliasList, "classProto.typeAliasList");
             List<Number> nestedClassNameList = DeserializedClassDescriptor.this.getClassProto().getNestedClassNameList();
-            C12880j.m40222a((Object) nestedClassNameList, "classProto.nestedClassNameList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) nestedClassNameList, "classProto.nestedClassNameList");
             NameResolver nameResolver = DeserializedClassDescriptor.this.getC().getNameResolver();
             ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) nestedClassNameList, 10));
             for (Number intValue : nestedClassNameList) {
@@ -165,7 +165,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
         /* access modifiers changed from: protected */
         public ClassId createClassId(Name name) {
             ClassId createNestedClassId = DeserializedClassDescriptor.this.classId.createNestedClassId(name);
-            C12880j.m40222a((Object) createNestedClassId, "classId.createNestedClassId(name)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createNestedClassId, "classId.createNestedClassId(name)");
             return createNestedClassId;
         }
 
@@ -288,7 +288,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
 
         public String toString() {
             String name = DeserializedClassDescriptor.this.getName().toString();
-            C12880j.m40222a((Object) name, "name.toString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) name, "name.toString()");
             return name;
         }
 
@@ -307,12 +307,12 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
 
         public EnumEntryClassDescriptors() {
             List enumEntryList = DeserializedClassDescriptor.this.getClassProto().getEnumEntryList();
-            C12880j.m40222a((Object) enumEntryList, "classProto.enumEntryList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) enumEntryList, "classProto.enumEntryList");
             LinkedHashMap linkedHashMap = new LinkedHashMap(C12762h.m39913a(C13173j0.m40349a(C13187p.m40525a((Iterable) enumEntryList, 10)), 16));
             for (Object next : enumEntryList) {
                 EnumEntry enumEntry = (EnumEntry) next;
                 NameResolver nameResolver = DeserializedClassDescriptor.this.getC().getNameResolver();
-                C12880j.m40222a((Object) enumEntry, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) enumEntry, "it");
                 linkedHashMap.put(NameResolverUtilKt.getName(nameResolver, enumEntry.getName()), next);
             }
             this.enumEntryProtos = linkedHashMap;
@@ -332,7 +332,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
                 }
             }
             List functionList = DeserializedClassDescriptor.this.getClassProto().getFunctionList();
-            C12880j.m40222a((Object) functionList, "classProto.functionList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) functionList, "classProto.functionList");
             Iterator it = functionList.iterator();
             while (true) {
                 str = "it";
@@ -341,14 +341,14 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
                 }
                 Function function = (Function) it.next();
                 NameResolver nameResolver = DeserializedClassDescriptor.this.getC().getNameResolver();
-                C12880j.m40222a((Object) function, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) function, str);
                 hashSet.add(NameResolverUtilKt.getName(nameResolver, function.getName()));
             }
             List<Property> propertyList = DeserializedClassDescriptor.this.getClassProto().getPropertyList();
-            C12880j.m40222a((Object) propertyList, "classProto.propertyList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) propertyList, "classProto.propertyList");
             for (Property property : propertyList) {
                 NameResolver nameResolver2 = DeserializedClassDescriptor.this.getC().getNameResolver();
-                C12880j.m40222a((Object) property, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) property, str);
                 hashSet.add(NameResolverUtilKt.getName(nameResolver2, property.getName()));
             }
             return C13190q0.m40534a((Set) hashSet, (Iterable) hashSet);
@@ -379,13 +379,13 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
         this.sourceElement = sourceElement2;
         this.classId = NameResolverUtilKt.getClassId(nameResolver, this.classProto.getFqName());
         List typeParameterList = this.classProto.getTypeParameterList();
-        C12880j.m40222a((Object) typeParameterList, "classProto.typeParameterList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameterList, "classProto.typeParameterList");
         TypeTable typeTable = this.classProto.getTypeTable();
-        C12880j.m40222a((Object) typeTable, "classProto.typeTable");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeTable, "classProto.typeTable");
         kotlin.reflect.jvm.internal.impl.metadata.deserialization.TypeTable typeTable2 = new kotlin.reflect.jvm.internal.impl.metadata.deserialization.TypeTable(typeTable);
         Companion companion = VersionRequirementTable.Companion;
         ProtoBuf.VersionRequirementTable versionRequirementTable = this.classProto.getVersionRequirementTable();
-        C12880j.m40222a((Object) versionRequirementTable, "classProto.versionRequirementTable");
+        Intrinsics.checkReturnedValueIsNotNull((Object) versionRequirementTable, "classProto.versionRequirementTable");
         this.f29577c = deserializationContext.childContext(this, typeParameterList, nameResolver, typeTable2, companion.create(versionRequirementTable), this.metadataVersion);
         this.staticScope = this.kind == ClassKind.ENUM_CLASS ? new StaticScopeForKotlinEnum(this.f29577c.getStorageManager(), this) : Empty.INSTANCE;
         this.typeConstructor = new DeserializedClassTypeConstructor();
@@ -446,7 +446,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
             return createPrimaryConstructorForObject;
         }
         List constructorList = this.classProto.getConstructorList();
-        C12880j.m40222a((Object) constructorList, "classProto.constructorList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constructorList, "classProto.constructorList");
         Iterator it = constructorList.iterator();
         while (true) {
             classConstructorDescriptor = null;
@@ -457,7 +457,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
             obj = it.next();
             Constructor constructor = (Constructor) obj;
             BooleanFlagField booleanFlagField = Flags.IS_SECONDARY;
-            C12880j.m40222a((Object) constructor, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) constructor, "it");
             if (!booleanFlagField.get(constructor.getFlags()).booleanValue()) {
                 break;
             }
@@ -472,7 +472,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
     private final List<ClassConstructorDescriptor> computeSecondaryConstructors() {
         String str;
         List constructorList = this.classProto.getConstructorList();
-        C12880j.m40222a((Object) constructorList, "classProto.constructorList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constructorList, "classProto.constructorList");
         ArrayList<Constructor> arrayList = new ArrayList<>();
         Iterator it = constructorList.iterator();
         while (true) {
@@ -483,9 +483,9 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
             Object next = it.next();
             Constructor constructor = (Constructor) next;
             BooleanFlagField booleanFlagField = Flags.IS_SECONDARY;
-            C12880j.m40222a((Object) constructor, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) constructor, str);
             Boolean bool = booleanFlagField.get(constructor.getFlags());
-            C12880j.m40222a((Object) bool, "Flags.IS_SECONDARY.get(it.flags)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.IS_SECONDARY.get(it.flags)");
             if (bool.booleanValue()) {
                 arrayList.add(next);
             }
@@ -493,7 +493,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
         ArrayList arrayList2 = new ArrayList(C13187p.m40525a((Iterable) arrayList, 10));
         for (Constructor constructor2 : arrayList) {
             MemberDeserializer memberDeserializer = this.f29577c.getMemberDeserializer();
-            C12880j.m40222a((Object) constructor2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) constructor2, str);
             arrayList2.add(memberDeserializer.loadConstructor(constructor2, false));
         }
         return arrayList2;
@@ -505,7 +505,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
             return C13185o.m40513a();
         }
         List<Integer> sealedSubclassFqNameList = this.classProto.getSealedSubclassFqNameList();
-        C12880j.m40222a((Object) sealedSubclassFqNameList, "fqNames");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sealedSubclassFqNameList, "fqNames");
         if (!(!sealedSubclassFqNameList.isEmpty())) {
             return DescriptorUtilsKt.computeSealedSubclasses(this);
         }
@@ -513,7 +513,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
         for (Integer num : sealedSubclassFqNameList) {
             DeserializationComponents components = this.f29577c.getComponents();
             NameResolver nameResolver = this.f29577c.getNameResolver();
-            C12880j.m40222a((Object) num, "index");
+            Intrinsics.checkReturnedValueIsNotNull((Object) num, "index");
             ClassDescriptor deserializeClass = components.deserializeClass(NameResolverUtilKt.getClassId(nameResolver, num.intValue()));
             if (deserializeClass != null) {
                 arrayList.add(deserializeClass);
@@ -604,31 +604,31 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor {
 
     public boolean isData() {
         Boolean bool = Flags.IS_DATA.get(this.classProto.getFlags());
-        C12880j.m40222a((Object) bool, "Flags.IS_DATA.get(classProto.flags)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.IS_DATA.get(classProto.flags)");
         return bool.booleanValue();
     }
 
     public boolean isExpect() {
         Boolean bool = Flags.IS_EXPECT_CLASS.get(this.classProto.getFlags());
-        C12880j.m40222a((Object) bool, "Flags.IS_EXPECT_CLASS.get(classProto.flags)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.IS_EXPECT_CLASS.get(classProto.flags)");
         return bool.booleanValue();
     }
 
     public boolean isExternal() {
         Boolean bool = Flags.IS_EXTERNAL_CLASS.get(this.classProto.getFlags());
-        C12880j.m40222a((Object) bool, "Flags.IS_EXTERNAL_CLASS.get(classProto.flags)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.IS_EXTERNAL_CLASS.get(classProto.flags)");
         return bool.booleanValue();
     }
 
     public boolean isInline() {
         Boolean bool = Flags.IS_INLINE_CLASS.get(this.classProto.getFlags());
-        C12880j.m40222a((Object) bool, "Flags.IS_INLINE_CLASS.get(classProto.flags)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.IS_INLINE_CLASS.get(classProto.flags)");
         return bool.booleanValue();
     }
 
     public boolean isInner() {
         Boolean bool = Flags.IS_INNER.get(this.classProto.getFlags());
-        C12880j.m40222a((Object) bool, "Flags.IS_INNER.get(classProto.flags)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.IS_INNER.get(classProto.flags)");
         return bool.booleanValue();
     }
 

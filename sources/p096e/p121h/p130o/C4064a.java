@@ -10,7 +10,7 @@ import android.util.SizeF;
 import java.io.Serializable;
 import kotlin.C13142s;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: e.h.o.a */
 /* compiled from: Bundle.kt */
@@ -86,7 +86,7 @@ public final class C4064a {
                     } else if (Serializable.class.isAssignableFrom(componentType)) {
                         bundle.putSerializable(str, (Serializable) b);
                     } else {
-                        C12880j.m40222a((Object) componentType, "componentType");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) componentType, "componentType");
                         String canonicalName = componentType.getCanonicalName();
                         StringBuilder sb = new StringBuilder();
                         sb.append("Illegal value array type ");

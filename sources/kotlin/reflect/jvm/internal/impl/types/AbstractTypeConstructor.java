@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.types;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.SupertypeLoopChecker;
 import kotlin.reflect.jvm.internal.impl.storage.NotNullLazyValue;
 import kotlin.reflect.jvm.internal.impl.storage.StorageManager;
@@ -47,7 +47,7 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
             }
         }
         Collection<KotlinType> supertypes2 = typeConstructor.getSupertypes();
-        C12880j.m40222a((Object) supertypes2, "supertypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supertypes2, "supertypes");
         return supertypes2;
     }
 

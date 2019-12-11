@@ -10,7 +10,7 @@ import com.bamtechmedia.dominguez.playback.common.tracks.C6320f;
 import com.bamtechmedia.dominguez.playback.common.tracks.C6320f.C6321a;
 import com.bamtechmedia.dominguez.playback.p237m.p252q.C6501b;
 import com.bamtechmedia.dominguez.playback.p237m.p252q.C6501b.C6504c;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 
 /* renamed from: com.bamtechmedia.dominguez.playback.m.a */
@@ -122,10 +122,10 @@ public final class C6336a {
         if (this != obj) {
             if (obj instanceof C6336a) {
                 C6336a aVar = (C6336a) obj;
-                if (C12880j.m40224a((Object) this.f14423a, (Object) aVar.f14423a) && C12880j.m40224a((Object) this.f14424b, (Object) aVar.f14424b) && C12880j.m40224a((Object) this.f14425c, (Object) aVar.f14425c) && C12880j.m40224a((Object) this.f14426d, (Object) aVar.f14426d) && C12880j.m40224a((Object) this.f14427e, (Object) aVar.f14427e)) {
-                    if ((this.f14428f == aVar.f14428f) && C12880j.m40224a((Object) this.f14429g, (Object) aVar.f14429g)) {
+                if (Intrinsics.areEqual((Object) this.f14423a, (Object) aVar.f14423a) && Intrinsics.areEqual((Object) this.f14424b, (Object) aVar.f14424b) && Intrinsics.areEqual((Object) this.f14425c, (Object) aVar.f14425c) && Intrinsics.areEqual((Object) this.f14426d, (Object) aVar.f14426d) && Intrinsics.areEqual((Object) this.f14427e, (Object) aVar.f14427e)) {
+                    if ((this.f14428f == aVar.f14428f) && Intrinsics.areEqual((Object) this.f14429g, (Object) aVar.f14429g)) {
                         if (this.f14430h == aVar.f14430h) {
-                            if ((this.f14431i == aVar.f14431i) && C12880j.m40224a((Object) this.f14432j, (Object) aVar.f14432j) && C12880j.m40224a((Object) this.f14433k, (Object) aVar.f14433k) && C12880j.m40224a((Object) this.f14434l, (Object) aVar.f14434l) && C12880j.m40224a((Object) this.f14435m, (Object) aVar.f14435m)) {
+                            if ((this.f14431i == aVar.f14431i) && Intrinsics.areEqual((Object) this.f14432j, (Object) aVar.f14432j) && Intrinsics.areEqual((Object) this.f14433k, (Object) aVar.f14433k) && Intrinsics.areEqual((Object) this.f14434l, (Object) aVar.f14434l) && Intrinsics.areEqual((Object) this.f14435m, (Object) aVar.f14435m)) {
                                 if (this.f14436n == aVar.f14436n) {
                                     if (this.f14437o == aVar.f14437o) {
                                         return true;

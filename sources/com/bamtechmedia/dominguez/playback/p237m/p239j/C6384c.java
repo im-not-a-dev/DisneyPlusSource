@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p174d.p178b.C5280i;
 import p163g.p174d.p178b.p180b0.C4922v2;
@@ -125,7 +125,7 @@ public final class C6384c {
                 }
                 C6384c cVar = this.f14508a.f14507c;
                 Map map = this.f14509b;
-                C12880j.m40222a((Object) map, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) map, "it");
                 C6387c cVar2 = this.f14508a;
                 C1714e a2 = cVar.m20008a(map, cVar2.f14507c.m20009a(cVar2.f14505V, cVar2.f14506W), this.f14508a.f14506W);
                 C6384c cVar3 = this.f14508a.f14507c;
@@ -197,12 +197,12 @@ public final class C6384c {
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) set, 10));
         for (C2435d dVar : set) {
             Single a = dVar.mo11526b().mo30203a(1500, TimeUnit.MILLISECONDS, C11934b.m38498a()).mo30213a(C13173j0.m40350a());
-            C12880j.m40222a((Object) a, "it.createMetaData().time…rorReturnItem(emptyMap())");
-            C12880j.m40222a((Object) dVar.getClass().getName(), "it.javaClass.name");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "it.createMetaData().time…rorReturnItem(emptyMap())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) dVar.getClass().getName(), "it.javaClass.name");
             arrayList.add(a);
         }
         Single<Map<String, String>> a2 = Single.m38394a((Iterable<? extends SingleSource<? extends T>>) arrayList, (Function<? super Object[], ? extends R>) C6389d.f14510c);
-        C12880j.m40222a((Object) a2, "Single.zip(metaDataContr…target + item }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "Single.zip(metaDataContr…target + item }\n        }");
         return a2;
     }
 
@@ -231,7 +231,7 @@ public final class C6384c {
     /* renamed from: a */
     public final Completable mo19028a(C5280i iVar, C3693o oVar, MediaItemPlaylist mediaItemPlaylist) {
         Completable b = m20015c().mo30217b((Function<? super T, ? extends CompletableSource>) new C6387c<Object,Object>(this, iVar, mediaItemPlaylist, oVar));
-        C12880j.m40222a((Object) b, "mapMetaDataOnce()\n      …          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "mapMetaDataOnce()\n      …          }\n            }");
         return b;
     }
 

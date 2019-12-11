@@ -5,7 +5,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.calls.Caller.DefaultImpls;
 import kotlin.reflect.jvm.internal.structure.ReflectClassUtilKt;
 
@@ -49,7 +49,7 @@ public final class AnnotationConstructorCaller implements Caller {
         ArrayList arrayList2 = new ArrayList(C13187p.m40525a((Iterable) list4, 10));
         for (Method returnType : list4) {
             Class returnType2 = returnType.getReturnType();
-            C12880j.m40222a((Object) returnType2, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) returnType2, "it");
             Class wrapperByPrimitive = ReflectClassUtilKt.getWrapperByPrimitive(returnType2);
             if (wrapperByPrimitive != null) {
                 returnType2 = wrapperByPrimitive;

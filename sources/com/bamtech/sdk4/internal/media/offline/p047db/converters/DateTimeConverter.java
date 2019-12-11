@@ -1,7 +1,7 @@
 package com.bamtech.sdk4.internal.media.offline.p047db.converters;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
@@ -15,7 +15,7 @@ public final class DateTimeConverter {
     static {
         new DateTimeConverter();
         DateTimeFormatter withZoneUTC = ISODateTimeFormat.dateTime().withZoneUTC();
-        C12880j.m40222a((Object) withZoneUTC, "ISODateTimeFormat.dateTime().withZoneUTC()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) withZoneUTC, "ISODateTimeFormat.dateTime().withZoneUTC()");
         formatter = withZoneUTC;
     }
 

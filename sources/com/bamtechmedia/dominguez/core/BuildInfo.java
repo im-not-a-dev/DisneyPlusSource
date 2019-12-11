@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core;
 
 import androidx.annotation.Keep;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0016\b\b\u0018\u00002\u00020\u0001:\u0003%&'B'\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b¢\u0006\u0002\u0010\tB%\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0006\u0010\f\u001a\u00020\r\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b¢\u0006\u0002\u0010\u000eJ\t\u0010\u001c\u001a\u00020\u000bHÆ\u0003J\t\u0010\u001d\u001a\u00020\rHÆ\u0003J\t\u0010\u001e\u001a\u00020\u0006HÆ\u0003J\t\u0010\u001f\u001a\u00020\bHÆ\u0003J1\u0010 \u001a\u00020\u00002\b\b\u0002\u0010\n\u001a\u00020\u000b2\b\b\u0002\u0010\f\u001a\u00020\r2\b\b\u0002\u0010\u0005\u001a\u00020\u00062\b\b\u0002\u0010\u0007\u001a\u00020\bHÆ\u0001J\u0013\u0010!\u001a\u00020\u00122\b\u0010\"\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010#\u001a\u00020\bHÖ\u0001J\t\u0010$\u001a\u00020\u0003HÖ\u0001R\u0011\u0010\n\u001a\u00020\u000b¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0011\u001a\u00020\u00128F¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0013R\u0011\u0010\u0014\u001a\u00020\u00128F¢\u0006\u0006\u001a\u0004\b\u0014\u0010\u0013R\u0011\u0010\u0015\u001a\u00020\u00128F¢\u0006\u0006\u001a\u0004\b\u0015\u0010\u0013R\u0011\u0010\f\u001a\u00020\r¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0017R\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u0018\u0010\u0019R\u0011\u0010\u0007\u001a\u00020\b¢\u0006\b\n\u0000\u001a\u0004\b\u001a\u0010\u001b¨\u0006("}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/BuildInfo;", "", "environmentFlavor", "", "marketFlavor", "platform", "Lcom/bamtechmedia/dominguez/core/BuildInfo$Platform;", "versionCode", "", "(Ljava/lang/String;Ljava/lang/String;Lcom/bamtechmedia/dominguez/core/BuildInfo$Platform;I)V", "environment", "Lcom/bamtechmedia/dominguez/core/BuildInfo$Environment;", "market", "Lcom/bamtechmedia/dominguez/core/BuildInfo$Market;", "(Lcom/bamtechmedia/dominguez/core/BuildInfo$Environment;Lcom/bamtechmedia/dominguez/core/BuildInfo$Market;Lcom/bamtechmedia/dominguez/core/BuildInfo$Platform;I)V", "getEnvironment", "()Lcom/bamtechmedia/dominguez/core/BuildInfo$Environment;", "isAdmAvailable", "", "()Z", "isDevDebugBuild", "isFcmAvailable", "getMarket", "()Lcom/bamtechmedia/dominguez/core/BuildInfo$Market;", "getPlatform", "()Lcom/bamtechmedia/dominguez/core/BuildInfo$Platform;", "getVersionCode", "()I", "component1", "component2", "component3", "component4", "copy", "equals", "other", "hashCode", "toString", "Environment", "Market", "Platform", "coreCommon_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: BuildInfo.kt */
@@ -118,7 +118,7 @@ public final class BuildInfo {
         if (this != obj) {
             if (obj instanceof BuildInfo) {
                 BuildInfo buildInfo = (BuildInfo) obj;
-                if (C12880j.m40224a((Object) this.f8916a, (Object) buildInfo.f8916a) && C12880j.m40224a((Object) this.f8917b, (Object) buildInfo.f8917b) && C12880j.m40224a((Object) this.f8918c, (Object) buildInfo.f8918c)) {
+                if (Intrinsics.areEqual((Object) this.f8916a, (Object) buildInfo.f8916a) && Intrinsics.areEqual((Object) this.f8917b, (Object) buildInfo.f8917b) && Intrinsics.areEqual((Object) this.f8918c, (Object) buildInfo.f8918c)) {
                     if (this.f8919d == buildInfo.f8919d) {
                         return true;
                     }
@@ -169,10 +169,10 @@ public final class BuildInfo {
     public BuildInfo(String str, String str2, C3584a aVar, int i) {
         String upperCase = str.toUpperCase();
         String str3 = "(this as java.lang.String).toUpperCase()";
-        C12880j.m40222a((Object) upperCase, str3);
+        Intrinsics.checkReturnedValueIsNotNull((Object) upperCase, str3);
         Environment valueOf = Environment.valueOf(upperCase);
         String upperCase2 = str2.toUpperCase();
-        C12880j.m40222a((Object) upperCase2, str3);
+        Intrinsics.checkReturnedValueIsNotNull((Object) upperCase2, str3);
         this(valueOf, Market.valueOf(upperCase2), aVar, i);
     }
 }

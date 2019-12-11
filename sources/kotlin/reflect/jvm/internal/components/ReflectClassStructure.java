@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p581d0.C12731a;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
@@ -36,34 +36,34 @@ final class ReflectClassStructure {
         while (cls.isArray()) {
             i++;
             cls = cls.getComponentType();
-            C12880j.m40222a((Object) cls, "currentClass.componentType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) cls, "currentClass.componentType");
         }
         if (!cls.isPrimitive()) {
             ClassId classId = ReflectClassUtilKt.getClassId(cls);
             JavaToKotlinClassMap javaToKotlinClassMap = JavaToKotlinClassMap.INSTANCE;
             FqName asSingleFqName = classId.asSingleFqName();
-            C12880j.m40222a((Object) asSingleFqName, "javaClassId.asSingleFqName()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) asSingleFqName, "javaClassId.asSingleFqName()");
             ClassId mapJavaToKotlin = javaToKotlinClassMap.mapJavaToKotlin(asSingleFqName);
             if (mapJavaToKotlin != null) {
                 classId = mapJavaToKotlin;
             }
             return new ClassLiteralValue(classId, i);
-        } else if (C12880j.m40224a((Object) cls, (Object) Void.TYPE)) {
+        } else if (Intrinsics.areEqual((Object) cls, (Object) Void.TYPE)) {
             ClassId classId2 = ClassId.topLevel(KotlinBuiltIns.FQ_NAMES.unit.toSafe());
-            C12880j.m40222a((Object) classId2, "ClassId.topLevel(KotlinB…s.FQ_NAMES.unit.toSafe())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) classId2, "ClassId.topLevel(KotlinB…s.FQ_NAMES.unit.toSafe())");
             return new ClassLiteralValue(classId2, i);
         } else {
             JvmPrimitiveType jvmPrimitiveType = JvmPrimitiveType.get(cls.getName());
-            C12880j.m40222a((Object) jvmPrimitiveType, "JvmPrimitiveType.get(currentClass.name)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) jvmPrimitiveType, "JvmPrimitiveType.get(currentClass.name)");
             PrimitiveType primitiveType = jvmPrimitiveType.getPrimitiveType();
-            C12880j.m40222a((Object) primitiveType, "JvmPrimitiveType.get(cur…Class.name).primitiveType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) primitiveType, "JvmPrimitiveType.get(cur…Class.name).primitiveType");
             if (i > 0) {
                 ClassId classId3 = ClassId.topLevel(primitiveType.getArrayTypeFqName());
-                C12880j.m40222a((Object) classId3, "ClassId.topLevel(primitiveType.arrayTypeFqName)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) classId3, "ClassId.topLevel(primitiveType.arrayTypeFqName)");
                 return new ClassLiteralValue(classId3, i - 1);
             }
             ClassId classId4 = ClassId.topLevel(primitiveType.getTypeFqName());
-            C12880j.m40222a((Object) classId4, "ClassId.topLevel(primitiveType.typeFqName)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) classId4, "ClassId.topLevel(primitiveType.typeFqName)");
             return new ClassLiteralValue(classId4, i);
         }
     }
@@ -78,9 +78,9 @@ final class ReflectClassStructure {
         while (i2 < length) {
             Constructor constructor = declaredConstructors[i2];
             Name special = Name.special("<init>");
-            C12880j.m40222a((Object) special, "Name.special(\"<init>\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) special, "Name.special(\"<init>\")");
             SignatureSerializer signatureSerializer = SignatureSerializer.INSTANCE;
-            C12880j.m40222a((Object) constructor, "constructor");
+            Intrinsics.checkReturnedValueIsNotNull((Object) constructor, "constructor");
             MethodAnnotationVisitor visitMethod = memberVisitor.visitMethod(special, signatureSerializer.constructorDesc(constructor));
             if (visitMethod != null) {
                 Annotation[] declaredAnnotations = constructor.getDeclaredAnnotations();
@@ -92,12 +92,12 @@ final class ReflectClassStructure {
                         break;
                     }
                     Annotation annotation = declaredAnnotations[i3];
-                    C12880j.m40222a((Object) annotation, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) annotation, str);
                     processAnnotation(visitMethod, annotation);
                     i3++;
                 }
                 Annotation[][] parameterAnnotations = constructor.getParameterAnnotations();
-                C12880j.m40222a((Object) parameterAnnotations, "parameterAnnotations");
+                Intrinsics.checkReturnedValueIsNotNull((Object) parameterAnnotations, "parameterAnnotations");
                 if (!(parameterAnnotations.length == 0)) {
                     int length3 = constructor.getParameterTypes().length - parameterAnnotations.length;
                     int length4 = parameterAnnotations.length;
@@ -113,7 +113,7 @@ final class ReflectClassStructure {
                             int i7 = length;
                             ClassId classId = ReflectClassUtilKt.getClassId(a);
                             int i8 = length3;
-                            C12880j.m40222a((Object) annotation2, str);
+                            Intrinsics.checkReturnedValueIsNotNull((Object) annotation2, str);
                             AnnotationArgumentVisitor visitParameterAnnotation = visitMethod.visitParameterAnnotation(i6, classId, new ReflectAnnotationSource(annotation2));
                             if (visitParameterAnnotation != null) {
                                 INSTANCE.processAnnotationArguments(visitParameterAnnotation, annotation2, a);
@@ -145,13 +145,13 @@ final class ReflectClassStructure {
         Field[] declaredFields;
         Annotation[] declaredAnnotations;
         for (Field field : cls.getDeclaredFields()) {
-            C12880j.m40222a((Object) field, "field");
+            Intrinsics.checkReturnedValueIsNotNull((Object) field, "field");
             Name identifier = Name.identifier(field.getName());
-            C12880j.m40222a((Object) identifier, "Name.identifier(field.name)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(field.name)");
             AnnotationVisitor visitField = memberVisitor.visitField(identifier, SignatureSerializer.INSTANCE.fieldDesc(field), null);
             if (visitField != null) {
                 for (Annotation annotation : field.getDeclaredAnnotations()) {
-                    C12880j.m40222a((Object) annotation, "annotation");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) annotation, "annotation");
                     processAnnotation(visitField, annotation);
                 }
                 visitField.visitEnd();
@@ -167,9 +167,9 @@ final class ReflectClassStructure {
         int i = 0;
         while (i < length) {
             Method method = declaredMethods[i];
-            C12880j.m40222a((Object) method, "method");
+            Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
             Name identifier = Name.identifier(method.getName());
-            C12880j.m40222a((Object) identifier, "Name.identifier(method.name)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(method.name)");
             MethodAnnotationVisitor visitMethod = memberVisitor.visitMethod(identifier, SignatureSerializer.INSTANCE.methodDesc(method));
             if (visitMethod != null) {
                 Annotation[] declaredAnnotations = method.getDeclaredAnnotations();
@@ -181,12 +181,12 @@ final class ReflectClassStructure {
                         break;
                     }
                     Annotation annotation = declaredAnnotations[i2];
-                    C12880j.m40222a((Object) annotation, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) annotation, str);
                     processAnnotation(visitMethod, annotation);
                     i2++;
                 }
                 Annotation[][] parameterAnnotations = method.getParameterAnnotations();
-                C12880j.m40222a((Object) parameterAnnotations, "method.parameterAnnotations");
+                Intrinsics.checkReturnedValueIsNotNull((Object) parameterAnnotations, "method.parameterAnnotations");
                 int length3 = parameterAnnotations.length;
                 for (int i3 = 0; i3 < length3; i3++) {
                     Annotation[] annotationArr = parameterAnnotations[i3];
@@ -197,7 +197,7 @@ final class ReflectClassStructure {
                         Class a = C12731a.m39866a(C12731a.m39868a(annotation2));
                         ClassId classId = ReflectClassUtilKt.getClassId(a);
                         Method[] methodArr2 = declaredMethods;
-                        C12880j.m40222a((Object) annotation2, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) annotation2, str);
                         AnnotationArgumentVisitor visitParameterAnnotation = visitMethod.visitParameterAnnotation(i3, classId, new ReflectAnnotationSource(annotation2));
                         if (visitParameterAnnotation != null) {
                             INSTANCE.processAnnotationArguments(visitParameterAnnotation, annotation2, a);
@@ -228,7 +228,7 @@ final class ReflectClassStructure {
     private final void processAnnotationArgumentValue(AnnotationArgumentVisitor annotationArgumentVisitor, Name name, Object obj) {
         Class cls = obj.getClass();
         String str = "null cannot be cast to non-null type java.lang.Class<*>";
-        if (C12880j.m40224a((Object) cls, (Object) Class.class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) Class.class)) {
             if (obj != null) {
                 annotationArgumentVisitor.visitClassLiteral(name, classLiteralValue((Class) obj));
             } else {
@@ -242,20 +242,20 @@ final class ReflectClassStructure {
                 if (!cls.isEnum()) {
                     cls = cls.getEnclosingClass();
                 }
-                C12880j.m40222a((Object) cls, "(if (clazz.isEnum) clazz…lse clazz.enclosingClass)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) cls, "(if (clazz.isEnum) clazz…lse clazz.enclosingClass)");
                 ClassId classId = ReflectClassUtilKt.getClassId(cls);
                 if (obj != null) {
                     Name identifier = Name.identifier(((Enum) obj).name());
-                    C12880j.m40222a((Object) identifier, "Name.identifier((value as Enum<*>).name)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier((value as Enum<*>).name)");
                     annotationArgumentVisitor.visitEnum(name, classId, identifier);
                 } else {
                     throw new C13142s(str2);
                 }
             } else if (Annotation.class.isAssignableFrom(cls)) {
                 Class[] interfaces = cls.getInterfaces();
-                C12880j.m40222a((Object) interfaces, "clazz.interfaces");
+                Intrinsics.checkReturnedValueIsNotNull((Object) interfaces, "clazz.interfaces");
                 Class cls2 = (Class) C13174k.m40410j(interfaces);
-                C12880j.m40222a((Object) cls2, "annotationClass");
+                Intrinsics.checkReturnedValueIsNotNull((Object) cls2, "annotationClass");
                 AnnotationArgumentVisitor visitAnnotation = annotationArgumentVisitor.visitAnnotation(name, ReflectClassUtilKt.getClassId(cls2));
                 if (visitAnnotation == null) {
                     return;
@@ -269,7 +269,7 @@ final class ReflectClassStructure {
                 AnnotationArrayArgumentVisitor visitArray = annotationArgumentVisitor.visitArray(name);
                 if (visitArray != null) {
                     Class componentType = cls.getComponentType();
-                    C12880j.m40222a((Object) componentType, "componentType");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) componentType, "componentType");
                     String str3 = "null cannot be cast to non-null type kotlin.Array<*>";
                     int i = 0;
                     if (componentType.isEnum()) {
@@ -281,7 +281,7 @@ final class ReflectClassStructure {
                                 Object obj2 = objArr[i];
                                 if (obj2 != null) {
                                     Name identifier2 = Name.identifier(((Enum) obj2).name());
-                                    C12880j.m40222a((Object) identifier2, "Name.identifier((element as Enum<*>).name)");
+                                    Intrinsics.checkReturnedValueIsNotNull((Object) identifier2, "Name.identifier((element as Enum<*>).name)");
                                     visitArray.visitEnum(classId2, identifier2);
                                     i++;
                                 } else {
@@ -291,7 +291,7 @@ final class ReflectClassStructure {
                         } else {
                             throw new C13142s(str3);
                         }
-                    } else if (C12880j.m40224a((Object) componentType, (Object) Class.class)) {
+                    } else if (Intrinsics.areEqual((Object) componentType, (Object) Class.class)) {
                         if (obj != null) {
                             Object[] objArr2 = (Object[]) obj;
                             int length2 = objArr2.length;
@@ -339,13 +339,13 @@ final class ReflectClassStructure {
             try {
                 Object invoke = method.invoke(annotation, new Object[0]);
                 if (invoke != null) {
-                    C12880j.m40222a((Object) method, "method");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
                     Name identifier = Name.identifier(method.getName());
-                    C12880j.m40222a((Object) identifier, "Name.identifier(method.name)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(method.name)");
                     processAnnotationArgumentValue(annotationArgumentVisitor, identifier, invoke);
                     i++;
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             } catch (IllegalAccessException unused) {
@@ -357,7 +357,7 @@ final class ReflectClassStructure {
     public final void loadClassAnnotations(Class<?> cls, AnnotationVisitor annotationVisitor) {
         Annotation[] declaredAnnotations;
         for (Annotation annotation : cls.getDeclaredAnnotations()) {
-            C12880j.m40222a((Object) annotation, "annotation");
+            Intrinsics.checkReturnedValueIsNotNull((Object) annotation, "annotation");
             processAnnotation(annotationVisitor, annotation);
         }
         annotationVisitor.visitEnd();

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.kotlin;
 
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassData;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassDataFinder;
@@ -21,7 +21,7 @@ public final class JavaClassDataFinder implements ClassDataFinder {
         if (findKotlinClass == null) {
             return null;
         }
-        boolean a = C12880j.m40224a((Object) findKotlinClass.getClassId(), (Object) classId);
+        boolean a = Intrinsics.areEqual((Object) findKotlinClass.getClassId(), (Object) classId);
         if (!C13147x.f29590a || a) {
             return this.deserializedDescriptorResolver.readClassData$descriptors_jvm(findKotlinClass);
         }

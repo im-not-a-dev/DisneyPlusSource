@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
 import kotlin.C12907r;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FindClassInModuleKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -47,7 +47,7 @@ public final class EnumValue extends ConstantValue<Pair<? extends ClassId, ? ext
         sb.append('.');
         sb.append(this.enumEntryName);
         SimpleType createErrorType = ErrorUtils.createErrorType(sb.toString());
-        C12880j.m40222a((Object) createErrorType, "ErrorUtils.createErrorTy…mClassId.$enumEntryName\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createErrorType, "ErrorUtils.createErrorTy…mClassId.$enumEntryName\")");
         return createErrorType;
     }
 

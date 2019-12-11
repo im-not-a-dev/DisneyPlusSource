@@ -6,7 +6,7 @@ import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9560n;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
@@ -64,7 +64,7 @@ final class C8991c extends C8998i {
 
         /* renamed from: b */
         public C8921a mo23277b(long j) {
-            int b = C9554k0.m29429b(this.f19721a, C8991c.this.mo23416b(j), true, true);
+            int b = Util.m29429b(this.f19721a, C8991c.this.mo23416b(j), true, true);
             long a = C8991c.this.mo23413a(this.f19721a[b]);
             C8923p pVar = new C8923p(a, this.f19723c + this.f19722b[b]);
             if (a < j) {
@@ -79,7 +79,7 @@ final class C8991c extends C8998i {
 
         /* renamed from: c */
         public void mo23398c(long j) {
-            this.f19724d = this.f19721a[C9554k0.m29429b(this.f19721a, j, true, true)];
+            this.f19724d = this.f19721a[Util.m29429b(this.f19721a, j, true, true)];
         }
 
         /* renamed from: c */

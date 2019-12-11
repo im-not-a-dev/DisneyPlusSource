@@ -21,7 +21,7 @@ import p520io.reactivex.C11969r;
 import p520io.reactivex.functions.Consumer;
 import p551j.p552a.C12589b;
 import p551j.p552a.C12590c;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B!\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u000e\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u0010R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u00020\n8BX\u0004¢\u0006\u0006\u001a\u0004\b\u000b\u0010\fR\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0011"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/engine/session/SentryCapabilitiesReporter;", "", "mediaCapabilitiesProvider", "Lcom/bamtech/sdk4/media/MediaCapabilitiesProvider;", "context", "Landroid/content/Context;", "scheduler", "Lio/reactivex/Scheduler;", "(Lcom/bamtech/sdk4/media/MediaCapabilitiesProvider;Landroid/content/Context;Lio/reactivex/Scheduler;)V", "displayManager", "Landroid/hardware/display/DisplayManager;", "getDisplayManager", "()Landroid/hardware/display/DisplayManager;", "report", "", "scopeProvider", "Lcom/uber/autodispose/ScopeProvider;", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.m.m.f.a */
@@ -84,7 +84,7 @@ public final class C6434a {
 
         /* renamed from: a */
         public final void accept(Map<String, ? extends Object> map) {
-            C14100a.m44522a(map.toString(), new Object[0]);
+            Timber.m44522a(map.toString(), new Object[0]);
         }
     }
 
@@ -101,7 +101,7 @@ public final class C6434a {
 
         /* renamed from: a */
         public final void mo19089a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -109,7 +109,7 @@ public final class C6434a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -155,11 +155,11 @@ public final class C6434a {
             io.reactivex.r r1 = r3.f14592c
             io.reactivex.Single r0 = r0.mo30220b(r1)
             java.lang.String r1 = "Single\n            .from…  .subscribeOn(scheduler)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.h r4 = p163g.p503n.p504a.C11793e.m37930a(r4)
             java.lang.Object r4 = r0.mo30215a(r4)
             java.lang.String r0 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
             g.n.a.d0 r4 = (p163g.p503n.p504a.C11792d0) r4
             com.bamtechmedia.dominguez.playback.m.m.f.a$b r0 = com.bamtechmedia.dominguez.playback.p237m.p242m.p244f.C6434a.C6436b.f14594c
             com.bamtechmedia.dominguez.playback.m.m.f.a$c r1 = com.bamtechmedia.dominguez.playback.p237m.p242m.p244f.C6434a.C6437c.f14595c

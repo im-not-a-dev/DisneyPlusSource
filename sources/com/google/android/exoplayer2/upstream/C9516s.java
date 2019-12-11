@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9574y;
 import com.google.android.exoplayer2.upstream.HttpDataSource.C9437b;
 import com.google.android.exoplayer2.upstream.HttpDataSource.C9438c;
@@ -102,7 +102,7 @@ public class C9516s extends C9497h implements HttpDataSource {
             try {
                 httpURLConnection.disconnect();
             } catch (Exception e) {
-                C9563q.m29496a("DefaultHttpDataSource", "Unexpected error while disconnecting", e);
+                Log.m29496a("DefaultHttpDataSource", "Unexpected error while disconnecting", e);
             }
             this.f22206m = null;
         }
@@ -403,7 +403,7 @@ public class C9516s extends C9497h implements HttpDataSource {
             r1.append(r0)
             r1.append(r2)
             java.lang.String r1 = r1.toString()
-            com.google.android.exoplayer2.p393v0.C9563q.m29497b(r3, r1)
+            com.google.android.exoplayer2.p393v0.Log.m29497b(r3, r1)
         L_0x002c:
             r4 = -1
         L_0x002e:
@@ -442,7 +442,7 @@ public class C9516s extends C9497h implements HttpDataSource {
             r1.append(r10)     // Catch:{ NumberFormatException -> 0x008d }
             r1.append(r2)     // Catch:{ NumberFormatException -> 0x008d }
             java.lang.String r0 = r1.toString()     // Catch:{ NumberFormatException -> 0x008d }
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r3, r0)     // Catch:{ NumberFormatException -> 0x008d }
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r3, r0)     // Catch:{ NumberFormatException -> 0x008d }
             long r0 = java.lang.Math.max(r4, r6)     // Catch:{ NumberFormatException -> 0x008d }
             r4 = r0
             goto L_0x00a4
@@ -454,7 +454,7 @@ public class C9516s extends C9497h implements HttpDataSource {
             r0.append(r10)
             r0.append(r2)
             java.lang.String r10 = r0.toString()
-            com.google.android.exoplayer2.p393v0.C9563q.m29497b(r3, r10)
+            com.google.android.exoplayer2.p393v0.Log.m29497b(r3, r10)
         L_0x00a4:
             return r4
         */
@@ -488,7 +488,7 @@ public class C9516s extends C9497h implements HttpDataSource {
 
     /* renamed from: a */
     private static void m29258a(HttpURLConnection httpURLConnection, long j) {
-        int i = C9554k0.f22281a;
+        int i = Util.SDK_INT;
         if (i == 19 || i == 20) {
             try {
                 InputStream inputStream = httpURLConnection.getInputStream();

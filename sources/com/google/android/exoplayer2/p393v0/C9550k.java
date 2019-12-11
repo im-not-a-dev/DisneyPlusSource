@@ -114,7 +114,7 @@ public final class C9550k implements OnFrameAvailableListener, Runnable {
             if (eGLContext != null) {
                 EGL14.eglDestroyContext(this.f22276W, eGLContext);
             }
-            if (C9554k0.f22281a >= 19) {
+            if (Util.SDK_INT >= 19) {
                 EGL14.eglReleaseThread();
             }
             EGLDisplay eGLDisplay3 = this.f22276W;
@@ -164,7 +164,7 @@ public final class C9550k implements OnFrameAvailableListener, Runnable {
         if (eglChooseConfig && iArr[0] > 0 && eGLConfigArr[0] != null) {
             return eGLConfigArr[0];
         }
-        throw new C9552b(C9554k0.m29397a("eglChooseConfig failed: success=%b, numConfigs[0]=%d, configs[0]=%s", Boolean.valueOf(eglChooseConfig), Integer.valueOf(iArr[0]), eGLConfigArr[0]));
+        throw new C9552b(Util.m29397a("eglChooseConfig failed: success=%b, numConfigs[0]=%d, configs[0]=%s", Boolean.valueOf(eglChooseConfig), Integer.valueOf(iArr[0]), eGLConfigArr[0]));
     }
 
     /* renamed from: a */

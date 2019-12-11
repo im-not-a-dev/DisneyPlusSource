@@ -22,7 +22,7 @@ import javax.inject.Provider;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.OkHttpClient.Builder;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -59,24 +59,24 @@ public class DefaultWidevineDrmProvider implements WidevineDrmProvider, NetworkC
 
     private final Single<Pair<Link, TelemetryServiceConfiguration>> getWidevineOfflineLicenseLink(ServiceTransaction serviceTransaction) {
         Single g = this.configurationProvider.getServiceLink(serviceTransaction, DefaultWidevineDrmProvider$getWidevineOfflineLicenseLink$1.INSTANCE).mo30233g(new DefaultWidevineDrmProvider$getWidevineOfflineLicenseLink$2(this, serviceTransaction));
-        C12880j.m40222a((Object) g, "configurationProvider.ge…lemetry\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "configurationProvider.ge…lemetry\n                }");
         return DustExtensionsKt.withDust$default(g, serviceTransaction, DrmServiceConfigurationKt.getWIDEVINE_GET_OFFLINE_LICENSE_URL(Dust$Events.INSTANCE), (Object) null, 4, (Object) null);
     }
 
     private final Single<Pair<Link, TelemetryServiceConfiguration>> getWidevineOfflineLicenseRenewLink(ServiceTransaction serviceTransaction) {
         Single g = this.configurationProvider.getServiceLink(serviceTransaction, DefaultWidevineDrmProvider$getWidevineOfflineLicenseRenewLink$1.INSTANCE).mo30233g(new DefaultWidevineDrmProvider$getWidevineOfflineLicenseRenewLink$2(this, serviceTransaction));
-        C12880j.m40222a((Object) g, "configurationProvider.ge…lemetry\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "configurationProvider.ge…lemetry\n                }");
         return DustExtensionsKt.withDust$default(g, serviceTransaction, DrmServiceConfigurationKt.getWIDEVINE_RENEW_OFFLINE_LICENSE_URL(Dust$Events.INSTANCE), (Object) null, 4, (Object) null);
     }
 
     private final Single<? extends Pair<Link, TelemetryServiceConfiguration>> getWidevineProvisioningLink(ServiceTransaction serviceTransaction, String str, byte[] bArr) {
         if (!(str == null || C12832w.m40118a(str))) {
             Single<? extends Pair<Link, TelemetryServiceConfiguration>> g = this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultWidevineDrmProvider$getWidevineProvisioningLink$1.INSTANCE).mo30233g(new DefaultWidevineDrmProvider$getWidevineProvisioningLink$2(str, bArr));
-            C12880j.m40222a((Object) g, "configurationProvider.ge… config\n                }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) g, "configurationProvider.ge… config\n                }");
             return g;
         }
         Single<? extends Pair<Link, TelemetryServiceConfiguration>> g2 = this.configurationProvider.getServiceLink(serviceTransaction, DefaultWidevineDrmProvider$getWidevineProvisioningLink$3.INSTANCE).mo30233g(new DefaultWidevineDrmProvider$getWidevineProvisioningLink$4(this, serviceTransaction));
-        C12880j.m40222a((Object) g2, "configurationProvider.ge…try\n                    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g2, "configurationProvider.ge…try\n                    }");
         return g2;
     }
 
@@ -87,23 +87,23 @@ public class DefaultWidevineDrmProvider implements WidevineDrmProvider, NetworkC
     public final Single<byte[]> downloadNewOfflineLicense(ServiceTransaction serviceTransaction, Single<Pair<Link, TelemetryServiceConfiguration>> single, byte[] bArr, String str) {
         if (isTv()) {
             Single<byte[]> a = Single.m38395a((Throwable) new UnsupportedOperationException("Offline licenses are not supported on Android TV"));
-            C12880j.m40222a((Object) a, "Single.error(Unsupported…upported on Android TV\"))");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.error(Unsupported…upported on Android TV\"))");
             return a;
         }
         Single<byte[]> a2 = single.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultWidevineDrmProvider$downloadNewOfflineLicense$1<Object,Object>(this, serviceTransaction, bArr, str));
-        C12880j.m40222a((Object) a2, "licenseLink.flatMap { (l…tion, dust)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "licenseLink.flatMap { (l…tion, dust)\n            }");
         return a2;
     }
 
     public byte[] executeKeyRequest(ServiceTransaction serviceTransaction, String str, byte[] bArr, String str2, boolean z) {
         Object c = getWidevineLicense(serviceTransaction, str, bArr, str2, z).mo30224c();
-        C12880j.m40222a(c, "getWidevineLicense(trans… isOffline).blockingGet()");
+        Intrinsics.checkReturnedValueIsNotNull(c, "getWidevineLicense(trans… isOffline).blockingGet()");
         return (byte[]) c;
     }
 
     public byte[] executeProvisionRequest(ServiceTransaction serviceTransaction, String str, byte[] bArr, String str2, boolean z) {
         Object c = getWidevineCertificate(serviceTransaction, str, bArr, str2, z).mo30224c();
-        C12880j.m40222a(c, "getWidevineCertificate(t… isOffline).blockingGet()");
+        Intrinsics.checkReturnedValueIsNotNull(c, "getWidevineCertificate(t… isOffline).blockingGet()");
         return (byte[]) c;
     }
 
@@ -143,7 +143,7 @@ public class DefaultWidevineDrmProvider implements WidevineDrmProvider, NetworkC
         Single widevineProvisioningLink = getWidevineProvisioningLink(serviceTransaction, str, bArr);
         DefaultWidevineDrmProvider$getWidevineCertificate$1 defaultWidevineDrmProvider$getWidevineCertificate$1 = new DefaultWidevineDrmProvider$getWidevineCertificate$1(this, str2, serviceTransaction, z, bArr);
         Single<byte[]> a = widevineProvisioningLink.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultWidevineDrmProvider$getWidevineCertificate$1);
-        C12880j.m40222a((Object) a, "getWidevineProvisioningL…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "getWidevineProvisioningL…      }\n                }");
         return a;
     }
 
@@ -151,7 +151,7 @@ public class DefaultWidevineDrmProvider implements WidevineDrmProvider, NetworkC
         Single widevineLicenseLink$extension_media_release = getWidevineLicenseLink$extension_media_release(serviceTransaction, str);
         DefaultWidevineDrmProvider$getWidevineLicense$1 defaultWidevineDrmProvider$getWidevineLicense$1 = new DefaultWidevineDrmProvider$getWidevineLicense$1(this, str2, serviceTransaction, z, bArr);
         Single<byte[]> a = widevineLicenseLink$extension_media_release.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultWidevineDrmProvider$getWidevineLicense$1);
-        C12880j.m40222a((Object) a, "getWidevineLicenseLink(t…ICENSE)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "getWidevineLicenseLink(t…ICENSE)\n                }");
         return a;
     }
 
@@ -159,10 +159,10 @@ public class DefaultWidevineDrmProvider implements WidevineDrmProvider, NetworkC
         Single single;
         if (!(str == null || C12832w.m40118a(str))) {
             single = this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultWidevineDrmProvider$getWidevineLicenseLink$1.INSTANCE).mo30233g(new DefaultWidevineDrmProvider$getWidevineLicenseLink$2(str));
-            C12880j.m40222a((Object) single, "configurationProvider.ge… config\n                }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) single, "configurationProvider.ge… config\n                }");
         } else {
             single = this.configurationProvider.getServiceLink(serviceTransaction, DefaultWidevineDrmProvider$getWidevineLicenseLink$3.INSTANCE).mo30233g(new DefaultWidevineDrmProvider$getWidevineLicenseLink$4(this, serviceTransaction));
-            C12880j.m40222a((Object) single, "configurationProvider.ge…try\n                    }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) single, "configurationProvider.ge…try\n                    }");
         }
         return DustExtensionsKt.withDust$default(single, serviceTransaction, DrmServiceConfigurationKt.getWIDEVINE_GET_LICENSE_URL(Dust$Events.INSTANCE), (Object) null, 4, (Object) null);
     }
@@ -173,15 +173,15 @@ public class DefaultWidevineDrmProvider implements WidevineDrmProvider, NetworkC
 
     public Single<byte[]> releaseWidevineOfflineLicense(ServiceTransaction serviceTransaction, byte[] bArr, boolean z) {
         Single<byte[]> a = Single.m38401c((Callable<? extends T>) new DefaultWidevineDrmProvider$releaseWidevineOfflineLicense$1<Object>(this, z)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultWidevineDrmProvider$releaseWidevineOfflineLicense$2<Object,Object>(this, serviceTransaction, bArr));
-        C12880j.m40222a((Object) a, "Single.fromCallable<Serv…ta, it)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.fromCallable<Serv…ta, it)\n                }");
         return a;
     }
 
     public final Single<byte[]> releaseWidevineOfflineLicenseInternal(ServiceTransaction serviceTransaction, byte[] bArr, Function1<? super Services, Link> function1) {
         Single g = this.configurationProvider.getServiceLink(serviceTransaction, function1).mo30233g(new C1990xd7344eba(this, serviceTransaction));
-        C12880j.m40222a((Object) g, "configurationProvider.ge…lemetry\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "configurationProvider.ge…lemetry\n                }");
         Single<byte[]> a = DustExtensionsKt.withDust$default(g, serviceTransaction, DrmServiceConfigurationKt.getWIDEVINE_GET_OFFLINE_LICENSE_RELEASE_URL(Dust$Events.INSTANCE), (Object) null, 4, (Object) null).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C1992xd7344ebb<Object,Object>(this, serviceTransaction, bArr));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…ICENSE)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…ICENSE)\n                }");
         return a;
     }
 

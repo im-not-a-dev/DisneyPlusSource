@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.core.p083f;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11848c;
 import p163g.p509o.p510a.C11853e;
 import p163g.p509o.p510a.C11863k;
@@ -68,7 +68,7 @@ public final class C3798a<VH extends C11863k> extends C11848c<VH> {
     /* renamed from: d */
     public final C11853e<?> mo13702d(int i) {
         C11853e<?> a = super.mo13700a(i);
-        C12880j.m40222a((Object) a, "super.getItem(position)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "super.getItem(position)");
         return a;
     }
 }

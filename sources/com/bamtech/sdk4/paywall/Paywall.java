@@ -60,7 +60,7 @@ public final class Paywall {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.paywallHash, (java.lang.Object) r3.paywallHash) != false) goto L_0x0029;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.paywallHash, (java.lang.Object) r3.paywallHash) != false) goto L_0x0029;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -72,15 +72,15 @@ public final class Paywall {
             com.bamtech.sdk4.paywall.Paywall r3 = (com.bamtech.sdk4.paywall.Paywall) r3
             com.bamtech.sdk4.paywall.AccountEntitlementContext r0 = r2.accountEntitlementContext
             com.bamtech.sdk4.paywall.AccountEntitlementContext r1 = r3.accountEntitlementContext
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.util.List<com.bamtech.sdk4.paywall.Product> r0 = r2.products
             java.util.List<com.bamtech.sdk4.paywall.Product> r1 = r3.products
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.lang.String r0 = r2.paywallHash
             java.lang.String r3 = r3.paywallHash
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0027
             goto L_0x0029
         L_0x0027:

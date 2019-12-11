@@ -23,7 +23,7 @@ import com.bamtechmedia.dominguez.detail.common.C5897a.C5898a.C5903e;
 import java.util.HashMap;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 import p163g.p201e.p203b.p287k.C7307a;
 import p163g.p201e.p203b.p287k.C7309c;
@@ -57,16 +57,16 @@ public final class DefaultBookmarkButton extends C5897a {
 
         public final void onFocusChange(View view, boolean z) {
             TextView textView = (TextView) this.f13678c.mo2145c(C7310d.bookMarkText);
-            C12880j.m40222a((Object) textView, "bookMarkText");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "bookMarkText");
             textView.setSelected(z);
             ImageView imageView = (ImageView) this.f13678c.mo2145c(C7310d.bookMarkIcon);
-            C12880j.m40222a((Object) imageView, "bookMarkIcon");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "bookMarkIcon");
             imageView.setSelected(z);
             CardView cardView = (CardView) this.f13678c.mo2145c(C7310d.bookMarkCardViewContainer);
-            C12880j.m40222a((Object) cardView, "bookMarkCardViewContainer");
+            Intrinsics.checkReturnedValueIsNotNull((Object) cardView, "bookMarkCardViewContainer");
             cardView.setSelected(z);
             ProgressBar progressBar = (ProgressBar) this.f13678c.mo2145c(C7310d.bookMarkProgressBar);
-            C12880j.m40222a((Object) progressBar, "bookMarkProgressBar");
+            Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "bookMarkProgressBar");
             progressBar.setSelected(z);
             this.f13678c.m18968d();
         }
@@ -94,12 +94,12 @@ public final class DefaultBookmarkButton extends C5897a {
     /* renamed from: d */
     public final void m18968d() {
         CardView cardView = (CardView) mo2145c(C7310d.bookMarkCardViewContainer);
-        C12880j.m40222a((Object) cardView, "bookMarkCardViewContainer");
+        Intrinsics.checkReturnedValueIsNotNull((Object) cardView, "bookMarkCardViewContainer");
         C3800a.m12829a(cardView, 0.0f, 0.0f, !isFocused() ? 1.1f : 1.0f, isFocused() ? 1.1f : 1.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 200, 0, null, null, null, null, 258035, null);
     }
 
     private final int getBookmarkIcon() {
-        if (C12880j.m40224a((Object) getButtonState(), (Object) C5901c.f13691a)) {
+        if (Intrinsics.areEqual((Object) getButtonState(), (Object) C5901c.f13691a)) {
             return C7309c.ic_icon_details_restart_white;
         }
         return C7309c.ic_icon_details_play_white;
@@ -108,7 +108,7 @@ public final class DefaultBookmarkButton extends C5897a {
     private final String getCurrentLabel() {
         int i;
         C5898a buttonState = getButtonState();
-        if (C12880j.m40224a((Object) buttonState, (Object) C5899a.f13688a)) {
+        if (Intrinsics.areEqual((Object) buttonState, (Object) C5899a.f13688a)) {
             i = C7313g.btn_play;
         } else if (buttonState instanceof C5900b) {
             C5898a buttonState2 = getButtonState();
@@ -143,12 +143,12 @@ public final class DefaultBookmarkButton extends C5897a {
     public void mo2144c() {
         ((ImageView) mo2145c(C7310d.bookMarkIcon)).setImageDrawable(C4025a.m13798c(getContext(), getBookmarkIcon()));
         TextView textView = (TextView) mo2145c(C7310d.bookMarkText);
-        C12880j.m40222a((Object) textView, "bookMarkText");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "bookMarkText");
         textView.setText(getCurrentLabel());
         if (getButtonState() instanceof C5902d) {
             ProgressBar progressBar = (ProgressBar) mo2145c(C7310d.bookMarkProgressBar);
             String str = "bookMarkProgressBar";
-            C12880j.m40222a((Object) progressBar, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, str);
             LayoutParams layoutParams = progressBar.getLayoutParams();
             if (layoutParams != null) {
                 FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) layoutParams;
@@ -158,13 +158,13 @@ public final class DefaultBookmarkButton extends C5897a {
                 layoutParams2.setMarginStart(C12737d.m39876b(sqrt));
                 layoutParams2.setMarginEnd(C12737d.m39876b(sqrt));
                 ProgressBar progressBar2 = (ProgressBar) mo2145c(C7310d.bookMarkProgressBar);
-                C12880j.m40222a((Object) progressBar2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) progressBar2, str);
                 progressBar2.setLayoutParams(layoutParams2);
                 ProgressBar progressBar3 = (ProgressBar) mo2145c(C7310d.bookMarkProgressBar);
-                C12880j.m40222a((Object) progressBar3, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) progressBar3, str);
                 progressBar3.setVisibility(0);
                 ProgressBar progressBar4 = (ProgressBar) mo2145c(C7310d.bookMarkProgressBar);
-                C12880j.m40222a((Object) progressBar4, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) progressBar4, str);
                 C5898a buttonState = getButtonState();
                 if (buttonState != null) {
                     progressBar4.setProgress(((C5902d) buttonState).mo17804a());

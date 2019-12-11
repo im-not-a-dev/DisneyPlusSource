@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import kotlin.C12907r;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p586h0.C12757d;
 import kotlin.p590y.C13162e0;
 import kotlin.p590y.C13180m;
@@ -135,7 +135,7 @@ public final class C7453j implements C7382b {
                                 break;
                             }
                             Object next3 = it4.next();
-                            if (C12880j.m40224a((Object) ((C3789t) next3).mo12992E(), (Object) str2)) {
+                            if (Intrinsics.areEqual((Object) ((C3789t) next3).mo12992E(), (Object) str2)) {
                                 tVar = next3;
                                 break;
                             }

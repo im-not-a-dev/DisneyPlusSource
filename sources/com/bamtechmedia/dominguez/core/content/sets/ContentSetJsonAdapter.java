@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.core.content.paging.DefaultPagingMetaData;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -27,22 +27,22 @@ public final class ContentSetJsonAdapter extends C11725h<ContentSet> {
 
     public ContentSetJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("setId", "experimentToken", "texts", "items", "type", "contentClass", "meta");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"s…, \"contentClass\", \"meta\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"s…, \"contentClass\", \"meta\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "setId");
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"setId\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"setId\")");
         this.stringAdapter = a2;
         C11725h<String> a3 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "experimentToken");
-        C12880j.m40222a((Object) a3, "moshi.adapter<String?>(S…Set(), \"experimentToken\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<String?>(S…Set(), \"experimentToken\")");
         this.nullableStringAdapter = a3;
         C11725h<List<TextEntry>> a4 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, TextEntry.class), C13188p0.m40531a(), "texts");
-        C12880j.m40222a((Object) a4, "moshi.adapter<List<TextE…ions.emptySet(), \"texts\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<List<TextE…ions.emptySet(), \"texts\")");
         this.listOfTextEntryAdapter = a4;
         C11725h<List<C3626b>> a5 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, C3626b.class), C13188p0.m40531a(), "items");
-        C12880j.m40222a((Object) a5, "moshi.adapter<List<Asset…ions.emptySet(), \"items\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<List<Asset…ions.emptySet(), \"items\")");
         this.listOfAssetAdapter = a5;
         C11725h<DefaultPagingMetaData> a6 = vVar.mo29869a((Type) DefaultPagingMetaData.class, C13188p0.m40531a(), "meta");
-        C12880j.m40222a((Object) a6, "moshi.adapter<DefaultPag…tions.emptySet(), \"meta\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a6, "moshi.adapter<DefaultPag…tions.emptySet(), \"meta\")");
         this.defaultPagingMetaDataAdapter = a6;
     }
 

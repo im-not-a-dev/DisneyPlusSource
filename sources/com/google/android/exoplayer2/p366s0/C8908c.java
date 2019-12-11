@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0;
 
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.s0.c */
 /* compiled from: ConstantBitrateSeekMap */
@@ -79,7 +79,7 @@ public class C8908c implements C8920o {
     private long m26118d(long j) {
         long j2 = (j * ((long) this.f19126e)) / 8000000;
         int i = this.f19124c;
-        return this.f19123b + C9554k0.m29431b((j2 / ((long) i)) * ((long) i), 0, this.f19125d - ((long) i));
+        return this.f19123b + Util.m29431b((j2 / ((long) i)) * ((long) i), 0, this.f19125d - ((long) i));
     }
 
     /* renamed from: c */

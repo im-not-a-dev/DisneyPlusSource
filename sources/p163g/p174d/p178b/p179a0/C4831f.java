@@ -1,6 +1,6 @@
 package p163g.p174d.p178b.p179a0;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.d.b.a0.f */
 /* compiled from: BifSpec.kt */
@@ -48,7 +48,7 @@ public final class C4831f {
         if (this != obj) {
             if (obj instanceof C4831f) {
                 C4831f fVar = (C4831f) obj;
-                if (C12880j.m40224a((Object) this.f11989a, (Object) fVar.f11989a)) {
+                if (Intrinsics.areEqual((Object) this.f11989a, (Object) fVar.f11989a)) {
                     if (this.f11990b == fVar.f11990b) {
                         if (this.f11991c == fVar.f11991c) {
                             if (this.f11992d == fVar.f11992d) {

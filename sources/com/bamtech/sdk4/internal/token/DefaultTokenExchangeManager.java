@@ -11,7 +11,7 @@ import com.bamtech.sdk4.internal.token.TokenExchangeRequest.Refresh;
 import com.bamtech.sdk4.token.AccessContext;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
@@ -41,7 +41,7 @@ public final class DefaultTokenExchangeManager implements TokenExchangeManager {
     /* access modifiers changed from: private */
     public final Single<TransactionResult<AccessContext>> exchange(ServiceTransaction serviceTransaction, TokenExchangeRequest tokenExchangeRequest) {
         Single<TransactionResult<AccessContext>> g = this.client.exchange(serviceTransaction, tokenExchangeRequest, C13170i0.m40332a(C12907r.m40244a("{apiKey}", this.bootstrapConfiguration.getApiKey()))).mo30233g(DefaultTokenExchangeManager$exchange$1.INSTANCE).mo30227d((Consumer<? super T>) new DefaultTokenExchangeManager$exchange$2<Object>(this, serviceTransaction)).mo30233g(new DefaultTokenExchangeManager$exchange$3(serviceTransaction));
-        C12880j.m40222a((Object) g, "client.exchange(transact…on, it)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "client.exchange(transact…on, it)\n                }");
         return g;
     }
 
@@ -84,7 +84,7 @@ public final class DefaultTokenExchangeManager implements TokenExchangeManager {
             r7.<init>(r8, r1)
             goto L_0x006a
         L_0x0041:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             r7 = 0
             throw r7
         L_0x0046:
@@ -123,19 +123,19 @@ public final class DefaultTokenExchangeManager implements TokenExchangeManager {
 
     public Single<TransactionResult<AccessContext>> exchangeAccountToken(ServiceTransaction serviceTransaction, String str) {
         Single<TransactionResult<AccessContext>> a = this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultTokenExchangeManager$exchangeAccountToken$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultTokenExchangeManager$exchangeAccountToken$2<Object,Object>(this, serviceTransaction, str));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…      }\n                }");
         return a;
     }
 
     public Single<TransactionResult<AccessContext>> exchangeDeviceToken(ServiceTransaction serviceTransaction, String str) {
         Single<TransactionResult<AccessContext>> a = this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultTokenExchangeManager$exchangeDeviceToken$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultTokenExchangeManager$exchangeDeviceToken$2<Object,Object>(this, serviceTransaction, str));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…      }\n                }");
         return a;
     }
 
     public Single<TransactionResult<AccessContext>> exchangeExternalAccountToken(ServiceTransaction serviceTransaction, String str) {
         Single<TransactionResult<AccessContext>> a = this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultTokenExchangeManager$exchangeExternalAccountToken$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultTokenExchangeManager$exchangeExternalAccountToken$2<Object,Object>(this, serviceTransaction, str));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…      }\n                }");
         return a;
     }
 
@@ -146,13 +146,13 @@ public final class DefaultTokenExchangeManager implements TokenExchangeManager {
             if (refreshToken != null) {
                 Refresh refresh = new Refresh(refreshToken, null, this.platform, 2, null);
                 Single<TransactionResult<AccessContext>> b = exchange(serviceTransaction, refresh).mo30227d((Consumer<? super T>) new DefaultTokenExchangeManager$refreshToken$1<Object>(this, serviceTransaction)).mo30218b((Consumer<? super Throwable>) new DefaultTokenExchangeManager$refreshToken$2<Object>(this, serviceTransaction, internalSessionState));
-                C12880j.m40222a((Object) b, "exchange(transaction, To…nState)\n                }");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "exchange(transaction, To…nState)\n                }");
                 return b;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

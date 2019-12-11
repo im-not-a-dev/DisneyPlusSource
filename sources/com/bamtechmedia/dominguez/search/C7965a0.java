@@ -26,7 +26,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000h\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u0007\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\r\u0018\u00002\u00020\u0001:\u0002/0B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004JG\u0010\u0007\u001a\u00020\b2\b\b\u0001\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u00102\u000e\b\u0002\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\b0\u0013H\u0000¢\u0006\u0002\b\u0014J>\u0010\u0015\u001a\u00020\b2\u0006\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00172\b\b\u0002\u0010\u001a\u001a\u00020\u001b2\b\b\u0002\u0010\u001c\u001a\u00020\u001b2\b\b\u0002\u0010\u001d\u001a\u00020\u001eH\u0002J4\u0010\u001f\u001a\u00020\b2\u0006\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00172\b\b\u0002\u0010\u001a\u001a\u00020\u001b2\b\b\u0002\u0010\u001c\u001a\u00020\u001bH\u0002J<\u0010 \u001a\u00020!2\u0006\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00172\b\b\u0002\u0010\u001a\u001a\u00020\u001b2\b\b\u0002\u0010\u001c\u001a\u00020\u001b2\u0006\u0010\u001d\u001a\u00020\u001eH\u0002J\u001e\u0010\"\u001a\u00020\b2\u0006\u0010#\u001a\u00020$2\u0006\u0010%\u001a\u00020\u00172\u0006\u0010&\u001a\u00020\u0017J\b\u0010'\u001a\u00020\u001bH\u0002J\u0016\u0010(\u001a\u00020\b2\u0006\u0010%\u001a\u00020\u00172\u0006\u0010&\u001a\u00020\u0017J\u0010\u0010)\u001a\u00020\u001b2\u0006\u0010&\u001a\u00020\u0017H\u0002J\u0016\u0010*\u001a\u00020\b2\u0006\u0010%\u001a\u00020\u00172\u0006\u0010&\u001a\u00020\u0017J\u0018\u0010+\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\fH\u0002J,\u0010,\u001a\u00020\b2\u0006\u0010-\u001a\u00020\u00062\u0006\u0010&\u001a\u00020\u00172\b\b\u0002\u0010\u001d\u001a\u00020\u001e2\b\b\u0002\u0010.\u001a\u00020\u0017H\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000¨\u00061"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/search/SearchTvTransitionHelper;", "", "fragment", "Lcom/bamtechmedia/dominguez/search/SearchTvFragment;", "(Lcom/bamtechmedia/dominguez/search/SearchTvFragment;)V", "transitionState", "Lcom/bamtechmedia/dominguez/search/SearchTvTransitionHelper$TransitionState;", "animateTopMarginTo", "", "topMarginId", "", "resources", "Landroid/content/res/Resources;", "searchRootView", "Landroidx/constraintlayout/widget/ConstraintLayout;", "searchLayout", "Landroid/widget/LinearLayout;", "keyboard", "endAction", "Lkotlin/Function0;", "animateTopMarginTo$search_release", "animateViews", "showExploreLabel", "", "showSearchLayout", "showKeyboard", "recyclerViewY", "", "searchLayoutY", "searchDurations", "Lcom/bamtechmedia/dominguez/search/SearchTvTransitionHelper$SearchAnimationDurations;", "applyInstantViewUpdates", "generateAnimatorSet", "Landroid/animation/AnimatorSet;", "onCollectionTileFocusChange", "newFocus", "Landroid/view/View;", "isExploreCollection", "topMarginIsInitial", "recyclerViewTranslationY", "restoreState", "searchLayoutOffset", "setExploreCollection", "topKeyboardMargin", "transitionToState", "state", "force", "SearchAnimationDurations", "TransitionState", "search_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.search.a0 */
@@ -257,7 +257,7 @@ public final class C7965a0 {
         public final void onAnimationUpdate(ValueAnimator valueAnimator) {
             RecyclerView recyclerView = (RecyclerView) this.f17137a.f17129b._$_findCachedViewById(C8048n.recyclerView);
             if (recyclerView != null) {
-                C12880j.m40222a((Object) valueAnimator, "animator");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueAnimator, "animator");
                 Object animatedValue = valueAnimator.getAnimatedValue();
                 if (animatedValue != null) {
                     recyclerView.setTranslationY(((Float) animatedValue).floatValue());
@@ -284,7 +284,7 @@ public final class C7965a0 {
             String str = "null cannot be cast to non-null type kotlin.Float";
             String str2 = "animator";
             if (linearLayout != null) {
-                C12880j.m40222a((Object) valueAnimator, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueAnimator, str2);
                 Object animatedValue = valueAnimator.getAnimatedValue();
                 if (animatedValue != null) {
                     linearLayout.setTranslationY(((Float) animatedValue).floatValue());
@@ -294,7 +294,7 @@ public final class C7965a0 {
             }
             ImageView imageView = (ImageView) this.f17138a.f17129b._$_findCachedViewById(C8048n.microphoneImageView);
             if (imageView != null) {
-                C12880j.m40222a((Object) valueAnimator, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueAnimator, str2);
                 Object animatedValue2 = valueAnimator.getAnimatedValue();
                 if (animatedValue2 != null) {
                     imageView.setTranslationY(((Float) animatedValue2).floatValue());
@@ -347,29 +347,29 @@ public final class C7965a0 {
         String str2 = "fragment.exploreLabel";
         if (z) {
             TextView textView = (TextView) this.f17129b._$_findCachedViewById(C8048n.exploreLabel);
-            C12880j.m40222a((Object) textView, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, str2);
             valueAnimator = C5846m0.m18870a(textView, a, b, 0.0f, null, 12, null);
         } else {
             TextView textView2 = (TextView) this.f17129b._$_findCachedViewById(C8048n.exploreLabel);
-            C12880j.m40222a((Object) textView2, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView2, str2);
             valueAnimator = C5846m0.m18872b(textView2, a, 0, 0.0f, null, 14, null);
         }
         Animator animator = valueAnimator;
         String str3 = "fragment.keyboard";
         if (z3) {
             LinearLayout linearLayout = (LinearLayout) this.f17129b._$_findCachedViewById(C8048n.keyboard);
-            C12880j.m40222a((Object) linearLayout, str3);
+            Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, str3);
             valueAnimator2 = C5846m0.m18870a(linearLayout, a, b, 0.0f, null, 12, null);
         } else {
             LinearLayout linearLayout2 = (LinearLayout) this.f17129b._$_findCachedViewById(C8048n.keyboard);
-            C12880j.m40222a((Object) linearLayout2, str3);
+            Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout2, str3);
             valueAnimator2 = C5846m0.m18872b(linearLayout2, a, 0, 0.0f, null, 14, null);
         }
         Animator animator2 = valueAnimator2;
         String str4 = "fragment.searchLayout";
         if (z2) {
             LinearLayout linearLayout3 = (LinearLayout) this.f17129b._$_findCachedViewById(C8048n.searchLayout);
-            C12880j.m40222a((Object) linearLayout3, str4);
+            Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout3, str4);
             j = c;
             str = str4;
             valueAnimator3 = C5846m0.m18870a(linearLayout3, a, b, 0.0f, null, 12, null);
@@ -377,32 +377,32 @@ public final class C7965a0 {
             j = c;
             str = str4;
             LinearLayout linearLayout4 = (LinearLayout) this.f17129b._$_findCachedViewById(C8048n.searchLayout);
-            C12880j.m40222a((Object) linearLayout4, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout4, str);
             valueAnimator3 = C5846m0.m18872b(linearLayout4, a, 0, 0.0f, null, 14, null);
         }
         Animator animator3 = valueAnimator3;
         String str5 = "fragment.microphoneImageView";
         if (z2) {
             ImageView imageView = (ImageView) this.f17129b._$_findCachedViewById(C8048n.microphoneImageView);
-            C12880j.m40222a((Object) imageView, str5);
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, str5);
             valueAnimator4 = C5846m0.m18870a(imageView, a, b, 0.0f, null, 12, null);
         } else {
             ImageView imageView2 = (ImageView) this.f17129b._$_findCachedViewById(C8048n.microphoneImageView);
-            C12880j.m40222a((Object) imageView2, str5);
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView2, str5);
             valueAnimator4 = C5846m0.m18872b(imageView2, a, 0, 0.0f, null, 14, null);
         }
         RecyclerView recyclerView = (RecyclerView) this.f17129b._$_findCachedViewById(C8048n.recyclerView);
-        C12880j.m40222a((Object) recyclerView, "fragment.recyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "fragment.recyclerView");
         ValueAnimator ofFloat = ValueAnimator.ofFloat(new float[]{recyclerView.getTranslationY(), f});
         String str6 = "it";
-        C12880j.m40222a((Object) ofFloat, str6);
+        Intrinsics.checkReturnedValueIsNotNull((Object) ofFloat, str6);
         long j2 = j;
         ofFloat.setDuration(j2);
         ofFloat.addUpdateListener(new C7972d(this, j2));
         LinearLayout linearLayout5 = (LinearLayout) this.f17129b._$_findCachedViewById(C8048n.searchLayout);
-        C12880j.m40222a((Object) linearLayout5, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout5, str);
         ValueAnimator ofFloat2 = ValueAnimator.ofFloat(new float[]{linearLayout5.getTranslationY(), f2});
-        C12880j.m40222a((Object) ofFloat2, str6);
+        Intrinsics.checkReturnedValueIsNotNull((Object) ofFloat2, str6);
         ofFloat2.setDuration(j2);
         ofFloat2.addUpdateListener(new C7973e(this, j2));
         AnimatorSet animatorSet = new AnimatorSet();
@@ -443,21 +443,21 @@ public final class C7965a0 {
     /* renamed from: a */
     private final void m23225a(C7967b bVar, boolean z, C7966a aVar, boolean z2) {
         float f;
-        if (!C12880j.m40224a((Object) this.f17128a, (Object) bVar) || z2) {
+        if (!Intrinsics.areEqual((Object) this.f17128a, (Object) bVar) || z2) {
             this.f17128a = bVar;
             Context requireContext = this.f17129b.requireContext();
-            C12880j.m40222a((Object) requireContext, "fragment.requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "fragment.requireContext()");
             float a = C5837i.m18833a(requireContext, C8046l.padding_extra_large);
             if (bVar instanceof C7968a) {
                 C7968a aVar2 = (C7968a) bVar;
                 boolean a2 = aVar2.mo20942a();
                 if (aVar2.mo20942a()) {
                     TextView textView = (TextView) this.f17129b._$_findCachedViewById(C8048n.exploreLabel);
-                    C12880j.m40222a((Object) textView, "fragment.exploreLabel");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) textView, "fragment.exploreLabel");
                     f = (float) textView.getBottom();
                 } else {
                     LinearLayout linearLayout = (LinearLayout) this.f17129b._$_findCachedViewById(C8048n.keyboard);
-                    C12880j.m40222a((Object) linearLayout, "fragment.keyboard");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, "fragment.keyboard");
                     f = ((float) linearLayout.getBottom()) + a;
                 }
                 m23228a(a2, true, true, f, 0.0f, aVar);
@@ -473,10 +473,10 @@ public final class C7965a0 {
     private final float m23221a() {
         Context requireContext = this.f17129b.requireContext();
         String str = "fragment.requireContext()";
-        C12880j.m40222a((Object) requireContext, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, str);
         float a = C5837i.m18833a(requireContext, C8046l.step_1_tiles_top_margin);
         Context requireContext2 = this.f17129b.requireContext();
-        C12880j.m40222a((Object) requireContext2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext2, str);
         return a - C5837i.m18833a(requireContext2, C8046l.recyclerview_padding_top);
     }
 
@@ -486,7 +486,7 @@ public final class C7965a0 {
             return 0.0f;
         }
         Context requireContext = this.f17129b.requireContext();
-        C12880j.m40222a((Object) requireContext, "fragment.requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "fragment.requireContext()");
         return C5837i.m18833a(requireContext, C8046l.search_layout_margin_top_w_suggestions);
     }
 
@@ -503,31 +503,31 @@ public final class C7965a0 {
     private final void m23227a(boolean z, boolean z2, boolean z3, float f, float f2) {
         C8068y yVar = this.f17129b;
         TextView textView = (TextView) yVar._$_findCachedViewById(C8048n.exploreLabel);
-        C12880j.m40222a((Object) textView, "exploreLabel");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "exploreLabel");
         float f3 = 1.0f;
         textView.setAlpha(z ? 1.0f : 0.0f);
         LinearLayout linearLayout = (LinearLayout) yVar._$_findCachedViewById(C8048n.searchLayout);
         String str = "searchLayout";
-        C12880j.m40222a((Object) linearLayout, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, str);
         linearLayout.setAlpha(z2 ? 1.0f : 0.0f);
         LinearLayout linearLayout2 = (LinearLayout) yVar._$_findCachedViewById(C8048n.searchLayout);
-        C12880j.m40222a((Object) linearLayout2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout2, str);
         linearLayout2.setTranslationY(f2);
         ImageView imageView = (ImageView) yVar._$_findCachedViewById(C8048n.microphoneImageView);
         String str2 = "microphoneImageView";
-        C12880j.m40222a((Object) imageView, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, str2);
         imageView.setAlpha(z2 ? 1.0f : 0.0f);
         ImageView imageView2 = (ImageView) yVar._$_findCachedViewById(C8048n.microphoneImageView);
-        C12880j.m40222a((Object) imageView2, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView2, str2);
         imageView2.setTranslationY(f2);
         LinearLayout linearLayout3 = (LinearLayout) yVar._$_findCachedViewById(C8048n.keyboard);
-        C12880j.m40222a((Object) linearLayout3, "keyboard");
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout3, "keyboard");
         if (!z3) {
             f3 = 0.0f;
         }
         linearLayout3.setAlpha(f3);
         RecyclerView recyclerView = (RecyclerView) yVar._$_findCachedViewById(C8048n.recyclerView);
-        C12880j.m40222a((Object) recyclerView, "recyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "recyclerView");
         recyclerView.setTranslationY(f);
     }
 

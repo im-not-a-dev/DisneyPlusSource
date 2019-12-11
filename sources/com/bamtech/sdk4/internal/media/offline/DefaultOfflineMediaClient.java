@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.MaybeSource;
@@ -69,38 +69,38 @@ public final class DefaultOfflineMediaClient implements OfflineMediaClient {
 
     public Completable downloadBifThumbnail(ServiceTransaction serviceTransaction, Presentation presentation, File file, Map<String, String> map) {
         Completable a = Completable.m38154a((Throwable) Companion.create$default(InvalidStateException.Companion, serviceTransaction.getId(), "invalid-media-state", "online method called on offline instance", null, 8, null));
-        C12880j.m40222a((Object) a, "Completable.error(Invali…ed on offline instance\"))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.error(Invali…ed on offline instance\"))");
         return a;
     }
 
     public Maybe<List<BifThumbnailSet>> getBifThumbnails(ServiceTransaction serviceTransaction, MediaThumbnailLink mediaThumbnailLink, ThumbnailResolution thumbnailResolution, Map<String, String> map) {
         Maybe<List<BifThumbnailSet>> a = Maybe.m38255a((Throwable) Companion.create$default(InvalidStateException.Companion, serviceTransaction.getId(), "invalid-media-state", "online method called on offline instance", null, 8, null));
-        C12880j.m40222a((Object) a, "Maybe.error(InvalidState…ed on offline instance\"))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Maybe.error(InvalidState…ed on offline instance\"))");
         return a;
     }
 
     public Single<String> getLocalBifThumbnail(ServiceTransaction serviceTransaction, Context context, Presentation presentation) {
         Single<String> d = this.mediaStorage.get(serviceTransaction, C12833x.m40163b(C12833x.m40139a((String) C13199w.m40589f(presentation.getPaths()), "file://", (String) null, 2, (Object) null), ".", (String) null, 2, (Object) null)).mo30128d(new DefaultOfflineMediaClient$getLocalBifThumbnail$1(context, presentation));
-        C12880j.m40222a((Object) d, "mediaStorage.get(transac…)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "mediaStorage.get(transac…)\n            }\n        }");
         return d;
     }
 
     public Single<List<BifThumbnailSet>> getLocalBifThumbnailSets(ServiceTransaction serviceTransaction, Context context, MediaItem mediaItem) {
         CachedMediaItem cachedMediaItem = (CachedMediaItem) mediaItem;
         Single<List<BifThumbnailSet>> g = this.mediaStorage.get(serviceTransaction, mediaItem.getDescriptor().getCachedMediaId()).mo30131f(DefaultOfflineMediaClient$getLocalBifThumbnailSets$1.INSTANCE).mo30125c((Function<? super T, ? extends ObservableSource<? extends R>>) new DefaultOfflineMediaClient$getLocalBifThumbnailSets$2<Object,Object>(context)).mo30201k().mo30233g(DefaultOfflineMediaClient$getLocalBifThumbnailSets$3.INSTANCE);
-        C12880j.m40222a((Object) g, "mediaStorage.get(transac…oList()\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "mediaStorage.get(transac…oList()\n                }");
         return g;
     }
 
     public Maybe<MediaItem> getMediaItem(ServiceTransaction serviceTransaction, MediaDescriptor mediaDescriptor, PlaybackContext playbackContext) {
         Maybe<MediaItem> b = this.mediaStorage.get(serviceTransaction, mediaDescriptor.getCachedMediaId()).mo30131f(new DefaultOfflineMediaClient$getMediaItem$1(this, serviceTransaction)).mo30103a((Function<? super T, ? extends MaybeSource<? extends R>>) new DefaultOfflineMediaClient$getMediaItem$2<Object,Object>(this)).mo30131f(new DefaultOfflineMediaClient$getMediaItem$3(this, serviceTransaction, mediaDescriptor)).mo30123c((Consumer<? super T>) new DefaultOfflineMediaClient$getMediaItem$4<Object>(serviceTransaction)).mo30115b((MaybeSource<? extends T>) Maybe.m38256a((Callable<? extends MaybeSource<? extends T>>) new DefaultOfflineMediaClient$getMediaItem$5<Object>(serviceTransaction)));
-        C12880j.m40222a((Object) b, "mediaStorage.get(transac…tem>()\n                })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "mediaStorage.get(transac…tem>()\n                })");
         return b;
     }
 
     public Maybe<Playhead> getPlayhead(ServiceTransaction serviceTransaction, Map<String, String> map, String str) {
         Maybe<Playhead> h = Maybe.m38259h();
-        C12880j.m40222a((Object) h, "Maybe.empty()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Maybe.empty()");
         return h;
     }
 }

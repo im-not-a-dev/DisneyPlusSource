@@ -21,7 +21,7 @@ import com.bamtech.sdk4.internal.media.offline.StorageStatus.SpaceLow;
 import com.bamtech.sdk4.internal.media.offline.StorageStatus.SpaceOk;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p129n.C4063a;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\u0018\u0000 \u00132\u00020\u0001:\u0001\u0013B\u000f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\n\u0010\u0007\u001a\u0004\u0018\u00010\bH\u0016J\n\u0010\t\u001a\u0004\u0018\u00010\nH\u0016J\n\u0010\u000b\u001a\u0004\u0018\u00010\fH\u0016J\n\u0010\r\u001a\u0004\u0018\u00010\u000eH\u0016J\n\u0010\u000f\u001a\u0004\u0018\u00010\u0010H\u0016J\b\u0010\u0011\u001a\u00020\u0012H\u0002R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0014"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/media/offline/DefaultConditionReporter;", "Lcom/bamtech/sdk4/internal/media/offline/ConditionReporter;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "getContext", "()Landroid/content/Context;", "getBatteryChargingStatus", "Lcom/bamtech/sdk4/internal/media/offline/BatteryChargingStatus;", "getBatteryNotLowStatus", "Lcom/bamtech/sdk4/internal/media/offline/BatteryNotLowStatus;", "getGroupStatus", "Lcom/bamtech/sdk4/internal/media/offline/GroupStatus;", "getNetworkStatus", "Lcom/bamtech/sdk4/internal/media/offline/NetworkStatus;", "getStorageStatus", "Lcom/bamtech/sdk4/internal/media/offline/StorageStatus;", "isActiveNetworkValidated", "", "Companion", "plugin-offline-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -126,7 +126,7 @@ public final class DefaultConditionReporter implements ConditionReporter {
             if (systemService != null) {
                 ConnectivityManager connectivityManager = (ConnectivityManager) systemService;
                 NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-                C12880j.m40222a((Object) activeNetworkInfo, "info");
+                Intrinsics.checkReturnedValueIsNotNull((Object) activeNetworkInfo, "info");
                 return new NetworkStatus(activeNetworkInfo.isConnected(), isActiveNetworkValidated(), C4063a.m13968a(connectivityManager), !activeNetworkInfo.isRoaming());
             }
             throw new C13142s("null cannot be cast to non-null type android.net.ConnectivityManager");

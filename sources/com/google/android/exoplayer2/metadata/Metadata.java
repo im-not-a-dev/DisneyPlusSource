@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 import java.util.List;
 
@@ -105,7 +105,7 @@ public final class Metadata implements Parcelable {
         C8737b[] bVarArr2 = this.f18555c;
         C8737b[] bVarArr3 = (C8737b[]) Arrays.copyOf(bVarArr2, bVarArr2.length + bVarArr.length);
         System.arraycopy(bVarArr, 0, bVarArr3, this.f18555c.length, bVarArr.length);
-        C9554k0.m29419a((T[]) bVarArr3);
+        Util.castNonNullTypeArray((T[]) bVarArr3);
         return new Metadata(bVarArr3);
     }
 

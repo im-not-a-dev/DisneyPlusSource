@@ -4,7 +4,7 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p587i0.C12775h;
 
@@ -19,7 +19,7 @@ final class ReflectClassUtilKt$parameterizedTypeArguments$2 extends C12881k impl
 
     public final C12775h<Type> invoke(ParameterizedType parameterizedType) {
         Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
-        C12880j.m40222a((Object) actualTypeArguments, "it.actualTypeArguments");
+        Intrinsics.checkReturnedValueIsNotNull((Object) actualTypeArguments, "it.actualTypeArguments");
         return C13174k.m40401c((Object[]) actualTypeArguments);
     }
 }

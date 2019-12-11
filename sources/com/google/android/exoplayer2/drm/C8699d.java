@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.drm;
 
 import android.media.MediaDrm;
 import android.media.MediaDrm.OnEventListener;
-import com.google.android.exoplayer2.drm.ExoMediaDrm.C8695a;
+import com.google.android.exoplayer2.drm.ExoMediaDrm.OnKeyStatusChangeListener;
 
 /* renamed from: com.google.android.exoplayer2.drm.d */
 /* compiled from: lambda */
@@ -12,9 +12,9 @@ public final /* synthetic */ class C8699d implements OnEventListener {
     private final /* synthetic */ FrameworkMediaDrm f18478a;
 
     /* renamed from: b */
-    private final /* synthetic */ C8695a f18479b;
+    private final /* synthetic */ OnKeyStatusChangeListener f18479b;
 
-    public /* synthetic */ C8699d(FrameworkMediaDrm frameworkMediaDrm, C8695a aVar) {
+    public /* synthetic */ C8699d(FrameworkMediaDrm frameworkMediaDrm, OnKeyStatusChangeListener aVar) {
         this.f18478a = frameworkMediaDrm;
         this.f18479b = aVar;
     }

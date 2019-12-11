@@ -5,8 +5,8 @@ import com.google.android.exoplayer2.metadata.C8739b;
 import com.google.android.exoplayer2.metadata.C8742d;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.UnsupportedEncodingException;
@@ -21,7 +21,7 @@ import java.util.Locale;
 public final class C8770h implements C8739b {
 
     /* renamed from: b */
-    public static final int f18621b = C9554k0.m29428b("ID3");
+    public static final int f18621b = Util.m29428b("ID3");
 
     /* renamed from: a */
     private final C8771a f18622a;
@@ -189,7 +189,7 @@ public final class C8770h implements C8739b {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Failed to validate ID3 tag with majorVersion=");
                 sb.append(a.f18623a);
-                C9563q.m29500d("Id3Decoder", sb.toString());
+                Log.m29500d("Id3Decoder", sb.toString());
                 return null;
             }
             z = true;
@@ -246,7 +246,7 @@ public final class C8770h implements C8739b {
     private static C8772b m25398a(C9572w wVar) {
         String str = "Id3Decoder";
         if (wVar.mo24679a() < 10) {
-            C9563q.m29500d(str, "Data too short to be an ID3 tag");
+            Log.m29500d(str, "Data too short to be an ID3 tag");
             return null;
         }
         int y = wVar.mo24714y();
@@ -254,7 +254,7 @@ public final class C8770h implements C8739b {
             StringBuilder sb = new StringBuilder();
             sb.append("Unexpected first three bytes of ID3 tag header: ");
             sb.append(y);
-            C9563q.m29500d(str, sb.toString());
+            Log.m29500d(str, sb.toString());
             return null;
         }
         int v = wVar.mo24711v();
@@ -264,7 +264,7 @@ public final class C8770h implements C8739b {
         int u = wVar.mo24710u();
         if (v == 2) {
             if ((v2 & 64) != 0) {
-                C9563q.m29500d(str, "Skipped ID3 tag with majorVersion=2 and undefined compression scheme");
+                Log.m29500d(str, "Skipped ID3 tag with majorVersion=2 and undefined compression scheme");
                 return null;
             }
         } else if (v == 3) {
@@ -286,7 +286,7 @@ public final class C8770h implements C8739b {
             StringBuilder sb2 = new StringBuilder();
             sb2.append("Skipped ID3 tag with unsupported majorVersion=");
             sb2.append(v);
-            C9563q.m29500d(str, sb2.toString());
+            Log.m29500d(str, sb2.toString());
             return null;
         }
         if (v >= 4 || (v2 & 128) == 0) {
@@ -565,7 +565,7 @@ public final class C8770h implements C8739b {
             java.lang.String r4 = "Id3Decoder"
             if (r5 <= r1) goto L_0x0082
             java.lang.String r0 = "Frame size exceeds remaining tag data"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r4, r0)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r4, r0)
             int r0 = r20.mo24690d()
             r7.mo24693e(r0)
             return r16
@@ -821,13 +821,13 @@ public final class C8770h implements C8739b {
             r2.append(r0)     // Catch:{ UnsupportedEncodingException -> 0x021f }
             r2.append(r15)     // Catch:{ UnsupportedEncodingException -> 0x021f }
             java.lang.String r0 = r2.toString()     // Catch:{ UnsupportedEncodingException -> 0x021f }
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r12, r0)     // Catch:{ UnsupportedEncodingException -> 0x021f }
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r12, r0)     // Catch:{ UnsupportedEncodingException -> 0x021f }
         L_0x021b:
             r7.mo24693e(r14)
             return r1
         L_0x021f:
             java.lang.String r0 = "Unsupported character encoding"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r12, r0)     // Catch:{ all -> 0x012f }
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r12, r0)     // Catch:{ all -> 0x012f }
             r7.mo24693e(r14)
             return r16
         L_0x0228:
@@ -835,7 +835,7 @@ public final class C8770h implements C8739b {
             throw r0
         L_0x022c:
             java.lang.String r0 = "Skipping unsupported compressed or encrypted frame"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r12, r0)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r12, r0)
             r7.mo24693e(r14)
             return r16
         */
@@ -856,7 +856,7 @@ public final class C8770h implements C8739b {
         if (i2 == 2) {
             StringBuilder sb = new StringBuilder();
             sb.append(str2);
-            sb.append(C9554k0.m29457k(new String(bArr, 0, 3, str3)));
+            sb.append(Util.m29457k(new String(bArr, 0, 3, str3)));
             str = sb.toString();
             if ("image/jpg".equals(str)) {
                 str = "image/jpeg";
@@ -864,7 +864,7 @@ public final class C8770h implements C8739b {
             i3 = 2;
         } else {
             i3 = m25404b(bArr, 0);
-            String k = C9554k0.m29457k(new String(bArr, 0, i3, str3));
+            String k = Util.m29457k(new String(bArr, 0, i3, str3));
             if (k.indexOf(47) == -1) {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(str2);
@@ -944,7 +944,7 @@ public final class C8770h implements C8739b {
     /* renamed from: a */
     private static byte[] m25403a(byte[] bArr, int i, int i2) {
         if (i2 <= i) {
-            return C9554k0.f22286f;
+            return Util.EMPTY_BYTE_ARRAY;
         }
         return Arrays.copyOfRange(bArr, i, i2);
     }

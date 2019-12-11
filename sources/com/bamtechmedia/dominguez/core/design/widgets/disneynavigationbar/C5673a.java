@@ -25,7 +25,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p122j.C4025a;
 import p096e.p121h.p135s.C4121a0;
@@ -111,7 +111,7 @@ public abstract class C5673a extends ConstraintLayout {
             if (this != obj) {
                 if (obj instanceof C5675b) {
                     C5675b bVar = (C5675b) obj;
-                    if (!(this.f13323a == bVar.f13323a) || !C12880j.m40224a((Object) this.f13324b, (Object) bVar.f13324b) || !C12880j.m40224a((Object) this.f13325c, (Object) bVar.f13325c) || !C12880j.m40224a((Object) this.f13326d, (Object) bVar.f13326d) || !C12880j.m40224a((Object) this.f13327e, (Object) bVar.f13327e) || !C12880j.m40224a((Object) this.f13328f, (Object) bVar.f13328f)) {
+                    if (!(this.f13323a == bVar.f13323a) || !Intrinsics.areEqual((Object) this.f13324b, (Object) bVar.f13324b) || !Intrinsics.areEqual((Object) this.f13325c, (Object) bVar.f13325c) || !Intrinsics.areEqual((Object) this.f13326d, (Object) bVar.f13326d) || !Intrinsics.areEqual((Object) this.f13327e, (Object) bVar.f13327e) || !Intrinsics.areEqual((Object) this.f13328f, (Object) bVar.f13328f)) {
                         return false;
                     }
                 }
@@ -250,14 +250,14 @@ public abstract class C5673a extends ConstraintLayout {
     /* renamed from: b */
     private final View m18535b(C5675b bVar) {
         Context context = getContext();
-        C12880j.m40222a((Object) context, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
         View inflate = LayoutInflater.from(getContext()).inflate(C5837i.m18839b(context, C3832b.navBarProfileLayout, null, false, 6, null), (LinearLayout) mo2145c(C3838h.iconLayout), false);
         inflate.setTag(Integer.valueOf(bVar.mo17507c()));
         inflate.setTag(C3838h.focusHelperGlobalNavItem, Boolean.valueOf(true));
         inflate.setContentDescription(bVar.mo17505a());
         inflate.setOnClickListener(new C5677d(this, bVar));
         setPlatformRelatedProfileItem(inflate);
-        C12880j.m40222a((Object) inflate, "LayoutInflater.from(cont…edProfileItem()\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "LayoutInflater.from(cont…edProfileItem()\n        }");
         return inflate;
     }
 
@@ -313,7 +313,7 @@ public abstract class C5673a extends ConstraintLayout {
     public final void setSelectedMenuItem(int i) {
         if (i != this.f13318s0) {
             LinearLayout linearLayout = (LinearLayout) mo2145c(C3838h.iconLayout);
-            C12880j.m40222a((Object) linearLayout, "iconLayout");
+            Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, "iconLayout");
             for (View view : C4121a0.m14117a(linearLayout)) {
                 Object tag = view.getTag();
                 boolean z = (tag instanceof Integer) && i == ((Integer) tag).intValue();
@@ -346,21 +346,21 @@ public abstract class C5673a extends ConstraintLayout {
     /* renamed from: a */
     public final void mo17499a(String str, Function1<? super ImageView, C13145v> function1) {
         TextView textView = (TextView) mo2145c(C3838h.profileName);
-        if (!C12880j.m40224a((Object) str, (Object) textView != null ? textView.getText() : null)) {
+        if (!Intrinsics.areEqual((Object) str, (Object) textView != null ? textView.getText() : null)) {
             TextView textView2 = (TextView) mo2145c(C3838h.profileName);
             if (textView2 != null) {
                 textView2.setText(str);
             }
         }
         ImageView imageView = (ImageView) mo2145c(C3838h.profileImage);
-        C12880j.m40222a((Object) imageView, "profileImage");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "profileImage");
         function1.invoke(imageView);
     }
 
     /* renamed from: a */
     private final View m18533a(C5675b bVar) {
         Context context = getContext();
-        C12880j.m40222a((Object) context, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
         View inflate = LayoutInflater.from(getContext()).inflate(C5837i.m18839b(context, C3832b.navBarItemLayout, null, false, 6, null), (LinearLayout) mo2145c(C3838h.iconLayout), false);
         inflate.setTag(Integer.valueOf(bVar.mo17507c()));
         inflate.setTag(C3838h.focusHelperGlobalNavItem, Boolean.valueOf(true));
@@ -374,7 +374,7 @@ public abstract class C5673a extends ConstraintLayout {
             textView.setText(bVar.mo17509e());
         }
         mo17491a(inflate, (Function0<C13145v>) new C5676c<C13145v>(this, bVar));
-        C12880j.m40222a((Object) inflate, "LayoutInflater.from(cont…Item(item.id) }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "LayoutInflater.from(cont…Item(item.id) }\n        }");
         return inflate;
     }
 

@@ -7,7 +7,7 @@ import java.util.Locale;
 import kotlin.C12907r;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.ReadableInstant;
 import org.joda.time.format.DateTimeFormat;
@@ -41,7 +41,7 @@ public final class C5998r {
     static {
         new C5999a(null);
         DateTimeFormatter mediumDate = DateTimeFormat.mediumDate();
-        C12880j.m40222a((Object) mediumDate, "DateTimeFormat.mediumDate()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) mediumDate, "DateTimeFormat.mediumDate()");
         f13840c = mediumDate;
     }
 
@@ -75,10 +75,10 @@ public final class C5998r {
     private final String m19216d(PromoLabel promoLabel) {
         String b0 = promoLabel.mo12814b0();
         Locale locale = Locale.US;
-        C12880j.m40222a((Object) locale, "Locale.US");
+        Intrinsics.checkReturnedValueIsNotNull((Object) locale, "Locale.US");
         if (b0 != null) {
             String lowerCase = b0.toLowerCase(locale);
-            C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase(locale)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase(locale)");
             return lowerCase;
         }
         throw new C13142s("null cannot be cast to non-null type java.lang.String");
@@ -91,10 +91,10 @@ public final class C5998r {
             return null;
         }
         Locale locale = Locale.US;
-        C12880j.m40222a((Object) locale, "Locale.US");
+        Intrinsics.checkReturnedValueIsNotNull((Object) locale, "Locale.US");
         if (Y != null) {
             String lowerCase = Y.toLowerCase(locale);
-            C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase(locale)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase(locale)");
             return lowerCase;
         }
         throw new C13142s("null cannot be cast to non-null type java.lang.String");

@@ -12,7 +12,7 @@ import com.bamtech.sdk4.plugin.PluginRegistry;
 import com.bamtech.sdk4.session.ReauthorizationHandlerRegistry;
 import com.bamtech.sdk4.session.RenewSessionTransformers;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.OkHttpClient.Builder;
 import p520io.reactivex.subjects.PublishSubject;
 
@@ -53,7 +53,7 @@ public final class DefaultExtensionModule {
 
     public final ServiceTransaction serviceTransaction(PluginRegistry pluginRegistry) {
         Object obj = ((TransactionProviderExtension) pluginRegistry.getExtension(TransactionProviderExtension.class)).getInstance().get();
-        C12880j.m40222a(obj, "registry.getExtension<Tr…tension>().instance.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "registry.getExtension<Tr…tension>().instance.get()");
         return (ServiceTransaction) obj;
     }
 

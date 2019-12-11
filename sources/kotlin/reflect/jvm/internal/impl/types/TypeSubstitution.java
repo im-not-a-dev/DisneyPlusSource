@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 
 /* compiled from: TypeSubstitution.kt */
@@ -28,7 +28,7 @@ public abstract class TypeSubstitution {
 
     public final TypeSubstitutor buildSubstitutor() {
         TypeSubstitutor create = TypeSubstitutor.create(this);
-        C12880j.m40222a((Object) create, "TypeSubstitutor.create(this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) create, "TypeSubstitutor.create(this)");
         return create;
     }
 

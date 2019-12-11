@@ -28,8 +28,8 @@ import com.google.android.exoplayer2.p381t0.C9275d.C9278c;
 import com.google.android.exoplayer2.p381t0.C9284e;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9547i0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.p394w0.C9603r.C9604a;
 import java.nio.ByteBuffer;
@@ -223,7 +223,7 @@ public class C9593m extends C9271b {
     /* renamed from: H */
     private void m29626H() {
         this.f22429v1 = false;
-        if (C9554k0.f22281a >= 23 && this.f22409N1) {
+        if (Util.SDK_INT >= 23 && this.f22409N1) {
             MediaCodec z = mo24026z();
             if (z != null) {
                 this.f22411P1 = new C9596c(z);
@@ -241,7 +241,7 @@ public class C9593m extends C9271b {
 
     /* renamed from: J */
     private static boolean m29628J() {
-        return "NVIDIA".equals(C9554k0.f22283c);
+        return "NVIDIA".equals(Util.MANUFACTURER);
     }
 
     /* renamed from: K */
@@ -606,7 +606,7 @@ public class C9593m extends C9271b {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Too many stream changes, so dropping offset: ");
                 sb.append(this.f22422o1[this.f22414S1 - 1]);
-                C9563q.m29500d("MediaCodecVideoRenderer", sb.toString());
+                Log.m29500d("MediaCodecVideoRenderer", sb.toString());
             } else {
                 this.f22414S1 = i + 1;
             }
@@ -620,7 +620,7 @@ public class C9593m extends C9271b {
 
     /* renamed from: b */
     private boolean m29642b(C9270a aVar) {
-        return C9554k0.f22281a >= 23 && !this.f22409N1 && !mo24759a(aVar.f21082a) && (!aVar.f21087f || C9589k.m29620b(this.f22416i1));
+        return Util.SDK_INT >= 23 && !this.f22409N1 && !mo24759a(aVar.f21082a) && (!aVar.f21087f || C9589k.m29620b(this.f22416i1));
     }
 
     /* renamed from: b */
@@ -691,7 +691,7 @@ public class C9593m extends C9271b {
             int d = mo22845d();
             MediaCodec z = mo24026z();
             if (z != null) {
-                if (C9554k0.f22281a < 23 || surface == null || this.f22425r1) {
+                if (Util.SDK_INT < 23 || surface == null || this.f22425r1) {
                     mo24021E();
                     mo24020D();
                 } else {
@@ -734,7 +734,7 @@ public class C9593m extends C9271b {
             this.f22426s1 = this.f22427t1;
         }
         mediaCodec.configure(a, this.f22426s1, mediaCrypto, 0);
-        if (C9554k0.f22281a >= 23 && this.f22409N1) {
+        if (Util.SDK_INT >= 23 && this.f22409N1) {
             this.f22411P1 = new C9596c(mediaCodec);
         }
     }
@@ -780,7 +780,7 @@ public class C9593m extends C9271b {
     public void mo23184a(C8879e eVar) {
         this.f22397B1++;
         this.f22412Q1 = Math.max(eVar.f19024W, this.f22412Q1);
-        if (C9554k0.f22281a < 23 && this.f22409N1) {
+        if (Util.SDK_INT < 23 && this.f22409N1) {
             mo24765e(eVar.f19024W);
         }
     }
@@ -827,7 +827,7 @@ public class C9593m extends C9271b {
                 if (!this.f22429v1 || (z3 && mo24762b(j7, elapsedRealtime - this.f22398C1))) {
                     long nanoTime = System.nanoTime();
                     m29636a(j6, nanoTime, format);
-                    if (C9554k0.f22281a >= 21) {
+                    if (Util.SDK_INT >= 21) {
                         mo24761b(mediaCodec, i, j6, nanoTime);
                     } else {
                         mo24760b(mediaCodec2, i3, j6);
@@ -847,7 +847,7 @@ public class C9593m extends C9271b {
                         mo24756a(mediaCodec2, i3, j6);
                         return true;
                     }
-                    if (C9554k0.f22281a >= 21) {
+                    if (Util.SDK_INT >= 21) {
                         if (j9 < 50000) {
                             m29636a(j6, a, format);
                             mo24761b(mediaCodec, i, j6, a);
@@ -885,7 +885,7 @@ public class C9593m extends C9271b {
         this.f22401F1 = i;
         this.f22402G1 = i2;
         this.f22404I1 = this.f22400E1;
-        if (C9554k0.f22281a >= 21) {
+        if (Util.SDK_INT >= 21) {
             int i3 = this.f22399D1;
             if (i3 == 90 || i3 == 270) {
                 int i4 = this.f22401F1;
@@ -969,7 +969,7 @@ public class C9593m extends C9271b {
         mediaFormat.setInteger("max-width", bVar.f22434a);
         mediaFormat.setInteger("max-height", bVar.f22435b);
         C9284e.m28165a(mediaFormat, "max-input-size", bVar.f22436c);
-        if (C9554k0.f22281a >= 23) {
+        if (Util.SDK_INT >= 23) {
             mediaFormat.setInteger("priority", 0);
             if (f != -1.0f) {
                 mediaFormat.setFloat("operating-rate", f);
@@ -1020,7 +1020,7 @@ public class C9593m extends C9271b {
             sb.append(str);
             sb.append(i3);
             String str2 = "MediaCodecVideoRenderer";
-            C9563q.m29500d(str2, sb.toString());
+            Log.m29500d(str2, sb.toString());
             Point a2 = m29635a(aVar, format);
             if (a2 != null) {
                 i5 = Math.max(i5, a2.x);
@@ -1031,7 +1031,7 @@ public class C9593m extends C9271b {
                 sb2.append(i5);
                 sb2.append(str);
                 sb2.append(i3);
-                C9563q.m29500d(str2, sb2.toString());
+                Log.m29500d(str2, sb2.toString());
             }
         }
         return new C9595b(i5, i3, i4);
@@ -1049,7 +1049,7 @@ public class C9593m extends C9271b {
             if (i3 <= i || i4 <= i2) {
                 break;
             }
-            if (C9554k0.f22281a >= 21) {
+            if (Util.SDK_INT >= 21) {
                 int i5 = z ? i4 : i3;
                 if (!z) {
                     i3 = i4;
@@ -1060,8 +1060,8 @@ public class C9593m extends C9271b {
                 }
             } else {
                 try {
-                    int a2 = C9554k0.m29381a(i3, 16) * 16;
-                    int a3 = C9554k0.m29381a(i4, 16) * 16;
+                    int a2 = Util.m29381a(i3, 16) * 16;
+                    int a3 = Util.m29381a(i4, 16) * 16;
                     if (a2 * a3 <= C9275d.m28136b()) {
                         int i6 = z ? a3 : a2;
                         if (!z) {
@@ -1155,19 +1155,19 @@ public class C9593m extends C9271b {
             int r9 = r9 * r10
             goto L_0x00a3
         L_0x0061:
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "BRAVIA 4K 2015"
             boolean r8 = r1.equals(r8)
             if (r8 != 0) goto L_0x009f
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.C9554k0.f22283c
+            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
             java.lang.String r1 = "Amazon"
             boolean r8 = r1.equals(r8)
             if (r8 == 0) goto L_0x008e
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "KFSOWI"
             boolean r8 = r1.equals(r8)
             if (r8 != 0) goto L_0x009f
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "AFTS"
             boolean r8 = r1.equals(r8)
             if (r8 == 0) goto L_0x008e
@@ -1176,8 +1176,8 @@ public class C9593m extends C9271b {
             goto L_0x009f
         L_0x008e:
             r7 = 16
-            int r8 = com.google.android.exoplayer2.p393v0.C9554k0.m29381a(r9, r7)
-            int r9 = com.google.android.exoplayer2.p393v0.C9554k0.m29381a(r10, r7)
+            int r8 = com.google.android.exoplayer2.p393v0.Util.m29381a(r9, r7)
+            int r9 = com.google.android.exoplayer2.p393v0.Util.m29381a(r10, r7)
             int r8 = r8 * r9
             int r8 = r8 * 16
             int r9 = r8 * 16
@@ -1337,7 +1337,7 @@ public class C9593m extends C9271b {
         f22395W1 = true;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:400:0x0614, code lost:
-        r1 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d;
+        r1 = com.google.android.exoplayer2.p393v0.Util.MODEL;
         r2 = r1.hashCode();
      */
     /* JADX WARNING: Code restructure failed: missing block: B:401:0x061d, code lost:
@@ -1382,27 +1382,27 @@ public class C9593m extends C9271b {
             monitor-enter(r7)
             boolean r1 = f22394V1     // Catch:{ all -> 0x0646 }
             if (r1 != 0) goto L_0x0642
-            int r1 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a     // Catch:{ all -> 0x0646 }
+            int r1 = com.google.android.exoplayer2.p393v0.Util.SDK_INT     // Catch:{ all -> 0x0646 }
             r2 = 27
             r3 = 1
             if (r1 > r2) goto L_0x0030
             java.lang.String r1 = "dangal"
-            java.lang.String r4 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b     // Catch:{ all -> 0x0646 }
+            java.lang.String r4 = com.google.android.exoplayer2.p393v0.Util.DEVICE     // Catch:{ all -> 0x0646 }
             boolean r1 = r1.equals(r4)     // Catch:{ all -> 0x0646 }
             if (r1 != 0) goto L_0x002c
             java.lang.String r1 = "HWEML"
-            java.lang.String r4 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b     // Catch:{ all -> 0x0646 }
+            java.lang.String r4 = com.google.android.exoplayer2.p393v0.Util.DEVICE     // Catch:{ all -> 0x0646 }
             boolean r1 = r1.equals(r4)     // Catch:{ all -> 0x0646 }
             if (r1 == 0) goto L_0x0030
         L_0x002c:
             f22395W1 = r3     // Catch:{ all -> 0x0646 }
             goto L_0x0640
         L_0x0030:
-            int r1 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a     // Catch:{ all -> 0x0646 }
+            int r1 = com.google.android.exoplayer2.p393v0.Util.SDK_INT     // Catch:{ all -> 0x0646 }
             if (r1 < r2) goto L_0x0036
             goto L_0x0640
         L_0x0036:
-            java.lang.String r1 = com.google.android.exoplayer2.p393v0.C9554k0.f22282b     // Catch:{ all -> 0x0646 }
+            java.lang.String r1 = com.google.android.exoplayer2.p393v0.Util.DEVICE     // Catch:{ all -> 0x0646 }
             int r4 = r1.hashCode()     // Catch:{ all -> 0x0646 }
             r5 = -1
             switch(r4) {
@@ -2421,7 +2421,7 @@ public class C9593m extends C9271b {
         L_0x0612:
             f22395W1 = r3     // Catch:{ all -> 0x0646 }
         L_0x0614:
-            java.lang.String r1 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d     // Catch:{ all -> 0x0646 }
+            java.lang.String r1 = com.google.android.exoplayer2.p393v0.Util.MODEL     // Catch:{ all -> 0x0646 }
             int r2 = r1.hashCode()     // Catch:{ all -> 0x0646 }
             r4 = 2006354(0x1e9d52, float:2.811501E-39)
             if (r2 == r4) goto L_0x062f

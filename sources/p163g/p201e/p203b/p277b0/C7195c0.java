@@ -31,7 +31,7 @@ import javax.inject.Provider;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -46,7 +46,7 @@ import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.p525e0.C11934b;
 import p551j.p552a.C12589b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000d\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0002\b\u0007\u0018\u0000 )2\u00020\u0001:\u0001)BO\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\f\u0010\b\u001a\b\u0012\u0004\u0012\u00020\n0\t\u0012\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\f0\t\u0012\b\b\u0001\u0010\r\u001a\u00020\u000e\u0012\b\b\u0001\u0010\u000f\u001a\u00020\u0010¢\u0006\u0002\u0010\u0011J\b\u0010'\u001a\u00020(H\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u0017\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00140\u00138F¢\u0006\u0006\u001a\u0004\b\u0015\u0010\u0016R\u0011\u0010\u000f\u001a\u00020\u0010¢\u0006\b\n\u0000\u001a\u0004\b\u0017\u0010\u0018R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\b\u001a\b\u0012\u0004\u0012\u00020\n0\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u001aX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\f0\tX\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u001b\u001a\u00020\u001c¢\u0006\b\n\u0000\u001a\u0004\b\u001d\u0010\u001eR\u001b\u0010\u001f\u001a\u00020 8FX\u0002¢\u0006\f\n\u0004\b#\u0010$\u001a\u0004\b!\u0010\"R\u0017\u0010%\u001a\b\u0012\u0004\u0012\u00020 0\u0013¢\u0006\b\n\u0000\u001a\u0004\b&\u0010\u0016¨\u0006*"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/sdk/SdkSessionProvider;", "Lcom/bamtechmedia/dominguez/sdk/SdkInitBlocker;", "application", "Landroid/app/Application;", "buildInfo", "Lcom/bamtechmedia/dominguez/core/BuildInfo;", "devConfig", "Lcom/bamtechmedia/dominguez/config/DevConfig;", "graphQlResponseConverter", "Ljavax/inject/Provider;", "Lcom/bamtechmedia/dominguez/sdk/MoshiGraphQlResponseConverter;", "mediaCapabilitiesProvider", "Lcom/bamtech/sdk4/media/MediaCapabilitiesProvider;", "io", "Lio/reactivex/Scheduler;", "debugPreferences", "Landroid/content/SharedPreferences;", "(Landroid/app/Application;Lcom/bamtechmedia/dominguez/core/BuildInfo;Lcom/bamtechmedia/dominguez/config/DevConfig;Ljavax/inject/Provider;Ljavax/inject/Provider;Lio/reactivex/Scheduler;Landroid/content/SharedPreferences;)V", "currentSessionStateOnce", "Lio/reactivex/Single;", "Lcom/bamtech/sdk4/session/SessionState;", "getCurrentSessionStateOnce", "()Lio/reactivex/Single;", "getDebugPreferences", "()Landroid/content/SharedPreferences;", "initAllowed", "", "overrideGeoProvider", "Lcom/bamtechmedia/dominguez/sdk/OverrideGeoProvider;", "getOverrideGeoProvider", "()Lcom/bamtechmedia/dominguez/sdk/OverrideGeoProvider;", "session", "Lcom/bamtech/sdk4/Session;", "getSession", "()Lcom/bamtech/sdk4/Session;", "session$delegate", "Lkotlin/Lazy;", "sessionOnce", "getSessionOnce", "allowSdkInit", "", "Companion", "sdk_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.b0.c0 */
@@ -200,15 +200,15 @@ public final class C7195c0 implements C7233y {
 
         public final Session invoke() {
             if (!this.f15919c.f15904a) {
-                C14100a.m44526b("SDK may not be initialized before Application.onCreate is complete", new Object[0]);
+                Timber.m44526b("SDK may not be initialized before Application.onCreate is complete", new Object[0]);
             }
             Companion companion = SdkSession.Companion;
             Application a = this.f15919c.f15908e;
             Object obj = this.f15919c.f15911h.get();
-            C12880j.m40222a(obj, "mediaCapabilitiesProvider.get()");
+            Intrinsics.checkReturnedValueIsNotNull(obj, "mediaCapabilitiesProvider.get()");
             Bootstrapper environment = companion.bootstrapper(a, (MediaCapabilitiesProvider) obj).environment(this.f15919c.f15909f.mo12778a().getSdk());
             Object obj2 = this.f15919c.f15910g.get();
-            C12880j.m40222a(obj2, "graphQlResponseConverter.get()");
+            Intrinsics.checkReturnedValueIsNotNull(obj2, "graphQlResponseConverter.get()");
             environment.plugin(ContentPlugin.class, new ContentPluginExtra((GraphQlResponseConverter) obj2));
             environment.plugin(OfflineMediaPlugin.class, new OfflineMediaPluginExtra(this.f15919c.f15908e, false, 2, null));
             environment.plugin(BookmarkPlugin.class, new BookmarksPluginExtra(this.f15919c.f15908e));
@@ -252,7 +252,7 @@ public final class C7195c0 implements C7233y {
         this.f15912i = rVar;
         this.f15913j = sharedPreferences;
         Single<Session> b = Single.m38401c((Callable<? extends T>) new C7203f<Object>(this)).mo30220b(this.f15912i);
-        C12880j.m40222a((Object) b, "Single.fromCallable { session }.subscribeOn(io)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.fromCallable { session }.subscribeOn(io)");
         this.f15905b = b;
     }
 
@@ -271,7 +271,7 @@ public final class C7195c0 implements C7233y {
     /* renamed from: b */
     public final Single<SessionState> mo20038b() {
         Single<SessionState> j = this.f15905b.mo30233g(C7197b.f15914c).mo30227d((Consumer<? super T>) C7198c.f15915c).mo30238j(C7199d.f15916c);
-        C12880j.m40222a((Object) j, "sessionOnce.map { sessio…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "sessionOnce.map { sessio…      }\n                }");
         return j;
     }
 

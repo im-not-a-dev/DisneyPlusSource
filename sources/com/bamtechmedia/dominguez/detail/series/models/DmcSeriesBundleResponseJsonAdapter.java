@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.detail.series.models;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -18,10 +18,10 @@ public final class DmcSeriesBundleResponseJsonAdapter extends C11725h<DmcSeriesB
 
     public DmcSeriesBundleResponseJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("DmcSeriesBundle");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"DmcSeriesBundle\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"DmcSeriesBundle\")");
         this.options = a;
         C11725h<DmcSeriesBundle> a2 = vVar.mo29869a((Type) DmcSeriesBundle.class, C13188p0.m40531a(), "seriesBundle");
-        C12880j.m40222a((Object) a2, "moshi.adapter<DmcSeriesB…ptySet(), \"seriesBundle\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<DmcSeriesB…ptySet(), \"seriesBundle\")");
         this.dmcSeriesBundleAdapter = a2;
     }
 

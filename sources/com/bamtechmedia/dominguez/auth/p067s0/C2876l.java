@@ -17,7 +17,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p312q.C7717x;
 
@@ -109,7 +109,7 @@ public final class C2876l extends C2889o implements C7717x {
             if (eVar != null) {
                 eVar.mo11772a();
             } else {
-                C12880j.m40227c("passwordResetRouter");
+                Intrinsics.throwUninitializedPropertyAccessException("passwordResetRouter");
                 throw null;
             }
         }

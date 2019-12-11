@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KCallable;
 import kotlin.reflect.KClass;
 import kotlin.reflect.KClassifier;
@@ -196,7 +196,7 @@ public final class KClasses {
 
     public static final Collection<KType> getAllSupertypes(KClass<?> kClass) {
         Object dfs = DFS.dfs(kClass.getSupertypes(), KClasses$allSupertypes$1.INSTANCE, new VisitedWithSet(), new KClasses$allSupertypes$2());
-        C12880j.m40222a(dfs, "DFS.dfs(\n            sup…    }\n            }\n    )");
+        Intrinsics.checkReturnedValueIsNotNull(dfs, "DFS.dfs(\n            sup…    }\n            }\n    )");
         return (Collection) dfs;
     }
 
@@ -294,7 +294,7 @@ public final class KClasses {
 
     public static final KType getDefaultType(KClass<?> kClass) {
         SimpleType defaultType = ((KClassImpl) kClass).getDescriptor().getDefaultType();
-        C12880j.m40222a((Object) defaultType, "(this as KClassImpl<*>).descriptor.defaultType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) defaultType, "(this as KClassImpl<*>).descriptor.defaultType");
         return new KTypeImpl(defaultType, new KClasses$defaultType$1(kClass));
     }
 
@@ -439,7 +439,7 @@ public final class KClasses {
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public static final boolean isSubclassOf(kotlin.reflect.KClass<?> r2, kotlin.reflect.KClass<?> r3) {
         /*
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r2, r3)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r2, r3)
             if (r0 != 0) goto L_0x002d
             java.util.List r2 = kotlin.p590y.C13183n.m40498a(r2)
             kotlin.reflect.KProperty1 r0 = kotlin.reflect.full.KClasses$isSubclassOf$1.INSTANCE
@@ -453,7 +453,7 @@ public final class KClasses {
             r1.<init>(r3)
             java.lang.Boolean r2 = kotlin.reflect.jvm.internal.impl.utils.DFS.ifAny(r2, r0, r1)
             java.lang.String r3 = "DFS.ifAny(listOf(this), …erclasses) { it == base }"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             boolean r2 = r2.booleanValue()
             if (r2 == 0) goto L_0x002b
             goto L_0x002d

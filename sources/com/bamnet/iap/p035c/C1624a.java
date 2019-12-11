@@ -4,7 +4,7 @@ import com.bamnet.iap.BamnetIAPPurchase;
 import com.bamnet.iap.Market.MarketType;
 import com.bamnet.iap.p035c.p037d.C1659a;
 import org.json.JSONObject;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamnet.iap.c.a */
 /* compiled from: GoogleIAPPurchase */
@@ -87,7 +87,7 @@ public class C1624a extends BamnetIAPPurchase {
                     jSONObject2.put("originalJson", C1659a.m7661a(mo7208c().getBytes()));
                     return jSONObject2;
                 } catch (Exception e) {
-                    C14100a.m44528b(e, "unable to parse original data into json", new Object[0]);
+                    Timber.m44528b(e, "unable to parse original data into json", new Object[0]);
                     return jSONObject2;
                 }
             } catch (Exception unused) {

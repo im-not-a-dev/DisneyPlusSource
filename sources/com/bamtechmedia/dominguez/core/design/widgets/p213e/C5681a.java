@@ -26,7 +26,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.C12853n;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p586h0.C12757d;
 import kotlin.p590y.C13162e0;
@@ -123,11 +123,11 @@ public final class C5681a {
                     String str = "tab";
                     if (function2 != null) {
                         Integer valueOf = Integer.valueOf(b);
-                        C12880j.m40222a((Object) b2, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) b2, str);
                         C13145v vVar = (C13145v) function2.invoke(valueOf, b2);
                     }
                     C5681a aVar = this.f13341c;
-                    C12880j.m40222a((Object) b2, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) b2, str);
                     aVar.mo17516a(b2, z || b == this.f13338U, this.f13339V, this.f13340W);
                 }
             }
@@ -338,7 +338,7 @@ public final class C5681a {
     /* renamed from: a */
     public final void mo17518a(TabLayout tabLayout, int i, Integer num, Integer num2, Display display, Function1<? super C10341g, C13145v> function1) {
         Context context = tabLayout.getContext();
-        C12880j.m40222a((Object) context, "tabLayout.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "tabLayout.context");
         if (C5837i.m18843e(context)) {
             m18556a(tabLayout, i);
         }
@@ -353,7 +353,7 @@ public final class C5681a {
         C10341g b = tabLayout.mo26895b(i);
         if (b != null) {
             b.mo26970h();
-            C12880j.m40222a((Object) b, "tab");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "tab");
             mo17516a(b, true, num, num2);
         }
     }

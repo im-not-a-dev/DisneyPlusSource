@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -58,15 +58,15 @@ final class DefaultContentClient$query$3<T, R> implements Function<T, SingleSour
         DefaultResponseTransformer defaultResponseTransformer = new DefaultResponseTransformer(new C1843x6e358089(new ResponseHandler[]{new DefaultContentClient$query$3$$special$$inlined$responseHandler$1(this.this$0.converterProvider.getString())}, serviceTransaction2), new C1844x6e35808a(serviceTransaction2));
         List list = this.$optionalHeaders;
         Map map2 = this.$customHeaders;
-        C12880j.m40222a((Object) telemetryServiceConfiguration, "telemetryConfig");
+        Intrinsics.checkReturnedValueIsNotNull((Object) telemetryServiceConfiguration, "telemetryConfig");
         Request createRequest$extension_content = defaultContentClient.createRequest$extension_content(graphQlRequest, serviceTransaction, contentServiceConfiguration, map, converter, defaultResponseTransformer, list, map2, TelemetryServiceConfigurationKt.toDustConfigSettings(telemetryServiceConfiguration));
         ServiceTransaction serviceTransaction3 = this.$transaction;
         String content_query = ContentServiceConfigurationKt.getCONTENT_QUERY(Dust$Events.INSTANCE);
         Call a = C1691e.m7799a(createRequest$extension_content);
         Single b = C1681c.m7780a(createRequest$extension_content, a).mo30223c((C11945a) new DefaultContentClient$query$3$$special$$inlined$toSingle$1(a)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single<String> g = b.mo30222c((Consumer<? super Disposable>) new DefaultContentClient$query$3$$special$$inlined$toSingle$2<Object>(serviceTransaction3, content_query)).mo30218b((Consumer<? super Throwable>) new DefaultContentClient$query$3$$special$$inlined$toSingle$3<Object>(createRequest$extension_content, serviceTransaction3, content_query)).mo30233g(new DefaultContentClient$query$3$$special$$inlined$toSingle$4(serviceTransaction3, content_query));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g;
     }
 }

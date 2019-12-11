@@ -61,9 +61,9 @@ public class C8314r {
         final Class<Data> f17795b;
 
         /* renamed from: c */
-        final C8308o<? extends Model, ? extends Data> f17796c;
+        final C8308o<? extendsMODEL, ? extends Data> f17796c;
 
-        public C8316b(Class<Model> cls, Class<Data> cls2, C8308o<? extends Model, ? extends Data> oVar) {
+        public C8316b(Class<Model> cls, Class<Data> cls2, C8308o<? extendsMODEL, ? extends Data> oVar) {
             this.f17794a = cls;
             this.f17795b = cls2;
             this.f17796c = oVar;
@@ -98,14 +98,14 @@ public class C8314r {
 
     /* access modifiers changed from: 0000 */
     /* renamed from: a */
-    public synchronized <Model, Data> void mo21495a(Class<Model> cls, Class<Data> cls2, C8308o<? extends Model, ? extends Data> oVar) {
+    public synchronized <Model, Data> void mo21495a(Class<Model> cls, Class<Data> cls2, C8308o<? extendsMODEL, ? extends Data> oVar) {
         m24152a(cls, cls2, oVar, true);
     }
 
     /* access modifiers changed from: 0000 */
     /* renamed from: b */
-    public synchronized <Model, Data> List<C8308o<? extends Model, ? extends Data>> mo21498b(Class<Model> cls, Class<Data> cls2, C8308o<? extends Model, ? extends Data> oVar) {
-        List<C8308o<? extends Model, ? extends Data>> b;
+    public synchronized <Model, Data> List<C8308o<? extendsMODEL, ? extends Data>> mo21498b(Class<Model> cls, Class<Data> cls2, C8308o<? extendsMODEL, ? extends Data> oVar) {
+        List<C8308o<? extendsMODEL, ? extends Data>> b;
         b = mo21497b(cls, cls2);
         mo21495a(cls, cls2, oVar);
         return b;
@@ -119,7 +119,7 @@ public class C8314r {
     }
 
     /* renamed from: a */
-    private <Model, Data> void m24152a(Class<Model> cls, Class<Data> cls2, C8308o<? extends Model, ? extends Data> oVar, boolean z) {
+    private <Model, Data> void m24152a(Class<Model> cls, Class<Data> cls2, C8308o<? extendsMODEL, ? extends Data> oVar, boolean z) {
         C8316b bVar = new C8316b(cls, cls2, oVar);
         List<C8316b<?, ?>> list = this.f17790a;
         list.add(z ? list.size() : 0, bVar);
@@ -127,7 +127,7 @@ public class C8314r {
 
     /* access modifiers changed from: 0000 */
     /* renamed from: b */
-    public synchronized <Model, Data> List<C8308o<? extends Model, ? extends Data>> mo21497b(Class<Model> cls, Class<Data> cls2) {
+    public synchronized <Model, Data> List<C8308o<? extendsMODEL, ? extends Data>> mo21497b(Class<Model> cls, Class<Data> cls2) {
         ArrayList arrayList;
         arrayList = new ArrayList();
         Iterator it = this.f17790a.iterator();

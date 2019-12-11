@@ -31,7 +31,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import kotlin.C12907r;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11724g;
 import p163g.p500m.p501a.C11733i;
 import p520io.reactivex.Maybe;
@@ -128,7 +128,7 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13900b, (java.lang.Object) r3.f13900b) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13900b, (java.lang.Object) r3.f13900b) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -140,11 +140,11 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
                 com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource$ContinueWatchingSeries r3 = (com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.ContinueWatchingSeries) r3
                 com.bamtechmedia.dominguez.core.content.assets.DmcEpisode r0 = r2.f13899a
                 com.bamtechmedia.dominguez.core.content.assets.DmcEpisode r1 = r3.f13899a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 com.bamtechmedia.dominguez.core.content.assets.DmcLabel r0 = r2.f13900b
                 com.bamtechmedia.dominguez.core.content.assets.DmcLabel r3 = r3.f13900b
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -201,7 +201,7 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13901a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.ContinueWatchingSeriesResponse) r2).f13901a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13901a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.ContinueWatchingSeriesResponse) r2).f13901a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -213,7 +213,7 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
                 com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource$ContinueWatchingSeriesResponse r2 = (com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.ContinueWatchingSeriesResponse) r2
                 com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource$ContinueWatchingSeries r0 = r1.f13901a
                 com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource$ContinueWatchingSeries r2 = r2.f13901a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -265,7 +265,7 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13902a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.DmcAssetResponse) r2).f13902a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13902a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.DmcAssetResponse) r2).f13902a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -277,7 +277,7 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
                 com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource$DmcAssetResponse r2 = (com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.DmcAssetResponse) r2
                 com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes r0 = r1.f13902a
                 com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes r2 = r2.f13902a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -329,7 +329,7 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13903a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.DmcVideoResponse) r2).f13903a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13903a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.DmcVideoResponse) r2).f13903a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -341,7 +341,7 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
                 com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource$DmcVideoResponse r2 = (com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.DmcVideoResponse) r2
                 com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes r0 = r1.f13903a
                 com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes r2 = r2.f13903a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -594,18 +594,18 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
         if (bVar.mo13457f0().mo13412a0()) {
             this.f13893a.set(true);
             Maybe<C6044b> h = this.f13895c.mo13577a(DmcAssetResponse.class, "core/DmcEpisodes", C13173j0.m40356a(C12907r.m40244a("seasonId", str), C12907r.m40244a("episodePage", Integer.valueOf(bVar.mo13457f0().mo13410Y())), C12907r.m40244a("episodePageSize", Integer.valueOf(bVar.mo13457f0().mo13411Z()))), str2).mo30233g(new C6035h(this, bVar)).mo30234h();
-            C12880j.m40222a((Object) h, "searchApi.typedSearch<Dm…)\n            }.toMaybe()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "searchApi.typedSearch<Dm…)\n            }.toMaybe()");
             return h;
         }
         Maybe<C6044b> h2 = Maybe.m38259h();
-        C12880j.m40222a((Object) h2, "Maybe.empty()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h2, "Maybe.empty()");
         return h2;
     }
 
     /* renamed from: b */
     public Single<C6046d> mo18139b(String str, String str2) {
         Single<C6046d> g = this.f13895c.mo13577a(DmcSeriesBundleResponse.class, "core/DmcSeriesBundle", C13173j0.m40356a(C12907r.m40244a("seriesId", str), C12907r.m40244a("includePromoLabels", C13185o.m40520c("ComingSoon", "NewlyAdded"))), str2).mo30233g(new C6029b(this));
-        C12880j.m40222a((Object) g, "searchApi.typedSearch<Dm…)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.typedSearch<Dm…)\n            }\n        }");
         return g;
     }
 
@@ -618,12 +618,12 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
     public Single<C6048f> mo18135a(String str, String str2) {
         if (this.f13894b.get()) {
             Single<C6048f> j = Single.m38402j();
-            C12880j.m40222a((Object) j, "Single.never()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) j, "Single.never()");
             return j;
         }
         this.f13894b.set(true);
         Single<C6048f> i = this.f13897e.mo12187b(str).mo30120b(C13173j0.m40350a()).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6030c<Object,Object>(this, str, str2)).mo30219b((C11945a) new C6031d(this)).mo30233g(C6032e.f13909c).mo30203a(this.f13898f.mo17875d(), TimeUnit.SECONDS, C11934b.m38500b()).mo30237i(C6033f.f13910c);
-        C12880j.m40222a((Object) i, "localBookmarks.lastSerie…Data(false, null, null) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "localBookmarks.lastSerie…Data(false, null, null) }");
         return i;
     }
 
@@ -640,7 +640,7 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
         }
         this.f13893a.set(true);
         Single<C6044b> g = this.f13895c.mo13577a(DmcAssetResponse.class, "core/DmcEpisodes", C13170i0.m40332a(C12907r.m40244a("seasonId", arrayList)), str).mo30233g(new C6034g(this));
-        C12880j.m40222a((Object) g, "searchApi.typedSearch<Dm…lResponse $it\")\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.typedSearch<Dm…lResponse $it\")\n        }");
         return g;
     }
 }

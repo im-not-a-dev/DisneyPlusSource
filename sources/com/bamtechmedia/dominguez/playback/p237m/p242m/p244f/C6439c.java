@@ -29,7 +29,7 @@ import com.google.common.base.Optional;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.C5280i;
 import p163g.p174d.p178b.C5326w;
 import p520io.reactivex.C11969r;
@@ -37,7 +37,7 @@ import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 42\u00020\u0001:\u00014Bo\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\f\u0010\b\u001a\b\u0012\u0004\u0012\u00020\n0\t\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010\u0012\f\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u00130\u0012\u0012\u0006\u0010\u0014\u001a\u00020\u0015\u0012\b\b\u0001\u0010\u0016\u001a\u00020\u0017\u0012\b\b\u0001\u0010\u0018\u001a\u00020\u0017¢\u0006\u0002\u0010\u0019J\u0012\u0010\u001a\u001a\u00020\u001b2\b\b\u0002\u0010\u001c\u001a\u00020\u001dH\u0002J6\u0010\u001e\u001a\u0018\u0012\u0014\u0012\u0012\u0012\u0006\u0012\u0004\u0018\u00010!\u0012\u0006\u0012\u0004\u0018\u00010\"0 0\u001f2\u0006\u0010#\u001a\u00020$2\u0006\u0010%\u001a\u00020\u00132\b\b\u0002\u0010&\u001a\u00020'J\u0010\u0010(\u001a\u00020\"2\u0006\u0010%\u001a\u00020\u0013H\u0002J \u0010)\u001a\u00020*2\u0006\u0010%\u001a\u00020\u00132\u0006\u0010&\u001a\u00020'2\u0006\u0010+\u001a\u00020,H\u0002J\u0006\u0010-\u001a\u00020.J\"\u0010/\u001a\u00020\u001b2\u0006\u00100\u001a\u0002012\u0006\u00102\u001a\u00020*2\b\u00103\u001a\u0004\u0018\u00010\nH\u0002R\u000e\u0010\u0014\u001a\u00020\u0015X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0017X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u00130\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\b\u001a\b\u0012\u0004\u0012\u00020\n0\tX\u0004¢\u0006\u0002\n\u0000¨\u00065"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/engine/session/SessionStarter;", "", "mediaApi", "Lcom/bamtech/sdk4/media/MediaApi;", "convivaSetup", "Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;", "playbackScenarioProvider", "Lcom/bamtechmedia/dominguez/playback/common/engine/PlaybackScenarioProvider;", "streamingPrefs", "Lcom/google/common/base/Optional;", "Lcom/bamtechmedia/dominguez/offline/StreamingPreferences;", "connectivityManager", "Landroid/net/ConnectivityManager;", "displayMetrics", "Landroid/util/DisplayMetrics;", "playbackAnalytics", "Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;", "localBookmarks", "Lcom/bamtechmedia/dominguez/bookmarks/LocalBookmarks;", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "config", "Lcom/bamtechmedia/dominguez/playback/PlaybackConfig;", "mainThread", "Lio/reactivex/Scheduler;", "ioThread", "(Lcom/bamtech/sdk4/media/MediaApi;Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;Lcom/bamtechmedia/dominguez/playback/common/engine/PlaybackScenarioProvider;Lcom/google/common/base/Optional;Landroid/net/ConnectivityManager;Landroid/util/DisplayMetrics;Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;Lcom/bamtechmedia/dominguez/bookmarks/LocalBookmarks;Lcom/bamtechmedia/dominguez/playback/PlaybackConfig;Lio/reactivex/Scheduler;Lio/reactivex/Scheduler;)V", "assertOnMainThread", "", "message", "", "createSession", "Lio/reactivex/Single;", "Lkotlin/Pair;", "Lcom/bamtech/sdk4/media/MediaItemPlaylist;", "Lcom/bamtech/sdk4/media/PlaybackContext;", "engine", "Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "playable", "startFromBeginning", "", "getPlaybackContext", "getResumePoint", "", "mediaItem", "Lcom/bamtech/sdk4/media/MediaItem;", "getThumbnailResolution", "Lcom/bamtech/sdk4/ThumbnailResolution;", "prepareVideoPlayer", "videoPlayer", "Lcom/bamtech/player/VideoPlayer;", "resumePoint", "preferences", "Companion", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.m.m.f.c */
@@ -114,7 +114,7 @@ public final class C6439c {
         /* renamed from: a */
         public final void accept(MediaItem mediaItem) {
             C6391e c = this.f14610c.f14603g;
-            C12880j.m40222a((Object) mediaItem, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) mediaItem, "it");
             c.mo19036a(mediaItem, this.f14608U, this.f14609V.getPlaybackSessionId());
         }
     }
@@ -141,7 +141,7 @@ public final class C6439c {
         /* renamed from: a */
         public final Single<MediaItem> apply(MediaItem mediaItem) {
             Single<MediaItem> a = this.f14613c.f14598b.mo19028a((C5280i) this.f14611U, this.f14612V, mediaItem.getDefaultPlaylist()).mo30045a(mediaItem);
-            C12880j.m40222a((Object) a, "convivaSetup.initializeC…list).toSingleDefault(it)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "convivaSetup.initializeC…list).toSingleDefault(it)");
             return a;
         }
     }
@@ -176,7 +176,7 @@ public final class C6439c {
             long a = this.f14617c.m20109a(this.f14615V, this.f14616W, mediaItem);
             C6439c cVar = this.f14617c;
             C5326w d = sDK4ExoPlaybackEngine.mo7539d();
-            C12880j.m40222a((Object) d, "videoPlayer");
+            Intrinsics.checkReturnedValueIsNotNull((Object) d, "videoPlayer");
             cVar.m20116a(d, a, (StreamingPreferences) this.f14617c.f14600d.mo27107c());
             sDK4ExoPlaybackEngine.mo7532a(C1752c.m8115a(this.f14617c.f14597a, mediaItem, this.f14617c.mo19090a()));
             Float n = this.f14615V.mo13275n();
@@ -236,13 +236,13 @@ public final class C6439c {
     public final Single<Pair<MediaItemPlaylist, PlaybackContext>> mo19091a(SDK4ExoPlaybackEngine sDK4ExoPlaybackEngine, C3693o oVar, boolean z) {
         MediaDescriptor mediaDescriptor = new MediaDescriptor(oVar.mo13278q(), oVar.mo12903f(), null, this.f14599c.mo19076d(), null, null, this.f14599c.mo19075c(), new MediaPreferences(null, AudioQuality.atmos), 52, null);
         PlayerAdapter j = sDK4ExoPlaybackEngine.mo7815j();
-        C12880j.m40222a((Object) j, "engine.playerAdapter");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "engine.playerAdapter");
         if (sDK4ExoPlaybackEngine.mo7814i() == null) {
             sDK4ExoPlaybackEngine.mo7813a(this.f14597a.createPlaybackSession(j));
         }
         PlaybackContext a = m20111a(oVar);
         Single<Pair<MediaItemPlaylist, PlaybackContext>> g = this.f14604h.mo12184a(oVar).mo30055f().mo30044a((SingleSource<T>) this.f14597a.fetch(mediaDescriptor, a)).mo30211a(this.f14607k).mo30227d((Consumer<? super T>) new C6441b<Object>(this, oVar, a)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6442c<Object,Object>(this, sDK4ExoPlaybackEngine, oVar)).mo30211a(this.f14606j).mo30233g(new C6443d(this, sDK4ExoPlaybackEngine, oVar, z)).mo30233g(new C6444e(a));
-        C12880j.m40222a((Object) g, "localBookmarks.preparePl…ir(it, playbackContext) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "localBookmarks.preparePl…ir(it, playbackContext) }");
         return g;
     }
 
@@ -284,14 +284,14 @@ public final class C6439c {
         StringBuilder sb = new StringBuilder();
         sb.append("playheadMilliseconds ");
         sb.append(j);
-        C14100a.m44522a(sb.toString(), new Object[0]);
+        Timber.m44522a(sb.toString(), new Object[0]);
         wVar.mo7612b(j);
     }
 
     /* access modifiers changed from: private */
     /* renamed from: a */
     public final void m20117a(String str) {
-        if (!C12880j.m40224a((Object) Looper.myLooper(), (Object) Looper.getMainLooper())) {
+        if (!Intrinsics.areEqual((Object) Looper.myLooper(), (Object) Looper.getMainLooper())) {
             throw new IllegalStateException(str.toString());
         }
     }

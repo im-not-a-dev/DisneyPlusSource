@@ -234,7 +234,7 @@ public final class ExoPlayerListener implements EventListener, QOSListener {
             java.lang.String r7 = r7.f18349b0
             if (r7 == 0) goto L_0x00ef
             java.lang.String r8 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r8)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r8)
             r8 = 2
             java.lang.String r9 = "audio"
             boolean r9 = kotlin.p588j0.C12833x.m40154a(r7, r9, r5, r8, r2)

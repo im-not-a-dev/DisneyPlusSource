@@ -23,7 +23,7 @@ public final class AvatarResponse {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f14905a, (java.lang.Object) ((com.bamtechmedia.dominguez.profiles.AvatarResponse) r2).f14905a) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f14905a, (java.lang.Object) ((com.bamtechmedia.dominguez.profiles.AvatarResponse) r2).f14905a) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -35,7 +35,7 @@ public final class AvatarResponse {
             com.bamtechmedia.dominguez.profiles.AvatarResponse r2 = (com.bamtechmedia.dominguez.profiles.AvatarResponse) r2
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.ProfileAvatar> r0 = r1.f14905a
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.ProfileAvatar> r2 = r2.f14905a
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:

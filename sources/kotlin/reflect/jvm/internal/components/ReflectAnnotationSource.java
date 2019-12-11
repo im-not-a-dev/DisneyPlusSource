@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.components;
 
 import java.lang.annotation.Annotation;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceFile;
 
@@ -21,7 +21,7 @@ public final class ReflectAnnotationSource implements SourceElement {
 
     public SourceFile getContainingFile() {
         SourceFile sourceFile = SourceFile.NO_SOURCE_FILE;
-        C12880j.m40222a((Object) sourceFile, "SourceFile.NO_SOURCE_FILE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceFile, "SourceFile.NO_SOURCE_FILE");
         return sourceFile;
     }
 }

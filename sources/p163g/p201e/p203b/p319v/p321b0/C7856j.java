@@ -32,7 +32,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.C12853n;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p590y.C13180m;
 import org.joda.time.Days;
@@ -194,10 +194,10 @@ public final class C7856j {
     /* renamed from: b */
     private final void m23026b(C7820a aVar, View view, String str) {
         TextView textView = (TextView) view.findViewById(C7904t.paywallDescriptionMain);
-        C12880j.m40222a((Object) textView, "view.paywallDescriptionMain");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "view.paywallDescriptionMain");
         textView.setText(m23013a(this, "restart_title", aVar.mo20723a(), null, 4, null));
         TextView textView2 = (TextView) view.findViewById(C7904t.paywallDescriptionSub1);
-        C12880j.m40222a((Object) textView2, "view.paywallDescriptionSub1");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "view.paywallDescriptionSub1");
         textView2.setText(mo20775a("restart_copy", aVar.mo20723a(), C13170i0.m40332a(C12907r.m40244a("days", str))));
     }
 
@@ -219,7 +219,7 @@ public final class C7856j {
             if (i >= 0) {
                 C7823d dVar = (C7823d) next;
                 Context context = viewGroup.getContext();
-                C12880j.m40222a((Object) context, "parent.context");
+                Intrinsics.checkReturnedValueIsNotNull((Object) context, "parent.context");
                 if (C5837i.m18843e(context)) {
                     View inflate = from.inflate(C7905u.paywall_button, viewGroup2, z);
                     if (inflate != null) {
@@ -233,7 +233,7 @@ public final class C7856j {
                     View inflate2 = from.inflate(C7905u.paywall_button, viewGroup2, z);
                     if (inflate2 != 0) {
                         LoadingButton loadingButton2 = (LoadingButton) inflate2.findViewById(C7904t.paywallBtn);
-                        C12880j.m40222a((Object) loadingButton2, "buttonView.paywallBtn");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) loadingButton2, "buttonView.paywallBtn");
                         jVar.m23011a(viewGroup2, loadingButton2, dVar, i);
                         C7820a c = uVar.mo19867c();
                         List e2 = uVar.mo19869e();
@@ -265,7 +265,7 @@ public final class C7856j {
 
     /* renamed from: a */
     public final boolean mo20778a(C7823d dVar) {
-        return C12880j.m40224a((Object) this.f16978g.mo20797b(dVar.mo20732d()), (Object) "year");
+        return Intrinsics.areEqual((Object) this.f16978g.mo20797b(dVar.mo20732d()), (Object) "year");
     }
 
     /* access modifiers changed from: private */
@@ -282,7 +282,7 @@ public final class C7856j {
         }
         String str2 = str;
         TextView textView = (TextView) view.findViewById(C7904t.paywallLegalText);
-        C12880j.m40222a((Object) textView, "view.paywallLegalText");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "view.paywallLegalText");
         textView.setText(m23009a(m23013a(this, str2, aVar.mo20723a(), null, 4, null)));
         if (this.f16976e) {
             Button button = (Button) view.findViewById(C7904t.paywallBtnRestore);
@@ -301,10 +301,10 @@ public final class C7856j {
     /* renamed from: a */
     private final void m23017a(C7820a aVar, View view, String str) {
         TextView textView = (TextView) view.findViewById(C7904t.paywallDescriptionMain);
-        C12880j.m40222a((Object) textView, "view.paywallDescriptionMain");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "view.paywallDescriptionMain");
         textView.setText(mo20775a("billinginfo_title", aVar.mo20723a(), C13170i0.m40332a(C12907r.m40244a("DURATION", str))));
         TextView textView2 = (TextView) view.findViewById(C7904t.paywallDescriptionSub1);
-        C12880j.m40222a((Object) textView2, "view.paywallDescriptionSub1");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "view.paywallDescriptionSub1");
         textView2.setText(m23013a(this, "paywall_copy_2", null, null, 6, null));
     }
 
@@ -312,7 +312,7 @@ public final class C7856j {
     private final String m23016a(Period period) {
         StringBuilder sb = new StringBuilder();
         Days standardDays = period.toStandardDays();
-        C12880j.m40222a((Object) standardDays, "freeTrialPeriod.toStandardDays()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) standardDays, "freeTrialPeriod.toStandardDays()");
         sb.append(standardDays.getDays());
         sb.append(' ');
         sb.append(C3573a.m12037b(this.f16973b, "day", null, 2, null));
@@ -322,7 +322,7 @@ public final class C7856j {
     /* renamed from: a */
     private final Spanned m23009a(String str) {
         Spanned a = C4090b.m14039a(str, 63);
-        C12880j.m40222a((Object) a, "HtmlCompat.fromHtml(text…t.FROM_HTML_MODE_COMPACT)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "HtmlCompat.fromHtml(text…t.FROM_HTML_MODE_COMPACT)");
         return a;
     }
 
@@ -369,7 +369,7 @@ public final class C7856j {
         String a2 = m23015a(a, dVar, i);
         int a3 = C12833x.m40132a((CharSequence) a2, dVar.mo20730b(), 0, false, 6, (Object) null);
         SpannableString valueOf = SpannableString.valueOf(a2);
-        C12880j.m40222a((Object) valueOf, "SpannableString.valueOf(this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueOf, "SpannableString.valueOf(this)");
         TextAppearanceSpan textAppearanceSpan = new TextAppearanceSpan(viewGroup.getContext(), C7907w.Disney_TextAppearance_ButtonUnfocused_White8);
         valueOf.setSpan(textAppearanceSpan, 0, a3, 0);
         valueOf.setSpan(textAppearanceSpan, a3 + dVar.mo20730b().length(), a2.length(), 0);
@@ -406,7 +406,7 @@ public final class C7856j {
     /* renamed from: a */
     public final String mo20775a(String str, String str2, Map<String, String> map) {
         String a = m23014a(str, this.f16973b, str2, map);
-        if (!(a == null || a.length() == 0) && !C12880j.m40224a((Object) a, (Object) str)) {
+        if (!(a == null || a.length() == 0) && !Intrinsics.areEqual((Object) a, (Object) str)) {
             return a;
         }
         String a2 = m23014a(str, this.f16974c, str2, map);
@@ -447,7 +447,7 @@ public final class C7856j {
         if (period == null) {
             period = Period.weeks(1);
         }
-        C12880j.m40222a((Object) period, "trialPeriod");
+        Intrinsics.checkReturnedValueIsNotNull((Object) period, "trialPeriod");
         String a = m23016a(period);
         int i = C7861k.$EnumSwitchMapping$0[bVar.ordinal()];
         if (i == 1) {

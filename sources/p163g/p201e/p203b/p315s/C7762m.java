@@ -15,7 +15,7 @@ import java.util.NoSuchElementException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p311p.C7649a;
 import p163g.p201e.p203b.p311p.C7651b;
@@ -113,7 +113,7 @@ public final class C7762m extends C5741g<C7764b> implements C7651b {
                 ContentSetType b = hVar.mo13604b();
                 String e2 = hVar.mo13608e();
                 C3778h hVar2 = this.f16835b;
-                C7649a aVar = new C7649a(e, g, b, C12880j.m40224a((Object) e2, (Object) hVar2 != null ? hVar2.mo13608e() : null), false, 16, null);
+                C7649a aVar = new C7649a(e, g, b, Intrinsics.areEqual((Object) e2, (Object) hVar2 != null ? hVar2.mo13608e() : null), false, 16, null);
                 arrayList.add(aVar);
             }
             return arrayList;
@@ -125,7 +125,7 @@ public final class C7762m extends C5741g<C7764b> implements C7651b {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f16835b, (java.lang.Object) r3.f16835b) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f16835b, (java.lang.Object) r3.f16835b) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -137,11 +137,11 @@ public final class C7762m extends C5741g<C7764b> implements C7651b {
                 g.e.b.s.m$b r3 = (p163g.p201e.p203b.p315s.C7762m.C7764b) r3
                 java.util.List<com.bamtechmedia.dominguez.core.content.sets.h> r0 = r2.f16834a
                 java.util.List<com.bamtechmedia.dominguez.core.content.sets.h> r1 = r3.f16834a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 com.bamtechmedia.dominguez.core.content.sets.h r0 = r2.f16835b
                 com.bamtechmedia.dominguez.core.content.sets.h r3 = r3.f16835b
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -237,7 +237,7 @@ public final class C7762m extends C5741g<C7764b> implements C7651b {
                 com.bamtechmedia.dominguez.core.content.sets.h r4 = (com.bamtechmedia.dominguez.core.content.sets.C3778h) r4
                 java.lang.String r4 = r4.mo13608e()
                 java.lang.String r5 = r0.mo13608e()
-                boolean r4 = kotlin.jvm.internal.C12880j.m40224a(r4, r5)
+                boolean r4 = kotlin.jvm.internal.Intrinsics.areEqual(r4, r5)
                 if (r4 == 0) goto L_0x0033
                 goto L_0x0050
             L_0x004f:
@@ -334,7 +334,7 @@ public final class C7762m extends C5741g<C7764b> implements C7651b {
         /* renamed from: a */
         public final C7764b invoke(C7764b bVar) {
             for (C3778h hVar : bVar.mo20670b()) {
-                if (C12880j.m40224a((Object) hVar.mo13608e(), (Object) this.f16841U.mo20570X())) {
+                if (Intrinsics.areEqual((Object) hVar.mo13608e(), (Object) this.f16841U.mo20570X())) {
                     if (hVar instanceof ReferenceSet) {
                         this.f16842c.f16830U.mo12479a(hVar);
                     }

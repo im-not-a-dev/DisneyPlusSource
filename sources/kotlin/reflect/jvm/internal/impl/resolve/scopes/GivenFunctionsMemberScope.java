@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -44,9 +44,9 @@ public abstract class GivenFunctionsMemberScope extends MemberScopeImpl {
         Collection collection;
         ArrayList arrayList = new ArrayList(3);
         TypeConstructor typeConstructor = this.containingClass.getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "containingClass.typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "containingClass.typeConstructor");
         Collection<KotlinType> supertypes = typeConstructor.getSupertypes();
-        C12880j.m40222a((Object) supertypes, "containingClass.typeConstructor.supertypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "containingClass.typeConstructor.supertypes");
         ArrayList arrayList2 = new ArrayList();
         for (KotlinType memberScope : supertypes) {
             C13196t.m40545a((Collection) arrayList2, (Iterable) DefaultImpls.getContributedDescriptors$default(memberScope.getMemberScope(), null, null, 3, null));
@@ -86,7 +86,7 @@ public abstract class GivenFunctionsMemberScope extends MemberScopeImpl {
                 if (booleanValue) {
                     collection = new ArrayList();
                     for (Object next4 : list) {
-                        if (C12880j.m40224a((Object) ((FunctionDescriptor) next4).getName(), (Object) name2)) {
+                        if (Intrinsics.areEqual((Object) ((FunctionDescriptor) next4).getName(), (Object) name2)) {
                             collection.add(next4);
                         }
                     }
@@ -128,7 +128,7 @@ public abstract class GivenFunctionsMemberScope extends MemberScopeImpl {
         }
         ArrayList arrayList2 = new ArrayList();
         for (Object next2 : arrayList) {
-            if (C12880j.m40224a((Object) ((SimpleFunctionDescriptor) next2).getName(), (Object) name)) {
+            if (Intrinsics.areEqual((Object) ((SimpleFunctionDescriptor) next2).getName(), (Object) name)) {
                 arrayList2.add(next2);
             }
         }
@@ -145,7 +145,7 @@ public abstract class GivenFunctionsMemberScope extends MemberScopeImpl {
         }
         ArrayList arrayList2 = new ArrayList();
         for (Object next2 : arrayList) {
-            if (C12880j.m40224a((Object) ((PropertyDescriptor) next2).getName(), (Object) name)) {
+            if (Intrinsics.areEqual((Object) ((PropertyDescriptor) next2).getName(), (Object) name)) {
                 arrayList2.add(next2);
             }
         }

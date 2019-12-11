@@ -6,7 +6,7 @@ import com.google.android.exoplayer2.p366s0.C8912g;
 import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.p379m0.C9213e.C9215b;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
@@ -88,10 +88,10 @@ public class C9221i extends C9209a {
             }
             C9537e.m29301b(z);
             this.f20913q = dVar.getPosition() - this.f20856a.f21941d;
-            C9554k0.m29405a((DataSource) this.f20863h);
+            Util.m29405a((DataSource) this.f20863h);
             this.f20915s = true;
         } catch (Throwable th) {
-            C9554k0.m29405a((DataSource) this.f20863h);
+            Util.m29405a((DataSource) this.f20863h);
             throw th;
         }
     }

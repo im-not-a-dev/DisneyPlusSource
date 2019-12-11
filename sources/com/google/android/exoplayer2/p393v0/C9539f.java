@@ -39,7 +39,7 @@ public final class C9539f {
                 try {
                     this.f22255c.getFD().sync();
                 } catch (IOException e) {
-                    C9563q.m29498b("AtomicFile", "Failed to sync file descriptor:", e);
+                    Log.m29498b("AtomicFile", "Failed to sync file descriptor:", e);
                 }
                 this.f22255c.close();
             }
@@ -106,7 +106,7 @@ public final class C9539f {
                 sb.append(this.f22252a);
                 sb.append(" to backup file ");
                 sb.append(this.f22253b);
-                C9563q.m29500d("AtomicFile", sb.toString());
+                Log.m29500d("AtomicFile", sb.toString());
             }
         }
         try {

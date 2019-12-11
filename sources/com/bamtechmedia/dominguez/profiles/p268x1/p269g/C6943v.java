@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.profiles.p268x1.p269g;
 
 import com.bamtechmedia.dominguez.profiles.C7019z;
 import com.bamtechmedia.dominguez.profiles.p263u1.p264d.C6862b;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.profiles.x1.g.v */
 /* compiled from: AllCaptionsHandlers.kt */
@@ -13,7 +13,7 @@ public final class C6943v extends C6917a {
 
     /* renamed from: a */
     public boolean mo19685a(C7019z zVar, String str) {
-        return C12880j.m40224a((Object) zVar.mo19798c0(), (Object) Boolean.valueOf(true)) && C12880j.m40224a((Object) zVar.mo19796a0(), (Object) Boolean.valueOf(false));
+        return Intrinsics.areEqual((Object) zVar.mo19798c0(), (Object) Boolean.valueOf(true)) && Intrinsics.areEqual((Object) zVar.mo19796a0(), (Object) Boolean.valueOf(false));
     }
 
     /* renamed from: a */

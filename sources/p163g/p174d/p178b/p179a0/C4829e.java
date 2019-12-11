@@ -5,7 +5,7 @@ import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001:\u0001\u0011B\u0005¢\u0006\u0002\u0010\u0002J$\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\tJ.\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\tH\u0002J\u0010\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\f\u001a\u00020\rH\u0002¨\u0006\u0012"}, mo31007d2 = {"Lcom/bamtech/player/bif/BifFactory;", "", "()V", "readBif", "", "Lcom/bamtech/player/bif/BifEntry;", "file", "Ljava/io/File;", "startTimeMs", "", "endTimeMs", "readEntries", "accessFileWrapper", "Lcom/bamtech/player/bif/RandomAccessFileWrapper;", "header", "Lcom/bamtech/player/bif/BifFactory$BifHeader;", "readHeader", "BifHeader", "bamplayer-core_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.d.b.a0.e */
@@ -70,11 +70,11 @@ public final class C4829e {
         int b2 = aVar.mo16238b();
         while (i3 < b2) {
             Object obj = arrayList.get(i3);
-            C12880j.m40222a(obj, "entries[i]");
+            Intrinsics.checkReturnedValueIsNotNull(obj, "entries[i]");
             C4825c cVar2 = (C4825c) obj;
             i3++;
             Object obj2 = arrayList.get(i3);
-            C12880j.m40222a(obj2, "entries[i + 1]");
+            Intrinsics.checkReturnedValueIsNotNull(obj2, "entries[i + 1]");
             C4825c cVar3 = (C4825c) obj2;
             cVar2.mo16223c(cVar3.mo16221b() - cVar2.mo16221b());
             cVar2.mo16222b(cVar3.mo16226d() - cVar2.mo16226d());

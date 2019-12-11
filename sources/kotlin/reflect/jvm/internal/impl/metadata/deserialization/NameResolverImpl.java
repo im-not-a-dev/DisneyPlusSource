@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.metadata.deserialization;
 import java.util.LinkedList;
 import java.util.List;
 import kotlin.Triple;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.QualifiedNameTable;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.QualifiedNameTable.QualifiedName;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.QualifiedNameTable.QualifiedName.Kind;
@@ -36,7 +36,7 @@ public final class NameResolverImpl implements NameResolver {
         while (i != -1) {
             QualifiedName qualifiedName = this.qualifiedNames.getQualifiedName(i);
             StringTable stringTable = this.strings;
-            C12880j.m40222a((Object) qualifiedName, "proto");
+            Intrinsics.checkReturnedValueIsNotNull((Object) qualifiedName, "proto");
             String string = stringTable.getString(qualifiedName.getShortName());
             Kind kind = qualifiedName.getKind();
             if (kind != null) {
@@ -51,7 +51,7 @@ public final class NameResolverImpl implements NameResolver {
                 }
                 i = qualifiedName.getParentQualifiedName();
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -74,7 +74,7 @@ public final class NameResolverImpl implements NameResolver {
 
     public String getString(int i) {
         String string = this.strings.getString(i);
-        C12880j.m40222a((Object) string, "strings.getString(index)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) string, "strings.getString(index)");
         return string;
     }
 

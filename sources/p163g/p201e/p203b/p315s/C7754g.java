@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 import p163g.p201e.p203b.p286j.C7290d;
 import p163g.p201e.p203b.p286j.C7290d.C7291a;
@@ -60,7 +60,7 @@ public final class C7754g implements C7290d {
             String group = matcher.group(2);
             matcher.group(3);
             C3678l lVar = this.f16827a;
-            C12880j.m40222a((Object) group, "slugText");
+            Intrinsics.checkReturnedValueIsNotNull((Object) group, "slugText");
             C3676k b = lVar.mo13389b(group);
             if (!C5837i.m18843e(this.f16828b)) {
                 return C7745e.f16813n0.mo20659b(b);

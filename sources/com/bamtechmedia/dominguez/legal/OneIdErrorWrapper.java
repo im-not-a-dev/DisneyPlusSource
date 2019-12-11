@@ -37,7 +37,7 @@ public final class OneIdErrorWrapper implements ErrorContainer {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) getErrors(), (java.lang.Object) r3.getErrors()) != false) goto L_0x0023;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) getErrors(), (java.lang.Object) r3.getErrors()) != false) goto L_0x0023;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -49,11 +49,11 @@ public final class OneIdErrorWrapper implements ErrorContainer {
             com.bamtechmedia.dominguez.legal.OneIdErrorWrapper r3 = (com.bamtechmedia.dominguez.legal.OneIdErrorWrapper) r3
             java.lang.String r0 = r2.keyCategory
             java.lang.String r1 = r3.keyCategory
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0021
             java.util.List r0 = r2.getErrors()
             java.util.List r3 = r3.getErrors()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0021
             goto L_0x0023
         L_0x0021:

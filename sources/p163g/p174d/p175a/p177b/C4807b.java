@@ -17,7 +17,7 @@ import p520io.reactivex.Maybe;
 import p520io.reactivex.MaybeSource;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.a.b.b */
 /* compiled from: BamtechReceiptCache */
@@ -61,7 +61,7 @@ public class C4807b implements C4812c {
             sb.append(account.getId());
             String sb2 = sb.toString();
             String a = C4807b.this.f11953c.mo29517a((Object) new C4813a(this.f11956c, this.f11954U));
-            C14100a.m44522a("Storing Purchase Receipt: Key: %s; Value: %s", sb2, a);
+            Timber.m44522a("Storing Purchase Receipt: Key: %s; Value: %s", sb2, a);
             C4807b.this.f11951a.edit().putString(sb2, a).commit();
             return Completable.m38169h();
         }
@@ -83,7 +83,7 @@ public class C4807b implements C4812c {
                 String sb2 = sb.toString();
                 String string = C4807b.this.f11951a.getString(sb2, null);
                 if (string != null) {
-                    C14100a.m44522a("Retrieving receipt for key: %s", sb2);
+                    Timber.m44522a("Retrieving receipt for key: %s", sb2);
                     return Maybe.m38258c((C4813a) C4807b.this.f11953c.mo29514a(string, C4813a.class));
                 }
             }
@@ -114,7 +114,7 @@ public class C4807b implements C4812c {
                     sb.append("receipt_");
                     sb.append(account.getId());
                     String sb2 = sb.toString();
-                    C14100a.m44522a("Clearing receipt for %s", sb2);
+                    Timber.m44522a("Clearing receipt for %s", sb2);
                     C4807b.this.f11951a.edit().remove(sb2).commit();
                 }
             }

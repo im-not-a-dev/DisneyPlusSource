@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.core.content.containers.Container;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -28,25 +28,25 @@ public final class StandardCollectionJsonAdapter extends C11725h<StandardCollect
 
     public StandardCollectionJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("collectionId", "collectionGroup", "texts", "containers", "images", "videoArt");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"c…s\", \"images\", \"videoArt\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"c…s\", \"images\", \"videoArt\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "collectionId");
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ptySet(), \"collectionId\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ptySet(), \"collectionId\")");
         this.stringAdapter = a2;
         C11725h<CollectionGroup> a3 = vVar.mo29869a((Type) CollectionGroup.class, C13188p0.m40531a(), "collectionGroup");
-        C12880j.m40222a((Object) a3, "moshi.adapter<Collection…Set(), \"collectionGroup\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<Collection…Set(), \"collectionGroup\")");
         this.collectionGroupAdapter = a3;
         C11725h<List<TextEntry>> a4 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, TextEntry.class), C13188p0.m40531a(), "texts");
-        C12880j.m40222a((Object) a4, "moshi.adapter<List<TextE…ions.emptySet(), \"texts\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<List<TextE…ions.emptySet(), \"texts\")");
         this.listOfTextEntryAdapter = a4;
         C11725h<List<Container>> a5 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, Container.class), C13188p0.m40531a(), "containers");
-        C12880j.m40222a((Object) a5, "moshi.adapter<List<Conta…emptySet(), \"containers\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<List<Conta…emptySet(), \"containers\")");
         this.listOfContainerAdapter = a5;
         C11725h<List<Image>> a6 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, Image.class), C13188p0.m40531a(), "images");
-        C12880j.m40222a((Object) a6, "moshi.adapter<List<Image…ons.emptySet(), \"images\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a6, "moshi.adapter<List<Image…ons.emptySet(), \"images\")");
         this.listOfImageAdapter = a6;
         C11725h<List<C3680n>> a7 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, C3680n.class), C13188p0.m40531a(), "videoArt");
-        C12880j.m40222a((Object) a7, "moshi.adapter<List<Video…s.emptySet(), \"videoArt\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a7, "moshi.adapter<List<Video…s.emptySet(), \"videoArt\")");
         this.nullableListOfVideoArtAdapter = a7;
     }
 

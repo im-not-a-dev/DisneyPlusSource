@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent;
 import com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11737m.C11739b;
@@ -28,19 +28,19 @@ public final class DmcVideoBundleJsonAdapter extends C11725h<DmcVideoBundle> {
         String str3 = "video";
         String str4 = "label";
         C11739b a = C11739b.m37729a(str4, str3, str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"l…eo\", \"extras\", \"related\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"l…eo\", \"extras\", \"related\")");
         this.options = a;
         C11725h<PromoLabel> a2 = vVar.mo29869a((Type) PromoLabel.class, C13188p0.m40531a(), str4);
-        C12880j.m40222a((Object) a2, "moshi.adapter<PromoLabel…ions.emptySet(), \"label\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<PromoLabel…ions.emptySet(), \"label\")");
         this.nullablePromoLabelAdapter = a2;
         C11725h<DmcMovie> a3 = vVar.mo29869a((Type) DmcMovie.class, C13188p0.m40531a(), str3);
-        C12880j.m40222a((Object) a3, "moshi.adapter<DmcMovie?>…ions.emptySet(), \"video\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<DmcMovie?>…ions.emptySet(), \"video\")");
         this.nullableDmcMovieAdapter = a3;
         C11725h<DmcExtraContent> a4 = vVar.mo29869a((Type) DmcExtraContent.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a4, "moshi.adapter<DmcExtraCo…ons.emptySet(), \"extras\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<DmcExtraCo…ons.emptySet(), \"extras\")");
         this.nullableDmcExtraContentAdapter = a4;
         C11725h<DmcRelatedContent> a5 = vVar.mo29869a((Type) DmcRelatedContent.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a5, "moshi.adapter<DmcRelated…ns.emptySet(), \"related\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<DmcRelated…ns.emptySet(), \"related\")");
         this.nullableDmcRelatedContentAdapter = a5;
     }
 

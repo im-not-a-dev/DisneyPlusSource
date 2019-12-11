@@ -24,7 +24,7 @@ import p163g.p174d.p178b.C5313o;
 import p163g.p174d.p178b.C5315p;
 import p163g.p174d.p178b.p183e0.C4952a;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 public class SDK4ExoPlaybackEngine extends ExoPlaybackEngine {
 
@@ -73,9 +73,9 @@ public class SDK4ExoPlaybackEngine extends ExoPlaybackEngine {
             if (this.f5903b.mo16821p() instanceof ExoSurfaceView) {
                 ExoSurfaceView exoSurfaceView = (ExoSurfaceView) this.f5903b.mo16821p();
                 if (exoSurfaceView.getTextureView() != null) {
-                    C14100a.m44526b("TextureView is being used in ExoSurfaceView with DRMed content. Content will not display. Please make sure app:exo_surface_type is set to SURFACE_VIEW on ExoSurfaceView in your layout XML", new Object[0]);
+                    Timber.m44526b("TextureView is being used in ExoSurfaceView with DRMed content. Content will not display. Please make sure app:exo_surface_type is set to SURFACE_VIEW on ExoSurfaceView in your layout XML", new Object[0]);
                 } else if (!exoSurfaceView.mo7559c()) {
-                    C14100a.m44532e("SurfaceView is not secure. It is advised to set ExoSurfaceView to be secure before playing DRM content.Please make sure app:secure is set to true in ExoSurfaceView", new Object[0]);
+                    Timber.m44532e("SurfaceView is not secure. It is advised to set ExoSurfaceView to be secure before playing DRM content.Please make sure app:secure is set to true in ExoSurfaceView", new Object[0]);
                 }
             }
         }

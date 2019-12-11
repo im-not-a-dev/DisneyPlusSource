@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
@@ -20,7 +20,7 @@ public final class CompanionObjectMapping {
 
     static {
         Set<PrimitiveType> set = PrimitiveType.NUMBER_TYPES;
-        C12880j.m40222a((Object) set, "PrimitiveType.NUMBER_TYPES");
+        Intrinsics.checkReturnedValueIsNotNull((Object) set, "PrimitiveType.NUMBER_TYPES");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) set, 10));
         for (PrimitiveType primitiveFqName : set) {
             arrayList.add(KotlinBuiltIns.getPrimitiveFqName(primitiveFqName));
@@ -38,7 +38,7 @@ public final class CompanionObjectMapping {
 
     public final Set<ClassId> allClassesWithIntrinsicCompanions() {
         Set<ClassId> unmodifiableSet = Collections.unmodifiableSet(classIds);
-        C12880j.m40222a((Object) unmodifiableSet, "Collections.unmodifiableSet(classIds)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) unmodifiableSet, "Collections.unmodifiableSet(classIds)");
         return unmodifiableSet;
     }
 

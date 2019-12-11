@@ -10,7 +10,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p201e.p203b.p204d.C5407l0;
@@ -33,7 +33,7 @@ import p520io.reactivex.SingleSource;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000J\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\u0002\n\u0002\b\b\u0018\u0000 $2\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0002$%BG\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0010¢\u0006\u0002\u0010\u0012J\u0016\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\f2\u0006\u0010 \u001a\u00020\fJ\b\u0010!\u001a\u00020\u001eH\u0002J\b\u0010\"\u001a\u00020\u001eH\u0002J\u0006\u0010#\u001a\u00020\u001eR\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\f0\u0014X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0015\u001a\u00020\fX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0016\u0010\u0017\"\u0004\b\u0018\u0010\u0019R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u001a\u001a\u00020\fX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001b\u0010\u0017\"\u0004\b\u001c\u0010\u0019R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000¨\u0006&"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/account/email/ChangeEmailViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/account/email/ChangeEmailViewModel$State;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "changeEmailAction", "Lcom/bamtechmedia/dominguez/account/email/ChangeEmailAction;", "successRouter", "Lcom/bamtechmedia/dominguez/auth/api/router/AccountUpdateRouter;", "errorRouter", "Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;", "optionalEmail", "", "otpRouter", "Lcom/bamtechmedia/dominguez/auth/api/router/OtpRouter;", "ioScheduler", "Lio/reactivex/Scheduler;", "mainScheduler", "(Lcom/bamtech/sdk4/account/AccountApi;Lcom/bamtechmedia/dominguez/account/email/ChangeEmailAction;Lcom/bamtechmedia/dominguez/auth/api/router/AccountUpdateRouter;Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;Ljava/lang/String;Lcom/bamtechmedia/dominguez/auth/api/router/OtpRouter;Lio/reactivex/Scheduler;Lio/reactivex/Scheduler;)V", "emailOnce", "Lio/reactivex/Single;", "newEmailInput", "getNewEmailInput", "()Ljava/lang/String;", "setNewEmailInput", "(Ljava/lang/String;)V", "passwordInput", "getPasswordInput", "setPasswordInput", "changeEmail", "", "newEmail", "password", "handleSuccess", "handleSuccessDelayed", "onForgotPasswordClicked", "Companion", "State", "account_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.d.v0.e */
@@ -141,7 +141,7 @@ public final class C5468e extends C5741g<C5474e> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error fetching account's email in ChangeEmailViewModel.", new Object[0]);
+            Timber.m44528b(th, "Error fetching account's email in ChangeEmailViewModel.", new Object[0]);
             C7627a.m22614a(this.f12998c.f12990g, null, 1, null);
         }
     }
@@ -246,7 +246,7 @@ public final class C5468e extends C5741g<C5474e> {
             if (this != obj) {
                 if (obj instanceof C5474e) {
                     C5474e eVar = (C5474e) obj;
-                    if (C12880j.m40224a((Object) this.f12999a, (Object) eVar.f12999a) && C12880j.m40224a((Object) this.f13000b, (Object) eVar.f13000b) && C12880j.m40224a((Object) this.f13001c, (Object) eVar.f13001c)) {
+                    if (Intrinsics.areEqual((Object) this.f12999a, (Object) eVar.f12999a) && Intrinsics.areEqual((Object) this.f13000b, (Object) eVar.f13000b) && Intrinsics.areEqual((Object) this.f13001c, (Object) eVar.f13001c)) {
                         if (this.f13002d == eVar.f13002d) {
                             if (this.f13003e == eVar.f13003e) {
                                 return true;
@@ -486,7 +486,7 @@ public final class C5468e extends C5741g<C5474e> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error attempting to change account email in ChangeEmailViewModel.", new Object[0]);
+            Timber.m44528b(th, "Error attempting to change account email in ChangeEmailViewModel.", new Object[0]);
             C7627a.m22614a(this.f13013c.f12990g, null, 1, null);
         }
     }
@@ -556,7 +556,7 @@ public final class C5468e extends C5741g<C5474e> {
         /* renamed from: a */
         public final void accept(String str) {
             C2755d c = this.f13017c.f12992i;
-            C12880j.m40222a((Object) str, "email");
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, "email");
             c.mo11770a(str, false);
         }
     }
@@ -573,7 +573,7 @@ public final class C5468e extends C5741g<C5474e> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error attempting to forgot password in ChangeEmailViewModel.", new Object[0]);
+            Timber.m44528b(th, "Error attempting to forgot password in ChangeEmailViewModel.", new Object[0]);
         }
     }
 
@@ -623,7 +623,7 @@ public final class C5468e extends C5741g<C5474e> {
             io.reactivex.Single r3 = r3.mo30134g()
             io.reactivex.Single r3 = r3.mo30226d()
             java.lang.String r4 = "accountApi.getAccount().…il() }.toSingle().cache()"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
         L_0x004a:
             r2.f12984a = r3
             io.reactivex.Single<java.lang.String> r3 = r2.f12984a
@@ -631,7 +631,7 @@ public final class C5468e extends C5741g<C5474e> {
             g.n.a.h r4 = p163g.p503n.p504a.C11793e.m37930a(r4)
             java.lang.Object r3 = r3.mo30215a(r4)
             java.lang.String r4 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             g.n.a.d0 r3 = (p163g.p503n.p504a.C11792d0) r3
             g.e.b.d.v0.e$b r4 = new g.e.b.d.v0.e$b
             r4.<init>(r2)
@@ -657,16 +657,16 @@ public final class C5468e extends C5741g<C5474e> {
     /* renamed from: C */
     public final void m18239C() {
         Observable a = Observable.m38311c(5, TimeUnit.SECONDS, this.f12993j).mo30151a(this.f12994k);
-        C12880j.m40222a((Object) a, "Observable.timer(SUCCESS….observeOn(mainScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Observable.timer(SUCCESS….observeOn(mainScheduler)");
         Object a2 = a.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a2).mo29915a(new C5484l(this), new C5485m(this));
     }
 
     /* renamed from: A */
     public final void mo17205A() {
         Object a = this.f12984a.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C5486n(this), C5487o.f13018c);
     }
 
@@ -684,9 +684,9 @@ public final class C5468e extends C5741g<C5474e> {
     public final void mo17206a(String str, String str2) {
         C5475f fVar = new C5475f(this);
         Single c = this.f12984a.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C5478g<Object,Object>(this, str, str2)).mo30222c((Consumer<? super Disposable>) new C5479h<Object>(this));
-        C12880j.m40222a((Object) c, "emailOnce\n            .f…ate(isLoading = true) } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "emailOnce\n            .f…ate(isLoading = true) } }");
         Object a = c.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C5488f(new C5481i(fVar)), new C5482j(this));
     }
 

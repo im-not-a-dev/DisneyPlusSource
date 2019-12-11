@@ -15,7 +15,7 @@ import com.bamtechmedia.dominguez.core.framework.C5735b.C5736a;
 import com.bamtechmedia.dominguez.core.utils.C5880u;
 import com.google.android.material.textfield.C10349c;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0015\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001:\u0001\u0012B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0010\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0010H\u0016R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000¨\u0006\u0013"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/config/ConfigStringsLayoutInflater;", "Lcom/bamtechmedia/dominguez/core/framework/BaseActivity$LayoutInflaterWrapper;", "()V", "contentDescriptionAttribute", "", "defaultAttributeValue", "hintAttribute", "imageViewAttributes", "", "queryHintAttribute", "searchViewAttributes", "textAttribute", "textInputLayoutAttributes", "textInputLayoutHintAttribute", "textViewAttributes", "wrap", "Landroid/view/LayoutInflater;", "inflater", "ConfigStringsFactory2", "config_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.config.j */
@@ -117,7 +117,7 @@ public final class C3553j implements C5736a {
                 if (r8 != 0) goto L_0x007c
                 java.lang.Class<com.google.android.material.textfield.c> r8 = com.google.android.material.textfield.C10349c.class
                 java.lang.String r8 = r8.getCanonicalName()
-                boolean r8 = kotlin.jvm.internal.C12880j.m40224a(r9, r8)
+                boolean r8 = kotlin.jvm.internal.Intrinsics.areEqual(r9, r8)
                 r0 = 0
                 if (r8 == 0) goto L_0x0038
                 com.google.android.material.textfield.c r8 = new com.google.android.material.textfield.c
@@ -126,7 +126,7 @@ public final class C3553j implements C5736a {
             L_0x0038:
                 java.lang.Class<androidx.appcompat.widget.SearchView> r8 = androidx.appcompat.widget.SearchView.class
                 java.lang.String r8 = r8.getCanonicalName()
-                boolean r8 = kotlin.jvm.internal.C12880j.m40224a(r9, r8)
+                boolean r8 = kotlin.jvm.internal.Intrinsics.areEqual(r9, r8)
                 if (r8 == 0) goto L_0x004a
                 androidx.appcompat.widget.SearchView r8 = new androidx.appcompat.widget.SearchView
                 r8.<init>(r10, r11)
@@ -134,7 +134,7 @@ public final class C3553j implements C5736a {
             L_0x004a:
                 java.lang.Class<com.bamtechmedia.dominguez.core.design.widgets.vadergrid.VaderTextView> r8 = com.bamtechmedia.dominguez.core.design.widgets.vadergrid.VaderTextView.class
                 java.lang.String r8 = r8.getCanonicalName()
-                boolean r8 = kotlin.jvm.internal.C12880j.m40224a(r9, r8)
+                boolean r8 = kotlin.jvm.internal.Intrinsics.areEqual(r9, r8)
                 if (r8 == 0) goto L_0x0062
                 com.bamtechmedia.dominguez.core.design.widgets.vadergrid.VaderTextView r8 = new com.bamtechmedia.dominguez.core.design.widgets.vadergrid.VaderTextView
                 r4 = 0
@@ -148,7 +148,7 @@ public final class C3553j implements C5736a {
             L_0x0062:
                 java.lang.Class<androidx.appcompat.widget.AppCompatImageView> r8 = androidx.appcompat.widget.AppCompatImageView.class
                 java.lang.String r8 = r8.getCanonicalName()
-                boolean r8 = kotlin.jvm.internal.C12880j.m40224a(r9, r8)
+                boolean r8 = kotlin.jvm.internal.Intrinsics.areEqual(r9, r8)
                 if (r8 == 0) goto L_0x0074
                 androidx.appcompat.widget.AppCompatImageView r8 = new androidx.appcompat.widget.AppCompatImageView
                 r8.<init>(r10, r11)
@@ -209,11 +209,11 @@ public final class C3553j implements C5736a {
             return layoutInflater;
         }
         LayoutInflater cloneInContext = layoutInflater.cloneInContext(layoutInflater.getContext());
-        C12880j.m40222a((Object) cloneInContext, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) cloneInContext, "it");
         Factory2 factory2 = cloneInContext.getFactory2();
-        C12880j.m40222a((Object) factory2, "currentFactory");
+        Intrinsics.checkReturnedValueIsNotNull((Object) factory2, "currentFactory");
         cloneInContext.setFactory2(new C3554a(factory2));
-        C12880j.m40222a((Object) cloneInContext, "inflater.cloneInContext(…entFactory)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) cloneInContext, "inflater.cloneInContext(…entFactory)\n            }");
         return cloneInContext;
     }
 }

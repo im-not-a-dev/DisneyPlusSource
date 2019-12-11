@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.detail.common;
 
 import com.bamtechmedia.dominguez.core.content.C3651b;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p287k.C7313g;
 import p163g.p201e.p203b.p299m.C7543f.C7544a;
 import p163g.p201e.p203b.p299m.C7547h;
@@ -171,9 +171,9 @@ public final class C5969i {
     /* renamed from: b */
     private final <T extends C3651b> void m19142b(T t, C5970a<T> aVar) {
         Completable c = this.f13802b.mo27468b(t.mo12903f()).mo30052c((Consumer<? super Disposable>) new C5974e<Object>(this));
-        C12880j.m40222a((Object) c, "repository.removeItem(as…pose(); disposable = it }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "repository.removeItem(as…pose(); disposable = it }");
         Object a = c.mo30048a((C11912b<? extends R>) C11793e.m37930a(aVar.getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
         ((C11839v) a).mo29926a(new C5975f(aVar), new C5976g(this, aVar));
     }
 
@@ -191,9 +191,9 @@ public final class C5969i {
     /* renamed from: a */
     public final <T extends C3651b> void mo17918a(T t, C5970a<T> aVar) {
         Completable c = this.f13802b.mo27467a(t.mo12903f()).mo30052c((Consumer<? super Disposable>) new C5971b<Object>(this));
-        C12880j.m40222a((Object) c, "repository.addItem(asset…pose(); disposable = it }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "repository.addItem(asset…pose(); disposable = it }");
         Object a = c.mo30048a((C11912b<? extends R>) C11793e.m37930a(aVar.getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
         ((C11839v) a).mo29926a(new C5972c(aVar), new C5973d(this, aVar));
     }
 

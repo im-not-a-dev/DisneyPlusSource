@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import javax.inject.Provider;
 import kotlin.C13145v;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p319v.C7873f;
 import p163g.p201e.p203b.p319v.C7887p;
 import p163g.p201e.p203b.p319v.C7900q;
@@ -45,7 +45,7 @@ public final class MarketHolder implements C0710d {
         this.f15606Y = provider;
         this.f15607Z = fVar;
         C11976a<C7887p> p = C11976a.m38563p();
-        C12880j.m40222a((Object) p, "BehaviorSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) p, "BehaviorSubject.create()");
         this.f15605X = p;
     }
 

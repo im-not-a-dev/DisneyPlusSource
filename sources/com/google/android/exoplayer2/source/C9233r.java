@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.source;
 import android.os.Handler;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.MediaSource.C9067a;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.source.MediaSourceEventListener.C9068a;
@@ -54,7 +54,7 @@ public abstract class C9233r<T> extends C9229o {
             }
             C9233r.this.mo23965a(this.f20947c, i);
             C9068a aVar = this.f20945U;
-            if (aVar.f20161a != i || !C9554k0.m29414a((Object) aVar.f20162b, (Object) mediaPeriodId2)) {
+            if (aVar.f20161a != i || !Util.m29414a((Object) aVar.f20162b, (Object) mediaPeriodId2)) {
                 this.f20945U = C9233r.this.mo23958a(i, mediaPeriodId2, 0);
             }
             return true;

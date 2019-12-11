@@ -15,7 +15,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p330z.C7946e;
 import p163g.p201e.p203b.p330z.C7948g;
 
@@ -65,7 +65,7 @@ public final class C7006i implements C7005h {
             this.f15561U.f15558e.invoke();
             ImageView imageView = (ImageView) this.f15562c.findViewById(C7946e.avatarProfileRing);
             ImageView imageView2 = imageView;
-            C12880j.m40222a((Object) imageView, "avatarProfileRing");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "avatarProfileRing");
             C3800a.m12829a(imageView2, 0.0f, 1.0f, 0.0f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 200, 0, null, null, null, null, 258044, null);
         }
     }
@@ -84,9 +84,9 @@ public final class C7006i implements C7005h {
         if (this != obj) {
             if (obj instanceof C7006i) {
                 C7006i iVar = (C7006i) obj;
-                if (C12880j.m40224a((Object) this.f15554a, (Object) iVar.f15554a) && C12880j.m40224a((Object) this.f15555b, (Object) iVar.f15555b)) {
+                if (Intrinsics.areEqual((Object) this.f15554a, (Object) iVar.f15554a) && Intrinsics.areEqual((Object) this.f15555b, (Object) iVar.f15555b)) {
                     if (this.f15556c == iVar.f15556c) {
-                        if (!(this.f15557d == iVar.f15557d) || !C12880j.m40224a((Object) this.f15558e, (Object) iVar.f15558e) || !C12880j.m40224a((Object) this.f15559f, (Object) iVar.f15559f) || !C12880j.m40224a((Object) this.f15560g, (Object) iVar.f15560g)) {
+                        if (!(this.f15557d == iVar.f15557d) || !Intrinsics.areEqual((Object) this.f15558e, (Object) iVar.f15558e) || !Intrinsics.areEqual((Object) this.f15559f, (Object) iVar.f15559f) || !Intrinsics.areEqual((Object) this.f15560g, (Object) iVar.f15560g)) {
                             return false;
                         }
                     }
@@ -163,19 +163,19 @@ public final class C7006i implements C7005h {
             }
         }
         TextView textView = (TextView) inflate.findViewById(C7946e.profileNameTextView);
-        C12880j.m40222a((Object) textView, "profileNameTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "profileNameTextView");
         textView.setText(this.f15555b);
         ImageView imageView = (ImageView) inflate.findViewById(C7946e.editButton);
-        C12880j.m40222a((Object) imageView, "editButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "editButton");
         if (!this.f15557d) {
             i = 8;
         }
         imageView.setVisibility(i);
         ConstraintLayout constraintLayout = (ConstraintLayout) inflate.findViewById(C7946e.profileViewItemContainer);
-        C12880j.m40222a((Object) constraintLayout, "profileViewItemContainer");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "profileViewItemContainer");
         constraintLayout.setContentDescription(this.f15560g.mo19295a(this.f15557d, this.f15555b));
         inflate.setOnClickListener(new C7007a(inflate, this));
-        C12880j.m40222a((Object) inflate, "LayoutInflater.from(pare…)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "LayoutInflater.from(pare…)\n            }\n        }");
         return inflate;
     }
 }

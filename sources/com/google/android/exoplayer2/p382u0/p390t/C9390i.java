@@ -4,7 +4,7 @@ import android.text.SpannableStringBuilder;
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9325e;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -43,7 +43,7 @@ final class C9390i implements C9325e {
 
     /* renamed from: a */
     public int mo24145a(long j) {
-        int a = C9554k0.m29386a(this.f21672W, j, false, false);
+        int a = Util.m29386a(this.f21672W, j, false, false);
         if (a < this.f21672W.length) {
             return a;
         }

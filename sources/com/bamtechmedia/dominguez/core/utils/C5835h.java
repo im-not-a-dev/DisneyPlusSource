@@ -7,7 +7,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.text.style.ImageSpan;
 import java.lang.ref.WeakReference;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.h */
 /* compiled from: CenteredImageSpan.kt */
@@ -32,7 +32,7 @@ public final class C5835h extends ImageSpan {
             if (drawable != null) {
                 this.f13621c = new WeakReference<>(drawable);
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -54,7 +54,7 @@ public final class C5835h extends ImageSpan {
         if (bounds.right == bounds.bottom) {
             rect = new Rect(0, 0, i3, i3);
         } else {
-            C12880j.m40222a((Object) bounds, "originalBounds");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bounds, "originalBounds");
             rect = mo17738a(bounds, i3);
         }
         this.f13620U = rect;

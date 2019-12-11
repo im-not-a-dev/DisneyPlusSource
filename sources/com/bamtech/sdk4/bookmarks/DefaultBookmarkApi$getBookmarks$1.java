@@ -10,7 +10,7 @@ import com.bamtech.sdk4.service.NetworkException;
 import java.util.List;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -36,10 +36,10 @@ final class DefaultBookmarkApi$getBookmarks$1<T, R> implements Function<T, Singl
         ContentExtension access$getExtension$p = this.this$0.extension;
         ServiceTransaction serviceTransaction = this.$transaction;
         String str = "transaction";
-        C12880j.m40222a((Object) serviceTransaction, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, str);
         Single query = access$getExtension$p.query(serviceTransaction, BookmarksResponse.class, (GraphQlRequest) this.$request, this.$contentTransactionId);
         ServiceTransaction serviceTransaction2 = this.$transaction;
-        C12880j.m40222a((Object) serviceTransaction2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction2, str);
         return DustExtensionsKt.withDust(query, serviceTransaction2, BookmarksApiKt.getCONTENT_API_QUERY(Dust$Events.INSTANCE), (Object) C13170i0.m40332a(C12907r.m40244a("context", this.$request.getContext()))).mo30233g(new Function<T, R>(this) {
             final /* synthetic */ DefaultBookmarkApi$getBookmarks$1 this$0;
 
@@ -62,12 +62,12 @@ final class DefaultBookmarkApi$getBookmarks$1<T, R> implements Function<T, Singl
                 DefaultBookmarkApi defaultBookmarkApi = defaultBookmarkApi$getBookmarks$1.this$0;
                 List list2 = defaultBookmarkApi$getBookmarks$1.$contentIds;
                 List list3 = list;
-                C12880j.m40222a((Object) list3, "cachedValues");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list3, "cachedValues");
                 List findMissingIds$plugin_bookmarks_release = defaultBookmarkApi.findMissingIds$plugin_bookmarks_release(list2, list3, list);
                 DefaultBookmarkApi$getBookmarks$1 defaultBookmarkApi$getBookmarks$12 = this.this$0;
                 DefaultBookmarkApi defaultBookmarkApi2 = defaultBookmarkApi$getBookmarks$12.this$0;
                 ServiceTransaction serviceTransaction = defaultBookmarkApi$getBookmarks$12.$transaction;
-                C12880j.m40222a((Object) serviceTransaction, "transaction");
+                Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
                 return Single.m38384a((SingleSource<? extends T>) Single.m38399b(list), (SingleSource<? extends T>) defaultBookmarkApi2.fetchMissingBookmarks(serviceTransaction, this.this$0.$contentTransactionId, findMissingIds$plugin_bookmarks_release)).mo30100g();
             }
         }).mo30233g(new Function<T, R>(this) {
@@ -80,7 +80,7 @@ final class DefaultBookmarkApi$getBookmarks$1<T, R> implements Function<T, Singl
             public final List<Bookmark> apply(List<List<Bookmark>> list) {
                 DefaultBookmarkApi defaultBookmarkApi = this.this$0.this$0;
                 List list2 = list;
-                C12880j.m40222a((Object) list2, "cachedValues");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list2, "cachedValues");
                 return defaultBookmarkApi.processBookmarks$plugin_bookmarks_release(list2, C13187p.m40528b((Iterable) list));
             }
         }).mo30235h(new Function<Throwable, SingleSource<? extends List<? extends Bookmark>>>() {

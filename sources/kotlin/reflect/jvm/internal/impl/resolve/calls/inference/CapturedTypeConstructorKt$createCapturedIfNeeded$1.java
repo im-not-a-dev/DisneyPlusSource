@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve.calls.inference;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
 import kotlin.reflect.jvm.internal.impl.types.TypeProjection;
@@ -17,7 +17,7 @@ final class CapturedTypeConstructorKt$createCapturedIfNeeded$1 extends C12881k i
 
     public final KotlinType invoke() {
         KotlinType type = this.$this_createCapturedIfNeeded.getType();
-        C12880j.m40222a((Object) type, "this@createCapturedIfNeeded.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "this@createCapturedIfNeeded.type");
         return type;
     }
 }

@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.metadata.p359j;
 
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.metadata.j.e */
@@ -58,7 +58,7 @@ public final class C8764e extends C8773i {
             return false;
         }
         C8764e eVar = (C8764e) obj;
-        if (this.f18610V != eVar.f18610V || this.f18611W != eVar.f18611W || !C9554k0.m29414a((Object) this.f18609U, (Object) eVar.f18609U) || !Arrays.equals(this.f18612X, eVar.f18612X) || !Arrays.equals(this.f18613Y, eVar.f18613Y)) {
+        if (this.f18610V != eVar.f18610V || this.f18611W != eVar.f18611W || !Util.m29414a((Object) this.f18609U, (Object) eVar.f18609U) || !Arrays.equals(this.f18612X, eVar.f18612X) || !Arrays.equals(this.f18613Y, eVar.f18613Y)) {
             z = false;
         }
         return z;
@@ -84,7 +84,7 @@ public final class C8764e extends C8773i {
     C8764e(Parcel parcel) {
         super("CTOC");
         String readString = parcel.readString();
-        C9554k0.m29394a(readString);
+        Util.castNonNull(readString);
         this.f18609U = readString;
         boolean z = true;
         this.f18610V = parcel.readByte() != 0;
@@ -93,7 +93,7 @@ public final class C8764e extends C8773i {
         }
         this.f18611W = z;
         String[] createStringArray = parcel.createStringArray();
-        C9554k0.m29394a(createStringArray);
+        Util.castNonNull(createStringArray);
         this.f18612X = createStringArray;
         int readInt = parcel.readInt();
         this.f18613Y = new C8773i[readInt];

@@ -6,7 +6,7 @@ import androidx.lifecycle.C0733v;
 import com.bamtechmedia.dominguez.channels.p073tv.ChannelLifecycleObserver;
 import com.bamtechmedia.dominguez.core.p087h.C3824a;
 import com.bamtechmedia.dominguez.core.p087h.C3824a.C3825a;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.channels.tv.g.c */
 /* compiled from: ChannelInitializationAction.kt */
@@ -27,7 +27,7 @@ public final class C3215c implements C3824a {
     /* renamed from: a */
     public void mo11495a(Application application) {
         C0722m i = C0733v.m3782i();
-        C12880j.m40222a((Object) i, "ProcessLifecycleOwner.get()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "ProcessLifecycleOwner.get()");
         i.getLifecycle().mo4134a(this.f8187a);
     }
 }

@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.util.Map;
 import kotlin.Lazy;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KProperty;
 import kotlin.reflect.jvm.internal.KotlinReflectionInternalError;
 
@@ -31,7 +31,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$result$1 impl
     }
 
     public final Object invoke(Object obj, Method method, Object[] objArr) {
-        C12880j.m40222a((Object) method, "method");
+        Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
         String name = method.getName();
         if (name != null) {
             int hashCode = name.hashCode();
@@ -47,7 +47,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$result$1 impl
                 return this.$toString.getValue();
             }
         }
-        if (C12880j.m40224a((Object) name, (Object) "equals") && objArr != null && objArr.length == 1) {
+        if (Intrinsics.areEqual((Object) name, (Object) "equals") && objArr != null && objArr.length == 1) {
             return Boolean.valueOf(this.$equals$2.invoke(C13174k.m40410j(objArr)));
         }
         if (this.$values.containsKey(name)) {

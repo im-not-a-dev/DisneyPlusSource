@@ -6,7 +6,7 @@ import kotlin.C12900n;
 import kotlin.C12900n.C12901a;
 import kotlin.C12903o;
 import kotlin.C13145v;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.p589f0.C12872a;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.C12688f;
@@ -70,7 +70,7 @@ final class C12776i<T> extends C12777j<T> implements Iterator<T>, C12683c<C13145
                 if (i == 1) {
                     Iterator<? extends T> it = this.f29451V;
                     if (it == null) {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     } else if (it.hasNext()) {
                         this.f29453c = 2;
@@ -96,7 +96,7 @@ final class C12776i<T> extends C12777j<T> implements Iterator<T>, C12683c<C13145
                 C12900n.m40236a(vVar);
                 cVar.mo31039b(vVar);
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -113,7 +113,7 @@ final class C12776i<T> extends C12777j<T> implements Iterator<T>, C12683c<C13145
             if (it != null) {
                 return it.next();
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         } else if (i == 3) {
             this.f29453c = 0;

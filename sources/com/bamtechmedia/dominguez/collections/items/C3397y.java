@@ -35,7 +35,7 @@ import java.util.Map;
 import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p135s.C4127b0;
 import p163g.p201e.p202a.C5358a;
 import p163g.p201e.p202a.C5362e;
@@ -232,7 +232,7 @@ public final class C3397y extends C11866a {
             C13145v vVar = C13145v.f29587a;
             C5843l f = this.f8599c.f8587d0;
             View view2 = this.f8598U.itemView;
-            C12880j.m40222a((Object) view2, "holder.itemView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view2, "holder.itemView");
             f.mo17743a(view2);
         }
     }
@@ -272,8 +272,8 @@ public final class C3397y extends C11866a {
         if (this != obj) {
             if (obj instanceof C3397y) {
                 C3397y yVar = (C3397y) obj;
-                if (C12880j.m40224a((Object) this.f8585c, (Object) yVar.f8585c) && C12880j.m40224a((Object) this.f8577U, (Object) yVar.f8577U) && C12880j.m40224a((Object) this.f8578V, (Object) yVar.f8578V)) {
-                    if (!(this.f8579W == yVar.f8579W) || !C12880j.m40224a((Object) this.f8580X, (Object) yVar.f8580X) || !C12880j.m40224a((Object) this.f8581Y, (Object) yVar.f8581Y) || !C12880j.m40224a((Object) this.f8582Z, (Object) yVar.f8582Z) || !C12880j.m40224a((Object) this.f8583a0, (Object) yVar.f8583a0) || !C12880j.m40224a((Object) this.f8584b0, (Object) yVar.f8584b0) || !C12880j.m40224a((Object) this.f8586c0, (Object) yVar.f8586c0) || !C12880j.m40224a((Object) this.f8587d0, (Object) yVar.f8587d0) || !C12880j.m40224a((Object) this.f8588e0, (Object) yVar.f8588e0) || !C12880j.m40224a((Object) this.f8589f0, (Object) yVar.f8589f0) || !C12880j.m40224a((Object) this.f8590g0, (Object) yVar.f8590g0)) {
+                if (Intrinsics.areEqual((Object) this.f8585c, (Object) yVar.f8585c) && Intrinsics.areEqual((Object) this.f8577U, (Object) yVar.f8577U) && Intrinsics.areEqual((Object) this.f8578V, (Object) yVar.f8578V)) {
+                    if (!(this.f8579W == yVar.f8579W) || !Intrinsics.areEqual((Object) this.f8580X, (Object) yVar.f8580X) || !Intrinsics.areEqual((Object) this.f8581Y, (Object) yVar.f8581Y) || !Intrinsics.areEqual((Object) this.f8582Z, (Object) yVar.f8582Z) || !Intrinsics.areEqual((Object) this.f8583a0, (Object) yVar.f8583a0) || !Intrinsics.areEqual((Object) this.f8584b0, (Object) yVar.f8584b0) || !Intrinsics.areEqual((Object) this.f8586c0, (Object) yVar.f8586c0) || !Intrinsics.areEqual((Object) this.f8587d0, (Object) yVar.f8587d0) || !Intrinsics.areEqual((Object) this.f8588e0, (Object) yVar.f8588e0) || !Intrinsics.areEqual((Object) this.f8589f0, (Object) yVar.f8589f0) || !Intrinsics.areEqual((Object) this.f8590g0, (Object) yVar.f8590g0)) {
                         return false;
                     }
                 }
@@ -286,26 +286,26 @@ public final class C3397y extends C11866a {
     public Object getChangePayload(C11853e<?> eVar) {
         if (eVar != null) {
             C3397y yVar = (C3397y) eVar;
-            return new C3399b(!C12880j.m40224a((Object) yVar.f8578V, (Object) this.f8578V), !C12880j.m40224a((Object) this.f8585c, (Object) yVar.f8585c));
+            return new C3399b(!Intrinsics.areEqual((Object) yVar.f8578V, (Object) this.f8578V), !Intrinsics.areEqual((Object) this.f8585c, (Object) yVar.f8585c));
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ShelfListItem");
     }
 
     public int getLayout() {
         String str = "brand";
-        if (C12880j.m40224a((Object) this.f8585c.mo12623d(), (Object) str)) {
+        if (Intrinsics.areEqual((Object) this.f8585c.mo12623d(), (Object) str)) {
             C3402z zVar = this.f8584b0;
             if (zVar != null && zVar.mo12566a()) {
                 return C5364g.animated_brand_shelf_list_item;
             }
         }
-        if (C12880j.m40224a((Object) this.f8585c.mo12623d(), (Object) str)) {
+        if (Intrinsics.areEqual((Object) this.f8585c.mo12623d(), (Object) str)) {
             return C5364g.brand_shelf_list_item;
         }
-        if (C12880j.m40224a((Object) this.f8585c.mo12623d(), (Object) "featured")) {
+        if (Intrinsics.areEqual((Object) this.f8585c.mo12623d(), (Object) "featured")) {
             return C5364g.featured_shelf_list_item;
         }
-        if (C12880j.m40224a((Object) this.f8585c.mo12623d(), (Object) "character")) {
+        if (Intrinsics.areEqual((Object) this.f8585c.mo12623d(), (Object) "character")) {
             return C5364g.shelf_list_item_avatar;
         }
         if (this.f8585c.mo12631j() == C3452q.OVER_BOTTOM) {
@@ -376,7 +376,7 @@ public final class C3397y extends C11866a {
             if (!(bVar == null || bVar2 == null)) {
                 obj = Boolean.valueOf(bVar2.mo12848a(bVar));
             }
-            if (C12880j.m40224a(obj, (Object) Boolean.valueOf(true))) {
+            if (Intrinsics.areEqual(obj, (Object) Boolean.valueOf(true))) {
                 return true;
             }
         }
@@ -439,9 +439,9 @@ public final class C3397y extends C11866a {
             Integer valueOf = Integer.valueOf(C5362e.transparent_placeholder);
             valueOf.intValue();
             String str = "brand";
-            Integer num = C12880j.m40224a((Object) this.f8585c.mo12623d(), (Object) str) ? valueOf : null;
+            Integer num = Intrinsics.areEqual((Object) this.f8585c.mo12623d(), (Object) str) ? valueOf : null;
             Integer valueOf2 = Integer.valueOf(C3446k.m11762a(this.f8585c, aspectRatioImageView));
-            if (C12880j.m40224a((Object) this.f8585c.mo12623d(), (Object) str) || C12880j.m40224a((Object) this.f8585c.mo12623d(), (Object) "character")) {
+            if (Intrinsics.areEqual((Object) this.f8585c.mo12623d(), (Object) str) || Intrinsics.areEqual((Object) this.f8585c.mo12623d(), (Object) "character")) {
                 z = true;
             }
             C5763b.m18702a(aspectRatioImageView, a, a2, num, valueOf2, z, m11643a(bVar2), false, 64, null);
@@ -467,7 +467,7 @@ public final class C3397y extends C11866a {
     private final boolean m11643a(C3626b bVar) {
         boolean z = true;
         boolean z2 = this.f8585c.mo12622c() == ContainerType.HeroContainer || this.f8585c.mo12622c() == ContainerType.HeroFullBleedContainer;
-        boolean a = C12880j.m40224a((Object) this.f8590g0, (Object) "originals");
+        boolean a = Intrinsics.areEqual((Object) this.f8590g0, (Object) "originals");
         if (!(bVar instanceof C3651b) || (bVar instanceof C3685g)) {
             z = false;
         }
@@ -534,15 +534,15 @@ public final class C3397y extends C11866a {
             bVar.itemView.setOnClickListener(new C3400c(this, bVar));
             C3364j jVar = this.f8583a0;
             View view = bVar.itemView;
-            C12880j.m40222a((Object) view, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) view, str);
             jVar.mo12470a(view, this.f8578V);
             return;
         }
         if (z3) {
             View view2 = bVar.itemView;
-            C12880j.m40222a((Object) view2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) view2, str);
             Context context = view2.getContext();
-            C12880j.m40222a((Object) context, "holder.itemView.context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, "holder.itemView.context");
             int b = C5837i.m18839b(context, C5358a.assetPlaceholder, null, false, 6, null);
             AspectRatioImageView aspectRatioImageView2 = (AspectRatioImageView) bVar.mo20994a().findViewById(C5363f.poster);
             if (aspectRatioImageView2 != null) {

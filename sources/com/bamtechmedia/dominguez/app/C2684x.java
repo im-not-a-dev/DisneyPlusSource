@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.app;
 import com.bamtechmedia.dominguez.core.AspectRatioJsonAdapter;
 import com.bamtechmedia.dominguez.core.DateTimeJsonAdapter;
 import com.bamtechmedia.dominguez.core.content.C3682d;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h.C11732g;
 import p163g.p500m.p501a.C11760v;
 import p163g.p500m.p501a.C11760v.C11761a;
@@ -25,7 +25,7 @@ public final class C2684x {
         aVar.mo29870a((C11732g) new C3682d());
         aVar.mo29870a((C11732g) new C2682w());
         C11760v a = aVar.mo29873a();
-        C12880j.m40222a((Object) a, "Moshi.Builder()\n        …ctory())\n        .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Moshi.Builder()\n        …ctory())\n        .build()");
         f7430a = a;
     }
 

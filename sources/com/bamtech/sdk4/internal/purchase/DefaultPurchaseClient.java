@@ -14,7 +14,7 @@ import com.bamtech.sdk4.purchase.ReceiptClaimBody;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -35,13 +35,13 @@ public final class DefaultPurchaseClient implements PurchaseClient {
         Single serviceLink = this.configurationProvider.getServiceLink(serviceTransaction, function1);
         DefaultPurchaseClient$execute$1 defaultPurchaseClient$execute$1 = new DefaultPurchaseClient$execute$1(this, map, serviceTransaction, receiptClaimBody, str);
         Single<? extends PurchaseActivationResult> a = serviceLink.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultPurchaseClient$execute$1);
-        C12880j.m40222a((Object) a, "configurationProvider.ge…ustUrn)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…ustUrn)\n                }");
         return a;
     }
 
     public Single<RetryPolicy> getRetryPolicy(ServiceTransaction serviceTransaction) {
         Single<RetryPolicy> g = this.configurationProvider.getServiceConfigurationExtras(serviceTransaction, DefaultPurchaseClient$getRetryPolicy$1.INSTANCE).mo30233g(DefaultPurchaseClient$getRetryPolicy$2.INSTANCE);
-        C12880j.m40222a((Object) g, "configurationProvider.ge…  .map { it.retryPolicy }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "configurationProvider.ge…  .map { it.retryPolicy }");
         return g;
     }
 

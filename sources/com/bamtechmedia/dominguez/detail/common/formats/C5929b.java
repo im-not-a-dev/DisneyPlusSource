@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Locale;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -146,10 +146,10 @@ public final class C5929b {
         StringBuilder sb = new StringBuilder();
         sb.append("media_format_");
         Locale locale = Locale.US;
-        C12880j.m40222a((Object) locale, "Locale.US");
+        Intrinsics.checkReturnedValueIsNotNull((Object) locale, "Locale.US");
         if (str != null) {
             String lowerCase = str.toLowerCase(locale);
-            C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase(locale)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase(locale)");
             sb.append(lowerCase);
             return sb.toString();
         }
@@ -175,13 +175,13 @@ public final class C5929b {
             } else {
                 single = this.f13730c.mo19381b().mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C5933d<Object,Object>(this, oVar)).mo30233g(C5934e.f13738c);
             }
-            C12880j.m40222a((Object) single, "if (audioTracks.isNullOr…{ it.features }\n        }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) single, "if (audioTracks.isNullOr…{ it.features }\n        }");
             Single<CharSequence> a = single.mo30233g(new C5931b(this, B, z)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C5932c<Object,Object>(this));
-            C12880j.m40222a((Object) a, "audioFeaturesSingle.map …ilder.mapDictionary(it) }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "audioFeaturesSingle.map …ilder.mapDictionary(it) }");
             return a;
         }
         Single<CharSequence> b = Single.m38399b("");
-        C12880j.m40222a((Object) b, "Single.just(\"\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(\"\")");
         return b;
     }
 
@@ -195,7 +195,7 @@ public final class C5929b {
         C5928a a2 = m19032a(lVar.getFormat());
         ArrayList<String> arrayList = new ArrayList<>();
         for (Object next : X) {
-            if (!C12880j.m40224a((Object) (String) next, (Object) "dolby_vision")) {
+            if (!Intrinsics.areEqual((Object) (String) next, (Object) "dolby_vision")) {
                 arrayList.add(next);
             }
         }
@@ -206,7 +206,7 @@ public final class C5929b {
         ArrayList arrayList3 = new ArrayList();
         if (a2 != null) {
             arrayList3.add(a2);
-            if (C12880j.m40224a((Object) a2.mo17850b(), (Object) "UHD")) {
+            if (Intrinsics.areEqual((Object) a2.mo17850b(), (Object) "UHD")) {
                 String str2 = "HD";
                 arrayList3.add(new C5928a(str2, false, str2));
             }
@@ -254,12 +254,12 @@ public final class C5929b {
                 break;
             }
             obj = it.next();
-            if (C12880j.m40224a((Object) ((C5928a) obj).mo17850b(), (Object) "dolby_vision")) {
+            if (Intrinsics.areEqual((Object) ((C5928a) obj).mo17850b(), (Object) "dolby_vision")) {
                 break;
             }
         }
         boolean z = obj != null;
-        boolean z2 = C12880j.m40224a((Object) aVar.mo17850b(), (Object) "hdr") || C12880j.m40224a((Object) aVar.mo17850b(), (Object) "hdr_10");
+        boolean z2 = Intrinsics.areEqual((Object) aVar.mo17850b(), (Object) "hdr") || Intrinsics.areEqual((Object) aVar.mo17850b(), (Object) "hdr_10");
         if (!z || !z2) {
             return false;
         }

@@ -26,14 +26,14 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import net.danlew.android.joda.DateUtils;
 import p096e.p121h.p122j.C4025a;
 import p096e.p121h.p135s.C4187x;
 import p163g.p201e.p203b.p406d0.C10583l.C10587d;
 import p512h.p513c.p514k.C11890i;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0006\u0018\u0000 \u001d2\u00020\u0001:\u0001\u001dB\u0005¢\u0006\u0002\u0010\u0002J&\u0010\u000f\u001a\u0004\u0018\u00010\u00102\u0006\u0010\u0011\u001a\u00020\u00122\b\u0010\u0013\u001a\u0004\u0018\u00010\u00142\b\u0010\u0015\u001a\u0004\u0018\u00010\u0016H\u0016J\b\u0010\u0017\u001a\u00020\u0018H\u0016J\b\u0010\u0019\u001a\u00020\u0018H\u0016J\u001a\u0010\u001a\u001a\u00020\u00182\u0006\u0010\u001b\u001a\u00020\u00102\b\u0010\u0015\u001a\u0004\u0018\u00010\u0016H\u0016J\b\u0010\u001c\u001a\u00020\u0018H\u0002R\u001e\u0010\u0003\u001a\u00020\u00048\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001e\u0010\t\u001a\u00020\n8\u0000@\u0000X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000e¨\u0006\u001e"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/splash/SplashFragment;", "Ldagger/android/support/DaggerFragment;", "()V", "buildInfo", "Lcom/bamtechmedia/dominguez/core/BuildInfo;", "getBuildInfo", "()Lcom/bamtechmedia/dominguez/core/BuildInfo;", "setBuildInfo", "(Lcom/bamtechmedia/dominguez/core/BuildInfo;)V", "viewModel", "Lcom/bamtechmedia/dominguez/splash/SplashViewModel;", "getViewModel$splash_release", "()Lcom/bamtechmedia/dominguez/splash/SplashViewModel;", "setViewModel$splash_release", "(Lcom/bamtechmedia/dominguez/splash/SplashViewModel;)V", "onCreateView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "savedInstanceState", "Landroid/os/Bundle;", "onStart", "", "onStop", "onViewCreated", "view", "startAnimation", "Companion", "splash_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.d0.h */
@@ -82,7 +82,7 @@ public final class C10572h extends C11890i {
         /* renamed from: a */
         public final void mo27453a(C10587d dVar) {
             ProgressBar progressBar = (ProgressBar) this.f25020c._$_findCachedViewById(C10564b.splash_progress_bar);
-            C12880j.m40222a((Object) progressBar, "splash_progress_bar");
+            Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "splash_progress_bar");
             progressBar.setVisibility(dVar.mo27461a() ? 0 : 8);
         }
 
@@ -162,7 +162,7 @@ public final class C10572h extends C11890i {
             }
 
             public final void onAnimationUpdate(ValueAnimator valueAnimator) {
-                C12880j.m40222a((Object) valueAnimator, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueAnimator, "it");
                 Object animatedValue = valueAnimator.getAnimatedValue();
                 if (!(animatedValue instanceof Float)) {
                     animatedValue = null;
@@ -202,7 +202,7 @@ public final class C10572h extends C11890i {
             if (lVar != null) {
                 lottieAnimationView.setProgress(lVar.mo27458y());
             } else {
-                C12880j.m40227c("viewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("viewModel");
                 throw null;
             }
         }
@@ -227,7 +227,7 @@ public final class C10572h extends C11890i {
             C3800a.m12829a(_$_findCachedViewById, 0.0f, 0.0f, 0.0f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1500, 50, accelerateInterpolator, null, dVar, null, 167934, null);
             View _$_findCachedViewById2 = _$_findCachedViewById(C10564b.background);
             View view = _$_findCachedViewById2;
-            C12880j.m40222a((Object) _$_findCachedViewById2, "background");
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById2, "background");
             AccelerateInterpolator accelerateInterpolator3 = r1;
             AccelerateInterpolator accelerateInterpolator4 = new AccelerateInterpolator();
             C3800a.m12829a(view, 0.0f, 0.0f, 0.0f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1500, 0, accelerateInterpolator3, null, null, null, 241662, null);
@@ -263,7 +263,7 @@ public final class C10572h extends C11890i {
         if (lVar != null) {
             return lVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -280,7 +280,7 @@ public final class C10572h extends C11890i {
         super.onStart();
         m33303p();
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         Window window = requireActivity.getWindow();
         window.setNavigationBarColor(C4025a.m13788a(requireContext(), 17170445));
         window.setFlags(DateUtils.FORMAT_NO_NOON, DateUtils.FORMAT_NO_NOON);
@@ -289,13 +289,13 @@ public final class C10572h extends C11890i {
             C5755i.m18679a(this, lVar, null, null, new C10574b(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
     public void onStop() {
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         requireActivity.getWindow().clearFlags(DateUtils.FORMAT_NO_NOON);
         LottieAnimationView lottieAnimationView = (LottieAnimationView) _$_findCachedViewById(C10564b.lottieLoadingView);
         if (lottieAnimationView != null) {
@@ -308,7 +308,7 @@ public final class C10572h extends C11890i {
             super.onStop();
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -320,7 +320,7 @@ public final class C10572h extends C11890i {
         }
         BuildInfo buildInfo = this.f25018V;
         if (buildInfo == null) {
-            C12880j.m40227c("buildInfo");
+            Intrinsics.throwUninitializedPropertyAccessException("buildInfo");
             throw null;
         } else if (buildInfo.mo12784f()) {
             try {
@@ -330,7 +330,7 @@ public final class C10572h extends C11890i {
                     requireActivity().reportFullyDrawn();
                 }
             } catch (Exception unused) {
-                C14100a.m44529c("Attempt to invoke reportFullyDrawn on Debug build failed.", new Object[0]);
+                Timber.m44529c("Attempt to invoke reportFullyDrawn on Debug build failed.", new Object[0]);
             }
         }
     }

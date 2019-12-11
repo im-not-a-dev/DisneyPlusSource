@@ -18,7 +18,7 @@ import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p503n.p504a.C11790c0;
 import p163g.p503n.p504a.C11792d0;
 import p163g.p503n.p504a.C11793e;
@@ -91,7 +91,7 @@ public final class AppLaunchAnalyticsLifecycleObserver implements C0710d {
         public final void accept(Map<String, ? extends Object> map) {
             C2476z a = this.f14169c.f14167c;
             Custom appLaunched = GlimpseEvent.Companion.getAppLaunched();
-            C12880j.m40222a((Object) map, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) map, "it");
             a.mo11536a("", appLaunched, map);
         }
     }
@@ -132,11 +132,11 @@ public final class AppLaunchAnalyticsLifecycleObserver implements C0710d {
     public void mo4127b(C0722m mVar) {
         C5855o oVar = C5855o.f13640a;
         Single b = this.f14165W.getSubscriptions().mo30233g(new C6174b(this)).mo30220b(this.f14166X);
-        C12880j.m40222a((Object) b, "subscriptionApi.getSubsc….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "subscriptionApi.getSubsc….subscribeOn(ioScheduler)");
         C10541b a = C10541b.m33254a(mVar);
-        C12880j.m40222a((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
         Object a2 = b.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a((C11790c0) a));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a2).mo29920a(new C6175c(this), C6176d.f14170c);
     }
 

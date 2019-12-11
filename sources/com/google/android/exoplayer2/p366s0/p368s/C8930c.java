@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
 
@@ -14,7 +14,7 @@ import java.io.IOException;
 public final class C8930c implements C8912g {
 
     /* renamed from: q */
-    private static final int f19201q = C9554k0.m29428b("FLV");
+    private static final int f19201q = Util.m29428b("FLV");
 
     /* renamed from: a */
     private final C9572w f19202a = new C9572w(4);

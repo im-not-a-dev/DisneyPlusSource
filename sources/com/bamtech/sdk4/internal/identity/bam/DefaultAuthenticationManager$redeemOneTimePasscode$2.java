@@ -2,7 +2,7 @@ package com.bamtech.sdk4.internal.identity.bam;
 
 import com.bamtech.sdk4.identity.bam.RedeemedPasscodeToken;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import p520io.reactivex.functions.Function;
@@ -19,7 +19,7 @@ final class DefaultAuthenticationManager$redeemOneTimePasscode$2<T, R> implement
         String tokenId = otpRedeemResponse.getTokenId();
         int expiresIn = otpRedeemResponse.getExpiresIn();
         DateTime now = DateTime.now(DateTimeZone.UTC);
-        C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
         RedeemedPasscodeToken redeemedPasscodeToken = new RedeemedPasscodeToken(tokenId, expiresIn, now, otpRedeemResponse.getSecurityAction(), otpRedeemResponse.getReason());
         return redeemedPasscodeToken;
     }

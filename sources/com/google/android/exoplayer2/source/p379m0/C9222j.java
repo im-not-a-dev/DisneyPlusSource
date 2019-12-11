@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.p379m0;
 
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
@@ -53,7 +53,7 @@ public abstract class C9222j extends C9212d {
                 mo23806a(this.f20916i, i2);
             }
         } finally {
-            C9554k0.m29405a((DataSource) this.f20863h);
+            Util.m29405a((DataSource) this.f20863h);
         }
     }
 

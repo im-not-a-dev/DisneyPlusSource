@@ -3,7 +3,7 @@ package com.bamtech.sdk4.session;
 import com.bamtech.sdk4.service.ServiceException;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0006\u0003\u0004\u0005\u0006\u0007\bB\u0007\b\u0002¢\u0006\u0002\u0010\u0002\u0001\u0005\t\n\u000b\f\r¨\u0006\u000e"}, mo31007d2 = {"Lcom/bamtech/sdk4/session/SessionState;", "", "()V", "AuthenticationExpired", "ExceptionState", "Failed", "Initializing", "LoggedIn", "LoggedOut", "Lcom/bamtech/sdk4/session/SessionState$Initializing;", "Lcom/bamtech/sdk4/session/SessionState$LoggedIn;", "Lcom/bamtech/sdk4/session/SessionState$LoggedOut;", "Lcom/bamtech/sdk4/session/SessionState$AuthenticationExpired;", "Lcom/bamtech/sdk4/session/SessionState$Failed;", "extension-session"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: SessionState.kt */
@@ -23,11 +23,11 @@ public abstract class SessionState {
             if (this == obj) {
                 return true;
             }
-            if (!C12880j.m40224a((Object) AuthenticationExpired.class, (Object) obj != null ? obj.getClass() : null)) {
+            if (!Intrinsics.areEqual((Object) AuthenticationExpired.class, (Object) obj != null ? obj.getClass() : null)) {
                 return false;
             }
             if (obj != null) {
-                return !(C12880j.m40224a((Object) getException(), (Object) ((AuthenticationExpired) obj).getException()) ^ true);
+                return !(Intrinsics.areEqual((Object) getException(), (Object) ((AuthenticationExpired) obj).getException()) ^ true);
             }
             throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.session.SessionState.AuthenticationExpired");
         }
@@ -69,11 +69,11 @@ public abstract class SessionState {
             if (this == obj) {
                 return true;
             }
-            if (!C12880j.m40224a((Object) Failed.class, (Object) obj != null ? obj.getClass() : null)) {
+            if (!Intrinsics.areEqual((Object) Failed.class, (Object) obj != null ? obj.getClass() : null)) {
                 return false;
             }
             if (obj != null) {
-                return !(C12880j.m40224a((Object) getException(), (Object) ((Failed) obj).getException()) ^ true);
+                return !(Intrinsics.areEqual((Object) getException(), (Object) ((Failed) obj).getException()) ^ true);
             }
             throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.session.SessionState.Failed");
         }
@@ -106,7 +106,7 @@ public abstract class SessionState {
             if (this == obj) {
                 return true;
             }
-            return !(C12880j.m40224a((Object) Initializing.class, (Object) obj != null ? obj.getClass() : null) ^ true);
+            return !(Intrinsics.areEqual((Object) Initializing.class, (Object) obj != null ? obj.getClass() : null) ^ true);
         }
 
         public int hashCode() {
@@ -125,7 +125,7 @@ public abstract class SessionState {
             if (this == obj) {
                 return true;
             }
-            return !(C12880j.m40224a((Object) LoggedIn.class, (Object) obj != null ? obj.getClass() : null) ^ true);
+            return !(Intrinsics.areEqual((Object) LoggedIn.class, (Object) obj != null ? obj.getClass() : null) ^ true);
         }
 
         public int hashCode() {
@@ -144,7 +144,7 @@ public abstract class SessionState {
             if (this == obj) {
                 return true;
             }
-            return !(C12880j.m40224a((Object) LoggedOut.class, (Object) obj != null ? obj.getClass() : null) ^ true);
+            return !(Intrinsics.areEqual((Object) LoggedOut.class, (Object) obj != null ? obj.getClass() : null) ^ true);
         }
 
         public int hashCode() {

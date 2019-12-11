@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Property;
 import kotlin.reflect.jvm.internal.impl.resolve.constants.ConstantValue;
@@ -28,10 +28,10 @@ final class MemberDeserializer$loadProperty$3 extends C12881k implements Functio
             AnnotationAndConstantLoader annotationAndConstantLoader = this.this$0.f29574c.getComponents().getAnnotationAndConstantLoader();
             Property property = this.$proto;
             KotlinType returnType = this.$property.getReturnType();
-            C12880j.m40222a((Object) returnType, "property.returnType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) returnType, "property.returnType");
             return (ConstantValue) annotationAndConstantLoader.loadPropertyConstant(access$asProtoContainer, property, returnType);
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.media.offline.CachedMedia;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -23,12 +23,12 @@ final class DefaultOfflineMediaApi$removeAllLicensesOnLogout$1<T, R> implements 
     public final Single<? extends List<CachedMedia>> apply(LogoutMode logoutMode) {
         if (WhenMappings.$EnumSwitchMapping$0[logoutMode.ordinal()] != 1) {
             Single<? extends List<CachedMedia>> b = Single.m38399b(C13185o.m40513a());
-            C12880j.m40222a((Object) b, "Single.just(listOf())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(listOf())");
             return b;
         }
         MediaStorage access$getMediaStorage$p = this.this$0.mediaStorage;
         Object obj = this.this$0.transactionProvider.get();
-        C12880j.m40222a(obj, "transactionProvider.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "transactionProvider.get()");
         return access$getMediaStorage$p.getAll((ServiceTransaction) obj);
     }
 }

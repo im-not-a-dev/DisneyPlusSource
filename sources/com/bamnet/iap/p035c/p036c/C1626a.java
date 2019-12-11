@@ -11,7 +11,7 @@ import com.bamnet.iap.p035c.C1624a;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamnet.iap.c.c.a */
 /* compiled from: BillingMapper.kt */
@@ -21,7 +21,7 @@ public final class C1626a {
 
     /* renamed from: b */
     private final BamnetIAPProductType m7589b(String str) {
-        if (C12880j.m40224a((Object) str, (Object) "subs")) {
+        if (Intrinsics.areEqual((Object) str, (Object) "subs")) {
             return BamnetIAPProductType.SUBSCRIPTION;
         }
         return BamnetIAPProductType.ENTITLED;
@@ -32,7 +32,7 @@ public final class C1626a {
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (C1433s sVar : list) {
             String g = sVar.mo6534g();
-            C12880j.m40222a((Object) g, "it.sku");
+            Intrinsics.checkReturnedValueIsNotNull((Object) g, "it.sku");
             linkedHashMap.put(g, m7588a(sVar));
         }
         return linkedHashMap;
@@ -43,7 +43,7 @@ public final class C1626a {
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (C1426m mVar : list) {
             String h = mVar.mo6520h();
-            C12880j.m40222a((Object) h, "it.sku");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "it.sku");
             linkedHashMap.put(h, mo7254a(mVar, bamnetIAPProductType));
         }
         return linkedHashMap;
@@ -60,12 +60,12 @@ public final class C1626a {
         aVar.mo7201g(sVar.mo6537i());
         aVar.mo7202h(sVar.mo6538j());
         String k = sVar.mo6539k();
-        C12880j.m40222a((Object) k, "skuDetails.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) k, "skuDetails.type");
         aVar.mo7192a(m7589b(k));
         aVar.mo7196b(sVar.mo6528b());
         aVar.mo7199e(sVar.mo6529c());
         BamnetIAPProduct a = aVar.mo7195a();
-        C12880j.m40222a((Object) a, "BamnetIAPProduct.Builder…\n                .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "BamnetIAPProduct.Builder…\n                .build()");
         return a;
     }
 
@@ -87,10 +87,10 @@ public final class C1626a {
 
     /* renamed from: a */
     public final BamnetIAPProductType mo7253a(String str) {
-        if (C12880j.m40224a((Object) "inapp", (Object) str)) {
+        if (Intrinsics.areEqual((Object) "inapp", (Object) str)) {
             return BamnetIAPProductType.ENTITLED;
         }
-        if (C12880j.m40224a((Object) "subs", (Object) str)) {
+        if (Intrinsics.areEqual((Object) "subs", (Object) str)) {
             return BamnetIAPProductType.SUBSCRIPTION;
         }
         return BamnetIAPProductType.UNKNOWN;

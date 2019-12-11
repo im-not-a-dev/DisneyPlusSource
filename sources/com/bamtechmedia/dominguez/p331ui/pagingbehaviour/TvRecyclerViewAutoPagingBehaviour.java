@@ -10,7 +10,7 @@ import com.bamtechmedia.dominguez.core.p088i.C3838h;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5363f;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.p527w.p529c.C11992a;
@@ -75,7 +75,7 @@ public final class TvRecyclerViewAutoPagingBehaviour extends C8087a {
     public /* synthetic */ TvRecyclerViewAutoPagingBehaviour(RecyclerView recyclerView, View view, Function1 function1, C3323f0 f0Var, C3441g gVar, C11969r rVar, int i, DefaultConstructorMarker defaultConstructorMarker) {
         if ((i & 32) != 0) {
             rVar = C11992a.m38600a();
-            C12880j.m40222a((Object) rVar, "AndroidSchedulers.mainThread()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) rVar, "AndroidSchedulers.mainThread()");
         }
         this(recyclerView, view, function1, f0Var, gVar, rVar);
     }
@@ -135,7 +135,7 @@ public final class TvRecyclerViewAutoPagingBehaviour extends C8087a {
     /* access modifiers changed from: private */
     /* renamed from: a */
     public final boolean m23455a(View view) {
-        return C12880j.m40224a((Object) view.getParent(), (Object) this.f17310Y);
+        return Intrinsics.areEqual((Object) view.getParent(), (Object) this.f17310Y);
     }
 
     /* access modifiers changed from: private */

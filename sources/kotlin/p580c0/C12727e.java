@@ -41,7 +41,7 @@ class C12727e extends C12726d {
         L_0x0024:
             byte[] r2 = java.util.Arrays.copyOf(r2, r1)     // Catch:{ all -> 0x0056 }
             java.lang.String r7 = "java.util.Arrays.copyOf(this, newSize)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r7)     // Catch:{ all -> 0x0056 }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r7)     // Catch:{ all -> 0x0056 }
         L_0x002d:
             r7 = 0
             kotlin.p580c0.C12724b.m39863a(r0, r7)

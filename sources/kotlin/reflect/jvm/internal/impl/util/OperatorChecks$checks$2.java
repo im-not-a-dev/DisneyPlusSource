@@ -21,14 +21,14 @@ final class OperatorChecks$checks$2 extends C12881k implements Function1<Functio
             kotlin.reflect.jvm.internal.impl.util.OperatorChecks r1 = kotlin.reflect.jvm.internal.impl.util.OperatorChecks.INSTANCE
             kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor r1 = r6.getContainingDeclaration()
             java.lang.String r2 = "containingDeclaration"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             boolean r0 = r0.invoke(r1)
             r1 = 1
             r2 = 0
             if (r0 != 0) goto L_0x0055
             java.util.Collection r6 = r6.getOverriddenDescriptors()
             java.lang.String r0 = "overriddenDescriptors"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r0)
             boolean r0 = r6 instanceof java.util.Collection
             if (r0 == 0) goto L_0x002a
             boolean r0 = r6.isEmpty()
@@ -45,10 +45,10 @@ final class OperatorChecks$checks$2 extends C12881k implements Function1<Functio
             kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor r0 = (kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor) r0
             kotlin.reflect.jvm.internal.impl.util.OperatorChecks$checks$2$1 r3 = kotlin.reflect.jvm.internal.impl.util.OperatorChecks$checks$2.C131351.INSTANCE
             java.lang.String r4 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r4)
             kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor r0 = r0.getContainingDeclaration()
             java.lang.String r4 = "it.containingDeclaration"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r4)
             boolean r0 = r3.invoke(r0)
             if (r0 == 0) goto L_0x002e
             r6 = 1

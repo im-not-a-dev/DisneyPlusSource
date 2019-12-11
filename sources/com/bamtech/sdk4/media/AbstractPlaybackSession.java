@@ -10,7 +10,7 @@ import com.bamtech.sdk4.media.adapters.PlaybackEventListener;
 import javax.inject.Provider;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000~\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0003\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\b\b&\u0018\u0000 ?2\u00020\u00012\u00020\u0002:\u0001?B\u0005¢\u0006\u0002\u0010\u0003J\b\u0010$\u001a\u00020%H\u0016J\"\u0010&\u001a\u00020'2\u0006\u0010(\u001a\u00020\u000b2\u0006\u0010\u0013\u001a\u00020\u00072\n\b\u0002\u0010)\u001a\u0004\u0018\u00010*J\u0010\u0010+\u001a\u00020%2\u0006\u0010,\u001a\u00020\u001aH\u0016J\u0010\u0010-\u001a\u00020%2\u0006\u0010.\u001a\u00020/H\u0016J\b\u00100\u001a\u00020%H\u0016J\b\u00101\u001a\u00020%H\u0016J\b\u00102\u001a\u00020%H\u0016J\u0010\u00103\u001a\u00020'2\u0006\u0010\u0013\u001a\u00020\u0007H\u0016J\u0018\u00103\u001a\u00020'2\u0006\u0010\u0013\u001a\u00020\u00072\u0006\u0010)\u001a\u00020*H\u0016J\b\u00104\u001a\u00020%H\u0016J\u001c\u00104\u001a\u00020%2\b\u00105\u001a\u0004\u0018\u0001062\b\u00107\u001a\u0004\u0018\u000108H\u0016J\u0012\u00109\u001a\u00020\u000b2\b\b\u0002\u0010:\u001a\u00020\u0005H\u0002J/\u0010;\u001a\u00020%\"\b\b\u0000\u0010<*\u00020\u00072\u0006\u0010(\u001a\u00020\u000b2\u0006\u0010\u0013\u001a\u0002H<2\u0006\u0010=\u001a\u00020'H\u0004¢\u0006\u0002\u0010>R\u000e\u0010\u0004\u001a\u00020\u0005X\u000e¢\u0006\u0002\n\u0000R\u0016\u0010\u0006\u001a\u0004\u0018\u00010\u00078VX\u0004¢\u0006\u0006\u001a\u0004\b\b\u0010\tR\u000e\u0010\n\u001a\u00020\u000bX.¢\u0006\u0002\n\u0000R\u0012\u0010\f\u001a\u00020\rX¦\u0004¢\u0006\u0006\u001a\u0004\b\u000e\u0010\u000fR\u0011\u0010\u0010\u001a\u00020\u00058F¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011R\u0011\u0010\u0012\u001a\u00020\u00058F¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u0011R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u0014\u001a\u00020\u0015X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0016\u0010\u0017R\u001e\u0010\u0018\u001a\u0012\u0012\u0004\u0012\u00020\u001a\u0012\u0006\u0012\u0004\u0018\u00010\u001b\u0018\u00010\u0019X\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u001c\u001a\u00020\u001dX¦\u0004¢\u0006\u0006\u001a\u0004\b\u001e\u0010\u001fR\u0018\u0010 \u001a\b\u0012\u0004\u0012\u00020\u000b0!X¦\u0004¢\u0006\u0006\u001a\u0004\b\"\u0010#¨\u0006@"}, mo31007d2 = {"Lcom/bamtech/sdk4/media/AbstractPlaybackSession;", "Lcom/bamtech/sdk4/media/PlaybackSession;", "Lcom/bamtech/sdk4/media/adapters/PlaybackEventListener;", "()V", "_isReleased", "", "currentMediaItem", "Lcom/bamtech/sdk4/media/MediaItem;", "getCurrentMediaItem", "()Lcom/bamtech/sdk4/media/MediaItem;", "currentServiceTransaction", "Lcom/bamtech/sdk4/internal/service/ServiceTransaction;", "defaultQosPlaybackEventListener", "Lcom/bamtech/sdk4/media/DefaultQOSPlaybackEventListener;", "getDefaultQosPlaybackEventListener", "()Lcom/bamtech/sdk4/media/DefaultQOSPlaybackEventListener;", "isInitialized", "()Z", "isReleased", "mediaItem", "playerAdapter", "Lcom/bamtech/sdk4/media/adapters/AbstractPlayerAdapter;", "getPlayerAdapter", "()Lcom/bamtech/sdk4/media/adapters/AbstractPlayerAdapter;", "serverData", "", "", "", "streamSampler", "Lcom/bamtech/sdk4/internal/media/StreamSampler;", "getStreamSampler", "()Lcom/bamtech/sdk4/internal/media/StreamSampler;", "transactionProvider", "Ljavax/inject/Provider;", "getTransactionProvider", "()Ljavax/inject/Provider;", "collectStreamSample", "", "doPrepare", "Lcom/bamtech/sdk4/media/MediaItemPlaylist;", "transaction", "playlistType", "Lcom/bamtech/sdk4/internal/configuration/PlaylistType;", "onError", "errorMessage", "onException", "throwable", "", "onPause", "onPlay", "onPlayedToCompletion", "prepare", "release", "endCause", "Lcom/bamtech/sdk4/media/PlaybackEndCause;", "error", "Lcom/bamtech/sdk4/media/PlaybackError;", "serviceTransaction", "restart", "start", "T", "playlist", "(Lcom/bamtech/sdk4/internal/service/ServiceTransaction;Lcom/bamtech/sdk4/media/MediaItem;Lcom/bamtech/sdk4/media/MediaItemPlaylist;)V", "Companion", "extension-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: AbstractPlaybackSession.kt */
@@ -48,25 +48,25 @@ public abstract class AbstractPlaybackSession implements PlaybackSession, Playba
             ServiceTransaction serviceTransaction = this.currentServiceTransaction;
             String str = "currentServiceTransaction";
             if (serviceTransaction == null) {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             } else if (serviceTransaction != null) {
                 if (serviceTransaction == null) {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 } else if (serviceTransaction != null) {
                     return serviceTransaction;
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
         }
         Object obj = getTransactionProvider().get();
         ServiceTransaction serviceTransaction2 = (ServiceTransaction) obj;
-        C12880j.m40222a((Object) serviceTransaction2, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction2, "it");
         this.currentServiceTransaction = serviceTransaction2;
-        C12880j.m40222a(obj, "transactionProvider.get(…ServiceTransaction = it }");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "transactionProvider.get(…ServiceTransaction = it }");
         return serviceTransaction2;
     }
 

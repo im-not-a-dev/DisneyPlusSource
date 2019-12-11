@@ -13,7 +13,7 @@ import com.google.android.exoplayer2.p366s0.p371v.C8980k;
 import com.google.android.exoplayer2.p366s0.p371v.C8984n;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9544h;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a.C9246a;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a.C9247b;
 import com.google.android.exoplayer2.upstream.C9455c0.C9456a;
@@ -433,7 +433,7 @@ public class C9248b implements C9456a<C9245a> {
         private static List<byte[]> m27965c(String str) {
             ArrayList arrayList = new ArrayList();
             if (!TextUtils.isEmpty(str)) {
-                byte[] a = C9554k0.m29416a(str);
+                byte[] a = Util.m29416a(str);
                 byte[][] b = C9544h.m29342b(a);
                 if (b == null) {
                     arrayList.add(a);

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Single;
 
@@ -30,7 +30,7 @@ public final class DefaultUserProfileApi implements UserProfileApi {
     public Completable deleteUserProfile(UserProfile userProfile) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         UserProfileExtension userProfileExtension2 = this.userProfileExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(userProfileExtension2.deleteUserProfile(serviceTransaction, userProfile), serviceTransaction, UserProfileApiKt.getPROFILE_API_DELETE_PROFILE(), (Object) null, 4, (Object) null);
     }
 
@@ -49,7 +49,7 @@ public final class DefaultUserProfileApi implements UserProfileApi {
     public Completable setActiveUserProfile(UserProfile userProfile) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         UserProfileExtension userProfileExtension2 = this.userProfileExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(userProfileExtension2.setActiveUserProfile(serviceTransaction, userProfile), serviceTransaction, UserProfileApiKt.getPROFILE_API_SET_ACTIVE_PROFILE(), (Object) null, 4, (Object) null);
     }
 
@@ -60,7 +60,7 @@ public final class DefaultUserProfileApi implements UserProfileApi {
     public <T extends UserProfile, U, V> Single<T> createUserProfile(String str, U u, V v, Class<T> cls) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         UserProfileExtension userProfileExtension2 = this.userProfileExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         ServiceTransaction serviceTransaction2 = serviceTransaction;
         return DustExtensionsKt.withDust$default(userProfileExtension2.createUserProfile(serviceTransaction2, str, u, v, cls), serviceTransaction2, UserProfileApiKt.getPROFILE_API_CREATE_PROFILE(), (Object) null, 4, (Object) null);
     }
@@ -68,28 +68,28 @@ public final class DefaultUserProfileApi implements UserProfileApi {
     public <T extends UserProfile> Single<T> getActiveUserProfile(Class<T> cls) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         UserProfileExtension userProfileExtension2 = this.userProfileExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(userProfileExtension2.getActiveUserProfile(serviceTransaction, cls), serviceTransaction, UserProfileApiKt.getPROFILE_API_GET_ACTIVE_PROFILE(), (Object) null, 4, (Object) null);
     }
 
     public <T extends UserProfile> Single<T> getUserProfile(String str, Class<T> cls) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         UserProfileExtension userProfileExtension2 = this.userProfileExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(userProfileExtension2.getUserProfile(serviceTransaction, str, cls), serviceTransaction, UserProfileApiKt.getPROFILE_API_GET_PROFILE(), (Object) null, 4, (Object) null);
     }
 
     public <T extends UserProfile> Single<List<T>> getUserProfiles(Class<? extends List<? extends T>> cls) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         UserProfileExtension userProfileExtension2 = this.userProfileExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(userProfileExtension2.getUserProfiles(serviceTransaction, cls), serviceTransaction, UserProfileApiKt.getPROFILE_API_GET_PROFILES(), (Object) null, 4, (Object) null);
     }
 
     public <T extends UserProfile> Single<T> updateUserProfile(T t, Class<T> cls) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         UserProfileExtension userProfileExtension2 = this.userProfileExtension;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return DustExtensionsKt.withDust$default(userProfileExtension2.updateUserProfile(serviceTransaction, t, cls), serviceTransaction, UserProfileApiKt.getPROFILE_API_UPDATE_PROFILE(), (Object) null, 4, (Object) null);
     }
 }

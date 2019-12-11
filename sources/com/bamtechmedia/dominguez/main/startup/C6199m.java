@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.main.p235x.C6219d.C6228i;
 import com.bamtechmedia.dominguez.main.p235x.C6234e;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p208e.C5554a;
 import p163g.p201e.p203b.p299m.C7536a;
 import p163g.p201e.p203b.p299m.C7536a.C7538b;
@@ -90,11 +90,11 @@ public final class C6199m implements C7536a {
         if (g != null) {
             this.f14217X.mo18829a(new C6220a(g));
             Completable a = Completable.m38154a((Throwable) new C6186f(g));
-            C12880j.m40222a((Object) a, "Completable.error(Illega…xception(recommendation))");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.error(Illega…xception(recommendation))");
             return a;
         }
         Completable h = Completable.m38169h();
-        C12880j.m40222a((Object) h, "Completable.complete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
         return h;
     }
 
@@ -109,11 +109,11 @@ public final class C6199m implements C7536a {
             sb.append(this.f14214U.mo12726a());
             sb.append(' ');
             Completable a = Completable.m38154a((Throwable) new C6186f(sb.toString()));
-            C12880j.m40222a((Object) a, "Completable.error(Illega…pStateException(message))");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.error(Illega…pStateException(message))");
             return a;
         }
         Completable h = Completable.m38169h();
-        C12880j.m40222a((Object) h, "Completable.complete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
         return h;
     }
 
@@ -139,7 +139,7 @@ public final class C6199m implements C7536a {
     /* renamed from: c */
     public final Completable mo18801c() {
         Completable b = Completable.m38157a(m19675e(), m19676f()).mo30050b((C11945a) new C6201b(this));
-        C12880j.m40222a((Object) b, "Completable.mergeArray(c….toString()\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.mergeArray(c….toString()\n            }");
         return b;
     }
 
@@ -152,7 +152,7 @@ public final class C6199m implements C7536a {
     /* renamed from: a */
     public final void m19674a(String str) {
         Editor edit = this.f14218Y.edit();
-        C12880j.m40222a((Object) edit, "editor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
         edit.putString("devEnvironment", str);
         edit.apply();
     }
@@ -161,7 +161,7 @@ public final class C6199m implements C7536a {
     /* renamed from: a */
     public final void m19671a(int i) {
         Editor edit = this.f14218Y.edit();
-        C12880j.m40222a((Object) edit, "editor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
         edit.putInt("devVersionCode", i);
         edit.apply();
     }

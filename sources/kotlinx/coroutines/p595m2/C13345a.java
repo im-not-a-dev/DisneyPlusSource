@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicLongFieldUpdater;
 import java.util.concurrent.locks.LockSupport;
 import kotlin.C13145v;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlinx.coroutines.C13235e2;
 import kotlinx.coroutines.C13239f2;
 import kotlinx.coroutines.C13292j0;
@@ -243,7 +243,7 @@ public final class C13345a implements Executor, Closeable {
                                         bVar.mo34531b(i);
                                         C13345a.this.m40990a(bVar, andDecrement, i);
                                     } else {
-                                        C12880j.m40220a();
+                                        Intrinsics.throwNpe();
                                         throw null;
                                     }
                                 }
@@ -746,7 +746,7 @@ public final class C13345a implements Executor, Closeable {
             currentThread = null;
         }
         C13347b bVar = (C13347b) currentThread;
-        if (bVar == null || !C12880j.m40224a((Object) bVar.mo34534e(), (Object) this)) {
+        if (bVar == null || !Intrinsics.areEqual((Object) bVar.mo34534e(), (Object) this)) {
             return null;
         }
         return bVar;
@@ -898,7 +898,7 @@ public final class C13345a implements Executor, Closeable {
             int r3 = r3 + 1
             goto L_0x001d
         L_0x005a:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             r9 = 0
             throw r9
         L_0x005f:

@@ -13,7 +13,7 @@ import com.google.android.exoplayer2.C8800n0;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.C9287b.C9291d;
@@ -175,7 +175,7 @@ public class C9295d extends C9306f {
                 r1 = 0
             L_0x0044:
                 r4.f21223c = r1
-                java.lang.String[] r6 = com.google.android.exoplayer2.p393v0.C9554k0.m29443c()
+                java.lang.String[] r6 = com.google.android.exoplayer2.p393v0.Util.m29443c()
                 r7 = 2147483647(0x7fffffff, float:NaN)
                 r1 = 0
             L_0x004e:
@@ -259,7 +259,7 @@ public class C9295d extends C9306f {
                 int i11 = cVar.f21224c0;
                 if (i10 != i11) {
                     a = C9295d.m28240d(i10, i11);
-                } else if (!C9554k0.m29414a((Object) this.f21215U, (Object) cVar.f21215U)) {
+                } else if (!Util.m29414a((Object) this.f21215U, (Object) cVar.f21215U)) {
                     return 0;
                 } else {
                     a = C9295d.m28240d(this.f21225d0, cVar.f21225d0);
@@ -408,21 +408,21 @@ public class C9295d extends C9306f {
             parcel.writeInt(this.f21228a0);
             parcel.writeInt(this.f21229b0);
             parcel.writeInt(this.f21230c0);
-            C9554k0.m29403a(parcel, this.f21231d0);
-            C9554k0.m29403a(parcel, this.f21232e0);
-            C9554k0.m29403a(parcel, this.f21233f0);
+            Util.m29403a(parcel, this.f21231d0);
+            Util.m29403a(parcel, this.f21232e0);
+            Util.m29403a(parcel, this.f21233f0);
             parcel.writeInt(this.f21234g0);
             parcel.writeInt(this.f21235h0);
-            C9554k0.m29403a(parcel, this.f21236i0);
+            Util.m29403a(parcel, this.f21236i0);
             parcel.writeInt(this.f21237j0);
             parcel.writeInt(this.f21238k0);
-            C9554k0.m29403a(parcel, this.f21239l0);
-            C9554k0.m29403a(parcel, this.f21240m0);
-            C9554k0.m29403a(parcel, this.f21241n0);
-            C9554k0.m29403a(parcel, this.f21242o0);
-            C9554k0.m29403a(parcel, this.f21243p0);
-            C9554k0.m29403a(parcel, this.f21244q0);
-            C9554k0.m29403a(parcel, this.f21245r0);
+            Util.m29403a(parcel, this.f21239l0);
+            Util.m29403a(parcel, this.f21240m0);
+            Util.m29403a(parcel, this.f21241n0);
+            Util.m29403a(parcel, this.f21242o0);
+            Util.m29403a(parcel, this.f21243p0);
+            Util.m29403a(parcel, this.f21244q0);
+            Util.m29403a(parcel, this.f21245r0);
             parcel.writeInt(this.f21246s0);
             m28254a(parcel, this.f21247t0);
             parcel.writeSparseBooleanArray(this.f21248u0);
@@ -527,25 +527,25 @@ public class C9295d extends C9306f {
             this.f21228a0 = parcel.readInt();
             this.f21229b0 = parcel.readInt();
             this.f21230c0 = parcel.readInt();
-            this.f21231d0 = C9554k0.m29412a(parcel);
-            this.f21232e0 = C9554k0.m29412a(parcel);
-            this.f21233f0 = C9554k0.m29412a(parcel);
+            this.f21231d0 = Util.m29412a(parcel);
+            this.f21232e0 = Util.m29412a(parcel);
+            this.f21233f0 = Util.m29412a(parcel);
             this.f21234g0 = parcel.readInt();
             this.f21235h0 = parcel.readInt();
-            this.f21236i0 = C9554k0.m29412a(parcel);
+            this.f21236i0 = Util.m29412a(parcel);
             this.f21237j0 = parcel.readInt();
             this.f21238k0 = parcel.readInt();
-            this.f21239l0 = C9554k0.m29412a(parcel);
-            this.f21240m0 = C9554k0.m29412a(parcel);
-            this.f21241n0 = C9554k0.m29412a(parcel);
-            this.f21242o0 = C9554k0.m29412a(parcel);
-            this.f21243p0 = C9554k0.m29412a(parcel);
-            this.f21244q0 = C9554k0.m29412a(parcel);
-            this.f21245r0 = C9554k0.m29412a(parcel);
+            this.f21239l0 = Util.m29412a(parcel);
+            this.f21240m0 = Util.m29412a(parcel);
+            this.f21241n0 = Util.m29412a(parcel);
+            this.f21242o0 = Util.m29412a(parcel);
+            this.f21243p0 = Util.m29412a(parcel);
+            this.f21244q0 = Util.m29412a(parcel);
+            this.f21245r0 = Util.m29412a(parcel);
             this.f21246s0 = parcel.readInt();
             this.f21247t0 = m28252a(parcel);
             SparseBooleanArray readSparseBooleanArray = parcel.readSparseBooleanArray();
-            C9554k0.m29394a(readSparseBooleanArray);
+            Util.castNonNull(readSparseBooleanArray);
             this.f21248u0 = readSparseBooleanArray;
         }
 
@@ -572,7 +572,7 @@ public class C9295d extends C9306f {
             for (Entry entry : map.entrySet()) {
                 TrackGroupArray trackGroupArray = (TrackGroupArray) entry.getKey();
                 if (map2.containsKey(trackGroupArray)) {
-                    if (!C9554k0.m29414a(entry.getValue(), map2.get(trackGroupArray))) {
+                    if (!Util.m29414a(entry.getValue(), map2.get(trackGroupArray))) {
                     }
                 }
                 return false;
@@ -708,7 +708,7 @@ public class C9295d extends C9306f {
 
         /* renamed from: a */
         public C9301e mo24106a(Context context, boolean z) {
-            Point c = C9554k0.m29440c(context);
+            Point c = Util.m29440c(context);
             mo24105a(c.x, c.y, z);
             return this;
         }
@@ -1224,7 +1224,7 @@ public class C9295d extends C9306f {
             str = null;
         }
         m28229a(j0Var, iArr, i, str, i2, i3, i4, i5, a);
-        return a.size() < 2 ? f21208g : C9554k0.m29417a(a);
+        return a.size() < 2 ? f21208g : Util.m29417a(a);
     }
 
     /* renamed from: a */
@@ -1244,7 +1244,7 @@ public class C9295d extends C9306f {
         if (!m28231a(i, false) || (i & i2) == 0) {
             return false;
         }
-        if (str != null && !C9554k0.m29414a((Object) format.f18349b0, (Object) str)) {
+        if (str != null && !Util.m29414a((Object) format.f18349b0, (Object) str)) {
             return false;
         }
         int i7 = format.f18355g0;
@@ -1725,7 +1725,7 @@ public class C9295d extends C9306f {
             return 3;
         } else {
             String str2 = "-";
-            if (C9554k0.m29437b(a2, str2)[0].equals(C9554k0.m29437b(a, str2)[0])) {
+            if (Util.m29437b(a2, str2)[0].equals(Util.m29437b(a, str2)[0])) {
                 return 2;
             }
             return 0;
@@ -1800,12 +1800,12 @@ public class C9295d extends C9306f {
             int r0 = r7 * r5
             if (r3 < r0) goto L_0x0023
             android.graphics.Point r3 = new android.graphics.Point
-            int r4 = com.google.android.exoplayer2.p393v0.C9554k0.m29381a(r0, r6)
+            int r4 = com.google.android.exoplayer2.p393v0.Util.m29381a(r0, r6)
             r3.<init>(r5, r4)
             return r3
         L_0x0023:
             android.graphics.Point r5 = new android.graphics.Point
-            int r3 = com.google.android.exoplayer2.p393v0.C9554k0.m29381a(r3, r7)
+            int r3 = com.google.android.exoplayer2.p393v0.Util.m29381a(r3, r7)
             r5.<init>(r3, r4)
             return r5
         */

@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.util.Comparator;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.metadata.jvm.deserialization.JvmMemberSignature;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b0\u0018\u00002\u00020\u0001:\u0005\u0005\u0006\u0007\b\tB\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\b\u0010\u0003\u001a\u00020\u0004H&\u0001\u0005\n\u000b\f\r\u000e¨\u0006\u000f"}, mo31007d2 = {"Lkotlin/reflect/jvm/internal/JvmFunctionSignature;", "", "()V", "asString", "", "FakeJavaAnnotationConstructor", "JavaConstructor", "JavaMethod", "KotlinConstructor", "KotlinFunction", "Lkotlin/reflect/jvm/internal/JvmFunctionSignature$KotlinFunction;", "Lkotlin/reflect/jvm/internal/JvmFunctionSignature$KotlinConstructor;", "Lkotlin/reflect/jvm/internal/JvmFunctionSignature$JavaMethod;", "Lkotlin/reflect/jvm/internal/JvmFunctionSignature$JavaConstructor;", "Lkotlin/reflect/jvm/internal/JvmFunctionSignature$FakeJavaAnnotationConstructor;", "kotlin-reflection"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -22,7 +22,7 @@ public abstract class JvmFunctionSignature {
             super(null);
             this.jClass = cls;
             Method[] declaredMethods = this.jClass.getDeclaredMethods();
-            C12880j.m40222a((Object) declaredMethods, "jClass.declaredMethods");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaredMethods, "jClass.declaredMethods");
             this.methods = C13174k.m40400c((Object[]) declaredMethods, (Comparator) new C12908x577aa3c4());
         }
 
@@ -47,7 +47,7 @@ public abstract class JvmFunctionSignature {
 
         public String asString() {
             Class[] parameterTypes = this.constructor.getParameterTypes();
-            C12880j.m40222a((Object) parameterTypes, "constructor.parameterTypes");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameterTypes, "constructor.parameterTypes");
             return C13174k.m40371a(parameterTypes, "", "<init>(", ")V", 0, null, JvmFunctionSignature$JavaConstructor$asString$1.INSTANCE, 24, null);
         }
 

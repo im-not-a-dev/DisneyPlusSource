@@ -17,7 +17,7 @@ public final class C9572w {
     private int f22335c;
 
     public C9572w() {
-        this.f22333a = C9554k0.f22286f;
+        this.f22333a = Util.EMPTY_BYTE_ARRAY;
     }
 
     /* renamed from: A */
@@ -171,7 +171,7 @@ public final class C9572w {
             return null;
         }
         int i = this.f22334b;
-        while (i < this.f22335c && !C9554k0.m29452f((int) this.f22333a[i])) {
+        while (i < this.f22335c && !Util.m29452f((int) this.f22333a[i])) {
             i++;
         }
         int i2 = this.f22334b;
@@ -183,7 +183,7 @@ public final class C9572w {
         }
         byte[] bArr2 = this.f22333a;
         int i3 = this.f22334b;
-        String a = C9554k0.m29400a(bArr2, i3, i - i3);
+        String a = Util.m29400a(bArr2, i3, i - i3);
         this.f22334b = i;
         int i4 = this.f22334b;
         int i5 = this.f22335c;
@@ -341,7 +341,7 @@ public final class C9572w {
         }
         byte[] bArr = this.f22333a;
         int i2 = this.f22334b;
-        String a = C9554k0.m29400a(bArr, i2, i - i2);
+        String a = Util.m29400a(bArr, i2, i - i2);
         this.f22334b = i;
         int i3 = this.f22334b;
         if (i3 < this.f22335c) {
@@ -510,7 +510,7 @@ public final class C9572w {
             return "";
         }
         int i2 = (this.f22334b + i) - 1;
-        String a = C9554k0.m29400a(this.f22333a, this.f22334b, (i2 >= this.f22335c || this.f22333a[i2] != 0) ? i : i - 1);
+        String a = Util.m29400a(this.f22333a, this.f22334b, (i2 >= this.f22335c || this.f22333a[i2] != 0) ? i : i - 1);
         this.f22334b += i;
         return a;
     }

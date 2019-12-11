@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.resolve;
 
 import java.util.List;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -22,7 +22,7 @@ public final class InlineClassesUtilsKt {
     public static final boolean isGetterOfUnderlyingPropertyOfInlineClass(CallableDescriptor callableDescriptor) {
         if (callableDescriptor instanceof PropertyGetterDescriptor) {
             PropertyDescriptor correspondingProperty = ((PropertyGetterDescriptor) callableDescriptor).getCorrespondingProperty();
-            C12880j.m40222a((Object) correspondingProperty, "correspondingProperty");
+            Intrinsics.checkReturnedValueIsNotNull((Object) correspondingProperty, "correspondingProperty");
             if (isUnderlyingPropertyOfInlineClass(correspondingProperty)) {
                 return true;
             }
@@ -44,13 +44,13 @@ public final class InlineClassesUtilsKt {
 
     public static final boolean isUnderlyingPropertyOfInlineClass(VariableDescriptor variableDescriptor) {
         DeclarationDescriptor containingDeclaration = variableDescriptor.getContainingDeclaration();
-        C12880j.m40222a((Object) containingDeclaration, "this.containingDeclaration");
+        Intrinsics.checkReturnedValueIsNotNull((Object) containingDeclaration, "this.containingDeclaration");
         if (!isInlineClass(containingDeclaration)) {
             return false;
         }
         if (containingDeclaration != null) {
             ValueParameterDescriptor underlyingRepresentation = underlyingRepresentation((ClassDescriptor) containingDeclaration);
-            return C12880j.m40224a((Object) underlyingRepresentation != null ? underlyingRepresentation.getName() : null, (Object) variableDescriptor.getName());
+            return Intrinsics.areEqual((Object) underlyingRepresentation != null ? underlyingRepresentation.getName() : null, (Object) variableDescriptor.getName());
         }
         throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
     }
@@ -62,7 +62,7 @@ public final class InlineClassesUtilsKt {
         }
         MemberScope memberScope = kotlinType.getMemberScope();
         Name name = unsubstitutedUnderlyingParameter.getName();
-        C12880j.m40222a((Object) name, "parameter.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "parameter.name");
         PropertyDescriptor propertyDescriptor = (PropertyDescriptor) C13199w.m40603n(memberScope.getContributedVariables(name, NoLookupLocation.FOR_ALREADY_TRACKED));
         if (propertyDescriptor != null) {
             return propertyDescriptor.getType();

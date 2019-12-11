@@ -9,7 +9,7 @@ import kotlin.C12900n;
 import kotlin.C12900n.C12901a;
 import kotlin.C12903o;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlinx.coroutines.android.c */
 /* compiled from: HandlerDispatcher.kt */
@@ -19,7 +19,7 @@ public final class C13216c {
         try {
             C12901a aVar = C12900n.f29540c;
             Looper mainLooper = Looper.getMainLooper();
-            C12880j.m40222a((Object) mainLooper, "Looper.getMainLooper()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) mainLooper, "Looper.getMainLooper()");
             obj = new C13214a(m40649a(mainLooper, true), "Main");
             C12900n.m40236a(obj);
         } catch (Throwable th) {
@@ -47,9 +47,9 @@ public final class C13216c {
                 }
                 try {
                     Constructor declaredConstructor = Handler.class.getDeclaredConstructor(new Class[]{Looper.class, Callback.class, Boolean.TYPE});
-                    C12880j.m40222a((Object) declaredConstructor, "Handler::class.java.getD…:class.javaPrimitiveType)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) declaredConstructor, "Handler::class.java.getD…:class.javaPrimitiveType)");
                     Object newInstance = declaredConstructor.newInstance(new Object[]{looper, null, Boolean.valueOf(true)});
-                    C12880j.m40222a(newInstance, "constructor.newInstance(this, null, true)");
+                    Intrinsics.checkReturnedValueIsNotNull(newInstance, "constructor.newInstance(this, null, true)");
                     return (Handler) newInstance;
                 } catch (NoSuchMethodException unused) {
                     return new Handler(looper);

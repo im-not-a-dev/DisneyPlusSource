@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.List;
 import java.util.Set;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.types.model.CapturedTypeMarker;
 import kotlin.reflect.jvm.internal.impl.types.model.KotlinTypeMarker;
 import kotlin.reflect.jvm.internal.impl.types.model.SimpleTypeMarker;
@@ -113,10 +113,10 @@ public abstract class AbstractTypeCheckerContext implements TypeSystemContext {
                 this.supertypesLocked = false;
                 return;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

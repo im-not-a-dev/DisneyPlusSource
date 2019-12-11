@@ -15,8 +15,8 @@ import com.google.android.exoplayer2.p361p0.C8844o.C8847c;
 import com.google.android.exoplayer2.p361p0.C8844o.C8848d;
 import com.google.android.exoplayer2.p361p0.C8851q.C8852a;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayDeque;
@@ -311,10 +311,10 @@ public final class C8856u implements C8844o {
         /* renamed from: a */
         public AudioTrack mo23168a(boolean z, C8831i iVar, int i) throws C8846b {
             AudioTrack audioTrack;
-            if (C9554k0.f22281a >= 21) {
+            if (Util.SDK_INT >= 21) {
                 audioTrack = m25795b(z, iVar, i);
             } else {
-                int c = C9554k0.m29438c(iVar.f18828c);
+                int c = Util.m29438c(iVar.f18828c);
                 if (i == 0) {
                     audioTrack = new AudioTrack(c, this.f18950e, this.f18951f, this.f18952g, this.f18953h, 1);
                 } else {
@@ -337,7 +337,7 @@ public final class C8856u implements C8844o {
             if (this.f18946a) {
                 int minBufferSize = AudioTrack.getMinBufferSize(this.f18950e, this.f18951f, this.f18952g);
                 C9537e.m29301b(minBufferSize != -2);
-                return C9554k0.m29382a(minBufferSize * 4, ((int) mo23167a(250000)) * this.f18949d, (int) Math.max((long) minBufferSize, mo23167a(750000) * ((long) this.f18949d)));
+                return Util.m29382a(minBufferSize * 4, ((int) mo23167a(250000)) * this.f18949d, (int) Math.max((long) minBufferSize, mo23167a(750000) * ((long) this.f18949d)));
             }
             int b = C8856u.m25757c(this.f18952g);
             if (this.f18952g == 5) {
@@ -453,7 +453,7 @@ public final class C8856u implements C8844o {
             sb.append(C8856u.this.m25767j());
             String sb2 = sb.toString();
             if (!C8856u.f18898T) {
-                C9563q.m29500d("AudioTrack", sb2);
+                Log.m29500d("AudioTrack", sb2);
                 return;
             }
             throw new C8862f(sb2, null);
@@ -477,7 +477,7 @@ public final class C8856u implements C8844o {
             sb.append(C8856u.this.m25767j());
             String sb2 = sb.toString();
             if (!C8856u.f18898T) {
-                C9563q.m29500d("AudioTrack", sb2);
+                Log.m29500d("AudioTrack", sb2);
                 return;
             }
             throw new C8862f(sb2, null);
@@ -492,7 +492,7 @@ public final class C8856u implements C8844o {
             StringBuilder sb = new StringBuilder();
             sb.append("Ignoring impossibly large audio latency: ");
             sb.append(j);
-            C9563q.m29500d("AudioTrack", sb.toString());
+            Log.m29500d("AudioTrack", sb.toString());
         }
 
         /* renamed from: a */
@@ -624,7 +624,7 @@ public final class C8856u implements C8844o {
     /* renamed from: n */
     private void m25771n() {
         if (m25768k()) {
-            if (C9554k0.f22281a >= 21) {
+            if (Util.SDK_INT >= 21) {
                 m25750a(this.f18931o, this.f18902D);
             } else {
                 m25755b(this.f18931o, this.f18902D);
@@ -736,7 +736,7 @@ public final class C8856u implements C8844o {
         C9537e.m29296a(dVar);
         this.f18931o = dVar.mo23168a(this.f18915Q, this.f18932p, this.f18913O);
         int audioSessionId = this.f18931o.getAudioSessionId();
-        if (f18897S && C9554k0.f22281a < 21) {
+        if (f18897S && Util.SDK_INT < 21) {
             AudioTrack audioTrack = this.f18928l;
             if (!(audioTrack == null || audioSessionId == audioTrack.getAudioSessionId())) {
                 m25770m();
@@ -848,7 +848,7 @@ public final class C8856u implements C8844o {
                 C9537e.m29299a(byteBuffer2 == byteBuffer);
             } else {
                 this.f18906H = byteBuffer;
-                if (C9554k0.f22281a < 21) {
+                if (Util.SDK_INT < 21) {
                     int remaining = byteBuffer.remaining();
                     byte[] bArr = this.f18907I;
                     if (bArr == null || bArr.length < remaining) {
@@ -861,7 +861,7 @@ public final class C8856u implements C8844o {
                 }
             }
             int remaining2 = byteBuffer.remaining();
-            if (C9554k0.f22281a < 21) {
+            if (Util.SDK_INT < 21) {
                 int a = this.f18925i.mo23139a(this.f18941y);
                 if (a > 0) {
                     i = this.f18931o.write(this.f18907I, this.f18908J, Math.min(remaining2, a));
@@ -899,8 +899,8 @@ public final class C8856u implements C8844o {
     /* renamed from: a */
     public boolean mo23115a(int i, int i2) {
         boolean z = true;
-        if (C9554k0.m29450e(i2)) {
-            if (i2 == 4 && C9554k0.f22281a < 21) {
+        if (Util.m29450e(i2)) {
+            if (i2 == 4 && Util.SDK_INT < 21) {
                 z = false;
             }
             return z;
@@ -939,7 +939,7 @@ public final class C8856u implements C8844o {
         int i9;
         boolean z;
         int i10 = i2;
-        if (C9554k0.f22281a < 21 && i10 == 8 && iArr == null) {
+        if (Util.SDK_INT < 21 && i10 == 8 && iArr == null) {
             iArr2 = new int[6];
             for (int i11 = 0; i11 < iArr2.length; i11++) {
                 iArr2[i11] = i11;
@@ -947,11 +947,11 @@ public final class C8856u implements C8844o {
         } else {
             iArr2 = iArr;
         }
-        boolean e = C9554k0.m29450e(i);
+        boolean e = Util.m29450e(i);
         boolean z2 = true;
         int i12 = i;
         boolean z3 = e && i12 != 4;
-        boolean z4 = this.f18919c && mo23115a(i10, 4) && C9554k0.m29445d(i);
+        boolean z4 = this.f18919c && mo23115a(i10, 4) && Util.m29445d(i);
         C8840m[] mVarArr = z4 ? this.f18923g : this.f18922f;
         if (z3) {
             this.f18921e.mo23071a(i5, i6);
@@ -986,7 +986,7 @@ public final class C8856u implements C8844o {
         }
         int a = m25745a(i9, e);
         if (a != 0) {
-            C8860d dVar = new C8860d(e, e ? C9554k0.m29425b(i, i2) : -1, i3, e ? C9554k0.m29425b(i7, i9) : -1, i8, a, i7, i4, z3, z3 && !z4, mVarArr);
+            C8860d dVar = new C8860d(e, e ? Util.m29425b(i, i2) : -1, i3, e ? Util.m29425b(i7, i9) : -1, i8, a, i7, i4, z3, z3 && !z4, mVarArr);
             if (!z && this.f18929m == null) {
                 z2 = false;
             }
@@ -1063,7 +1063,7 @@ public final class C8856u implements C8844o {
             a = this.f18918b.mo23164a(j - this.f18936t);
         } else {
             j2 = this.f18935s;
-            a = C9554k0.m29387a(j - this.f18936t, this.f18934r.f18372a);
+            a = Util.m29387a(j - this.f18936t, this.f18934r.f18372a);
         }
         return j2 + a;
     }
@@ -1131,7 +1131,7 @@ public final class C8856u implements C8844o {
                     sb.append(", got ");
                     sb.append(j2);
                     sb.append("]");
-                    C9563q.m29497b(str, sb.toString());
+                    Log.m29497b(str, sb.toString());
                     this.f18900B = 2;
                 }
                 if (this.f18900B == 2) {
@@ -1162,7 +1162,7 @@ public final class C8856u implements C8844o {
         } else if (!this.f18925i.mo23148d(m25767j())) {
             return false;
         } else {
-            C9563q.m29500d(str, "Resetting stalled audio track");
+            Log.m29500d(str, "Resetting stalled audio track");
             flush();
             return true;
         }
@@ -1233,7 +1233,7 @@ public final class C8856u implements C8844o {
 
     /* renamed from: a */
     public void mo23110a(int i) {
-        C9537e.m29301b(C9554k0.f22281a >= 21);
+        C9537e.m29301b(Util.SDK_INT >= 21);
         if (!this.f18915Q || this.f18913O != i) {
             this.f18915Q = true;
             this.f18913O = i;
@@ -1265,19 +1265,19 @@ public final class C8856u implements C8844o {
 
     /* renamed from: a */
     private static int m25745a(int i, boolean z) {
-        if (C9554k0.f22281a <= 28 && !z) {
+        if (Util.SDK_INT <= 28 && !z) {
             if (i == 7) {
                 i = 8;
             } else if (i == 3 || i == 4 || i == 5) {
                 i = 6;
             }
         }
-        if (C9554k0.f22281a <= 26) {
-            if ("fugu".equals(C9554k0.f22282b) && !z && i == 1) {
+        if (Util.SDK_INT <= 26) {
+            if ("fugu".equals(Util.DEVICE) && !z && i == 1) {
                 i = 2;
             }
         }
-        return C9554k0.m29380a(i);
+        return Util.m29380a(i);
     }
 
     /* renamed from: a */
@@ -1319,7 +1319,7 @@ public final class C8856u implements C8844o {
     @TargetApi(21)
     /* renamed from: a */
     private int m25747a(AudioTrack audioTrack, ByteBuffer byteBuffer, int i, long j) {
-        if (C9554k0.f22281a >= 26) {
+        if (Util.SDK_INT >= 26) {
             return audioTrack.write(byteBuffer, i, 1, j * 1000);
         }
         if (this.f18937u == null) {

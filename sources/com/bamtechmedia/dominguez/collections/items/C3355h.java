@@ -24,7 +24,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p135s.C4127b0;
 import p163g.p201e.p202a.C5361d;
@@ -387,7 +387,7 @@ public final class C3355h extends C11866a {
             }
             C3355h hVar = this.f8479c;
             View view = this.f8478U.itemView;
-            C12880j.m40222a((Object) view, "holder.itemView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view, "holder.itemView");
             hVar.m11538a(view, z);
         }
     }
@@ -422,14 +422,14 @@ public final class C3355h extends C11866a {
                 this.f8482c.f8463g0.mo12549a(this.f8482c.f8450U, this.f8482c.f8451V);
             } catch (IllegalArgumentException e) {
                 View view2 = this.f8481V.itemView;
-                C12880j.m40222a((Object) view2, "holder.itemView");
+                Intrinsics.checkReturnedValueIsNotNull((Object) view2, "holder.itemView");
                 Context context = view2.getContext();
-                C12880j.m40222a((Object) context, "holder.itemView.context");
+                Intrinsics.checkReturnedValueIsNotNull((Object) context, "holder.itemView.context");
                 String localizedMessage = e.getLocalizedMessage();
-                C12880j.m40222a((Object) localizedMessage, "e.localizedMessage");
+                Intrinsics.checkReturnedValueIsNotNull((Object) localizedMessage, "e.localizedMessage");
                 Toast makeText = Toast.makeText(context.getApplicationContext(), localizedMessage, 0);
                 makeText.show();
-                C12880j.m40222a((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
+                Intrinsics.checkReturnedValueIsNotNull((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
             }
         }
     }
@@ -462,29 +462,29 @@ public final class C3355h extends C11866a {
             if (this.f8486c) {
                 ProgressBar progressBar = this.f8483U;
                 ProgressBar progressBar2 = progressBar;
-                C12880j.m40222a((Object) progressBar, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, str);
                 ProgressBar progressBar3 = this.f8483U;
-                C12880j.m40222a((Object) progressBar3, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) progressBar3, str);
                 float scaleX = progressBar3.getScaleX();
                 float measuredHeight = 1.0f / ((((float) this.f8484V) / ((float) this.f8485W.getMeasuredHeight())) + 1.0f);
                 ProgressBar progressBar4 = this.f8483U;
-                C12880j.m40222a((Object) progressBar4, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) progressBar4, str);
                 Context context = progressBar4.getContext();
-                C12880j.m40222a((Object) context, "progressBar.context");
+                Intrinsics.checkReturnedValueIsNotNull((Object) context, "progressBar.context");
                 Resources resources = context.getResources();
-                C12880j.m40222a((Object) resources, "resources");
+                Intrinsics.checkReturnedValueIsNotNull((Object) resources, "resources");
                 C3800a.m12829a(progressBar2, 0.0f, 0.0f, scaleX, measuredHeight, null, null, 0.0f, TypedValue.applyDimension(1, -4.0f, resources.getDisplayMetrics()), 0.0f, 0.0f, 0.0f, 0.0f, 150, 0, C3822a.f9509k.mo13746a(), null, null, null, 241459, null);
                 return;
             }
             ProgressBar progressBar5 = this.f8483U;
             ProgressBar progressBar6 = progressBar5;
-            C12880j.m40222a((Object) progressBar5, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) progressBar5, str);
             ProgressBar progressBar7 = this.f8483U;
-            C12880j.m40222a((Object) progressBar7, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) progressBar7, str);
             float scaleX2 = progressBar7.getScaleX();
             float measuredHeight2 = (((float) this.f8484V) / ((float) this.f8485W.getMeasuredHeight())) + 1.0f;
             ProgressBar progressBar8 = this.f8483U;
-            C12880j.m40222a((Object) progressBar8, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) progressBar8, str);
             C3800a.m12829a(progressBar6, 0.0f, 0.0f, scaleX2, measuredHeight2, null, null, progressBar8.getTranslationY(), 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 250, 0, C3822a.f9509k.mo13747b(), null, null, null, 241459, null);
         }
     }
@@ -517,7 +517,7 @@ public final class C3355h extends C11866a {
     public Object getChangePayload(C11853e<?> eVar) {
         if (eVar != null) {
             C3355h hVar = (C3355h) eVar;
-            C3358c cVar = new C3358c(hVar.f8456a0 != this.f8456a0, !C12880j.m40224a((Object) hVar.f8458c, (Object) this.f8458c), !C12880j.m40224a((Object) hVar.f8452W, (Object) this.f8452W), (C12880j.m40224a((Object) hVar.f8453X, (Object) this.f8453X) ^ true) || (C12880j.m40224a((Object) hVar.f8454Y, (Object) this.f8454Y) ^ true), !C12880j.m40224a((Object) hVar.f8455Z, (Object) this.f8455Z));
+            C3358c cVar = new C3358c(hVar.f8456a0 != this.f8456a0, !Intrinsics.areEqual((Object) hVar.f8458c, (Object) this.f8458c), !Intrinsics.areEqual((Object) hVar.f8452W, (Object) this.f8452W), (Intrinsics.areEqual((Object) hVar.f8453X, (Object) this.f8453X) ^ true) || (Intrinsics.areEqual((Object) hVar.f8454Y, (Object) this.f8454Y) ^ true), !Intrinsics.areEqual((Object) hVar.f8455Z, (Object) this.f8455Z));
             return cVar;
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ContinueWatchingItem");
@@ -572,12 +572,12 @@ public final class C3355h extends C11866a {
             r3 = r23
             android.view.View r4 = r1.itemView
             java.lang.String r5 = "holder.itemView"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r5)
             int r6 = p163g.p201e.p202a.C5363f.titleView
             android.view.View r4 = r4.findViewById(r6)
             android.widget.TextView r4 = (android.widget.TextView) r4
             java.lang.String r6 = "holder.itemView.titleView"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r6)
             com.bamtechmedia.dominguez.core.content.o r6 = r0.f8451V
             boolean r6 = r6 instanceof com.bamtechmedia.dominguez.core.content.C3685g
             if (r6 == 0) goto L_0x0024
@@ -641,12 +641,12 @@ public final class C3355h extends C11866a {
             android.view.View r6 = r6.findViewById(r7)
             com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView r6 = (com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView) r6
             java.lang.String r7 = "holder.poster"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r7)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r7)
             r6.setContentDescription(r4)
         L_0x00a5:
             com.bamtechmedia.dominguez.collections.ui.c r10 = r0.f8462f0
             android.view.View r11 = r1.itemView
-            kotlin.jvm.internal.C12880j.m40222a(r11, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r11, r5)
             r12 = 0
             com.bamtechmedia.dominguez.collections.o0.j r13 = r0.f8458c
             r14 = 0
@@ -661,12 +661,12 @@ public final class C3355h extends C11866a {
             r4.setOnClickListener(r6)
             com.bamtechmedia.dominguez.collections.items.j r4 = r0.f8461e0
             android.view.View r6 = r1.itemView
-            kotlin.jvm.internal.C12880j.m40222a(r6, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r5)
             com.bamtechmedia.dominguez.core.content.o r7 = r0.f8451V
             r4.mo12470a(r6, r7)
             com.bamtechmedia.dominguez.collections.items.w r4 = r0.f8463g0
             android.view.View r6 = r1.itemView
-            kotlin.jvm.internal.C12880j.m40222a(r6, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r5)
             java.lang.String r7 = r0.f8450U
             com.bamtechmedia.dominguez.core.content.o r10 = r0.f8451V
             r4.mo12548a(r6, r7, r10)
@@ -767,7 +767,7 @@ public final class C3355h extends C11866a {
             r10 = r2
             com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView r10 = (com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView) r10
             java.lang.String r2 = "posterImage"
-            kotlin.jvm.internal.C12880j.m40222a(r10, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r10, r2)
             com.bamtechmedia.dominguez.core.content.assets.Image r11 = r0.f8452W
             int r12 = p163g.p201e.p202a.C5362e.fallback_1_78_tile
             r13 = 0
@@ -825,14 +825,14 @@ public final class C3355h extends C11866a {
             android.view.View r2 = r2.findViewById(r6)
             android.widget.TextView r2 = (android.widget.TextView) r2
             java.lang.String r6 = "holder.titleView"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r6)
             java.lang.String r6 = r0.f8453X
             r2.setText(r6)
             android.view.View r2 = r21.mo20994a()
             int r6 = p163g.p201e.p202a.C5363f.subtitleView
             android.view.View r2 = r2.findViewById(r6)
             android.widget.TextView r2 = (android.widget.TextView) r2
-            kotlin.jvm.internal.C12880j.m40222a(r2, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r4)
             java.lang.String r6 = r0.f8454Y
             r2.setText(r6)
         L_0x020c:
@@ -878,7 +878,7 @@ public final class C3355h extends C11866a {
             android.view.View r2 = r2.findViewById(r6)
             android.widget.TextView r2 = (android.widget.TextView) r2
             java.lang.String r6 = "holder.remainTimeView"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r6)
             r2.setVisibility(r9)
             boolean r2 = r0.f8457b0
             if (r2 != 0) goto L_0x0297
@@ -900,14 +900,14 @@ public final class C3355h extends C11866a {
             int r7 = p163g.p201e.p202a.C5363f.subtitleView
             android.view.View r2 = r2.findViewById(r7)
             android.widget.TextView r2 = (android.widget.TextView) r2
-            kotlin.jvm.internal.C12880j.m40222a(r2, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r4)
             java.lang.String r4 = r0.f8455Z
             r2.setText(r4)
             android.view.View r2 = r21.mo20994a()
             int r4 = p163g.p201e.p202a.C5363f.remainTimeView
             android.view.View r2 = r2.findViewById(r4)
             android.widget.TextView r2 = (android.widget.TextView) r2
-            kotlin.jvm.internal.C12880j.m40222a(r2, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r6)
             r4 = 4
             r2.setVisibility(r4)
             goto L_0x02ab
@@ -916,7 +916,7 @@ public final class C3355h extends C11866a {
             int r4 = p163g.p201e.p202a.C5363f.remainTimeView
             android.view.View r2 = r2.findViewById(r4)
             android.widget.TextView r2 = (android.widget.TextView) r2
-            kotlin.jvm.internal.C12880j.m40222a(r2, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r6)
             java.lang.String r4 = r0.f8455Z
             r2.setText(r4)
         L_0x02ab:
@@ -958,7 +958,7 @@ public final class C3355h extends C11866a {
             android.view.View r2 = r2.findViewById(r3)
             android.widget.ProgressBar r2 = (android.widget.ProgressBar) r2
             java.lang.String r3 = "holder.watchingProgress"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             int r3 = r0.f8456a0
             r2.setProgress(r3)
             boolean r2 = r0.f8457b0
@@ -972,19 +972,19 @@ public final class C3355h extends C11866a {
             r2.setProgress(r3)
         L_0x030f:
             android.view.View r2 = r1.itemView
-            kotlin.jvm.internal.C12880j.m40222a(r2, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r5)
             android.content.Context r2 = r2.getContext()
             java.lang.String r3 = "holder.itemView.context"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             int r3 = p163g.p201e.p202a.C5358a.assetCornerRadius
             float r2 = com.bamtechmedia.dominguez.core.utils.C5837i.m18837b(r2, r3)
             android.view.View r3 = r1.itemView
-            kotlin.jvm.internal.C12880j.m40222a(r3, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r5)
             com.bamtechmedia.dominguez.core.p.a r4 = new com.bamtechmedia.dominguez.core.p.a
             r4.<init>(r2)
             r3.setOutlineProvider(r4)
             android.view.View r1 = r1.itemView
-            kotlin.jvm.internal.C12880j.m40222a(r1, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r5)
             r1.setClipToOutline(r8)
         L_0x0338:
             return

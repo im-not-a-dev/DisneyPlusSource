@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.C12898l;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotated;
@@ -316,7 +316,7 @@ public final class SignatureEnhancement {
                 java.lang.Object r14 = kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.SignatureEnhancementKt.select(r1, r14, r8, r9, r6)
                 kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.MutabilityQualifier r14 = (kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.MutabilityQualifier) r14
                 if (r5 != r13) goto L_0x00ec
-                boolean r13 = kotlin.jvm.internal.C12880j.m40224a(r12, r2)
+                boolean r13 = kotlin.jvm.internal.Intrinsics.areEqual(r12, r2)
                 r13 = r13 ^ r3
                 if (r13 == 0) goto L_0x00ea
                 goto L_0x00ec
@@ -641,7 +641,7 @@ public final class SignatureEnhancement {
             if (r0 != r1) goto L_0x0029
             kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor r0 = r9.getOriginal()
             java.lang.String r1 = "original"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.util.Collection r0 = r0.getOverriddenDescriptors()
             int r0 = r0.size()
             if (r0 != r10) goto L_0x0029
@@ -662,11 +662,11 @@ public final class SignatureEnhancement {
             kotlin.reflect.jvm.internal.impl.descriptors.impl.PropertyGetterDescriptorImpl r0 = r0.getGetter()
             if (r0 == 0) goto L_0x0054
             java.lang.String r1 = "getter!!"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             r2 = r0
             goto L_0x0059
         L_0x0054:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r11
         L_0x0058:
             r2 = r8
@@ -768,7 +768,7 @@ public final class SignatureEnhancement {
         L_0x0111:
             java.util.List r0 = r2.getValueParameters()
             java.lang.String r1 = "annotationOwnerForMember.valueParameters"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.util.ArrayList r15 = new java.util.ArrayList
             r6 = 10
             int r1 = kotlin.p590y.C13187p.m40525a(r0, r6)
@@ -799,12 +799,12 @@ public final class SignatureEnhancement {
             kotlin.reflect.jvm.internal.impl.types.KotlinType r5 = r3.getType()
             goto L_0x016f
         L_0x0163:
-            kotlin.jvm.internal.C12880j.m40222a(r1, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r6)
             kotlin.reflect.jvm.internal.impl.types.KotlinType r5 = r1.getType()
             java.lang.String r11 = "p.type"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r11)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r11)
         L_0x016f:
-            kotlin.jvm.internal.C12880j.m40222a(r1, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r6)
             boolean r5 = r7.hasDefaultValueInAnnotation(r1, r5)
             boolean r6 = r3.getWereChanges()
             if (r6 != 0) goto L_0x0185
@@ -961,7 +961,7 @@ public final class SignatureEnhancement {
         if (fqName == null) {
             return null;
         }
-        NullabilityQualifierWithMigrationStatus nullabilityQualifierWithMigrationStatus = JvmAnnotationNamesKt.getNULLABLE_ANNOTATIONS().contains(fqName) ? new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NULLABLE, false, 2, null) : JvmAnnotationNamesKt.getNOT_NULL_ANNOTATIONS().contains(fqName) ? new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NOT_NULL, false, 2, null) : C12880j.m40224a((Object) fqName, (Object) JvmAnnotationNamesKt.getJAVAX_NONNULL_ANNOTATION()) ? extractNullabilityTypeFromArgument(annotationDescriptor) : (!C12880j.m40224a((Object) fqName, (Object) JvmAnnotationNamesKt.getCOMPATQUAL_NULLABLE_ANNOTATION()) || !this.jsr305State.getEnableCompatqualCheckerFrameworkAnnotations()) ? (!C12880j.m40224a((Object) fqName, (Object) JvmAnnotationNamesKt.getCOMPATQUAL_NONNULL_ANNOTATION()) || !this.jsr305State.getEnableCompatqualCheckerFrameworkAnnotations()) ? C12880j.m40224a((Object) fqName, (Object) JvmAnnotationNamesKt.getANDROIDX_RECENTLY_NON_NULL_ANNOTATION()) ? new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NOT_NULL, true) : C12880j.m40224a((Object) fqName, (Object) JvmAnnotationNamesKt.getANDROIDX_RECENTLY_NULLABLE_ANNOTATION()) ? new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NULLABLE, true) : null : new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NOT_NULL, false, 2, null) : new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NULLABLE, false, 2, null);
+        NullabilityQualifierWithMigrationStatus nullabilityQualifierWithMigrationStatus = JvmAnnotationNamesKt.getNULLABLE_ANNOTATIONS().contains(fqName) ? new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NULLABLE, false, 2, null) : JvmAnnotationNamesKt.getNOT_NULL_ANNOTATIONS().contains(fqName) ? new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NOT_NULL, false, 2, null) : Intrinsics.areEqual((Object) fqName, (Object) JvmAnnotationNamesKt.getJAVAX_NONNULL_ANNOTATION()) ? extractNullabilityTypeFromArgument(annotationDescriptor) : (!Intrinsics.areEqual((Object) fqName, (Object) JvmAnnotationNamesKt.getCOMPATQUAL_NULLABLE_ANNOTATION()) || !this.jsr305State.getEnableCompatqualCheckerFrameworkAnnotations()) ? (!Intrinsics.areEqual((Object) fqName, (Object) JvmAnnotationNamesKt.getCOMPATQUAL_NONNULL_ANNOTATION()) || !this.jsr305State.getEnableCompatqualCheckerFrameworkAnnotations()) ? Intrinsics.areEqual((Object) fqName, (Object) JvmAnnotationNamesKt.getANDROIDX_RECENTLY_NON_NULL_ANNOTATION()) ? new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NOT_NULL, true) : Intrinsics.areEqual((Object) fqName, (Object) JvmAnnotationNamesKt.getANDROIDX_RECENTLY_NULLABLE_ANNOTATION()) ? new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NULLABLE, true) : null : new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NOT_NULL, false, 2, null) : new NullabilityQualifierWithMigrationStatus(NullabilityQualifier.NULLABLE, false, 2, null);
         if (nullabilityQualifierWithMigrationStatus != null) {
             return (nullabilityQualifierWithMigrationStatus.isForWarningOnly() || !(annotationDescriptor instanceof PossiblyExternalAnnotationDescriptor) || !((PossiblyExternalAnnotationDescriptor) annotationDescriptor).isIdeExternalAnnotation()) ? nullabilityQualifierWithMigrationStatus : NullabilityQualifierWithMigrationStatus.copy$default(nullabilityQualifierWithMigrationStatus, null, true, 1, null);
         }
@@ -1057,7 +1057,7 @@ public final class SignatureEnhancement {
         AnnotationDefaultValue defaultValueFromAnnotation = UtilKt.getDefaultValueFromAnnotation(valueParameterDescriptor);
         if (defaultValueFromAnnotation instanceof StringDefaultValue) {
             z = UtilsKt.lexicalCastFrom(kotlinType, ((StringDefaultValue) defaultValueFromAnnotation).getValue()) != null;
-        } else if (C12880j.m40224a((Object) defaultValueFromAnnotation, (Object) NullDefaultValue.INSTANCE)) {
+        } else if (Intrinsics.areEqual((Object) defaultValueFromAnnotation, (Object) NullDefaultValue.INSTANCE)) {
             z = TypeUtils.acceptsNullable(kotlinType);
         } else if (defaultValueFromAnnotation == null) {
             z = valueParameterDescriptor.declaresDefaultValue();
@@ -1073,10 +1073,10 @@ public final class SignatureEnhancement {
     private final SignatureParts parts(CallableMemberDescriptor callableMemberDescriptor, Annotated annotated, boolean z, LazyJavaResolverContext lazyJavaResolverContext, QualifierApplicabilityType qualifierApplicabilityType, Function1<? super CallableMemberDescriptor, ? extends KotlinType> function1) {
         KotlinType kotlinType = (KotlinType) function1.invoke(callableMemberDescriptor);
         Collection<CallableMemberDescriptor> overriddenDescriptors = callableMemberDescriptor.getOverriddenDescriptors();
-        C12880j.m40222a((Object) overriddenDescriptors, "this.overriddenDescriptors");
+        Intrinsics.checkReturnedValueIsNotNull((Object) overriddenDescriptors, "this.overriddenDescriptors");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) overriddenDescriptors, 10));
         for (CallableMemberDescriptor callableMemberDescriptor2 : overriddenDescriptors) {
-            C12880j.m40222a((Object) callableMemberDescriptor2, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) callableMemberDescriptor2, "it");
             arrayList.add((KotlinType) function1.invoke(callableMemberDescriptor2));
         }
         SignatureParts signatureParts = new SignatureParts(annotated, kotlinType, arrayList, z, ContextKt.copyWithNewDefaultTypeQualifiers(lazyJavaResolverContext, ((KotlinType) function1.invoke(callableMemberDescriptor)).getAnnotations()), qualifierApplicabilityType);

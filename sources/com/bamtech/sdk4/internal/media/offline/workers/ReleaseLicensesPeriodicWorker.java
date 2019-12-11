@@ -53,7 +53,7 @@ public final class ReleaseLicensesPeriodicWorker extends Worker {
             r10.release(r8, r11)     // Catch:{ all -> 0x003b }
             goto L_0x0049
         L_0x0037:
-            kotlin.jvm.internal.C12880j.m40227c(r0)     // Catch:{ all -> 0x003b }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)     // Catch:{ all -> 0x003b }
             throw r2
         L_0x003b:
             r8 = move-exception
@@ -79,7 +79,7 @@ public final class ReleaseLicensesPeriodicWorker extends Worker {
             r10.release(r8, r7)     // Catch:{ all -> 0x0065 }
             goto L_0x0073
         L_0x0061:
-            kotlin.jvm.internal.C12880j.m40227c(r0)     // Catch:{ all -> 0x0065 }
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)     // Catch:{ all -> 0x0065 }
             throw r2
         L_0x0065:
             r7 = move-exception
@@ -115,11 +115,11 @@ public final class ReleaseLicensesPeriodicWorker extends Worker {
         L_0x009d:
             androidx.work.ListenableWorker$Result r0 = androidx.work.ListenableWorker.Result.m5470c()
             java.lang.String r1 = "Result.success()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             return r0
         L_0x00a7:
             java.lang.String r0 = "database"
-            kotlin.jvm.internal.C12880j.m40227c(r0)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)
             throw r2
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtech.sdk4.internal.media.offline.workers.ReleaseLicensesPeriodicWorker.doWork():androidx.work.ListenableWorker$Result");

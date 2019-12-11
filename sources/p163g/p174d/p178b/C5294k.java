@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.b.k */
 /* compiled from: PlaybackRates */
@@ -37,7 +37,7 @@ public class C5294k {
         int indexOf = this.f12677a.indexOf(Integer.valueOf(i));
         int i2 = -1;
         if (indexOf == -1) {
-            C14100a.m44532e("Unable to find current playback rate speed in array", new Object[0]);
+            Timber.m44532e("Unable to find current playback rate speed in array", new Object[0]);
             return 1;
         }
         if (z) {

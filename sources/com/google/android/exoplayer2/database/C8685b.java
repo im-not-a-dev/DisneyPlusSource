@@ -74,7 +74,7 @@ public final class C8685b extends SQLiteOpenHelper implements DatabaseProvider {
             r4.append(r5)     // Catch:{ all -> 0x0067 }
             r4.append(r1)     // Catch:{ all -> 0x0067 }
             java.lang.String r1 = r4.toString()     // Catch:{ all -> 0x0067 }
-            com.google.android.exoplayer2.p393v0.C9563q.m29496a(r3, r1, r2)     // Catch:{ all -> 0x0067 }
+            com.google.android.exoplayer2.p393v0.Log.m29496a(r3, r1, r2)     // Catch:{ all -> 0x0067 }
             goto L_0x0014
         L_0x0061:
             if (r0 == 0) goto L_0x0066

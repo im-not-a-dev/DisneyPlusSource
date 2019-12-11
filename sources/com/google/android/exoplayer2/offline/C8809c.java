@@ -5,7 +5,7 @@ import android.util.Pair;
 import androidx.core.app.NotificationManagerCompat;
 import com.google.android.exoplayer2.offline.C8807a;
 import com.google.android.exoplayer2.offline.Downloader.C8805a;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9575z;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
@@ -116,7 +116,7 @@ public abstract class C8809c<M extends C8807a<M>> implements Downloader {
 
         /* renamed from: a */
         public int compareTo(C8811b bVar) {
-            return C9554k0.m29426b(this.f18740c, bVar.f18740c);
+            return Util.compareLong(this.f18740c, bVar.f18740c);
         }
     }
 

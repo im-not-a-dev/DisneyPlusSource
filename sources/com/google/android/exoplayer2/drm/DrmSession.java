@@ -1,9 +1,9 @@
 package com.google.android.exoplayer2.drm;
 
-import com.google.android.exoplayer2.drm.C8712n;
+import com.google.android.exoplayer2.drm.ExoMediaCrypto;
 import java.util.Map;
 
-public interface DrmSession<T extends C8712n> {
+public interface DrmSession<T extends ExoMediaCrypto> {
 
     /* renamed from: com.google.android.exoplayer2.drm.DrmSession$a */
     public static class C8694a extends Exception {

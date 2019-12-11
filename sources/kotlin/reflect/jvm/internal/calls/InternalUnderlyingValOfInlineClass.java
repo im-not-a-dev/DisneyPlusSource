@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.calls.Caller.DefaultImpls;
 import kotlin.reflect.jvm.internal.calls.CallerImpl.Companion;
 
@@ -61,7 +61,7 @@ public abstract class InternalUnderlyingValOfInlineClass implements Caller<Metho
         this.unboxMethod = method;
         this.parameterTypes = list;
         Class returnType2 = this.unboxMethod.getReturnType();
-        C12880j.m40222a((Object) returnType2, "unboxMethod.returnType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) returnType2, "unboxMethod.returnType");
         this.returnType = returnType2;
     }
 

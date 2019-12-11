@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p366s0.p375z;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.s0.z.c */
 /* compiled from: WavHeader */
@@ -98,7 +98,7 @@ final class C9064c implements C8920o {
         long j2 = this.f20144h - ((long) this.f20143g);
         long j3 = (((long) this.f20139c) * j) / 1000000;
         int i = this.f20140d;
-        long b = C9554k0.m29431b((j3 / ((long) i)) * ((long) i), 0, j2 - ((long) i));
+        long b = Util.m29431b((j3 / ((long) i)) * ((long) i), 0, j2 - ((long) i));
         long j4 = ((long) this.f20143g) + b;
         long a = mo23477a(j4);
         C8923p pVar = new C8923p(a, j4);

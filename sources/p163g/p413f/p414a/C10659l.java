@@ -83,14 +83,14 @@ public class C10659l {
     public static class C10662c extends C10660a {
         public C10662c(Object obj) {
             StringBuilder sb = new StringBuilder();
-            sb.append("Failed to find any ModelLoaders for model: ");
+            sb.append("Failed to find any ModelLoaders forMODEL: ");
             sb.append(obj);
             super(sb.toString());
         }
 
         public C10662c(Class<?> cls, Class<?> cls2) {
             StringBuilder sb = new StringBuilder();
-            sb.append("Failed to find any ModelLoaders for model: ");
+            sb.append("Failed to find any ModelLoaders forMODEL: ");
             sb.append(cls);
             sb.append(" and data: ");
             sb.append(cls2);
@@ -144,7 +144,7 @@ public class C10659l {
     }
 
     /* renamed from: b */
-    public <Model, Data> C10659l mo27557b(Class<Model> cls, Class<Data> cls2, C8308o<? extends Model, ? extends Data> oVar) {
+    public <Model, Data> C10659l mo27557b(Class<Model> cls, Class<Data> cls2, C8308o<? extendsMODEL, ? extends Data> oVar) {
         this.f25166a.mo21488b(cls, cls2, oVar);
         return this;
     }
@@ -265,7 +265,7 @@ public class C10659l {
     }
 
     /* renamed from: a */
-    public <Model> List<C8306n<Model, ?>> mo27555a(Model model) {
+    public <Model> List<C8306n<Model, ?>> mo27555a(ModelMODEL) {
         List<C8306n<Model, ?>> a = this.f25166a.mo21486a(model);
         if (!a.isEmpty()) {
             return a;

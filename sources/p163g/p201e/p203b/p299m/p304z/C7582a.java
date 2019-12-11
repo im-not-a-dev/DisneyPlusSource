@@ -20,7 +20,7 @@ import java.util.HashMap;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -163,7 +163,7 @@ public class C7582a extends C11885d implements C7717x {
     public void onCancel(DialogInterface dialogInterface) {
         super.onCancel(dialogInterface);
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         C7539b.m22448a(requireActivity, m22542o().mo20459m0(), 0);
     }
 
@@ -179,21 +179,21 @@ public class C7582a extends C11885d implements C7717x {
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
         TextView textView = (TextView) _$_findCachedViewById(C7562t.content_title);
-        C12880j.m40222a((Object) textView, "content_title");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "content_title");
         C5844l0.m18865a(textView, (CharSequence) C7546g.m22500f(m22542o()), false, 2, (Object) null);
         TextView textView2 = (TextView) _$_findCachedViewById(C7562t.content_text);
-        C12880j.m40222a((Object) textView2, "content_text");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "content_text");
         C5844l0.m18865a(textView2, (CharSequence) C7546g.m22494a(m22542o()), false, 2, (Object) null);
         Button button = (Button) _$_findCachedViewById(C7562t.positive_button);
-        C12880j.m40222a((Object) button, "positive_button");
+        Intrinsics.checkReturnedValueIsNotNull((Object) button, "positive_button");
         C5844l0.m18865a((TextView) button, (CharSequence) C7546g.m22499e(m22542o()), false, 2, (Object) null);
         ((Button) _$_findCachedViewById(C7562t.positive_button)).setOnClickListener(new C7584b(this));
         Button button2 = (Button) _$_findCachedViewById(C7562t.neutral_button);
-        C12880j.m40222a((Object) button2, "neutral_button");
+        Intrinsics.checkReturnedValueIsNotNull((Object) button2, "neutral_button");
         C5844l0.m18865a((TextView) button2, (CharSequence) C7546g.m22498d(m22542o()), false, 2, (Object) null);
         ((Button) _$_findCachedViewById(C7562t.neutral_button)).setOnClickListener(new C7585c(this));
         Button button3 = (Button) _$_findCachedViewById(C7562t.negative_button);
-        C12880j.m40222a((Object) button3, "negative_button");
+        Intrinsics.checkReturnedValueIsNotNull((Object) button3, "negative_button");
         C5844l0.m18865a((TextView) button3, (CharSequence) C7546g.m22496b(m22542o()), false, 2, (Object) null);
         ((Button) _$_findCachedViewById(C7562t.negative_button)).setOnClickListener(new C7586d(this));
     }
@@ -202,7 +202,7 @@ public class C7582a extends C11885d implements C7717x {
     /* renamed from: a */
     public void mo20518a(C7543f fVar, int i) {
         C0538i fragmentManager = getFragmentManager();
-        if (C12880j.m40224a((Object) fragmentManager != null ? fragmentManager.mo3160f() : null, (Object) this)) {
+        if (Intrinsics.areEqual((Object) fragmentManager != null ? fragmentManager.mo3160f() : null, (Object) this)) {
             C0538i fragmentManager2 = getFragmentManager();
             if (fragmentManager2 != null) {
                 fragmentManager2.mo3161g();
@@ -211,7 +211,7 @@ public class C7582a extends C11885d implements C7717x {
             return;
         }
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         C7539b.m22448a(requireActivity, fVar.mo20459m0(), i);
         dismissAllowingStateLoss();
     }

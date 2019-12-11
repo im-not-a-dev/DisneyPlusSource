@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal;
 
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.KClassImpl.Data;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
@@ -28,7 +28,7 @@ final class KClassImpl$Data$simpleName$2 extends C12881k implements Function0<St
             str = data.calculateLocalClassName(KClassImpl.this.getJClass());
         } else {
             str = access$getClassId$p.getShortClassName().asString();
-            C12880j.m40222a((Object) str, "classId.shortClassName.asString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, "classId.shortClassName.asString()");
         }
         return str;
     }

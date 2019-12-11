@@ -1,6 +1,6 @@
 package p163g.p174d.p178b.p193j0;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.C5326w;
 
 /* renamed from: g.d.b.j0.a */
@@ -25,7 +25,7 @@ public final class C5285a extends C5290d {
         if (wVar == null) {
             return false;
         }
-        C12880j.m40222a((Object) wVar, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) wVar, "it");
         if (!wVar.mo7622f().equals(this.f12652e) || !Boolean.valueOf(wVar.mo7642w()).equals(Boolean.valueOf(this.f12653f))) {
             return false;
         }

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.C13147x;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
@@ -46,7 +46,7 @@ public final class RawTypeImpl extends FlexibleType implements RawType {
         ClassDescriptor classDescriptor = (ClassDescriptor) declarationDescriptor;
         if (classDescriptor != null) {
             MemberScope memberScope = classDescriptor.getMemberScope(RawSubstitution.INSTANCE);
-            C12880j.m40222a((Object) memberScope, "classDescriptor.getMemberScope(RawSubstitution)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) memberScope, "classDescriptor.getMemberScope(RawSubstitution)");
             return memberScope;
         }
         StringBuilder sb = new StringBuilder();
@@ -95,7 +95,7 @@ public final class RawTypeImpl extends FlexibleType implements RawType {
                 renderType2 = rawTypeImpl$render$3.invoke(renderType2, a);
             }
             String invoke3 = rawTypeImpl$render$3.invoke(renderType, a);
-            if (C12880j.m40224a((Object) invoke3, (Object) renderType2)) {
+            if (Intrinsics.areEqual((Object) invoke3, (Object) renderType2)) {
                 return invoke3;
             }
             return descriptorRenderer.renderFlexibleType(invoke3, renderType2, TypeUtilsKt.getBuiltIns(this));

@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent;
 import com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -27,25 +27,25 @@ public final class DmcSeriesBundleJsonAdapter extends C11725h<DmcSeriesBundle> {
 
     public DmcSeriesBundleJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("label", "series", "seasons", "episodes", "related", "extras");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"l…es\", \"related\", \"extras\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"l…es\", \"related\", \"extras\")");
         this.options = a;
         C11725h<PromoLabel> a2 = vVar.mo29869a((Type) PromoLabel.class, C13188p0.m40531a(), "label");
-        C12880j.m40222a((Object) a2, "moshi.adapter<PromoLabel…ions.emptySet(), \"label\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<PromoLabel…ions.emptySet(), \"label\")");
         this.nullablePromoLabelAdapter = a2;
         C11725h<DmcSeries> a3 = vVar.mo29869a((Type) DmcSeries.class, C13188p0.m40531a(), "dmcSeries");
-        C12880j.m40222a((Object) a3, "moshi.adapter<DmcSeries?….emptySet(), \"dmcSeries\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<DmcSeries?….emptySet(), \"dmcSeries\")");
         this.nullableDmcSeriesAdapter = a3;
         C11725h<SeriesBundleSeasons> a4 = vVar.mo29869a((Type) SeriesBundleSeasons.class, C13188p0.m40531a(), "dmcSeasons");
-        C12880j.m40222a((Object) a4, "moshi.adapter<SeriesBund…emptySet(), \"dmcSeasons\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<SeriesBund…emptySet(), \"dmcSeasons\")");
         this.seriesBundleSeasonsAdapter = a4;
         C11725h<SeriesBundleEpisodes> a5 = vVar.mo29869a((Type) SeriesBundleEpisodes.class, C13188p0.m40531a(), "episodes");
-        C12880j.m40222a((Object) a5, "moshi.adapter<SeriesBund…s.emptySet(), \"episodes\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<SeriesBund…s.emptySet(), \"episodes\")");
         this.seriesBundleEpisodesAdapter = a5;
         C11725h<DmcRelatedContent> a6 = vVar.mo29869a((Type) DmcRelatedContent.class, C13188p0.m40531a(), "related");
-        C12880j.m40222a((Object) a6, "moshi.adapter<DmcRelated…ns.emptySet(), \"related\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a6, "moshi.adapter<DmcRelated…ns.emptySet(), \"related\")");
         this.nullableDmcRelatedContentAdapter = a6;
         C11725h<DmcExtraContent> a7 = vVar.mo29869a((Type) DmcExtraContent.class, C13188p0.m40531a(), "extras");
-        C12880j.m40222a((Object) a7, "moshi.adapter<DmcExtraCo…ons.emptySet(), \"extras\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a7, "moshi.adapter<DmcExtraCo…ons.emptySet(), \"extras\")");
         this.nullableDmcExtraContentAdapter = a7;
     }
 

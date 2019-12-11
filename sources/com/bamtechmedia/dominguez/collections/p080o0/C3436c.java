@@ -12,7 +12,7 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11780y;
 import p520io.reactivex.Completable;
 
@@ -62,7 +62,7 @@ public final class C3436c implements C3435b {
         sb.append("/collections.json");
         String sb2 = sb.toString();
         ParameterizedType a = C11780y.m37894a((Type) Map.class, String.class, Object.class);
-        C12880j.m40222a((Object) a, "Types.newParameterizedTy…ss.java, Any::class.java)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Types.newParameterizedTy…ss.java, Any::class.java)");
         C3534b bVar = new C3534b(sb2, a, "collections_config.json", "dplus-collections", null, Integer.valueOf(C3566o0.collections_config), null, 80, null);
         this.f8666d = aVar.mo12736a(bVar);
     }
@@ -70,13 +70,13 @@ public final class C3436c implements C3435b {
     /* renamed from: a */
     public Map<String, ?> mo12612a() {
         Object c = C3532h.m11948a(this.f8666d, false, 1, null).mo30224c();
-        C12880j.m40222a(c, "configLoader.fetchConfig().blockingGet()");
+        Intrinsics.checkReturnedValueIsNotNull(c, "configLoader.fetchConfig().blockingGet()");
         return (Map) c;
     }
 
     public Completable initialize() {
         Completable e = this.f8666d.mo12735a(true).mo30228e();
-        C12880j.m40222a((Object) e, "configLoader.fetchConfig(true).ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "configLoader.fetchConfig(true).ignoreElement()");
         return e;
     }
 }

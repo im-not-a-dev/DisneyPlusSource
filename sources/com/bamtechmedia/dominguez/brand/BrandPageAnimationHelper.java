@@ -18,7 +18,7 @@ import com.bamtechmedia.dominguez.core.utils.C5846m0;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5363f;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000J\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 )2\u00020\u0001:\u0001)B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\r\u0010\u001e\u001a\u00020\u001fH\u0001¢\u0006\u0002\b J\u0010\u0010!\u001a\u00020\u001f2\u0006\u0010\"\u001a\u00020#H\u0016J\u0006\u0010$\u001a\u00020\u001fJ\u0006\u0010%\u001a\u00020\u001fJ\u0014\u0010&\u001a\u00020\u001f2\f\u0010'\u001a\b\u0012\u0004\u0012\u00020\u001f0(R\u0014\u0010\u0005\u001a\u00020\u00068BX\u0004¢\u0006\u0006\u001a\u0004\b\u0007\u0010\bR&\u0010\t\u001a\u0004\u0018\u00010\n8\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\u000b\u0010\f\u001a\u0004\b\r\u0010\u000e\"\u0004\b\u000f\u0010\u0010R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R&\u0010\u0011\u001a\u0004\u0018\u00010\u00128\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\u0013\u0010\f\u001a\u0004\b\u0014\u0010\u0015\"\u0004\b\u0016\u0010\u0017R\u0014\u0010\u0018\u001a\u00020\u00068BX\u0004¢\u0006\u0006\u001a\u0004\b\u0019\u0010\bR\u0014\u0010\u001a\u001a\u00020\u001b8BX\u0004¢\u0006\u0006\u001a\u0004\b\u001c\u0010\u001d¨\u0006*"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/brand/BrandPageAnimationHelper;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "fragment", "Lcom/bamtechmedia/dominguez/brand/BrandPageFragment;", "(Lcom/bamtechmedia/dominguez/brand/BrandPageFragment;)V", "backgroundView", "Landroid/view/View;", "getBackgroundView", "()Landroid/view/View;", "enterAnimatorSet", "Landroid/animation/AnimatorSet;", "enterAnimatorSet$annotations", "()V", "getEnterAnimatorSet$core_release", "()Landroid/animation/AnimatorSet;", "setEnterAnimatorSet$core_release", "(Landroid/animation/AnimatorSet;)V", "logoFadeInAnimator", "Landroid/animation/ValueAnimator;", "logoFadeInAnimator$annotations", "getLogoFadeInAnimator$core_release", "()Landroid/animation/ValueAnimator;", "setLogoFadeInAnimator$core_release", "(Landroid/animation/ValueAnimator;)V", "logoView", "getLogoView", "tilesView", "Landroidx/recyclerview/widget/RecyclerView;", "getTilesView", "()Landroidx/recyclerview/widget/RecyclerView;", "cancelLogoFadeInAnimatorAndRemoveListeners", "", "cancelLogoFadeInAnimatorAndRemoveListeners$core_release", "onDestroy", "owner", "Landroidx/lifecycle/LifecycleOwner;", "prepareEnterAnimation", "startBrandLogoFadeOutAnimation", "startEnterAnimation", "animationEndAction", "Lkotlin/Function0;", "Companion", "core_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -106,7 +106,7 @@ public final class BrandPageAnimationHelper implements C0710d {
     /* renamed from: f */
     private final View m11073f() {
         View _$_findCachedViewById = this.f8118V._$_findCachedViewById(C5363f.brandBackgroundImageView);
-        C12880j.m40222a((Object) _$_findCachedViewById, "fragment.brandBackgroundImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "fragment.brandBackgroundImageView");
         return _$_findCachedViewById;
     }
 
@@ -114,14 +114,14 @@ public final class BrandPageAnimationHelper implements C0710d {
     /* renamed from: g */
     public final View m11074g() {
         ImageView imageView = (ImageView) this.f8118V._$_findCachedViewById(C5363f.brandLogoImageView);
-        C12880j.m40222a((Object) imageView, "fragment.brandLogoImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "fragment.brandLogoImageView");
         return imageView;
     }
 
     /* renamed from: h */
     private final RecyclerView m11075h() {
         RecyclerView recyclerView = (RecyclerView) this.f8118V._$_findCachedViewById(C5363f.brandRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "fragment.brandRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "fragment.brandRecyclerView");
         return recyclerView;
     }
 
@@ -186,7 +186,7 @@ public final class BrandPageAnimationHelper implements C0710d {
         Context context = m11075h().getContext();
         if (context != null) {
             Resources resources = context.getResources();
-            C12880j.m40222a((Object) resources, "resources");
+            Intrinsics.checkReturnedValueIsNotNull((Object) resources, "resources");
             f = TypedValue.applyDimension(1, 48.0f, resources.getDisplayMetrics());
         } else {
             f = 0.0f;

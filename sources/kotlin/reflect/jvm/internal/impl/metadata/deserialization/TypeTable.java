@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.metadata.deserialization;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13180m;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Type;
 
@@ -15,7 +15,7 @@ public final class TypeTable {
         if (typeTable.hasFirstNullable()) {
             int firstNullable = typeTable.getFirstNullable();
             List typeList2 = typeTable.getTypeList();
-            C12880j.m40222a((Object) typeList2, "typeTable.typeList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeList2, "typeTable.typeList");
             List<Type> arrayList = new ArrayList<>(C13187p.m40525a((Iterable) typeList2, 10));
             int i = 0;
             for (Object next : typeList2) {
@@ -34,7 +34,7 @@ public final class TypeTable {
             }
             typeList = arrayList;
         } else {
-            C12880j.m40222a((Object) typeList, "originalTypes");
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeList, "originalTypes");
         }
         this.types = typeList;
     }

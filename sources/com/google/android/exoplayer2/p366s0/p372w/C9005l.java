@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0.p372w;
 
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.Arrays;
 
@@ -271,7 +271,7 @@ final class C9005l {
                 StringBuilder sb = new StringBuilder();
                 sb.append("mapping type other than 0 not supported: ");
                 sb.append(a2);
-                C9563q.m29497b("VorbisUtil", sb.toString());
+                Log.m29497b("VorbisUtil", sb.toString());
             } else {
                 int a3 = jVar.mo23421b() ? jVar.mo23419a(4) + 1 : 1;
                 if (jVar.mo23421b()) {

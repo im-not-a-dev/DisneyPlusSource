@@ -9,12 +9,12 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.disposables.CompositeDisposable;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\b&\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0010\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\fH\u0016J\u0010\u0010\r\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\fH\u0016J\u0010\u0010\u000e\u001a\u00020\n2\u0006\u0010\u000f\u001a\u00020\u0010H&R\u0012\u0010\u0003\u001a\u00020\u0004X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0005\u0010\u0006R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000¨\u0006\u0011"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/background/BackgroundResponder;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "()V", "appPresence", "Lcom/bamtechmedia/dominguez/core/lifecycle/AppPresenceApi;", "getAppPresence", "()Lcom/bamtechmedia/dominguez/core/lifecycle/AppPresenceApi;", "appPresenceDisposable", "Lio/reactivex/disposables/CompositeDisposable;", "onCreate", "", "owner", "Landroidx/lifecycle/LifecycleOwner;", "onDestroy", "processPresence", "presence", "Lcom/bamtechmedia/dominguez/core/lifecycle/AppPresenceApi$AppPresenceResponse;", "coreCommon_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: BackgroundResponder.kt */
@@ -37,7 +37,7 @@ public abstract class BackgroundResponder implements C0710d {
         /* renamed from: a */
         public final void accept(C5766a aVar) {
             BackgroundResponder backgroundResponder = this.f8926c;
-            C12880j.m40222a((Object) aVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "it");
             backgroundResponder.mo11409a(aVar);
         }
     }
@@ -55,7 +55,7 @@ public abstract class BackgroundResponder implements C0710d {
 
         /* renamed from: a */
         public final void mo12796a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -63,7 +63,7 @@ public abstract class BackgroundResponder implements C0710d {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {

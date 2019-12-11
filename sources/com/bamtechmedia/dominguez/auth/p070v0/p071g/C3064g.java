@@ -36,7 +36,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -385,7 +385,7 @@ public final class C3064g extends C11890i implements C2413n, C7536a {
         if (dVar != null) {
             return dVar.mo13695j();
         }
-        C12880j.m40227c("offlineState");
+        Intrinsics.throwUninitializedPropertyAccessException("offlineState");
         throw null;
     }
 
@@ -427,7 +427,7 @@ public final class C3064g extends C11890i implements C2413n, C7536a {
         if (iVar != null) {
             return iVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -437,7 +437,7 @@ public final class C3064g extends C11890i implements C2413n, C7536a {
         if (cVar != null) {
             return cVar;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
@@ -455,7 +455,7 @@ public final class C3064g extends C11890i implements C2413n, C7536a {
         OnboardingToolbar onboardingToolbar = (OnboardingToolbar) _$_findCachedViewById(C2716h0.loginOnboardingToolbar);
         if (onboardingToolbar != null) {
             C0532d requireActivity = requireActivity();
-            C12880j.m40222a((Object) requireActivity, "requireActivity()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
             OnboardingToolbar.m18500a(onboardingToolbar, requireActivity, getView(), (NestedScrollView) _$_findCachedViewById(C2716h0.loginScrollView), (ConstraintLayout) _$_findCachedViewById(C2716h0.loginEmailLayout), false, new C3074f(this), 16, null);
         }
         C3077i iVar = this.f7940U;
@@ -463,7 +463,7 @@ public final class C3064g extends C11890i implements C2413n, C7536a {
             C5755i.m18679a(this, iVar, null, null, new C3075g(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -495,11 +495,11 @@ public final class C3064g extends C11890i implements C2413n, C7536a {
             if (cVar != null) {
                 int i = C2716h0.loginEmailContainer;
                 C0538i childFragmentManager = getChildFragmentManager();
-                C12880j.m40222a((Object) childFragmentManager, "childFragmentManager");
+                Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "childFragmentManager");
                 cVar.mo20550a(i, childFragmentManager);
                 return;
             }
-            C12880j.m40227c("offlineRouter");
+            Intrinsics.throwUninitializedPropertyAccessException("offlineRouter");
             throw null;
         }
     }
@@ -557,7 +557,7 @@ public final class C3064g extends C11890i implements C2413n, C7536a {
                 this.f7946a0 = str;
                 return;
             }
-            C12880j.m40227c("dialogRouter");
+            Intrinsics.throwUninitializedPropertyAccessException("dialogRouter");
             throw null;
         }
         this.f7946a0 = null;
@@ -581,11 +581,11 @@ public final class C3064g extends C11890i implements C2413n, C7536a {
                     }
                     iVar.mo12102d(str);
                 } else {
-                    C12880j.m40227c("viewModel");
+                    Intrinsics.throwUninitializedPropertyAccessException("viewModel");
                     throw null;
                 }
             } else {
-                C12880j.m40227c("analytics");
+                Intrinsics.throwUninitializedPropertyAccessException("analytics");
                 throw null;
             }
         } else if (i2 == -1) {

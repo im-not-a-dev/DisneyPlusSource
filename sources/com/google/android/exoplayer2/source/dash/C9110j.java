@@ -14,7 +14,7 @@ import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import com.google.android.exoplayer2.source.C9137e0;
 import com.google.android.exoplayer2.source.dash.p376k.C9115b;
@@ -38,7 +38,7 @@ public final class C9110j implements Callback {
     /* access modifiers changed from: private */
 
     /* renamed from: W */
-    public final Handler f20403W = C9554k0.m29392a((Callback) this);
+    public final Handler f20403W = Util.m29392a((Callback) this);
 
     /* renamed from: X */
     private final TreeMap<Long, Long> f20404X = new TreeMap<>();
@@ -265,7 +265,7 @@ public final class C9110j implements Callback {
     /* renamed from: b */
     public static long m27232b(C8746a aVar) {
         try {
-            return C9554k0.m29454h(C9554k0.m29399a(aVar.f18575X));
+            return Util.m29454h(Util.m29399a(aVar.f18575X));
         } catch (C8723g0 unused) {
             return -9223372036854775807L;
         }

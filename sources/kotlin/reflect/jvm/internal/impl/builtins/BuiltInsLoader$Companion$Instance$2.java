@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.builtins;
 
 import java.util.ServiceLoader;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 
 /* compiled from: BuiltInsLoader.kt */
@@ -16,7 +16,7 @@ final class BuiltInsLoader$Companion$Instance$2 extends C12881k implements Funct
     public final BuiltInsLoader invoke() {
         Class<BuiltInsLoader> cls = BuiltInsLoader.class;
         ServiceLoader load = ServiceLoader.load(cls, cls.getClassLoader());
-        C12880j.m40222a((Object) load, "implementations");
+        Intrinsics.checkReturnedValueIsNotNull((Object) load, "implementations");
         BuiltInsLoader builtInsLoader = (BuiltInsLoader) C13199w.m40590g((Iterable) load);
         if (builtInsLoader != null) {
             return builtInsLoader;

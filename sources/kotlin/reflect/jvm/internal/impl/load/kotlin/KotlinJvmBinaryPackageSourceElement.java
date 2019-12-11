@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.kotlin;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceFile;
 import kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageFragment;
@@ -15,7 +15,7 @@ public final class KotlinJvmBinaryPackageSourceElement implements SourceElement 
 
     public SourceFile getContainingFile() {
         SourceFile sourceFile = SourceFile.NO_SOURCE_FILE;
-        C12880j.m40222a((Object) sourceFile, "SourceFile.NO_SOURCE_FILE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceFile, "SourceFile.NO_SOURCE_FILE");
         return sourceFile;
     }
 

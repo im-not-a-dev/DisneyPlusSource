@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.metadata.p359j;
 
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.metadata.j.c */
@@ -59,10 +59,10 @@ public final class C8760c extends C8773i {
 
     C8760c(Parcel parcel) {
         String readString = parcel.readString();
-        C9554k0.m29394a(readString);
+        Util.castNonNull(readString);
         super(readString);
         byte[] createByteArray = parcel.createByteArray();
-        C9554k0.m29394a(createByteArray);
+        Util.castNonNull(createByteArray);
         this.f18602U = createByteArray;
     }
 }

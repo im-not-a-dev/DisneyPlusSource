@@ -10,8 +10,8 @@ import android.os.Message;
 import android.view.Surface;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9550k;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 
 @TargetApi(17)
 /* renamed from: com.google.android.exoplayer2.w0.k */
@@ -102,14 +102,14 @@ public final class C9589k extends Surface {
                         notify();
                     }
                 } catch (RuntimeException e) {
-                    C9563q.m29496a("DummySurface", "Failed to initialize dummy surface", e);
+                    Log.m29496a("DummySurface", "Failed to initialize dummy surface", e);
                     this.f22388W = e;
                     synchronized (this) {
                         notify();
                     }
                 } catch (Error e2) {
                     try {
-                        C9563q.m29496a("DummySurface", "Failed to initialize dummy surface", e2);
+                        Log.m29496a("DummySurface", "Failed to initialize dummy surface", e2);
                         this.f22387V = e2;
                         synchronized (this) {
                             notify();
@@ -151,7 +151,7 @@ public final class C9589k extends Surface {
 
     /* renamed from: X */
     private static void m29617X() {
-        if (C9554k0.f22281a < 17) {
+        if (Util.SDK_INT < 17) {
             throw new UnsupportedOperationException("Unsupported prior to API level 17");
         }
     }
@@ -174,7 +174,7 @@ public final class C9589k extends Surface {
         synchronized (C9589k.class) {
             z = true;
             if (!f22383W) {
-                f22382V = C9554k0.f22281a < 24 ? 0 : m29618a(context);
+                f22382V = Util.SDK_INT < 24 ? 0 : m29618a(context);
                 f22383W = true;
             }
             if (f22382V == 0) {
@@ -200,29 +200,29 @@ public final class C9589k extends Surface {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:5:0x0019, code lost:
-        if ("XT1650".equals(com.google.android.exoplayer2.p393v0.C9554k0.f22284d) != false) goto L_0x001b;
+        if ("XT1650".equals(com.google.android.exoplayer2.p393v0.Util.MODEL) != false) goto L_0x001b;
      */
     @android.annotation.TargetApi(24)
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private static int m29618a(android.content.Context r4) {
         /*
-            int r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             r1 = 26
             r2 = 0
             if (r0 >= r1) goto L_0x001c
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22283c
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
             java.lang.String r3 = "samsung"
             boolean r0 = r3.equals(r0)
             if (r0 != 0) goto L_0x001b
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r3 = "XT1650"
             boolean r0 = r3.equals(r0)
             if (r0 == 0) goto L_0x001c
         L_0x001b:
             return r2
         L_0x001c:
-            int r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             if (r0 >= r1) goto L_0x002d
             android.content.pm.PackageManager r4 = r4.getPackageManager()
             java.lang.String r0 = "android.hardware.vr.high_performance"

@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.core.content.C3688j;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11733i;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\b\u0018\u00002\u00020\u0001B+\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005\u0012\u000e\u0010\u0007\u001a\n\u0012\u0004\u0012\u00020\b\u0018\u00010\u0005¢\u0006\u0002\u0010\tJ\t\u0010\u0013\u001a\u00020\u0003HÆ\u0003J\u000f\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005HÆ\u0003J\u0011\u0010\u0015\u001a\n\u0012\u0004\u0012\u00020\b\u0018\u00010\u0005HÆ\u0003J5\u0010\u0016\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\u000e\b\u0002\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u00052\u0010\b\u0002\u0010\u0007\u001a\n\u0012\u0004\u0012\u00020\b\u0018\u00010\u0005HÆ\u0001J\t\u0010\u0017\u001a\u00020\u0018HÖ\u0001J\u0013\u0010\u0019\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u001cHÖ\u0003J\t\u0010\u001d\u001a\u00020\u0018HÖ\u0001J\u0010\u0010\u001e\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001fH\u0016J\t\u0010 \u001a\u00020\u0003HÖ\u0001J\u0019\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020$2\u0006\u0010%\u001a\u00020\u0018HÖ\u0001R\u0014\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000bR\u001c\u0010\u0007\u001a\n\u0012\u0004\u0012\u00020\b\u0018\u00010\u0005X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\rR\u0017\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\rR\u0014\u0010\u000f\u001a\u00020\u00038VX\u0004¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u000bR\u0014\u0010\u0011\u001a\u00020\u00038VX\u0004¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u000b¨\u0006&"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/content/assets/ProfileAvatar;", "Lcom/bamtechmedia/dominguez/core/content/Avatar;", "avatarId", "", "texts", "", "Lcom/bamtechmedia/dominguez/core/content/assets/TextEntry;", "images", "Lcom/bamtechmedia/dominguez/core/content/assets/Image;", "(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V", "getAvatarId", "()Ljava/lang/String;", "getImages", "()Ljava/util/List;", "getTexts", "title", "getTitle", "uniqueId", "getUniqueId", "component1", "component2", "component3", "copy", "describeContents", "", "equals", "", "other", "", "hashCode", "isSameAs", "Lcom/bamtechmedia/dominguez/core/content/assets/Asset;", "toString", "writeToParcel", "", "parcel", "Landroid/os/Parcel;", "flags", "coreContent_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -81,7 +81,7 @@ public final class ProfileAvatar implements C3593a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x002c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) mo12847a(), (java.lang.Object) r3.mo12847a()) != false) goto L_0x0031;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) mo12847a(), (java.lang.Object) r3.mo12847a()) != false) goto L_0x0031;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -93,15 +93,15 @@ public final class ProfileAvatar implements C3593a {
             com.bamtechmedia.dominguez.core.content.assets.ProfileAvatar r3 = (com.bamtechmedia.dominguez.core.content.assets.ProfileAvatar) r3
             java.lang.String r0 = r2.mo12824j()
             java.lang.String r1 = r3.mo12824j()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x002f
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r0 = r2.f9099U
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r1 = r3.f9099U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x002f
             java.util.List r0 = r2.mo12847a()
             java.util.List r3 = r3.mo12847a()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x002f
             goto L_0x0031
         L_0x002f:
@@ -179,6 +179,6 @@ public final class ProfileAvatar implements C3593a {
 
     /* renamed from: a */
     public boolean mo12848a(C3626b bVar) {
-        return (bVar instanceof ProfileAvatar) && C12880j.m40224a((Object) ((ProfileAvatar) bVar).mo12824j(), (Object) mo12824j());
+        return (bVar instanceof ProfileAvatar) && Intrinsics.areEqual((Object) ((ProfileAvatar) bVar).mo12824j(), (Object) mo12824j());
     }
 }

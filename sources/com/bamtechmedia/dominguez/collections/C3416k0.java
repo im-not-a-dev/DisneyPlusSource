@@ -5,7 +5,7 @@ import com.bamtechmedia.dominguez.core.content.assets.C3626b;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0010\t\n\u0000\n\u0002\u0010%\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u00002\u00020\u00012\u00020\u0002:\u0002\u001e\u001fB\u0005¢\u0006\u0002\u0010\u0003J\u000e\u0010\u001c\u001a\u00020\u00142\u0006\u0010\u001d\u001a\u00020\u0017R\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\tR\u001a\u0010\n\u001a\u00020\u000bX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR\u001a\u0010\u0010\u001a\u00020\u000bX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\r\"\u0004\b\u0012\u0010\u000fR\u000e\u0010\u0013\u001a\u00020\u0014X\u000e¢\u0006\u0002\n\u0000R\u001d\u0010\u0015\u001a\u000e\u0012\u0004\u0012\u00020\u0017\u0012\u0004\u0012\u00020\u00180\u0016¢\u0006\b\n\u0000\u001a\u0004\b\u0019\u0010\u001aR\u001a\u0010\u001b\u001a\u000e\u0012\u0004\u0012\u00020\u0017\u0012\u0004\u0012\u00020\u00140\u0016X\u0004¢\u0006\u0002\n\u0000¨\u0006 "}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/collections/ShelfItemSession;", "Landroidx/lifecycle/ViewModel;", "Lcom/bamtechmedia/dominguez/collections/HeroAutoPagingSession;", "()V", "collectionFocusItem", "Lcom/bamtechmedia/dominguez/collections/ShelfItemSession$CollectionFocusItem;", "getCollectionFocusItem", "()Lcom/bamtechmedia/dominguez/collections/ShelfItemSession$CollectionFocusItem;", "setCollectionFocusItem", "(Lcom/bamtechmedia/dominguez/collections/ShelfItemSession$CollectionFocusItem;)V", "heroAutoPagingEnabled", "", "getHeroAutoPagingEnabled", "()Z", "setHeroAutoPagingEnabled", "(Z)V", "heroAutoPagingStoppedByUser", "getHeroAutoPagingStoppedByUser", "setHeroAutoPagingStoppedByUser", "idGenerator", "", "shelfItemPositions", "", "", "Lcom/bamtechmedia/dominguez/collections/ShelfItemSession$ShelfPosition;", "getShelfItemPositions", "()Ljava/util/Map;", "stableIds", "stableId", "shelfId", "CollectionFocusItem", "ShelfPosition", "collectionsApi_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.collections.k0 */
@@ -56,7 +56,7 @@ public final class C3416k0 extends C0741y implements C3323f0 {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8644b, (java.lang.Object) r3.f8644b) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8644b, (java.lang.Object) r3.f8644b) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -68,11 +68,11 @@ public final class C3416k0 extends C0741y implements C3323f0 {
                 com.bamtechmedia.dominguez.collections.k0$a r3 = (com.bamtechmedia.dominguez.collections.C3416k0.C3417a) r3
                 java.lang.String r0 = r2.f8643a
                 java.lang.String r1 = r3.f8643a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 com.bamtechmedia.dominguez.core.content.assets.b r0 = r2.f8644b
                 com.bamtechmedia.dominguez.core.content.assets.b r3 = r3.f8644b
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -136,7 +136,7 @@ public final class C3416k0 extends C0741y implements C3323f0 {
             if (this != obj) {
                 if (obj instanceof C3418b) {
                     C3418b bVar = (C3418b) obj;
-                    if (!(this.f8645a == bVar.f8645a) || !C12880j.m40224a((Object) this.f8646b, (Object) bVar.f8646b)) {
+                    if (!(this.f8645a == bVar.f8645a) || !Intrinsics.areEqual((Object) this.f8646b, (Object) bVar.f8646b)) {
                         return false;
                     }
                 }

@@ -3,7 +3,7 @@ package com.bamtech.sdk4;
 import com.bamtech.core.annotations.android.DontObfuscate;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @DontObfuscate
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0002\b\u000e\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\b\b\u0018\u00002\u00020\u0001B3\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0005\u0012\u000e\b\u0002\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\b¢\u0006\u0002\u0010\nJ\t\u0010\u0012\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0013\u001a\u00020\u0005HÆ\u0003J\t\u0010\u0014\u001a\u00020\u0005HÆ\u0003J\u000f\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\t0\bHÆ\u0003J7\u0010\u0016\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00052\b\b\u0002\u0010\u0006\u001a\u00020\u00052\u000e\b\u0002\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\bHÆ\u0001J\u0013\u0010\u0017\u001a\u00020\u00182\b\u0010\u0019\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u001a\u001a\u00020\u001bHÖ\u0001J\t\u0010\u001c\u001a\u00020\tHÖ\u0001R\u0011\u0010\u0006\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0017\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\b¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\f¨\u0006\u001d"}, mo31007d2 = {"Lcom/bamtech/sdk4/Presentation;", "", "presentationType", "Lcom/bamtech/sdk4/ThumbnailPresentationType;", "thumbnailCount", "", "offsetMilliseconds", "paths", "", "", "(Lcom/bamtech/sdk4/ThumbnailPresentationType;JJLjava/util/List;)V", "getOffsetMilliseconds", "()J", "getPaths", "()Ljava/util/List;", "getPresentationType", "()Lcom/bamtech/sdk4/ThumbnailPresentationType;", "getThumbnailCount", "component1", "component2", "component3", "component4", "copy", "equals", "", "other", "hashCode", "", "toString", "extension-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -83,9 +83,9 @@ public final class Presentation {
         if (this != obj) {
             if (obj instanceof Presentation) {
                 Presentation presentation = (Presentation) obj;
-                if (C12880j.m40224a((Object) this.presentationType, (Object) presentation.presentationType)) {
+                if (Intrinsics.areEqual((Object) this.presentationType, (Object) presentation.presentationType)) {
                     if (this.thumbnailCount == presentation.thumbnailCount) {
-                        if (!(this.offsetMilliseconds == presentation.offsetMilliseconds) || !C12880j.m40224a((Object) this.paths, (Object) presentation.paths)) {
+                        if (!(this.offsetMilliseconds == presentation.offsetMilliseconds) || !Intrinsics.areEqual((Object) this.paths, (Object) presentation.paths)) {
                             return false;
                         }
                     }

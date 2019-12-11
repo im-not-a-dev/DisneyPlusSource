@@ -4,7 +4,7 @@ import java.util.List;
 import kotlin.C12898l;
 import kotlin.C13147x;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JavaToKotlinClassMap;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -40,10 +40,10 @@ public final class TypeEnhancementKt {
 
     static {
         FqName fqName = JvmAnnotationNames.ENHANCED_NULLABILITY_ANNOTATION;
-        C12880j.m40222a((Object) fqName, "JvmAnnotationNames.ENHANCED_NULLABILITY_ANNOTATION");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "JvmAnnotationNames.ENHANCED_NULLABILITY_ANNOTATION");
         ENHANCED_NULLABILITY_ANNOTATIONS = new EnhancedTypeAnnotations(fqName);
         FqName fqName2 = JvmAnnotationNames.ENHANCED_MUTABILITY_ANNOTATION;
-        C12880j.m40222a((Object) fqName2, "JvmAnnotationNames.ENHANCED_MUTABILITY_ANNOTATION");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName2, "JvmAnnotationNames.ENHANCED_MUTABILITY_ANNOTATION");
         ENHANCED_MUTABILITY_ANNOTATIONS = new EnhancedTypeAnnotations(fqName2);
     }
 
@@ -109,7 +109,7 @@ public final class TypeEnhancementKt {
             kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor r3 = r3.getDeclarationDescriptor()
             if (r3 == 0) goto L_0x0151
             java.lang.String r6 = "constructor.declarationD…pleResult(this, 1, false)"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r6)
             java.lang.Integer r6 = java.lang.Integer.valueOf(r20)
             java.lang.Object r6 = r1.invoke(r6)
             kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.JavaTypeQualifiers r6 = (kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.JavaTypeQualifiers) r6
@@ -119,7 +119,7 @@ public final class TypeEnhancementKt {
             kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations r3 = r3.component2()
             kotlin.reflect.jvm.internal.impl.types.TypeConstructor r8 = r7.getTypeConstructor()
             java.lang.String r9 = "enhancedClassifier.typeConstructor"
-            kotlin.jvm.internal.C12880j.m40222a(r8, r9)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r9)
             int r10 = r20 + 1
             if (r3 == 0) goto L_0x0054
             r11 = 1
@@ -146,7 +146,7 @@ public final class TypeEnhancementKt {
             if (r17 == 0) goto L_0x0098
             int r14 = r14 + 1
             kotlin.reflect.jvm.internal.impl.types.TypeConstructor r15 = r7.getTypeConstructor()
-            kotlin.jvm.internal.C12880j.m40222a(r15, r9)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r15, r9)
             java.util.List r15 = r15.getParameters()
             java.lang.Object r10 = r15.get(r10)
             kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor r10 = (kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor) r10
@@ -171,7 +171,7 @@ public final class TypeEnhancementKt {
             kotlin.reflect.jvm.internal.impl.types.KotlinType r5 = r5.getType()
             kotlin.reflect.jvm.internal.impl.types.Variance r15 = r15.getProjectionKind()
             java.lang.String r4 = "arg.projectionKind"
-            kotlin.jvm.internal.C12880j.m40222a(r15, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r15, r4)
             java.util.List r4 = r8.getParameters()
             java.lang.Object r4 = r4.get(r10)
             kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor r4 = (kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor) r4
@@ -369,7 +369,7 @@ public final class TypeEnhancementKt {
     public static final boolean hasEnhancedNullability(KotlinType kotlinType) {
         Annotations annotations = kotlinType.getAnnotations();
         FqName fqName = JvmAnnotationNames.ENHANCED_NULLABILITY_ANNOTATION;
-        C12880j.m40222a((Object) fqName, "JvmAnnotationNames.ENHANCED_NULLABILITY_ANNOTATION");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "JvmAnnotationNames.ENHANCED_NULLABILITY_ANNOTATION");
         return annotations.findAnnotation(fqName) != null;
     }
 

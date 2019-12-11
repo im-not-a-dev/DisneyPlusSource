@@ -13,7 +13,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Single;
@@ -46,7 +46,7 @@ final class DefaultTelemetryClient$postEvents$2<T, R> implements Function<T, Sin
         Request a = C1691e.m7796a(updateTemplates$default, client, (ResponseTransformer<? extends OUT>) new DefaultResponseTransformer<Object>(new C2063x36baa87b(new ResponseHandler[]{TelemetryClientKt.telemetryResponseHandler(serviceTransaction, this.this$0.converters)}, serviceTransaction), new C2064x36baa87c(serviceTransaction)), this.$json, ConfigurationKt.toDustConfigSettings(configuration));
         Call a2 = C1691e.m7799a(a);
         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new DefaultTelemetryClient$postEvents$2$$special$$inlined$asSingle$1(a2)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         return b.mo30233g(C20651.INSTANCE);
     }
 }

@@ -3,7 +3,7 @@ package com.bamtech.player.exo.p043k;
 import com.bamtech.player.exo.p046n.C1744b;
 import com.google.android.exoplayer2.Format;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 import p163g.p174d.p178b.C5326w;
 import p163g.p174d.p178b.p193j0.C5285a;
@@ -58,32 +58,32 @@ public final class C1726a {
         }
         if (str != null) {
             String str2 = "sampleMimeType!!";
-            C12880j.m40222a((Object) str, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, str2);
             if (C12833x.m40154a((CharSequence) str, (CharSequence) "audio", false, 2, (Object) null)) {
                 return 1;
             }
             String str3 = format.f18349b0;
             if (str3 != null) {
-                C12880j.m40222a((Object) str3, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) str3, str2);
                 if (C12833x.m40154a((CharSequence) str3, (CharSequence) "video", false, 2, (Object) null)) {
                     return 0;
                 }
                 C5289a aVar = C5288c.f12654h;
                 String str4 = format.f18349b0;
                 if (str4 != null) {
-                    C12880j.m40222a((Object) str4, str2);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) str4, str2);
                     if (aVar.mo16866b(str4)) {
                         return 3;
                     }
                     return 2;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

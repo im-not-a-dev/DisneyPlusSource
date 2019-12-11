@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.profiles.p263u1.p265e.C6865a;
 import java.util.List;
 import java.util.Locale;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p130o.C4065b;
 
 /* renamed from: com.bamtechmedia.dominguez.profiles.z1.a */
@@ -45,7 +45,7 @@ public final class C7023a implements C6865a {
     /* renamed from: c */
     public List<String> mo19637c() {
         String a = C4065b.m13973b().mo14582a();
-        C12880j.m40222a((Object) a, "LocaleListCompat.getDefault().toLanguageTags()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "LocaleListCompat.getDefault().toLanguageTags()");
         return C12833x.m40142a((CharSequence) a, new String[]{","}, false, 0, 6, (Object) null);
     }
 }

@@ -1,7 +1,7 @@
 package com.bamtech.player.exo.p042j;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.C11945a;
 
 /* renamed from: com.bamtech.player.exo.j.b */
@@ -16,6 +16,6 @@ final class C1721b implements C11945a {
     }
 
     public final /* synthetic */ void run() {
-        C12880j.m40222a(this.f5999a.invoke(), "invoke(...)");
+        Intrinsics.checkReturnedValueIsNotNull(this.f5999a.invoke(), "invoke(...)");
     }
 }

@@ -29,7 +29,7 @@ public final class RenewLicenseWorker extends Worker {
             r8 = this;
             androidx.work.WorkManager r0 = androidx.work.WorkManager.m5490a()
             java.lang.String r1 = "WorkManager.getInstance()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.lang.String r1 = "renew_licenses"
             com.google.common.util.concurrent.ListenableFuture r0 = r0.mo5645c(r1)
             java.lang.Object r0 = r0.get()
@@ -62,7 +62,7 @@ public final class RenewLicenseWorker extends Worker {
             if (r0 == 0) goto L_0x006d
             java.lang.Object r0 = r0.get()
             java.lang.String r1 = "transactionProvider.get()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             r3 = r0
             com.bamtech.sdk4.internal.service.ServiceTransaction r3 = (com.bamtech.sdk4.internal.service.ServiceTransaction) r3
             r4 = 0
@@ -75,15 +75,15 @@ public final class RenewLicenseWorker extends Worker {
             r0.mo5640a(r1)
             androidx.work.ListenableWorker$Result r0 = androidx.work.ListenableWorker.Result.m5470c()
             java.lang.String r1 = "Result.success()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             return r0
         L_0x006d:
             java.lang.String r0 = "transactionProvider"
-            kotlin.jvm.internal.C12880j.m40227c(r0)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)
             throw r1
         L_0x0073:
             java.lang.String r0 = "downloadWorkManager"
-            kotlin.jvm.internal.C12880j.m40227c(r0)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r0)
             throw r1
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtech.sdk4.internal.media.offline.workers.RenewLicenseWorker.doWork():androidx.work.ListenableWorker$Result");

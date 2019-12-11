@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.resolve;
 
 import java.util.Collection;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities;
 
@@ -25,7 +25,7 @@ public final class VisibilityUtilKt {
             if (callableMemberDescriptor != null) {
                 return callableMemberDescriptor;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         throw new AssertionError("Assertion failed");

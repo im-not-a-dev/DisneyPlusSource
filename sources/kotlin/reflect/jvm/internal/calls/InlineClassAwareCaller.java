@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p586h0.C12757d;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0011\n\u0002\b\u0003\b\u0000\u0018\u0000*\f\b\u0000\u0010\u0001 \u0001*\u0004\u0018\u00010\u00022\b\u0012\u0004\u0012\u0002H\u00010\u0003:\u0001\u001cB#\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\f\u0010\u0006\u001a\b\u0012\u0004\u0012\u00028\u00000\u0003\u0012\u0006\u0010\u0007\u001a\u00020\b¢\u0006\u0002\u0010\tJ\u001b\u0010\u0017\u001a\u0004\u0018\u00010\u00182\n\u0010\u0019\u001a\u0006\u0012\u0002\b\u00030\u001aH\u0016¢\u0006\u0002\u0010\u001bR\u0014\u0010\u0006\u001a\b\u0012\u0004\u0012\u00028\u00000\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\f\u001a\u00028\u00008VX\u0004¢\u0006\u0006\u001a\u0004\b\r\u0010\u000eR\u001a\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u00110\u00108VX\u0004¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u0013R\u0014\u0010\u0014\u001a\u00020\u00118VX\u0004¢\u0006\u0006\u001a\u0004\b\u0015\u0010\u0016¨\u0006\u001d"}, mo31007d2 = {"Lkotlin/reflect/jvm/internal/calls/InlineClassAwareCaller;", "M", "Ljava/lang/reflect/Member;", "Lkotlin/reflect/jvm/internal/calls/Caller;", "descriptor", "Lkotlin/reflect/jvm/internal/impl/descriptors/CallableMemberDescriptor;", "caller", "isDefault", "", "(Lorg/jetbrains/kotlin/descriptors/CallableMemberDescriptor;Lkotlin/reflect/jvm/internal/calls/Caller;Z)V", "data", "Lkotlin/reflect/jvm/internal/calls/InlineClassAwareCaller$BoxUnboxData;", "member", "getMember", "()Ljava/lang/reflect/Member;", "parameterTypes", "", "Ljava/lang/reflect/Type;", "getParameterTypes", "()Ljava/util/List;", "returnType", "getReturnType", "()Ljava/lang/reflect/Type;", "call", "", "args", "", "([Ljava/lang/Object;)Ljava/lang/Object;", "BoxUnboxData", "kotlin-reflection"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -57,7 +57,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller<M>
             r10 = 0
             if (r9 == 0) goto L_0x0180
             java.lang.String r0 = "descriptor.returnType!!"
-            kotlin.jvm.internal.C12880j.m40222a(r9, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r9, r0)
             java.lang.Class r9 = kotlin.reflect.jvm.internal.calls.InlineClassAwareCallerKt.toInlineClass(r9)
             if (r9 == 0) goto L_0x001e
             java.lang.reflect.Method r9 = kotlin.reflect.jvm.internal.calls.InlineClassAwareCallerKt.getBoxMethod(r9, r8)
@@ -95,7 +95,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller<M>
             boolean r0 = r0 instanceof kotlin.reflect.jvm.internal.calls.BoundCaller
             if (r0 != 0) goto L_0x0066
             kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor r0 = r8.getContainingDeclaration()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             boolean r0 = kotlin.reflect.jvm.internal.impl.resolve.InlineClassesUtilsKt.isInlineClass(r0)
             if (r0 == 0) goto L_0x0063
             goto L_0x0066
@@ -132,7 +132,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller<M>
             kotlin.reflect.jvm.internal.impl.descriptors.ConstructorDescriptor r3 = (kotlin.reflect.jvm.internal.impl.descriptors.ConstructorDescriptor) r3
             kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor r3 = r3.getConstructedClass()
             java.lang.String r5 = "descriptor.constructedClass"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r5)
             boolean r5 = r3.isInner()
             if (r5 == 0) goto L_0x00cd
             kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor r3 = r3.getContainingDeclaration()
@@ -148,7 +148,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller<M>
             throw r8
         L_0x00b3:
             kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor r5 = r8.getContainingDeclaration()
-            kotlin.jvm.internal.C12880j.m40222a(r5, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r3)
             boolean r3 = r5 instanceof kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor
             if (r3 == 0) goto L_0x00cd
             kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor r5 = (kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor) r5
@@ -159,7 +159,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller<M>
         L_0x00cd:
             java.util.List r3 = r8.getValueParameters()
             java.lang.String r5 = "descriptor.valueParameters"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r5)
             java.util.Iterator r3 = r3.iterator()
         L_0x00da:
             boolean r5 = r3.hasNext()
@@ -234,7 +234,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller<M>
             r9.<init>(r8)
             throw r9
         L_0x0180:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r10
         */
         throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.calls.InlineClassAwareCaller.<init>(kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor, kotlin.reflect.jvm.internal.calls.Caller, boolean):void");
@@ -246,7 +246,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller<M>
         Method[] component2 = boxUnboxData.component2();
         Method component3 = boxUnboxData.component3();
         Object[] copyOf = Arrays.copyOf(objArr, objArr.length);
-        C12880j.m40222a((Object) copyOf, "java.util.Arrays.copyOf(this, size)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) copyOf, "java.util.Arrays.copyOf(this, size)");
         if (copyOf != null) {
             int b = component1.mo31070b();
             int c = component1.mo31071c();

@@ -13,7 +13,7 @@ import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u00192\u00020\u0001:\u0001\u0019B\u0013\u0012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0003¢\u0006\u0002\u0010\u0004J)\u0010\b\u001a\u00020\t2\u0010\u0010\n\u001a\f\u0012\u0006\b\u0001\u0012\u00020\f\u0018\u00010\u000b2\b\u0010\r\u001a\u0004\u0018\u00010\u000eH\u0016¢\u0006\u0002\u0010\u000fJ)\u0010\u0010\u001a\u00020\t2\u0010\u0010\n\u001a\f\u0012\u0006\b\u0001\u0012\u00020\f\u0018\u00010\u000b2\b\u0010\r\u001a\u0004\u0018\u00010\u000eH\u0016¢\u0006\u0002\u0010\u000fJ\u0013\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\f0\u000bH\u0016¢\u0006\u0002\u0010\u0012J2\u0010\u0013\u001a\u00020\t2\u000e\b\u0002\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00150\u00032\u000e\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00160\u00032\n\b\u0002\u0010\u0017\u001a\u0004\u0018\u00010\u0018R \u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0003X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\u0004¨\u0006\u001a"}, mo31007d2 = {"Lcom/bamtech/core/networking/security/CompositeX509TrustManager;", "Ljavax/net/ssl/X509TrustManager;", "trustManagers", "", "(Ljava/util/List;)V", "getTrustManagers", "()Ljava/util/List;", "setTrustManagers", "checkClientTrusted", "", "chain", "", "Ljava/security/cert/X509Certificate;", "authType", "", "([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V", "checkServerTrusted", "getAcceptedIssuers", "()[Ljava/security/cert/X509Certificate;", "initializeSSLContext", "keyManagers", "Ljavax/net/ssl/KeyManager;", "Ljavax/net/ssl/TrustManager;", "secureRandom", "Ljava/security/SecureRandom;", "Companion", "networking-security"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtech.core.networking.g.a */
@@ -36,10 +36,10 @@ public final class C1693a implements X509TrustManager {
         public final X509TrustManager mo7511a(String str, KeyStore keyStore) {
             try {
                 TrustManagerFactory instance = TrustManagerFactory.getInstance(str);
-                C12880j.m40222a((Object) instance, "TrustManagerFactory.getInstance(algorithm)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) instance, "TrustManagerFactory.getInstance(algorithm)");
                 instance.init(keyStore);
                 TrustManager[] trustManagers = instance.getTrustManagers();
-                C12880j.m40222a((Object) trustManagers, "factory.getTrustManagers()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) trustManagers, "factory.getTrustManagers()");
                 ArrayList arrayList = new ArrayList();
                 for (TrustManager trustManager : trustManagers) {
                     if (trustManager instanceof X509TrustManager) {
@@ -59,7 +59,7 @@ public final class C1693a implements X509TrustManager {
         /* renamed from: b */
         public final X509TrustManager mo7512b(KeyStore keyStore) {
             String defaultAlgorithm = TrustManagerFactory.getDefaultAlgorithm();
-            C12880j.m40222a((Object) defaultAlgorithm, "TrustManagerFactory.getDefaultAlgorithm()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) defaultAlgorithm, "TrustManagerFactory.getDefaultAlgorithm()");
             return mo7511a(defaultAlgorithm, keyStore);
         }
 
@@ -114,7 +114,7 @@ public final class C1693a implements X509TrustManager {
                 break;
             }
             X509Certificate[] acceptedIssuers = ((X509TrustManager) it.next()).getAcceptedIssuers();
-            C12880j.m40222a((Object) acceptedIssuers, "trustManager.acceptedIssuers");
+            Intrinsics.checkReturnedValueIsNotNull((Object) acceptedIssuers, "trustManager.acceptedIssuers");
             for (X509Certificate add : acceptedIssuers) {
                 arrayList.add(add);
             }

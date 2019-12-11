@@ -10,7 +10,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import net.danlew.android.joda.DateUtils;
 
@@ -115,7 +115,7 @@ public final class C3800a {
 
         public final void onAnimationUpdate(ValueAnimator valueAnimator) {
             Function1 function1 = this.f9450a;
-            C12880j.m40222a((Object) valueAnimator, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueAnimator, "it");
             function1.invoke(valueAnimator);
         }
     }

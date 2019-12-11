@@ -10,8 +10,8 @@ import com.google.android.exoplayer2.p361p0.C8825g;
 import com.google.android.exoplayer2.p361p0.C8828h;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9544h;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import com.google.android.exoplayer2.p394w0.C9585h;
@@ -28,31 +28,31 @@ import java.util.List;
 final class C8961d {
 
     /* renamed from: a */
-    private static final int f19504a = C9554k0.m29428b("vide");
+    private static final int f19504a = Util.m29428b("vide");
 
     /* renamed from: b */
-    private static final int f19505b = C9554k0.m29428b("soun");
+    private static final int f19505b = Util.m29428b("soun");
 
     /* renamed from: c */
-    private static final int f19506c = C9554k0.m29428b("text");
+    private static final int f19506c = Util.m29428b("text");
 
     /* renamed from: d */
-    private static final int f19507d = C9554k0.m29428b("sbtl");
+    private static final int f19507d = Util.m29428b("sbtl");
 
     /* renamed from: e */
-    private static final int f19508e = C9554k0.m29428b("subt");
+    private static final int f19508e = Util.m29428b("subt");
 
     /* renamed from: f */
-    private static final int f19509f = C9554k0.m29428b("clcp");
+    private static final int f19509f = Util.m29428b("clcp");
 
     /* renamed from: g */
-    private static final int f19510g = C9554k0.m29428b("meta");
+    private static final int f19510g = Util.m29428b("meta");
 
     /* renamed from: h */
-    private static final int f19511h = C9554k0.m29428b("mdta");
+    private static final int f19511h = Util.m29428b("mdta");
 
     /* renamed from: i */
-    private static final byte[] f19512i = C9554k0.m29447d("OpusHead");
+    private static final byte[] f19512i = Util.m29447d("OpusHead");
 
     /* renamed from: com.google.android.exoplayer2.s0.v.d$a */
     /* compiled from: AtomParsers */
@@ -295,7 +295,7 @@ final class C8961d {
         }
         long d2 = m26383d(bVar2.f19503g1);
         if (j2 != -9223372036854775807L) {
-            j3 = C9554k0.m29439c(j2, 1000000, d2);
+            j3 = Util.m29439c(j2, 1000000, d2);
         }
         long j4 = j3;
         C8959a d3 = d.mo23365d(C8958c.f19432V).mo23365d(C8958c.f19434W);
@@ -351,7 +351,7 @@ final class C8961d {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Skipped metadata with unknown key index: ");
                 sb.append(i5);
-                C9563q.m29500d("AtomParsers", sb.toString());
+                Log.m29500d("AtomParsers", sb.toString());
             } else {
                 C8975h a = C8977i.m26460a(wVar2, c + i4, strArr[i5]);
                 if (a != null) {
@@ -667,7 +667,7 @@ final class C8961d {
             r31 = r15
             if (r23 != 0) goto L_0x013f
             java.lang.String r3 = "Unexpected end of chunk data"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r2, r3)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r2, r3)
             long[] r5 = java.util.Arrays.copyOf(r5, r8)
             int[] r12 = java.util.Arrays.copyOf(r12, r8)
             long[] r7 = java.util.Arrays.copyOf(r7, r8)
@@ -821,7 +821,7 @@ final class C8961d {
         L_0x0235:
             r8.append(r0)
             java.lang.String r0 = r8.toString()
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r2, r0)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r2, r0)
         L_0x023f:
             r2 = r5
             r5 = r7
@@ -846,7 +846,7 @@ final class C8961d {
             com.google.android.exoplayer2.Format r3 = r1.f19667f
             int r4 = r3.f18365q0
             int r3 = r3.f18363o0
-            int r3 = com.google.android.exoplayer2.p393v0.C9554k0.m29425b(r4, r3)
+            int r3 = com.google.android.exoplayer2.p393v0.Util.m29425b(r4, r3)
             long r4 = (long) r14
             com.google.android.exoplayer2.s0.v.f$b r0 = com.google.android.exoplayer2.p366s0.p371v.C8969f.m26400a(r3, r2, r0, r4)
             long[] r2 = r0.f19541a
@@ -861,7 +861,7 @@ final class C8961d {
             r11 = 1000000(0xf4240, double:4.940656E-318)
             long r13 = r1.f19664c
             r9 = r21
-            long r7 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r9, r11, r13)
+            long r7 = com.google.android.exoplayer2.p393v0.Util.m29439c(r9, r11, r13)
             long[] r9 = r1.f19669h
             r14 = 1000000(0xf4240, double:4.940656E-318)
             if (r9 == 0) goto L_0x04b2
@@ -886,7 +886,7 @@ final class C8961d {
             long r9 = r1.f19665d
             r27 = r7
             r29 = r9
-            long r7 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r25, r27, r29)
+            long r7 = com.google.android.exoplayer2.p393v0.Util.m29439c(r25, r27, r29)
             long r7 = r23 + r7
             r9 = r5
             r10 = r21
@@ -907,12 +907,12 @@ final class C8961d {
             long r12 = r1.f19664c
             r27 = r7
             r29 = r12
-            long r7 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r25, r27, r29)
+            long r7 = com.google.android.exoplayer2.p393v0.Util.m29439c(r25, r27, r29)
             com.google.android.exoplayer2.Format r9 = r1.f19667f
             int r9 = r9.f18364p0
             long r12 = (long) r9
             long r14 = r1.f19664c
-            long r9 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r10, r12, r14)
+            long r9 = com.google.android.exoplayer2.p393v0.Util.m29439c(r10, r12, r14)
             int r11 = (r7 > r18 ? 1 : (r7 == r18 ? 0 : -1))
             if (r11 != 0) goto L_0x02f3
             int r11 = (r9 > r18 ? 1 : (r9 == r18 ? 0 : -1))
@@ -929,13 +929,13 @@ final class C8961d {
             int r0 = (int) r9
             r7.f19147b = r0
             long r7 = r1.f19664c
-            com.google.android.exoplayer2.p393v0.C9554k0.m29410a(r5, r3, r7)
+            com.google.android.exoplayer2.p393v0.Util.m29410a(r5, r3, r7)
             long[] r0 = r1.f19669h
             r3 = 0
             r7 = r0[r3]
             r9 = 1000000(0xf4240, double:4.940656E-318)
             long r11 = r1.f19665d
-            long r7 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r7, r9, r11)
+            long r7 = com.google.android.exoplayer2.p393v0.Util.m29439c(r7, r9, r11)
             com.google.android.exoplayer2.s0.v.p r9 = new com.google.android.exoplayer2.s0.v.p
             r0 = r9
             r1 = r35
@@ -965,7 +965,7 @@ final class C8961d {
             long r9 = r3 - r7
             r11 = 1000000(0xf4240, double:4.940656E-318)
             long r13 = r1.f19664c
-            long r3 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r9, r11, r13)
+            long r3 = com.google.android.exoplayer2.p393v0.Util.m29439c(r9, r11, r13)
             r5[r0] = r3
             int r0 = r0 + 1
             goto L_0x033c
@@ -973,7 +973,7 @@ final class C8961d {
             long r9 = r21 - r7
             r11 = 1000000(0xf4240, double:4.940656E-318)
             long r13 = r1.f19664c
-            long r7 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r9, r11, r13)
+            long r7 = com.google.android.exoplayer2.p393v0.Util.m29439c(r9, r11, r13)
             com.google.android.exoplayer2.s0.v.p r9 = new com.google.android.exoplayer2.s0.v.p
             r0 = r9
             r1 = r35
@@ -1015,13 +1015,13 @@ final class C8961d {
             long r9 = r1.f19665d
             r23 = r12
             r25 = r9
-            long r9 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r21, r23, r25)
+            long r9 = com.google.android.exoplayer2.p393v0.Util.m29439c(r21, r23, r25)
             r12 = 1
-            int r13 = com.google.android.exoplayer2.p393v0.C9554k0.m29386a(r5, r14, r12, r12)
+            int r13 = com.google.android.exoplayer2.p393v0.Util.m29386a(r5, r14, r12, r12)
             r7[r8] = r13
             long r14 = r14 + r9
             r9 = 0
-            int r10 = com.google.android.exoplayer2.p393v0.C9554k0.m29386a(r5, r14, r3, r9)
+            int r10 = com.google.android.exoplayer2.p393v0.Util.m29386a(r5, r14, r3, r9)
             r4[r8] = r10
         L_0x03ad:
             r10 = r7[r8]
@@ -1132,7 +1132,7 @@ final class C8961d {
             long r6 = r1.f19665d
             r17 = r13
             r21 = r6
-            long r6 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r17, r19, r21)
+            long r6 = com.google.android.exoplayer2.p393v0.Util.m29439c(r17, r19, r21)
             r17 = r5[r11]
             long r28 = r17 - r23
             r30 = 1000000(0xf4240, double:4.940656E-318)
@@ -1140,7 +1140,7 @@ final class C8961d {
             r17 = r13
             long r12 = r1.f19664c
             r32 = r12
-            long r12 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r28, r30, r32)
+            long r12 = com.google.android.exoplayer2.p393v0.Util.m29439c(r28, r30, r32)
             long r6 = r6 + r12
             r10[r15] = r6
             if (r0 == 0) goto L_0x0467
@@ -1177,7 +1177,7 @@ final class C8961d {
             r19 = 1000000(0xf4240, double:4.940656E-318)
             long r4 = r1.f19665d
             r21 = r4
-            long r11 = com.google.android.exoplayer2.p393v0.C9554k0.m29439c(r17, r19, r21)
+            long r11 = com.google.android.exoplayer2.p393v0.Util.m29439c(r17, r19, r21)
             com.google.android.exoplayer2.s0.v.p r9 = new com.google.android.exoplayer2.s0.v.p
             r0 = r9
             r1 = r35
@@ -1196,7 +1196,7 @@ final class C8961d {
             r16 = r6
             r3 = r14
             long r9 = r1.f19664c
-            com.google.android.exoplayer2.p393v0.C9554k0.m29410a(r5, r3, r9)
+            com.google.android.exoplayer2.p393v0.Util.m29410a(r5, r3, r9)
             com.google.android.exoplayer2.s0.v.p r9 = new com.google.android.exoplayer2.s0.v.p
             r0 = r9
             r1 = r35
@@ -1781,8 +1781,8 @@ final class C8961d {
     /* renamed from: a */
     private static boolean m26375a(long[] jArr, long j, long j2, long j3) {
         int length = jArr.length - 1;
-        int a = C9554k0.m29382a(4, 0, length);
-        int a2 = C9554k0.m29382a(jArr.length - 4, 0, length);
+        int a = Util.m29382a(4, 0, length);
+        int a2 = Util.m29382a(jArr.length - 4, 0, length);
         if (jArr[0] > j2 || j2 >= jArr[a] || jArr[a2] >= j3 || j3 > j) {
             return false;
         }

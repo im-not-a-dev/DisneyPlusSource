@@ -20,7 +20,7 @@ import java.util.Date;
 import java.util.List;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import p096e.p155q.p156a.p157a.C4342e;
 import p096e.p155q.p156a.p157a.C4354j;
@@ -28,7 +28,7 @@ import p096e.p155q.p156a.p157a.C4354j.C4355a;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010 \n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001:\u0002!\"B-\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\u0018\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0012H\u0002J\u000e\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\u00150\u0014H\u0017J\u0016\u0010\u0016\u001a\u00020\u00172\f\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\u000e0\u0019H\u0002J$\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u000e0\u00192\f\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u000e0\u00192\u0006\u0010\u0011\u001a\u00020\u0012H\u0003J\u0010\u0010\u001c\u001a\u00020\u00122\u0006\u0010\u001d\u001a\u00020\u001eH\u0002J&\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u00192\u0006\u0010\u001d\u001a\u00020\u001e2\u000e\u0010 \u001a\n\u0012\u0004\u0012\u00020\u0010\u0018\u00010\u0019H\u0002R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006#"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/channels/tv/worker/SyncPlayNextChannelWorker;", "Landroidx/work/RxWorker;", "context", "Landroid/content/Context;", "parameters", "Landroidx/work/WorkerParameters;", "programCandidateProvider", "Lcom/bamtechmedia/dominguez/channels/tv/programs/ProgramCandidateProvider;", "previewChannelHelper", "Landroidx/tvprovider/media/tv/PreviewChannelHelper;", "channelManager", "Lcom/bamtechmedia/dominguez/channels/tv/ChannelManager;", "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lcom/bamtechmedia/dominguez/channels/tv/programs/ProgramCandidateProvider;Landroidx/tvprovider/media/tv/PreviewChannelHelper;Lcom/bamtechmedia/dominguez/channels/tv/ChannelManager;)V", "buildProgram", "Landroidx/tvprovider/media/tv/WatchNextProgram;", "program", "Lcom/bamtechmedia/dominguez/channels/tv/db/ProgramCandidate;", "watchNextType", "", "createWork", "Lio/reactivex/Single;", "Landroidx/work/ListenableWorker$Result;", "deleteWatchNextProgramsPreviouslyAddedFromSets", "", "currentWatchNextProgramsSavedInPlayNextChannel", "", "filterProgramsForGivenType", "watchNextProgramsToFilter", "mapContentSetTypeToWatchNextType", "contentSetType", "Lcom/bamtechmedia/dominguez/core/content/sets/ContentSetType;", "prepareCandidates", "list", "Factory", "Helper", "channels_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.channels.tv.worker.SyncPlayNextChannelWorker */
@@ -67,7 +67,7 @@ public final class SyncPlayNextChannelWorker extends RxWorker {
 
         /* renamed from: a */
         public ListenableWorker mo5648a(Context context, String str, WorkerParameters workerParameters) {
-            if (!C12880j.m40224a((Object) str, (Object) SyncPlayNextChannelWorker.class.getCanonicalName())) {
+            if (!Intrinsics.areEqual((Object) str, (Object) SyncPlayNextChannelWorker.class.getCanonicalName())) {
                 return null;
             }
             SyncPlayNextChannelWorker syncPlayNextChannelWorker = new SyncPlayNextChannelWorker(context, workerParameters, this.f8252b, this.f8253c, this.f8254d);
@@ -115,7 +115,7 @@ public final class SyncPlayNextChannelWorker extends RxWorker {
             for (C4354j jVar : this.f8256c.m11241a(ContentSetType.ContinueWatchingSet, list)) {
                 ArrayList<C4354j> arrayList = new ArrayList<>();
                 for (Object next : b) {
-                    if (C12880j.m40224a((Object) ((C4354j) next).mo15141d(), (Object) jVar.mo15141d())) {
+                    if (Intrinsics.areEqual((Object) ((C4354j) next).mo15141d(), (Object) jVar.mo15141d())) {
                         arrayList.add(next);
                     }
                 }
@@ -133,7 +133,7 @@ public final class SyncPlayNextChannelWorker extends RxWorker {
                 sb.append(jVar.mo15140c());
                 sb.append(" : count ");
                 sb.append(i);
-                C14100a.m44531d(sb.toString(), new Object[0]);
+                Timber.m44531d(sb.toString(), new Object[0]);
             }
             return Result.m5470c();
         }
@@ -163,7 +163,7 @@ public final class SyncPlayNextChannelWorker extends RxWorker {
     /* renamed from: a */
     public Single<Result> mo5623a() {
         Single<Result> a = this.f8249c.mo12288a().mo30131f(new C3248c(this)).mo30109a((SingleSource<? extends T>) Single.m38399b(Result.m5470c()));
-        C12880j.m40222a((Object) a, "programCandidateProvider…e.just(Result.success()))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "programCandidateProvider…e.just(Result.success()))");
         return a;
     }
 
@@ -220,7 +220,7 @@ public final class SyncPlayNextChannelWorker extends RxWorker {
         aVar11.mo15143c(parse2);
         C4355a aVar12 = aVar11;
         Date date = DateTime.now().toDate();
-        C12880j.m40222a((Object) date, "DateTime.now().toDate()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) date, "DateTime.now().toDate()");
         aVar12.mo15238i(date.getTime());
         Integer c = cVar.mo12268c();
         aVar12.mo15151g(c != null ? c.intValue() : 0);
@@ -239,7 +239,7 @@ public final class SyncPlayNextChannelWorker extends RxWorker {
         C4355a aVar16 = aVar15;
         aVar16.mo15184b(cVar.mo12277j());
         C4354j a = aVar16.mo15237a();
-        C12880j.m40222a((Object) a, "builder.build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "builder.build()");
         return a;
     }
 

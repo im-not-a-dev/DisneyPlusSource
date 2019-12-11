@@ -36,7 +36,7 @@ public final class ClassData {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.sourceElement, (java.lang.Object) r3.sourceElement) != false) goto L_0x0033;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.sourceElement, (java.lang.Object) r3.sourceElement) != false) goto L_0x0033;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -48,19 +48,19 @@ public final class ClassData {
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassData r3 = (kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassData) r3
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver r0 = r2.nameResolver
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver r1 = r3.nameResolver
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Class r0 = r2.classProto
             kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Class r1 = r3.classProto
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.BinaryVersion r0 = r2.metadataVersion
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.BinaryVersion r1 = r3.metadataVersion
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             kotlin.reflect.jvm.internal.impl.descriptors.SourceElement r0 = r2.sourceElement
             kotlin.reflect.jvm.internal.impl.descriptors.SourceElement r3 = r3.sourceElement
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0031
             goto L_0x0033
         L_0x0031:

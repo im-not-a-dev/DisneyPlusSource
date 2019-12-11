@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.impl.EmptyPackageFragmentDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.DeserializedDescriptorResolver;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinClassFinder;
@@ -37,15 +37,15 @@ public final class PackagePartScopeCache {
         Object obj = concurrentHashMap.get(classId);
         if (obj == null) {
             FqName packageFqName = reflectKotlinClass.getClassId().getPackageFqName();
-            C12880j.m40222a((Object) packageFqName, "fileClass.classId.packageFqName");
+            Intrinsics.checkReturnedValueIsNotNull((Object) packageFqName, "fileClass.classId.packageFqName");
             if (reflectKotlinClass.getClassHeader().getKind() == Kind.MULTIFILE_CLASS) {
                 List<String> multifilePartNames = reflectKotlinClass.getClassHeader().getMultifilePartNames();
                 list = new ArrayList<>();
                 for (String byInternalName : multifilePartNames) {
                     JvmClassName byInternalName2 = JvmClassName.byInternalName(byInternalName);
-                    C12880j.m40222a((Object) byInternalName2, "JvmClassName.byInternalName(partName)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) byInternalName2, "JvmClassName.byInternalName(partName)");
                     ClassId classId2 = ClassId.topLevel(byInternalName2.getFqNameForTopLevelClassMaybeWithDollars());
-                    C12880j.m40222a((Object) classId2, "ClassId.topLevel(JvmClas…velClassMaybeWithDollars)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) classId2, "ClassId.topLevel(JvmClas…velClassMaybeWithDollars)");
                     KotlinJvmBinaryClass findKotlinClass = KotlinClassFinderKt.findKotlinClass((KotlinClassFinder) this.kotlinClassFinder, classId2);
                     if (findKotlinClass != null) {
                         list.add(findKotlinClass);
@@ -76,7 +76,7 @@ public final class PackagePartScopeCache {
                 obj = putIfAbsent;
             }
         }
-        C12880j.m40222a(obj, "cache.getOrPut(fileClass…ileClass)\", scopes)\n    }");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "cache.getOrPut(fileClass…ileClass)\", scopes)\n    }");
         return (MemberScope) obj;
     }
 }

@@ -113,7 +113,7 @@ public final class Product {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:16:0x004c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.sku, (java.lang.Object) r3.sku) != false) goto L_0x0051;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.sku, (java.lang.Object) r3.sku) != false) goto L_0x0051;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -125,31 +125,31 @@ public final class Product {
             com.bamtech.sdk4.paywall.Product r3 = (com.bamtech.sdk4.paywall.Product) r3
             com.bamtech.sdk4.paywall.Campaign r0 = r2.campaign
             com.bamtech.sdk4.paywall.Campaign r1 = r3.campaign
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.util.List<java.lang.String> r0 = r2.entitlements
             java.util.List<java.lang.String> r1 = r3.entitlements
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.util.List<java.lang.String> r0 = r2.groups
             java.util.List<java.lang.String> r1 = r3.groups
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             com.bamtech.sdk4.paywall.IntroPrice r0 = r2.introPrice
             com.bamtech.sdk4.paywall.IntroPrice r1 = r3.introPrice
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.lang.String r0 = r2.name
             java.lang.String r1 = r3.name
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             com.bamtech.sdk4.paywall.ProductType r0 = r2.productType
             com.bamtech.sdk4.paywall.ProductType r1 = r3.productType
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.lang.String r0 = r2.sku
             java.lang.String r3 = r3.sku
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x004f
             goto L_0x0051
         L_0x004f:

@@ -71,7 +71,7 @@ public final class Stream {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.thumbnails, (java.lang.Object) r3.thumbnails) != false) goto L_0x0033;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.thumbnails, (java.lang.Object) r3.thumbnails) != false) goto L_0x0033;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -83,19 +83,19 @@ public final class Stream {
             com.bamtech.sdk4.internal.media.Stream r3 = (com.bamtech.sdk4.internal.media.Stream) r3
             com.bamtech.sdk4.internal.media.HlsPlaylists r0 = r2.hlsPlaylists
             com.bamtech.sdk4.internal.media.HlsPlaylists r1 = r3.hlsPlaylists
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.util.Map<java.lang.String, java.util.Map<java.lang.String, java.lang.Object>> r0 = r2.tracking
             java.util.Map<java.lang.String, java.util.Map<java.lang.String, java.lang.Object>> r1 = r3.tracking
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             com.bamtech.sdk4.media.MediaPlayhead r0 = r2.playhead
             com.bamtech.sdk4.media.MediaPlayhead r1 = r3.playhead
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             com.bamtech.sdk4.MediaThumbnailLinks r0 = r2.thumbnails
             com.bamtech.sdk4.MediaThumbnailLinks r3 = r3.thumbnails
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0031
             goto L_0x0033
         L_0x0031:

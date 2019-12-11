@@ -4,7 +4,7 @@ import java.lang.reflect.Type;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -24,7 +24,7 @@ final class KParameterImpl$type$1 extends C12881k implements Function0<Type> {
 
     public final Type invoke() {
         ParameterDescriptor access$getDescriptor$p = this.this$0.getDescriptor();
-        if (!(access$getDescriptor$p instanceof ReceiverParameterDescriptor) || !C12880j.m40224a((Object) UtilKt.getInstanceReceiverParameter(this.this$0.getCallable().getDescriptor()), (Object) access$getDescriptor$p) || this.this$0.getCallable().getDescriptor().getKind() != Kind.FAKE_OVERRIDE) {
+        if (!(access$getDescriptor$p instanceof ReceiverParameterDescriptor) || !Intrinsics.areEqual((Object) UtilKt.getInstanceReceiverParameter(this.this$0.getCallable().getDescriptor()), (Object) access$getDescriptor$p) || this.this$0.getCallable().getDescriptor().getKind() != Kind.FAKE_OVERRIDE) {
             return (Type) this.this$0.getCallable().getCaller().getParameterTypes().get(this.this$0.getIndex());
         }
         DeclarationDescriptor containingDeclaration = this.this$0.getCallable().getDescriptor().getContainingDeclaration();

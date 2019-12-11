@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 import kotlin.reflect.KCallable;
 import kotlin.reflect.KParameter;
@@ -37,16 +37,16 @@ public abstract class KCallableImpl<R> implements KCallable<R> {
 
     public KCallableImpl() {
         LazySoftVal<List<Annotation>> lazySoft = ReflectProperties.lazySoft(new KCallableImpl$_annotations$1(this));
-        C12880j.m40222a((Object) lazySoft, "ReflectProperties.lazySo…or.computeAnnotations() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazySoft, "ReflectProperties.lazySo…or.computeAnnotations() }");
         this._annotations = lazySoft;
         LazySoftVal<ArrayList<KParameter>> lazySoft2 = ReflectProperties.lazySoft(new KCallableImpl$_parameters$1(this));
-        C12880j.m40222a((Object) lazySoft2, "ReflectProperties.lazySo…ze()\n        result\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazySoft2, "ReflectProperties.lazySo…ze()\n        result\n    }");
         this._parameters = lazySoft2;
         LazySoftVal<KTypeImpl> lazySoft3 = ReflectProperties.lazySoft(new KCallableImpl$_returnType$1(this));
-        C12880j.m40222a((Object) lazySoft3, "ReflectProperties.lazySo…eturnType\n        }\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazySoft3, "ReflectProperties.lazySo…eturnType\n        }\n    }");
         this._returnType = lazySoft3;
         LazySoftVal<List<KTypeParameterImpl>> lazySoft4 = ReflectProperties.lazySoft(new KCallableImpl$_typeParameters$1(this));
-        C12880j.m40222a((Object) lazySoft4, "ReflectProperties.lazySo…KTypeParameterImpl)\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazySoft4, "ReflectProperties.lazySo…KTypeParameterImpl)\n    }");
         this._typeParameters = lazySoft4;
     }
 
@@ -97,31 +97,31 @@ public abstract class KCallableImpl<R> implements KCallable<R> {
         if (!(type instanceof Class) || !((Class) type).isPrimitive()) {
             return null;
         }
-        if (C12880j.m40224a((Object) type, (Object) Boolean.TYPE)) {
+        if (Intrinsics.areEqual((Object) type, (Object) Boolean.TYPE)) {
             return Boolean.valueOf(false);
         }
-        if (C12880j.m40224a((Object) type, (Object) Character.TYPE)) {
+        if (Intrinsics.areEqual((Object) type, (Object) Character.TYPE)) {
             return Character.valueOf((char) 0);
         }
-        if (C12880j.m40224a((Object) type, (Object) Byte.TYPE)) {
+        if (Intrinsics.areEqual((Object) type, (Object) Byte.TYPE)) {
             return Byte.valueOf((byte) 0);
         }
-        if (C12880j.m40224a((Object) type, (Object) Short.TYPE)) {
+        if (Intrinsics.areEqual((Object) type, (Object) Short.TYPE)) {
             return Short.valueOf((short) 0);
         }
-        if (C12880j.m40224a((Object) type, (Object) Integer.TYPE)) {
+        if (Intrinsics.areEqual((Object) type, (Object) Integer.TYPE)) {
             return Integer.valueOf(0);
         }
-        if (C12880j.m40224a((Object) type, (Object) Float.TYPE)) {
+        if (Intrinsics.areEqual((Object) type, (Object) Float.TYPE)) {
             return Float.valueOf(0.0f);
         }
-        if (C12880j.m40224a((Object) type, (Object) Long.TYPE)) {
+        if (Intrinsics.areEqual((Object) type, (Object) Long.TYPE)) {
             return Long.valueOf(0);
         }
-        if (C12880j.m40224a((Object) type, (Object) Double.TYPE)) {
+        if (Intrinsics.areEqual((Object) type, (Object) Double.TYPE)) {
             return Double.valueOf(0.0d);
         }
-        if (C12880j.m40224a((Object) type, (Object) Void.TYPE)) {
+        if (Intrinsics.areEqual((Object) type, (Object) Void.TYPE)) {
             throw new IllegalStateException("Parameter with void type is illegal");
         }
         StringBuilder sb = new StringBuilder();
@@ -145,11 +145,11 @@ public abstract class KCallableImpl<R> implements KCallable<R> {
             i = null;
         }
         ParameterizedType parameterizedType = (ParameterizedType) i;
-        if (!C12880j.m40224a(parameterizedType != null ? parameterizedType.getRawType() : null, (Object) C12683c.class)) {
+        if (!Intrinsics.areEqual(parameterizedType != null ? parameterizedType.getRawType() : null, (Object) C12683c.class)) {
             return null;
         }
         Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
-        C12880j.m40222a((Object) actualTypeArguments, "continuationType.actualTypeArguments");
+        Intrinsics.checkReturnedValueIsNotNull((Object) actualTypeArguments, "continuationType.actualTypeArguments");
         Object j = C13174k.m40410j(actualTypeArguments);
         if (!(j instanceof WildcardType)) {
             j = null;
@@ -240,7 +240,7 @@ public abstract class KCallableImpl<R> implements KCallable<R> {
 
     public List<Annotation> getAnnotations() {
         Object invoke = this._annotations.invoke();
-        C12880j.m40222a(invoke, "_annotations()");
+        Intrinsics.checkReturnedValueIsNotNull(invoke, "_annotations()");
         return (List) invoke;
     }
 
@@ -254,25 +254,25 @@ public abstract class KCallableImpl<R> implements KCallable<R> {
 
     public List<KParameter> getParameters() {
         Object invoke = this._parameters.invoke();
-        C12880j.m40222a(invoke, "_parameters()");
+        Intrinsics.checkReturnedValueIsNotNull(invoke, "_parameters()");
         return (List) invoke;
     }
 
     public KType getReturnType() {
         Object invoke = this._returnType.invoke();
-        C12880j.m40222a(invoke, "_returnType()");
+        Intrinsics.checkReturnedValueIsNotNull(invoke, "_returnType()");
         return (KType) invoke;
     }
 
     public List<KTypeParameter> getTypeParameters() {
         Object invoke = this._typeParameters.invoke();
-        C12880j.m40222a(invoke, "_typeParameters()");
+        Intrinsics.checkReturnedValueIsNotNull(invoke, "_typeParameters()");
         return (List) invoke;
     }
 
     public KVisibility getVisibility() {
         Visibility visibility = getDescriptor().getVisibility();
-        C12880j.m40222a((Object) visibility, "descriptor.visibility");
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "descriptor.visibility");
         return UtilKt.toKVisibility(visibility);
     }
 
@@ -282,7 +282,7 @@ public abstract class KCallableImpl<R> implements KCallable<R> {
 
     /* access modifiers changed from: protected */
     public final boolean isAnnotationConstructor() {
-        return C12880j.m40224a((Object) getName(), (Object) "<init>") && getContainer().getJClass().isAnnotation();
+        return Intrinsics.areEqual((Object) getName(), (Object) "<init>") && getContainer().getJClass().isAnnotation();
     }
 
     public abstract boolean isBound();

@@ -10,7 +10,7 @@ import com.bamtechmedia.dominguez.collections.p079n0.C3429a;
 import com.bamtechmedia.dominguez.collections.p079n0.C3429a.C3430a;
 import com.bamtechmedia.dominguez.collections.p079n0.C3431b;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003B\u0017\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0010\u0010\u000b\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\nH\u0016J\b\u0010\r\u001a\u00020\fH\u0016J\u0010\u0010\u000e\u001a\u00020\f2\u0006\u0010\u000f\u001a\u00020\u0010H\u0016J\u0010\u0010\u0011\u001a\u00020\f2\u0006\u0010\u000f\u001a\u00020\u0010H\u0016J\u0010\u0010\u0012\u001a\u00020\f2\u0006\u0010\u000f\u001a\u00020\u0010H\u0016R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0013"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/discover/DiscoverAutoPagingLifecycleHelperImpl;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "Lcom/bamtechmedia/dominguez/collections/autopaging/AutoPagingLifecycleHelper;", "Landroidx/fragment/app/FragmentManager$OnBackStackChangedListener;", "fragment", "Lcom/bamtechmedia/dominguez/discover/DiscoverFragment;", "isTelevision", "", "(Lcom/bamtechmedia/dominguez/discover/DiscoverFragment;Z)V", "autoPagingBehaviour", "Lcom/bamtechmedia/dominguez/collections/autopaging/AutoPagingBehaviour;", "attachAutoPagingBehaviour", "", "onBackStackChanged", "onDestroy", "owner", "Landroidx/lifecycle/LifecycleOwner;", "onStart", "onStop", "core_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: DiscoverAutoPagingLifecycleHelperImpl.kt */
@@ -60,14 +60,14 @@ public final class DiscoverAutoPagingLifecycleHelperImpl implements C0710d, C343
             r0 = r1
         L_0x0017:
             com.bamtechmedia.dominguez.discover.e r2 = r5.f14026U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r0 == 0) goto L_0x0034
             com.bamtechmedia.dominguez.collections.n0.a r0 = r5.f14028c
             if (r0 == 0) goto L_0x003b
             com.bamtechmedia.dominguez.discover.e r2 = r5.f14026U
             android.content.Context r2 = r2.requireContext()
             java.lang.String r3 = "fragment.requireContext()"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             r3 = 0
             r4 = 2
             com.bamtechmedia.dominguez.collections.p079n0.C3429a.C3430a.m11713a(r0, r2, r3, r4, r1)
@@ -122,7 +122,7 @@ public final class DiscoverAutoPagingLifecycleHelperImpl implements C0710d, C343
         C3429a aVar = this.f14028c;
         if (aVar != null) {
             Context requireContext = this.f14026U.requireContext();
-            C12880j.m40222a((Object) requireContext, "fragment.requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "fragment.requireContext()");
             C3430a.m11713a(aVar, requireContext, false, 2, null);
         }
     }

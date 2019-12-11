@@ -11,12 +11,12 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
 import p163g.p201e.p203b.p307o.C7619i;
 import p520io.reactivex.Observable;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\u0002\u0018\u00002\u00020\u0001:\u0001\u0015B\u001f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0014\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\n2\u0006\u0010\f\u001a\u00020\rJ\u001e\u0010\u000e\u001a\u00020\u000b2\f\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u00110\u00102\u0006\u0010\f\u001a\u00020\rH\u0002J\u0010\u0010\u0012\u001a\u00020\u000b2\u0006\u0010\u0013\u001a\u00020\u0014H\u0002R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0016"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction;", "", "identityApi", "Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;", "offlineState", "Lcom/bamtechmedia/dominguez/core/OfflineState;", "errorLocalization", "Lcom/bamtechmedia/dominguez/error/ErrorLocalization;", "(Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;Lcom/bamtechmedia/dominguez/core/OfflineState;Lcom/bamtechmedia/dominguez/error/ErrorLocalization;)V", "login", "Lio/reactivex/Observable;", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction$ActionState;", "email", "", "mapAuthenticationFlowToActionState", "authFlowStates", "", "Lcom/bamtech/sdk4/identity/bam/AuthenticationFlow;", "mapErrorToActionState", "error", "", "ActionState", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.v0.g.b */
@@ -52,7 +52,7 @@ public final class C3048b {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7925a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3050a) r2).f7925a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7925a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3050a) r2).f7925a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -64,7 +64,7 @@ public final class C3048b {
                     com.bamtechmedia.dominguez.auth.v0.g.b$a$a r2 = (com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3050a) r2
                     java.lang.String r0 = r1.f7925a
                     java.lang.String r2 = r2.f7925a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -112,7 +112,7 @@ public final class C3048b {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7926a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3051b) r2).f7926a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7926a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3051b) r2).f7926a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -124,7 +124,7 @@ public final class C3048b {
                     com.bamtechmedia.dominguez.auth.v0.g.b$a$b r2 = (com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3051b) r2
                     java.lang.String r0 = r1.f7926a
                     java.lang.String r2 = r2.f7926a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -176,7 +176,7 @@ public final class C3048b {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7927a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3052c) r2).f7927a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7927a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3052c) r2).f7927a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -188,7 +188,7 @@ public final class C3048b {
                     com.bamtechmedia.dominguez.auth.v0.g.b$a$c r2 = (com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3052c) r2
                     java.lang.String r0 = r1.f7927a
                     java.lang.String r2 = r2.f7927a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -243,7 +243,7 @@ public final class C3048b {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7928a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3053d) r2).f7928a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7928a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3053d) r2).f7928a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -255,7 +255,7 @@ public final class C3048b {
                     com.bamtechmedia.dominguez.auth.v0.g.b$a$d r2 = (com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3053d) r2
                     java.lang.String r0 = r1.f7928a
                     java.lang.String r2 = r2.f7928a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -316,7 +316,7 @@ public final class C3048b {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f7930b, (java.lang.Object) r3.f7930b) != false) goto L_0x001f;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f7930b, (java.lang.Object) r3.f7930b) != false) goto L_0x001f;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r3) {
@@ -328,11 +328,11 @@ public final class C3048b {
                     com.bamtechmedia.dominguez.auth.v0.g.b$a$e r3 = (com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a.C3054e) r3
                     java.lang.String r0 = r2.f7929a
                     java.lang.String r1 = r3.f7929a
-                    boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                    boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                     if (r0 == 0) goto L_0x001d
                     java.lang.Integer r0 = r2.f7930b
                     java.lang.Integer r3 = r3.f7930b
-                    boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                    boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                     if (r3 == 0) goto L_0x001d
                     goto L_0x001f
                 L_0x001d:
@@ -439,7 +439,7 @@ public final class C3048b {
             sb.append("Error calling BamIdentityApi.getAuthenticationFlow(\"");
             sb.append(this.f7934U);
             sb.append("\")");
-            C14100a.m44530c(th, sb.toString(), new Object[0]);
+            Timber.m44530c(th, sb.toString(), new Object[0]);
             return this.f7935c.m10853a(th);
         }
     }
@@ -452,7 +452,7 @@ public final class C3048b {
     /* renamed from: a */
     public final Observable<C3049a> mo12063a(String str) {
         Observable<C3049a> i = this.f7923a.getAuthenticationFlow(str).mo30233g(new C3056b(this, str)).mo30236i().mo30154a(C3055f.f7931a).mo30198i(new C3057c(this, str));
-        C12880j.m40222a((Object) i, "identityApi.getAuthentic…tate(error)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "identityApi.getAuthentic…tate(error)\n            }");
         return i;
     }
 
@@ -460,7 +460,7 @@ public final class C3048b {
     /* renamed from: a */
     public final C3049a m10853a(Throwable th) {
         C7619i b = this.f7924b.mo20538b(th);
-        if (C12880j.m40224a((Object) b.mo20545c(), (Object) InvalidEmail.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) b.mo20545c(), (Object) InvalidEmail.INSTANCE)) {
             return new C3054e(b.mo20546d(), null, 2, null);
         }
         return new C3052c(b.mo20546d());

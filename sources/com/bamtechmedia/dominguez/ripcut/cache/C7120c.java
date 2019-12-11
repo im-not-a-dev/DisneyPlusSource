@@ -7,7 +7,7 @@ import java.util.concurrent.Callable;
 import javax.inject.Provider;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Request.C14113a;
@@ -58,7 +58,7 @@ public final class C7120c {
         /* renamed from: a */
         public final void accept(Response response) {
             C7120c cVar = this.f15757c;
-            C12880j.m40222a((Object) response, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) response, "it");
             cVar.m21524a(response, this.f15757c.f15750a.mo19907a(this.f15756U));
         }
     }
@@ -129,7 +129,7 @@ public final class C7120c {
     /* renamed from: b */
     private final Completable m21525b(Uri uri) {
         Completable c = Single.m38401c((Callable<? extends T>) new C7123c<Object>(this, uri)).mo30220b(this.f15752c).mo30202a((C11952h<? super T>) C7124d.f15760c).mo30123c((Consumer<? super T>) C7125e.f15761c).mo30122c();
-        C12880j.m40222a((Object) c, "Single.fromCallable { ca…         .ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Single.fromCallable { ca…         .ignoreElement()");
         return c;
     }
 
@@ -150,11 +150,11 @@ public final class C7120c {
         C14113a aVar = new C14113a();
         aVar.mo35848b(uri.toString());
         Request a = aVar.mo35846a();
-        C12880j.m40222a((Object) a, "request");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "request");
         Object obj = this.f15751b.get();
-        C12880j.m40222a(obj, "client.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "client.get()");
         Completable e = C5879c.m18933a(a, (OkHttpClient) obj).mo30227d((Consumer<? super T>) new C7122b<Object>(this, uri)).mo30228e();
-        C12880j.m40222a((Object) e, "request.createSingle(cli…         .ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "request.createSingle(cli…         .ignoreElement()");
         return e;
     }
 

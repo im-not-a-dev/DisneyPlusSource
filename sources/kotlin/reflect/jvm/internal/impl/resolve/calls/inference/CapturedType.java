@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve.calls.inference;
 
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
 import kotlin.reflect.jvm.internal.impl.types.ErrorUtils;
@@ -37,7 +37,7 @@ public final class CapturedType extends SimpleType implements SubtypingRepresent
         if (this.typeProjection.getProjectionKind() == variance) {
             kotlinType = this.typeProjection.getType();
         }
-        C12880j.m40222a((Object) kotlinType, "if (typeProjection.proje…jection.type else default");
+        Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType, "if (typeProjection.proje…jection.type else default");
         return kotlinType;
     }
 
@@ -51,21 +51,21 @@ public final class CapturedType extends SimpleType implements SubtypingRepresent
 
     public MemberScope getMemberScope() {
         MemberScope createErrorScope = ErrorUtils.createErrorScope("No member resolution should be done on captured type, it used only during constraint system resolution", true);
-        C12880j.m40222a((Object) createErrorScope, "ErrorUtils.createErrorSc…solution\", true\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createErrorScope, "ErrorUtils.createErrorSc…solution\", true\n        )");
         return createErrorScope;
     }
 
     public KotlinType getSubTypeRepresentative() {
         Variance variance = Variance.OUT_VARIANCE;
         SimpleType nullableAnyType = TypeUtilsKt.getBuiltIns(this).getNullableAnyType();
-        C12880j.m40222a((Object) nullableAnyType, "builtIns.nullableAnyType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) nullableAnyType, "builtIns.nullableAnyType");
         return representative(variance, nullableAnyType);
     }
 
     public KotlinType getSuperTypeRepresentative() {
         Variance variance = Variance.IN_VARIANCE;
         SimpleType nothingType = TypeUtilsKt.getBuiltIns(this).getNothingType();
-        C12880j.m40222a((Object) nothingType, "builtIns.nothingType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) nothingType, "builtIns.nothingType");
         return representative(variance, nothingType);
     }
 

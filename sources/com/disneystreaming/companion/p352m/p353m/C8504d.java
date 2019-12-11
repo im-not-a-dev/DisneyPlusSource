@@ -42,7 +42,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.p575i.p576a.C12702b;
@@ -334,7 +334,7 @@ public final class C8504d extends C8491b implements C8484g {
                 com.disneystreaming.companion.messaging.MessagingEvent$b r7 = new com.disneystreaming.companion.messaging.MessagingEvent$b     // Catch:{ all -> 0x0156 }
                 java.lang.String r8 = r14.getHostName()     // Catch:{ all -> 0x0156 }
                 java.lang.String r9 = "address.hostName"
-                kotlin.jvm.internal.C12880j.m40222a(r8, r9)     // Catch:{ all -> 0x0156 }
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r9)     // Catch:{ all -> 0x0156 }
                 com.disneystreaming.companion.m.m.d r9 = r2.f18100j0     // Catch:{ all -> 0x0156 }
                 com.disneystreaming.companion.m.l r9 = r9.mo21790s()     // Catch:{ all -> 0x0156 }
                 r7.<init>(r4, r8, r9)     // Catch:{ all -> 0x0156 }
@@ -842,9 +842,9 @@ public final class C8504d extends C8491b implements C8484g {
         String str;
         ArrayList arrayList = new ArrayList();
         Enumeration networkInterfaces = NetworkInterface.getNetworkInterfaces();
-        C12880j.m40222a((Object) networkInterfaces, "NetworkInterface.getNetworkInterfaces()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) networkInterfaces, "NetworkInterface.getNetworkInterfaces()");
         ArrayList list = Collections.list(networkInterfaces);
-        C12880j.m40222a((Object) list, "java.util.Collections.list(this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) list, "java.util.Collections.list(this)");
         ArrayList<NetworkInterface> arrayList2 = new ArrayList<>();
         Iterator it = list.iterator();
         while (true) {
@@ -854,18 +854,18 @@ public final class C8504d extends C8491b implements C8484g {
             }
             Object next = it.next();
             NetworkInterface networkInterface = (NetworkInterface) next;
-            C12880j.m40222a((Object) networkInterface, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) networkInterface, str);
             if (!networkInterface.isLoopback() || networkInterface.isUp()) {
                 arrayList2.add(next);
             }
         }
         for (NetworkInterface networkInterface2 : arrayList2) {
-            C12880j.m40222a((Object) networkInterface2, "iface");
+            Intrinsics.checkReturnedValueIsNotNull((Object) networkInterface2, "iface");
             List<InterfaceAddress> interfaceAddresses = networkInterface2.getInterfaceAddresses();
-            C12880j.m40222a((Object) interfaceAddresses, "iface.interfaceAddresses");
+            Intrinsics.checkReturnedValueIsNotNull((Object) interfaceAddresses, "iface.interfaceAddresses");
             ArrayList<InetAddress> arrayList3 = new ArrayList<>();
             for (InterfaceAddress interfaceAddress : interfaceAddresses) {
-                C12880j.m40222a((Object) interfaceAddress, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) interfaceAddress, str);
                 InetAddress broadcast = interfaceAddress.getBroadcast();
                 if (broadcast != null) {
                     arrayList3.add(broadcast);
@@ -930,7 +930,7 @@ public final class C8504d extends C8491b implements C8484g {
 
     /* renamed from: a */
     public void mo21776a(Message message, String str) {
-        if (message.getVersion() == 1 && !(!C12880j.m40224a((Object) message.getPayload().getAppId(), (Object) mo21825l().getAppId()))) {
+        if (message.getVersion() == 1 && !(!Intrinsics.areEqual((Object) message.getPayload().getAppId(), (Object) mo21825l().getAppId()))) {
             MessageType messageType = message.getPayload().getMessageType();
             if (messageType instanceof C8546b) {
                 m24686e(message, str);
@@ -954,7 +954,7 @@ public final class C8504d extends C8491b implements C8484g {
         Charset charset = C12801c.f29474a;
         if (a != null) {
             byte[] bytes = a.getBytes(charset);
-            C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
             DatagramPacket datagramPacket = new DatagramPacket(bytes, bytes.length, inetSocketAddress);
             datagramSocket.setBroadcast(true);
             datagramSocket.send(datagramPacket);

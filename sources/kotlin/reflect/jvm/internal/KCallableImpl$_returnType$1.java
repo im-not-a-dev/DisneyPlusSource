@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
 
@@ -20,7 +20,7 @@ final class KCallableImpl$_returnType$1 extends C12881k implements Function0<KTy
     public final KTypeImpl invoke() {
         KotlinType returnType = this.this$0.getDescriptor().getReturnType();
         if (returnType != null) {
-            C12880j.m40222a((Object) returnType, "descriptor.returnType!!");
+            Intrinsics.checkReturnedValueIsNotNull((Object) returnType, "descriptor.returnType!!");
             return new KTypeImpl(returnType, new Function0<Type>(this) {
                 final /* synthetic */ KCallableImpl$_returnType$1 this$0;
 
@@ -34,7 +34,7 @@ final class KCallableImpl$_returnType$1 extends C12881k implements Function0<KTy
                 }
             });
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JavaToKotlinClassMap;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -25,8 +25,8 @@ final class SignatureEnhancement$SignatureParts$enhance$containsFunctionN$1 exte
         if (declarationDescriptor == null) {
             return false;
         }
-        C12880j.m40222a((Object) declarationDescriptor, "it.constructor.declarati… ?: return@contains false");
-        if (!C12880j.m40224a((Object) declarationDescriptor.getName(), (Object) JavaToKotlinClassMap.INSTANCE.getFUNCTION_N_FQ_NAME().shortName()) || !C12880j.m40224a((Object) DescriptorUtilsKt.fqNameOrNull(declarationDescriptor), (Object) JavaToKotlinClassMap.INSTANCE.getFUNCTION_N_FQ_NAME())) {
+        Intrinsics.checkReturnedValueIsNotNull((Object) declarationDescriptor, "it.constructor.declarati… ?: return@contains false");
+        if (!Intrinsics.areEqual((Object) declarationDescriptor.getName(), (Object) JavaToKotlinClassMap.INSTANCE.getFUNCTION_N_FQ_NAME().shortName()) || !Intrinsics.areEqual((Object) DescriptorUtilsKt.fqNameOrNull(declarationDescriptor), (Object) JavaToKotlinClassMap.INSTANCE.getFUNCTION_N_FQ_NAME())) {
             return false;
         }
         return true;

@@ -36,7 +36,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -60,7 +60,7 @@ import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.p530x.C11998a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000¬\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\b\n\u0002\b\u000b\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\f\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\n\u0018\u0000 V2\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u00032\u00020\u00042\u00020\u00052\b\u0012\u0004\u0012\u00020\u00070\u0006:\u0002VWBy\u0012\u0006\u0010\b\u001a\u00020\t\u0012\b\u0010\n\u001a\u0004\u0018\u00010\u000b\u0012\u0006\u0010\f\u001a\u00020\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\u0007\u0012\u0006\u0010\u0011\u001a\u00020\u0012\u0012\u0006\u0010\u0013\u001a\u00020\u0014\u0012\u0006\u0010\u0015\u001a\u00020\u0016\u0012\u0006\u0010\u0017\u001a\u00020\u0018\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001a\u001a\u00020\u001b\u0012\u0006\u0010\u001c\u001a\u00020\u001d\u0012\u0006\u0010\u001e\u001a\u00020\u001f\u0012\u0006\u0010 \u001a\u00020!¢\u0006\u0002\u0010\"J\u001e\u00101\u001a\b\u0012\u0004\u0012\u000203022\u0006\u00104\u001a\u0002052\u0006\u00106\u001a\u000207H\u0002J\u0010\u00108\u001a\u0002092\u0006\u0010:\u001a\u00020;H\u0002J\b\u0010<\u001a\u000209H\u0016J\u0010\u0010=\u001a\u0002092\u0006\u00106\u001a\u000207H\u0002J\b\u0010>\u001a\u000209H\u0002J\b\u0010?\u001a\u000209H\u0016J\u0010\u0010@\u001a\u00020\u00122\u0006\u0010\u0015\u001a\u00020\u0016H\u0002J\u0010\u0010A\u001a\u0002092\u0006\u0010B\u001a\u00020\u0007H\u0002J\u0006\u0010C\u001a\u000209J\u0010\u0010D\u001a\u0002092\u0006\u00106\u001a\u000207H\u0002J\u0018\u0010E\u001a\u0002092\u0006\u00104\u001a\u0002052\u0006\u0010\u0015\u001a\u00020\u0012H\u0002J\u001c\u0010F\u001a\u0002092\n\u0010G\u001a\u0006\u0012\u0002\b\u00030H2\u0006\u0010I\u001a\u00020&H\u0016J\u0010\u0010J\u001a\u0002092\u0006\u0010K\u001a\u000203H\u0016J\u0010\u0010L\u001a\u0002092\u0006\u0010M\u001a\u00020NH\u0002J\u0006\u0010O\u001a\u000209J\b\u0010P\u001a\u000209H\u0016J\u0018\u0010Q\u001a\u0002092\u0006\u0010R\u001a\u00020\u00072\u0006\u0010S\u001a\u00020\u0018H\u0016J\u0010\u0010T\u001a\u0002092\u0006\u0010U\u001a\u00020\u0018H\u0016R\u000e\u0010\u0017\u001a\u00020\u0018X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u001e\u001a\u00020\u001fX\u0004¢\u0006\b\n\u0000\u001a\u0004\b#\u0010$R\u001e\u0010%\u001a\u0004\u0018\u00010&X\u000e¢\u0006\u0010\n\u0002\u0010+\u001a\u0004\b'\u0010(\"\u0004\b)\u0010*R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001dX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010,\u001a\u00020\u0012XD¢\u0006\b\n\u0000\u001a\u0004\b-\u0010.R\u000e\u0010\u0019\u001a\u00020\u0018X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010 \u001a\u00020!X\u0004¢\u0006\b\n\u0000\u001a\u0004\b/\u00100R\u000e\u0010\f\u001a\u00020\rX\u0004¢\u0006\u0002\n\u0000¨\u0006X"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;", "Lcom/bamtechmedia/dominguez/detail/common/DetailViewModel;", "Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel$State;", "Lcom/bamtechmedia/dominguez/detail/common/listeners/OnTabSelectedListener;", "Lcom/bamtechmedia/dominguez/detail/common/offline/DetailOfflineStateObserver;", "Lcom/bamtechmedia/dominguez/core/content/paging/PagingListener;", "Lcom/bamtechmedia/dominguez/detail/common/DetailWatchlistHelper$ViewModel;", "Lcom/bamtechmedia/dominguez/core/content/Movie;", "dataSource", "Lcom/bamtechmedia/dominguez/detail/movie/MovieDetailDataSource;", "downloadDelegate", "Lcom/bamtechmedia/dominguez/detail/movie/data/MovieDownloadDelegate;", "watchlistHelper", "Lcom/bamtechmedia/dominguez/detail/common/DetailWatchlistHelper;", "extrasContentDataSource", "Lcom/bamtechmedia/dominguez/detail/common/ExtrasContentDataSource;", "initialMovie", "familyId", "", "analytics", "Lcom/bamtechmedia/dominguez/detail/movie/MovieDetailAnalytics;", "initialTab", "Lcom/bamtechmedia/dominguez/core/content/InitialTab;", "addToWatchlist", "", "shouldDownload", "metadataFactory", "Lcom/bamtechmedia/dominguez/detail/common/metadata/MetadataFactory;", "dictionary", "Lcom/bamtechmedia/dominguez/config/StringDictionary;", "contentDetailConfig", "Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;", "transactionIdProvider", "Lcom/bamtechmedia/dominguez/analytics/TransactionIdProvider;", "(Lcom/bamtechmedia/dominguez/detail/movie/MovieDetailDataSource;Lcom/bamtechmedia/dominguez/detail/movie/data/MovieDownloadDelegate;Lcom/bamtechmedia/dominguez/detail/common/DetailWatchlistHelper;Lcom/bamtechmedia/dominguez/detail/common/ExtrasContentDataSource;Lcom/bamtechmedia/dominguez/core/content/Movie;Ljava/lang/String;Lcom/bamtechmedia/dominguez/detail/movie/MovieDetailAnalytics;Lcom/bamtechmedia/dominguez/core/content/InitialTab;ZZLcom/bamtechmedia/dominguez/detail/common/metadata/MetadataFactory;Lcom/bamtechmedia/dominguez/config/StringDictionary;Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;Lcom/bamtechmedia/dominguez/analytics/TransactionIdProvider;)V", "getContentDetailConfig", "()Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;", "contentDetailTransitionState", "", "getContentDetailTransitionState$contentDetail_release", "()Ljava/lang/Integer;", "setContentDetailTransitionState$contentDetail_release", "(Ljava/lang/Integer;)V", "Ljava/lang/Integer;", "pageName", "getPageName", "()Ljava/lang/String;", "getTransactionIdProvider", "()Lcom/bamtechmedia/dominguez/analytics/TransactionIdProvider;", "createTabs", "", "Lcom/bamtechmedia/dominguez/detail/common/Tab;", "movieDetail", "Lcom/bamtechmedia/dominguez/detail/movie/models/MovieDetail;", "extraContent", "Lcom/bamtechmedia/dominguez/detail/common/ExtraContent;", "handleError", "", "throwable", "", "loadDetails", "loadMoreExtraContent", "loadMovieDetail", "loadUserData", "mapInitialTabToMovieDetailString", "observeDownloadState", "movie", "onDownloadClicked", "onMoreExtraContentLoaded", "onMovieDetailLoaded", "onPageItemBound", "list", "Lcom/bamtechmedia/dominguez/core/content/paging/PagedList;", "pagedListPosition", "onTabSelected", "tab", "onUserDataLoaded", "userData", "Lcom/bamtechmedia/dominguez/detail/movie/models/MovieUserData;", "onWatchlistClicked", "trackAddToWatchlistSuccess", "trackWatchListClick", "asset", "wasInWatchlist", "updateWatchlistState", "newState", "Companion", "State", "contentDetail_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.k.j.k.b */
@@ -252,8 +252,8 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
             if (this != obj) {
                 if (obj instanceof C7354b) {
                     C7354b bVar = (C7354b) obj;
-                    if (C12880j.m40224a((Object) this.f16177a, (Object) bVar.f16177a) && C12880j.m40224a((Object) this.f16178b, (Object) bVar.f16178b) && C12880j.m40224a((Object) this.f16179c, (Object) bVar.f16179c) && C12880j.m40224a((Object) this.f16180d, (Object) bVar.f16180d) && C12880j.m40224a((Object) mo17871d(), (Object) bVar.mo17871d()) && C12880j.m40224a((Object) mo17870c(), (Object) bVar.mo17870c()) && C12880j.m40224a((Object) mo20180h(), (Object) bVar.mo20180h())) {
-                        if ((this.f16184h == bVar.f16184h) && C12880j.m40224a((Object) this.f16185i, (Object) bVar.f16185i) && C12880j.m40224a((Object) this.f16186j, (Object) bVar.f16186j)) {
+                    if (Intrinsics.areEqual((Object) this.f16177a, (Object) bVar.f16177a) && Intrinsics.areEqual((Object) this.f16178b, (Object) bVar.f16178b) && Intrinsics.areEqual((Object) this.f16179c, (Object) bVar.f16179c) && Intrinsics.areEqual((Object) this.f16180d, (Object) bVar.f16180d) && Intrinsics.areEqual((Object) mo17871d(), (Object) bVar.mo17871d()) && Intrinsics.areEqual((Object) mo17870c(), (Object) bVar.mo17870c()) && Intrinsics.areEqual((Object) mo20180h(), (Object) bVar.mo20180h())) {
+                        if ((this.f16184h == bVar.f16184h) && Intrinsics.areEqual((Object) this.f16185i, (Object) bVar.f16185i) && Intrinsics.areEqual((Object) this.f16186j, (Object) bVar.f16186j)) {
                             if (this.f16187k == bVar.f16187k) {
                                 if (this.f16188l == bVar.f16188l) {
                                     if (this.f16189m == bVar.f16189m) {
@@ -491,7 +491,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
 
         /* renamed from: a */
         public final void mo20190a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -499,7 +499,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -550,7 +550,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
         /* renamed from: a */
         public final void accept(C6024b bVar) {
             C7352b bVar2 = this.f16196c;
-            C12880j.m40222a((Object) bVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bVar, "it");
             C7352b bVar3 = this.f16196c;
             bVar2.m22047a(bVar, bVar3.m22041a(bVar3.f16170c0));
             if (this.f16196c.f16171d0) {
@@ -595,15 +595,15 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
         public final void accept(Throwable th) {
             if (th instanceof C11998a) {
                 List<Throwable> a = ((C11998a) th).mo30334a();
-                C12880j.m40222a((Object) a, "throwable.exceptions");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a, "throwable.exceptions");
                 for (Throwable th2 : a) {
                     C7352b bVar = this.f16197c;
-                    C12880j.m40222a((Object) th2, "it");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) th2, "it");
                     bVar.m22053a(th2);
                 }
             } else {
                 C7352b bVar2 = this.f16197c;
-                C12880j.m40222a((Object) th, "throwable");
+                Intrinsics.checkReturnedValueIsNotNull((Object) th, "throwable");
                 bVar2.m22053a(th);
             }
             this.f16197c.updateState(C7362a.f16198c);
@@ -624,7 +624,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
         /* renamed from: a */
         public final boolean test(C6026d dVar) {
             C7354b bVar = (C7354b) this.f16199c.getCurrentState();
-            return !C12880j.m40224a((Object) dVar, (Object) bVar != null ? bVar.mo20185l() : null);
+            return !Intrinsics.areEqual((Object) dVar, (Object) bVar != null ? bVar.mo20185l() : null);
         }
     }
 
@@ -642,7 +642,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
         /* renamed from: a */
         public final void accept(C6026d dVar) {
             C7352b bVar = this.f16200c;
-            C12880j.m40222a((Object) dVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) dVar, "it");
             bVar.m22048a(dVar);
         }
     }
@@ -707,7 +707,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
                 C7354b bVar2 = bVar;
                 C6243d dVar = this.f16204c;
                 C6243d dVar2 = dVar;
-                C12880j.m40222a((Object) dVar, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dVar, "it");
                 return C7354b.m22075a(bVar2, null, null, null, null, null, null, null, 0, dVar2, null, false, false, false, false, false, 28415, null);
             }
         }
@@ -750,7 +750,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
         }
 
         public final void run() {
-            C14100a.m44529c("Download started", new Object[0]);
+            Timber.m44529c("Download started", new Object[0]);
         }
     }
 
@@ -766,7 +766,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
 
         /* renamed from: a */
         public final void mo20202a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -993,7 +993,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
         StringBuilder sb = new StringBuilder();
         sb.append("familyId ");
         sb.append(this.f16167a0);
-        C14100a.m44531d(sb.toString(), new Object[0]);
+        Timber.m44531d(sb.toString(), new Object[0]);
         C7354b bVar2 = new C7354b(null, this.f16166Z, null, null, null, null, null, 0, null, null, false, false, false, false, false, 32765, null);
         createState(bVar2);
         C3692n nVar2 = this.f16166Z;
@@ -1006,9 +1006,9 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
     /* renamed from: H */
     private final void m22040H() {
         Single g = this.f16162V.mo18055a(this.f16167a0, mo17913B()).mo30233g(new C7359g(this));
-        C12880j.m40222a((Object) g, "dataSource.getMovieDetai…a(metadata)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "dataSource.getMovieDetai…a(metadata)\n            }");
         Object a = g.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C7360h(this), new C7361i(this));
     }
 
@@ -1025,9 +1025,9 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
     /* renamed from: D */
     public void mo17915D() {
         Maybe a = this.f16162V.mo18056b(this.f16167a0, mo17913B()).mo30202a((C11952h<? super T>) new C7363j<Object>(this));
-        C12880j.m40222a((Object) a, "dataSource.getMovieUserD… currentState?.userData }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "dataSource.getMovieUserD… currentState?.userData }");
         Object a2 = a.mo30112a((C11957k<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11844z) a2).mo29929a(new C7364k(this), new C7365l(this));
     }
 
@@ -1046,7 +1046,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
                 if (cVar != null) {
                     C7354b bVar2 = (C7354b) getCurrentState();
                     Object a = cVar.mo18082a(i, bVar2 != null ? bVar2.mo20178f() : null).mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-                    C12880j.m40222a(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+                    Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
                     ((C11839v) a).mo29926a(C7370o.f16206a, C7371p.f16207c);
                 }
             }
@@ -1122,7 +1122,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
                 break;
             }
             obj = it.next();
-            if (C12880j.m40224a((Object) C3573a.m12035a(this.f16174g0, ((C6008x) obj).mo18028d(), (Map) null, 2, (Object) null), (Object) str)) {
+            if (Intrinsics.areEqual((Object) C3573a.m12035a(this.f16174g0, ((C6008x) obj).mo18028d(), (Map) null, 2, (Object) null), (Object) str)) {
                 break;
             }
         }
@@ -1169,7 +1169,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
             g.n.a.h r0 = p163g.p503n.p504a.C11793e.m37930a(r0)
             java.lang.Object r4 = r4.mo30112a(r0)
             java.lang.String r0 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
             g.n.a.z r4 = (p163g.p503n.p504a.C11844z) r4
             g.e.b.k.j.k.b$e r0 = new g.e.b.k.j.k.b$e
             r0.<init>(r3)
@@ -1193,7 +1193,7 @@ public final class C7352b extends C5967h<C7354b> implements C5917a, C5994b, C370
         C6020c cVar = this.f16163W;
         if (cVar != null) {
             Object a = cVar.mo18083a(nVar).mo30079a((C11932e<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-            C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+            Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
             ((C11842x) a).mo29927a(new C7367m(this, nVar), new C7369n(this, nVar));
         }
     }

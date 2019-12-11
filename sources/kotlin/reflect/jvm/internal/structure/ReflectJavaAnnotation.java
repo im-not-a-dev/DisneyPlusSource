@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p581d0.C12731a;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation.DefaultImpls;
@@ -24,7 +24,7 @@ public final class ReflectJavaAnnotation extends ReflectJavaElement implements J
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof ReflectJavaAnnotation) && C12880j.m40224a((Object) this.annotation, (Object) ((ReflectJavaAnnotation) obj).annotation);
+        return (obj instanceof ReflectJavaAnnotation) && Intrinsics.areEqual((Object) this.annotation, (Object) ((ReflectJavaAnnotation) obj).annotation);
     }
 
     public final Annotation getAnnotation() {
@@ -33,13 +33,13 @@ public final class ReflectJavaAnnotation extends ReflectJavaElement implements J
 
     public Collection<JavaAnnotationArgument> getArguments() {
         Method[] declaredMethods = C12731a.m39866a(C12731a.m39868a(this.annotation)).getDeclaredMethods();
-        C12880j.m40222a((Object) declaredMethods, "annotation.annotationClass.java.declaredMethods");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredMethods, "annotation.annotationClass.java.declaredMethods");
         ArrayList arrayList = new ArrayList(declaredMethods.length);
         for (Method method : declaredMethods) {
             Factory factory = ReflectJavaAnnotationArgument.Factory;
             Object invoke = method.invoke(this.annotation, new Object[0]);
-            C12880j.m40222a(invoke, "method.invoke(annotation)");
-            C12880j.m40222a((Object) method, "method");
+            Intrinsics.checkReturnedValueIsNotNull(invoke, "method.invoke(annotation)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) method, "method");
             arrayList.add(factory.create(invoke, Name.identifier(method.getName())));
         }
         return arrayList;

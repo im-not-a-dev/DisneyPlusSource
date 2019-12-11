@@ -2,7 +2,7 @@ package com.bamtech.sdk4.useractivity;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @DontObfuscate
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\b7\u0018\u0000 \r2\u00020\u0001:\u0002\r\u000eB\u000f\b\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0013\u0010\u0007\u001a\u00020\b2\b\u0010\t\u001a\u0004\u0018\u00010\u0001H\u0002J\b\u0010\n\u001a\u00020\u000bH\u0016J\b\u0010\f\u001a\u00020\u0003H\u0016R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006\u0001\u0001\u000f¨\u0006\u0010"}, mo31007d2 = {"Lcom/bamtech/sdk4/useractivity/GlimpseEvent;", "", "eventUrn", "", "(Ljava/lang/String;)V", "getEventUrn", "()Ljava/lang/String;", "equals", "", "other", "hashCode", "", "toString", "Companion", "Custom", "Lcom/bamtech/sdk4/useractivity/GlimpseEvent$Custom;", "plugin-user-activity_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -93,7 +93,7 @@ public abstract class GlimpseEvent {
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof GlimpseEvent) && C12880j.m40224a((Object) this.eventUrn, (Object) ((GlimpseEvent) obj).eventUrn);
+        return (obj instanceof GlimpseEvent) && Intrinsics.areEqual((Object) this.eventUrn, (Object) ((GlimpseEvent) obj).eventUrn);
     }
 
     public final String getEventUrn() {

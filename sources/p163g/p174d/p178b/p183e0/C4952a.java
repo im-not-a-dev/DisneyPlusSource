@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 import p163g.p174d.p178b.C5294k;
 
@@ -410,17 +410,17 @@ public final class C4952a {
         if (this != obj) {
             if (obj instanceof C4952a) {
                 C4952a aVar = (C4952a) obj;
-                if ((this.f12113a == aVar.f12113a) && C12880j.m40224a((Object) this.f12114b, (Object) aVar.f12114b)) {
+                if ((this.f12113a == aVar.f12113a) && Intrinsics.areEqual((Object) this.f12114b, (Object) aVar.f12114b)) {
                     if (this.f12115c == aVar.f12115c) {
                         if (this.f12116d == aVar.f12116d) {
                             if (this.f12117e == aVar.f12117e) {
-                                if ((this.f12118f == aVar.f12118f) && C12880j.m40224a((Object) this.f12119g, (Object) aVar.f12119g)) {
+                                if ((this.f12118f == aVar.f12118f) && Intrinsics.areEqual((Object) this.f12119g, (Object) aVar.f12119g)) {
                                     if (this.f12120h == aVar.f12120h) {
-                                        if ((this.f12121i == aVar.f12121i) && C12880j.m40224a((Object) this.f12122j, (Object) aVar.f12122j)) {
+                                        if ((this.f12121i == aVar.f12121i) && Intrinsics.areEqual((Object) this.f12122j, (Object) aVar.f12122j)) {
                                             if (this.f12123k == aVar.f12123k) {
                                                 if (this.f12124l == aVar.f12124l) {
                                                     if (this.f12125m == aVar.f12125m) {
-                                                        if ((this.f12126n == aVar.f12126n) && C12880j.m40224a((Object) this.f12127o, (Object) aVar.f12127o) && C12880j.m40224a((Object) this.f12128p, (Object) aVar.f12128p) && Float.compare(this.f12129q, aVar.f12129q) == 0) {
+                                                        if ((this.f12126n == aVar.f12126n) && Intrinsics.areEqual((Object) this.f12127o, (Object) aVar.f12127o) && Intrinsics.areEqual((Object) this.f12128p, (Object) aVar.f12128p) && Float.compare(this.f12129q, aVar.f12129q) == 0) {
                                                             if (this.f12130r == aVar.f12130r) {
                                                                 if (this.f12131s == aVar.f12131s) {
                                                                     if (this.f12132t == aVar.f12132t) {

@@ -13,7 +13,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p509o.p510a.C11847b;
 
@@ -63,7 +63,7 @@ public final class C2297c {
                 int r7 = com.bamtechmedia.dominguez.about.C2285p.about_os_version
                 java.lang.String r8 = android.os.Build.VERSION.RELEASE
                 java.lang.String r0 = "Build.VERSION.RELEASE"
-                kotlin.jvm.internal.C12880j.m40222a(r8, r0)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r0)
                 r9 = 0
                 r10 = 4
                 r11 = 0
@@ -86,7 +86,7 @@ public final class C2297c {
                 android.telephony.TelephonyManager r0 = r0.m8736c()
                 java.lang.String r8 = r0.getNetworkOperatorName()
                 java.lang.String r0 = "telephonyManager.networkOperatorName"
-                kotlin.jvm.internal.C12880j.m40222a(r8, r0)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r0)
                 com.bamtechmedia.dominguez.about.p052r.p053i.C2323a.C2324a.m8769a(r6, r7, r8, r9, r10, r11)
                 int r1 = com.bamtechmedia.dominguez.about.C2285p.about_device_id
                 com.bamtechmedia.dominguez.about.r.c r0 = r12.f6442c
@@ -95,7 +95,7 @@ public final class C2297c {
                 java.lang.String r2 = "android_id"
                 java.lang.String r2 = android.provider.Settings.Secure.getString(r0, r2)
                 java.lang.String r0 = "Settings.Secure.getStrin…ttings.Secure.ANDROID_ID)"
-                kotlin.jvm.internal.C12880j.m40222a(r2, r0)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r0)
                 r0 = r13
                 com.bamtechmedia.dominguez.about.p052r.p053i.C2323a.C2324a.m8769a(r0, r1, r2, r3, r4, r5)
                 int r7 = com.bamtechmedia.dominguez.about.C2285p.about_device_screen
@@ -145,10 +145,10 @@ public final class C2297c {
             ((WindowManager) systemService).getDefaultDisplay().getRealSize(point);
             Resources resources = this.f6441c.getResources();
             String str = "context.resources";
-            C12880j.m40222a((Object) resources, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) resources, str);
             int i = resources.getDisplayMetrics().densityDpi;
             Resources resources2 = this.f6441c.getResources();
-            C12880j.m40222a((Object) resources2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) resources2, str);
             float f = resources2.getDisplayMetrics().density;
             StringBuilder sb = new StringBuilder();
             sb.append(point.x);

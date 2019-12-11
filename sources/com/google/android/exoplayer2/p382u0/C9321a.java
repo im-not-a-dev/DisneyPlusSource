@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p382u0;
 import android.annotation.TargetApi;
 import android.graphics.Typeface;
 import android.view.accessibility.CaptioningManager.CaptionStyle;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.u0.a */
 /* compiled from: CaptionStyleCompat */
@@ -47,7 +47,7 @@ public final class C9321a {
     @TargetApi(19)
     /* renamed from: a */
     public static C9321a m28344a(CaptionStyle captionStyle) {
-        if (C9554k0.f22281a >= 21) {
+        if (Util.SDK_INT >= 21) {
             return m28346c(captionStyle);
         }
         return m28345b(captionStyle);

@@ -12,7 +12,7 @@ public final class RebufferingEndedEventData implements BaseQosClientData {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0014, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) getPlaybackSessionId(), (java.lang.Object) ((com.bamtech.sdk4.media.RebufferingEndedEventData) r2).getPlaybackSessionId()) != false) goto L_0x0019;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) getPlaybackSessionId(), (java.lang.Object) ((com.bamtech.sdk4.media.RebufferingEndedEventData) r2).getPlaybackSessionId()) != false) goto L_0x0019;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -24,7 +24,7 @@ public final class RebufferingEndedEventData implements BaseQosClientData {
             com.bamtech.sdk4.media.RebufferingEndedEventData r2 = (com.bamtech.sdk4.media.RebufferingEndedEventData) r2
             java.lang.String r0 = r1.getPlaybackSessionId()
             java.lang.String r2 = r2.getPlaybackSessionId()
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0017
             goto L_0x0019
         L_0x0017:

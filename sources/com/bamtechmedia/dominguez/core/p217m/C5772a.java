@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.core.p217m;
 
 import android.content.Intent;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.m.a */
 /* compiled from: ActivityResult.kt */
@@ -27,7 +27,7 @@ public final class C5772a {
             if (obj instanceof C5772a) {
                 C5772a aVar = (C5772a) obj;
                 if (this.f13532a == aVar.f13532a) {
-                    if (!(this.f13533b == aVar.f13533b) || !C12880j.m40224a((Object) this.f13534c, (Object) aVar.f13534c)) {
+                    if (!(this.f13533b == aVar.f13533b) || !Intrinsics.areEqual((Object) this.f13534c, (Object) aVar.f13534c)) {
                         return false;
                     }
                 }

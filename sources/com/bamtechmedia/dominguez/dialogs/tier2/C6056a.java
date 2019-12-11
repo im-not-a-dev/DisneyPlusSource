@@ -24,7 +24,7 @@ import java.util.List;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -155,7 +155,7 @@ public final class C6056a extends C11885d {
     /* renamed from: b */
     public final void m19417b(int i) {
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         C7539b.m22448a(requireActivity, m19418p().mo20459m0(), i);
     }
 
@@ -194,7 +194,7 @@ public final class C6056a extends C11885d {
         if (eVar != null) {
             return eVar;
         }
-        C12880j.m40227c("dialogAnalytics");
+        Intrinsics.throwUninitializedPropertyAccessException("dialogAnalytics");
         throw null;
     }
 
@@ -205,7 +205,7 @@ public final class C6056a extends C11885d {
 
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         View inflate = layoutInflater.inflate(C7564v.fragment_tier2_message_tv, viewGroup, false);
-        C12880j.m40222a((Object) inflate, "inflater.inflate(R.layou…age_tv, container, false)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "inflater.inflate(R.layou…age_tv, container, false)");
         return inflate;
     }
 
@@ -217,16 +217,16 @@ public final class C6056a extends C11885d {
     public void onDismiss(DialogInterface dialogInterface) {
         super.onDismiss(dialogInterface);
         C0532d requireActivity = requireActivity();
-        C12880j.m40222a((Object) requireActivity, "requireActivity()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
         C7539b.m22447a(requireActivity);
     }
 
     public void onViewCreated(View view, Bundle bundle) {
         TextView textView = (TextView) _$_findCachedViewById(C7562t.tier2DialogTitle);
-        C12880j.m40222a((Object) textView, "tier2DialogTitle");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "tier2DialogTitle");
         textView.setText(C7546g.m22500f(m19418p()));
         TextView textView2 = (TextView) _$_findCachedViewById(C7562t.tier2DialogSubtitle);
-        C12880j.m40222a((Object) textView2, "tier2DialogSubtitle");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "tier2DialogSubtitle");
         textView2.setText(C7546g.m22494a(m19418p()));
         String h0 = m19418p().mo20453h0();
         if (h0 != null) {
@@ -235,7 +235,7 @@ public final class C6056a extends C11885d {
                 C2378m mVar = new C2378m(h0, null, null, null, 12, null);
                 aVar.mo11443a(mVar);
             } else {
-                C12880j.m40227c("activePageOverride");
+                Intrinsics.throwUninitializedPropertyAccessException("activePageOverride");
                 throw null;
             }
         }

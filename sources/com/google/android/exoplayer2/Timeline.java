@@ -77,7 +77,7 @@ public abstract class Timeline {
 
         /* renamed from: c */
         public long mo22683c() {
-            return C8883r.m25968b(this.f18396c);
+            return C8883r.usToMs(this.f18396c);
         }
 
         /* renamed from: d */
@@ -87,7 +87,7 @@ public abstract class Timeline {
 
         /* renamed from: e */
         public long mo22687e() {
-            return C8883r.m25968b(this.f18397d);
+            return C8883r.usToMs(this.f18397d);
         }
 
         /* renamed from: f */
@@ -204,7 +204,7 @@ public abstract class Timeline {
 
         /* renamed from: c */
         public long mo22692c() {
-            return C8883r.m25968b(this.f18404f);
+            return C8883r.usToMs(this.f18404f);
         }
 
         /* renamed from: d */
@@ -214,7 +214,7 @@ public abstract class Timeline {
 
         /* renamed from: a */
         public long mo22689a() {
-            return C8883r.m25968b(this.f18403e);
+            return C8883r.usToMs(this.f18403e);
         }
     }
 

@@ -23,13 +23,13 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p096e.p121h.p122j.C4025a;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u0000 !2\u00020\u0001:\u0001!B\u0005¢\u0006\u0002\u0010\u0002J\b\u0010\u0005\u001a\u00020\u0006H\u0002J\b\u0010\u0007\u001a\u00020\bH\u0016J\b\u0010\t\u001a\u00020\bH\u0016J\u0010\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\fH\u0016J\b\u0010\r\u001a\u00020\u0006H\u0016J\b\u0010\u000e\u001a\u00020\u0006H\u0016J\u001a\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0010\u001a\u00020\u00112\b\u0010\u0012\u001a\u0004\u0018\u00010\u0013H\u0016J\b\u0010\u0014\u001a\u00020\u0006H\u0002J\u001a\u0010\u0015\u001a\u00020\u00062\u0006\u0010\u0016\u001a\u00020\u00172\b\u0010\u0018\u001a\u0004\u0018\u00010\u0019H\u0016J\b\u0010\u001a\u001a\u00020\u0006H\u0002J\u0010\u0010\u001b\u001a\u00020\u00062\u0006\u0010\u001c\u001a\u00020\u001dH\u0002J\u0014\u0010\u001e\u001a\u00020\u0006*\u00020\u001f2\u0006\u0010 \u001a\u00020\u001dH\u0002R\u0010\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u000e¢\u0006\u0002\n\u0000¨\u0006\""}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/tv/tracks/TvPlaybackAudioAndSubtitlesFragment;", "Lcom/bamtechmedia/dominguez/playback/common/tracks/PlaybackAudioAndSubtitlesFragment;", "()V", "audioAndSubtitlesDisposable", "Lio/reactivex/disposables/Disposable;", "cancelDialogTimer", "", "getLayoutResource", "", "getTheme", "onDismiss", "dialog", "Landroid/content/DialogInterface;", "onPause", "onSubtitleOrAudioTrackSelected", "onViewCreated", "view", "Landroid/view/View;", "savedInstanceState", "Landroid/os/Bundle;", "setTabListeners", "show", "manager", "Landroidx/fragment/app/FragmentManager;", "tag", "", "startTimerToHide", "updateTabs", "isSubtitle", "", "setTabsTextAppearance", "Landroid/widget/TextView;", "hasFocus", "Companion", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.tv.e.b */
@@ -76,7 +76,7 @@ public final class C6561b extends C6312a {
             if (i == 19) {
                 if ((findFocus != null ? findFocus.getParent() : null) instanceof RecyclerView) {
                     View _$_findCachedViewById = this.f14823c._$_findCachedViewById(C6327f.subtitleIndicator);
-                    C12880j.m40222a((Object) _$_findCachedViewById, "subtitleIndicator");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "subtitleIndicator");
                     if (_$_findCachedViewById.getVisibility() == 0) {
                         z = true;
                     }
@@ -118,7 +118,7 @@ public final class C6561b extends C6312a {
 
         public final void onFocusChange(View view, boolean z) {
             TextView textView = (TextView) this.f14826c._$_findCachedViewById(C6327f.subtitleTabText);
-            C12880j.m40222a((Object) textView, "subtitleTabText");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "subtitleTabText");
             textView.setSelected(z);
             if (z) {
                 this.f14826c.m20426b(true);
@@ -149,7 +149,7 @@ public final class C6561b extends C6312a {
         public final void onFocusChange(View view, boolean z) {
             this.f14829c.m20429v();
             TextView textView = (TextView) this.f14829c._$_findCachedViewById(C6327f.audioTabText);
-            C12880j.m40222a((Object) textView, "audioTabText");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "audioTabText");
             textView.setSelected(z);
             if (z) {
                 this.f14829c.m20426b(false);
@@ -188,7 +188,7 @@ public final class C6561b extends C6312a {
 
         /* renamed from: a */
         public final void mo19219a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -196,7 +196,7 @@ public final class C6561b extends C6312a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -218,20 +218,20 @@ public final class C6561b extends C6312a {
     public final void m20426b(boolean z) {
         if (!isRemoving()) {
             View _$_findCachedViewById = _$_findCachedViewById(C6327f.subtitleIndicator);
-            C12880j.m40222a((Object) _$_findCachedViewById, "subtitleIndicator");
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "subtitleIndicator");
             int i = 0;
             _$_findCachedViewById.setVisibility(z ? 0 : 8);
             TextView textView = (TextView) _$_findCachedViewById(C6327f.subtitleTabText);
-            C12880j.m40222a((Object) textView, "subtitleTabText");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "subtitleTabText");
             m20423a(textView, z);
             View _$_findCachedViewById2 = _$_findCachedViewById(C6327f.audioIndicator);
-            C12880j.m40222a((Object) _$_findCachedViewById2, "audioIndicator");
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById2, "audioIndicator");
             if (!(!z)) {
                 i = 8;
             }
             _$_findCachedViewById2.setVisibility(i);
             TextView textView2 = (TextView) _$_findCachedViewById(C6327f.audioTabText);
-            C12880j.m40222a((Object) textView2, "audioTabText");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "audioTabText");
             m20423a(textView2, !z);
             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C6327f.subTitleAudioTvRecyclerView);
             if (recyclerView != null) {
@@ -343,7 +343,7 @@ public final class C6561b extends C6312a {
             RecyclerViewExtKt.m18800a(this, recyclerView, mo18935s());
         }
         RecyclerView recyclerView2 = (RecyclerView) _$_findCachedViewById(C6327f.subTitleAudioTvRecyclerView);
-        C12880j.m40222a((Object) recyclerView2, "subTitleAudioTvRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, "subTitleAudioTvRecyclerView");
         recyclerView2.setItemAnimator(new C6559a());
         requireDialog().setOnKeyListener(new C6563b(this, view));
         m20428u();

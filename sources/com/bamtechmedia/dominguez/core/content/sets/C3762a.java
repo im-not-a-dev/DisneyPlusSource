@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.profiles.C6627c1;
 import com.bamtechmedia.dominguez.profiles.C6667g1;
 import com.google.common.base.Optional;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.functions.C11945a;
 
@@ -46,7 +46,7 @@ public final class C3762a implements C2793c {
 
         public final void run() {
             Editor edit = this.f9393a.f9389a.edit();
-            C12880j.m40222a((Object) edit, "editor");
+            Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
             edit.clear();
             edit.commit();
         }
@@ -116,7 +116,7 @@ public final class C3762a implements C2793c {
     public final void mo13657a(ContentSet contentSet) {
         AvailabilityHint availabilityHint = contentSet.isEmpty() ? AvailabilityHint.NO_CONTENT : AvailabilityHint.HAS_CONTENT;
         Editor edit = this.f9389a.edit();
-        C12880j.m40222a((Object) edit, "editor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
         edit.putString(m12758a(contentSet.mo13604b(), contentSet.mo13608e()), availabilityHint.name());
         edit.apply();
     }
@@ -136,7 +136,7 @@ public final class C3762a implements C2793c {
     /* renamed from: a */
     public Completable mo11570a() {
         Completable c = Completable.m38166c((C11945a) new C3763a(this));
-        C12880j.m40222a((Object) c, "Completable.fromAction {…mit = true) { clear() } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.fromAction {…mit = true) { clear() } }");
         return c;
     }
 }

@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.types;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 
@@ -33,7 +33,7 @@ public final class IndexedParametersSubstitution extends TypeSubstitution {
         if (typeParameterDescriptor != null) {
             int index = typeParameterDescriptor.getIndex();
             TypeParameterDescriptor[] typeParameterDescriptorArr = this.parameters;
-            if (index < typeParameterDescriptorArr.length && C12880j.m40224a((Object) typeParameterDescriptorArr[index].getTypeConstructor(), (Object) typeParameterDescriptor.getTypeConstructor())) {
+            if (index < typeParameterDescriptorArr.length && Intrinsics.areEqual((Object) typeParameterDescriptorArr[index].getTypeConstructor(), (Object) typeParameterDescriptor.getTypeConstructor())) {
                 return this.arguments[index];
             }
         }

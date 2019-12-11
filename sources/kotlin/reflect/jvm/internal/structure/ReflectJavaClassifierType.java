@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClassifier;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClassifierType;
@@ -95,7 +95,7 @@ public final class ReflectJavaClassifierType extends ReflectJavaType implements 
             return false;
         }
         TypeVariable[] typeParameters = ((Class) reflectType2).getTypeParameters();
-        C12880j.m40222a((Object) typeParameters, "getTypeParameters()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, "getTypeParameters()");
         return (typeParameters.length == 0) ^ true;
     }
 }

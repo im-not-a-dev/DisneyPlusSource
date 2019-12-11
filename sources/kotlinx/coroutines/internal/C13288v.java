@@ -2,7 +2,7 @@ package kotlinx.coroutines.internal;
 
 import java.lang.Comparable;
 import java.util.Arrays;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlinx.coroutines.C13292j0;
 import kotlinx.coroutines.internal.C13289w;
 
@@ -25,7 +25,7 @@ public class C13288v<T extends C13289w & Comparable<? super T>> {
                     Comparable comparable = (Comparable) t;
                     T t2 = tArr[i];
                     if (t2 == null) {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     } else if (comparable.compareTo(t2) > 0) {
                         m40842a(i, i2);
@@ -34,11 +34,11 @@ public class C13288v<T extends C13289w & Comparable<? super T>> {
                         return;
                     }
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -55,7 +55,7 @@ public class C13288v<T extends C13289w & Comparable<? super T>> {
             return tArr;
         } else {
             T[] copyOf = Arrays.copyOf(tArr, mo34456b() * 2);
-            C12880j.m40222a((Object) copyOf, "java.util.Arrays.copyOf(this, newSize)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) copyOf, "java.util.Arrays.copyOf(this, newSize)");
             T[] tArr3 = (C13289w[]) copyOf;
             this.f29724a = tArr3;
             return tArr3;
@@ -109,13 +109,13 @@ public class C13288v<T extends C13289w & Comparable<? super T>> {
                             Comparable comparable = (Comparable) t;
                             T t2 = tArr[i2];
                             if (t2 == null) {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             } else if (comparable.compareTo(t2) < 0) {
                                 i2 = i3;
                             }
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     }
@@ -124,7 +124,7 @@ public class C13288v<T extends C13289w & Comparable<? super T>> {
                         Comparable comparable2 = (Comparable) t3;
                         T t4 = tArr[i2];
                         if (t4 == null) {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         } else if (comparable2.compareTo(t4) > 0) {
                             m40842a(i, i2);
@@ -133,11 +133,11 @@ public class C13288v<T extends C13289w & Comparable<? super T>> {
                             return;
                         }
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             } else {
@@ -166,14 +166,14 @@ public class C13288v<T extends C13289w & Comparable<? super T>> {
                         Comparable comparable = (Comparable) t;
                         T t2 = tArr[i2];
                         if (t2 == null) {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         } else if (comparable.compareTo(t2) < 0) {
                             m40842a(i, i2);
                             m40845d(i2);
                         }
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 }
@@ -194,10 +194,10 @@ public class C13288v<T extends C13289w & Comparable<? super T>> {
                 tArr[mo34456b()] = null;
                 return t3;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -264,13 +264,13 @@ public class C13288v<T extends C13289w & Comparable<? super T>> {
                     t2.mo34462a(i2);
                     return;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

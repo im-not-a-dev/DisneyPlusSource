@@ -11,7 +11,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -20,7 +20,7 @@ import p163g.p201e.p203b.p299m.p300y.C7576g;
 import p163g.p201e.p203b.p312q.C7713w.C7714a;
 import p163g.p201e.p203b.p316t.C7775d;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003BE\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0006\u0010\f\u001a\u00020\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\u0006\u0010\u0010\u001a\u00020\u0011\u0012\u0006\u0010\u0012\u001a\u00020\u0013¢\u0006\u0002\u0010\u0014J\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u001b0\u001aJ\b\u0010\u001c\u001a\u00020\u001dH\u0002J\b\u0010\u001e\u001a\u00020\u001dH\u0016R\u0011\u0010\u000e\u001a\u00020\u000f¢\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0016R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\f\u001a\u00020\r¢\u0006\b\n\u0000\u001a\u0004\b\u0017\u0010\u0018R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u001f"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/globalnav/TvGlobalNavViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/globalnav/GlobalNavViewModelHelper$State;", "Lcom/bamtechmedia/dominguez/options/OptionsGlobalNavigation;", "profileRouter", "Lcom/bamtechmedia/dominguez/profiles/ProfilesGlobalNavRouter;", "offlineState", "Lcom/bamtechmedia/dominguez/core/OfflineState;", "dialogRouter", "Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;", "freeTrialWelcomeDelegate", "Lcom/bamtechmedia/dominguez/dialog/FreeTrialWelcomeDelegate;", "helper", "Lcom/bamtechmedia/dominguez/globalnav/GlobalNavViewModelHelper;", "config", "Lcom/bamtechmedia/dominguez/globalnav/GlobalNavConfig;", "slugProvider", "Lcom/bamtechmedia/dominguez/core/content/collections/SlugProvider;", "profilesMemoryCache", "Lcom/bamtechmedia/dominguez/profiles/ProfilesMemoryCache;", "(Lcom/bamtechmedia/dominguez/profiles/ProfilesGlobalNavRouter;Lcom/bamtechmedia/dominguez/core/OfflineState;Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;Lcom/bamtechmedia/dominguez/dialog/FreeTrialWelcomeDelegate;Lcom/bamtechmedia/dominguez/globalnav/GlobalNavViewModelHelper;Lcom/bamtechmedia/dominguez/globalnav/GlobalNavConfig;Lcom/bamtechmedia/dominguez/core/content/collections/SlugProvider;Lcom/bamtechmedia/dominguez/profiles/ProfilesMemoryCache;)V", "getConfig", "()Lcom/bamtechmedia/dominguez/globalnav/GlobalNavConfig;", "getHelper", "()Lcom/bamtechmedia/dominguez/globalnav/GlobalNavViewModelHelper;", "getMenuItems", "", "Lcom/bamtechmedia/dominguez/core/design/widgets/disneynavigationbar/DisneyNavigationBar$DisneyMenuItemView;", "showOfflineFlashMessageWithChangeInConnection", "", "startHome", "tv_prodGoogleRelease"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.q.b0 */
@@ -74,7 +74,7 @@ public final class C7655b0 extends C5741g<C7714a> implements C7775d {
 
         /* renamed from: a */
         public final void accept(Boolean bool) {
-            C12880j.m40222a((Object) bool, "showOfflineMessage");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bool, "showOfflineMessage");
             if (bool.booleanValue()) {
                 this.f16684c.f16679V.mo20489a(C7576g.ERROR, (int) R.string.offline_flash_message);
             }
@@ -94,7 +94,7 @@ public final class C7655b0 extends C5741g<C7714a> implements C7775d {
 
         /* renamed from: a */
         public final void mo20584a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -102,7 +102,7 @@ public final class C7655b0 extends C5741g<C7714a> implements C7775d {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -372,7 +372,7 @@ public final class C7655b0 extends C5741g<C7714a> implements C7775d {
             g.n.a.h r1 = p163g.p503n.p504a.C11793e.m37930a(r1)
             java.lang.Object r0 = r0.mo30161a(r1)
             java.lang.String r1 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.a0 r0 = (p163g.p503n.p504a.C11786a0) r0
             g.e.b.q.b0$b r1 = new g.e.b.q.b0$b
             r1.<init>(r4)

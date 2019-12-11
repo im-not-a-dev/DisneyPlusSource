@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.collections.p080o0.C3441g;
 import com.bamtechmedia.dominguez.core.p215k.C5758a;
 import com.bamtechmedia.dominguez.core.utils.C5852n0;
 import kotlin.C13142s;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtechmedia.dominguez.collections.o */
 /* compiled from: CollectionViewFocusHelper.kt */
@@ -266,7 +266,7 @@ public final class C3432o {
     /* renamed from: a */
     private final void m11716a(String str) {
         if (this.f8656a) {
-            C14100a.m44522a(str, new Object[0]);
+            Timber.m44522a(str, new Object[0]);
         }
     }
 

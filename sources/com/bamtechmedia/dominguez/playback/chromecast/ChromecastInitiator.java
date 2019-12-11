@@ -10,12 +10,12 @@ import com.bamtechmedia.dominguez.core.content.C3693o;
 import com.bamtechmedia.dominguez.playback.p237m.C6336a;
 import com.bamtechmedia.dominguez.playback.p237m.C6342f;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.C5326w;
 import p520io.reactivex.disposables.CompositeDisposable;
 import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001B/\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\u0010\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0012H\u0016J\u0010\u0010\u0013\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0012H\u0016J\r\u0010\u0014\u001a\u00020\u0010H\u0000¢\u0006\u0002\b\u0015R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0016"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/chromecast/ChromecastInitiator;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "viewModel", "Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;", "chromecastBridge", "Lcom/bamnet/chromecast/ChromecastBridge;", "chromecastLauncher", "Lcom/bamtechmedia/dominguez/playback/chromecast/ChromecastLauncher;", "mediaApi", "Lcom/bamtech/sdk4/media/MediaApi;", "activity", "Lcom/bamtechmedia/dominguez/playback/mobile/MobilePlaybackActivity;", "(Lcom/bamtechmedia/dominguez/playback/common/VideoPlaybackViewModel;Lcom/bamnet/chromecast/ChromecastBridge;Lcom/bamtechmedia/dominguez/playback/chromecast/ChromecastLauncher;Lcom/bamtech/sdk4/media/MediaApi;Lcom/bamtechmedia/dominguez/playback/mobile/MobilePlaybackActivity;)V", "disposables", "Lio/reactivex/disposables/CompositeDisposable;", "onPause", "", "owner", "Landroidx/lifecycle/LifecycleOwner;", "onResume", "switchToCast", "switchToCast$playback_release", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: ChromecastInitiator.kt */
@@ -87,7 +87,7 @@ public final class ChromecastInitiator implements C0710d {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
     }
 
@@ -107,11 +107,11 @@ public final class ChromecastInitiator implements C0710d {
             C6274a aVar2 = this.f14322W;
             C3693o c = aVar.mo18954c();
             if (c == null) {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
             C5326w d = aVar.mo18955d().mo7539d();
-            C12880j.m40222a((Object) d, "it.engine.videoPlayer");
+            Intrinsics.checkReturnedValueIsNotNull((Object) d, "it.engine.videoPlayer");
             aVar2.mo18872a(c, (int) d.getCurrentPosition());
             throw null;
         }

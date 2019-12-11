@@ -38,7 +38,7 @@ public final class SubscriptionStatus {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.type, (java.lang.Object) r3.type) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.type, (java.lang.Object) r3.type) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -50,11 +50,11 @@ public final class SubscriptionStatus {
             com.bamtech.sdk4.internal.subscription.SubscriptionStatus r3 = (com.bamtech.sdk4.internal.subscription.SubscriptionStatus) r3
             com.bamtech.sdk4.internal.subscription.SubscriptionStatusSubType r0 = r2.subType
             com.bamtech.sdk4.internal.subscription.SubscriptionStatusSubType r1 = r3.subType
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.bamtech.sdk4.internal.subscription.SubscriptionStatusType r0 = r2.type
             com.bamtech.sdk4.internal.subscription.SubscriptionStatusType r3 = r3.type
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:

@@ -171,7 +171,7 @@ public final class C3629d implements C3628c {
             java.lang.Class r0 = r0.getClass()
             java.lang.String r0 = r0.getSimpleName()
             java.lang.String r1 = "it.javaClass.simpleName"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.lang.String r1 = "Dmc"
             java.lang.String r0 = kotlin.p588j0.C12833x.m40137a(r0, r1)
             java.lang.String r1 = "contentProgramType"

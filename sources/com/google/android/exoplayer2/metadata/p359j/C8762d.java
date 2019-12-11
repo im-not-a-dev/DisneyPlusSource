@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.metadata.p359j;
 
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.metadata.j.d */
@@ -66,7 +66,7 @@ public final class C8762d extends C8773i {
             return false;
         }
         C8762d dVar = (C8762d) obj;
-        if (!(this.f18604V == dVar.f18604V && this.f18605W == dVar.f18605W && this.f18606X == dVar.f18606X && this.f18607Y == dVar.f18607Y && C9554k0.m29414a((Object) this.f18603U, (Object) dVar.f18603U) && Arrays.equals(this.f18608Z, dVar.f18608Z))) {
+        if (!(this.f18604V == dVar.f18604V && this.f18605W == dVar.f18605W && this.f18606X == dVar.f18606X && this.f18607Y == dVar.f18607Y && Util.m29414a((Object) this.f18603U, (Object) dVar.f18603U) && Arrays.equals(this.f18608Z, dVar.f18608Z))) {
             z = false;
         }
         return z;
@@ -93,7 +93,7 @@ public final class C8762d extends C8773i {
     C8762d(Parcel parcel) {
         super("CHAP");
         String readString = parcel.readString();
-        C9554k0.m29394a(readString);
+        Util.castNonNull(readString);
         this.f18603U = readString;
         this.f18604V = parcel.readInt();
         this.f18605W = parcel.readInt();

@@ -3,7 +3,7 @@ package com.bamtech.sdk4.internal.media.offline.p047db;
 import java.util.Arrays;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -35,7 +35,7 @@ public final class OldMediaLicenseEntry {
         if (this == obj) {
             return true;
         }
-        if (!C12880j.m40224a((Object) OldMediaLicenseEntry.class, (Object) obj != null ? obj.getClass() : null)) {
+        if (!Intrinsics.areEqual((Object) OldMediaLicenseEntry.class, (Object) obj != null ? obj.getClass() : null)) {
             return false;
         }
         if (obj != null) {
@@ -106,7 +106,7 @@ public final class OldMediaLicenseEntry {
         int i3 = (i2 & 8) != 0 ? 0 : i;
         if ((i2 & 16) != 0) {
             DateTime now = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
             dateTime2 = now;
         } else {
             dateTime2 = dateTime;

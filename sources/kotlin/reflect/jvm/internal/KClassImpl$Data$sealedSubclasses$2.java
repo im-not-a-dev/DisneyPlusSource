@@ -6,7 +6,7 @@ import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.KClassImpl.Data;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -23,7 +23,7 @@ final class KClassImpl$Data$sealedSubclasses$2 extends C12881k implements Functi
 
     public final List<KClassImpl<? extends T>> invoke() {
         Collection<ClassDescriptor> sealedSubclasses = this.this$0.getDescriptor().getSealedSubclasses();
-        C12880j.m40222a((Object) sealedSubclasses, "descriptor.sealedSubclasses");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sealedSubclasses, "descriptor.sealedSubclasses");
         ArrayList arrayList = new ArrayList();
         for (ClassDescriptor classDescriptor : sealedSubclasses) {
             if (classDescriptor != null) {

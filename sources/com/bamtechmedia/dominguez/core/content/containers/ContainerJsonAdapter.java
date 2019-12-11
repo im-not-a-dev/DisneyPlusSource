@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content.containers;
 import com.bamtechmedia.dominguez.core.content.sets.C3778h;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -22,13 +22,13 @@ public final class ContainerJsonAdapter extends C11725h<Container> {
         String str = "set";
         String str2 = "type";
         C11739b a = C11739b.m37729a(str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"type\", \"set\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"type\", \"set\")");
         this.options = a;
         C11725h<ContainerType> a2 = vVar.mo29869a((Type) ContainerType.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a2, "moshi.adapter<ContainerT…tions.emptySet(), \"type\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<ContainerT…tions.emptySet(), \"type\")");
         this.containerTypeAdapter = a2;
         C11725h<C3778h> a3 = vVar.mo29869a((Type) C3778h.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a3, "moshi.adapter<DmcSet>(Dm…ctions.emptySet(), \"set\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<DmcSet>(Dm…ctions.emptySet(), \"set\")");
         this.dmcSetAdapter = a3;
     }
 

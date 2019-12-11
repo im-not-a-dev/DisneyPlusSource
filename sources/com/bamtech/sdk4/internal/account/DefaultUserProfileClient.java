@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.MaybeSource;
 import p520io.reactivex.Single;
@@ -72,7 +72,7 @@ public final class DefaultUserProfileClient implements UserProfileClient {
 
     public Maybe<CreateAccountGrantResponse> deleteUserProfile(ServiceTransaction serviceTransaction, String str, String str2) {
         Maybe<CreateAccountGrantResponse> c = this.configurationProvider.getServiceLink(serviceTransaction, DefaultUserProfileClient$deleteUserProfile$1.INSTANCE).mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new DefaultUserProfileClient$deleteUserProfile$2<Object,Object>(this, str, str2, serviceTransaction));
-        C12880j.m40222a((Object) c, "configurationProvider.ge…DELETE)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "configurationProvider.ge…DELETE)\n                }");
         return c;
     }
 
@@ -96,19 +96,19 @@ public final class DefaultUserProfileClient implements UserProfileClient {
 
     public <T extends UserProfile> Single<? extends List<T>> getUserProfiles(ServiceTransaction serviceTransaction, String str, Class<? extends List<? extends T>> cls) {
         Single<? extends List<T>> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultUserProfileClient$getUserProfiles$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileClient$getUserProfiles$2<Object,Object>(this, str, serviceTransaction, cls));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…LTIPLE)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…LTIPLE)\n                }");
         return a;
     }
 
     public Single<CreateAccountGrantResponse> setActiveUserProfile(ServiceTransaction serviceTransaction, String str, String str2) {
         Single<CreateAccountGrantResponse> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultUserProfileClient$setActiveUserProfile$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileClient$setActiveUserProfile$2<Object,Object>(this, str, str2, serviceTransaction));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…ACTIVE)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…ACTIVE)\n                }");
         return a;
     }
 
     public <T extends UserProfile> Single<Boolean> updateUserProfile(ServiceTransaction serviceTransaction, String str, T t) {
         Single<Boolean> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultUserProfileClient$updateUserProfile$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultUserProfileClient$updateUserProfile$2<Object,Object>(this, str, t, serviceTransaction));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…UPDATE)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…UPDATE)\n                }");
         return a;
     }
 

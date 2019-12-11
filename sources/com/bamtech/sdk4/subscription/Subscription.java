@@ -9,7 +9,7 @@ import com.bamtech.sdk4.internal.subscription.SubscriptionType;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 import org.joda.time.DateTime;
 
@@ -100,10 +100,10 @@ public final class Subscription {
         }
 
         public final BundleStatus toBundleStatus$extension_iap(Boolean bool) {
-            if (C12880j.m40224a((Object) bool, (Object) Boolean.valueOf(true))) {
+            if (Intrinsics.areEqual((Object) bool, (Object) Boolean.valueOf(true))) {
                 return BundleStatus.Bundle;
             }
-            if (C12880j.m40224a((Object) bool, (Object) Boolean.valueOf(false))) {
+            if (Intrinsics.areEqual((Object) bool, (Object) Boolean.valueOf(false))) {
                 return BundleStatus.NotBundle;
             }
             return BundleStatus.Unknown;
@@ -225,7 +225,7 @@ public final class Subscription {
         if (this != obj) {
             if (obj instanceof Subscription) {
                 Subscription subscription = (Subscription) obj;
-                if (!(this.isActive == subscription.isActive) || !C12880j.m40224a((Object) this.products, (Object) subscription.products) || !C12880j.m40224a((Object) this.source, (Object) subscription.source) || !C12880j.m40224a((Object) this.accountId, (Object) subscription.accountId) || !C12880j.m40224a((Object) this.deviceId, (Object) subscription.deviceId) || !C12880j.m40224a((Object) this.expirationDate, (Object) subscription.expirationDate) || !C12880j.m40224a((Object) this.expiryType, (Object) subscription.expiryType) || !C12880j.m40224a((Object) this.externalIdentity, (Object) subscription.externalIdentity) || !C12880j.m40224a((Object) this.f6088id, (Object) subscription.f6088id) || !C12880j.m40224a((Object) this.lastSyncDate, (Object) subscription.lastSyncDate) || !C12880j.m40224a((Object) this.nextRenewalDate, (Object) subscription.nextRenewalDate) || !C12880j.m40224a((Object) this.startDate, (Object) subscription.startDate) || !C12880j.m40224a((Object) this.status, (Object) subscription.status) || !C12880j.m40224a((Object) this.type, (Object) subscription.type) || !C12880j.m40224a((Object) this.purchaseDate, (Object) subscription.purchaseDate) || !C12880j.m40224a((Object) this.bundle, (Object) subscription.bundle)) {
+                if (!(this.isActive == subscription.isActive) || !Intrinsics.areEqual((Object) this.products, (Object) subscription.products) || !Intrinsics.areEqual((Object) this.source, (Object) subscription.source) || !Intrinsics.areEqual((Object) this.accountId, (Object) subscription.accountId) || !Intrinsics.areEqual((Object) this.deviceId, (Object) subscription.deviceId) || !Intrinsics.areEqual((Object) this.expirationDate, (Object) subscription.expirationDate) || !Intrinsics.areEqual((Object) this.expiryType, (Object) subscription.expiryType) || !Intrinsics.areEqual((Object) this.externalIdentity, (Object) subscription.externalIdentity) || !Intrinsics.areEqual((Object) this.f6088id, (Object) subscription.f6088id) || !Intrinsics.areEqual((Object) this.lastSyncDate, (Object) subscription.lastSyncDate) || !Intrinsics.areEqual((Object) this.nextRenewalDate, (Object) subscription.nextRenewalDate) || !Intrinsics.areEqual((Object) this.startDate, (Object) subscription.startDate) || !Intrinsics.areEqual((Object) this.status, (Object) subscription.status) || !Intrinsics.areEqual((Object) this.type, (Object) subscription.type) || !Intrinsics.areEqual((Object) this.purchaseDate, (Object) subscription.purchaseDate) || !Intrinsics.areEqual((Object) this.bundle, (Object) subscription.bundle)) {
                     return false;
                 }
             }
@@ -321,7 +321,7 @@ public final class Subscription {
     }
 
     public final boolean isBoundToAccount(Account account) {
-        if (account != null && C12880j.m40224a((Object) account.getAccountId(), (Object) this.accountId)) {
+        if (account != null && Intrinsics.areEqual((Object) account.getAccountId(), (Object) this.accountId)) {
             return true;
         }
         if (account != null || this.accountId == null) {

@@ -7,7 +7,7 @@ import java.util.List;
 
 /* renamed from: m.a.a.a.b */
 /* compiled from: CommandLine */
-public class C13432b implements Serializable {
+public class CommandLine implements Serializable {
 
     /* renamed from: U */
     private List f29925U = new ArrayList();
@@ -15,7 +15,7 @@ public class C13432b implements Serializable {
     /* renamed from: c */
     private List f29926c = new LinkedList();
 
-    C13432b() {
+    CommandLine() {
     }
 
     /* renamed from: c */

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
 import p163g.p201e.p203b.p307o.C7619i;
 import p520io.reactivex.Completable;
@@ -23,7 +23,7 @@ import p520io.reactivex.ObservableSource;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.C11946b;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\u0007\u0018\u00002\u00020\u0001:\u0002\u001f B/\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\u001e\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e2\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0013H\u0002J\u0014\u0010\u0014\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00170\u00160\u0015H\u0002J\u0010\u0010\u0018\u001a\u00020\u000f2\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J\u001c\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e2\u0006\u0010\u001c\u001a\u00020\u00172\u0006\u0010\u001d\u001a\u00020\u0017J\u0018\u0010\u001e\u001a\n\u0012\u0004\u0012\u00020\u000f\u0018\u00010\u000e2\u0006\u0010\u001d\u001a\u00020\u0017H\u0002R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006!"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/register/RegisterAccountAction;", "", "identityApi", "Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "passwordValidator", "Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;", "legalApi", "Lcom/bamtechmedia/dominguez/legal/api/LegalApi;", "errorLocalization", "Lcom/bamtechmedia/dominguez/error/ErrorLocalization;", "(Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;Lcom/bamtech/sdk4/account/AccountApi;Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;Lcom/bamtechmedia/dominguez/legal/api/LegalApi;Lcom/bamtechmedia/dominguez/error/ErrorLocalization;)V", "createAccountWithIdentityToken", "Lio/reactivex/Observable;", "Lcom/bamtechmedia/dominguez/auth/register/RegisterAccountAction$ActionState;", "identityToken", "Lcom/bamtech/sdk4/identity/IdentityToken;", "attributes", "Lcom/bamtechmedia/dominguez/auth/register/RegisterAccountAction$AccountCreateAttributes;", "fetchLegalDisclosures", "Lio/reactivex/Single;", "", "", "mapIdentityExceptionToActionState", "error", "", "registerAccount", "email", "password", "validatePassword", "AccountCreateAttributes", "ActionState", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: RegisterAccountAction.kt */
@@ -78,7 +78,7 @@ public final class RegisterAccountAction {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.legalAssertions, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.AccountCreateAttributes) r2).legalAssertions) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.legalAssertions, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.AccountCreateAttributes) r2).legalAssertions) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -90,7 +90,7 @@ public final class RegisterAccountAction {
                 com.bamtechmedia.dominguez.auth.register.RegisterAccountAction$AccountCreateAttributes r2 = (com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.AccountCreateAttributes) r2
                 java.util.List<java.lang.String> r0 = r1.legalAssertions
                 java.util.List<java.lang.String> r2 = r2.legalAssertions
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -163,7 +163,7 @@ public final class RegisterAccountAction {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7576a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.C2814a.C2816b) r2).f7576a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7576a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.C2814a.C2816b) r2).f7576a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -175,7 +175,7 @@ public final class RegisterAccountAction {
                     com.bamtechmedia.dominguez.auth.register.RegisterAccountAction$a$b r2 = (com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.C2814a.C2816b) r2
                     java.lang.String r0 = r1.f7576a
                     java.lang.String r2 = r2.f7576a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -234,7 +234,7 @@ public final class RegisterAccountAction {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7577a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.C2814a.C2817c) r2).f7577a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7577a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.C2814a.C2817c) r2).f7577a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -246,7 +246,7 @@ public final class RegisterAccountAction {
                     com.bamtechmedia.dominguez.auth.register.RegisterAccountAction$a$c r2 = (com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.C2814a.C2817c) r2
                     java.lang.String r0 = r1.f7577a
                     java.lang.String r2 = r2.f7577a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -417,7 +417,7 @@ public final class RegisterAccountAction {
 
         /* renamed from: a */
         public final C2814a apply(Throwable th) {
-            C14100a.m44524a(th, "Error attempting to create with BamIdentityApi!", new Object[0]);
+            Timber.m44524a(th, "Error attempting to create with BamIdentityApi!", new Object[0]);
             return this.f7587c.m10493a(th);
         }
     }
@@ -437,7 +437,7 @@ public final class RegisterAccountAction {
             return a;
         }
         Observable<C2814a> i = m10497a().mo30225d((Function<? super T, ? extends ObservableSource<? extends R>>) new C2823f<Object,Object>(this, str, str2)).mo30176c((ObservableSource<? extends T>) Observable.m38309b(C2818d.f7578a)).mo30198i(new C2825g(this));
-        C12880j.m40222a((Object) i, "fetchLegalDisclosures()\n…owable)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "fetchLegalDisclosures()\n…owable)\n                }");
         return i;
     }
 
@@ -454,7 +454,7 @@ public final class RegisterAccountAction {
     /* renamed from: a */
     private final Single<List<String>> m10497a() {
         Single<List<String>> g = this.f7573d.getLegalData().mo30231f(C2819b.f7579c).mo30193g(new C2820c()).mo30155a(new ArrayList(), (C11946b<? super U, ? super T>) C2821d.f7580a).mo30233g(C2822e.f7581c);
-        C12880j.m40222a((Object) g, "this.flattenAsObservable…     .map { it.toList() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.flattenAsObservable…     .map { it.toList() }");
         return g;
     }
 
@@ -465,7 +465,7 @@ public final class RegisterAccountAction {
         C2815a aVar = C2815a.f7575a;
         if (aVar != null) {
             Observable<C2814a> a = createAccount.mo30043a((ObservableSource<T>) Observable.m38309b(aVar));
-            C12880j.m40222a((Object) a, "accountApi.createAccount…tCreated as ActionState))");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "accountApi.createAccount…tCreated as ActionState))");
             return a;
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.ActionState");
@@ -476,7 +476,7 @@ public final class RegisterAccountAction {
     public final C2814a m10493a(Throwable th) {
         C7619i b = this.f7574e.mo20538b(th);
         ServiceExceptionCase c = b.mo20545c();
-        if (!C12880j.m40224a((Object) c, (Object) InvalidCredentials.INSTANCE) && !C12880j.m40224a((Object) c, (Object) InvalidPassword.INSTANCE)) {
+        if (!Intrinsics.areEqual((Object) c, (Object) InvalidCredentials.INSTANCE) && !Intrinsics.areEqual((Object) c, (Object) InvalidPassword.INSTANCE)) {
             return new C2816b(b.mo20546d());
         }
         return new C2817c(b.mo20546d());

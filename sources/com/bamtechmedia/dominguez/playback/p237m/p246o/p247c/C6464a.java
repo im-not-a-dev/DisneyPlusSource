@@ -5,7 +5,7 @@ import com.bamtechmedia.dominguez.playback.common.contentrating.C6285b;
 import com.bamtechmedia.dominguez.playback.common.contentrating.C6285b.C6289d;
 import com.bamtechmedia.dominguez.playback.common.contentrating.C6285b.C6290e;
 import com.bamtechmedia.dominguez.playback.p237m.C6336a;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Observable;
 
 /* renamed from: com.bamtechmedia.dominguez.playback.m.o.c.a */
@@ -31,7 +31,7 @@ public final class C6464a implements C5742a<C6336a> {
             }
         }
         Observable<C6336a> m = Observable.m38314m();
-        C12880j.m40222a((Object) m, "Observable.empty()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) m, "Observable.empty()");
         return m;
     }
 }

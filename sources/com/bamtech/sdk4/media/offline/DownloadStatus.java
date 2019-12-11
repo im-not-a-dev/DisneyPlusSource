@@ -2,7 +2,7 @@ package com.bamtech.sdk4.media.offline;
 
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
@@ -25,13 +25,13 @@ public abstract class DownloadStatus {
         public /* synthetic */ Cancelled(DateTime dateTime, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 1) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(dateTime);
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0014, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) getTimestamp(), (java.lang.Object) ((com.bamtech.sdk4.media.offline.DownloadStatus.Cancelled) r2).getTimestamp()) != false) goto L_0x0019;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) getTimestamp(), (java.lang.Object) ((com.bamtech.sdk4.media.offline.DownloadStatus.Cancelled) r2).getTimestamp()) != false) goto L_0x0019;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -43,7 +43,7 @@ public abstract class DownloadStatus {
                 com.bamtech.sdk4.media.offline.DownloadStatus$Cancelled r2 = (com.bamtech.sdk4.media.offline.DownloadStatus.Cancelled) r2
                 org.joda.time.DateTime r0 = r1.getTimestamp()
                 org.joda.time.DateTime r2 = r2.getTimestamp()
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0017
                 goto L_0x0019
             L_0x0017:
@@ -98,7 +98,7 @@ public abstract class DownloadStatus {
             float f2 = (i & 2) != 0 ? 0.0f : f;
             if ((i & 8) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(j2, f2, downloadError, dateTime);
         }
@@ -107,7 +107,7 @@ public abstract class DownloadStatus {
             if (this != obj) {
                 if (obj instanceof Failed) {
                     Failed failed = (Failed) obj;
-                    if (!(getBytesDownloaded() == failed.getBytesDownloaded()) || Float.compare(getPercentageComplete(), failed.getPercentageComplete()) != 0 || !C12880j.m40224a((Object) getError(), (Object) failed.getError()) || !C12880j.m40224a((Object) getTimestamp(), (Object) failed.getTimestamp())) {
+                    if (!(getBytesDownloaded() == failed.getBytesDownloaded()) || Float.compare(getPercentageComplete(), failed.getPercentageComplete()) != 0 || !Intrinsics.areEqual((Object) getError(), (Object) failed.getError()) || !Intrinsics.areEqual((Object) getTimestamp(), (Object) failed.getTimestamp())) {
                         return false;
                     }
                 }
@@ -178,7 +178,7 @@ public abstract class DownloadStatus {
         public /* synthetic */ Finished(long j, float f, DateTime dateTime, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 4) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(j, f, dateTime);
         }
@@ -187,7 +187,7 @@ public abstract class DownloadStatus {
             if (this != obj) {
                 if (obj instanceof Finished) {
                     Finished finished = (Finished) obj;
-                    if (!(getBytesDownloaded() == finished.getBytesDownloaded()) || Float.compare(getPercentageComplete(), finished.getPercentageComplete()) != 0 || !C12880j.m40224a((Object) getTimestamp(), (Object) finished.getTimestamp())) {
+                    if (!(getBytesDownloaded() == finished.getBytesDownloaded()) || Float.compare(getPercentageComplete(), finished.getPercentageComplete()) != 0 || !Intrinsics.areEqual((Object) getTimestamp(), (Object) finished.getTimestamp())) {
                         return false;
                     }
                 }
@@ -245,7 +245,7 @@ public abstract class DownloadStatus {
         public /* synthetic */ InProgress(long j, float f, DateTime dateTime, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 4) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(j, f, dateTime);
         }
@@ -254,7 +254,7 @@ public abstract class DownloadStatus {
             if (this != obj) {
                 if (obj instanceof InProgress) {
                     InProgress inProgress = (InProgress) obj;
-                    if (!(getBytesDownloaded() == inProgress.getBytesDownloaded()) || Float.compare(getPercentageComplete(), inProgress.getPercentageComplete()) != 0 || !C12880j.m40224a((Object) getTimestamp(), (Object) inProgress.getTimestamp())) {
+                    if (!(getBytesDownloaded() == inProgress.getBytesDownloaded()) || Float.compare(getPercentageComplete(), inProgress.getPercentageComplete()) != 0 || !Intrinsics.areEqual((Object) getTimestamp(), (Object) inProgress.getTimestamp())) {
                         return false;
                     }
                 }
@@ -318,7 +318,7 @@ public abstract class DownloadStatus {
             DownloadError downloadError2 = downloadError;
             if ((i & 8) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(j, f, downloadError2, dateTime);
         }
@@ -327,7 +327,7 @@ public abstract class DownloadStatus {
             if (this != obj) {
                 if (obj instanceof Interrupted) {
                     Interrupted interrupted = (Interrupted) obj;
-                    if (!(getBytesDownloaded() == interrupted.getBytesDownloaded()) || Float.compare(getPercentageComplete(), interrupted.getPercentageComplete()) != 0 || !C12880j.m40224a((Object) getError(), (Object) interrupted.getError()) || !C12880j.m40224a((Object) getTimestamp(), (Object) interrupted.getTimestamp())) {
+                    if (!(getBytesDownloaded() == interrupted.getBytesDownloaded()) || Float.compare(getPercentageComplete(), interrupted.getPercentageComplete()) != 0 || !Intrinsics.areEqual((Object) getError(), (Object) interrupted.getError()) || !Intrinsics.areEqual((Object) getTimestamp(), (Object) interrupted.getTimestamp())) {
                         return false;
                     }
                 }
@@ -406,7 +406,7 @@ public abstract class DownloadStatus {
         public /* synthetic */ MissingCache(DateTime dateTime, boolean z, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 1) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             if ((i & 2) != 0) {
                 z = true;
@@ -418,7 +418,7 @@ public abstract class DownloadStatus {
             if (this != obj) {
                 if (obj instanceof MissingCache) {
                     MissingCache missingCache = (MissingCache) obj;
-                    if (C12880j.m40224a((Object) getTimestamp(), (Object) missingCache.getTimestamp())) {
+                    if (Intrinsics.areEqual((Object) getTimestamp(), (Object) missingCache.getTimestamp())) {
                         if (getCanStart() == missingCache.getCanStart()) {
                             return true;
                         }
@@ -476,13 +476,13 @@ public abstract class DownloadStatus {
         public /* synthetic */ None(DateTime dateTime, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 1) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(dateTime);
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0014, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) getTimestamp(), (java.lang.Object) ((com.bamtech.sdk4.media.offline.DownloadStatus.None) r2).getTimestamp()) != false) goto L_0x0019;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) getTimestamp(), (java.lang.Object) ((com.bamtech.sdk4.media.offline.DownloadStatus.None) r2).getTimestamp()) != false) goto L_0x0019;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -494,7 +494,7 @@ public abstract class DownloadStatus {
                 com.bamtech.sdk4.media.offline.DownloadStatus$None r2 = (com.bamtech.sdk4.media.offline.DownloadStatus.None) r2
                 org.joda.time.DateTime r0 = r1.getTimestamp()
                 org.joda.time.DateTime r2 = r2.getTimestamp()
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0017
                 goto L_0x0019
             L_0x0017:
@@ -544,7 +544,7 @@ public abstract class DownloadStatus {
         public /* synthetic */ Paused(long j, float f, DateTime dateTime, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 4) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(j, f, dateTime);
         }
@@ -553,7 +553,7 @@ public abstract class DownloadStatus {
             if (this != obj) {
                 if (obj instanceof Paused) {
                     Paused paused = (Paused) obj;
-                    if (!(getBytesDownloaded() == paused.getBytesDownloaded()) || Float.compare(getPercentageComplete(), paused.getPercentageComplete()) != 0 || !C12880j.m40224a((Object) getTimestamp(), (Object) paused.getTimestamp())) {
+                    if (!(getBytesDownloaded() == paused.getBytesDownloaded()) || Float.compare(getPercentageComplete(), paused.getPercentageComplete()) != 0 || !Intrinsics.areEqual((Object) getTimestamp(), (Object) paused.getTimestamp())) {
                         return false;
                     }
                 }
@@ -616,7 +616,7 @@ public abstract class DownloadStatus {
         public /* synthetic */ Queued(long j, float f, DateTime dateTime, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 4) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(j, f, dateTime);
         }
@@ -625,7 +625,7 @@ public abstract class DownloadStatus {
             if (this != obj) {
                 if (obj instanceof Queued) {
                     Queued queued = (Queued) obj;
-                    if (!(getBytesDownloaded() == queued.getBytesDownloaded()) || Float.compare(getPercentageComplete(), queued.getPercentageComplete()) != 0 || !C12880j.m40224a((Object) getTimestamp(), (Object) queued.getTimestamp())) {
+                    if (!(getBytesDownloaded() == queued.getBytesDownloaded()) || Float.compare(getPercentageComplete(), queued.getPercentageComplete()) != 0 || !Intrinsics.areEqual((Object) getTimestamp(), (Object) queued.getTimestamp())) {
                         return false;
                     }
                 }
@@ -683,7 +683,7 @@ public abstract class DownloadStatus {
         public /* synthetic */ Requested(long j, float f, DateTime dateTime, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 4) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(j, f, dateTime);
         }
@@ -692,7 +692,7 @@ public abstract class DownloadStatus {
             if (this != obj) {
                 if (obj instanceof Requested) {
                     Requested requested = (Requested) obj;
-                    if (!(getBytesDownloaded() == requested.getBytesDownloaded()) || Float.compare(getPercentageComplete(), requested.getPercentageComplete()) != 0 || !C12880j.m40224a((Object) getTimestamp(), (Object) requested.getTimestamp())) {
+                    if (!(getBytesDownloaded() == requested.getBytesDownloaded()) || Float.compare(getPercentageComplete(), requested.getPercentageComplete()) != 0 || !Intrinsics.areEqual((Object) getTimestamp(), (Object) requested.getTimestamp())) {
                         return false;
                     }
                 }
@@ -752,13 +752,13 @@ public abstract class DownloadStatus {
         public /* synthetic */ Tombstoned(DateTime dateTime, int i, DefaultConstructorMarker defaultConstructorMarker) {
             if ((i & 1) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(dateTime);
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0014, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) getTimestamp(), (java.lang.Object) ((com.bamtech.sdk4.media.offline.DownloadStatus.Tombstoned) r2).getTimestamp()) != false) goto L_0x0019;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) getTimestamp(), (java.lang.Object) ((com.bamtech.sdk4.media.offline.DownloadStatus.Tombstoned) r2).getTimestamp()) != false) goto L_0x0019;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -770,7 +770,7 @@ public abstract class DownloadStatus {
                 com.bamtech.sdk4.media.offline.DownloadStatus$Tombstoned r2 = (com.bamtech.sdk4.media.offline.DownloadStatus.Tombstoned) r2
                 org.joda.time.DateTime r0 = r1.getTimestamp()
                 org.joda.time.DateTime r2 = r2.getTimestamp()
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0017
                 goto L_0x0019
             L_0x0017:
@@ -842,7 +842,7 @@ public abstract class DownloadStatus {
 
     public final String getName() {
         String simpleName = getClass().getSimpleName();
-        C12880j.m40222a((Object) simpleName, "this::class.java.simpleName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) simpleName, "this::class.java.simpleName");
         return simpleName;
     }
 

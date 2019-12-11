@@ -3,7 +3,7 @@ package kotlin.reflect.jvm;
 import kotlin.C12730d;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KFunction;
 import kotlin.reflect.jvm.internal.EmptyContainerForLocal;
 import kotlin.reflect.jvm.internal.KFunctionImpl;
@@ -37,7 +37,7 @@ public final class ReflectLambdaKt {
                 JvmMetadataVersion jvmMetadataVersion = new JvmMetadataVersion(mv, z);
                 Class cls = dVar.getClass();
                 TypeTable typeTable = function.getTypeTable();
-                C12880j.m40222a((Object) typeTable, "proto.typeTable");
+                Intrinsics.checkReturnedValueIsNotNull((Object) typeTable, "proto.typeTable");
                 SimpleFunctionDescriptor simpleFunctionDescriptor = (SimpleFunctionDescriptor) UtilKt.deserializeToDescriptor(cls, function, jvmNameResolver, new kotlin.reflect.jvm.internal.impl.metadata.deserialization.TypeTable(typeTable), jvmMetadataVersion, ReflectLambdaKt$reflect$descriptor$1.INSTANCE);
                 if (simpleFunctionDescriptor != null) {
                     return new KFunctionImpl(EmptyContainerForLocal.INSTANCE, simpleFunctionDescriptor);

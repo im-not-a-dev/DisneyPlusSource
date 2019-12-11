@@ -1,6 +1,6 @@
 package com.bamtech.core.networking.converters;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14258u;
 
 /* renamed from: com.bamtech.core.networking.converters.c */
@@ -11,7 +11,7 @@ public final class C1686c implements Converter {
 
     /* renamed from: a */
     public <T> T mo7495a(String str, Class<?> cls) {
-        if (C12880j.m40224a((Object) cls, (Object) String.class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) String.class)) {
             return str;
         }
         throw new IllegalStateException("StringConverter can only deserialize to String");
@@ -43,7 +43,7 @@ public final class C1686c implements Converter {
         /*
             r1 = this;
             java.lang.Class<java.lang.String> r0 = java.lang.String.class
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r3, r0)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r3, r0)
             r0 = 1
             if (r3 != r0) goto L_0x001d
             r3 = 0

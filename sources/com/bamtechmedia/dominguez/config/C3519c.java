@@ -88,7 +88,7 @@ public final class C3519c implements C3517b {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8815b, (java.lang.Object) r3.f8815b) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8815b, (java.lang.Object) r3.f8815b) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -100,11 +100,11 @@ public final class C3519c implements C3517b {
             com.bamtechmedia.dominguez.config.c r3 = (com.bamtechmedia.dominguez.config.C3519c) r3
             com.bamtechmedia.dominguez.config.e r0 = r2.f8814a
             com.bamtechmedia.dominguez.config.e r1 = r3.f8814a
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.bamtechmedia.dominguez.core.BuildInfo r0 = r2.f8815b
             com.bamtechmedia.dominguez.core.BuildInfo r3 = r3.f8815b
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:

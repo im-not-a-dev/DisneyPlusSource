@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p366s0.p374y;
 import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
 import com.google.android.exoplayer2.p393v0.C9545h0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.s0.y.b0 */
@@ -97,7 +97,7 @@ public final class C9014b0 implements C9029h0 {
                 } else {
                     if (!this.f19796e) {
                         this.f19793b.mo24689c(i5);
-                    } else if (C9554k0.m29385a(this.f19793b.f22333a, 0, i5, -1) != 0) {
+                    } else if (Util.m29385a(this.f19793b.f22333a, 0, i5, -1) != 0) {
                         this.f19797f = true;
                         return;
                     } else {

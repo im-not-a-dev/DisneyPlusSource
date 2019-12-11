@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.auth.p065q0.C2783b;
 import java.util.Collection;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p503n.p504a.C11793e;
 import p163g.p503n.p504a.C11844z;
 import p520io.reactivex.C11957k;
@@ -24,7 +24,7 @@ import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p551j.p552a.C12589b;
 import p551j.p552a.C12590c;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u001d\b\u0007\u0012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0002\u0010\u0007J\b\u0010\b\u001a\u00020\tH\u0016R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\n"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/account/AccountLoginAction;", "Lcom/bamtechmedia/dominguez/auth/login/LogInAction;", "sessionOnce", "Lio/reactivex/Single;", "Lcom/bamtech/sdk4/Session;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "(Lio/reactivex/Single;Lcom/bamtech/sdk4/account/AccountApi;)V", "onLogin", "Lio/reactivex/Completable;", "account_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.d.d */
@@ -109,7 +109,7 @@ public final class C5377d implements C2783b {
         /* renamed from: a */
         public final void accept(DefaultAccount defaultAccount) {
             C12590c b = C12589b.m39533b();
-            C12880j.m40222a((Object) defaultAccount, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) defaultAccount, "it");
             b.mo30890a("email", C5407l0.m18171a(defaultAccount));
         }
     }
@@ -126,7 +126,7 @@ public final class C5377d implements C2783b {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
     }
 
@@ -138,14 +138,14 @@ public final class C5377d implements C2783b {
     /* renamed from: a */
     public Completable mo11569a() {
         Maybe a = this.f12887a.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) C5378a.f12889c).mo30202a((C11952h<? super T>) C5379b.f12890c).mo30103a((Function<? super T, ? extends MaybeSource<? extends R>>) new C5380c<Object,Object>(this));
-        C12880j.m40222a((Object) a, "sessionOnce.flatMap { it…accountApi.getAccount() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "sessionOnce.flatMap { it…accountApi.getAccount() }");
         Completable i = Completable.m38170i();
-        C12880j.m40222a((Object) i, "Completable.never()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "Completable.never()");
         Object a2 = a.mo30112a((C11957k<T, ? extends R>) C11793e.m37931a((CompletableSource) i));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(scope))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(scope))");
         ((C11844z) a2).mo29929a(C5381d.f12892c, C5382e.f12893c);
         Completable h = Completable.m38169h();
-        C12880j.m40222a((Object) h, "Completable.complete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
         return h;
     }
 }

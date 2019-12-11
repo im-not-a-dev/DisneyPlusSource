@@ -8,7 +8,7 @@ import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
 
@@ -17,7 +17,7 @@ import java.io.IOException;
 public final class C9010a implements C8912g {
 
     /* renamed from: i */
-    private static final int f19781i = C9554k0.m29428b("RCC\u0001");
+    private static final int f19781i = Util.m29428b("RCC\u0001");
 
     /* renamed from: a */
     private final Format f19782a;

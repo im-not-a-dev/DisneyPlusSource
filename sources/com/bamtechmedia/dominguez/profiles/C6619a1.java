@@ -6,7 +6,7 @@ import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.functions.Function;
@@ -61,7 +61,7 @@ public final class C6619a1 implements C2783b {
     /* renamed from: a */
     public Completable mo11569a() {
         Completable a = this.f14934a.mo19383d().mo30033a(3, TimeUnit.SECONDS, C11934b.m38500b()).mo30037a((Function<? super Throwable, ? extends CompletableSource>) C6621b.f14935c);
-        C12880j.m40222a((Object) a, "repository.refresh()\n   …t\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "repository.refresh()\n   …t\n            }\n        }");
         return a;
     }
 }

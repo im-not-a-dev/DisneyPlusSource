@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement;
 import java.util.ArrayList;
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.load.java.AnnotationTypeQualifierResolver.QualifierApplicabilityType;
 import kotlin.reflect.jvm.internal.impl.load.java.lazy.ContextKt;
@@ -36,11 +36,11 @@ final class SignatureEnhancement$SignatureParts$toIndexed$1 extends C12881k impl
             if (typeProjection.isStarProjection()) {
                 ArrayList arrayList2 = this.$list;
                 KotlinType type = typeProjection.getType();
-                C12880j.m40222a((Object) type, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) type, str);
                 arrayList2.add(new TypeAndDefaultQualifiers(type, null));
             } else {
                 KotlinType type2 = typeProjection.getType();
-                C12880j.m40222a((Object) type2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) type2, str);
                 invoke(type2, copyWithNewDefaultTypeQualifiers);
             }
         }

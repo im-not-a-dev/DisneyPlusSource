@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.builtins;
 import java.util.List;
 import kotlin.C12897k;
 import kotlin.Lazy;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -59,18 +59,18 @@ public final class ReflectionTypes {
 
         public final KotlinType createKPropertyStarType(ModuleDescriptor moduleDescriptor) {
             ClassId classId = KotlinBuiltIns.FQ_NAMES.kProperty;
-            C12880j.m40222a((Object) classId, "KotlinBuiltIns.FQ_NAMES.kProperty");
+            Intrinsics.checkReturnedValueIsNotNull((Object) classId, "KotlinBuiltIns.FQ_NAMES.kProperty");
             ClassDescriptor findClassAcrossModuleDependencies = FindClassInModuleKt.findClassAcrossModuleDependencies(moduleDescriptor, classId);
             if (findClassAcrossModuleDependencies == null) {
                 return null;
             }
             Annotations empty = Annotations.Companion.getEMPTY();
             TypeConstructor typeConstructor = findClassAcrossModuleDependencies.getTypeConstructor();
-            C12880j.m40222a((Object) typeConstructor, "kPropertyClass.typeConstructor");
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "kPropertyClass.typeConstructor");
             List parameters = typeConstructor.getParameters();
-            C12880j.m40222a((Object) parameters, "kPropertyClass.typeConstructor.parameters");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "kPropertyClass.typeConstructor.parameters");
             Object k = C13199w.m40599k(parameters);
-            C12880j.m40222a(k, "kPropertyClass.typeConstructor.parameters.single()");
+            Intrinsics.checkReturnedValueIsNotNull(k, "kPropertyClass.typeConstructor.parameters.single()");
             return KotlinTypeFactory.simpleNotNullType(empty, findClassAcrossModuleDependencies, C13183n.m40498a(new StarProjectionImpl((TypeParameterDescriptor) k)));
         }
 
@@ -92,7 +92,7 @@ public final class ReflectionTypes {
     /* access modifiers changed from: private */
     public final ClassDescriptor find(String str, int i) {
         Name identifier = Name.identifier(str);
-        C12880j.m40222a((Object) identifier, "Name.identifier(className)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(className)");
         ClassifierDescriptor contributedClassifier = getKotlinReflectScope().getContributedClassifier(identifier, NoLookupLocation.FROM_REFLECTION);
         if (!(contributedClassifier instanceof ClassDescriptor)) {
             contributedClassifier = null;

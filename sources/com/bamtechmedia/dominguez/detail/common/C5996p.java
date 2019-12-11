@@ -54,7 +54,7 @@ public final class C5996p {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13837b, (java.lang.Object) r3.f13837b) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13837b, (java.lang.Object) r3.f13837b) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -66,11 +66,11 @@ public final class C5996p {
             com.bamtechmedia.dominguez.detail.common.p r3 = (com.bamtechmedia.dominguez.detail.common.C5996p) r3
             com.bamtechmedia.dominguez.config.e r0 = r2.f13836a
             com.bamtechmedia.dominguez.config.e r1 = r3.f13836a
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.bamtech.sdk4.content.SearchOverrides r0 = r2.f13837b
             com.bamtech.sdk4.content.SearchOverrides r3 = r3.f13837b
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:

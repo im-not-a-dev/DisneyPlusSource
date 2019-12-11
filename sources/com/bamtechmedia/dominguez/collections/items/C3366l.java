@@ -15,7 +15,7 @@ import com.bamtechmedia.dominguez.p331ui.pagingbehaviour.C8092b;
 import com.bamtechmedia.dominguez.p331ui.pagingbehaviour.pageindicator.PageIndicatorView;
 import com.google.common.base.Optional;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5363f;
 import p163g.p201e.p202a.C5364g;
 import p163g.p509o.p510a.C11853e;
@@ -120,7 +120,7 @@ public final class C3366l extends C11866a {
 
         public final void onClick(View view) {
             View view2 = this.f8504U.itemView;
-            C12880j.m40222a((Object) view2, "viewHolder.itemView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view2, "viewHolder.itemView");
             PageIndicatorView carouselPositionIndicator = ((FullBleedItemView) view2.findViewById(C5363f.full_bleed_item)).getCarouselPositionIndicator();
             if (carouselPositionIndicator != null) {
                 this.f8505c.f8493X.mo12436a((C3626b) this.f8505c.f8491V.get(carouselPositionIndicator.getCurrentPosition()));
@@ -140,7 +140,7 @@ public final class C3366l extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:18:0x0056, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8496a0, (java.lang.Object) r3.f8496a0) != false) goto L_0x005b;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8496a0, (java.lang.Object) r3.f8496a0) != false) goto L_0x005b;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -152,35 +152,35 @@ public final class C3366l extends C11866a {
             com.bamtechmedia.dominguez.collections.items.l r3 = (com.bamtechmedia.dominguez.collections.items.C3366l) r3
             java.lang.String r0 = r2.f8497c
             java.lang.String r1 = r3.f8497c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.collections.o0.j r0 = r2.f8490U
             com.bamtechmedia.dominguez.collections.o0.j r1 = r3.f8490U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.core.content.paging.c<com.bamtechmedia.dominguez.core.content.assets.b> r0 = r2.f8491V
             com.bamtechmedia.dominguez.core.content.paging.c<com.bamtechmedia.dominguez.core.content.assets.b> r1 = r3.f8491V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.google.common.base.Optional<com.bamtechmedia.dominguez.ui.fullbleed.FullBleedItemView$a> r0 = r2.f8492W
             com.google.common.base.Optional<com.bamtechmedia.dominguez.ui.fullbleed.FullBleedItemView$a> r1 = r3.f8492W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.collections.items.c r0 = r2.f8493X
             com.bamtechmedia.dominguez.collections.items.c r1 = r3.f8493X
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.collections.f0 r0 = r2.f8494Y
             com.bamtechmedia.dominguez.collections.f0 r1 = r3.f8494Y
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.collections.o0.g r0 = r2.f8495Z
             com.bamtechmedia.dominguez.collections.o0.g r1 = r3.f8495Z
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.google.common.base.Optional<com.bamtechmedia.dominguez.collections.n0.b> r0 = r2.f8496a0
             com.google.common.base.Optional<com.bamtechmedia.dominguez.collections.n0.b> r3 = r3.f8496a0
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0059
             goto L_0x005b
         L_0x0059:
@@ -221,7 +221,7 @@ public final class C3366l extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof C3366l) && C12880j.m40224a((Object) ((C3366l) eVar).f8497c, (Object) this.f8497c);
+        return (eVar instanceof C3366l) && Intrinsics.areEqual((Object) ((C3366l) eVar).f8497c, (Object) this.f8497c);
     }
 
     public String toString() {
@@ -253,7 +253,7 @@ public final class C3366l extends C11866a {
 
     public void bind(C11867b bVar, int i) {
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "itemView");
         ((FullBleedItemView) view.findViewById(C5363f.full_bleed_item)).mo21066a(this.f8491V, this.f8490U.mo12621b(), (C8077a) this.f8492W.mo27107c());
         m11558a(bVar);
     }
@@ -261,7 +261,7 @@ public final class C3366l extends C11866a {
     public C11867b createViewHolder(View view) {
         C11867b createViewHolder = super.createViewHolder(view);
         FullBleedItemView fullBleedItemView = (FullBleedItemView) createViewHolder.mo20994a().findViewById(C5363f.full_bleed_item);
-        C12880j.m40222a((Object) fullBleedItemView, "it.full_bleed_item");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fullBleedItemView, "it.full_bleed_item");
         m11557a(fullBleedItemView);
         return createViewHolder;
     }

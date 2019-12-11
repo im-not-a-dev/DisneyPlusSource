@@ -10,12 +10,12 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0000\u0018\u00002\u00020\u0001B\u0017\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u001f\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\n2\b\u0010\u000b\u001a\u0004\u0018\u00010\fH\u0001¢\u0006\u0002\b\rJ\u0012\u0010\u000e\u001a\u00020\b2\b\u0010\u000b\u001a\u0004\u0018\u00010\fH\u0002J\u001a\u0010\u000f\u001a\u00020\b2\u0006\u0010\u0010\u001a\u00020\u00112\b\u0010\u000b\u001a\u0004\u0018\u00010\fH\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0012"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/accessibility/PlayPauseAccessibility;", "", "context", "Landroid/content/Context;", "stringDictionary", "Lcom/bamtechmedia/dominguez/config/StringDictionary;", "(Landroid/content/Context;Lcom/bamtechmedia/dominguez/config/StringDictionary;)V", "prepareContentDescription", "", "engine", "Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "playPauseButton", "Landroid/widget/ImageView;", "prepareContentDescription$playback_release", "setInitialState", "setPlayPauseText", "isPlaying", "", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.m.i.a */
@@ -48,7 +48,7 @@ public final class C6374a {
             ImageView imageView = this.f14486U;
             if (imageView != null) {
                 C6374a aVar = this.f14487c;
-                C12880j.m40222a((Object) bool, "playing");
+                Intrinsics.checkReturnedValueIsNotNull((Object) bool, "playing");
                 aVar.m19990a(bool.booleanValue(), imageView);
             }
         }
@@ -67,7 +67,7 @@ public final class C6374a {
 
         /* renamed from: a */
         public final void mo19019a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -75,7 +75,7 @@ public final class C6374a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -143,7 +143,7 @@ public final class C6374a {
 
         /* renamed from: a */
         public final void mo19022a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -151,7 +151,7 @@ public final class C6374a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {

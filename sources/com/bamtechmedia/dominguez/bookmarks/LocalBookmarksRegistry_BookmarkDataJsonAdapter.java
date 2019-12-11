@@ -4,7 +4,7 @@ import com.bamtech.sdk4.internal.media.StreamSampleTelemetryData;
 import com.bamtechmedia.dominguez.bookmarks.LocalBookmarksRegistry.BookmarkData;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -25,16 +25,16 @@ public final class LocalBookmarksRegistry_BookmarkDataJsonAdapter extends C11725
         String str2 = "seriesId";
         String str3 = "mediaId";
         C11739b a = C11739b.m37729a(str3, "contentId", str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"m… \"seriesId\", \"timestamp\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"m… \"seriesId\", \"timestamp\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str3);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ns.emptySet(), \"mediaId\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ns.emptySet(), \"mediaId\")");
         this.stringAdapter = a2;
         C11725h<String> a3 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a3, "moshi.adapter<String?>(S…s.emptySet(), \"seriesId\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<String?>(S…s.emptySet(), \"seriesId\")");
         this.nullableStringAdapter = a3;
         C11725h<Long> a4 = vVar.mo29869a((Type) Long.TYPE, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a4, "moshi.adapter<Long>(Long….emptySet(), \"timestamp\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<Long>(Long….emptySet(), \"timestamp\")");
         this.longAdapter = a4;
     }
 

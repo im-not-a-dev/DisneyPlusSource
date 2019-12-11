@@ -10,7 +10,7 @@ import com.bamtech.sdk4.token.AccessContext;
 import java.io.Serializable;
 import java.util.UUID;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -29,7 +29,7 @@ public abstract class InternalSessionState {
 
         public AuthenticationExpired(AccessContext accessContext, ServiceException serviceException) {
             DateTime now = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
             super(accessContext, 0, now, null);
             this.exception = serviceException;
         }
@@ -42,7 +42,7 @@ public abstract class InternalSessionState {
                 return false;
             }
             AuthenticationExpired authenticationExpired = (AuthenticationExpired) obj;
-            return !(C12880j.m40224a((Object) getAccessContext(), (Object) authenticationExpired.getAccessContext()) ^ true) && !(C12880j.m40224a((Object) getException(), (Object) authenticationExpired.getException()) ^ true);
+            return !(Intrinsics.areEqual((Object) getAccessContext(), (Object) authenticationExpired.getAccessContext()) ^ true) && !(Intrinsics.areEqual((Object) getException(), (Object) authenticationExpired.getException()) ^ true);
         }
 
         public ServiceException getException() {
@@ -69,10 +69,10 @@ public abstract class InternalSessionState {
 
         public AuthenticationExpired() {
             DateTime now = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
             AccessContext accessContext = new AccessContext("", "", now, null, null, 24, null);
             UUID randomUUID = UUID.randomUUID();
-            C12880j.m40222a((Object) randomUUID, "UUID.randomUUID()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) randomUUID, "UUID.randomUUID()");
             UnauthorizedException unauthorizedException = new UnauthorizedException(randomUUID, null, null, 6, null);
             this(accessContext, unauthorizedException);
         }
@@ -94,7 +94,7 @@ public abstract class InternalSessionState {
             }
             if ((i2 & 4) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(serviceException, i, dateTime);
         }
@@ -103,7 +103,7 @@ public abstract class InternalSessionState {
             if (this == obj) {
                 return true;
             }
-            return (obj instanceof Failed) && !(C12880j.m40224a((Object) getException(), (Object) ((Failed) obj).getException()) ^ true);
+            return (obj instanceof Failed) && !(Intrinsics.areEqual((Object) getException(), (Object) ((Failed) obj).getException()) ^ true);
         }
 
         public ServiceException getException() {
@@ -129,10 +129,10 @@ public abstract class InternalSessionState {
 
         public Failed() {
             UUID randomUUID = UUID.randomUUID();
-            C12880j.m40222a((Object) randomUUID, "UUID.randomUUID()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) randomUUID, "UUID.randomUUID()");
             ServiceRequestException serviceRequestException = new ServiceRequestException(randomUUID, null, null, 6, null);
             DateTime now = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
             this(serviceRequestException, 0, now);
         }
     }
@@ -202,7 +202,7 @@ public abstract class InternalSessionState {
             }
             if ((i2 & 4) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(accessContext, i, dateTime);
         }
@@ -211,7 +211,7 @@ public abstract class InternalSessionState {
             if (this == obj) {
                 return true;
             }
-            return (obj instanceof LoggedIn) && !(C12880j.m40224a((Object) ((LoggedIn) obj).getAccessContext(), (Object) getAccessContext()) ^ true);
+            return (obj instanceof LoggedIn) && !(Intrinsics.areEqual((Object) ((LoggedIn) obj).getAccessContext(), (Object) getAccessContext()) ^ true);
         }
 
         public int hashCode() {
@@ -229,10 +229,10 @@ public abstract class InternalSessionState {
         public LoggedIn() {
             DateTime now = DateTime.now(DateTimeZone.UTC);
             String str = "DateTime.now(DateTimeZone.UTC)";
-            C12880j.m40222a((Object) now, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, str);
             AccessContext accessContext = new AccessContext("", "", now, null, null, 24, null);
             DateTime now2 = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) now2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) now2, str);
             this(accessContext, 0, now2);
         }
     }
@@ -246,7 +246,7 @@ public abstract class InternalSessionState {
             }
             if ((i2 & 4) != 0) {
                 dateTime = DateTime.now(DateTimeZone.UTC);
-                C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
             }
             this(accessContext, i, dateTime);
         }
@@ -255,7 +255,7 @@ public abstract class InternalSessionState {
             if (this == obj) {
                 return true;
             }
-            return (obj instanceof LoggedOut) && !(C12880j.m40224a((Object) ((LoggedOut) obj).getAccessContext(), (Object) getAccessContext()) ^ true);
+            return (obj instanceof LoggedOut) && !(Intrinsics.areEqual((Object) ((LoggedOut) obj).getAccessContext(), (Object) getAccessContext()) ^ true);
         }
 
         public int hashCode() {
@@ -273,10 +273,10 @@ public abstract class InternalSessionState {
         public LoggedOut() {
             DateTime now = DateTime.now(DateTimeZone.UTC);
             String str = "DateTime.now(DateTimeZone.UTC)";
-            C12880j.m40222a((Object) now, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, str);
             AccessContext accessContext = new AccessContext("", "", now, null, null, 24, null);
             DateTime now2 = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) now2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) now2, str);
             this(accessContext, 0, now2);
         }
     }
@@ -302,7 +302,7 @@ public abstract class InternalSessionState {
     public final void recordAttempt() {
         this._attempts++;
         DateTime now = DateTime.now(DateTimeZone.UTC);
-        C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
         this._lastFailure = now;
     }
 
@@ -312,7 +312,7 @@ public abstract class InternalSessionState {
 
     public boolean updateDelayed(ServiceTransaction serviceTransaction, RetryPolicy retryPolicy) {
         DateTime plusSeconds = getLastFailure().plusSeconds(retryPolicy != null ? retryPolicy.getDelay(getAttempts()) : 0);
-        C12880j.m40222a((Object) plusSeconds, "lastFailure.plusSeconds(delay)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) plusSeconds, "lastFailure.plusSeconds(delay)");
         if (getAttempts() <= 0 || !plusSeconds.isAfterNow()) {
             return false;
         }
@@ -332,7 +332,7 @@ public abstract class InternalSessionState {
         }
         if ((i2 & 4) != 0) {
             dateTime = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "DateTime.now(DateTimeZone.UTC)");
         }
         this(accessContext2, i, dateTime);
     }

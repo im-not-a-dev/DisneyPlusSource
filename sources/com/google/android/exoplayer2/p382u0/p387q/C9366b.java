@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p382u0.p387q;
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9325e;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Collections;
 import java.util.List;
 
@@ -24,7 +24,7 @@ final class C9366b implements C9325e {
 
     /* renamed from: a */
     public int mo24145a(long j) {
-        int a = C9554k0.m29386a(this.f21548U, j, false, false);
+        int a = Util.m29386a(this.f21548U, j, false, false);
         if (a < this.f21548U.length) {
             return a;
         }
@@ -33,7 +33,7 @@ final class C9366b implements C9325e {
 
     /* renamed from: b */
     public List<C9322b> mo24147b(long j) {
-        int b = C9554k0.m29429b(this.f21548U, j, true, false);
+        int b = Util.m29429b(this.f21548U, j, true, false);
         if (b != -1) {
             C9322b[] bVarArr = this.f21549c;
             if (bVarArr[b] != C9322b.f21345h0) {

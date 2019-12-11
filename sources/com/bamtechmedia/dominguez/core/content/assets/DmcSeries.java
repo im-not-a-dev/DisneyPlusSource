@@ -284,7 +284,7 @@ public final class DmcSeries extends C3633g implements C3791v {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:36:0x00d0, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f9069r0, (java.lang.Object) r3.f9069r0) != false) goto L_0x00d5;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f9069r0, (java.lang.Object) r3.f9069r0) != false) goto L_0x00d5;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -296,71 +296,71 @@ public final class DmcSeries extends C3633g implements C3791v {
             com.bamtechmedia.dominguez.core.content.assets.DmcSeries r3 = (com.bamtechmedia.dominguez.core.content.assets.DmcSeries) r3
             java.lang.String r0 = r2.mo13025D()
             java.lang.String r1 = r3.mo13025D()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             com.bamtechmedia.dominguez.core.content.assets.DmcAssetType r0 = r2.mo13038Y()
             com.bamtechmedia.dominguez.core.content.assets.DmcAssetType r1 = r3.mo13038Y()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.lang.String r0 = r2.mo13024C()
             java.lang.String r1 = r3.mo13024C()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r0 = r2.f9056e0
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r1 = r3.f9056e0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.util.List r0 = r2.mo12847a()
             java.util.List r1 = r3.mo12847a()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             com.bamtechmedia.dominguez.core.content.assets.MediaRights r0 = r2.f9058g0
             com.bamtechmedia.dominguez.core.content.assets.MediaRights r1 = r3.f9058g0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.util.List r0 = r2.mo12896c()
             java.util.List r1 = r3.mo12896c()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.util.List r0 = r2.mo13047z()
             java.util.List r1 = r3.mo13047z()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.Release> r0 = r2.f9061j0
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.Release> r1 = r3.f9061j0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.Rating> r0 = r2.f9062k0
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.Rating> r1 = r3.f9062k0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.util.List<java.lang.String> r0 = r2.f9063l0
             java.util.List<java.lang.String> r1 = r3.f9063l0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             com.bamtechmedia.dominguez.core.content.assets.Availability r0 = r2.mo13029P()
             com.bamtechmedia.dominguez.core.content.assets.Availability r1 = r3.mo13029P()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.lang.String r0 = r2.f9065n0
             java.lang.String r1 = r3.f9065n0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.lang.Integer r0 = r2.f9066o0
             java.lang.Integer r1 = r3.f9066o0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.lang.Integer r0 = r2.f9067p0
             java.lang.Integer r1 = r3.f9067p0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.util.List r0 = r2.mo12839H()
             java.util.List r1 = r3.mo12839H()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00d3
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.DmcTag> r0 = r2.f9069r0
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.DmcTag> r3 = r3.f9069r0
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x00d3
             goto L_0x00d5
         L_0x00d3:

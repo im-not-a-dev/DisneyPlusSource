@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 import java.util.Iterator;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13162e0;
 import p096e.p121h.p134r.C4111c;
 
@@ -43,8 +43,8 @@ public final class WindowInsetsFrameLayout extends FrameLayout {
             requestLayout();
         }
         WindowInsets consumeSystemWindowInsets = windowInsets.consumeSystemWindowInsets();
-        C12880j.m40222a((Object) consumeSystemWindowInsets, "it.consumeSystemWindowInsets()");
-        C12880j.m40222a((Object) consumeSystemWindowInsets, "insets.let {\n        if …ystemWindowInsets()\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) consumeSystemWindowInsets, "it.consumeSystemWindowInsets()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) consumeSystemWindowInsets, "insets.let {\n        if …ystemWindowInsets()\n    }");
         return consumeSystemWindowInsets;
     }
 
@@ -57,7 +57,7 @@ public final class WindowInsetsFrameLayout extends FrameLayout {
                 Iterator it = C12762h.m39920d(0, getChildCount()).iterator();
                 while (it.hasNext()) {
                     View childAt = getChildAt(((C13162e0) it).mo31079b());
-                    C12880j.m40222a((Object) childAt, "child");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) childAt, "child");
                     if (childAt.getVisibility() != 8) {
                         childAt.dispatchApplyWindowInsets(windowInsets);
                     }

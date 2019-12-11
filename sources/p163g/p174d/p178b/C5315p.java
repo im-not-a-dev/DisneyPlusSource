@@ -63,7 +63,7 @@ import p163g.p174d.p178b.p185g0.p189y5.C5232d;
 import p163g.p174d.p178b.p185g0.p189y5.C5234e;
 import p163g.p174d.p178b.p185g0.p189y5.C5252g;
 import p163g.p174d.p178b.p185g0.p189y5.C5253h;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.b.p */
 /* compiled from: PlayerViewController */
@@ -97,7 +97,7 @@ public class C5315p {
         if (context instanceof Activity) {
             m18018a((Activity) context);
         } else if (!(context instanceof Service)) {
-            C14100a.m44523a(new Throwable("Context provided to PlayerViewController was not an Activity.Activity context is required for certain controls"));
+            Timber.m44523a(new Throwable("Context provided to PlayerViewController was not an Activity.Activity context is required for certain controls"));
         }
         m18019a(context);
     }

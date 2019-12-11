@@ -4,7 +4,7 @@ package com.appboy.p025o;
 public enum C1498f {
     ANDROID_VERSION("os_version"),
     CARRIER("carrier"),
-    MODEL("model"),
+   MODEL("model"),
     RESOLUTION("resolution"),
     LOCALE("locale"),
     TIMEZONE("time_zone"),

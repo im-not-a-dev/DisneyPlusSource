@@ -11,7 +11,7 @@ import java.util.Properties;
 public abstract class C13445m implements C13433c {
 
     /* renamed from: a */
-    protected C13432b f29951a;
+    protected CommandLine f29951a;
 
     /* renamed from: b */
     private C13443k f29952b;
@@ -43,7 +43,7 @@ public abstract class C13445m implements C13433c {
     }
 
     /* renamed from: a */
-    public C13432b mo34648a(C13443k kVar, String[] strArr, boolean z) throws C13444l {
+    public CommandLine mo34648a(C13443k kVar, String[] strArr, boolean z) throws C13444l {
         return mo34693a(kVar, strArr, null, z);
     }
 
@@ -54,7 +54,7 @@ public abstract class C13445m implements C13433c {
     /* JADX WARNING: Removed duplicated region for block: B:37:0x0037 A[SYNTHETIC] */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public p602m.p603a.p604a.p605a.C13432b mo34693a(p602m.p603a.p604a.p605a.C13443k r6, java.lang.String[] r7, java.util.Properties r8, boolean r9) throws p602m.p603a.p604a.p605a.C13444l {
+    public p602m.p603a.p604a.p605a.CommandLine mo34693a(p602m.p603a.p604a.p605a.C13443k r6, java.lang.String[] r7, java.util.Properties r8, boolean r9) throws p602m.p603a.p604a.p605a.C13444l {
         /*
             r5 = this;
             java.util.List r0 = r6.mo34689b()

@@ -9,14 +9,14 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p174d.p178b.C5280i;
 import p163g.p174d.p178b.C5300m;
 import p163g.p174d.p178b.C5326w;
 import p520io.reactivex.functions.C11945a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u00102\u00020\u0001:\u0001\u0010B\u001d\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0010\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\fH\u0002J\u0010\u0010\r\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\u000fH\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0011"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/ScreenSaverBlocker;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "activity", "Landroidx/fragment/app/FragmentActivity;", "player", "Lcom/bamtech/player/VideoPlayer;", "events", "Lcom/bamtech/player/PlayerEvents;", "(Landroidx/fragment/app/FragmentActivity;Lcom/bamtech/player/VideoPlayer;Lcom/bamtech/player/PlayerEvents;)V", "onPlaybackChanged", "", "playing", "", "onStart", "owner", "Landroidx/lifecycle/LifecycleOwner;", "Companion", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: ScreenSaverBlocker.kt */
@@ -44,9 +44,9 @@ public final class ScreenSaverBlocker implements C0710d {
         public final void mo18846a(C0532d dVar, C5280i iVar) {
             C0715i lifecycle = dVar.getLifecycle();
             C5326w d = iVar.mo7539d();
-            C12880j.m40222a((Object) d, "engine.videoPlayer");
+            Intrinsics.checkReturnedValueIsNotNull((Object) d, "engine.videoPlayer");
             C5300m b = iVar.mo7537b();
-            C12880j.m40222a((Object) b, "engine.events");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "engine.events");
             lifecycle.mo4134a(new ScreenSaverBlocker(dVar, d, b));
         }
 
@@ -114,7 +114,7 @@ public final class ScreenSaverBlocker implements C0710d {
 
         /* renamed from: a */
         public final void mo18848a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -122,7 +122,7 @@ public final class ScreenSaverBlocker implements C0710d {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -188,15 +188,15 @@ public final class ScreenSaverBlocker implements C0710d {
             r1.<init>(r3)
             io.reactivex.Observable r0 = r0.mo30180c(r1)
             java.lang.String r1 = "events.onPlaybackChanged…nPlaybackChanged(false) }"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             androidx.lifecycle.i$a r1 = androidx.lifecycle.C0715i.C0716a.ON_STOP
             com.uber.autodispose.android.lifecycle.b r4 = com.uber.autodispose.android.lifecycle.C10541b.m33255a(r4, r1)
             java.lang.String r1 = "AndroidLifecycleScopePro…om(\n    this, untilEvent)"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r1)
             g.n.a.h r4 = p163g.p503n.p504a.C11793e.m37930a(r4)
             java.lang.Object r4 = r0.mo30161a(r4)
             java.lang.String r0 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
             g.n.a.a0 r4 = (p163g.p503n.p504a.C11786a0) r4
             com.bamtechmedia.dominguez.playback.ScreenSaverBlocker$c r0 = new com.bamtechmedia.dominguez.playback.ScreenSaverBlocker$c
             r0.<init>(r3)

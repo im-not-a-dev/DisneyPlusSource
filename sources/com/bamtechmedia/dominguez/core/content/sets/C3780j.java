@@ -12,7 +12,7 @@ import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p113e.C3934g;
 import p163g.p503n.p504a.C11793e;
 import p163g.p503n.p504a.C11842x;
@@ -60,7 +60,7 @@ public final class C3780j extends C5733a {
 
         /* renamed from: a */
         public final void mo13691a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -122,7 +122,7 @@ public final class C3780j extends C5733a {
         /* renamed from: a */
         public final C3780j mo13692a() {
             C0741y a = C5856o0.m18894a(this.f9425a, C3780j.class, (Provider<T>) new C3785a<T>(this));
-            C12880j.m40222a((Object) a, "ViewModelUtils.getViewMo…:class.java) { create() }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "ViewModelUtils.getViewMo…:class.java) { create() }");
             return (C3780j) a;
         }
     }
@@ -134,7 +134,7 @@ public final class C3780j extends C5733a {
     public C3780j(C6627c1 c1Var, C3419l lVar) {
         this.f9422b = c1Var;
         Object a = lVar.mo12596b().mo30079a((C11932e<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11842x) a).mo29927a(new C3781a(this), C3782b.f9424c);
     }
 

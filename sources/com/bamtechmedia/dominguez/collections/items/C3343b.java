@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.collections.items;
 
 import com.bamtechmedia.dominguez.core.content.sets.ContentSetType;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.collections.items.b */
 /* compiled from: CollectionAnalyticsValues.kt */
@@ -71,7 +71,7 @@ public final class C3343b {
         if (this != obj) {
             if (obj instanceof C3343b) {
                 C3343b bVar = (C3343b) obj;
-                if (!(this.f8409a == bVar.f8409a) || !C12880j.m40224a((Object) this.f8410b, (Object) bVar.f8410b) || !C12880j.m40224a((Object) this.f8411c, (Object) bVar.f8411c) || !C12880j.m40224a((Object) this.f8412d, (Object) bVar.f8412d) || !C12880j.m40224a((Object) this.f8413e, (Object) bVar.f8413e) || !C12880j.m40224a((Object) this.f8414f, (Object) bVar.f8414f) || !C12880j.m40224a((Object) this.f8415g, (Object) bVar.f8415g)) {
+                if (!(this.f8409a == bVar.f8409a) || !Intrinsics.areEqual((Object) this.f8410b, (Object) bVar.f8410b) || !Intrinsics.areEqual((Object) this.f8411c, (Object) bVar.f8411c) || !Intrinsics.areEqual((Object) this.f8412d, (Object) bVar.f8412d) || !Intrinsics.areEqual((Object) this.f8413e, (Object) bVar.f8413e) || !Intrinsics.areEqual((Object) this.f8414f, (Object) bVar.f8414f) || !Intrinsics.areEqual((Object) this.f8415g, (Object) bVar.f8415g)) {
                     return false;
                 }
             }

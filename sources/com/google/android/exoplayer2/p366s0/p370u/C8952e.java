@@ -16,7 +16,7 @@ import com.google.android.exoplayer2.p366s0.C8918m;
 import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.EOFException;
 import java.io.IOException;
@@ -30,13 +30,13 @@ public final class C8952e implements C8912g {
     private static final C8771a f19359p = C8949b.f19355a;
 
     /* renamed from: q */
-    private static final int f19360q = C9554k0.m29428b("Xing");
+    private static final int f19360q = Util.m29428b("Xing");
 
     /* renamed from: r */
-    private static final int f19361r = C9554k0.m29428b("Info");
+    private static final int f19361r = Util.m29428b("Info");
 
     /* renamed from: s */
-    private static final int f19362s = C9554k0.m29428b("VBRI");
+    private static final int f19362s = Util.m29428b("VBRI");
 
     /* renamed from: a */
     private final int f19363a;

@@ -8,7 +8,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p201e.p203b.p319v.C7873f;
@@ -19,7 +19,7 @@ import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001\u0013B\u0015\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0002\u0010\u0007J\u0006\u0010\r\u001a\u00020\u000eJ\u0012\u0010\u000f\u001a\u0004\u0018\u00010\u00102\u0006\u0010\u0011\u001a\u00020\u0012H\u0002R\u001a\u0010\b\u001a\u00020\tX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\b\u0010\n\"\u0004\b\u000b\u0010\fR\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0014"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/welcome/WelcomeViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/welcome/WelcomeViewModel$State;", "paywallRepository", "Lcom/bamtechmedia/dominguez/paywall/PaywallRepository;", "paywallConfig", "Lcom/bamtechmedia/dominguez/paywall/PaywallConfig;", "(Lcom/bamtechmedia/dominguez/paywall/PaywallRepository;Lcom/bamtechmedia/dominguez/paywall/PaywallConfig;)V", "isAlreadyAnimated", "", "()Z", "setAlreadyAnimated", "(Z)V", "loadPaywall", "", "monthlyProduct", "Lcom/bamtechmedia/dominguez/paywall/model/PaywallProduct;", "paywall", "Lcom/bamtechmedia/dominguez/paywall/model/DmgzPaywall;", "State", "welcome_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.h0.n */
@@ -73,7 +73,7 @@ public final class C10640n extends C5741g<C10641a> {
             if (this != obj) {
                 if (obj instanceof C10641a) {
                     C10641a aVar = (C10641a) obj;
-                    if (C12880j.m40224a((Object) this.f25109a, (Object) aVar.f25109a) && C12880j.m40224a((Object) this.f25110b, (Object) aVar.f25110b)) {
+                    if (Intrinsics.areEqual((Object) this.f25109a, (Object) aVar.f25109a) && Intrinsics.areEqual((Object) this.f25110b, (Object) aVar.f25110b)) {
                         if (this.f25111c == aVar.f25111c) {
                             return true;
                         }
@@ -151,7 +151,7 @@ public final class C10640n extends C5741g<C10641a> {
         /* renamed from: a */
         public final SingleSource<? extends C10641a> apply(Throwable th) {
             if (th instanceof C6261a) {
-                return Single.m38399b(new C10641a(null, null, C12880j.m40224a((Object) ((C6261a) th).mo18845b(), (Object) C6253b.f14292a)));
+                return Single.m38399b(new C10641a(null, null, Intrinsics.areEqual((Object) ((C6261a) th).mo18845b(), (Object) C6253b.f14292a)));
             }
             return Single.m38395a(th);
         }
@@ -171,7 +171,7 @@ public final class C10640n extends C5741g<C10641a> {
         /* renamed from: a */
         public final void accept(C10641a aVar) {
             C10640n nVar = this.f25114c;
-            C12880j.m40222a((Object) aVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "it");
             nVar.createState(aVar);
         }
     }
@@ -189,7 +189,7 @@ public final class C10640n extends C5741g<C10641a> {
 
         /* renamed from: a */
         public final void mo27511a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -197,7 +197,7 @@ public final class C10640n extends C5741g<C10641a> {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -248,12 +248,12 @@ public final class C10640n extends C5741g<C10641a> {
             g.e.b.h0.n$c r1 = p163g.p201e.p203b.p411h0.C10640n.C10643c.f25113c
             io.reactivex.Single r0 = r0.mo30235h(r1)
             java.lang.String r1 = "paywallRepository.paywal…e.error(it)\n            }"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.c0 r1 = r4.getViewModelScope()
             g.n.a.h r1 = p163g.p503n.p504a.C11793e.m37930a(r1)
             java.lang.Object r0 = r0.mo30215a(r1)
             java.lang.String r1 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.d0 r0 = (p163g.p503n.p504a.C11792d0) r0
             g.e.b.h0.n$d r1 = new g.e.b.h0.n$d
             r1.<init>(r4)
@@ -282,7 +282,7 @@ public final class C10640n extends C5741g<C10641a> {
                 break;
             }
             obj = it.next();
-            if (C12880j.m40224a((Object) this.f25108c.mo20797b(((C7823d) obj).mo20732d()), (Object) "month")) {
+            if (Intrinsics.areEqual((Object) this.f25108c.mo20797b(((C7823d) obj).mo20732d()), (Object) "month")) {
                 break;
             }
         }

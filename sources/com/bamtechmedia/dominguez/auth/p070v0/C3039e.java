@@ -25,7 +25,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p122j.C4025a;
 import p163g.p201e.p203b.p408f0.C10608b;
@@ -107,9 +107,9 @@ public final class C3039e extends C11866a {
         public final void onClick(View view) {
             AppCompatCheckBox appCompatCheckBox = (AppCompatCheckBox) this.f7912c.mo20994a().findViewById(C2716h0.optInCheckbox);
             String str = "viewHolder.optInCheckbox";
-            C12880j.m40222a((Object) appCompatCheckBox, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) appCompatCheckBox, str);
             AppCompatCheckBox appCompatCheckBox2 = (AppCompatCheckBox) this.f7912c.mo20994a().findViewById(C2716h0.optInCheckbox);
-            C12880j.m40222a((Object) appCompatCheckBox2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) appCompatCheckBox2, str);
             appCompatCheckBox.setChecked(!appCompatCheckBox2.isChecked());
         }
     }
@@ -131,7 +131,7 @@ public final class C3039e extends C11866a {
             if (linearLayout != null) {
                 if (z) {
                     View view2 = this.f7913c.itemView;
-                    C12880j.m40222a((Object) view2, "viewHolder.itemView");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) view2, "viewHolder.itemView");
                     drawable = C4025a.m13798c(view2.getContext(), C2714g0.background_marketing_item);
                 } else {
                     drawable = null;
@@ -183,7 +183,7 @@ public final class C3039e extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f7907X, (java.lang.Object) r3.f7907X) != false) goto L_0x0033;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f7907X, (java.lang.Object) r3.f7907X) != false) goto L_0x0033;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -195,19 +195,19 @@ public final class C3039e extends C11866a {
             com.bamtechmedia.dominguez.auth.v0.e r3 = (com.bamtechmedia.dominguez.auth.p070v0.C3039e) r3
             com.bamtechmedia.dominguez.legal.api.MarketingEntity r0 = r2.f7904U
             com.bamtechmedia.dominguez.legal.api.MarketingEntity r1 = r3.f7904U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.lang.Integer r0 = r2.f7905V
             java.lang.Integer r1 = r3.f7905V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             g.e.b.f0.d r0 = r2.f7906W
             g.e.b.f0.d r1 = r3.f7906W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             com.bamtechmedia.dominguez.auth.v0.h.e r0 = r2.f7907X
             com.bamtechmedia.dominguez.auth.v0.h.e r3 = r3.f7907X
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0031
             goto L_0x0033
         L_0x0031:
@@ -267,14 +267,14 @@ public final class C3039e extends C11866a {
         this.f7908c = this.f7904U.getChecked();
         AppCompatCheckBox appCompatCheckBox = (AppCompatCheckBox) bVar.mo20994a().findViewById(C2716h0.optInCheckbox);
         String str = "viewHolder.optInCheckbox";
-        C12880j.m40222a((Object) appCompatCheckBox, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) appCompatCheckBox, str);
         appCompatCheckBox.setChecked(this.f7904U.getChecked());
         ((AppCompatCheckBox) bVar.mo20994a().findViewById(C2716h0.optInCheckbox)).setOnCheckedChangeListener(new C3041b(this));
         Integer num = this.f7905V;
         if (num != null) {
             num.intValue();
             AppCompatCheckBox appCompatCheckBox2 = (AppCompatCheckBox) bVar.mo20994a().findViewById(C2716h0.optInCheckbox);
-            C12880j.m40222a((Object) appCompatCheckBox2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) appCompatCheckBox2, str);
             appCompatCheckBox2.setContentDescription(C5880u.m18936a(this.f7905V.intValue()));
         }
         TextView textView = (TextView) bVar.mo20994a().findViewById(C2716h0.optInText);
@@ -282,12 +282,12 @@ public final class C3039e extends C11866a {
             textView.setOnClickListener(new C3042c(bVar));
         }
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "viewHolder.itemView.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "viewHolder.itemView.context");
         if (C5837i.m18843e(context)) {
             AppCompatCheckBox appCompatCheckBox3 = (AppCompatCheckBox) bVar.mo20994a().findViewById(C2716h0.optInCheckbox);
-            C12880j.m40222a((Object) appCompatCheckBox3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) appCompatCheckBox3, str);
             appCompatCheckBox3.setText(this.f7904U.getText());
             ((AppCompatCheckBox) bVar.mo20994a().findViewById(C2716h0.optInCheckbox)).setOnFocusChangeListener(new C3043d(bVar));
             return;

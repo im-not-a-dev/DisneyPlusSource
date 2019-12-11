@@ -10,7 +10,7 @@ import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9325e;
 import com.google.android.exoplayer2.p382u0.C9330i;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.ArrayList;
@@ -694,7 +694,7 @@ public final class C9339c extends C9343e {
                             StringBuilder sb = new StringBuilder();
                             sb.append("Invalid G2 character: ");
                             sb.append(i);
-                            C9563q.m29500d("Cea708Decoder", sb.toString());
+                            Log.m29500d("Cea708Decoder", sb.toString());
                             return;
                     }
             }
@@ -712,7 +712,7 @@ public final class C9339c extends C9343e {
         StringBuilder sb = new StringBuilder();
         sb.append("Invalid G3 character: ");
         sb.append(i);
-        C9563q.m29500d("Cea708Decoder", sb.toString());
+        Log.m29500d("Cea708Decoder", sb.toString());
         this.f21418k.mo24167a('_');
     }
 
@@ -755,7 +755,7 @@ public final class C9339c extends C9343e {
             sb.append(" (sequence number ");
             sb.append(this.f21421n.f21456a);
             sb.append("); ignoring packet");
-            C9563q.m29500d(str, sb.toString());
+            Log.m29500d(str, sb.toString());
             return;
         }
         this.f21415h.mo24664a(bVar.f21458c, i);
@@ -768,7 +768,7 @@ public final class C9339c extends C9343e {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("Invalid extended service number: ");
                 sb2.append(a);
-                C9563q.m29500d(str, sb2.toString());
+                Log.m29500d(str, sb2.toString());
             }
         }
         if (a2 == 0) {
@@ -777,7 +777,7 @@ public final class C9339c extends C9343e {
                 sb3.append("serviceNumber is non-zero (");
                 sb3.append(a);
                 sb3.append(") when blockSize is 0");
-                C9563q.m29500d(str, sb3.toString());
+                Log.m29500d(str, sb3.toString());
             }
         } else if (a == this.f21416i) {
             boolean z = false;
@@ -797,7 +797,7 @@ public final class C9339c extends C9343e {
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("Invalid extended command: ");
                         sb4.append(a4);
-                        C9563q.m29500d(str, sb4.toString());
+                        Log.m29500d(str, sb4.toString());
                     }
                 } else if (a3 <= 31) {
                     m28438a(a3);
@@ -811,7 +811,7 @@ public final class C9339c extends C9343e {
                     StringBuilder sb5 = new StringBuilder();
                     sb5.append("Invalid base command: ");
                     sb5.append(a3);
-                    C9563q.m29500d(str, sb5.toString());
+                    Log.m29500d(str, sb5.toString());
                 }
                 z = true;
             }
@@ -992,7 +992,7 @@ public final class C9339c extends C9343e {
             r0.append(r5)
             java.lang.String r5 = r0.toString()
             java.lang.String r0 = "Cea708Decoder"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r0, r5)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r0, r5)
             goto L_0x0117
         L_0x0020:
             int r5 = r5 + -152
@@ -1178,7 +1178,7 @@ public final class C9339c extends C9343e {
                     C9537e.m29299a(z);
                     C9341b bVar2 = this.f21421n;
                     if (bVar2 == null) {
-                        C9563q.m29497b("Cea708Decoder", "Encountered DTVCC_PACKET_DATA before DTVCC_PACKET_START");
+                        Log.m29497b("Cea708Decoder", "Encountered DTVCC_PACKET_DATA before DTVCC_PACKET_START");
                     } else {
                         byte[] bArr2 = bVar2.f21458c;
                         int i4 = bVar2.f21459d;
@@ -1237,20 +1237,20 @@ public final class C9339c extends C9343e {
                         StringBuilder sb = new StringBuilder();
                         sb.append("Currently unsupported COMMAND_EXT1 Command: ");
                         sb.append(i);
-                        C9563q.m29500d(str, sb.toString());
+                        Log.m29500d(str, sb.toString());
                         this.f21415h.mo24670c(8);
                         return;
                     } else if (i < 24 || i > 31) {
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("Invalid C0 command: ");
                         sb2.append(i);
-                        C9563q.m29500d(str, sb2.toString());
+                        Log.m29500d(str, sb2.toString());
                         return;
                     } else {
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("Currently unsupported COMMAND_P16 Command: ");
                         sb3.append(i);
-                        C9563q.m29500d(str, sb3.toString());
+                        Log.m29500d(str, sb3.toString());
                         this.f21415h.mo24670c(16);
                         return;
                     }

@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.playback.p237m.p252q.C6500a;
 import com.bamtechmedia.dominguez.playback.p237m.p252q.C6509d;
 import com.bamtechmedia.dominguez.playback.p237m.p252q.p253g.C6512a;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -86,7 +86,7 @@ public final class C6577a implements C6500a {
     /* renamed from: a */
     public Single<C6509d> mo19159a(C6341e eVar, C3693o oVar, boolean z) {
         Single<C6509d> a = this.f14868a.mo30233g(new C6578a(this, eVar, z)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) C6579b.f14873c);
-        C12880j.m40222a((Object) a, "onceCurrentProfileAutopl…  }\n                    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "onceCurrentProfileAutopl…  }\n                    }");
         return a;
     }
 }

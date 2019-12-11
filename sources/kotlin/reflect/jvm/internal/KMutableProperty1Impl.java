@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KMutableProperty1;
 import kotlin.reflect.jvm.internal.ReflectProperties.LazyVal;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
@@ -32,7 +32,7 @@ public final class KMutableProperty1Impl<T, R> extends KProperty1Impl<T, R> impl
     public KMutableProperty1Impl(KDeclarationContainerImpl kDeclarationContainerImpl, String str, String str2, Object obj) {
         super(kDeclarationContainerImpl, str, str2, obj);
         LazyVal<Setter<T, R>> lazy = ReflectProperties.lazy(new KMutableProperty1Impl$_setter$1(this));
-        C12880j.m40222a((Object) lazy, "ReflectProperties.lazy { Setter(this) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazy, "ReflectProperties.lazy { Setter(this) }");
         this._setter = lazy;
     }
 
@@ -43,13 +43,13 @@ public final class KMutableProperty1Impl<T, R> extends KProperty1Impl<T, R> impl
     public KMutableProperty1Impl(KDeclarationContainerImpl kDeclarationContainerImpl, PropertyDescriptor propertyDescriptor) {
         super(kDeclarationContainerImpl, propertyDescriptor);
         LazyVal<Setter<T, R>> lazy = ReflectProperties.lazy(new KMutableProperty1Impl$_setter$1(this));
-        C12880j.m40222a((Object) lazy, "ReflectProperties.lazy { Setter(this) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazy, "ReflectProperties.lazy { Setter(this) }");
         this._setter = lazy;
     }
 
     public Setter<T, R> getSetter() {
         Object invoke = this._setter.invoke();
-        C12880j.m40222a(invoke, "_setter()");
+        Intrinsics.checkReturnedValueIsNotNull(invoke, "_setter()");
         return (Setter) invoke;
     }
 }

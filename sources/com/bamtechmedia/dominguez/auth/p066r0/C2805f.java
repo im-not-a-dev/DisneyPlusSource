@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.auth.p066r0;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.C11945a;
 
 /* renamed from: com.bamtechmedia.dominguez.auth.r0.f */
@@ -16,6 +16,6 @@ final class C2805f implements C11945a {
     }
 
     public final /* synthetic */ void run() {
-        C12880j.m40222a(this.f7561a.invoke(), "invoke(...)");
+        Intrinsics.checkReturnedValueIsNotNull(this.f7561a.invoke(), "invoke(...)");
     }
 }

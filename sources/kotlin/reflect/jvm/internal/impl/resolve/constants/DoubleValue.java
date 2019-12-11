@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.SimpleType;
 
@@ -19,7 +19,7 @@ public final class DoubleValue extends ConstantValue<Double> {
 
     public SimpleType getType(ModuleDescriptor moduleDescriptor) {
         SimpleType doubleType = moduleDescriptor.getBuiltIns().getDoubleType();
-        C12880j.m40222a((Object) doubleType, "module.builtIns.doubleType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) doubleType, "module.builtIns.doubleType");
         return doubleType;
     }
 }

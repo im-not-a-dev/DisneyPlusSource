@@ -14,7 +14,7 @@ import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p393v0.C9545h0;
 import com.google.android.exoplayer2.p393v0.C9549j0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import com.google.android.exoplayer2.source.hls.HlsExtractorFactory.C9148a;
 import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist;
@@ -264,9 +264,9 @@ final class C9164j extends C9224l {
                 i = this.f20590A.mo23306a((C8913h) a, (C8919n) null);
             }
             this.f20593D = (int) (a.getPosition() - dataSpec.f21941d);
-            C9554k0.m29405a(dataSource);
+            Util.m29405a(dataSource);
         } catch (Throwable th) {
-            C9554k0.m29405a(dataSource);
+            Util.m29405a(dataSource);
             throw th;
         }
     }
@@ -336,7 +336,7 @@ final class C9164j extends C9224l {
 
     /* renamed from: a */
     private static byte[] m27487a(String str) {
-        if (C9554k0.m29457k(str).startsWith("0x")) {
+        if (Util.m29457k(str).startsWith("0x")) {
             str = str.substring(2);
         }
         byte[] byteArray = new BigInteger(str, 16).toByteArray();

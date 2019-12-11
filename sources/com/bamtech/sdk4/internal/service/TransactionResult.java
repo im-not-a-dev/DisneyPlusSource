@@ -14,7 +14,7 @@ public final class TransactionResult<T> {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.result, (java.lang.Object) r3.result) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.result, (java.lang.Object) r3.result) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -26,11 +26,11 @@ public final class TransactionResult<T> {
             com.bamtech.sdk4.internal.service.TransactionResult r3 = (com.bamtech.sdk4.internal.service.TransactionResult) r3
             com.bamtech.sdk4.internal.service.ServiceTransaction r0 = r2.transaction
             com.bamtech.sdk4.internal.service.ServiceTransaction r1 = r3.transaction
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             T r0 = r2.result
             T r3 = r3.result
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:

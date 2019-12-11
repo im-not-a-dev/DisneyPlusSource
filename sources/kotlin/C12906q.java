@@ -2,7 +2,7 @@ package kotlin;
 
 import java.io.Serializable;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlin.q */
 /* compiled from: LazyJVM.kt */
@@ -46,7 +46,7 @@ final class C12906q<T> implements Lazy<T>, Serializable {
                     this.f29545U = t;
                     this.f29547c = null;
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }

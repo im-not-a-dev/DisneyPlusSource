@@ -8,7 +8,7 @@ import com.bamtech.sdk4.session.RenewSessionTransformers;
 import java.util.List;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Single;
 
@@ -30,18 +30,18 @@ public final class DefaultSubscriptionExtension implements SubscriptionExtension
     public Single<List<Subscription>> getSubscriptions() {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         SubscriptionManager subscriptionManager = this.manager;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Single<List<Subscription>> a = DustExtensionsKt.withDust$default(subscriptionManager.getSubscriptions(serviceTransaction), serviceTransaction, SubscriptionExtensionKt.getSUBSCRIPTION_API_GET_SUBSCRIPTIONS(), (Object) null, 4, (Object) null).mo30206a(this.renewSessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "manager.getSubscriptions…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "manager.getSubscriptions…enewSession(transaction))");
         return a;
     }
 
     public Completable linkSubscriptionsFromDevice() {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         DeviceSubscriptionManager deviceSubscriptionManager2 = this.deviceSubscriptionManager;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Completable a = DustExtensionsKt.withDust$default(deviceSubscriptionManager2.linkSubscriptionsFromDevice(serviceTransaction), serviceTransaction, SubscriptionExtensionKt.getACCOUNT_API_LINK_SUBSCRIPTIONS(), (Object) null, 4, (Object) null).mo30035a(this.renewSessionTransformers.completableRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "deviceSubscriptionManage…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "deviceSubscriptionManage…enewSession(transaction))");
         return a;
     }
 }

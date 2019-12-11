@@ -21,7 +21,7 @@ import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Function;
@@ -113,7 +113,7 @@ public final class C3324g implements C3320f {
         if (!C3320f.f8371a.mo12375a().getAndSet(false)) {
             String a = m11438a(i, i2);
             String str = "NA";
-            if (!C12880j.m40224a((Object) a, (Object) str)) {
+            if (!Intrinsics.areEqual((Object) a, (Object) str)) {
                 String valueOf = String.valueOf(jVar.mo12618a().mo12424c());
                 String f = C12832w.m40125f(jVar.mo12618a().mo12422a());
                 String b = jVar.mo12618a().mo12423b();
@@ -154,7 +154,7 @@ public final class C3324g implements C3320f {
         this.f8375c.mo11467a(sb2, C13173j0.m40353a(C13173j0.m40353a(a, b), (Map) map), true);
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Entry entry : a.entrySet()) {
-            if (C12880j.m40224a((Object) (String) entry.getKey(), (Object) "brand")) {
+            if (Intrinsics.areEqual((Object) (String) entry.getKey(), (Object) "brand")) {
                 linkedHashMap.put(entry.getKey(), entry.getValue());
             }
         }
@@ -208,7 +208,7 @@ public final class C3324g implements C3320f {
     /* renamed from: a */
     private final void m11442a(String str, Map<String, String> map) {
         Single g = this.f8380h.mo18834a(str).mo30220b(this.f8379g).mo30233g(new C3326b(this, map));
-        C12880j.m40222a((Object) g, "contentLocationProvider.…mpseExtras)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "contentLocationProvider.…mpseExtras)\n            }");
         C5826e0.m18824a(g);
     }
 
@@ -238,7 +238,7 @@ public final class C3324g implements C3320f {
             com.bamtechmedia.dominguez.collections.items.b r5 = r5.mo12618a()
             java.lang.String r5 = r5.mo12428f()
             java.lang.String r0 = "brand"
-            boolean r5 = kotlin.jvm.internal.C12880j.m40224a(r5, r0)
+            boolean r5 = kotlin.jvm.internal.Intrinsics.areEqual(r5, r0)
             if (r5 == 0) goto L_0x003d
             java.lang.String r5 = r6.mo12841O()
             if (r5 == 0) goto L_0x0039

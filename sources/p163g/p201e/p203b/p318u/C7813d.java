@@ -29,7 +29,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -143,7 +143,7 @@ public final class C7813d extends C3280a implements C7700r {
                     }
                 }
                 FrameLayout frameLayout3 = (FrameLayout) this.f16909c.f16907c._$_findCachedViewById(C5363f.originalsLogoImageViewLayout);
-                C12880j.m40222a((Object) frameLayout3, "originalsLogoImageViewLayout");
+                Intrinsics.checkReturnedValueIsNotNull((Object) frameLayout3, "originalsLogoImageViewLayout");
                 int i2 = this.f16908U;
                 frameLayout3.setTranslationY(((float) i2) - ((a2 * 2.0f) * ((float) i2)));
             }
@@ -177,12 +177,12 @@ public final class C7813d extends C3280a implements C7700r {
         public final void mo20721a(WindowInsets windowInsets) {
             int systemWindowInsetTop = windowInsets.getSystemWindowInsetTop();
             FrameLayout frameLayout = (FrameLayout) this.f16907c._$_findCachedViewById(C5363f.originalsLogoImageViewLayout);
-            C12880j.m40222a((Object) frameLayout, "originalsLogoImageViewLayout");
+            Intrinsics.checkReturnedValueIsNotNull((Object) frameLayout, "originalsLogoImageViewLayout");
             frameLayout.setTranslationY((float) systemWindowInsetTop);
             DisneyTitleToolbar disneyTitleToolbar = (DisneyTitleToolbar) this.f16905U.findViewById(C5363f.disneyToolbar);
             if (disneyTitleToolbar != null) {
                 RecyclerView recyclerView = (RecyclerView) this.f16905U.findViewById(C5363f.originalsRecyclerView);
-                C12880j.m40222a((Object) recyclerView, "view.originalsRecyclerView");
+                Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "view.originalsRecyclerView");
                 DisneyTitleToolbar.m18445a(disneyTitleToolbar, recyclerView, this.f16907c.mo12237v(), null, null, new C7816a(this, systemWindowInsetTop), systemWindowInsetTop, new C7817b(this), 12, null);
             }
         }
@@ -200,11 +200,11 @@ public final class C7813d extends C3280a implements C7700r {
     /* renamed from: a */
     private final void m22898a(View view, float f) {
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         if (C5837i.m18843e(requireContext)) {
             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.originalsRecyclerView);
             RecyclerView recyclerView2 = recyclerView;
-            C12880j.m40222a((Object) recyclerView, "originalsRecyclerView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "originalsRecyclerView");
             C3800a.m12829a(recyclerView2, 0.0f, 0.0f, 0.0f, 0.0f, null, null, 40.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 750, 1000, null, null, null, null, 249790, null);
             return;
         }
@@ -242,13 +242,13 @@ public final class C7813d extends C3280a implements C7700r {
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         float dimension = requireContext.getResources().getDimension(C5361d.toolbar_height);
         RecyclerViewSnapScrollHelper r = mo12327r();
         C0722m viewLifecycleOwner = getViewLifecycleOwner();
-        C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+        Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
         RecyclerView recyclerView = (RecyclerView) view.findViewById(C5363f.originalsRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "view.originalsRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "view.originalsRecyclerView");
         r.mo17710a(viewLifecycleOwner, recyclerView, (C5805c) C5806a.f13590a);
         m22898a(view, dimension);
     }
@@ -259,7 +259,7 @@ public final class C7813d extends C3280a implements C7700r {
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("backgroundHelper");
+        Intrinsics.throwUninitializedPropertyAccessException("backgroundHelper");
         throw null;
     }
 
@@ -271,9 +271,9 @@ public final class C7813d extends C3280a implements C7700r {
     /* renamed from: a */
     public C3503a mo12229a(C11848c<C11863k> cVar) {
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.originalsRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "originalsRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "originalsRecyclerView");
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C5363f.originalsProgressBar);
-        C12880j.m40222a((Object) progressBar, "originalsProgressBar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "originalsProgressBar");
         C3503a aVar = new C3503a(cVar, recyclerView, progressBar, null, null, null, 56, null);
         return aVar;
     }

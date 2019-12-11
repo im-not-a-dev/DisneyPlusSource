@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0;
 
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.s0.b */
@@ -53,7 +53,7 @@ public final class C8907b implements C8920o {
 
     /* renamed from: c */
     public int mo23284c(long j) {
-        return C9554k0.m29429b(this.f19120e, j, true, true);
+        return Util.m29429b(this.f19120e, j, true, true);
     }
 
     /* renamed from: c */

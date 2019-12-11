@@ -64,7 +64,7 @@ public final class C9536d0 implements C9565s {
         long a = this.f22251c.mo24605a() - this.f22249W;
         PlaybackParameters playbackParameters = this.f22250X;
         if (playbackParameters.f18372a == 1.0f) {
-            j = C8883r.m25967a(a);
+            j = C8883r.msToUs(a);
         } else {
             j = playbackParameters.mo22615a(a);
         }

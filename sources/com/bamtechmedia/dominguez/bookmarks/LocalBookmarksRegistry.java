@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 import kotlin.C12907r;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11733i;
 import p163g.p500m.p501a.C11760v;
@@ -38,7 +38,7 @@ import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0010\u000b\n\u0002\b\u0007\b\u0007\u0018\u0000 72\b\u0012\u0004\u0012\u00020\u00020\u0001:\u000267BA\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\b\b\u0001\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\b\b\u0001\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\f\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e¢\u0006\u0002\u0010\u0010J\b\u0010\u0016\u001a\u00020\u0017H\u0002J\u0010\u0010\u0018\u001a\u00020\u00192\u0006\u0010\u001a\u001a\u00020\u0002H\u0002J0\u0010\u001b\u001a\u0010\u0012\u0004\u0012\u00020\u001d\u0012\u0006\u0012\u0004\u0018\u00010\u001e0\u001c2\u0006\u0010\u001f\u001a\u00020\u001d2\b\u0010 \u001a\u0004\u0018\u00010\u001d2\u0006\u0010!\u001a\u00020\"H\u0002J\u0010\u0010#\u001a\u00020\u00192\u0006\u0010\u001a\u001a\u00020\u0002H\u0002J$\u0010$\u001a\u0016\u0012\u0012\u0012\u0010\u0012\u0004\u0012\u00020\u001d\u0012\u0006\u0012\u0004\u0018\u00010\u001e0\u001c0%2\u0006\u0010&\u001a\u00020\u001dH\u0002J\u001c\u0010'\u001a\u0016\u0012\u0012\u0012\u0010\u0012\u0004\u0012\u00020\u001d\u0012\u0006\u0012\u0004\u0018\u00010\u001e0\u001c0%H\u0016J$\u0010(\u001a\u0016\u0012\u0012\u0012\u0010\u0012\u0004\u0012\u00020\u001d\u0012\u0006\u0012\u0004\u0018\u00010\u001e0\u001c0%2\u0006\u0010)\u001a\u00020\u001dH\u0016J$\u0010*\u001a\u0016\u0012\u0012\u0012\u0010\u0012\u0004\u0012\u00020\u001d\u0012\u0006\u0012\u0004\u0018\u00010\u001e0\u001c0%2\u0006\u0010+\u001a\u00020\u001dH\u0016J\u0014\u0010,\u001a\u0004\u0018\u00010\u00132\b\u0010-\u001a\u0004\u0018\u00010\u001eH\u0002J\u0010\u0010.\u001a\u00020\u00192\u0006\u0010\u001a\u001a\u00020\u0002H\u0016J\b\u0010/\u001a\u00020\u0017H\u0016J\f\u00100\u001a\u000201*\u00020\u0002H\u0002J\f\u00102\u001a\u000201*\u00020\u0013H\u0002J\u0014\u00103\u001a\u00020\"*\u00020\u00022\u0006\u00104\u001a\u00020\u001dH\u0002J \u00105\u001a\u0016\u0012\u0012\u0012\u0010\u0012\u0004\u0012\u00020\u001d\u0012\u0006\u0012\u0004\u0018\u00010\u001e0\u001c0%*\u00020\u0013H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u00130\u00128BX\u0004¢\u0006\u0006\u001a\u0004\b\u0014\u0010\u0015R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000eX\u0004¢\u0006\u0002\n\u0000¨\u00068"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/bookmarks/LocalBookmarksRegistry;", "Lcom/bamtechmedia/dominguez/bookmarks/LocalBookmarks;", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "bookmarksApi", "Lcom/bamtech/sdk4/bookmarks/BookmarksApi;", "preferences", "Landroid/content/SharedPreferences;", "config", "Lcom/bamtechmedia/dominguez/bookmarks/BookmarksConfig;", "computationThread", "Lio/reactivex/Scheduler;", "moshi", "Lcom/squareup/moshi/Moshi;", "sessionOnce", "Lio/reactivex/Single;", "Lcom/bamtech/sdk4/Session;", "(Lcom/bamtech/sdk4/bookmarks/BookmarksApi;Landroid/content/SharedPreferences;Lcom/bamtechmedia/dominguez/bookmarks/BookmarksConfig;Lio/reactivex/Scheduler;Lcom/squareup/moshi/Moshi;Lio/reactivex/Single;)V", "jsonAdapter", "Lcom/squareup/moshi/JsonAdapter;", "Lcom/bamtechmedia/dominguez/bookmarks/LocalBookmarksRegistry$BookmarkData;", "getJsonAdapter", "()Lcom/squareup/moshi/JsonAdapter;", "cleanup", "", "createBookmark", "Lio/reactivex/Completable;", "asset", "createBookmarksMap", "", "", "", "mediaId", "seriesId", "bookmark", "Lcom/bamtech/sdk4/bookmarks/Bookmark;", "getBookmark", "lastBookmarkMaybe", "Lio/reactivex/Maybe;", "preferenceKey", "lastLocalBookmarkMapMaybe", "lastMovieBookmarkMaybe", "familyId", "lastSeriesBookmarkMaybe", "encodedSeriesId", "parseBookmarkData", "json", "preparePlayback", "updateTimestamp", "hasValidRuntime", "", "outdated", "toBookmark", "profileId", "withSdkBookmark", "BookmarkData", "Companion", "bookmarks_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: LocalBookmarksRegistry.kt */
@@ -137,7 +137,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
             if (this != obj) {
                 if (obj instanceof BookmarkData) {
                     BookmarkData bookmarkData = (BookmarkData) obj;
-                    if (C12880j.m40224a((Object) this.f8085a, (Object) bookmarkData.f8085a) && C12880j.m40224a((Object) this.f8086b, (Object) bookmarkData.f8086b) && C12880j.m40224a((Object) this.f8087c, (Object) bookmarkData.f8087c)) {
+                    if (Intrinsics.areEqual((Object) this.f8085a, (Object) bookmarkData.f8085a) && Intrinsics.areEqual((Object) this.f8086b, (Object) bookmarkData.f8086b) && Intrinsics.areEqual((Object) this.f8087c, (Object) bookmarkData.f8087c)) {
                         if (this.f8088d == bookmarkData.f8088d) {
                             return true;
                         }
@@ -275,7 +275,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
 
         /* renamed from: a */
         public final CompletableSource apply(Throwable th) {
-            C14100a.m44527b(th);
+            Timber.m44527b(th);
             if (this.f8095c.m11036d(this.f8094U)) {
                 return this.f8095c.m11026b(this.f8094U);
             }
@@ -358,11 +358,11 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
         /* renamed from: a */
         public final void accept(BookmarkData bookmarkData) {
             LocalBookmarksRegistry localBookmarksRegistry = this.f8101c;
-            C12880j.m40222a((Object) bookmarkData, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bookmarkData, "it");
             if (localBookmarksRegistry.m11022a(bookmarkData)) {
                 C5855o oVar = C5855o.f13640a;
                 Editor edit = this.f8101c.f8080b.edit();
-                C12880j.m40222a((Object) edit, "editor");
+                Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
                 edit.remove(this.f8100U);
                 edit.apply();
             }
@@ -484,14 +484,14 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
         this.f8083e = vVar;
         this.f8084f = single;
         Completable b = Completable.m38166c((C11945a) new C3147a(this)).mo30051b(this.f8082d);
-        C12880j.m40222a((Object) b, "Completable.fromAction {…ribeOn(computationThread)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.fromAction {…ribeOn(computationThread)");
         C5826e0.m18823a(b, null, null, 3, null);
     }
 
     /* renamed from: c */
     private final Maybe<Map<String, Object>> m11032c(String str) {
         Maybe<Map<String, Object>> c = Maybe.m38257b((Callable<? extends T>) new C3153g<Object>(this, str)).mo30131f(new C3154h(this)).mo30123c((Consumer<? super T>) C3155i.f8099c).mo30123c((Consumer<? super T>) new C3156j<Object>(this, str)).mo30106a((C11952h<? super T>) new C3157k<Object>(this)).mo30123c((Consumer<? super T>) C3158l.f8103c).mo30103a((Function<? super T, ? extends MaybeSource<? extends R>>) new C3159m<Object,Object>(this)).mo30123c((Consumer<? super T>) C3160n.f8105c);
-        C12880j.m40222a((Object) c, "Maybe.fromCallable<Strin…okmark from SDK $map\" } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Maybe.fromCallable<Strin…okmark from SDK $map\" } }");
         return c;
     }
 
@@ -499,7 +499,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
     /* renamed from: d */
     public final C11725h<BookmarkData> m11035d() {
         C11725h<BookmarkData> a = this.f8083e.mo29866a(BookmarkData.class);
-        C12880j.m40222a((Object) a, "moshi.adapter(BookmarkData::class.java)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "moshi.adapter(BookmarkData::class.java)");
         return a;
     }
 
@@ -507,7 +507,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
     /* renamed from: d */
     public final boolean m11036d(C3693o oVar) {
         Long w = oVar.mo12913w();
-        if (C12880j.m40224a((Object) w, (Object) Integer.valueOf(0))) {
+        if (Intrinsics.areEqual((Object) w, (Object) Integer.valueOf(0))) {
             w = null;
         }
         if (w != null) {
@@ -528,7 +528,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
     /* renamed from: b */
     public final Maybe<Map<String, Object>> m11027b(BookmarkData bookmarkData) {
         Maybe<Map<String, Object>> f = this.f8079a.getLocalBookmarks(C13183n.m40498a(bookmarkData.mo12190a())).mo30202a((C11952h<? super T>) C3161o.f8106c).mo30131f(new C3162p(this, bookmarkData));
-        C12880j.m40222a((Object) f, "bookmarksApi.getLocalBoo…, seriesId, it.first()) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) f, "bookmarksApi.getLocalBoo…, seriesId, it.first()) }");
         return f;
     }
 
@@ -541,7 +541,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
     /* renamed from: b */
     public final Completable m11026b(C3693o oVar) {
         Completable f = this.f8084f.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) C3149c.f8090c).mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) C3150d.f8091c).mo30114b((Function<? super T, ? extends CompletableSource>) new C3151e<Object,Object>(this, oVar)).mo30055f();
-        C12880j.m40222a((Object) f, "sessionOnce.flatMap { it…       .onErrorComplete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) f, "sessionOnce.flatMap { it…       .onErrorComplete()");
         return f;
     }
 
@@ -568,18 +568,18 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
     /* renamed from: c */
     private final Completable m11031c(C3693o oVar) {
         Completable a = DefaultImpls.getBookmarks$default(this.f8079a, C13183n.m40498a(oVar.mo12903f()), null, 2, null).mo30228e().mo30033a(5000, TimeUnit.MILLISECONDS, this.f8082d).mo30037a((Function<? super Throwable, ? extends CompletableSource>) new C3152f<Object,Object>(this, oVar));
-        C12880j.m40222a((Object) a, "bookmarksApi.getBookmark… complete()\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "bookmarksApi.getBookmark… complete()\n            }");
         return a;
     }
 
     /* renamed from: b */
     public void mo12188b() {
         Map all = this.f8080b.getAll();
-        C12880j.m40222a((Object) all, "preferences.all");
+        Intrinsics.checkReturnedValueIsNotNull((Object) all, "preferences.all");
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Entry entry : all.entrySet()) {
             String str = (String) entry.getKey();
-            C12880j.m40222a((Object) str, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, "it");
             if (C12832w.m40123b(str, "bookmarksHandshake", false, 2, null)) {
                 linkedHashMap.put(entry.getKey(), entry.getValue());
             }
@@ -598,7 +598,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
             linkedHashMap4.put(entry4.getKey(), m11035d().toJson(entry4.getValue()));
         }
         Editor edit = this.f8080b.edit();
-        C12880j.m40222a((Object) edit, "editor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
         for (Entry entry5 : linkedHashMap4.entrySet()) {
             edit.putString((String) entry5.getKey(), (String) entry5.getValue());
         }
@@ -609,11 +609,11 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
     /* renamed from: c */
     public final void m11033c() {
         Map all = this.f8080b.getAll();
-        C12880j.m40222a((Object) all, "preferences.all");
+        Intrinsics.checkReturnedValueIsNotNull((Object) all, "preferences.all");
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Entry entry : all.entrySet()) {
             String str = (String) entry.getKey();
-            C12880j.m40222a((Object) str, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, "it");
             if (C12832w.m40123b(str, "bookmarksHandshake", false, 2, null)) {
                 linkedHashMap.put(entry.getKey(), entry.getValue());
             }
@@ -630,7 +630,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
             }
         }
         Editor edit = this.f8080b.edit();
-        C12880j.m40222a((Object) edit, "editor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
         for (Entry key : linkedHashMap3.entrySet()) {
             edit.remove((String) key.getKey());
         }
@@ -640,7 +640,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
     /* renamed from: a */
     public Completable mo12184a(C3693o oVar) {
         Editor edit = this.f8080b.edit();
-        C12880j.m40222a((Object) edit, "editor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
         String mediaId = oVar.getMediaId();
         String f = oVar.mo12903f();
         boolean z = oVar instanceof C3685g;
@@ -673,7 +673,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
     public final Bookmark m11017a(C3693o oVar, String str) {
         C5855o oVar2 = C5855o.f13640a;
         Long w = oVar.mo12913w();
-        if (C12880j.m40224a((Object) w, (Object) Integer.valueOf(0))) {
+        if (Intrinsics.areEqual((Object) w, (Object) Integer.valueOf(0))) {
             w = null;
         }
         C5884x.m18951a((Object) w, (String) null, 1, (Object) null);

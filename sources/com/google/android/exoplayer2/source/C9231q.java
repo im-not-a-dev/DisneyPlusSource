@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
 import com.google.android.exoplayer2.trackselection.C9311j;
@@ -192,10 +192,10 @@ public final class C9231q implements C9072a0, C9073a {
 
     /* renamed from: b */
     private SeekParameters m27846b(long j, SeekParameters seekParameters) {
-        long b = C9554k0.m29431b(seekParameters.f18391a, 0, j - this.f20936X);
+        long b = Util.m29431b(seekParameters.f18391a, 0, j - this.f20936X);
         long j2 = seekParameters.f18392b;
         long j3 = this.f20937Y;
-        long b2 = C9554k0.m29431b(j2, 0, j3 == Long.MIN_VALUE ? Long.MAX_VALUE : j3 - j);
+        long b2 = Util.m29431b(j2, 0, j3 == Long.MIN_VALUE ? Long.MAX_VALUE : j3 - j);
         if (b == seekParameters.f18391a && b2 == seekParameters.f18392b) {
             return seekParameters;
         }

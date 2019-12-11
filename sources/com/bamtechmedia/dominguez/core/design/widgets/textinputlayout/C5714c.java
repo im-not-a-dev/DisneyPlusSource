@@ -18,7 +18,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p122j.C4025a;
 
@@ -278,13 +278,13 @@ public final class C5714c {
         this.f13447l = view;
         Context context = this.f13447l.getContext();
         String str = "view.context";
-        C12880j.m40222a((Object) context, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, str);
         this.f13438c = (float) context.getResources().getDimensionPixelSize(C3835e.text_input_layout_stroke);
         Context context2 = this.f13447l.getContext();
-        C12880j.m40222a((Object) context2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) context2, str);
         this.f13439d = (float) context2.getResources().getDimensionPixelSize(C3835e.text_input_layout_stroke_max);
         Context context3 = this.f13447l.getContext();
-        C12880j.m40222a((Object) context3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) context3, str);
         this.f13440e = C5837i.m18833a(context3, C3835e.text_input_layout_radius);
         this.f13441f = C4025a.m13788a(this.f13447l.getContext(), C3834d.vader_grey4);
         this.f13442g = C4025a.m13788a(this.f13447l.getContext(), C3834d.input_layout_error);
@@ -350,22 +350,22 @@ public final class C5714c {
     /* renamed from: a */
     public final void mo17593a(TextView textView, Function1<? super ValueAnimator, C13145v> function1) {
         ValueAnimator ofFloat = ValueAnimator.ofFloat(new float[]{this.f13438c, this.f13439d});
-        C12880j.m40222a((Object) ofFloat, "ValueAnimator.ofFloat(stroke, maxStroke)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) ofFloat, "ValueAnimator.ofFloat(stroke, maxStroke)");
         m18620a(ofFloat, 0, new C5719e(this));
         ValueAnimator ofFloat2 = ValueAnimator.ofFloat(new float[]{this.f13439d, this.f13438c});
-        C12880j.m40222a((Object) ofFloat2, "ValueAnimator.ofFloat(maxStroke, stroke)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) ofFloat2, "ValueAnimator.ofFloat(maxStroke, stroke)");
         m18620a(ofFloat2, 500, new C5722h(this));
         ValueAnimator ofArgb = ValueAnimator.ofArgb(new int[]{this.f13441f, this.f13442g});
-        C12880j.m40222a((Object) ofArgb, "ValueAnimator.ofArgb(vaderGrey, vaderError)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) ofArgb, "ValueAnimator.ofArgb(vaderGrey, vaderError)");
         m18620a(ofArgb, 200, new C5720f(function1));
         ValueAnimator ofArgb2 = ValueAnimator.ofArgb(new int[]{this.f13442g, this.f13441f});
-        C12880j.m40222a((Object) ofArgb2, "ValueAnimator.ofArgb(vaderError, vaderGrey)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) ofArgb2, "ValueAnimator.ofArgb(vaderError, vaderGrey)");
         m18620a(ofArgb2, 500, new C5721g(function1));
         ValueAnimator ofFloat3 = ValueAnimator.ofFloat(new float[]{1.0f, 1.02f});
-        C12880j.m40222a((Object) ofFloat3, "ValueAnimator.ofFloat(SCALE_ORIGIN, SCALE_UP_02)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) ofFloat3, "ValueAnimator.ofFloat(SCALE_ORIGIN, SCALE_UP_02)");
         m18620a(ofFloat3, 0, new C5717c(textView));
         ValueAnimator ofFloat4 = ValueAnimator.ofFloat(new float[]{1.02f, 1.0f});
-        C12880j.m40222a((Object) ofFloat4, "ValueAnimator.ofFloat(SCALE_UP_02, SCALE_ORIGIN)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) ofFloat4, "ValueAnimator.ofFloat(SCALE_UP_02, SCALE_ORIGIN)");
         m18620a(ofFloat4, 300, new C5718d(textView));
         this.f13437b.setInterpolator(new LinearInterpolator());
         this.f13437b.play(ofFloat).with(ofArgb).with(ofFloat3).before(ofFloat2).with(ofArgb2).with(ofFloat4);

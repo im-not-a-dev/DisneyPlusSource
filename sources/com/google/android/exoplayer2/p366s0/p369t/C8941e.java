@@ -17,8 +17,8 @@ import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9564r;
 import com.google.android.exoplayer2.p393v0.C9568u;
 import com.google.android.exoplayer2.p393v0.C9572w;
@@ -44,7 +44,7 @@ public class C8941e implements C8912g {
     /* access modifiers changed from: private */
 
     /* renamed from: b0 */
-    public static final byte[] f19238b0 = C9554k0.m29447d("Format: Start, End, ReadOrder, Layer, Style, Name, MarginL, MarginR, MarginV, Effect, Text");
+    public static final byte[] f19238b0 = Util.m29447d("Format: Start, End, ReadOrder, Layer, Style, Name, MarginL, MarginR, MarginV, Effect, Text");
 
     /* renamed from: c0 */
     private static final byte[] f19239c0 = {68, 105, 97, 108, 111, 103, 117, 101, 58, 32, 48, 58, 48, 48, 58, 48, 48, 58, 48, 48, 44, 48, 58, 48, 48, 58, 48, 48, 58, 48, 48, 44};
@@ -996,7 +996,7 @@ public class C8941e implements C8912g {
                 goto L_0x031e
             L_0x01b7:
                 int r1 = r0.f19306M
-                int r1 = com.google.android.exoplayer2.p393v0.C9554k0.m29424b(r1)
+                int r1 = com.google.android.exoplayer2.p393v0.Util.getPcmEncoding(r1)
                 if (r1 != 0) goto L_0x01de
                 java.lang.StringBuilder r1 = new java.lang.StringBuilder
                 r1.<init>()
@@ -1008,7 +1008,7 @@ public class C8941e implements C8912g {
                 r1.append(r3)
                 r1.append(r14)
                 java.lang.String r1 = r1.toString()
-                com.google.android.exoplayer2.p393v0.C9563q.m29500d(r13, r1)
+                com.google.android.exoplayer2.p393v0.Log.m29500d(r13, r1)
                 goto L_0x022e
             L_0x01de:
                 r23 = r1
@@ -1023,7 +1023,7 @@ public class C8941e implements C8912g {
                 boolean r1 = m26296b(r1)
                 if (r1 == 0) goto L_0x021a
                 int r1 = r0.f19306M
-                int r1 = com.google.android.exoplayer2.p393v0.C9554k0.m29424b(r1)
+                int r1 = com.google.android.exoplayer2.p393v0.Util.getPcmEncoding(r1)
                 if (r1 != 0) goto L_0x01de
                 java.lang.StringBuilder r1 = new java.lang.StringBuilder
                 r1.<init>()
@@ -1035,7 +1035,7 @@ public class C8941e implements C8912g {
                 r1.append(r3)
                 r1.append(r14)
                 java.lang.String r1 = r1.toString()
-                com.google.android.exoplayer2.p393v0.C9563q.m29500d(r13, r1)
+                com.google.android.exoplayer2.p393v0.Log.m29500d(r13, r1)
                 goto L_0x022e
             L_0x021a:
                 java.lang.StringBuilder r1 = new java.lang.StringBuilder
@@ -1044,7 +1044,7 @@ public class C8941e implements C8912g {
                 r1.append(r3)
                 r1.append(r14)
                 java.lang.String r1 = r1.toString()
-                com.google.android.exoplayer2.p393v0.C9563q.m29500d(r13, r1)
+                com.google.android.exoplayer2.p393v0.Log.m29500d(r13, r1)
             L_0x022e:
                 r1 = r14
                 goto L_0x031e
@@ -1472,7 +1472,7 @@ public class C8941e implements C8912g {
                     }
                     throw new C8723g0("Failed to find FourCC VC1 initialization data");
                 }
-                C9563q.m29500d("MatroskaExtractor", "Unknown FourCC. Setting mimeType to video/x-unknown");
+                Log.m29500d("MatroskaExtractor", "Unknown FourCC. Setting mimeType to video/x-unknown");
                 return new Pair<>("video/x-unknown", null);
             } catch (ArrayIndexOutOfBoundsException unused) {
                 throw new C8723g0("Error parsing FourCC private data");
@@ -1913,7 +1913,7 @@ public class C8941e implements C8912g {
                 if (cVar3.f19321f) {
                     C8925a aVar = cVar3.f19323h;
                     if (aVar != null) {
-                        cVar3.f19325j = new DrmInitData(new C8692b(C8883r.f19042a, "video/webm", aVar.f19172b));
+                        cVar3.f19325j = new DrmInitData(new C8692b(C8883r.UUID_NIL, "video/webm", aVar.f19172b));
                     } else {
                         throw new C8723g0("Encrypted Track found but ContentEncKeyID was not found");
                     }
@@ -3056,7 +3056,7 @@ public class C8941e implements C8912g {
             int i5 = (int) ((j4 - (((long) i4) * 1000000)) / j2);
             Object[] objArr = {Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5)};
             String str2 = str;
-            bArr3 = C9554k0.m29447d(String.format(Locale.US, str, objArr));
+            bArr3 = Util.m29447d(String.format(Locale.US, str, objArr));
             bArr4 = bArr2;
         }
         byte[] bArr5 = bArr;
@@ -3112,7 +3112,7 @@ public class C8941e implements C8912g {
     private long m26256a(long j) throws C8723g0 {
         long j2 = this.f19283q;
         if (j2 != -9223372036854775807L) {
-            return C9554k0.m29439c(j, j2, 1000);
+            return Util.m29439c(j, j2, 1000);
         }
         throw new C8723g0("Can't scale timecode prior to timecodeScale being set.");
     }

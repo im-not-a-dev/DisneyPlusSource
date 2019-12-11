@@ -9,7 +9,7 @@ import com.google.android.exoplayer2.C8883r;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
 import com.google.android.exoplayer2.p366s0.p371v.C8980k;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9202k0;
 import com.google.android.exoplayer2.source.hls.playlist.C9182e.C9184b;
 import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist.C9176a;
@@ -245,12 +245,12 @@ public final class C9185f implements C9456a<HlsPlaylist> {
                             } else {
                                 arrayDeque.add(trim);
                                 C9182e a = m27665a(new C9186a(arrayDeque, bufferedReader), uri.toString());
-                                C9554k0.m29406a((Closeable) bufferedReader);
+                                Util.m29406a((Closeable) bufferedReader);
                                 return a;
                             }
                         }
                     } else {
-                        C9554k0.m29406a((Closeable) bufferedReader);
+                        Util.m29406a((Closeable) bufferedReader);
                         throw new C8723g0("Failed to parse the playlist, could not identify any tags.");
                     }
                 }
@@ -259,7 +259,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             }
             throw new C9202k0("Input does not start with the #EXTM3U header.", uri);
         } finally {
-            C9554k0.m29406a((Closeable) bufferedReader);
+            Util.m29406a((Closeable) bufferedReader);
         }
     }
 
@@ -270,17 +270,17 @@ public final class C9185f implements C9456a<HlsPlaylist> {
         if (TextUtils.isEmpty(a)) {
             return 0;
         }
-        String[] a2 = C9554k0.m29423a(a, ",");
-        if (C9554k0.m29415a((Object[]) a2, (Object) "public.accessibility.describes-video")) {
+        String[] a2 = Util.m29423a(a, ",");
+        if (Util.m29415a((Object[]) a2, (Object) "public.accessibility.describes-video")) {
             i = DateUtils.FORMAT_NO_NOON;
         }
-        if (C9554k0.m29415a((Object[]) a2, (Object) "public.accessibility.transcribes-spoken-dialog")) {
+        if (Util.m29415a((Object[]) a2, (Object) "public.accessibility.transcribes-spoken-dialog")) {
             i |= 4096;
         }
-        if (C9554k0.m29415a((Object[]) a2, (Object) "public.accessibility.describes-music-and-sound")) {
+        if (Util.m29415a((Object[]) a2, (Object) "public.accessibility.describes-music-and-sound")) {
             i |= 1024;
         }
-        if (C9554k0.m29415a((Object[]) a2, (Object) "public.easy-to-read")) {
+        if (Util.m29415a((Object[]) a2, (Object) "public.easy-to-read")) {
             i |= ContentServiceClientExtras.URL_SIZE_LIMIT;
         }
         return i;
@@ -345,12 +345,12 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             }
             a = bufferedReader.read();
         }
-        return C9554k0.m29452f(m27660a(bufferedReader, false, a));
+        return Util.m29452f(m27660a(bufferedReader, false, a));
     }
 
     /* renamed from: a */
     private static int m27660a(BufferedReader bufferedReader, boolean z, int i) throws IOException {
-        while (i != -1 && Character.isWhitespace(i) && (z || !C9554k0.m29452f(i))) {
+        while (i != -1 && Character.isWhitespace(i) && (z || !Util.m29452f(i))) {
             i = bufferedReader.read();
         }
         return i;
@@ -765,7 +765,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             com.google.android.exoplayer2.Format r7 = r7.f20761b
             java.lang.String r7 = r7.f18346Y
             r8 = 1
-            java.lang.String r7 = com.google.android.exoplayer2.p393v0.C9554k0.m29396a(r7, r8)
+            java.lang.String r7 = com.google.android.exoplayer2.p393v0.Util.m29396a(r7, r8)
             r26 = r7
             goto L_0x0354
         L_0x0351:
@@ -804,7 +804,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             if (r7 == 0) goto L_0x03a6
             com.google.android.exoplayer2.Format r7 = r7.f20761b
             java.lang.String r10 = r7.f18346Y
-            java.lang.String r10 = com.google.android.exoplayer2.p393v0.C9554k0.m29396a(r10, r13)
+            java.lang.String r10 = com.google.android.exoplayer2.p393v0.Util.m29396a(r10, r13)
             int r13 = r7.f18355g0
             int r8 = r7.f18356h0
             float r7 = r7.f18357i0
@@ -1030,7 +1030,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
                                 i5++;
                             } else if (b.startsWith("#EXT-X-PROGRAM-DATE-TIME")) {
                                 if (j6 == 0) {
-                                    j6 = C8883r.m25967a(C9554k0.m29454h(b.substring(b.indexOf(58) + i))) - j11;
+                                    j6 = C8883r.msToUs(Util.m29454h(b.substring(b.indexOf(58) + i))) - j11;
                                 }
                             } else if (b.equals("#EXT-X-GAP")) {
                                 c = 0;
@@ -1105,7 +1105,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
     private static int m27661a(String str, Map<String, String> map) {
         String a = m27667a(str, f20783h, map);
         if (a != null) {
-            return Integer.parseInt(C9554k0.m29437b(a, "/")[0]);
+            return Integer.parseInt(Util.m29437b(a, "/")[0]);
         }
         return -1;
     }
@@ -1117,14 +1117,14 @@ public final class C9185f implements C9456a<HlsPlaylist> {
         String str4 = "video/mp4";
         if ("urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed".equals(str2)) {
             String b = m27675b(str, f20799x, map);
-            return new C8692b(C8883r.f19045d, str4, Base64.decode(b.substring(b.indexOf(44)), 0));
+            return new C8692b(C8883r.WIDEVINE_UUID, str4, Base64.decode(b.substring(b.indexOf(44)), 0));
         } else if ("com.widevine".equals(str2)) {
-            return new C8692b(C8883r.f19045d, "hls", C9554k0.m29447d(str));
+            return new C8692b(C8883r.WIDEVINE_UUID, "hls", Util.m29447d(str));
         } else if (!"com.microsoft.playready".equals(str2) || !str3.equals(a)) {
             return null;
         } else {
             String b2 = m27675b(str, f20799x, map);
-            return new C8692b(C8883r.f19046e, str4, C8980k.m26491a(C8883r.f19046e, Base64.decode(b2.substring(b2.indexOf(44)), 0)));
+            return new C8692b(C8883r.PLAYREADY_UUID, str4, C8980k.m26491a(C8883r.PLAYREADY_UUID, Base64.decode(b2.substring(b2.indexOf(44)), 0)));
         }
     }
 

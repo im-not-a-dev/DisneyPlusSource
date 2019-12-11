@@ -28,7 +28,7 @@ import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p509o.p510a.C11848c;
 import p163g.p509o.p510a.C11853e;
@@ -196,7 +196,7 @@ public abstract class C3384s extends C11866a {
                         c.getLocationOnScreen(iArr);
                     }
                     Context context = recyclerView.getContext();
-                    C12880j.m40222a((Object) context, "recyclerView.context");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) context, "recyclerView.context");
                     boolean e = C5837i.m18843e(context);
                     if (this.f8541b.m11591o() && e) {
                         int a = this.f8541b.m11590c(recyclerView);
@@ -308,7 +308,7 @@ public abstract class C3384s extends C11866a {
         C3700c d = mo12511d();
         if (eVar != null) {
             C3384s sVar = (C3384s) eVar;
-            return new C3385a(!C12880j.m40224a((Object) mo12519m(), (Object) sVar.mo12519m()), !C12880j.m40224a((Object) d, (Object) sVar.mo12511d()), !C12880j.m40224a((Object) mo12514g(), (Object) sVar.mo12514g()));
+            return new C3385a(!Intrinsics.areEqual((Object) mo12519m(), (Object) sVar.mo12519m()), !Intrinsics.areEqual((Object) d, (Object) sVar.mo12511d()), !Intrinsics.areEqual((Object) mo12514g(), (Object) sVar.mo12514g()));
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ShelfItem");
     }
@@ -325,7 +325,7 @@ public abstract class C3384s extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof C3384s) && C12880j.m40224a((Object) ((C3384s) eVar).mo12517k(), (Object) mo12517k());
+        return (eVar instanceof C3384s) && Intrinsics.areEqual((Object) ((C3384s) eVar).mo12517k(), (Object) mo12517k());
     }
 
     /* access modifiers changed from: protected */
@@ -356,7 +356,7 @@ public abstract class C3384s extends C11866a {
     /* renamed from: n */
     public C11848c<C11867b> mo12501n() {
         Object obj = this.f8534X.mo12530a().get();
-        C12880j.m40222a(obj, "parameters.adapterProvider.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "parameters.adapterProvider.get()");
         return (C11848c) obj;
     }
 
@@ -375,7 +375,7 @@ public abstract class C3384s extends C11866a {
         C11867b createViewHolder = super.createViewHolder(view);
         ShelfItemRecyclerView shelfItemRecyclerView = (ShelfItemRecyclerView) createViewHolder.mo20994a().findViewById(C3424c.shelfRecyclerView);
         String str = "holder.shelfRecyclerView";
-        C12880j.m40222a((Object) shelfItemRecyclerView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemRecyclerView, str);
         C0808o layoutManager = shelfItemRecyclerView.getLayoutManager();
         if (!(layoutManager instanceof LinearLayoutManager)) {
             layoutManager = null;
@@ -386,7 +386,7 @@ public abstract class C3384s extends C11866a {
         }
         ShelfFragmentHelper j = mo12516j();
         ShelfItemRecyclerView shelfItemRecyclerView2 = (ShelfItemRecyclerView) createViewHolder.mo20994a().findViewById(C3424c.shelfRecyclerView);
-        C12880j.m40222a((Object) shelfItemRecyclerView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemRecyclerView2, str);
         j.mo12399a((RecyclerView) shelfItemRecyclerView2, mo12514g());
         return createViewHolder;
     }
@@ -418,13 +418,13 @@ public abstract class C3384s extends C11866a {
             android.view.View r0 = r0.findViewById(r1)
             com.bamtechmedia.dominguez.collections.ui.ShelfItemRecyclerView r0 = (com.bamtechmedia.dominguez.collections.p081ui.ShelfItemRecyclerView) r0
             java.lang.String r1 = "holder.shelfRecyclerView"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             r7.m11589b(r0)
             android.view.View r0 = r8.mo20994a()
             int r2 = com.bamtechmedia.dominguez.collections.p078m0.C3424c.shelfRecyclerView
             android.view.View r0 = r0.findViewById(r2)
             com.bamtechmedia.dominguez.collections.ui.ShelfItemRecyclerView r0 = (com.bamtechmedia.dominguez.collections.p081ui.ShelfItemRecyclerView) r0
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             r7.m11582a(r0)
             com.bamtechmedia.dominguez.collections.items.ShelfFragmentHelper r0 = r7.mo12516j()
             java.lang.String r2 = r7.mo12517k()
@@ -505,13 +505,13 @@ public abstract class C3384s extends C11866a {
             int r2 = com.bamtechmedia.dominguez.collections.p078m0.C3424c.shelfRecyclerView
             android.view.View r0 = r0.findViewById(r2)
             com.bamtechmedia.dominguez.collections.ui.ShelfItemRecyclerView r0 = (com.bamtechmedia.dominguez.collections.p081ui.ShelfItemRecyclerView) r0
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             android.view.View r1 = r8.mo30014c()
             java.lang.String r2 = "holder.root"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             android.content.Context r1 = r1.getContext()
             java.lang.String r2 = "holder.root.context"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             boolean r1 = com.bamtechmedia.dominguez.core.utils.C5837i.m18843e(r1)
             r7.m11583a(r0, r1)
             boolean r0 = r10.isEmpty()
@@ -588,12 +588,12 @@ public abstract class C3384s extends C11866a {
             if (r3 == 0) goto L_0x0196
             android.view.View r8 = r8.itemView
             java.lang.String r9 = "holder.itemView"
-            kotlin.jvm.internal.C12880j.m40222a(r8, r9)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r9)
             int r9 = com.bamtechmedia.dominguez.collections.p078m0.C3424c.shelfTitle
             android.view.View r8 = r8.findViewById(r9)
             android.widget.TextView r8 = (android.widget.TextView) r8
             java.lang.String r9 = "holder.itemView.shelfTitle"
-            kotlin.jvm.internal.C12880j.m40222a(r8, r9)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r9)
             java.lang.String r9 = r7.mo12519m()
             r8.setText(r9)
         L_0x0196:
@@ -607,10 +607,10 @@ public abstract class C3384s extends C11866a {
     public void unbind(C11867b bVar) {
         ShelfItemRecyclerView shelfItemRecyclerView = (ShelfItemRecyclerView) bVar.mo20994a().findViewById(C3424c.shelfRecyclerView);
         String str = "viewHolder.shelfRecyclerView";
-        C12880j.m40222a((Object) shelfItemRecyclerView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemRecyclerView, str);
         m11589b(shelfItemRecyclerView);
         ShelfItemRecyclerView shelfItemRecyclerView2 = (ShelfItemRecyclerView) bVar.mo20994a().findViewById(C3424c.shelfRecyclerView);
-        C12880j.m40222a((Object) shelfItemRecyclerView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemRecyclerView2, str);
         shelfItemRecyclerView2.setAdapter(null);
         super.unbind(bVar);
     }
@@ -620,14 +620,14 @@ public abstract class C3384s extends C11866a {
         int i2;
         View view = bVar.itemView;
         String str = "itemView";
-        C12880j.m40222a((Object) view, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, str);
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "itemView.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "itemView.context");
         boolean e = C5837i.m18843e(context);
         int n = mo12514g().mo12635n() - (mo12514g().mo12630i() / 2);
         ShelfItemRecyclerView shelfItemRecyclerView = (ShelfItemRecyclerView) bVar.mo20994a().findViewById(C3424c.shelfRecyclerView);
         String str2 = "shelfRecyclerView";
-        C12880j.m40222a((Object) shelfItemRecyclerView, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemRecyclerView, str2);
         int e2 = mo12514g().mo12624e() - (mo12514g().mo12630i() / 2);
         int i3 = 0;
         if (e) {
@@ -645,16 +645,16 @@ public abstract class C3384s extends C11866a {
         if (this.f8531U.mo17733a() >= 28) {
             ((ShelfItemRecyclerView) bVar.mo20994a().findViewById(C3424c.shelfRecyclerView)).setFadingEdgeLength(n);
             ShelfItemRecyclerView shelfItemRecyclerView2 = (ShelfItemRecyclerView) bVar.mo20994a().findViewById(C3424c.shelfRecyclerView);
-            C12880j.m40222a((Object) shelfItemRecyclerView2, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemRecyclerView2, str2);
             shelfItemRecyclerView2.setHorizontalFadingEdgeEnabled(e);
         }
         View view2 = bVar.itemView;
-        C12880j.m40222a((Object) view2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view2, str);
         ((ShelfContainerLayout) view2.findViewById(C3424c.shelfContainer)).mo12395a(mo12492b(), mo12514g().mo12630i(), mo12514g().mo12638q(), i);
         View view3 = bVar.itemView;
-        C12880j.m40222a((Object) view3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view3, str);
         TextView textView = (TextView) view3.findViewById(C3424c.shelfTitle);
-        C12880j.m40222a((Object) textView, "itemView.shelfTitle");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "itemView.shelfTitle");
         if (!mo12491a()) {
             i3 = 8;
         }
@@ -728,7 +728,7 @@ public abstract class C3384s extends C11866a {
 
     /* renamed from: a */
     public final int mo12507a(C3417a aVar) {
-        if ((aVar != null ? aVar.mo12583a() : null) == null || !C12880j.m40224a((Object) aVar.mo12584b(), (Object) mo12517k())) {
+        if ((aVar != null ? aVar.mo12583a() : null) == null || !Intrinsics.areEqual((Object) aVar.mo12584b(), (Object) mo12517k())) {
             return -1;
         }
         int i = 0;

@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.legal.api;
 import android.os.Parcel;
 import android.os.Parcelable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11724g;
 import p163g.p500m.p501a.C11733i;
 
@@ -70,7 +70,7 @@ public final class MarketingInput implements Parcelable {
         if (this != obj) {
             if (obj instanceof MarketingInput) {
                 MarketingInput marketingInput = (MarketingInput) obj;
-                if (C12880j.m40224a((Object) this.code, (Object) marketingInput.code) && C12880j.m40224a((Object) this.textId, (Object) marketingInput.textId)) {
+                if (Intrinsics.areEqual((Object) this.code, (Object) marketingInput.code) && Intrinsics.areEqual((Object) this.textId, (Object) marketingInput.textId)) {
                     if (this.subscribed == marketingInput.subscribed) {
                         return true;
                     }

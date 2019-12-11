@@ -9,7 +9,7 @@ import kotlin.jvm.internal.C12879i;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.functions.C11945a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B!\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\b\u0010\u000b\u001a\u00020\fH\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u0006\u001a\u00020\u0007¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\r"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/AuthSuccessActionImpl;", "Lcom/bamtechmedia/dominguez/auth/AuthSuccessAction;", "authListener", "Lcom/bamtechmedia/dominguez/auth/api/AuthListener;", "logInAction", "Lcom/bamtechmedia/dominguez/auth/login/LogInAction;", "firstTimeUser", "", "(Lcom/bamtechmedia/dominguez/auth/api/AuthListener;Lcom/bamtechmedia/dominguez/auth/login/LogInAction;Z)V", "getFirstTimeUser", "()Z", "onSuccess", "Lio/reactivex/disposables/Disposable;", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.x */
@@ -55,7 +55,7 @@ public final class C3141x implements C3140w {
 
         /* renamed from: a */
         public final void mo12181a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -63,7 +63,7 @@ public final class C3141x implements C3140w {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -105,7 +105,7 @@ public final class C3141x implements C3140w {
             io.reactivex.functions.Consumer r2 = (p520io.reactivex.functions.Consumer) r2
             io.reactivex.disposables.Disposable r0 = r0.mo30047a(r1, r2)
             java.lang.String r1 = "logInAction.onLogin()\n  …stTimeUser) }, Timber::e)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             return r0
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtechmedia.dominguez.auth.C3141x.onSuccess():io.reactivex.disposables.Disposable");

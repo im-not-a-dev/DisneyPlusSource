@@ -17,7 +17,7 @@ import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9032c;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9545h0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
@@ -32,19 +32,19 @@ public final class C9025g0 implements C8912g {
     /* access modifiers changed from: private */
 
     /* renamed from: s */
-    public static final long f19834s = ((long) C9554k0.m29428b("AC-3"));
+    public static final long f19834s = ((long) Util.m29428b("AC-3"));
     /* access modifiers changed from: private */
 
     /* renamed from: t */
-    public static final long f19835t = ((long) C9554k0.m29428b("EAC3"));
+    public static final long f19835t = ((long) Util.m29428b("EAC3"));
     /* access modifiers changed from: private */
 
     /* renamed from: u */
-    public static final long f19836u = ((long) C9554k0.m29428b("AC-4"));
+    public static final long f19836u = ((long) Util.m29428b("AC-4"));
     /* access modifiers changed from: private */
 
     /* renamed from: v */
-    public static final long f19837v = ((long) C9554k0.m29428b("HEVC"));
+    public static final long f19837v = ((long) Util.m29428b("HEVC"));
     /* access modifiers changed from: private */
 
     /* renamed from: a */
@@ -199,7 +199,7 @@ public final class C9025g0 implements C8912g {
                 this.f19858a.mo24670c(4);
                 wVar2.mo24695f(this.f19858a.mo24660a(12));
                 if (C9025g0.this.f19838a == 2 && C9025g0.this.f19853p == null) {
-                    C9031b bVar = new C9031b(21, null, null, C9554k0.f22286f);
+                    C9031b bVar = new C9031b(21, null, null, Util.EMPTY_BYTE_ARRAY);
                     C9025g0 g0Var = C9025g0.this;
                     g0Var.f19853p = g0Var.f19842e.mo23440a(21, bVar);
                     C9025g0.this.f19853p.mo23426a(h0Var, C9025g0.this.f19848k, new C9033d(B, 21, ContentServiceClientExtras.URL_SIZE_LIMIT));

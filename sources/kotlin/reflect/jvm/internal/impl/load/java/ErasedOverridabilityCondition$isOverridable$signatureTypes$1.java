@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
@@ -15,7 +15,7 @@ final class ErasedOverridabilityCondition$isOverridable$signatureTypes$1 extends
     }
 
     public final KotlinType invoke(ValueParameterDescriptor valueParameterDescriptor) {
-        C12880j.m40222a((Object) valueParameterDescriptor, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, "it");
         return valueParameterDescriptor.getType();
     }
 }

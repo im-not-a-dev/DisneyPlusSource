@@ -4,7 +4,7 @@ import android.content.res.Resources;
 import android.text.TextUtils;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import java.util.Locale;
 
@@ -67,7 +67,7 @@ public class C9404f implements C9420q {
         if (TextUtils.isEmpty(str) || "und".equals(str)) {
             return "";
         }
-        return (C9554k0.f22281a >= 21 ? Locale.forLanguageTag(str) : new Locale(str)).getDisplayName();
+        return (Util.SDK_INT >= 21 ? Locale.forLanguageTag(str) : new Locale(str)).getDisplayName();
     }
 
     /* renamed from: g */

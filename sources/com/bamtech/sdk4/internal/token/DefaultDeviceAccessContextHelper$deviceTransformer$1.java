@@ -12,7 +12,7 @@ import com.bamtech.sdk4.token.AccessContext;
 import com.bamtech.sdk4.token.Grant;
 import com.facebook.stetho.server.http.HttpStatus;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -57,7 +57,7 @@ final class DefaultDeviceAccessContextHelper$deviceTransformer$1<Upstream, Downs
                 } else {
                     int attempts = currentInternalSessionState.getAttempts() + 1;
                     DateTime now = DateTime.now();
-                    C12880j.m40222a((Object) now, "DateTime.now()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now()");
                     failed = new Failed(serviceException2, attempts, now);
                 }
                 this.this$0.this$0.internalSessionStateProvider.setInternalSessionState(failed);

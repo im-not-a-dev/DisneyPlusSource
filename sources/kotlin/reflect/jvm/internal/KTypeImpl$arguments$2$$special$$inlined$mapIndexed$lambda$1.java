@@ -8,7 +8,7 @@ import java.util.List;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.KProperty;
 
@@ -35,12 +35,12 @@ final class KTypeImpl$arguments$2$$special$$inlined$mapIndexed$lambda$1 extends 
         if (javaType$kotlin_reflection instanceof Class) {
             Class cls = (Class) javaType$kotlin_reflection;
             Class<Object> componentType = cls.isArray() ? cls.getComponentType() : Object.class;
-            C12880j.m40222a((Object) componentType, "if (javaType.isArray) ja…Type else Any::class.java");
+            Intrinsics.checkReturnedValueIsNotNull((Object) componentType, "if (javaType.isArray) ja…Type else Any::class.java");
             return componentType;
         } else if (javaType$kotlin_reflection instanceof GenericArrayType) {
             if (this.f29550$i == 0) {
                 Type genericComponentType = ((GenericArrayType) javaType$kotlin_reflection).getGenericComponentType();
-                C12880j.m40222a((Object) genericComponentType, "javaType.genericComponentType");
+                Intrinsics.checkReturnedValueIsNotNull((Object) genericComponentType, "javaType.genericComponentType");
                 return genericComponentType;
             }
             StringBuilder sb = new StringBuilder();
@@ -52,17 +52,17 @@ final class KTypeImpl$arguments$2$$special$$inlined$mapIndexed$lambda$1 extends 
             if (type instanceof WildcardType) {
                 WildcardType wildcardType = (WildcardType) type;
                 Type[] lowerBounds = wildcardType.getLowerBounds();
-                C12880j.m40222a((Object) lowerBounds, "argument.lowerBounds");
+                Intrinsics.checkReturnedValueIsNotNull((Object) lowerBounds, "argument.lowerBounds");
                 Type type2 = (Type) C13174k.m40406f(lowerBounds);
                 if (type2 != null) {
                     type = type2;
                 } else {
                     Type[] upperBounds = wildcardType.getUpperBounds();
-                    C12880j.m40222a((Object) upperBounds, "argument.upperBounds");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds, "argument.upperBounds");
                     type = (Type) C13174k.m40405e(upperBounds);
                 }
             }
-            C12880j.m40222a((Object) type, "if (argument !is Wildcar…ument.upperBounds.first()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "if (argument !is Wildcar…ument.upperBounds.first()");
             return type;
         } else {
             StringBuilder sb2 = new StringBuilder();

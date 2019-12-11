@@ -7,7 +7,7 @@ import kotlin.C12898l;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p590y.C13180m;
 import kotlin.reflect.KProperty;
@@ -44,7 +44,7 @@ final class KTypeImpl$arguments$2 extends C12881k implements Function0<List<? ex
                     kTypeProjection = KTypeProjection.Companion.getSTAR();
                 } else {
                     KotlinType type = typeProjection.getType();
-                    C12880j.m40222a((Object) type, "typeProjection.type");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) type, "typeProjection.type");
                     KTypeImpl kTypeImpl = new KTypeImpl(type, new KTypeImpl$arguments$2$$special$$inlined$mapIndexed$lambda$1(i, this, a, kProperty));
                     int i3 = WhenMappings.$EnumSwitchMapping$0[typeProjection.getProjectionKind().ordinal()];
                     if (i3 == 1) {

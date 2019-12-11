@@ -3,7 +3,7 @@ package kotlinx.coroutines;
 import kotlin.C12900n;
 import kotlin.C12900n.C12901a;
 import kotlin.C12903o;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 
 /* renamed from: kotlinx.coroutines.k0 */
@@ -41,14 +41,14 @@ public final class C13323k0 {
     /* renamed from: b */
     public static final String m40939b(Object obj) {
         String hexString = Integer.toHexString(System.identityHashCode(obj));
-        C12880j.m40222a((Object) hexString, "Integer.toHexString(System.identityHashCode(this))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) hexString, "Integer.toHexString(System.identityHashCode(this))");
         return hexString;
     }
 
     /* renamed from: a */
     public static final String m40937a(Object obj) {
         String simpleName = obj.getClass().getSimpleName();
-        C12880j.m40222a((Object) simpleName, "this::class.java.simpleName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) simpleName, "this::class.java.simpleName");
         return simpleName;
     }
 }

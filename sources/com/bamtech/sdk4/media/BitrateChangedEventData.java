@@ -16,7 +16,7 @@ public final class BitrateChangedEventData implements BaseQosClientData {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x0028, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.bitrateType, (java.lang.Object) r3.bitrateType) != false) goto L_0x002d;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.bitrateType, (java.lang.Object) r3.bitrateType) != false) goto L_0x002d;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -28,15 +28,15 @@ public final class BitrateChangedEventData implements BaseQosClientData {
             com.bamtech.sdk4.media.BitrateChangedEventData r3 = (com.bamtech.sdk4.media.BitrateChangedEventData) r3
             java.lang.String r0 = r2.getPlaybackSessionId()
             java.lang.String r1 = r3.getPlaybackSessionId()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x002b
             java.lang.Long r0 = r2.bitrate
             java.lang.Long r1 = r3.bitrate
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x002b
             com.bamtech.sdk4.media.BitrateType r0 = r2.bitrateType
             com.bamtech.sdk4.media.BitrateType r3 = r3.bitrateType
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x002b
             goto L_0x002d
         L_0x002b:

@@ -2,7 +2,7 @@ package kotlin.reflect.full;
 
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.KClass;
 
@@ -21,6 +21,6 @@ final class KClasses$isSubclassOf$2 extends C12881k implements Function1<KClass<
     }
 
     public final boolean invoke(KClass<?> kClass) {
-        return C12880j.m40224a((Object) kClass, (Object) this.$base);
+        return Intrinsics.areEqual((Object) kClass, (Object) this.$base);
     }
 }

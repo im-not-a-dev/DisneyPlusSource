@@ -8,8 +8,8 @@ import com.bamtechmedia.dominguez.core.content.containers.ContainerType;
 import com.bamtechmedia.dominguez.core.utils.C5819b0;
 import java.util.List;
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
-import p686n.p687a.C14100a;
+import kotlin.jvm.internal.Intrinsics;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtechmedia.dominguez.collections.o0.n */
 /* compiled from: ContainerConfigResolverImpl.kt */
@@ -36,10 +36,10 @@ public final class C3449n implements C3448m {
         sb.append(", container: ");
         sb.append(containerType.getConfigKey());
         boolean z = false;
-        C14100a.m44522a(sb.toString(), new Object[0]);
+        Timber.m44522a(sb.toString(), new Object[0]);
         Map a = this.f8705b.mo12612a();
         String string = this.f8704a.getString(C3426e.collection_size_qualifier);
-        C12880j.m40222a((Object) string, "resources.getString(R.st…ollection_size_qualifier)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) string, "resources.getString(R.st…ollection_size_qualifier)");
         C3447l lVar = new C3447l(a, string, str, containerType, str2);
         String str3 = "gridMargin";
         int a2 = C5819b0.m18811a(this.f8704a, ((Number) lVar.mo12643b(str3)).intValue());

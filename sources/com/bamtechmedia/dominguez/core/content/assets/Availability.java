@@ -88,7 +88,7 @@ public final class Availability implements Parcelable {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x0038, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8941X, (java.lang.Object) r3.f8941X) != false) goto L_0x003d;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8941X, (java.lang.Object) r3.f8941X) != false) goto L_0x003d;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -100,23 +100,23 @@ public final class Availability implements Parcelable {
             com.bamtechmedia.dominguez.core.content.assets.Availability r3 = (com.bamtechmedia.dominguez.core.content.assets.Availability) r3
             java.lang.String r0 = r2.f8942c
             java.lang.String r1 = r3.f8942c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             org.joda.time.DateTime r0 = r2.f8938U
             org.joda.time.DateTime r1 = r3.f8938U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             org.joda.time.DateTime r0 = r2.f8939V
             org.joda.time.DateTime r1 = r3.f8939V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             org.joda.time.DateTime r0 = r2.f8940W
             org.joda.time.DateTime r1 = r3.f8940W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             java.lang.Boolean r0 = r2.f8941X
             java.lang.Boolean r3 = r3.f8941X
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x003b
             goto L_0x003d
         L_0x003b:

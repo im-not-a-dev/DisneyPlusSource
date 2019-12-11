@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -25,16 +25,16 @@ public final class RatingJsonAdapter extends C11725h<Rating> {
         String str2 = "advisories";
         String str3 = "value";
         C11739b a = C11739b.m37729a(str3, "system", str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"v…visories\", \"description\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"v…visories\", \"description\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str3);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"value\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"value\")");
         this.stringAdapter = a2;
         C11725h<List<String>> a3 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, String.class), C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a3, "moshi.adapter<List<Strin…emptySet(), \"advisories\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<List<Strin…emptySet(), \"advisories\")");
         this.listOfStringAdapter = a3;
         C11725h<String> a4 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a4, "moshi.adapter<String?>(S…mptySet(), \"description\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<String?>(S…mptySet(), \"description\")");
         this.nullableStringAdapter = a4;
     }
 

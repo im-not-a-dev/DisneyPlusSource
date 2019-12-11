@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 
 /* renamed from: com.google.android.exoplayer2.e0 */
@@ -65,7 +65,7 @@ final class C8719e0 {
             return false;
         }
         C8719e0 e0Var = (C8719e0) obj;
-        if (!(this.f18511b == e0Var.f18511b && this.f18512c == e0Var.f18512c && this.f18513d == e0Var.f18513d && this.f18514e == e0Var.f18514e && this.f18515f == e0Var.f18515f && this.f18516g == e0Var.f18516g && C9554k0.m29414a((Object) this.f18510a, (Object) e0Var.f18510a))) {
+        if (!(this.f18511b == e0Var.f18511b && this.f18512c == e0Var.f18512c && this.f18513d == e0Var.f18513d && this.f18514e == e0Var.f18514e && this.f18515f == e0Var.f18515f && this.f18516g == e0Var.f18516g && Util.m29414a((Object) this.f18510a, (Object) e0Var.f18510a))) {
             z = false;
         }
         return z;

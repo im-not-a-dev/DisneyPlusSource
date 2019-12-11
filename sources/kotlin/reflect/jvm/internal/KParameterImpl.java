@@ -4,7 +4,7 @@ import java.lang.annotation.Annotation;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -49,7 +49,7 @@ public final class KParameterImpl implements KParameter {
     public boolean equals(Object obj) {
         if (obj instanceof KParameterImpl) {
             KParameterImpl kParameterImpl = (KParameterImpl) obj;
-            if (C12880j.m40224a((Object) this.callable, (Object) kParameterImpl.callable) && C12880j.m40224a((Object) getDescriptor(), (Object) kParameterImpl.getDescriptor())) {
+            if (Intrinsics.areEqual((Object) this.callable, (Object) kParameterImpl.callable) && Intrinsics.areEqual((Object) getDescriptor(), (Object) kParameterImpl.getDescriptor())) {
                 return true;
             }
         }
@@ -84,7 +84,7 @@ public final class KParameterImpl implements KParameter {
                 return null;
             }
             Name name = valueParameterDescriptor.getName();
-            C12880j.m40222a((Object) name, "valueParameter.name");
+            Intrinsics.checkReturnedValueIsNotNull((Object) name, "valueParameter.name");
             if (!name.isSpecial()) {
                 str = name.asString();
             }
@@ -94,7 +94,7 @@ public final class KParameterImpl implements KParameter {
 
     public KType getType() {
         KotlinType type = getDescriptor().getType();
-        C12880j.m40222a((Object) type, "descriptor.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "descriptor.type");
         return new KTypeImpl(type, new KParameterImpl$type$1(this));
     }
 

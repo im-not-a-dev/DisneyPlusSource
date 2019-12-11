@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.core.p084g.p085c.C3821b;
 import com.bamtechmedia.dominguez.core.p084g.p086d.C3822a;
 import com.google.android.material.tabs.TabLayout;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11847b;
 import p163g.p509o.p510a.C11848c;
 import p163g.p509o.p510a.C11859i;
@@ -43,13 +43,13 @@ public final class C5955f {
             g.o.a.c<g.o.a.k> r0 = r2.f13768c
             if (r0 == 0) goto L_0x0015
             if (r0 == 0) goto L_0x000e
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r0 == 0) goto L_0x0015
             r0 = 1
             goto L_0x0016
         L_0x000e:
             java.lang.String r3 = "adapter"
-            kotlin.jvm.internal.C12880j.m40227c(r3)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)
             r3 = 0
             throw r3
         L_0x0015:
@@ -96,7 +96,7 @@ public final class C5955f {
                 recyclerView.setItemAnimator(m19101a(i));
                 this.f13766a.mo30011d(list);
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else {
@@ -105,7 +105,7 @@ public final class C5955f {
                 recyclerView2.setItemAnimator(null);
                 this.f13766a.mo30011d(list);
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         }
@@ -141,15 +141,15 @@ public final class C5955f {
                 if (recyclerView != null) {
                     recyclerView.setFocusable(z);
                 } else {
-                    C12880j.m40227c("recyclerView");
+                    Intrinsics.throwUninitializedPropertyAccessException("recyclerView");
                     throw null;
                 }
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
     }

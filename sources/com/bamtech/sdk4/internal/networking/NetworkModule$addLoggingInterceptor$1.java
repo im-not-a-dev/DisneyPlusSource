@@ -2,7 +2,7 @@ package com.bamtech.sdk4.internal.networking;
 
 import com.facebook.stetho.server.http.HttpHeaders;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Interceptor;
 import okhttp3.Interceptor.Chain;
 import okhttp3.Request;
@@ -19,7 +19,7 @@ final class NetworkModule$addLoggingInterceptor$1 implements Interceptor {
 
     public final Response intercept(Chain chain) {
         Request m0 = chain.mo35785m0();
-        if (C12880j.m40224a((Object) m0.mo35835e(), (Object) "GET")) {
+        if (Intrinsics.areEqual((Object) m0.mo35835e(), (Object) "GET")) {
             String str = HttpHeaders.CONTENT_TYPE;
             if (m0.mo35831b(str) != null) {
                 C14113a f = m0.mo35836f();

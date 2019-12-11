@@ -12,7 +12,7 @@ import com.bamtech.sdk4.internal.configuration.TelemetryServiceConfigurationKt;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14258u;
 import okhttp3.C14262x;
 import okhttp3.Call;
@@ -47,15 +47,15 @@ final class DefaultWidevineDrmProvider$downloadNewOfflineLicense$1<T, R> impleme
         ServiceTransaction serviceTransaction = this.$transaction;
         DefaultResponseTransformer defaultResponseTransformer = new DefaultResponseTransformer(new C1954xe72e00c4(new ResponseHandler[]{new C1952x2919a1b5(this.this$0.converters.getByte())}, serviceTransaction), new C1955xe72e00c5(serviceTransaction));
         C14262x a = C14262x.m45502a(C14258u.m45482b("application/octet-stream"), this.$requestData);
-        C12880j.m40222a((Object) a, "RequestBody.create(\n    …                        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "RequestBody.create(\n    …                        )");
         Request a2 = C1691e.m7797a(link, client, (ResponseTransformer<? extends OUT>) defaultResponseTransformer, a, TelemetryServiceConfigurationKt.toDustConfigSettings(telemetryServiceConfiguration));
         ServiceTransaction serviceTransaction2 = this.$transaction;
         String str = this.$dust;
         Call a3 = C1691e.m7799a(a2);
         Single b = C1681c.m7780a(a2, a3).mo30223c((C11945a) new C1956xed04f7b1(a3)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single<byte[]> g = b.mo30222c((Consumer<? super Disposable>) new C1957xed04f7b2<Object>(serviceTransaction2, str)).mo30218b((Consumer<? super Throwable>) new C1958xed04f7b3<Object>(a2, serviceTransaction2, str)).mo30233g(new C1959xed04f7b4(serviceTransaction2, str));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g;
     }
 }

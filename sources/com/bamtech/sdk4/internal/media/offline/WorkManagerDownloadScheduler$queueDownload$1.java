@@ -124,7 +124,7 @@ final class WorkManagerDownloadScheduler$queueDownload$1<T> implements C14313b<C
             io.reactivex.Single r7 = r7.getAccessToken(r8)     // Catch:{ all -> 0x017e }
             java.lang.Object r7 = r7.mo30224c()     // Catch:{ all -> 0x017e }
             java.lang.String r8 = "tokenProvider.getAccessT…ransaction).blockingGet()"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r8)     // Catch:{ all -> 0x017e }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r8)     // Catch:{ all -> 0x017e }
             r6.put(r0, r7)     // Catch:{ all -> 0x017e }
             com.bamtech.sdk4.internal.service.ServiceTransaction r7 = r1.$transaction     // Catch:{ all -> 0x017e }
             com.bamtech.sdk4.media.offline.CachedMedia r8 = r1.$media     // Catch:{ all -> 0x017e }
@@ -134,7 +134,7 @@ final class WorkManagerDownloadScheduler$queueDownload$1<T> implements C14313b<C
             io.reactivex.Maybe r5 = r4.getBifThumbnails(r7, r5, r8, r6)     // Catch:{ all -> 0x017e }
             java.lang.Object r5 = r5.mo30121b()     // Catch:{ all -> 0x017e }
             java.lang.String r6 = "onlineClient.getBifThumb…, tokenMap).blockingGet()"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)     // Catch:{ all -> 0x017e }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)     // Catch:{ all -> 0x017e }
             java.util.List r5 = (java.util.List) r5     // Catch:{ all -> 0x017e }
             java.util.Iterator r5 = r5.iterator()     // Catch:{ all -> 0x017e }
         L_0x0108:

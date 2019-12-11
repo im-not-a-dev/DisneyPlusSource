@@ -1,6 +1,6 @@
 package com.bamtechmedia.dominguez.analytics;
 
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtechmedia.dominguez.analytics.o */
 /* compiled from: AnalyticsStateProviderExt.kt */
@@ -10,7 +10,7 @@ public final class C2430o {
         try {
             return nVar.mo11534e();
         } catch (Exception e) {
-            C14100a.m44523a((Throwable) e);
+            Timber.m44523a((Throwable) e);
             return null;
         }
     }

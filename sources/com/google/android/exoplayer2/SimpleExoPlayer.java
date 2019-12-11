@@ -36,8 +36,8 @@ import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9332k;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9542g;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9575z;
 import com.google.android.exoplayer2.p394w0.C9597n;
 import com.google.android.exoplayer2.p394w0.C9602q;
@@ -57,7 +57,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 /* renamed from: com.google.android.exoplayer2.o0 */
 /* compiled from: SimpleExoPlayer */
-public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoComponent, TextComponent, MetadataComponent {
+public class SimpleExoPlayer extends BasePlayer implements ExoPlayer, AudioComponent, VideoComponent, TextComponent, MetadataComponent {
 
     /* renamed from: A */
     private MediaSource f18684A;
@@ -178,7 +178,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: a */
         public void mo7739a(String str, long j, long j2) {
-            Iterator it = C8802o0.this.f18699j.iterator();
+            Iterator it = SimpleExoPlayer.this.f18699j.iterator();
             while (it.hasNext()) {
                 ((C9603r) it.next()).mo7739a(str, j, j2);
             }
@@ -191,8 +191,8 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: b */
         public void mo7741b(C8878d dVar) {
-            C8802o0.this.f18713x = dVar;
-            Iterator it = C8802o0.this.f18700k.iterator();
+            SimpleExoPlayer.this.f18713x = dVar;
+            Iterator it = SimpleExoPlayer.this.f18700k.iterator();
             while (it.hasNext()) {
                 ((C8842n) it.next()).mo7741b(dVar);
             }
@@ -200,8 +200,8 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: c */
         public void mo7743c(C8878d dVar) {
-            C8802o0.this.f18712w = dVar;
-            Iterator it = C8802o0.this.f18699j.iterator();
+            SimpleExoPlayer.this.f18712w = dVar;
+            Iterator it = SimpleExoPlayer.this.f18699j.iterator();
             while (it.hasNext()) {
                 ((C9603r) it.next()).mo7743c(dVar);
             }
@@ -209,24 +209,24 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: d */
         public void mo7744d(C8878d dVar) {
-            Iterator it = C8802o0.this.f18699j.iterator();
+            Iterator it = SimpleExoPlayer.this.f18699j.iterator();
             while (it.hasNext()) {
                 ((C9603r) it.next()).mo7744d(dVar);
             }
-            C8802o0.this.f18704o = null;
-            C8802o0.this.f18712w = null;
+            SimpleExoPlayer.this.f18704o = null;
+            SimpleExoPlayer.this.f18712w = null;
         }
 
         public void onLoadingChanged(boolean z) {
-            if (C8802o0.this.f18689F == null) {
+            if (SimpleExoPlayer.this.f18689F == null) {
                 return;
             }
-            if (z && !C8802o0.this.f18690G) {
-                C8802o0.this.f18689F.mo24725a(0);
-                C8802o0.this.f18690G = true;
-            } else if (!z && C8802o0.this.f18690G) {
-                C8802o0.this.f18689F.mo24728d(0);
-                C8802o0.this.f18690G = false;
+            if (z && !SimpleExoPlayer.this.f18690G) {
+                SimpleExoPlayer.this.f18689F.mo24725a(0);
+                SimpleExoPlayer.this.f18690G = true;
+            } else if (!z && SimpleExoPlayer.this.f18690G) {
+                SimpleExoPlayer.this.f18689F.mo24728d(0);
+                SimpleExoPlayer.this.f18690G = false;
             }
         }
 
@@ -259,18 +259,18 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
         }
 
         public void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int i, int i2) {
-            C8802o0.this.m25452a(new Surface(surfaceTexture), true);
-            C8802o0.this.m25451a(i, i2);
+            SimpleExoPlayer.this.m25452a(new Surface(surfaceTexture), true);
+            SimpleExoPlayer.this.m25451a(i, i2);
         }
 
         public boolean onSurfaceTextureDestroyed(SurfaceTexture surfaceTexture) {
-            C8802o0.this.m25452a((Surface) null, true);
-            C8802o0.this.m25451a(0, 0);
+            SimpleExoPlayer.this.m25452a((Surface) null, true);
+            SimpleExoPlayer.this.m25451a(0, 0);
             return true;
         }
 
         public void onSurfaceTextureSizeChanged(SurfaceTexture surfaceTexture, int i, int i2) {
-            C8802o0.this.m25451a(i, i2);
+            SimpleExoPlayer.this.m25451a(i, i2);
         }
 
         public void onSurfaceTextureUpdated(SurfaceTexture surfaceTexture) {
@@ -285,22 +285,22 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
         }
 
         public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
-            C8802o0.this.m25451a(i2, i3);
+            SimpleExoPlayer.this.m25451a(i2, i3);
         }
 
         public void surfaceCreated(SurfaceHolder surfaceHolder) {
-            C8802o0.this.m25452a(surfaceHolder.getSurface(), false);
+            SimpleExoPlayer.this.m25452a(surfaceHolder.getSurface(), false);
         }
 
         public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-            C8802o0.this.m25452a((Surface) null, false);
-            C8802o0.this.m25451a(0, 0);
+            SimpleExoPlayer.this.m25452a((Surface) null, false);
+            SimpleExoPlayer.this.m25451a(0, 0);
         }
 
         /* renamed from: a */
         public void mo7737a(Format format) {
-            C8802o0.this.f18704o = format;
-            Iterator it = C8802o0.this.f18699j.iterator();
+            SimpleExoPlayer.this.f18704o = format;
+            Iterator it = SimpleExoPlayer.this.f18699j.iterator();
             while (it.hasNext()) {
                 ((C9603r) it.next()).mo7737a(format);
             }
@@ -308,7 +308,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: b */
         public void mo7742b(String str, long j, long j2) {
-            Iterator it = C8802o0.this.f18700k.iterator();
+            Iterator it = SimpleExoPlayer.this.f18700k.iterator();
             while (it.hasNext()) {
                 ((C8842n) it.next()).mo7742b(str, j, j2);
             }
@@ -316,7 +316,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: a */
         public void mo7734a(int i, long j) {
-            Iterator it = C8802o0.this.f18699j.iterator();
+            Iterator it = SimpleExoPlayer.this.f18699j.iterator();
             while (it.hasNext()) {
                 ((C9603r) it.next()).mo7734a(i, j);
             }
@@ -324,8 +324,8 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: b */
         public void mo7740b(Format format) {
-            C8802o0.this.f18705p = format;
-            Iterator it = C8802o0.this.f18700k.iterator();
+            SimpleExoPlayer.this.f18705p = format;
+            Iterator it = SimpleExoPlayer.this.f18700k.iterator();
             while (it.hasNext()) {
                 ((C8842n) it.next()).mo7740b(format);
             }
@@ -333,14 +333,14 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: a */
         public void mo7733a(int i, int i2, int i3, float f) {
-            Iterator it = C8802o0.this.f18695f.iterator();
+            Iterator it = SimpleExoPlayer.this.f18695f.iterator();
             while (it.hasNext()) {
                 C9602q qVar = (C9602q) it.next();
-                if (!C8802o0.this.f18699j.contains(qVar)) {
+                if (!SimpleExoPlayer.this.f18699j.contains(qVar)) {
                     qVar.mo7573a(i, i2, i3, f);
                 }
             }
-            Iterator it2 = C8802o0.this.f18699j.iterator();
+            Iterator it2 = SimpleExoPlayer.this.f18699j.iterator();
             while (it2.hasNext()) {
                 ((C9603r) it2.next()).mo7733a(i, i2, i3, f);
             }
@@ -348,19 +348,19 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: b */
         public void mo23011b(int i) {
-            C8802o0 o0Var = C8802o0.this;
+            SimpleExoPlayer o0Var = SimpleExoPlayer.this;
             o0Var.m25456a(o0Var.getPlayWhenReady(), i);
         }
 
         /* renamed from: a */
         public void mo7736a(Surface surface) {
-            if (C8802o0.this.f18706q == surface) {
-                Iterator it = C8802o0.this.f18695f.iterator();
+            if (SimpleExoPlayer.this.f18706q == surface) {
+                Iterator it = SimpleExoPlayer.this.f18695f.iterator();
                 while (it.hasNext()) {
                     ((C9602q) it.next()).mo7571a();
                 }
             }
-            Iterator it2 = C8802o0.this.f18699j.iterator();
+            Iterator it2 = SimpleExoPlayer.this.f18699j.iterator();
             while (it2.hasNext()) {
                 ((C9603r) it2.next()).mo7736a(surface);
             }
@@ -368,16 +368,16 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: a */
         public void mo7732a(int i) {
-            if (C8802o0.this.f18714y != i) {
-                C8802o0.this.f18714y = i;
-                Iterator it = C8802o0.this.f18696g.iterator();
+            if (SimpleExoPlayer.this.f18714y != i) {
+                SimpleExoPlayer.this.f18714y = i;
+                Iterator it = SimpleExoPlayer.this.f18696g.iterator();
                 while (it.hasNext()) {
                     C8839l lVar = (C8839l) it.next();
-                    if (!C8802o0.this.f18700k.contains(lVar)) {
+                    if (!SimpleExoPlayer.this.f18700k.contains(lVar)) {
                         lVar.mo7732a(i);
                     }
                 }
-                Iterator it2 = C8802o0.this.f18700k.iterator();
+                Iterator it2 = SimpleExoPlayer.this.f18700k.iterator();
                 while (it2.hasNext()) {
                     ((C8842n) it2.next()).mo7732a(i);
                 }
@@ -386,7 +386,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: a */
         public void mo7735a(int i, long j, long j2) {
-            Iterator it = C8802o0.this.f18700k.iterator();
+            Iterator it = SimpleExoPlayer.this.f18700k.iterator();
             while (it.hasNext()) {
                 ((C8842n) it.next()).mo7735a(i, j, j2);
             }
@@ -394,19 +394,19 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: a */
         public void mo7738a(C8878d dVar) {
-            Iterator it = C8802o0.this.f18700k.iterator();
+            Iterator it = SimpleExoPlayer.this.f18700k.iterator();
             while (it.hasNext()) {
                 ((C8842n) it.next()).mo7738a(dVar);
             }
-            C8802o0.this.f18705p = null;
-            C8802o0.this.f18713x = null;
-            C8802o0.this.f18714y = 0;
+            SimpleExoPlayer.this.f18705p = null;
+            SimpleExoPlayer.this.f18713x = null;
+            SimpleExoPlayer.this.f18714y = 0;
         }
 
         /* renamed from: a */
         public void mo7574a(List<C9322b> list) {
-            C8802o0.this.f18685B = list;
-            Iterator it = C8802o0.this.f18697h.iterator();
+            SimpleExoPlayer.this.f18685B = list;
+            Iterator it = SimpleExoPlayer.this.f18697h.iterator();
             while (it.hasNext()) {
                 ((C9332k) it.next()).mo7574a(list);
             }
@@ -414,7 +414,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: a */
         public void mo7577a(Metadata metadata) {
-            Iterator it = C8802o0.this.f18698i.iterator();
+            Iterator it = SimpleExoPlayer.this.f18698i.iterator();
             while (it.hasNext()) {
                 ((C8743e) it.next()).mo7577a(metadata);
             }
@@ -422,11 +422,11 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
 
         /* renamed from: a */
         public void mo23010a(float f) {
-            C8802o0.this.mo7653m();
+            SimpleExoPlayer.this.mo7653m();
         }
     }
 
-    protected C8802o0(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, BandwidthMeter bandwidthMeter, C8710l<C8713o> lVar, Looper looper) {
+    protected SimpleExoPlayer(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, BandwidthMeter bandwidthMeter, C8710l<C8713o> lVar, Looper looper) {
         this(context, renderersFactory, trackSelector, loadControl, lVar, bandwidthMeter, new C8674a(), looper);
     }
 
@@ -435,7 +435,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
         TextureView textureView = this.f18709t;
         if (textureView != null) {
             if (textureView.getSurfaceTextureListener() != this.f18694e) {
-                C9563q.m29500d("SimpleExoPlayer", "SurfaceTextureListener already unset or replaced.");
+                Log.m29500d("SimpleExoPlayer", "SurfaceTextureListener already unset or replaced.");
             } else {
                 this.f18709t.setSurfaceTextureListener(null);
             }
@@ -466,7 +466,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
     /* renamed from: n */
     private void mo7654n() {
         if (Looper.myLooper() != getApplicationLooper()) {
-            C9563q.m29498b("SimpleExoPlayer", "Player is accessed on the wrong thread. See https://exoplayer.dev/issues/player-accessed-on-wrong-thread", this.f18688E ? null : new IllegalStateException());
+            Log.m29498b("SimpleExoPlayer", "Player is accessed on the wrong thread. See https://exoplayer.dev/issues/player-accessed-on-wrong-thread", this.f18688E ? null : new IllegalStateException());
             this.f18688E = true;
         }
     }
@@ -633,7 +633,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
         this.f18685B = Collections.emptyList();
     }
 
-    protected C8802o0(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, Looper looper) {
+    protected SimpleExoPlayer(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, Looper looper) {
         this(context, renderersFactory, trackSelector, loadControl, lVar, bandwidthMeter, aVar, C9542g.f22257a, looper);
     }
 
@@ -690,7 +690,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
         this.f18685B = Collections.emptyList();
     }
 
-    protected C8802o0(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, C9542g gVar, Looper looper) {
+    protected SimpleExoPlayer(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, C9542g gVar, Looper looper) {
         C8710l<C8713o> lVar2 = lVar;
         BandwidthMeter bandwidthMeter2 = bandwidthMeter;
         this.f18701l = bandwidthMeter2;
@@ -798,7 +798,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
     /* renamed from: a */
     public void mo22993a(float f) {
         mo7654n();
-        float a = C9554k0.m29379a(f, 0.0f, 1.0f);
+        float a = Util.m29379a(f, 0.0f, 1.0f);
         if (this.f18715z != a) {
             this.f18715z = a;
             mo7653m();
@@ -820,7 +820,7 @@ public class C8802o0 extends C8812p implements ExoPlayer, AudioComponent, VideoC
             return;
         }
         if (textureView.getSurfaceTextureListener() != null) {
-            C9563q.m29500d("SimpleExoPlayer", "Replacing existing SurfaceTextureListener.");
+            Log.m29500d("SimpleExoPlayer", "Replacing existing SurfaceTextureListener.");
         }
         textureView.setSurfaceTextureListener(this.f18694e);
         SurfaceTexture surfaceTexture = textureView.isAvailable() ? textureView.getSurfaceTexture() : null;

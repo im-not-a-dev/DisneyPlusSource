@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.media.drm.DefaultWidevineDrmProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.UUID;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
@@ -52,13 +52,13 @@ public final class WidevineVerifier {
                         }
                     }
                 }
-                C12880j.m40222a((Object) keyRequest, "request");
+                Intrinsics.checkReturnedValueIsNotNull((Object) keyRequest, "request");
                 bArr = keyRequest.getData();
             } catch (Throwable th) {
                 Log.d("WidevineVerifier", "Unable to generate key data", th);
                 bArr = new byte[0];
             }
-            C12880j.m40222a((Object) bArr, "try {\n                  …rray(0)\n                }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bArr, "try {\n                  …rray(0)\n                }");
             return bArr;
         }
 
@@ -100,18 +100,18 @@ public final class WidevineVerifier {
         Single single;
         if (WhenMappings.$EnumSwitchMapping$0[this.allowL1Security.ordinal()] != 1) {
             single = Single.m38399b(this.allowL1Security);
-            C12880j.m40222a((Object) single, "Single.just(allowL1Security)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) single, "Single.just(allowL1Security)");
         } else {
             single = verifyV1$sdk_core_api_release(serviceTransaction);
         }
         Single<Boolean> g = single.mo30227d((Consumer<? super T>) new WidevineVerifier$supportsV1$1<Object>(this)).mo30233g(WidevineVerifier$supportsV1$2.INSTANCE);
-        C12880j.m40222a((Object) g, "when (allowL1Security) {…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "when (allowL1Security) {…      }\n                }");
         return g;
     }
 
     public final Single<WidevineBlacklistStatus> verifyV1$sdk_core_api_release(ServiceTransaction serviceTransaction) {
         Single<WidevineBlacklistStatus> h = this.configurationProvider.getServiceConfigurations(serviceTransaction, WidevineVerifier$verifyV1$1.INSTANCE, WidevineVerifier$verifyV1$2.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) WidevineVerifier$verifyV1$3.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new WidevineVerifier$verifyV1$4<Object,Object>(this, serviceTransaction)).mo30233g(WidevineVerifier$verifyV1$5.INSTANCE).mo30235h(WidevineVerifier$verifyV1$6.INSTANCE);
-        C12880j.m40222a((Object) h, "configurationProvider.ge…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "configurationProvider.ge…      }\n                }");
         return h;
     }
 }

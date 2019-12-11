@@ -18,7 +18,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -27,7 +27,7 @@ import p163g.p503n.p504a.C11793e;
 import p520io.reactivex.C11960n;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0012\b\u0000\u0018\u0000 '2\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0003'()B-\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0006\u0010\f\u001a\u00020\r¢\u0006\u0002\u0010\u000eJ\u001c\u0010\u000f\u001a\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u00110\u00102\b\u0010\u0012\u001a\u0004\u0018\u00010\u0002J$\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u00162\u0012\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u00180\u0010H\u0002J\u001c\u0010\u0019\u001a\u00020\u00142\u0012\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u00180\u0010H\u0007J,\u0010\u001a\u001a\u00020\u00142\u0006\u0010\u001b\u001a\u00020\u00112\u0006\u0010\u0015\u001a\u00020\u00162\u0012\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u00180\u0010H\u0016J\b\u0010\u001c\u001a\u00020\u0014H\u0016J\u0010\u0010\u001d\u001a\u00020\u00142\u0006\u0010\u001e\u001a\u00020\u0011H\u0002J(\u0010\u001f\u001a\u00020\u00142\u0006\u0010 \u001a\u00020\u00112\u0006\u0010!\u001a\u00020\u00112\u0006\u0010\"\u001a\u00020\u00112\u0006\u0010#\u001a\u00020\u0011H\u0016J$\u0010$\u001a\u00020\u00142\b\u0010%\u001a\u0004\u0018\u00010\u00182\u0006\u0010\u001e\u001a\u00020\u00112\b\u0010&\u001a\u0004\u0018\u00010\u0011H\u0002R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\rX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000¨\u0006*"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/analytics/glimpse/GlimpseAnalyticsViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/analytics/glimpse/GlimpseAnalyticsViewModel$State;", "Lcom/bamtechmedia/dominguez/analytics/GlimpseAnalytics;", "extrasGenerator", "Lcom/bamtechmedia/dominguez/analytics/glimpse/GlimpseExtrasGenerator;", "glimpseWrapper", "Lcom/bamtechmedia/dominguez/analytics/glimpse/GlimpseWrapper;", "activePageTracker", "Lcom/bamtechmedia/dominguez/analytics/ActivePageTracker;", "platformAnalyticsContributor", "Lcom/bamtechmedia/dominguez/analytics/contributors/PlatformAnalyticsContributor;", "config", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsConfig;", "(Lcom/bamtechmedia/dominguez/analytics/glimpse/GlimpseExtrasGenerator;Lcom/bamtechmedia/dominguez/analytics/glimpse/GlimpseWrapper;Lcom/bamtechmedia/dominguez/analytics/ActivePageTracker;Lcom/bamtechmedia/dominguez/analytics/contributors/PlatformAnalyticsContributor;Lcom/bamtechmedia/dominguez/analytics/AnalyticsConfig;)V", "createGlimpsePlaybackExitExtras", "", "", "currentState", "generateGlimpseEventCall", "", "event", "Lcom/bamtech/sdk4/useractivity/GlimpseEvent;", "extras", "", "trackContentSelected", "trackEvent", "action", "trackPageLoad", "trackPendingEventsAndClear", "activePage", "trackSessionStart", "fguid", "playbackSessionId", "contentId", "mediaId", "trackViewLoaded", "experimentToken", "transactionId", "Companion", "GlimpseEventParams", "State", "analytics_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.analytics.n0.a */
@@ -64,7 +64,7 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
             StringBuilder sb = new StringBuilder();
             sb.append("New GlimpseAnalyticsViewModel state ");
             sb.append(eVar);
-            C14100a.m44529c(sb.toString(), new Object[0]);
+            Timber.m44529c(sb.toString(), new Object[0]);
         }
     }
 
@@ -80,7 +80,7 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error in GlimpseAnalyticsViewModel state stream", new Object[0]);
+            Timber.m44528b(th, "Error in GlimpseAnalyticsViewModel state stream", new Object[0]);
         }
     }
 
@@ -121,7 +121,7 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f6672b, (java.lang.Object) r3.f6672b) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f6672b, (java.lang.Object) r3.f6672b) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -133,11 +133,11 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
                 com.bamtechmedia.dominguez.analytics.n0.a$d r3 = (com.bamtechmedia.dominguez.analytics.p056n0.C2414a.C2418d) r3
                 com.bamtech.sdk4.useractivity.GlimpseEvent r0 = r2.f6671a
                 com.bamtech.sdk4.useractivity.GlimpseEvent r1 = r3.f6671a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 java.util.Map<java.lang.String, java.lang.Object> r0 = r2.f6672b
                 java.util.Map<java.lang.String, java.lang.Object> r3 = r3.f6672b
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -282,7 +282,7 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:14:0x0042, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f6678f, (java.lang.Object) r3.f6678f) != false) goto L_0x0047;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f6678f, (java.lang.Object) r3.f6678f) != false) goto L_0x0047;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -294,27 +294,27 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
                 com.bamtechmedia.dominguez.analytics.n0.a$e r3 = (com.bamtechmedia.dominguez.analytics.p056n0.C2414a.C2419e) r3
                 java.lang.String r0 = r2.f6673a
                 java.lang.String r1 = r3.f6673a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.util.List<com.bamtechmedia.dominguez.analytics.n0.a$d> r0 = r2.f6674b
                 java.util.List<com.bamtechmedia.dominguez.analytics.n0.a$d> r1 = r3.f6674b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.lang.String r0 = r2.f6675c
                 java.lang.String r1 = r3.f6675c
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.lang.String r0 = r2.f6676d
                 java.lang.String r1 = r3.f6676d
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.lang.String r0 = r2.f6677e
                 java.lang.String r1 = r3.f6677e
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.lang.String r0 = r2.f6678f
                 java.lang.String r3 = r3.f6678f
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0045
                 goto L_0x0047
             L_0x0045:
@@ -402,7 +402,7 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
 
         /* renamed from: a */
         public final void mo11557a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -410,7 +410,7 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -507,7 +507,7 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
         C2419e eVar2 = new C2419e("", C13185o.m40513a(), null, null, null, null, 60, null);
         createState(eVar2);
         Object a = getState().mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(C2415a.f6669c, C2416b.f6670c);
     }
 
@@ -594,15 +594,15 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
     public void mo11536a(String str, GlimpseEvent glimpseEvent, Map<String, ? extends Object> map) {
         Map a = C2426c.m8985a(this.f6668c, this.f6665V.mo11446a(str), null, 2, null);
         if (!this.f6667X.mo11490a("glimpse", glimpseEvent.getEventUrn())) {
-            if (C12880j.m40224a((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getAppLaunched())) {
+            if (Intrinsics.areEqual((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getAppLaunched())) {
                 m8961a(glimpseEvent, C13173j0.m40353a(C13173j0.m40354a((Map) map, C12907r.m40244a("platformDeviceIds", C13170i0.m40332a(C12907r.m40244a("adid", this.f6666W.mo11528b())))), C2426c.m8985a(this.f6668c, null, null, 3, null)));
-            } else if (C12880j.m40224a((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getContentSelected())) {
+            } else if (Intrinsics.areEqual((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getContentSelected())) {
                 mo11538a(C13173j0.m40353a(a, (Map) map));
-            } else if (C12880j.m40224a((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getPlaybackExited())) {
+            } else if (Intrinsics.areEqual((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getPlaybackExited())) {
                 m8961a(glimpseEvent, C13173j0.m40353a(C13173j0.m40353a((Map) map, mo11535a((C2419e) getCurrentState())), C2426c.m8985a(this.f6668c, null, null, 3, null)));
-            } else if (C12880j.m40224a((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getPlaybackSelected())) {
+            } else if (Intrinsics.areEqual((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getPlaybackSelected())) {
                 m8961a(glimpseEvent, C5859p.m18899a(C13173j0.m40354a((Map) map, C12907r.m40244a(StreamSampleTelemetryData.TIMESTAMP_KEY, C2335a0.f6535b.mo11444a())), "contentTransactionId", this.f6665V.mo11448c()));
-            } else if (C12880j.m40224a((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getPurchaseCompleted())) {
+            } else if (Intrinsics.areEqual((Object) glimpseEvent, (Object) GlimpseEvent.Companion.getPurchaseCompleted())) {
                 C2419e eVar = (C2419e) getCurrentState();
                 m8961a(glimpseEvent, C13173j0.m40353a((Map) map, C2426c.m8985a(this.f6668c, null, eVar != null ? eVar.mo11551d() : null, 1, null)));
             } else {
@@ -628,7 +628,7 @@ public final class C2414a extends C5741g<C2419e> implements C2476z {
             g.n.a.h r4 = p163g.p503n.p504a.C11793e.m37930a(r4)
             java.lang.Object r3 = r3.mo30048a(r4)
             java.lang.String r4 = "this.`as`(AutoDispose.au…isposable<Any>(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             g.n.a.v r3 = (p163g.p503n.p504a.C11839v) r3
             com.bamtechmedia.dominguez.analytics.n0.a$f r4 = com.bamtechmedia.dominguez.analytics.p056n0.C2414a.C2420f.f6679a
             com.bamtechmedia.dominguez.analytics.n0.a$g r0 = com.bamtechmedia.dominguez.analytics.p056n0.C2414a.C2421g.f6680c

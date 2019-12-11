@@ -16,7 +16,7 @@ import javax.inject.Provider;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11968q;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.MaybeSource;
@@ -122,7 +122,7 @@ public final class DustEventBuffer implements EventBuffer {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.fileName, (java.lang.Object) r3.fileName) != false) goto L_0x0029;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.fileName, (java.lang.Object) r3.fileName) != false) goto L_0x0029;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r3) {
@@ -134,15 +134,15 @@ public final class DustEventBuffer implements EventBuffer {
                     com.bamtech.sdk4.internal.telemetry.DustEventBuffer$TelemetryProcessingRequest$PostedEvent r3 = (com.bamtech.sdk4.internal.telemetry.DustEventBuffer.TelemetryProcessingRequest.PostedEvent) r3
                     com.bamtech.sdk4.internal.telemetry.TelemetryEvent<?, ?> r0 = r2.data
                     com.bamtech.sdk4.internal.telemetry.TelemetryEvent<?, ?> r1 = r3.data
-                    boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                    boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                     if (r0 == 0) goto L_0x0027
                     com.bamtech.sdk4.internal.telemetry.RequestType r0 = r2.type
                     com.bamtech.sdk4.internal.telemetry.RequestType r1 = r3.type
-                    boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                    boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                     if (r0 == 0) goto L_0x0027
                     java.lang.String r0 = r2.fileName
                     java.lang.String r3 = r3.fileName
-                    boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                    boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                     if (r3 == 0) goto L_0x0027
                     goto L_0x0029
                 L_0x0027:
@@ -230,7 +230,7 @@ public final class DustEventBuffer implements EventBuffer {
         this.configExtras = function12;
         this.name = str;
         PublishSubject<TelemetryProcessingRequest> q = PublishSubject.m38553q();
-        C12880j.m40222a((Object) q, "PublishSubject.create<Te…metryProcessingRequest>()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) q, "PublishSubject.create<Te…metryProcessingRequest>()");
         this.publisher = q;
         this.isProcessing = new AtomicBoolean(false);
         this.compositeDisposable = new CompositeDisposable();
@@ -240,9 +240,9 @@ public final class DustEventBuffer implements EventBuffer {
     public final Single<Pair<Long, TelemetryProcessingRequest>> dispatchRequest(Map<String, String> map, TelemetryProcessingRequest telemetryProcessingRequest) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         AccessTokenProvider accessTokenProvider = this.tokenProvider;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Single<Pair<Long, TelemetryProcessingRequest>> i = accessTokenProvider.getStoredAccessToken(serviceTransaction).mo30116b((Consumer<? super Disposable>) new DustEventBuffer$dispatchRequest$1<Object>(this, serviceTransaction, map)).mo30128d(new DustEventBuffer$dispatchRequest$2(this, map, serviceTransaction)).mo30227d((Consumer<? super T>) new DustEventBuffer$dispatchRequest$3<Object>(this, serviceTransaction, map)).mo30233g(new DustEventBuffer$dispatchRequest$4(telemetryProcessingRequest)).mo30237i(new DustEventBuffer$dispatchRequest$5(this, serviceTransaction, telemetryProcessingRequest, map));
-        C12880j.m40222a((Object) i, "tokenProvider.getStoredA…equest)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "tokenProvider.getStoredA…equest)\n                }");
         return i;
     }
 
@@ -273,7 +273,7 @@ public final class DustEventBuffer implements EventBuffer {
 
     public final void initialize$sdk_core_api_release(TelemetryProcessingRequest telemetryProcessingRequest) {
         PublishSubject<TelemetryProcessingRequest> q = PublishSubject.m38553q();
-        C12880j.m40222a((Object) q, "PublishSubject.create<Te…metryProcessingRequest>()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) q, "PublishSubject.create<Te…metryProcessingRequest>()");
         this.publisher = q;
         this.chain = this.publisher.mo30195h().mo30189e((Function<? super T, ? extends MaybeSource<? extends R>>) new DustEventBuffer$initialize$1<Object,Object>(this, (ServiceTransaction) this.transactionProvider.get())).mo30150a((C11952h<? super T>) new DustEventBuffer$initialize$2<Object>(this)).mo30150a((C11952h<? super T>) new DustEventBuffer$initialize$3<Object>(this)).mo30193g(new DustEventBuffer$initialize$4(this)).mo30191f((Function<? super T, ? extends SingleSource<? extends R>>) new DustEventBuffer$initialize$5<Object,Object>(this)).mo30178c((Function<? super T, ? extends ObservableSource<? extends R>>) new DustEventBuffer$initialize$6<Object,Object>(this)).mo30193g(DustEventBuffer$initialize$7.INSTANCE).mo30198i(DustEventBuffer$initialize$8.INSTANCE).mo30184d((Consumer<? super T>) new DustEventBuffer$initialize$9<Object>(this)).mo30148a((C11945a) new DustEventBuffer$initialize$10(this)).mo30194g().mo30683c(this.autoConnectCount);
         Observable<TelemetryProcessingRequest> observable = this.chain;
@@ -299,18 +299,18 @@ public final class DustEventBuffer implements EventBuffer {
     public <T extends TelemetryEvent<?, ?>> void postEvent(T t, RequestType requestType) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         ConfigurationProvider configurationProvider2 = this.configurationProvider;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Disposable a = configurationProvider2.getServiceConfigurationExtras(serviceTransaction, this.serviceExtras).mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new DustEventBuffer$postEvent$disposable$1<Object,Object>(this, serviceTransaction, t, requestType)).mo30111a((Consumer<? super T>) DustEventBuffer$postEvent$disposable$2.INSTANCE, (Consumer<? super Throwable>) new DustEventBuffer$postEvent$disposable$3<Object>(this, serviceTransaction), (C11945a) DustEventBuffer$postEvent$disposable$4.INSTANCE);
-        C12880j.m40222a((Object) a, "configurationProvider.ge… }, {\n\n                })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge… }, {\n\n                })");
         this.compositeDisposable.mo30250b(a);
     }
 
     public final <T extends TelemetryEvent<?, ?>> Maybe<Long> postFastEvent$sdk_core_api_release(T t) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         AccessTokenProvider accessTokenProvider = this.tokenProvider;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Maybe<Long> c = accessTokenProvider.getStoredAccessToken(serviceTransaction).mo30128d(new DustEventBuffer$postFastEvent$1(this, serviceTransaction, t)).mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new DustEventBuffer$postFastEvent$2<Object,Object>(this)).mo30102a((Consumer<? super Throwable>) new DustEventBuffer$postFastEvent$3<Object>(this, serviceTransaction, t)).mo30123c((Consumer<? super T>) new DustEventBuffer$postFastEvent$4<Object>(this));
-        C12880j.m40222a((Object) c, "tokenProvider.getStoredA…tion())\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "tokenProvider.getStoredA…tion())\n                }");
         return c;
     }
 

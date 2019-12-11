@@ -11,13 +11,13 @@ import android.media.UnsupportedSchemeException;
 import android.text.TextUtils;
 import com.google.android.exoplayer2.C8883r;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
-import com.google.android.exoplayer2.drm.ExoMediaDrm.C8695a;
+import com.google.android.exoplayer2.drm.ExoMediaDrm.OnKeyStatusChangeListener;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.KeyRequest;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.ProvisionRequest;
 import com.google.android.exoplayer2.p366s0.p371v.C8980k;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -38,10 +38,10 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
 
     private FrameworkMediaDrm(UUID uuid) throws UnsupportedSchemeException {
         C9537e.m29296a(uuid);
-        C9537e.m29300a(!C8883r.f19043b.equals(uuid), (Object) "Use C.CLEARKEY_UUID instead");
+        C9537e.m29300a(!C8883r.COMMON_PSSH_UUID.equals(uuid), (Object) "Use C.CLEARKEY_UUID instead");
         this.f18473a = uuid;
         this.f18474b = new MediaDrm(m25191a(uuid));
-        if (C8883r.f19045d.equals(uuid) && m25196c()) {
+        if (C8883r.WIDEVINE_UUID.equals(uuid) && m25196c()) {
             m25192a(this.f18474b);
         }
     }
@@ -61,7 +61,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
             }
             int indexOf = a.indexOf("</DATA>");
             if (indexOf == -1) {
-                C9563q.m29500d(str, "Could not find the </DATA> tag. Skipping LA_URL workaround.");
+                Log.m29500d(str, "Could not find the </DATA> tag. Skipping LA_URL workaround.");
             }
             StringBuilder sb = new StringBuilder();
             sb.append(a.substring(0, indexOf));
@@ -78,12 +78,12 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
             allocate.put(sb2.getBytes(Charset.forName(str2)));
             return allocate.array();
         }
-        C9563q.m29499c(str, "Unexpected record count or type. Skipping LA_URL workaround.");
+        Log.m29499c(str, "Unexpected record count or type. Skipping LA_URL workaround.");
         return bArr;
     }
 
     /* renamed from: a */
-    public void mo22778a(C8695a<? super C8713o> aVar) {
+    public void mo22778a(OnKeyStatusChangeListener<? super C8713o> aVar) {
         this.f18474b.setOnEventListener(aVar == null ? null : new C8699d(this, aVar));
     }
 
@@ -110,12 +110,12 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
 
     /* renamed from: c */
     private static boolean m25196c() {
-        return "ASUS_Z00AD".equals(C9554k0.f22284d);
+        return "ASUS_Z00AD".equals(Util.MODEL);
     }
 
     /* renamed from: a */
-    public /* synthetic */ void mo22791a(C8695a aVar, MediaDrm mediaDrm, byte[] bArr, int i, int i2, byte[] bArr2) {
-        aVar.mo22747a(this, bArr, i, i2, bArr2);
+    public /* synthetic */ void mo22791a(OnKeyStatusChangeListener aVar, MediaDrm mediaDrm, byte[] bArr, int i, int i2, byte[] bArr2) {
+        aVar.onKeyStatusChange(this, bArr, i, i2, bArr2);
     }
 
     /* renamed from: a */
@@ -153,7 +153,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
 
     /* renamed from: b */
     public byte[] mo22783b(byte[] bArr, byte[] bArr2) throws NotProvisionedException, DeniedByServerException {
-        if (C8883r.f19044c.equals(this.f18473a)) {
+        if (C8883r.CLEARKEY_UUID.equals(this.f18473a)) {
             bArr2 = C8703h.m25221b(bArr2);
         }
         return this.f18474b.provideKeyResponse(bArr, bArr2);
@@ -162,7 +162,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
     /* renamed from: b */
     public C8713o m25207b(byte[] bArr) throws MediaCryptoException {
         boolean z;
-        if (C9554k0.f22281a < 21 && C8883r.f19045d.equals(this.f18473a)) {
+        if (Util.SDK_INT < 21 && C8883r.WIDEVINE_UUID.equals(this.f18473a)) {
             if ("L3".equals(mo22790a("securityLevel"))) {
                 z = true;
                 return new C8713o(m25191a(this.f18473a), bArr, z);
@@ -173,13 +173,13 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:19:0x0056, code lost:
-        if ("AFTM".equals(com.google.android.exoplayer2.p393v0.C9554k0.f22284d) != false) goto L_0x0058;
+        if ("AFTM".equals(com.google.android.exoplayer2.p393v0.Util.MODEL) != false) goto L_0x0058;
      */
     /* renamed from: b */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private static byte[] m25195b(java.util.UUID r2, byte[] r3) {
         /*
-            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.f19046e
+            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
             boolean r0 = r0.equals(r2)
             if (r0 == 0) goto L_0x001a
             byte[] r0 = com.google.android.exoplayer2.p366s0.p371v.C8980k.m26493a(r3, r2)
@@ -188,33 +188,33 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
         L_0x000f:
             r3 = r0
         L_0x0010:
-            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.f19046e
+            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
             byte[] r3 = m25197e(r3)
             byte[] r3 = com.google.android.exoplayer2.p366s0.p371v.C8980k.m26491a(r0, r3)
         L_0x001a:
-            int r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             r1 = 21
             if (r0 >= r1) goto L_0x0028
-            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.f19045d
+            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.WIDEVINE_UUID
             boolean r0 = r0.equals(r2)
             if (r0 != 0) goto L_0x0058
         L_0x0028:
-            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.f19046e
+            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
             boolean r0 = r0.equals(r2)
             if (r0 == 0) goto L_0x005f
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22283c
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
             java.lang.String r1 = "Amazon"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x005f
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "AFTB"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x0058
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "AFTS"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x0058
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "AFTM"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x005f
@@ -257,10 +257,10 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
     /* renamed from: a */
     private static C8692b m25189a(UUID uuid, List<C8692b> list) {
         boolean z;
-        if (!C8883r.f19045d.equals(uuid)) {
+        if (!C8883r.WIDEVINE_UUID.equals(uuid)) {
             return (C8692b) list.get(0);
         }
-        if (C9554k0.f22281a >= 28 && list.size() > 1) {
+        if (Util.SDK_INT >= 28 && list.size() > 1) {
             C8692b bVar = (C8692b) list.get(0);
             int i = 0;
             int i2 = 0;
@@ -271,9 +271,9 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
                 }
                 C8692b bVar2 = (C8692b) list.get(i);
                 byte[] bArr = bVar2.f18466X;
-                C9554k0.m29394a(bArr);
+                Util.castNonNull(bArr);
                 byte[] bArr2 = bArr;
-                if (bVar2.f18467Y != bVar.f18467Y || !C9554k0.m29414a((Object) bVar2.f18465W, (Object) bVar.f18465W) || !C9554k0.m29414a((Object) bVar2.f18464V, (Object) bVar.f18464V) || !C8980k.m26490a(bArr2)) {
+                if (bVar2.f18467Y != bVar.f18467Y || !Util.m29414a((Object) bVar2.f18465W, (Object) bVar.f18465W) || !Util.m29414a((Object) bVar2.f18464V, (Object) bVar.f18464V) || !C8980k.m26490a(bArr2)) {
                     z = false;
                 } else {
                     i2 += bArr2.length;
@@ -286,7 +286,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
                 int i3 = 0;
                 for (int i4 = 0; i4 < list.size(); i4++) {
                     byte[] bArr4 = ((C8692b) list.get(i4)).f18466X;
-                    C9554k0.m29394a(bArr4);
+                    Util.castNonNull(bArr4);
                     byte[] bArr5 = bArr4;
                     int length = bArr5.length;
                     System.arraycopy(bArr5, 0, bArr3, i3, length);
@@ -298,12 +298,12 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
         for (int i5 = 0; i5 < list.size(); i5++) {
             C8692b bVar3 = (C8692b) list.get(i5);
             byte[] bArr6 = bVar3.f18466X;
-            C9554k0.m29394a(bArr6);
+            Util.castNonNull(bArr6);
             int d = C8980k.m26496d(bArr6);
-            if (C9554k0.f22281a < 23 && d == 0) {
+            if (Util.SDK_INT < 23 && d == 0) {
                 return bVar3;
             }
-            if (C9554k0.f22281a >= 23 && d == 1) {
+            if (Util.SDK_INT >= 23 && d == 1) {
                 return bVar3;
             }
         }
@@ -312,17 +312,17 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
 
     /* renamed from: a */
     private static UUID m25191a(UUID uuid) {
-        return (C9554k0.f22281a >= 27 || !C8883r.f19044c.equals(uuid)) ? uuid : C8883r.f19043b;
+        return (Util.SDK_INT >= 27 || !C8883r.CLEARKEY_UUID.equals(uuid)) ? uuid : C8883r.COMMON_PSSH_UUID;
     }
 
     /* renamed from: a */
     private static String m25190a(UUID uuid, String str) {
-        return (C9554k0.f22281a >= 26 || !C8883r.f19044c.equals(uuid) || (!"video/mp4".equals(str) && !"audio/mp4".equals(str))) ? str : "cenc";
+        return (Util.SDK_INT >= 26 || !C8883r.CLEARKEY_UUID.equals(uuid) || (!"video/mp4".equals(str) && !"audio/mp4".equals(str))) ? str : "cenc";
     }
 
     /* renamed from: a */
     private static byte[] m25193a(UUID uuid, byte[] bArr) {
-        return C8883r.f19044c.equals(uuid) ? C8703h.m25219a(bArr) : bArr;
+        return C8883r.CLEARKEY_UUID.equals(uuid) ? C8703h.m25219a(bArr) : bArr;
     }
 
     @SuppressLint({"WrongConstant"})

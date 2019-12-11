@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 import p163g.p201e.p203b.p286j.C7290d;
 import p163g.p201e.p203b.p286j.C7290d.C7291a;
@@ -63,7 +63,7 @@ public final class C6419a implements C7290d {
         C6334b bVar = this.f14562b;
         Context context = this.f14561a;
         String group = matcher.group(1);
-        C12880j.m40222a((Object) group, "matcher.group(1)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) group, "matcher.group(1)");
         return bVar.mo18948a(context, group);
     }
 }

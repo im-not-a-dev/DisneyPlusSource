@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.metadata.deserialization;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: BinaryVersion.kt */
 public abstract class BinaryVersion {
@@ -40,9 +40,9 @@ public abstract class BinaryVersion {
     }
 
     public boolean equals(Object obj) {
-        if (obj != null && C12880j.m40224a((Object) getClass(), (Object) obj.getClass())) {
+        if (obj != null && Intrinsics.areEqual((Object) getClass(), (Object) obj.getClass())) {
             BinaryVersion binaryVersion = (BinaryVersion) obj;
-            if (this.major == binaryVersion.major && this.minor == binaryVersion.minor && this.patch == binaryVersion.patch && C12880j.m40224a((Object) this.rest, (Object) binaryVersion.rest)) {
+            if (this.major == binaryVersion.major && this.minor == binaryVersion.minor && this.patch == binaryVersion.patch && Intrinsics.areEqual((Object) this.rest, (Object) binaryVersion.rest)) {
                 return true;
             }
         }

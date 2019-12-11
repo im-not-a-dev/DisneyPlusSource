@@ -18,7 +18,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -97,7 +97,7 @@ public final class C2262f extends C5741g<C2266d> {
 
         /* renamed from: a */
         public final void mo11306a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -160,7 +160,7 @@ public final class C2262f extends C5741g<C2266d> {
                 com.bamtech.sdk4.session.SessionEntitlement r5 = (com.bamtech.sdk4.session.SessionEntitlement) r5
                 java.lang.String r5 = r5.getName()
                 java.lang.String r0 = "DISNEY_EXEC"
-                boolean r5 = kotlin.jvm.internal.C12880j.m40224a(r5, r0)
+                boolean r5 = kotlin.jvm.internal.Intrinsics.areEqual(r5, r0)
                 if (r5 == 0) goto L_0x0027
                 r2 = 1
             L_0x0040:
@@ -233,7 +233,7 @@ public final class C2262f extends C5741g<C2266d> {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f6398e, (java.lang.Object) r3.f6398e) != false) goto L_0x0033;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f6398e, (java.lang.Object) r3.f6398e) != false) goto L_0x0033;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -245,19 +245,19 @@ public final class C2262f extends C5741g<C2266d> {
                 com.bamtechmedia.dominguez.about.f$d r3 = (com.bamtechmedia.dominguez.about.C2262f.C2266d) r3
                 com.bamtechmedia.dominguez.config.e r0 = r2.f6395b
                 com.bamtechmedia.dominguez.config.e r1 = r3.f6395b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0031
                 com.bamtech.sdk4.session.SessionInfo r0 = r2.f6396c
                 com.bamtech.sdk4.session.SessionInfo r1 = r3.f6396c
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0031
                 com.bamtechmedia.dominguez.profiles.c0 r0 = r2.f6397d
                 com.bamtechmedia.dominguez.profiles.c0 r1 = r3.f6397d
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0031
                 java.util.List<androidx.work.WorkInfo> r0 = r2.f6398e
                 java.util.List<androidx.work.WorkInfo> r3 = r3.f6398e
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0031
                 goto L_0x0033
             L_0x0031:
@@ -343,13 +343,13 @@ public final class C2262f extends C5741g<C2266d> {
 
             public final T get() {
                 Object obj = this.f6402a.f6399a.get();
-                C12880j.m40222a(obj, "profilesMemoryCacheProvider.get()");
+                Intrinsics.checkReturnedValueIsNotNull(obj, "profilesMemoryCacheProvider.get()");
                 C6627c1 c1Var = (C6627c1) obj;
                 Object obj2 = this.f6402a.f6400b.get();
-                C12880j.m40222a(obj2, "sessionOnceProvider.get()");
+                Intrinsics.checkReturnedValueIsNotNull(obj2, "sessionOnceProvider.get()");
                 Single single = (Single) obj2;
                 Object obj3 = this.f6402a.f6401c.get();
-                C12880j.m40222a(obj3, "appConfigMapProvider.get()");
+                Intrinsics.checkReturnedValueIsNotNull(obj3, "appConfigMapProvider.get()");
                 return new C2262f(c1Var, single, (C3524e) obj3);
             }
         }
@@ -363,7 +363,7 @@ public final class C2262f extends C5741g<C2266d> {
         /* renamed from: a */
         public final C2262f mo11316a(Fragment fragment) {
             C0741y a = C5856o0.m18893a(fragment, C2262f.class, (Provider<T>) new C2268a<T>(this));
-            C12880j.m40222a((Object) a, "ViewModelUtils.getViewMo…:class.java) { create() }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "ViewModelUtils.getViewMo…:class.java) { create() }");
             return (C2262f) a;
         }
     }
@@ -407,7 +407,7 @@ public final class C2262f extends C5741g<C2266d> {
             /* renamed from: a */
             public final C2266d invoke(C2266d dVar) {
                 List list = this.f6405c;
-                C12880j.m40222a((Object) list, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list, "it");
                 if (!(!list.isEmpty())) {
                     list = null;
                 }
@@ -437,7 +437,7 @@ public final class C2262f extends C5741g<C2266d> {
 
         /* renamed from: a */
         public final void mo11320a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -478,9 +478,9 @@ public final class C2262f extends C5741g<C2266d> {
         C2266d dVar = new C2266d(eVar, null, c1Var.mo19287b(), null, 10, null);
         createState(dVar);
         Single a = single.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) C2263a.f6392c);
-        C12880j.m40222a((Object) a, "sessionOnce.flatMap { it.getSessionInfo() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "sessionOnce.flatMap { it.getSessionInfo() }");
         Object a2 = a.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a2).mo29920a(new C2274g(new C2264b(this)), C2265c.f6393c);
     }
 
@@ -488,9 +488,9 @@ public final class C2262f extends C5741g<C2266d> {
     /* renamed from: y */
     public final void m8684y() {
         Observable g = Observable.m38298a(0, 1, TimeUnit.SECONDS, C11934b.m38500b()).mo30193g(C2269f.f6403c);
-        C12880j.m40222a((Object) g, "Observable.interval(0, 1…download-worker\").get() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "Observable.interval(0, 1…download-worker\").get() }");
         Object a = g.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C2270g(this), C2272h.f6406c);
     }
 

@@ -32,7 +32,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p202a.C5363f;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -110,11 +110,11 @@ public final class C3402z {
         /* renamed from: a */
         public final C3402z mo12567a(C3626b bVar, String str, C3444j jVar, boolean z, C3320f fVar) {
             Object obj = this.f8610a.get();
-            C12880j.m40222a(obj, "shelfListItemScaleHelper.get()");
+            Intrinsics.checkReturnedValueIsNotNull(obj, "shelfListItemScaleHelper.get()");
             C3493c cVar = (C3493c) obj;
             C3317e eVar = (C3317e) this.f8611b.mo27107c();
             Object obj2 = this.f8612c.get();
-            C12880j.m40222a(obj2, "shelfItemSessionHelper.get()");
+            Intrinsics.checkReturnedValueIsNotNull(obj2, "shelfItemSessionHelper.get()");
             C3402z zVar = new C3402z(cVar, eVar, (C3394w) obj2, (C3288c) this.f8613d.mo27107c(), bVar, str, jVar, fVar, z);
             return zVar;
         }
@@ -164,7 +164,7 @@ public final class C3402z {
                 int i = 4;
                 playerView.setVisibility(z ^ true ? 4 : 0);
                 CardView cardView = (CardView) this.f8615U.mo20994a().findViewById(C5363f.playerViewLayout);
-                C12880j.m40222a((Object) cardView, "holder.playerViewLayout");
+                Intrinsics.checkReturnedValueIsNotNull((Object) cardView, "holder.playerViewLayout");
                 cardView.setVisibility(z ^ true ? 4 : 0);
                 AspectRatioImageView aspectRatioImageView = (AspectRatioImageView) this.f8615U.mo20994a().findViewById(C5363f.brandNormalLogoImage);
                 if (aspectRatioImageView != null) {
@@ -227,7 +227,7 @@ public final class C3402z {
                 if (title != null) {
                     if (title != null) {
                         str = title.toLowerCase();
-                        C12880j.m40222a((Object) str, "(this as java.lang.String).toLowerCase()");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) str, "(this as java.lang.String).toLowerCase()");
                         a.mo12373a(str, this.f8619W.getUrl(), currentTimeMillis, "tileFocus");
                     }
                     throw new C13142s("null cannot be cast to non-null type java.lang.String");
@@ -265,10 +265,10 @@ public final class C3402z {
             r0 = r29
             android.view.View r1 = r0.itemView
             java.lang.String r2 = "holder.itemView"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             android.content.Context r1 = r1.getContext()
             java.lang.String r3 = "holder.itemView.context"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r3)
             boolean r1 = com.bamtechmedia.dominguez.core.utils.C5837i.m18843e(r1)
             r4 = r28
             com.bamtechmedia.dominguez.collections.o0.j r5 = r4.f8607g
@@ -297,13 +297,13 @@ public final class C3402z {
             r1 = r6
         L_0x003c:
             android.view.View r5 = r0.itemView
-            kotlin.jvm.internal.C12880j.m40222a(r5, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r2)
             android.content.Context r2 = r5.getContext()
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             r3 = 1106247680(0x41f00000, float:30.0)
             android.content.res.Resources r2 = r2.getResources()
             java.lang.String r5 = "resources"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r5)
             android.util.DisplayMetrics r2 = r2.getDisplayMetrics()
             float r2 = android.util.TypedValue.applyDimension(r7, r3, r2)
             if (r1 == 0) goto L_0x0065
@@ -377,23 +377,23 @@ public final class C3402z {
         C3493c cVar = this.f8601a;
         View view = bVar.itemView;
         String str = "holder.itemView";
-        C12880j.m40222a((Object) view, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, str);
         C3493c.m11865a(cVar, view, null, this.f8607g, this.f8609i, new C3406d(this, bVar), 2, null);
         if (this.f8605e != null) {
             C3394w wVar = this.f8603c;
             View view2 = bVar.itemView;
-            C12880j.m40222a((Object) view2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) view2, str);
             wVar.mo12548a(view2, this.f8606f, this.f8605e);
         }
         if (!(((PlayerView) bVar.mo20994a().findViewById(C5363f.player_view)) == null || ((AspectRatioImageView) bVar.mo20994a().findViewById(C5363f.brandNormalLogoImage)) == null || ((AspectRatioImageView) bVar.mo20994a().findViewById(C5363f.brandWhiteLogoImage)) == null)) {
             AspectRatioImageView aspectRatioImageView = (AspectRatioImageView) bVar.mo20994a().findViewById(C5363f.brandNormalLogoImage);
-            C12880j.m40222a((Object) aspectRatioImageView, "holder.brandNormalLogoImage");
+            Intrinsics.checkReturnedValueIsNotNull((Object) aspectRatioImageView, "holder.brandNormalLogoImage");
             AspectRatioImageView aspectRatioImageView2 = (AspectRatioImageView) bVar.mo20994a().findViewById(C5363f.brandWhiteLogoImage);
-            C12880j.m40222a((Object) aspectRatioImageView2, "holder.brandWhiteLogoImage");
+            Intrinsics.checkReturnedValueIsNotNull((Object) aspectRatioImageView2, "holder.brandWhiteLogoImage");
             m11663a(aspectRatioImageView, aspectRatioImageView2);
         }
         View view3 = bVar.itemView;
-        C12880j.m40222a((Object) view3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view3, str);
         m11658a(view3, i);
     }
 
@@ -425,7 +425,7 @@ public final class C3402z {
                 if (title != null) {
                     if (title != null) {
                         str = title.toLowerCase();
-                        C12880j.m40222a((Object) str, "(this as java.lang.String).toLowerCase()");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) str, "(this as java.lang.String).toLowerCase()");
                     } else {
                         throw new C13142s("null cannot be cast to non-null type java.lang.String");
                     }
@@ -478,9 +478,9 @@ public final class C3402z {
         Image a2 = bVar2 != null ? bVar2.mo12846a(C3688j.TILE_WHITE.mo13408a(), this.f8607g.mo12621b()) : null;
         String str = "brand";
         String str2 = str;
-        C5763b.m18702a(aspectRatioImageView, a, C3849b.m12935a(C3849b.f9526a, this.f8607g.mo12621b().mo13242X(), 0, 2, null), null, Integer.valueOf(C3446k.m11762a(this.f8607g, aspectRatioImageView3)), C12880j.m40224a((Object) this.f8607g.mo12623d(), (Object) str), false, C12880j.m40224a((Object) this.f8607g.mo12623d(), (Object) str), 36, null);
+        C5763b.m18702a(aspectRatioImageView, a, C3849b.m12935a(C3849b.f9526a, this.f8607g.mo12621b().mo13242X(), 0, 2, null), null, Integer.valueOf(C3446k.m11762a(this.f8607g, aspectRatioImageView3)), Intrinsics.areEqual((Object) this.f8607g.mo12623d(), (Object) str), false, Intrinsics.areEqual((Object) this.f8607g.mo12623d(), (Object) str), 36, null);
         String str3 = str2;
-        C5763b.m18702a(aspectRatioImageView2, a2, C3849b.m12935a(C3849b.f9526a, this.f8607g.mo12621b().mo13242X(), 0, 2, null), null, Integer.valueOf(C3446k.m11762a(this.f8607g, aspectRatioImageView3)), C12880j.m40224a((Object) this.f8607g.mo12623d(), (Object) str3), false, C12880j.m40224a((Object) this.f8607g.mo12623d(), (Object) str3), 36, null);
+        C5763b.m18702a(aspectRatioImageView2, a2, C3849b.m12935a(C3849b.f9526a, this.f8607g.mo12621b().mo13242X(), 0, 2, null), null, Integer.valueOf(C3446k.m11762a(this.f8607g, aspectRatioImageView3)), Intrinsics.areEqual((Object) this.f8607g.mo12623d(), (Object) str3), false, Intrinsics.areEqual((Object) this.f8607g.mo12623d(), (Object) str3), 36, null);
     }
 
     /* renamed from: a */
@@ -492,7 +492,7 @@ public final class C3402z {
         view.setTag(C5363f.focusHelperExpandNavOnFocusSearchLeft, Boolean.valueOf(i == 0));
         view.setTag(C5363f.focusHelperHeroShelfListItem, Boolean.valueOf(z2));
         int i2 = C5363f.focusHelperPinScrollWindow;
-        if (!C12880j.m40224a((Object) this.f8607g.mo12623d(), (Object) "brand") && !C12880j.m40224a((Object) this.f8607g.mo12623d(), (Object) "featured") && !z2) {
+        if (!Intrinsics.areEqual((Object) this.f8607g.mo12623d(), (Object) "brand") && !Intrinsics.areEqual((Object) this.f8607g.mo12623d(), (Object) "featured") && !z2) {
             z = false;
         }
         view.setTag(i2, Boolean.valueOf(z));

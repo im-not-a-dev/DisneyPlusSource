@@ -105,7 +105,7 @@ public final class Bootstrapper {
             if (r0 == 0) goto L_0x0037
             java.lang.String r0 = r0.toLowerCase()
             java.lang.String r2 = "(this as java.lang.String).toLowerCase()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)
             if (r0 == 0) goto L_0x003f
             goto L_0x0043
         L_0x0037:
@@ -254,7 +254,7 @@ public final class Bootstrapper {
             com.bamtech.sdk4.plugin.Plugin r6 = (com.bamtech.sdk4.plugin.Plugin) r6     // Catch:{ all -> 0x0159 }
             r6.initialize(r1, r4)     // Catch:{ all -> 0x0159 }
             java.lang.String r4 = "instance"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r4)     // Catch:{ all -> 0x0159 }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r4)     // Catch:{ all -> 0x0159 }
             r2.add(r6)     // Catch:{ all -> 0x0159 }
             goto L_0x012f
         L_0x0159:

@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.utils;
 
 import java.util.Map;
 import kotlin.Lazy;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -54,7 +54,7 @@ public final class Jsr305State {
         if (this != obj) {
             if (obj instanceof Jsr305State) {
                 Jsr305State jsr305State = (Jsr305State) obj;
-                if (C12880j.m40224a((Object) this.global, (Object) jsr305State.global) && C12880j.m40224a((Object) this.migration, (Object) jsr305State.migration) && C12880j.m40224a((Object) this.user, (Object) jsr305State.user)) {
+                if (Intrinsics.areEqual((Object) this.global, (Object) jsr305State.global) && Intrinsics.areEqual((Object) this.migration, (Object) jsr305State.migration) && Intrinsics.areEqual((Object) this.user, (Object) jsr305State.user)) {
                     if (this.enableCompatqualCheckerFrameworkAnnotations == jsr305State.enableCompatqualCheckerFrameworkAnnotations) {
                         return true;
                     }

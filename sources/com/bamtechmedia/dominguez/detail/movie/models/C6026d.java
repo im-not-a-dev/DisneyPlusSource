@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.detail.movie.models;
 
 import com.bamtech.sdk4.bookmarks.Bookmark;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.detail.movie.models.d */
 /* compiled from: MovieUserData.kt */
@@ -52,7 +52,7 @@ public final class C6026d {
         if (this != obj) {
             if (obj instanceof C6026d) {
                 C6026d dVar = (C6026d) obj;
-                if (!(this.f13888a == dVar.f13888a) || !C12880j.m40224a((Object) this.f13889b, (Object) dVar.f13889b)) {
+                if (!(this.f13888a == dVar.f13888a) || !Intrinsics.areEqual((Object) this.f13889b, (Object) dVar.f13889b)) {
                     return false;
                 }
             }

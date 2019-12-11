@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -60,20 +60,20 @@ public final class TypeAliasConstructorDescriptorImpl extends FunctionDescriptor
                 if (substitute != null) {
                     Annotations annotations = classConstructorDescriptor.getAnnotations();
                     Kind kind = classConstructorDescriptor.getKind();
-                    C12880j.m40222a((Object) kind, "constructor.kind");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) kind, "constructor.kind");
                     SourceElement source = typeAliasDescriptor.getSource();
-                    C12880j.m40222a((Object) source, "typeAliasDescriptor.source");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) source, "typeAliasDescriptor.source");
                     TypeAliasConstructorDescriptorImpl typeAliasConstructorDescriptorImpl = new TypeAliasConstructorDescriptorImpl(storageManager, typeAliasDescriptor, substitute, null, annotations, kind, source, null);
                     List substitutedValueParameters = FunctionDescriptorImpl.getSubstitutedValueParameters(typeAliasConstructorDescriptorImpl, classConstructorDescriptor.getValueParameters(), typeSubstitutorForUnderlyingClass);
                     if (substitutedValueParameters != null) {
-                        C12880j.m40222a((Object) substitutedValueParameters, "FunctionDescriptorImpl.g…         ) ?: return null");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) substitutedValueParameters, "FunctionDescriptorImpl.g…         ) ?: return null");
                         SimpleType lowerIfFlexible = FlexibleTypesKt.lowerIfFlexible(substitute.getReturnType().unwrap());
                         SimpleType defaultType = typeAliasDescriptor.getDefaultType();
-                        C12880j.m40222a((Object) defaultType, "typeAliasDescriptor.defaultType");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) defaultType, "typeAliasDescriptor.defaultType");
                         SimpleType withAbbreviation = SpecialTypesKt.withAbbreviation(lowerIfFlexible, defaultType);
                         ReceiverParameterDescriptor dispatchReceiverParameter = classConstructorDescriptor.getDispatchReceiverParameter();
                         if (dispatchReceiverParameter != null) {
-                            C12880j.m40222a((Object) dispatchReceiverParameter, "it");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) dispatchReceiverParameter, "it");
                             receiverParameterDescriptor = DescriptorFactory.createExtensionReceiverParameterForCallable(typeAliasConstructorDescriptorImpl, typeSubstitutorForUnderlyingClass.safeSubstitute(dispatchReceiverParameter.getType(), Variance.INVARIANT), Annotations.Companion.getEMPTY());
                         }
                         typeAliasConstructorDescriptorImpl.initialize(receiverParameterDescriptor, null, typeAliasDescriptor.getDeclaredTypeParameters(), substitutedValueParameters, withAbbreviation, Modality.FINAL, typeAliasDescriptor.getVisibility());
@@ -95,7 +95,7 @@ public final class TypeAliasConstructorDescriptorImpl extends FunctionDescriptor
 
     public ClassDescriptor getConstructedClass() {
         ClassDescriptor constructedClass = getUnderlyingConstructorDescriptor().getConstructedClass();
-        C12880j.m40222a((Object) constructedClass, "underlyingConstructorDescriptor.constructedClass");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constructedClass, "underlyingConstructorDescriptor.constructedClass");
         return constructedClass;
     }
 
@@ -104,7 +104,7 @@ public final class TypeAliasConstructorDescriptorImpl extends FunctionDescriptor
         if (returnType != null) {
             return returnType;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -177,7 +177,7 @@ public final class TypeAliasConstructorDescriptorImpl extends FunctionDescriptor
         if (substitute != null) {
             TypeAliasConstructorDescriptorImpl typeAliasConstructorDescriptorImpl = (TypeAliasConstructorDescriptorImpl) substitute;
             TypeSubstitutor create = TypeSubstitutor.create(typeAliasConstructorDescriptorImpl.getReturnType());
-            C12880j.m40222a((Object) create, "TypeSubstitutor.create(s…asConstructor.returnType)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) create, "TypeSubstitutor.create(s…asConstructor.returnType)");
             ClassConstructorDescriptor substitute2 = getUnderlyingConstructorDescriptor().getOriginal().substitute(create);
             if (substitute2 == null) {
                 return null;

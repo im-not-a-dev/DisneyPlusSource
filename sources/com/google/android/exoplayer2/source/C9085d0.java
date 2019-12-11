@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.source.d0 */
 /* compiled from: SampleMetadataQueue */
@@ -419,7 +419,7 @@ final class C9085d0 {
             return false;
         }
         this.f20275q = false;
-        if (C9554k0.m29414a((Object) format, (Object) this.f20276r)) {
+        if (Util.m29414a((Object) format, (Object) this.f20276r)) {
             return false;
         }
         this.f20276r = format;

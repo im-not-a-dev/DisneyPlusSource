@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer;
@@ -14,9 +14,9 @@ public final class DynamicType extends FlexibleType implements DynamicTypeMarker
 
     public DynamicType(KotlinBuiltIns kotlinBuiltIns, Annotations annotations2) {
         SimpleType nothingType = kotlinBuiltIns.getNothingType();
-        C12880j.m40222a((Object) nothingType, "builtIns.nothingType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) nothingType, "builtIns.nothingType");
         SimpleType nullableAnyType = kotlinBuiltIns.getNullableAnyType();
-        C12880j.m40222a((Object) nullableAnyType, "builtIns.nullableAnyType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) nullableAnyType, "builtIns.nullableAnyType");
         super(nothingType, nullableAnyType);
         this.annotations = annotations2;
     }

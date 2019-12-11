@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.source.dash.p376k;
 
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.source.dash.k.d */
 /* compiled from: Descriptor */
@@ -30,7 +30,7 @@ public final class C9118d {
             return false;
         }
         C9118d dVar = (C9118d) obj;
-        if (!C9554k0.m29414a((Object) this.f20446a, (Object) dVar.f20446a) || !C9554k0.m29414a((Object) this.f20447b, (Object) dVar.f20447b) || !C9554k0.m29414a((Object) this.f20448c, (Object) dVar.f20448c)) {
+        if (!Util.m29414a((Object) this.f20446a, (Object) dVar.f20446a) || !Util.m29414a((Object) this.f20447b, (Object) dVar.f20447b) || !Util.m29414a((Object) this.f20448c, (Object) dVar.f20448c)) {
             z = false;
         }
         return z;

@@ -15,7 +15,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p201e.p203b.p307o.p308p.C7626a;
@@ -25,7 +25,7 @@ import p163g.p503n.p504a.C11793e;
 import p520io.reactivex.C11960n;
 import p520io.reactivex.disposables.CompositeDisposable;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0005\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001&BG\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\b\u0010\r\u001a\u0004\u0018\u00010\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0012¢\u0006\u0002\u0010\u0013J\u0010\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\bH\u0002J\u000e\u0010$\u001a\u00020\"2\u0006\u0010#\u001a\u00020\bJ\b\u0010%\u001a\u00020\"H\u0016R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0014\u001a\u00020\bX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R$\u0010\u0019\u001a\u00020\u001a8\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u001d\u0010\u001e\"\u0004\b\u001f\u0010 R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000¨\u0006'"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/password/LoginPasswordViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/auth/password/LoginPasswordViewModel$State;", "passwordLoginAction", "Lcom/bamtechmedia/dominguez/auth/password/PasswordLoginAction;", "authSuccessAction", "Lcom/bamtechmedia/dominguez/auth/AuthSuccessAction;", "email", "", "errorRouter", "Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;", "passwordResetRouter", "Lcom/bamtechmedia/dominguez/auth/api/router/PasswordResetRouter;", "autoLogin", "Lcom/bamtechmedia/dominguez/auth/autologin/AutoLogin;", "authHostRouter", "Lcom/bamtechmedia/dominguez/auth/api/router/AuthHostRouter;", "analytics", "Lcom/bamtechmedia/dominguez/auth/password/LoginPasswordAnalytics;", "(Lcom/bamtechmedia/dominguez/auth/password/PasswordLoginAction;Lcom/bamtechmedia/dominguez/auth/AuthSuccessAction;Ljava/lang/String;Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;Lcom/bamtechmedia/dominguez/auth/api/router/PasswordResetRouter;Lcom/bamtechmedia/dominguez/auth/autologin/AutoLogin;Lcom/bamtechmedia/dominguez/auth/api/router/AuthHostRouter;Lcom/bamtechmedia/dominguez/auth/password/LoginPasswordAnalytics;)V", "currentpassword", "getCurrentpassword", "()Ljava/lang/String;", "setCurrentpassword", "(Ljava/lang/String;)V", "disposables", "Lio/reactivex/disposables/CompositeDisposable;", "disposables$annotations", "()V", "getDisposables$auth_release", "()Lio/reactivex/disposables/CompositeDisposable;", "setDisposables$auth_release", "(Lio/reactivex/disposables/CompositeDisposable;)V", "handleAuthSuccess", "", "password", "loginWithPassword", "onCleared", "State", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.t0.h */
@@ -103,7 +103,7 @@ public final class C2968h extends C5741g<C2969a> {
             if (this != obj) {
                 if (obj instanceof C2969a) {
                     C2969a aVar = (C2969a) obj;
-                    if ((this.f7808a == aVar.f7808a) && C12880j.m40224a((Object) this.f7809b, (Object) aVar.f7809b)) {
+                    if ((this.f7808a == aVar.f7808a) && Intrinsics.areEqual((Object) this.f7809b, (Object) aVar.f7809b)) {
                         if (this.f7810c == aVar.f7810c) {
                             return true;
                         }
@@ -298,7 +298,7 @@ public final class C2968h extends C5741g<C2969a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error attempting to login!", new Object[0]);
+            Timber.m44528b(th, "Error attempting to login!", new Object[0]);
             C7627a.m22614a(this.f7817c.f7804f, null, 1, null);
         }
     }
@@ -346,7 +346,7 @@ public final class C2968h extends C5741g<C2969a> {
     public final void mo11967b(String str) {
         C2970b bVar = new C2970b(this, str);
         Object a = this.f7801c.mo11982a(str).mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C2976i(new C2974c(bVar)), new C2975d(this));
     }
 }

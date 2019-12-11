@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor.UserDataKey;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -90,7 +90,7 @@ public final class MemberDeserializer {
         L_0x0009:
             kotlin.reflect.jvm.internal.impl.name.FqName r4 = kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt.fqNameOrNull(r4)
             kotlin.reflect.jvm.internal.impl.name.FqName r0 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.SuspendFunctionTypeUtilKt.KOTLIN_SUSPEND_BUILT_IN_FUNCTION_FQ_NAME
-            boolean r4 = kotlin.jvm.internal.C12880j.m40224a(r4, r0)
+            boolean r4 = kotlin.jvm.internal.Intrinsics.areEqual(r4, r0)
             if (r4 == 0) goto L_0x0018
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedMemberDescriptor$CoroutinesCompatibilityMode r4 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedMemberDescriptor.CoroutinesCompatibilityMode.COMPATIBLE
             return r4
@@ -141,7 +141,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor r7 = (kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor) r7
             java.util.List r7 = r7.getUpperBounds()
             java.lang.String r1 = "typeParameter.upperBounds"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r1)
             boolean r1 = r7 instanceof java.util.Collection
             if (r1 == 0) goto L_0x0089
             boolean r1 = r7.isEmpty()
@@ -157,7 +157,7 @@ public final class MemberDeserializer {
             java.lang.Object r1 = r7.next()
             kotlin.reflect.jvm.internal.impl.types.KotlinType r1 = (kotlin.reflect.jvm.internal.impl.types.KotlinType) r1
             java.lang.String r2 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             boolean r1 = r3.containsSuspendFunctionType(r1)
             if (r1 == 0) goto L_0x008d
             r7 = 1
@@ -179,7 +179,7 @@ public final class MemberDeserializer {
             java.lang.Object r7 = r4.next()
             kotlin.reflect.jvm.internal.impl.types.KotlinType r7 = (kotlin.reflect.jvm.internal.impl.types.KotlinType) r7
             java.lang.String r0 = "type"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r0)
             boolean r0 = kotlin.reflect.jvm.internal.impl.builtins.FunctionTypesKt.isSuspendFunctionType(r7)
             if (r0 == 0) goto L_0x0114
             java.util.List r0 = r7.getArguments()
@@ -203,7 +203,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.types.TypeProjection r0 = (kotlin.reflect.jvm.internal.impl.types.TypeProjection) r0
             kotlin.reflect.jvm.internal.impl.types.KotlinType r0 = r0.getType()
             java.lang.String r1 = "it.type"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = r3.containsSuspendFunctionType(r0)
             if (r0 == 0) goto L_0x00f0
             r7 = 1
@@ -310,7 +310,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor r21 = (kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor) r21
             kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor r0 = r21.getContainingDeclaration()
             java.lang.String r1 = "callableDescriptor.containingDeclaration"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.ProtoContainer r22 = r8.asProtoContainer(r0)
             java.util.ArrayList r15 = new java.util.ArrayList
             r0 = 10
@@ -340,7 +340,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.HAS_ANNOTATIONS
             java.lang.Boolean r0 = r0.get(r11)
             java.lang.String r1 = "Flags.HAS_ANNOTATIONS.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = r0.booleanValue()
             if (r0 == 0) goto L_0x007f
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.NonEmptyDeserializedAnnotations r13 = new kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.NonEmptyDeserializedAnnotations
@@ -378,17 +378,17 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r2 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.DECLARES_DEFAULT_VALUE
             java.lang.Boolean r2 = r2.get(r11)
             java.lang.String r3 = "Flags.DECLARES_DEFAULT_VALUE.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             boolean r16 = r2.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r2 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_CROSSINLINE
             java.lang.Boolean r2 = r2.get(r11)
             java.lang.String r3 = "Flags.IS_CROSSINLINE.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             boolean r17 = r2.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r2 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_NOINLINE
             java.lang.Boolean r2 = r2.get(r11)
             java.lang.String r3 = "Flags.IS_NOINLINE.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             boolean r18 = r2.booleanValue()
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationContext r2 = r8.f29574c
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.TypeTable r2 = r2.getTypeTable()
@@ -404,7 +404,7 @@ public final class MemberDeserializer {
         L_0x00f1:
             kotlin.reflect.jvm.internal.impl.descriptors.SourceElement r2 = kotlin.reflect.jvm.internal.impl.descriptors.SourceElement.NO_SOURCE
             java.lang.String r3 = "SourceElement.NO_SOURCE"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             kotlin.reflect.jvm.internal.impl.descriptors.impl.ValueParameterDescriptorImpl r3 = new kotlin.reflect.jvm.internal.impl.descriptors.impl.ValueParameterDescriptorImpl
             r9 = r3
             r10 = r21
@@ -450,7 +450,7 @@ public final class MemberDeserializer {
                 VersionRequirement versionRequirement = (VersionRequirement) it.next();
                 Version version = versionRequirement.getVersion();
                 Version version2 = new Version(1, 3, 0, 4, null);
-                if (!C12880j.m40224a((Object) version, (Object) version2) || versionRequirement.getKind() != VersionKind.LANGUAGE_VERSION) {
+                if (!Intrinsics.areEqual((Object) version, (Object) version2) || versionRequirement.getKind() != VersionKind.LANGUAGE_VERSION) {
                     z2 = false;
                     continue;
                 } else {
@@ -518,7 +518,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.MemberDeserializer r2 = r2.getMemberDeserializer()
             java.util.List r3 = r23.getValueParameterList()
             java.lang.String r4 = "proto.valueParameterList"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotatedCallableKind r4 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotatedCallableKind.FUNCTION
             java.util.List r2 = r2.valueParameters(r3, r0, r4)
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.ProtoEnumFlags r3 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.ProtoEnumFlags.INSTANCE
@@ -559,10 +559,10 @@ public final class MemberDeserializer {
             r2 = 0
             java.util.List r3 = r6.getValueParameters()
             java.lang.String r0 = "descriptor.valueParameters"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r0)
             java.util.List r4 = r6.getTypeParameters()
             java.lang.String r0 = "descriptor.typeParameters"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
             kotlin.reflect.jvm.internal.impl.types.KotlinType r5 = r6.getReturnType()
             r8 = 0
             r0 = r22
@@ -618,7 +618,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.name.Name r2 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.NameResolverUtilKt.getName(r2, r3)
             kotlin.reflect.jvm.internal.impl.name.FqName r1 = r1.child(r2)
             kotlin.reflect.jvm.internal.impl.name.FqName r2 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.SuspendFunctionTypeUtilKt.KOTLIN_SUSPEND_BUILT_IN_FUNCTION_FQ_NAME
-            boolean r1 = kotlin.jvm.internal.C12880j.m40224a(r1, r2)
+            boolean r1 = kotlin.jvm.internal.Intrinsics.areEqual(r1, r2)
             if (r1 == 0) goto L_0x005c
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.VersionRequirementTable$Companion r1 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.VersionRequirementTable.Companion
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.VersionRequirementTable r1 = r1.getEMPTY()
@@ -656,7 +656,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationContext r1 = r11.f29574c
             java.util.List r2 = r32.getTypeParameterList()
             java.lang.String r3 = "proto.typeParameterList"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             r26 = 0
             r27 = 0
             r28 = 0
@@ -685,7 +685,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.MemberDeserializer r0 = r1.getMemberDeserializer()
             java.util.List r5 = r32.getValueParameterList()
             java.lang.String r6 = "proto.valueParameterList"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotatedCallableKind r6 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotatedCallableKind.FUNCTION
             java.util.List r5 = r0.valueParameters(r5, r10, r6)
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.TypeDeserializer r0 = r1.getTypeDeserializer()
@@ -707,7 +707,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_SUSPEND
             java.lang.Boolean r0 = r0.get(r9)
             java.lang.String r14 = "Flags.IS_SUSPEND.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r14)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r14)
             boolean r15 = r0.booleanValue()
             r0 = r31
             r1 = r8
@@ -721,42 +721,42 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_OPERATOR
             java.lang.Boolean r0 = r0.get(r12)
             java.lang.String r1 = "Flags.IS_OPERATOR.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = r0.booleanValue()
             r11.setOperator(r0)
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_INFIX
             java.lang.Boolean r0 = r0.get(r12)
             java.lang.String r1 = "Flags.IS_INFIX.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = r0.booleanValue()
             r11.setInfix(r0)
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_EXTERNAL_FUNCTION
             java.lang.Boolean r0 = r0.get(r12)
             java.lang.String r1 = "Flags.IS_EXTERNAL_FUNCTION.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = r0.booleanValue()
             r11.setExternal(r0)
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_INLINE
             java.lang.Boolean r0 = r0.get(r12)
             java.lang.String r1 = "Flags.IS_INLINE.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = r0.booleanValue()
             r11.setInline(r0)
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_TAILREC
             java.lang.Boolean r0 = r0.get(r12)
             java.lang.String r1 = "Flags.IS_TAILREC.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = r0.booleanValue()
             r11.setTailrec(r0)
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_SUSPEND
             java.lang.Boolean r0 = r0.get(r12)
-            kotlin.jvm.internal.C12880j.m40222a(r0, r14)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r14)
             boolean r0 = r0.booleanValue()
             r11.setSuspend(r0)
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_EXPECT_FUNCTION
             java.lang.Boolean r0 = r0.get(r12)
             java.lang.String r1 = "Flags.IS_EXPECT_FUNCTION.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = r0.booleanValue()
             r11.setExpect(r0)
             r0 = r31
@@ -820,7 +820,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r7 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_VAR
             java.lang.Boolean r7 = r7.get(r14)
             java.lang.String r8 = "Flags.IS_VAR.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r8)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r8)
             boolean r7 = r7.booleanValue()
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationContext r8 = r0.f29574c
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver r8 = r8.getNameResolver()
@@ -834,23 +834,23 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r10 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_LATEINIT
             java.lang.Boolean r10 = r10.get(r14)
             java.lang.String r11 = "Flags.IS_LATEINIT.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r10, r11)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r10, r11)
             boolean r10 = r10.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r11 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_CONST
             java.lang.Boolean r11 = r11.get(r14)
             java.lang.String r12 = "Flags.IS_CONST.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r11, r12)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r11, r12)
             boolean r11 = r11.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r12 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_EXTERNAL_PROPERTY
             java.lang.Boolean r12 = r12.get(r14)
             java.lang.String r3 = "Flags.IS_EXTERNAL_PROPERTY.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r12, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r12, r3)
             boolean r12 = r12.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r3 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_DELEGATED
             java.lang.Boolean r3 = r3.get(r14)
             r16 = r13
             java.lang.String r13 = "Flags.IS_DELEGATED.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r13)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r13)
             boolean r13 = r3.booleanValue()
             r3 = r16
             r21 = r3
@@ -858,7 +858,7 @@ public final class MemberDeserializer {
             java.lang.Boolean r3 = r3.get(r14)
             r16 = r14
             java.lang.String r14 = "Flags.IS_EXPECT_PROPERTY.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r14)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r14)
             boolean r14 = r3.booleanValue()
             r3 = r16
             r22 = r3
@@ -878,7 +878,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationContext r1 = r0.f29574c
             java.util.List r3 = r25.getTypeParameterList()
             java.lang.String r2 = "proto.typeParameterList"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r2)
             r4 = 0
             r5 = 0
             r6 = 0
@@ -891,7 +891,7 @@ public final class MemberDeserializer {
             r15 = r23
             java.lang.Boolean r1 = r1.get(r15)
             java.lang.String r2 = "Flags.HAS_GETTER.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             boolean r1 = r1.booleanValue()
             if (r1 == 0) goto L_0x0121
             boolean r2 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.ProtoTypeTableUtilKt.hasReceiver(r25)
@@ -931,7 +931,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r2 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.HAS_ANNOTATIONS
             java.lang.Boolean r2 = r2.get(r15)
             java.lang.String r3 = "Flags.HAS_ANNOTATIONS.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             boolean r4 = r2.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$FlagField<kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Visibility> r2 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.VISIBILITY
             java.lang.Object r2 = r2.get(r15)
@@ -957,17 +957,17 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r2 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_NOT_DEFAULT
             java.lang.Boolean r2 = r2.get(r1)
             java.lang.String r3 = "Flags.IS_NOT_DEFAULT.get(getterFlags)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             boolean r2 = r2.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r3 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_EXTERNAL_ACCESSOR
             java.lang.Boolean r3 = r3.get(r1)
             java.lang.String r4 = "Flags.IS_EXTERNAL_ACCESSOR.get(getterFlags)"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             boolean r7 = r3.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r3 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_INLINE_ACCESSOR
             java.lang.Boolean r3 = r3.get(r1)
             java.lang.String r4 = "Flags.IS_INLINE_ACCESSOR.get(getterFlags)"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             boolean r8 = r3.booleanValue()
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotatedCallableKind r3 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotatedCallableKind.PROPERTY_GETTER
             kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations r3 = r0.getAnnotations(r14, r1, r3)
@@ -997,7 +997,7 @@ public final class MemberDeserializer {
             r12 = 1
             kotlin.reflect.jvm.internal.impl.descriptors.impl.PropertyGetterDescriptorImpl r1 = kotlin.reflect.jvm.internal.impl.resolve.DescriptorFactory.createDefaultGetter(r13, r3)
             java.lang.String r2 = "DescriptorFactory.create…er(property, annotations)"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
         L_0x0212:
             kotlin.reflect.jvm.internal.impl.types.KotlinType r2 = r13.getReturnType()
             r1.initialize(r2)
@@ -1010,7 +1010,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r1 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.HAS_SETTER
             java.lang.Boolean r1 = r1.get(r15)
             java.lang.String r2 = "Flags.HAS_SETTER.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             boolean r1 = r1.booleanValue()
             if (r1 == 0) goto L_0x02f1
             boolean r1 = r25.hasSetterFlags()
@@ -1021,17 +1021,17 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r2 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_NOT_DEFAULT
             java.lang.Boolean r2 = r2.get(r1)
             java.lang.String r3 = "Flags.IS_NOT_DEFAULT.get(setterFlags)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             boolean r2 = r2.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r3 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_EXTERNAL_ACCESSOR
             java.lang.Boolean r3 = r3.get(r1)
             java.lang.String r4 = "Flags.IS_EXTERNAL_ACCESSOR.get(setterFlags)"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             boolean r7 = r3.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r3 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.IS_INLINE_ACCESSOR
             java.lang.Boolean r3 = r3.get(r1)
             java.lang.String r4 = "Flags.IS_INLINE_ACCESSOR.get(setterFlags)"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             boolean r8 = r3.booleanValue()
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotatedCallableKind r3 = kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotatedCallableKind.PROPERTY_SETTER
             kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations r3 = r0.getAnnotations(r14, r1, r3)
@@ -1094,7 +1094,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations r4 = r4.getEMPTY()
             kotlin.reflect.jvm.internal.impl.descriptors.impl.PropertySetterDescriptorImpl r3 = kotlin.reflect.jvm.internal.impl.resolve.DescriptorFactory.createDefaultSetter(r7, r3, r4)
             java.lang.String r4 = "DescriptorFactory.create…ptor */\n                )"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             goto L_0x02f6
         L_0x02f1:
             r7 = r13
@@ -1106,7 +1106,7 @@ public final class MemberDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags$BooleanFlagField r4 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.Flags.HAS_CONSTANT
             java.lang.Boolean r2 = r4.get(r2)
             java.lang.String r4 = "Flags.HAS_CONSTANT.get(flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r4)
             boolean r2 = r2.booleanValue()
             if (r2 == 0) goto L_0x0319
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationContext r2 = r0.f29574c
@@ -1139,17 +1139,17 @@ public final class MemberDeserializer {
         TypeAlias typeAlias2 = typeAlias;
         Companion companion = Annotations.Companion;
         List<Annotation> annotationList = typeAlias.getAnnotationList();
-        C12880j.m40222a((Object) annotationList, "proto.annotationList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) annotationList, "proto.annotationList");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) annotationList, 10));
         for (Annotation annotation : annotationList) {
             AnnotationDeserializer annotationDeserializer2 = this.annotationDeserializer;
-            C12880j.m40222a((Object) annotation, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) annotation, "it");
             arrayList.add(annotationDeserializer2.deserializeAnnotation(annotation, this.f29574c.getNameResolver()));
         }
         DeserializedTypeAliasDescriptor deserializedTypeAliasDescriptor = new DeserializedTypeAliasDescriptor(this.f29574c.getStorageManager(), this.f29574c.getContainingDeclaration(), companion.create(arrayList), NameResolverUtilKt.getName(this.f29574c.getNameResolver(), typeAlias.getName()), ProtoEnumFlags.INSTANCE.visibility((ProtoBuf.Visibility) Flags.VISIBILITY.get(typeAlias.getFlags())), typeAlias, this.f29574c.getNameResolver(), this.f29574c.getTypeTable(), this.f29574c.getVersionRequirementTable(), this.f29574c.getContainerSource());
         DeserializationContext deserializationContext = this.f29574c;
         List typeParameterList = typeAlias.getTypeParameterList();
-        C12880j.m40222a((Object) typeParameterList, "proto.typeParameterList");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameterList, "proto.typeParameterList");
         DeserializedTypeAliasDescriptor deserializedTypeAliasDescriptor2 = deserializedTypeAliasDescriptor;
         DeserializationContext childContext$default = DeserializationContext.childContext$default(deserializationContext, deserializedTypeAliasDescriptor, typeParameterList, null, null, null, null, 60, null);
         deserializedTypeAliasDescriptor2.initialize(childContext$default.getTypeDeserializer().getOwnTypeParameters(), childContext$default.getTypeDeserializer().simpleType(ProtoTypeTableUtilKt.underlyingType(typeAlias2, this.f29574c.getTypeTable())), childContext$default.getTypeDeserializer().simpleType(ProtoTypeTableUtilKt.expandedType(typeAlias2, this.f29574c.getTypeTable())), checkExperimentalCoroutine(deserializedTypeAliasDescriptor2, childContext$default.getTypeDeserializer()));

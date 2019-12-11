@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 import kotlin.C12898l;
 import kotlin.Lazy;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -158,7 +158,7 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
             return false;
         }
         for (KotlinType constructor : set) {
-            if (C12880j.m40224a((Object) constructor.getConstructor(), (Object) typeConstructor)) {
+            if (Intrinsics.areEqual((Object) constructor.getConstructor(), (Object) typeConstructor)) {
                 return true;
             }
         }

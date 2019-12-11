@@ -10,7 +10,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p201e.p203b.p319v.C7885o;
@@ -23,7 +23,7 @@ import p520io.reactivex.Single;
 import p520io.reactivex.disposables.CompositeDisposable;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\u001d\b\u0007\u0012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0002\u0010\u0007J\u000f\u0010\u0010\u001a\u0004\u0018\u00010\u0011H\u0002¢\u0006\u0002\u0010\u0012J\u0006\u0010\u0013\u001a\u00020\u0011J\u0010\u0010\u0014\u001a\u00020\u00112\u0006\u0010\u0015\u001a\u00020\u0016H\u0002J\u0010\u0010\u0017\u001a\u00020\u00112\u0006\u0010\u0015\u001a\u00020\u0018H\u0002J\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u001b0\u001aJ\u0010\u0010\u001c\u001a\u00020\u001b2\u0006\u0010\u001d\u001a\u00020\u001eH\u0002J\u0010\u0010\u001f\u001a\u00020\u001b2\u0006\u0010 \u001a\u00020!H\u0002J\u0006\u0010\"\u001a\u00020\u0011R\u0014\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R&\u0010\b\u001a\u0004\u0018\u00010\t8\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\n\u0010\u000b\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000f¨\u0006#"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/main/paywall/MainActivityPaywallHandler;", "", "paywallRepositoryProvider", "Ljavax/inject/Provider;", "Lcom/bamtechmedia/dominguez/paywall/PaywallRepository;", "paywallServicesInteractor", "Lcom/bamtechmedia/dominguez/paywall/PaywallServicesInteractor;", "(Ljavax/inject/Provider;Lcom/bamtechmedia/dominguez/paywall/PaywallServicesInteractor;)V", "tempAccessDisposable", "Lio/reactivex/disposables/CompositeDisposable;", "tempAccessDisposable$annotations", "()V", "getTempAccessDisposable$mainApp_release", "()Lio/reactivex/disposables/CompositeDisposable;", "setTempAccessDisposable$mainApp_release", "(Lio/reactivex/disposables/CompositeDisposable;)V", "clear", "", "()Lkotlin/Unit;", "clearPaywall", "handlePaywallEvents", "event", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent;", "handleTempAccessResolved", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$TempAccessResolved;", "mapAccountStateForPaywall", "Lio/reactivex/Single;", "Lcom/bamtechmedia/dominguez/main/state/MainActivityState;", "mapPaywallToSubscriptionStatus", "paywall", "Lcom/bamtechmedia/dominguez/paywall/model/DmgzPaywall;", "mapThrowableToSubscriptionState", "throwable", "", "resolveTempAccess", "mainApp_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.main.w.a */
@@ -68,7 +68,7 @@ public final class C6206a {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error in linking accounts after temp access resolution.", new Object[0]);
+            Timber.m44528b(th, "Error in linking accounts after temp access resolution.", new Object[0]);
         }
     }
 
@@ -136,7 +136,7 @@ public final class C6206a {
         /* renamed from: a */
         public final void accept(C7887p pVar) {
             C6206a aVar = this.f14244c;
-            C12880j.m40222a((Object) pVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) pVar, "it");
             aVar.m19692a(pVar);
         }
     }
@@ -154,7 +154,7 @@ public final class C6206a {
 
         /* renamed from: a */
         public final void mo18809a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -162,7 +162,7 @@ public final class C6206a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -194,7 +194,7 @@ public final class C6206a {
     public final Single<C6219d> mo18803b() {
         C5855o oVar = C5855o.f13640a;
         Single<C6219d> i = ((C7885o) this.f14240b.get()).mo19841a(true).mo30233g(new C6214c(new C6209c(this))).mo30237i(new C6214c(new C6210d(this)));
-        C12880j.m40222a((Object) i, "paywallRepositoryProvide…wableToSubscriptionState)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "paywallRepositoryProvide…wableToSubscriptionState)");
         return i;
     }
 

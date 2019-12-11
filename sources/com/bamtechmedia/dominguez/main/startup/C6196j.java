@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.auth.p061o0.C2742c;
 import com.bamtechmedia.dominguez.config.C3555j0;
 import com.bamtechmedia.dominguez.core.content.C3716q;
 import com.bamtechmedia.dominguez.core.utils.C5855o;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p314r.C7727c;
 import p163g.p201e.p203b.p319v.C7862c;
 import p520io.reactivex.Completable;
@@ -41,9 +41,9 @@ public final class C6196j implements C6187g {
     public Completable mo18797a() {
         C5855o oVar = C5855o.f13640a;
         Completable b = Completable.m38164b(this.f14204b.mo11733a(), this.f14203a.mo12762a());
-        C12880j.m40222a((Object) b, "Completable.mergeArrayDe…oadAllConfigs\")\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.mergeArrayDe…oadAllConfigs\")\n        )");
         Completable a = b.mo30034a((CompletableSource) this.f14205c.mo20782a()).mo30034a((CompletableSource) this.f14206d.mo20643a()).mo30034a((CompletableSource) this.f14206d.mo20645b()).mo30034a((CompletableSource) this.f14207e.mo13547a());
-        C12880j.m40222a((Object) a, "Completable.mergeArrayDe…g(\"prefetchRatingIcons\"))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.mergeArrayDe…g(\"prefetchRatingIcons\"))");
         return a;
     }
 }

@@ -4,7 +4,7 @@ import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
 import com.google.android.exoplayer2.p393v0.C9545h0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import com.google.android.exoplayer2.p393v0.C9572w;
 
@@ -60,7 +60,7 @@ public final class C9055w implements C9029h0 {
             StringBuilder sb = new StringBuilder();
             sb.append("Unexpected start code prefix: ");
             sb.append(a);
-            C9563q.m29500d("PesReader", sb.toString());
+            Log.m29500d("PesReader", sb.toString());
             this.f20099j = -1;
             return false;
         }
@@ -129,14 +129,14 @@ public final class C9055w implements C9029h0 {
             if (!(i2 == 0 || i2 == 1)) {
                 String str = "PesReader";
                 if (i2 == 2) {
-                    C9563q.m29500d(str, "Unexpected start indicator reading extended header");
+                    Log.m29500d(str, "Unexpected start indicator reading extended header");
                 } else if (i2 == 3) {
                     if (this.f20099j != -1) {
                         StringBuilder sb = new StringBuilder();
                         sb.append("Unexpected start indicator: expected ");
                         sb.append(this.f20099j);
                         sb.append(" more bytes");
-                        C9563q.m29500d(str, sb.toString());
+                        Log.m29500d(str, sb.toString());
                     }
                     this.f20090a.mo23438b();
                 } else {

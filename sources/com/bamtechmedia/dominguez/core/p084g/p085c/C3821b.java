@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.p084g.p085c;
 import android.view.View;
 import android.view.animation.Interpolator;
 import androidx.recyclerview.widget.RecyclerView.C0794d0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.g.c.b */
 /* compiled from: FadeInOutItemAnimator.kt */
@@ -35,7 +35,7 @@ public final class C3821b extends C3808a {
     /* renamed from: v */
     public void mo13718v(C0794d0 d0Var) {
         View view = d0Var.itemView;
-        C12880j.m40222a((Object) view, "holder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "holder.itemView");
         view.setAlpha(0.0f);
     }
 

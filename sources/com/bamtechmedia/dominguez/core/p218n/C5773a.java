@@ -16,7 +16,7 @@ import com.disney.dominguez.navigation.core.ViewModelNavEventHandler.Observer;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p437h.p438a.p439a.p440a.C10893a;
 import p163g.p437h.p438a.p439a.p440a.C10895c;
@@ -45,7 +45,7 @@ public final class C5773a implements C5783b {
         /* renamed from: a */
         public final C5773a mo17673a(C0532d dVar, int i) {
             C0741y a = C0703a0.m3718a(dVar).mo4180a(ViewModelNavEventHandler.class);
-            C12880j.m40222a((Object) a, "ViewModelProviders.of(ac…EventHandler::class.java)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "ViewModelProviders.of(ac…EventHandler::class.java)");
             ViewModelNavEventHandler viewModelNavEventHandler = (ViewModelNavEventHandler) a;
             if (!viewModelNavEventHandler.mo21647y().contains(Integer.valueOf(dVar.getLifecycle().hashCode()))) {
                 dVar.getLifecycle().mo4134a(new Observer(viewModelNavEventHandler, new C10893a(dVar)));
@@ -286,13 +286,13 @@ public final class C5773a implements C5783b {
             Function1 function1 = this.f13550U;
             C0538i supportFragmentManager = dVar.getSupportFragmentManager();
             String str = "supportFragmentManager";
-            C12880j.m40222a((Object) supportFragmentManager, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager, str);
             if (((Boolean) function1.invoke(supportFragmentManager)).booleanValue()) {
                 C0538i supportFragmentManager2 = dVar.getSupportFragmentManager();
-                C12880j.m40222a((Object) supportFragmentManager2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager2, str);
                 if (supportFragmentManager2.mo3157c() > 0) {
                     C0539a b = dVar.getSupportFragmentManager().mo3154b(0);
-                    C12880j.m40222a((Object) b, "supportFragmentManager.getBackStackEntryAt(0)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) b, "supportFragmentManager.getBackStackEntryAt(0)");
                     dVar.getSupportFragmentManager().mo3148a(b.getId(), 1);
                 }
                 C0564o a = dVar.getSupportFragmentManager().mo3147a();

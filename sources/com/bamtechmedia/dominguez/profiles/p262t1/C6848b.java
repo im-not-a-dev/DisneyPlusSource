@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -56,7 +56,7 @@ public final class C6848b implements C2434c {
         /* renamed from: a */
         public final Map<String, String> apply(List<? extends C6626c0> list) {
             C6848b bVar = this.f15293c;
-            C12880j.m40222a((Object) list, "profileList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "profileList");
             return C13173j0.m40360b(C12907r.m40244a("userMultipleProfiles", bVar.m21005a(list)), C12907r.m40244a("userNumberofProfiles", this.f15293c.m21010b(list)));
         }
     }
@@ -87,9 +87,9 @@ public final class C6848b implements C2434c {
             /* renamed from: a */
             public final Map<String, String> apply(C6626c0 c0Var) {
                 Map map = this.f15295U;
-                C12880j.m40222a((Object) map, "profilesMap");
+                Intrinsics.checkReturnedValueIsNotNull((Object) map, "profilesMap");
                 C6848b bVar = this.f15296c.f15294c;
-                C12880j.m40222a((Object) c0Var, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) c0Var, "it");
                 Map a = C13173j0.m40354a(map, C12907r.m40244a("userCurrentProfileViewer", bVar.m21007b(c0Var)));
                 String X = c0Var.getAttributes().mo19335P().mo19792X();
                 String str = "";
@@ -118,7 +118,7 @@ public final class C6848b implements C2434c {
             /* renamed from: a */
             public final Map<String, String> apply(Throwable th) {
                 Map map = this.f15297c;
-                C12880j.m40222a((Object) map, "profilesMap");
+                Intrinsics.checkReturnedValueIsNotNull((Object) map, "profilesMap");
                 return C13173j0.m40354a(map, C12907r.m40244a("userCurrentProfileViewer", ""));
             }
         }
@@ -152,7 +152,7 @@ public final class C6848b implements C2434c {
     /* renamed from: a */
     public Single<Map<String, String>> mo11521a() {
         Single<Map<String, String>> b = C6668a.m20672a(this.f15290a, false, 1, null).mo30087b().mo30233g(new C6850b(this)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6851c<Object,Object>(this)).mo30220b(this.f15291b);
-        C12880j.m40222a((Object) b, "profilesRepository.profi….subscribeOn(ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "profilesRepository.profi….subscribeOn(ioScheduler)");
         return b;
     }
 

@@ -18,7 +18,7 @@ import com.bamtechmedia.dominguez.core.utils.C5884x;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.C12853n;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001:\u0001!B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0018\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\u00072\u0006\u0010 \u001a\u00020\u0007H\u0014R(\u0010\u000b\u001a\u0004\u0018\u00010\n2\b\u0010\t\u001a\u0004\u0018\u00010\n@FX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR\u0016\u0010\u0010\u001a\u0004\u0018\u00010\u00118BX\u0004¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u0013R\u0012\u0010\u0014\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0004\n\u0002\u0010\u0015R\u000e\u0010\u0016\u001a\u00020\u0017X\u0004¢\u0006\u0002\n\u0000R\u0016\u0010\u0018\u001a\u0004\u0018\u00010\u00198BX\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u001bR\u0012\u0010\u001c\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0004\n\u0002\u0010\u0015¨\u0006\""}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/collections/items/ShelfItemLayoutWrapper;", "Landroid/widget/LinearLayout;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "value", "Lcom/bamtechmedia/dominguez/collections/config/ContainerConfig;", "config", "getConfig", "()Lcom/bamtechmedia/dominguez/collections/config/ContainerConfig;", "setConfig", "(Lcom/bamtechmedia/dominguez/collections/config/ContainerConfig;)V", "itemView", "Lcom/bamtechmedia/dominguez/collections/items/ShelfItemLayout;", "getItemView", "()Lcom/bamtechmedia/dominguez/collections/items/ShelfItemLayout;", "itemViewId", "Ljava/lang/Integer;", "itemWidthCalculator", "Lcom/bamtechmedia/dominguez/collections/items/ShelfItemLayoutWrapper$ItemWidthCalculator;", "titleView", "Landroid/widget/TextView;", "getTitleView", "()Landroid/widget/TextView;", "titleViewId", "onMeasure", "", "widthMeasureSpec", "heightMeasureSpec", "ItemWidthCalculator", "collectionsApi_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -170,7 +170,7 @@ public final class ShelfItemLayoutWrapper extends LinearLayout {
         int i3;
         int size = MeasureSpec.getSize(i);
         Context context = getContext();
-        C12880j.m40222a((Object) context, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
         if (C5837i.m18843e(context)) {
             C3444j jVar = this.f8402U;
             i3 = size / (jVar != null ? jVar.mo12637p() : 1);
@@ -190,7 +190,7 @@ public final class ShelfItemLayoutWrapper extends LinearLayout {
         super(context, attributeSet, i);
         this.f8405c = new C3339a(context);
         int[] iArr = C3427f.ShelfItemLayoutWrapper;
-        C12880j.m40222a((Object) iArr, "R.styleable.ShelfItemLayoutWrapper");
+        Intrinsics.checkReturnedValueIsNotNull((Object) iArr, "R.styleable.ShelfItemLayoutWrapper");
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, 0, 0);
         this.f8403V = Integer.valueOf(obtainStyledAttributes.getResourceId(C3427f.ShelfItemLayoutWrapper_shelfItemLayoutViewId, -1));
         this.f8404W = Integer.valueOf(obtainStyledAttributes.getResourceId(C3427f.ShelfItemLayoutWrapper_shelfTitleViewId, -1));

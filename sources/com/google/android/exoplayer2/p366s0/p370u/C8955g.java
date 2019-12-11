@@ -4,8 +4,8 @@ import com.google.android.exoplayer2.p366s0.C8918m;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.s0.u.g */
@@ -44,7 +44,7 @@ final class C8955g implements C8953a {
         if ((i3 & 1) == 1) {
             int z = wVar.mo24715z();
             if (z != 0) {
-                long c = C9554k0.m29439c((long) z, ((long) i) * 1000000, (long) i2);
+                long c = Util.m29439c((long) z, ((long) i) * 1000000, (long) i2);
                 if ((i3 & 6) != 6) {
                     C8955g gVar = new C8955g(j2, mVar2.f19158c, c);
                     return gVar;
@@ -62,7 +62,7 @@ final class C8955g implements C8953a {
                         sb.append(j3);
                         sb.append(", ");
                         sb.append(j4);
-                        C9563q.m29500d("XingSeeker", sb.toString());
+                        Log.m29500d("XingSeeker", sb.toString());
                     }
                 }
                 C8955g gVar2 = new C8955g(j2, mVar2.f19158c, c, z2, jArr);
@@ -78,7 +78,7 @@ final class C8955g implements C8953a {
         if (!mo23279c()) {
             return new C8921a(new C8923p(0, this.f19382a + ((long) this.f19383b)));
         }
-        long b = C9554k0.m29431b(j, 0, this.f19384c);
+        long b = Util.m29431b(j, 0, this.f19384c);
         double d2 = (((double) b) * 100.0d) / ((double) this.f19384c);
         double d3 = 0.0d;
         if (d2 > 0.0d) {
@@ -98,7 +98,7 @@ final class C8955g implements C8953a {
                 d3 = d4 + ((d2 - ((double) i)) * (d - d4));
             }
         }
-        return new C8921a(new C8923p(b, this.f19382a + C9554k0.m29431b(Math.round((d3 / 256.0d) * ((double) this.f19385d)), (long) this.f19383b, this.f19385d - 1)));
+        return new C8921a(new C8923p(b, this.f19382a + Util.m29431b(Math.round((d3 / 256.0d) * ((double) this.f19385d)), (long) this.f19383b, this.f19385d - 1)));
     }
 
     /* renamed from: c */
@@ -135,7 +135,7 @@ final class C8955g implements C8953a {
         C9537e.m29296a(jArr);
         long[] jArr2 = jArr;
         double d = (((double) j3) * 256.0d) / ((double) this.f19385d);
-        int b = C9554k0.m29429b(jArr2, (long) d, true, true);
+        int b = Util.m29429b(jArr2, (long) d, true, true);
         long a = m26346a(b);
         long j4 = jArr2[b];
         int i = b + 1;

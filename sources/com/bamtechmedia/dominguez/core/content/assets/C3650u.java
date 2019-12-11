@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.content.assets.u */
 /* compiled from: TextModels.kt */
@@ -30,7 +30,7 @@ public final class C3650u {
             }
             obj = it.next();
             TextEntry textEntry = (TextEntry) obj;
-            if (!C12880j.m40224a((Object) textEntry.mo13211Y(), (Object) sVar.mo13289a()) || !C12880j.m40224a((Object) textEntry.mo13214b0(), (Object) tVar.mo13290a()) || !C12880j.m40224a((Object) textEntry.mo13213a0(), (Object) rVar.mo13288a())) {
+            if (!Intrinsics.areEqual((Object) textEntry.mo13211Y(), (Object) sVar.mo13289a()) || !Intrinsics.areEqual((Object) textEntry.mo13214b0(), (Object) tVar.mo13290a()) || !Intrinsics.areEqual((Object) textEntry.mo13213a0(), (Object) rVar.mo13288a())) {
                 z = false;
                 continue;
             } else {

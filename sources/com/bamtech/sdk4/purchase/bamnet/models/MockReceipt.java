@@ -48,7 +48,7 @@ public final class MockReceipt extends BamnetReceiptItem {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.receiptId, (java.lang.Object) r3.receiptId) != false) goto L_0x0029;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.receiptId, (java.lang.Object) r3.receiptId) != false) goto L_0x0029;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -60,15 +60,15 @@ public final class MockReceipt extends BamnetReceiptItem {
             com.bamtech.sdk4.purchase.bamnet.models.MockReceipt r3 = (com.bamtech.sdk4.purchase.bamnet.models.MockReceipt) r3
             java.lang.String r0 = r2.sku
             java.lang.String r1 = r3.sku
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.lang.String r0 = r2.userId
             java.lang.String r1 = r3.userId
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.lang.String r0 = r2.receiptId
             java.lang.String r3 = r3.receiptId
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0027
             goto L_0x0029
         L_0x0027:

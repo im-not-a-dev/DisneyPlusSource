@@ -9,7 +9,7 @@ import com.bamtech.shadow.gson.JsonSerializationContext;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import org.joda.time.DateTime;
 import org.joda.time.ReadableInstant;
@@ -71,7 +71,7 @@ public final class JodaTimeTypeAdapter implements C2132h<DateTime>, C2236m<DateT
     public DateTime deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {
         try {
             DateTime parse = DateTime.parse(jsonElement.mo11074e(), this.f5880a);
-            C12880j.m40222a((Object) parse, "DateTime.parse(json.asString, formatter)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parse, "DateTime.parse(json.asString, formatter)");
             return parse;
         } catch (Exception e) {
             return (DateTime) this.f5881b.invoke(e);
@@ -80,7 +80,7 @@ public final class JodaTimeTypeAdapter implements C2132h<DateTime>, C2236m<DateT
 
     public JodaTimeTypeAdapter() {
         DateTimeFormatter withOffsetParsed = ISODateTimeFormat.dateTimeParser().withOffsetParsed();
-        C12880j.m40222a((Object) withOffsetParsed, "ISODateTimeFormat.dateTi…rser().withOffsetParsed()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) withOffsetParsed, "ISODateTimeFormat.dateTi…rser().withOffsetParsed()");
         this(withOffsetParsed, null, 2, null);
     }
 }

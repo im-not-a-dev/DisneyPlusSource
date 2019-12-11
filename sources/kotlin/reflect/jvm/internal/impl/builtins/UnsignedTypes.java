@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor;
@@ -54,7 +54,7 @@ public final class UnsignedTypes {
 
     public final boolean isUnsignedClass(DeclarationDescriptor declarationDescriptor) {
         DeclarationDescriptor containingDeclaration = declarationDescriptor.getContainingDeclaration();
-        return (containingDeclaration instanceof PackageFragmentDescriptor) && C12880j.m40224a((Object) ((PackageFragmentDescriptor) containingDeclaration).getFqName(), (Object) KotlinBuiltIns.BUILT_INS_PACKAGE_FQ_NAME) && unsignedTypeNames.contains(declarationDescriptor.getName());
+        return (containingDeclaration instanceof PackageFragmentDescriptor) && Intrinsics.areEqual((Object) ((PackageFragmentDescriptor) containingDeclaration).getFqName(), (Object) KotlinBuiltIns.BUILT_INS_PACKAGE_FQ_NAME) && unsignedTypeNames.contains(declarationDescriptor.getName());
     }
 
     public final boolean isUnsignedType(KotlinType kotlinType) {
@@ -65,7 +65,7 @@ public final class UnsignedTypes {
         if (declarationDescriptor == null) {
             return false;
         }
-        C12880j.m40222a((Object) declarationDescriptor, "type.constructor.declara…escriptor ?: return false");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declarationDescriptor, "type.constructor.declara…escriptor ?: return false");
         return isUnsignedClass(declarationDescriptor);
     }
 }

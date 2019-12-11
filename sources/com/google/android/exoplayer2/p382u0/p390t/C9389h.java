@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p382u0.p390t;
 
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -41,9 +41,9 @@ public final class C9389h {
 
     /* renamed from: b */
     public static long m28717b(String str) throws NumberFormatException {
-        String[] b = C9554k0.m29437b(str, "\\.");
+        String[] b = Util.m29437b(str, "\\.");
         long j = 0;
-        for (String parseLong : C9554k0.m29423a(b[0], ":")) {
+        for (String parseLong : Util.m29423a(b[0], ":")) {
             j = (j * 60) + Long.parseLong(parseLong);
         }
         long j2 = j * 1000;

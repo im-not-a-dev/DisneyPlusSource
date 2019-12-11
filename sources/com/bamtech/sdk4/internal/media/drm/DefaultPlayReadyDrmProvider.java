@@ -19,7 +19,7 @@ import java.util.UUID;
 import javax.inject.Provider;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.OkHttpClient.Builder;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -56,23 +56,23 @@ public final class DefaultPlayReadyDrmProvider implements PlayReadyDrmProvider, 
         Single single;
         if (!(str == null || C12832w.m40118a(str))) {
             single = this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultPlayReadyDrmProvider$getLicenseLink$1.INSTANCE).mo30233g(new DefaultPlayReadyDrmProvider$getLicenseLink$2(str));
-            C12880j.m40222a((Object) single, "configurationProvider.ge…metryConfig\n            }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) single, "configurationProvider.ge…metryConfig\n            }");
         } else {
             single = this.configurationProvider.getServiceLink(serviceTransaction, DefaultPlayReadyDrmProvider$getLicenseLink$3.INSTANCE).mo30233g(new DefaultPlayReadyDrmProvider$getLicenseLink$4(this, serviceTransaction));
-            C12880j.m40222a((Object) single, "configurationProvider.ge…lemetry\n                }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) single, "configurationProvider.ge…lemetry\n                }");
         }
         return DustExtensionsKt.withDust$default(single, serviceTransaction, DrmServiceConfigurationKt.getPLAY_READY_GET_LICENSE_URL(Dust$Events.INSTANCE), (Object) null, 4, (Object) null);
     }
 
     public byte[] executeKeyRequest(ServiceTransaction serviceTransaction, String str, byte[] bArr, String str2, boolean z) {
         Object c = getPlayReadyLicense(serviceTransaction, str, bArr, str2, z).mo30224c();
-        C12880j.m40222a(c, "getPlayReadyLicense(tran… isOffline).blockingGet()");
+        Intrinsics.checkReturnedValueIsNotNull(c, "getPlayReadyLicense(tran… isOffline).blockingGet()");
         return (byte[]) c;
     }
 
     public byte[] executeProvisionRequest(ServiceTransaction serviceTransaction, String str, byte[] bArr, String str2, boolean z) {
         Object c = provisionPlayReady(serviceTransaction, str, bArr, str2, z).mo30224c();
-        C12880j.m40222a(c, "provisionPlayReady(trans… isOffline).blockingGet()");
+        Intrinsics.checkReturnedValueIsNotNull(c, "provisionPlayReady(trans… isOffline).blockingGet()");
         return (byte[]) c;
     }
 
@@ -88,7 +88,7 @@ public final class DefaultPlayReadyDrmProvider implements PlayReadyDrmProvider, 
         Single licenseLink = getLicenseLink(serviceTransaction, str);
         DefaultPlayReadyDrmProvider$getPlayReadyLicense$1 defaultPlayReadyDrmProvider$getPlayReadyLicense$1 = new DefaultPlayReadyDrmProvider$getPlayReadyLicense$1(this, str2, serviceTransaction, z, bArr);
         Single<byte[]> a = licenseLink.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultPlayReadyDrmProvider$getPlayReadyLicense$1);
-        C12880j.m40222a((Object) a, "getLicenseLink(transacti…ICENSE)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "getLicenseLink(transacti…ICENSE)\n                }");
         return a;
     }
 
@@ -110,11 +110,11 @@ public final class DefaultPlayReadyDrmProvider implements PlayReadyDrmProvider, 
 
     public Single<byte[]> provisionPlayReady(ServiceTransaction serviceTransaction, String str, byte[] bArr, String str2, boolean z) {
         Single b = Single.m38399b(C1679a.m7776a(new DefaultPlayReadyDrmProvider$provisionPlayReady$1(str)));
-        C12880j.m40222a((Object) b, "Single.just(link {\n     …d(Method.POST)\n        })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(link {\n     …d(Method.POST)\n        })");
         Single a = C11920c.m38475a(b, this.configurationProvider.getServiceConfiguration(serviceTransaction, DefaultPlayReadyDrmProvider$provisionPlayReady$2.INSTANCE));
         DefaultPlayReadyDrmProvider$provisionPlayReady$3 defaultPlayReadyDrmProvider$provisionPlayReady$3 = new DefaultPlayReadyDrmProvider$provisionPlayReady$3(this, str2, serviceTransaction, z, bArr);
         Single<byte[]> a2 = a.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultPlayReadyDrmProvider$provisionPlayReady$3);
-        C12880j.m40222a((Object) a2, "Single.just(link {\n     …VISION)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "Single.just(link {\n     …VISION)\n                }");
         return a2;
     }
 }

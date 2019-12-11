@@ -12,7 +12,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p096e.p121h.p122j.p123c.C4028a;
@@ -22,8 +22,8 @@ import p163g.p503n.p504a.C11793e;
 import p520io.reactivex.C11974s;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
-import p686n.p687a.C14100a.C14102b;
+import p686n.p687a.Timber;
+import p686n.p687a.Timber.C14102b;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u0000 \u001c2\u00020\u0001:\u0001\u001cB%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005\u0012\u0006\u0010\u0007\u001a\u00020\b¢\u0006\u0002\u0010\tJ\u0010\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u0018H\u0016J\u0010\u0010\u0019\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u0018H\u0016J\u0010\u0010\u001a\u001a\u00020\u00162\u0006\u0010\u001b\u001a\u00020\u0006H\u0002R\u0014\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R \u0010\n\u001a\n\u0012\u0004\u0012\u00020\f\u0018\u00010\u000b*\u00020\u00068BX\u0004¢\u0006\u0006\u001a\u0004\b\r\u0010\u000eR \u0010\u000f\u001a\n\u0012\u0004\u0012\u00020\f\u0018\u00010\u000b*\u00020\u00068BX\u0004¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u000eR\u001a\u0010\u0011\u001a\u0004\u0018\u00010\u0012*\u00020\u00068BX\u0004¢\u0006\u0006\u001a\u0004\b\u0013\u0010\u0014¨\u0006\u001d"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/app/SentryConfigSetup;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "context", "Landroid/content/Context;", "appConfigMap", "Lio/reactivex/Single;", "Lcom/bamtechmedia/dominguez/config/AppConfigMap;", "sentryTree", "Lcom/bamtechmedia/dominguez/app/SentryTree;", "(Landroid/content/Context;Lio/reactivex/Single;Lcom/bamtechmedia/dominguez/app/SentryTree;)V", "ignoredMessages", "", "", "getIgnoredMessages", "(Lcom/bamtechmedia/dominguez/config/AppConfigMap;)Ljava/util/List;", "ignoredStackTraceElements", "getIgnoredStackTraceElements", "sentryThreeEnabled", "", "getSentryThreeEnabled", "(Lcom/bamtechmedia/dominguez/config/AppConfigMap;)Ljava/lang/Boolean;", "onCreate", "", "owner", "Landroidx/lifecycle/LifecycleOwner;", "onStart", "updateSentryIgnores", "map", "Companion", "core_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: SentryConfigSetup.kt */
@@ -164,9 +164,9 @@ public final class SentryConfigSetup implements C0710d {
     public void mo4131f(C0722m mVar) {
         Single<C3524e> single = this.f6775U;
         C10541b a = C10541b.m33254a(mVar);
-        C12880j.m40222a((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "AndroidLifecycleScopeProvider.from(\n    this)");
         Object a2 = single.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a((C11790c0) a));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a2).mo29920a(new C2685y(new C2479b(this)), C2480c.f6778c);
     }
 
@@ -185,6 +185,6 @@ public final class SentryConfigSetup implements C0710d {
             z = true;
         }
         zVar.mo11725a(z);
-        C14100a.m44525a((C14102b) this.f6776V);
+        Timber.m44525a((C14102b) this.f6776V);
     }
 }

@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Set;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.BuiltInsLoader;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -62,7 +62,7 @@ public final class BuiltInsLoaderImpl implements BuiltInsLoader {
         LocalClassifierTypeSettings.Default defaultR2 = LocalClassifierTypeSettings.Default.INSTANCE;
         ErrorReporter errorReporter = ErrorReporter.DO_NOTHING;
         ErrorReporter errorReporter2 = errorReporter;
-        C12880j.m40222a((Object) errorReporter, "ErrorReporter.DO_NOTHING");
+        Intrinsics.checkReturnedValueIsNotNull((Object) errorReporter, "ErrorReporter.DO_NOTHING");
         DeserializationComponents deserializationComponents = r0;
         PackageFragmentProviderImpl packageFragmentProviderImpl3 = packageFragmentProviderImpl2;
         ArrayList<BuiltInsPackageFragmentImpl> arrayList2 = arrayList;
@@ -75,7 +75,7 @@ public final class BuiltInsLoaderImpl implements BuiltInsLoader {
 
     public PackageFragmentProvider createPackageFragmentProvider(StorageManager storageManager, ModuleDescriptor moduleDescriptor, Iterable<? extends ClassDescriptorFactory> iterable, PlatformDependentDeclarationFilter platformDependentDeclarationFilter, AdditionalClassPartsProvider additionalClassPartsProvider, boolean z) {
         Set<FqName> set = KotlinBuiltIns.BUILT_INS_PACKAGE_FQ_NAMES;
-        C12880j.m40222a((Object) set, "KotlinBuiltIns.BUILT_INS_PACKAGE_FQ_NAMES");
+        Intrinsics.checkReturnedValueIsNotNull((Object) set, "KotlinBuiltIns.BUILT_INS_PACKAGE_FQ_NAMES");
         return createBuiltInPackageFragmentProvider(storageManager, moduleDescriptor, set, iterable, platformDependentDeclarationFilter, additionalClassPartsProvider, z, new BuiltInsLoaderImpl$createPackageFragmentProvider$1(this.resourceLoader));
     }
 }

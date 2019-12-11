@@ -17,7 +17,7 @@ import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.p525e0.C11934b;
 import p520io.reactivex.p527w.p529c.C11992a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.a.b.a */
 /* compiled from: BamnetRedemptionDelegate */
@@ -45,9 +45,9 @@ public class C4798a implements C4815e {
 
         /* renamed from: a */
         public void accept(AccessStatus accessStatus) {
-            C14100a.m44522a("BAM REDEMPTION SUCCESS", new Object[0]);
+            Timber.m44522a("BAM REDEMPTION SUCCESS", new Object[0]);
             if (C4798a.this.f11935a != null) {
-                C14100a.m44522a("BAM REDEMPTION SUCCESS: CALLING LISTENER", new Object[0]);
+                Timber.m44522a("BAM REDEMPTION SUCCESS: CALLING LISTENER", new Object[0]);
                 C4798a.this.f11935a.mo16182b(accessStatus);
             }
         }
@@ -61,9 +61,9 @@ public class C4798a implements C4815e {
 
         /* renamed from: a */
         public void accept(Throwable th) {
-            C14100a.m44522a("BAM REDEMPTION ERROR", new Object[0]);
+            Timber.m44522a("BAM REDEMPTION ERROR", new Object[0]);
             if (C4798a.this.f11935a != null) {
-                C14100a.m44522a("BAM REDEMPTION ERROR: CALLING ERROR", new Object[0]);
+                Timber.m44522a("BAM REDEMPTION ERROR: CALLING ERROR", new Object[0]);
                 C4798a.this.f11935a.mo16180a(th);
             }
         }
@@ -101,7 +101,7 @@ public class C4798a implements C4815e {
 
         /* renamed from: a */
         public void accept(C4813a aVar) {
-            C14100a.m44522a("Successfully restored receipt: %s", aVar.toString());
+            Timber.m44522a("Successfully restored receipt: %s", aVar.toString());
             C4798a.this.mo16186a(aVar.f11961a, Collections.singletonMap(aVar.f11962b.mo7210e(), aVar.f11962b), true);
         }
     }
@@ -114,7 +114,7 @@ public class C4798a implements C4815e {
 
         /* renamed from: a */
         public void accept(Throwable th) {
-            C14100a.m44528b(th, "Error fetching receipt.", new Object[0]);
+            Timber.m44528b(th, "Error fetching receipt.", new Object[0]);
             C4798a.this.f11935a.mo16181a(th, true);
         }
     }
@@ -132,9 +132,9 @@ public class C4798a implements C4815e {
 
         /* renamed from: a */
         public void accept(AccessStatus accessStatus) {
-            C14100a.m44522a("BAM RESTORE SUCCESS", new Object[0]);
+            Timber.m44522a("BAM RESTORE SUCCESS", new Object[0]);
             if (C4798a.this.f11935a != null) {
-                C14100a.m44522a("BAM RESTORE SUCCESS: CALLING LISTENER", new Object[0]);
+                Timber.m44522a("BAM RESTORE SUCCESS: CALLING LISTENER", new Object[0]);
                 C4798a.this.f11935a.mo16179a(accessStatus, this.f11947c);
             }
         }
@@ -154,7 +154,7 @@ public class C4798a implements C4815e {
         /* renamed from: a */
         public void accept(Throwable th) {
             if (C4798a.this.f11935a != null) {
-                C14100a.m44522a("BAM RESTORE ERROR: CALLING LISTENER", new Object[0]);
+                Timber.m44522a("BAM RESTORE ERROR: CALLING LISTENER", new Object[0]);
                 C4798a.this.f11935a.mo16181a(th, this.f11949c);
             }
         }
@@ -171,7 +171,7 @@ public class C4798a implements C4815e {
             if (accessStatus.isTemporary()) {
                 return Single.m38399b(accessStatus);
             }
-            C14100a.m44522a("No temp access. Clearing receipt if stored.", new Object[0]);
+            Timber.m44522a("No temp access. Clearing receipt if stored.", new Object[0]);
             return C4798a.this.f11937c.mo16196a().mo30045a(accessStatus);
         }
     }
@@ -184,14 +184,14 @@ public class C4798a implements C4815e {
     /* renamed from: a */
     public void mo16184a(BamnetIAPResult bamnetIAPResult, BamnetIAPPurchase bamnetIAPPurchase) {
         try {
-            C14100a.m44522a("ACTIVATING PURCHASE", new Object[0]);
+            Timber.m44522a("ACTIVATING PURCHASE", new Object[0]);
             this.f11936b.mo30250b(this.f11938d.redeem(bamnetIAPResult, bamnetIAPPurchase).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C4801c<Object,Object>(bamnetIAPResult, bamnetIAPPurchase)).mo30220b(C11934b.m38500b()).mo30211a(C11992a.m38600a()).mo30214a((Consumer<? super T>) new C4799a<Object>(), (Consumer<? super Throwable>) new C4800b<Object>()));
         } catch (ClaimException e) {
-            C14100a.m44528b(e, "SDK Redemption Failed", new Object[0]);
+            Timber.m44528b(e, "SDK Redemption Failed", new Object[0]);
         } catch (NullPointerException e2) {
-            C14100a.m44528b(e2, "SDK Session is null", new Object[0]);
+            Timber.m44528b(e2, "SDK Session is null", new Object[0]);
         } catch (Exception e3) {
-            C14100a.m44528b(e3, "SDK Configuration Failed", new Object[0]);
+            Timber.m44528b(e3, "SDK Configuration Failed", new Object[0]);
         }
     }
 
@@ -216,11 +216,11 @@ public class C4798a implements C4815e {
         try {
             this.f11936b.mo30250b(this.f11938d.restore(bamnetIAPResult, map).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C4806h<Object,Object>()).mo30220b(C11934b.m38500b()).mo30211a(C11992a.m38600a()).mo30214a((Consumer<? super T>) new C4804f<Object>(z), (Consumer<? super Throwable>) new C4805g<Object>(z)));
         } catch (ClaimException e) {
-            C14100a.m44528b(e, "SDK Restore Failed", new Object[0]);
+            Timber.m44528b(e, "SDK Restore Failed", new Object[0]);
         } catch (NullPointerException e2) {
-            C14100a.m44528b(e2, "SDK Session is null", new Object[0]);
+            Timber.m44528b(e2, "SDK Session is null", new Object[0]);
         } catch (Exception e3) {
-            C14100a.m44528b(e3, "SDK Configuration Failed", new Object[0]);
+            Timber.m44528b(e3, "SDK Configuration Failed", new Object[0]);
         }
     }
 }

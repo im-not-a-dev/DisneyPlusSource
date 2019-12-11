@@ -3,7 +3,7 @@ package p163g.p201e.p203b.p312q;
 import com.disney.disneyplus.R;
 import java.util.List;
 import java.util.Set;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 
 /* renamed from: g.e.b.q.q */
@@ -32,14 +32,14 @@ public final class C7699q implements C7683e {
     public int mo20597a(HttpUrl httpUrl) {
         List j = httpUrl.mo35759j();
         String str = "link.pathSegments()";
-        C12880j.m40222a((Object) j, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, str);
         String str2 = (String) C13199w.m40591g(j);
         String str3 = "";
         if (str2 == null) {
             str2 = str3;
         }
         List j2 = httpUrl.mo35759j();
-        C12880j.m40222a((Object) j2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) j2, str);
         String str4 = (String) C13199w.m40595i(j2);
         if (str4 == null) {
             str4 = str3;

@@ -27,7 +27,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p174d.p178b.p185g0.p187w5.C5187b;
 
@@ -90,13 +90,13 @@ public final class OnboardingToolbar extends ConstraintLayout {
             float a2 = C12762h.m39912a(((0.6f * a) + 1.0f) - a, 1.0f);
             View c = this.f13269c.mo2145c(C3838h.onboardingDisneyLogo);
             String str = "onboardingDisneyLogo";
-            C12880j.m40222a((Object) c, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) c, str);
             c.setScaleX(a2);
             View c2 = this.f13269c.mo2145c(C3838h.onboardingDisneyLogo);
-            C12880j.m40222a((Object) c2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) c2, str);
             c2.setScaleY(a2);
             FrameLayout frameLayout = (FrameLayout) this.f13269c.mo2145c(C3838h.onboardingDisneyLogoLayout);
-            C12880j.m40222a((Object) frameLayout, "onboardingDisneyLogoLayout");
+            Intrinsics.checkReturnedValueIsNotNull((Object) frameLayout, "onboardingDisneyLogoLayout");
             frameLayout.setPaddingRelative(frameLayout.getPaddingStart(), i2, frameLayout.getPaddingEnd(), frameLayout.getPaddingBottom());
         }
     }
@@ -168,11 +168,11 @@ public final class OnboardingToolbar extends ConstraintLayout {
                 C5653c cVar2 = this.f13277c;
                 viewGroup.setPaddingRelative(viewGroup.getPaddingStart(), cVar2.f13275c.m18497a(cVar2.f13272W, a, cVar2.f13273X), viewGroup.getPaddingEnd(), viewGroup.getPaddingBottom());
                 FrameLayout frameLayout = (FrameLayout) this.f13277c.f13275c.mo2145c(C3838h.onboardingDisneyLogoLayout);
-                C12880j.m40222a((Object) frameLayout, "onboardingDisneyLogoLayout");
+                Intrinsics.checkReturnedValueIsNotNull((Object) frameLayout, "onboardingDisneyLogoLayout");
                 int i = 0;
                 frameLayout.setVisibility(this.f13277c.f13272W ? 0 : 8);
                 Context context = this.f13277c.f13275c.getContext();
-                C12880j.m40222a((Object) context, "context");
+                Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
                 if (C5837i.m18842d(context) && this.f13277c.f13272W) {
                     i = a;
                 }
@@ -238,7 +238,7 @@ public final class OnboardingToolbar extends ConstraintLayout {
     public final Function1<Integer, C13145v> m18501b(int i, int i2, int i3) {
         float f;
         Context context = getContext();
-        C12880j.m40222a((Object) context, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
         if (C5837i.m18842d(context)) {
             f = (float) i;
         } else {
@@ -278,7 +278,7 @@ public final class OnboardingToolbar extends ConstraintLayout {
         super(context, attributeSet, i);
         ViewGroup.inflate(context, C3840j.include_onboarding_toolbar, this);
         DisneyTitleToolbar disneyTitleToolbar = (DisneyTitleToolbar) mo2145c(C3838h.onboardingDisneyToolbar);
-        C12880j.m40222a((Object) disneyTitleToolbar, "onboardingDisneyToolbar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) disneyTitleToolbar, "onboardingDisneyToolbar");
         this.f13263r0 = disneyTitleToolbar;
     }
 
@@ -302,15 +302,15 @@ public final class OnboardingToolbar extends ConstraintLayout {
         int i2;
         if (z) {
             FrameLayout frameLayout = (FrameLayout) mo2145c(C3838h.onboardingDisneyLogoLayout);
-            C12880j.m40222a((Object) frameLayout, "onboardingDisneyLogoLayout");
+            Intrinsics.checkReturnedValueIsNotNull((Object) frameLayout, "onboardingDisneyLogoLayout");
             frameLayout.setPaddingRelative(frameLayout.getPaddingStart(), i, frameLayout.getPaddingEnd(), frameLayout.getPaddingBottom());
             Point point = new Point();
             WindowManager windowManager = dVar.getWindowManager();
-            C12880j.m40222a((Object) windowManager, "activity.windowManager");
+            Intrinsics.checkReturnedValueIsNotNull((Object) windowManager, "activity.windowManager");
             windowManager.getDefaultDisplay().getSize(point);
             mo2145c(C3838h.onboardingDisneyLogo).measure(point.x, point.y);
             View c = mo2145c(C3838h.onboardingDisneyLogo);
-            C12880j.m40222a((Object) c, "onboardingDisneyLogo");
+            Intrinsics.checkReturnedValueIsNotNull((Object) c, "onboardingDisneyLogo");
             i2 = c.getMeasuredHeight();
         } else {
             i2 = 0;
@@ -325,39 +325,39 @@ public final class OnboardingToolbar extends ConstraintLayout {
         int i2;
         Context context = getContext();
         String str = "context";
-        C12880j.m40222a((Object) context, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, str);
         String str2 = "resources";
         if (!C5837i.m18842d(context) || !C5187b.m17511a(getContext())) {
             Context context2 = getContext();
-            C12880j.m40222a((Object) context2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) context2, str);
             if (C5837i.m18842d(context2)) {
                 DisplayMetrics displayMetrics = new DisplayMetrics();
                 WindowManager windowManager = dVar.getWindowManager();
-                C12880j.m40222a((Object) windowManager, "activity.windowManager");
+                Intrinsics.checkReturnedValueIsNotNull((Object) windowManager, "activity.windowManager");
                 windowManager.getDefaultDisplay().getMetrics(displayMetrics);
                 return (int) (((double) displayMetrics.heightPixels) * 0.1875d);
             }
             if (z) {
                 Context context3 = getContext();
-                C12880j.m40222a((Object) context3, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) context3, str);
                 Resources resources = context3.getResources();
-                C12880j.m40222a((Object) resources, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) resources, str2);
                 i2 = (int) TypedValue.applyDimension(1, 17.0f, resources.getDisplayMetrics());
                 i = windowInsets.getSystemWindowInsetTop();
             } else {
                 Context context4 = getContext();
-                C12880j.m40222a((Object) context4, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) context4, str);
                 Resources resources2 = context4.getResources();
-                C12880j.m40222a((Object) resources2, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) resources2, str2);
                 i2 = (int) TypedValue.applyDimension(1, 64.0f, resources2.getDisplayMetrics());
                 i = windowInsets.getSystemWindowInsetTop();
             }
             return i2 + i;
         }
         Context context5 = getContext();
-        C12880j.m40222a((Object) context5, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) context5, str);
         Resources resources3 = context5.getResources();
-        C12880j.m40222a((Object) resources3, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources3, str2);
         return (int) TypedValue.applyDimension(1, 96.0f, resources3.getDisplayMetrics());
     }
 }

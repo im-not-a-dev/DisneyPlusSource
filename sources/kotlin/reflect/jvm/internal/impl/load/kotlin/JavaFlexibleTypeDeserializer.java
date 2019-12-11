@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.kotlin;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.lazy.types.RawTypeImpl;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Type;
 import kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf;
@@ -18,7 +18,7 @@ public final class JavaFlexibleTypeDeserializer implements FlexibleTypeDeseriali
     }
 
     public KotlinType create(Type type, String str, SimpleType simpleType, SimpleType simpleType2) {
-        if (!C12880j.m40224a((Object) str, (Object) "kotlin.jvm.PlatformType")) {
+        if (!Intrinsics.areEqual((Object) str, (Object) "kotlin.jvm.PlatformType")) {
             StringBuilder sb = new StringBuilder();
             sb.append("Error java flexible type with id: ");
             sb.append(str);
@@ -28,7 +28,7 @@ public final class JavaFlexibleTypeDeserializer implements FlexibleTypeDeseriali
             sb.append(simpleType2);
             sb.append(')');
             SimpleType createErrorType = ErrorUtils.createErrorType(sb.toString());
-            C12880j.m40222a((Object) createErrorType, "ErrorUtils.createErrorTy…owerBound..$upperBound)\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createErrorType, "ErrorUtils.createErrorTy…owerBound..$upperBound)\")");
             return createErrorType;
         } else if (type.hasExtension(JvmProtoBuf.isRaw)) {
             return new RawTypeImpl(simpleType, simpleType2);

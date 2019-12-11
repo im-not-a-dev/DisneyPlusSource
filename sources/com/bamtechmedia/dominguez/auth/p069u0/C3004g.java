@@ -28,7 +28,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p512h.p513c.p514k.C11890i;
 
@@ -367,7 +367,7 @@ public abstract class C3004g extends C11890i implements C2413n {
         if (jVar != null) {
             return jVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -380,18 +380,18 @@ public abstract class C3004g extends C11890i implements C2413n {
             if (jVar != null) {
                 jVar.mo12019b(m10796s());
             } else {
-                C12880j.m40227c("viewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("viewModel");
                 throw null;
             }
         } else {
-            C12880j.m40227c("analytics");
+            Intrinsics.throwUninitializedPropertyAccessException("analytics");
             throw null;
         }
     }
 
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         View inflate = layoutInflater.inflate(C2718i0.fragment_reset_password, viewGroup, false);
-        C12880j.m40222a((Object) inflate, "inflater.inflate(R.layou…ssword, container, false)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "inflater.inflate(R.layou…ssword, container, false)");
         return inflate;
     }
 
@@ -405,7 +405,7 @@ public abstract class C3004g extends C11890i implements C2413n {
         OnboardingToolbar onboardingToolbar = (OnboardingToolbar) _$_findCachedViewById(C2716h0.resetPwdOnboardingToolbar);
         if (onboardingToolbar != null) {
             C0532d requireActivity = requireActivity();
-            C12880j.m40222a((Object) requireActivity, "requireActivity()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
             OnboardingToolbar.m18500a(onboardingToolbar, requireActivity, getView(), (NestedScrollView) _$_findCachedViewById(C2716h0.resetPwdScrollView), (ConstraintLayout) _$_findCachedViewById(C2716h0.resetLayout), false, C3005a.f7853c, 16, null);
         }
         OnboardingToolbar onboardingToolbar2 = (OnboardingToolbar) _$_findCachedViewById(C2716h0.resetPwdOnboardingToolbar);
@@ -420,7 +420,7 @@ public abstract class C3004g extends C11890i implements C2413n {
             C5755i.m18679a(this, jVar, null, null, new C3006b(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -445,7 +445,7 @@ public abstract class C3004g extends C11890i implements C2413n {
         if (nVar != null) {
             return nVar;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 

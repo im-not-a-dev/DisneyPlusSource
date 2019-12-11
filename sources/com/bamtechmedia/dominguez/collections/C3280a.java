@@ -26,7 +26,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p314r.C7738g;
 import p163g.p509o.p510a.C11848c;
 import p163g.p509o.p510a.C11863k;
@@ -191,11 +191,11 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
     public Single<C2378m> mo11486n() {
         C3454q qVar = this.f8320a0;
         if (qVar == null) {
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         } else if (qVar != null) {
             Single<C2378m> g = ((C3457r) qVar).getState().mo30150a((C11952h<? super T>) C3282b.f8326c).mo30186d().mo30233g(C3283c.f8327c).mo30233g(new C3284d(this));
-            C12880j.m40222a((Object) g, "(viewModel as Collection….pageName))\n            }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) g, "(viewModel as Collection….pageName))\n            }");
             return g;
         } else {
             throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.CollectionViewModelImpl");
@@ -208,7 +208,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
         if (optional != null) {
             return optional;
         }
-        C12880j.m40227c("assetStaticImageHandler");
+        Intrinsics.throwUninitializedPropertyAccessException("assetStaticImageHandler");
         throw null;
     }
 
@@ -233,12 +233,12 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
         C3454q qVar = this.f8320a0;
         String str = "viewModel";
         if (qVar == null) {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         } else if (qVar != null) {
             qVar.mo12648a(qVar.mo12649b());
         } else {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
     }
@@ -273,7 +273,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
             C3408j jVar = this.f8323d0;
             if (jVar != null) {
                 C0722m viewLifecycleOwner = getViewLifecycleOwner();
-                C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+                Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
                 jVar.mo12572b(viewLifecycleOwner);
             }
             if (this.f8324e0 == null) {
@@ -285,7 +285,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
             }
             return;
         }
-        C12880j.m40227c("collectionFragmentHelperSetup");
+        Intrinsics.throwUninitializedPropertyAccessException("collectionFragmentHelperSetup");
         throw null;
     }
 
@@ -295,7 +295,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
         if (optional != null) {
             return optional;
         }
-        C12880j.m40227c("assetTransitionHandler");
+        Intrinsics.throwUninitializedPropertyAccessException("assetTransitionHandler");
         throw null;
     }
 
@@ -305,7 +305,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
         if (optional != null) {
             return optional;
         }
-        C12880j.m40227c("assetVideoArtHandler");
+        Intrinsics.throwUninitializedPropertyAccessException("assetVideoArtHandler");
         throw null;
     }
 
@@ -315,7 +315,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
         if (recyclerViewSnapScrollHelper != null) {
             return recyclerViewSnapScrollHelper;
         }
-        C12880j.m40227c("recyclerViewSnapScrollHelper");
+        Intrinsics.throwUninitializedPropertyAccessException("recyclerViewSnapScrollHelper");
         throw null;
     }
 
@@ -325,7 +325,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
         if (kVar != null) {
             return kVar;
         }
-        C12880j.m40227c("slug");
+        Intrinsics.throwUninitializedPropertyAccessException("slug");
         throw null;
     }
 
@@ -335,7 +335,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
         if (i0Var != null) {
             return i0Var;
         }
-        C12880j.m40227c("transactionIdProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("transactionIdProvider");
         throw null;
     }
 
@@ -356,7 +356,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
     /* renamed from: a */
     public boolean mo12232a(int i) {
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         if (!C5837i.m18843e(requireContext)) {
             return false;
         }
@@ -382,13 +382,13 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
                 if (recyclerViewSnapScrollHelper != null) {
                     RecyclerViewSnapScrollHelper.m18771a(recyclerViewSnapScrollHelper, i, view, null, 4, null);
                 } else {
-                    C12880j.m40227c("recyclerViewSnapScrollHelper");
+                    Intrinsics.throwUninitializedPropertyAccessException("recyclerViewSnapScrollHelper");
                     throw null;
                 }
             }
             return a;
         }
-        C12880j.m40227c("focusHelper");
+        Intrinsics.throwUninitializedPropertyAccessException("focusHelper");
         throw null;
     }
 }

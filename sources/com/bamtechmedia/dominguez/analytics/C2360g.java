@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.analytics;
 import java.util.Map;
 import kotlin.C13145v;
 import p163g.p164a.p165a.C4662d;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtechmedia.dominguez.analytics.g */
 /* compiled from: AdobeWrapper.kt */
@@ -15,7 +15,7 @@ public final class C2360g {
         StringBuilder sb = new StringBuilder();
         sb.append("Adobe Action: ");
         sb.append(str);
-        C14100a.m44529c(sb.toString(), new Object[0]);
+        Timber.m44529c(sb.toString(), new Object[0]);
     }
 
     /* renamed from: b */
@@ -28,6 +28,6 @@ public final class C2360g {
         sb.append("', section: '");
         sb.append(map.get("section"));
         sb.append('\'');
-        C14100a.m44529c(sb.toString(), new Object[0]);
+        Timber.m44529c(sb.toString(), new Object[0]);
     }
 }

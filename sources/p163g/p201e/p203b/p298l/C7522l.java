@@ -32,7 +32,7 @@ import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -171,17 +171,17 @@ public final class C7522l extends C11885d implements C2413n {
         sb.append(str);
         Intent intent = new Intent("android.intent.action.VIEW", Uri.parse(sb.toString()));
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         if (requireContext.getPackageManager().queryIntentActivities(intent, 0).isEmpty()) {
             TextView textView = (TextView) _$_findCachedViewById(C7904t.promoAction);
-            C12880j.m40222a((Object) textView, "promoAction");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "promoAction");
             C3572r0 r0Var = this.f16487W;
             if (r0Var != null) {
                 textView.setText(C3573a.m12037b(r0Var, mo20412p().mo20430a0(), null, 2, null));
                 ((LinearLayout) _$_findCachedViewById(C7904t.promoLayout)).setOnClickListener(C7527e.f16497c);
                 return;
             }
-            C12880j.m40227c("dictionary");
+            Intrinsics.throwUninitializedPropertyAccessException("dictionary");
             throw null;
         }
     }
@@ -197,20 +197,20 @@ public final class C7522l extends C11885d implements C2413n {
                 if (bVar != null) {
                     return bVar.mo20395b();
                 }
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             } else if (i == 2) {
                 C7501b bVar2 = this.f16491a0;
                 if (bVar2 != null) {
                     return bVar2.mo20394a();
                 }
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             } else {
                 throw new C12898l();
             }
         } else {
-            C12880j.m40227c("buildInfo");
+            Intrinsics.throwUninitializedPropertyAccessException("buildInfo");
             throw null;
         }
     }
@@ -235,7 +235,7 @@ public final class C7522l extends C11885d implements C2413n {
             startActivity(new Intent("android.intent.action.VIEW", Uri.parse(sb.toString())));
             return;
         }
-        C12880j.m40227c("dictionary");
+        Intrinsics.throwUninitializedPropertyAccessException("dictionary");
         throw null;
     }
 
@@ -273,7 +273,7 @@ public final class C7522l extends C11885d implements C2413n {
         if (iVar != null) {
             return iVar;
         }
-        C12880j.m40227c("paywallAnalytics");
+        Intrinsics.throwUninitializedPropertyAccessException("paywallAnalytics");
         throw null;
     }
 
@@ -294,31 +294,31 @@ public final class C7522l extends C11885d implements C2413n {
             _$_clearFindViewByIdCache();
             return;
         }
-        C12880j.m40227c("profilesSetup");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesSetup");
         throw null;
     }
 
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
         Button button = (Button) _$_findCachedViewById(C7904t.startWatchingButton);
-        C12880j.m40222a((Object) button, "startWatchingButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) button, "startWatchingButton");
         C7110x xVar = this.f16486V;
         if (xVar != null) {
             button.setContentDescription(xVar.mo19902b());
             ((Button) _$_findCachedViewById(C7904t.startWatchingButton)).setOnClickListener(new C7524b(this));
             TextView textView = (TextView) _$_findCachedViewById(C7904t.promoTagline);
-            C12880j.m40222a((Object) textView, "promoTagline");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "promoTagline");
             C3572r0 r0Var = this.f16487W;
             String str = "dictionary";
             if (r0Var != null) {
                 textView.setText(C3573a.m12037b(r0Var, mo20412p().getDescription(), null, 2, null));
                 TextView textView2 = (TextView) _$_findCachedViewById(C7904t.promoAction);
-                C12880j.m40222a((Object) textView2, "promoAction");
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "promoAction");
                 C3572r0 r0Var2 = this.f16487W;
                 if (r0Var2 != null) {
                     textView2.setText(C3573a.m12037b(r0Var2, mo20412p().mo20427X(), null, 2, null));
                     Context requireContext = requireContext();
-                    C12880j.m40222a((Object) requireContext, "requireContext()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
                     if (C5837i.m18843e(requireContext)) {
                         ((LinearLayout) _$_findCachedViewById(C7904t.promoLayout)).setOnClickListener(new C7525c(this));
                     } else {
@@ -327,7 +327,7 @@ public final class C7522l extends C11885d implements C2413n {
                     C7862c cVar = this.f16488X;
                     if (cVar != null) {
                         ImageView imageView = (ImageView) _$_findCachedViewById(C7904t.promoLogo);
-                        C12880j.m40222a((Object) imageView, "promoLogo");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "promoLogo");
                         C3572r0 r0Var3 = this.f16487W;
                         if (r0Var3 != null) {
                             cVar.mo20784a(imageView, C3573a.m12037b(r0Var3, mo20412p().mo20429Z(), null, 2, null));
@@ -335,27 +335,27 @@ public final class C7522l extends C11885d implements C2413n {
                             if (r0Var4 != null) {
                                 m22419f(C3573a.m12037b(r0Var4, mo20412p().mo20428Y(), null, 2, null));
                             } else {
-                                C12880j.m40227c(str);
+                                Intrinsics.throwUninitializedPropertyAccessException(str);
                                 throw null;
                             }
                         } else {
-                            C12880j.m40227c(str);
+                            Intrinsics.throwUninitializedPropertyAccessException(str);
                             throw null;
                         }
                     } else {
-                        C12880j.m40227c("onboardingImageLoader");
+                        Intrinsics.throwUninitializedPropertyAccessException("onboardingImageLoader");
                         throw null;
                     }
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else {
-            C12880j.m40227c("purchaseAccessibility");
+            Intrinsics.throwUninitializedPropertyAccessException("purchaseAccessibility");
             throw null;
         }
     }
@@ -368,7 +368,7 @@ public final class C7522l extends C11885d implements C2413n {
     /* renamed from: e */
     private final Intent m22418e(String str) {
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         return requireContext.getPackageManager().getLaunchIntentForPackage(str);
     }
 }

@@ -17,7 +17,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p135s.C4127b0;
 import p163g.p201e.p203b.p330z.C7946e;
 import p163g.p201e.p203b.p330z.C7948g;
@@ -221,7 +221,7 @@ public final class C6830a implements C6829k {
         L_0x0036:
             int r4 = p163g.p201e.p203b.p330z.C7949h.ui_language_setting
             java.lang.String r4 = com.bamtechmedia.dominguez.core.utils.C5880u.m18936a(r4)
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r3, r4)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r3, r4)
             if (r3 == 0) goto L_0x0019
             goto L_0x0044
         L_0x0043:
@@ -249,7 +249,7 @@ public final class C6830a implements C6829k {
         L_0x0068:
             r4 = r1
         L_0x0069:
-            boolean r4 = kotlin.jvm.internal.C12880j.m40224a(r4, r8)
+            boolean r4 = kotlin.jvm.internal.Intrinsics.areEqual(r4, r8)
             if (r4 == 0) goto L_0x0052
             r2.add(r3)
             goto L_0x0052
@@ -306,7 +306,7 @@ public final class C6830a implements C6829k {
     private final void m20982a(ViewGroup viewGroup, String str, Function0<C13145v> function0) {
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(C7948g.item_edit_profile, viewGroup, false);
         TextView textView = (TextView) inflate.findViewById(C7946e.title);
-        C12880j.m40222a((Object) textView, "title");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "title");
         textView.setText(str);
         ((ConstraintLayout) inflate.findViewById(C7946e.root)).setOnClickListener(new C6831a(str, function0));
         viewGroup.addView(inflate);

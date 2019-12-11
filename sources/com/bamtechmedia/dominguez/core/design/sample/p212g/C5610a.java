@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.core.design.sample.C5607e;
 import com.bamtechmedia.dominguez.core.design.sample.p211f.C5609b;
 import java.util.HashMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p097a.p104o.C3892d;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u00142\u00020\u00012\u00020\u0002:\u0001\u0014B\u0005¢\u0006\u0002\u0010\u0003J\b\u0010\t\u001a\u00020\bH\u0016J\u0012\u0010\n\u001a\u00020\u000b2\b\u0010\f\u001a\u0004\u0018\u00010\rH\u0016J&\u0010\u000e\u001a\u0004\u0018\u00010\u000f2\u0006\u0010\u0010\u001a\u00020\u00112\b\u0010\u0012\u001a\u0004\u0018\u00010\u00132\b\u0010\f\u001a\u0004\u0018\u00010\rH\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0005X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u000e¢\u0006\u0002\n\u0000¨\u0006\u0015"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/design/sample/fragment/BasicDesignFragment;", "Landroidx/fragment/app/Fragment;", "Lcom/bamtechmedia/dominguez/core/design/sample/adapter/TitleProvider;", "()V", "layoutResId", "", "themeResId", "title", "", "getTitle", "onCreate", "", "savedInstanceState", "Landroid/os/Bundle;", "onCreateView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "Companion", "sample_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -80,7 +80,7 @@ public final class C5610a extends Fragment implements C5609b {
             this.f13185c = arguments.getInt("layoutRes");
             this.f13183V = arguments.getInt("themeRes");
             String string = requireContext().getString(arguments.getInt("titleREs"));
-            C12880j.m40222a((Object) string, "requireContext().getStri…it.getInt(ARG_TITLE_RES))");
+            Intrinsics.checkReturnedValueIsNotNull((Object) string, "requireContext().getStri…it.getInt(ARG_TITLE_RES))");
             this.f13182U = string;
         }
     }

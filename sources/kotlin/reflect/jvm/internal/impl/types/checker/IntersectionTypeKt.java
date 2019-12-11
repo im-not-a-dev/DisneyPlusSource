@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.types.checker;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.C12898l;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.types.DynamicTypesKt;
 import kotlin.reflect.jvm.internal.impl.types.ErrorUtils;
 import kotlin.reflect.jvm.internal.impl.types.FlexibleType;
@@ -45,7 +45,7 @@ public final class IntersectionTypeKt {
                 sb.append("Intersection of error types: ");
                 sb.append(list);
                 SimpleType createErrorType = ErrorUtils.createErrorType(sb.toString());
-                C12880j.m40222a((Object) createErrorType, "ErrorUtils.createErrorTy… of error types: $types\")");
+                Intrinsics.checkReturnedValueIsNotNull((Object) createErrorType, "ErrorUtils.createErrorTy… of error types: $types\")");
                 return createErrorType;
             } else if (!z2) {
                 return TypeIntersector.INSTANCE.intersectTypes$descriptors(arrayList);

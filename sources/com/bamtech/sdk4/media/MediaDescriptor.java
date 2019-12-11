@@ -132,7 +132,7 @@ public final class MediaDescriptor {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:18:0x0056, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.mediaPreferences, (java.lang.Object) r3.mediaPreferences) != false) goto L_0x005b;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.mediaPreferences, (java.lang.Object) r3.mediaPreferences) != false) goto L_0x005b;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -144,35 +144,35 @@ public final class MediaDescriptor {
             com.bamtech.sdk4.media.MediaDescriptor r3 = (com.bamtech.sdk4.media.MediaDescriptor) r3
             java.lang.String r0 = r2.playbackUrl
             java.lang.String r1 = r3.playbackUrl
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.lang.String r0 = r2.cachedMediaId
             java.lang.String r1 = r3.cachedMediaId
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtech.sdk4.media.AdInsertionStrategy r0 = r2.adInsertionStrategy
             com.bamtech.sdk4.media.AdInsertionStrategy r1 = r3.adInsertionStrategy
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.lang.String r0 = r2.basePlaybackScenario
             java.lang.String r1 = r3.basePlaybackScenario
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.util.Map<java.lang.String, java.lang.String> r0 = r2.adTargeting
             java.util.Map<java.lang.String, java.lang.String> r1 = r3.adTargeting
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtech.sdk4.media.HdrType r0 = r2.hdrType
             com.bamtech.sdk4.media.HdrType r1 = r3.hdrType
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtech.sdk4.media.drm.DrmType r0 = r2.drmType
             com.bamtech.sdk4.media.drm.DrmType r1 = r3.drmType
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtech.sdk4.media.MediaPreferences r0 = r2.mediaPreferences
             com.bamtech.sdk4.media.MediaPreferences r3 = r3.mediaPreferences
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0059
             goto L_0x005b
         L_0x0059:

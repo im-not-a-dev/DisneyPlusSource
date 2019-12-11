@@ -2,7 +2,7 @@ package com.bamtech.sdk4.identity;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @DontObfuscate
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b7\u0018\u0000 \u00042\u00020\u0001:\u0003\u0003\u0004\u0005B\u0007\b\u0002¢\u0006\u0002\u0010\u0002\u0001\u0002\u0006\u0007¨\u0006\b"}, mo31007d2 = {"Lcom/bamtech/sdk4/identity/SecurityAction;", "", "()V", "ChangePassword", "Companion", "Other", "Lcom/bamtech/sdk4/identity/SecurityAction$Other;", "Lcom/bamtech/sdk4/identity/SecurityAction$ChangePassword;", "extension-account"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -37,7 +37,7 @@ public abstract class SecurityAction {
 
         public final SecurityAction toType(String str) {
             String upperCase = str.toUpperCase();
-            C12880j.m40222a((Object) upperCase, "(this as java.lang.String).toUpperCase()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) upperCase, "(this as java.lang.String).toUpperCase()");
             if (upperCase.hashCode() == -1313930677 && upperCase.equals("CHANGEPASSWORD")) {
                 return new ChangePassword();
             }
@@ -60,7 +60,7 @@ public abstract class SecurityAction {
         }
 
         public boolean equals(Object obj) {
-            return (obj instanceof Other) && C12880j.m40224a((Object) this.value, (Object) ((Other) obj).value);
+            return (obj instanceof Other) && Intrinsics.areEqual((Object) this.value, (Object) ((Other) obj).value);
         }
 
         public final String getValue() {

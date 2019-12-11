@@ -4,13 +4,13 @@ import com.bamtech.sdk4.identity.bam.BamIdentityApi;
 import com.bamtech.sdk4.identity.bam.OneTimePasscodeRequestReason;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Observable;
 import p520io.reactivex.ObservableSource;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\u0018\u00002\u00020\u0001:\u0001\u0011B\u001f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0010\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\fH\u0002J\u0014\u0010\r\u001a\b\u0012\u0004\u0012\u00020\n0\u000e2\u0006\u0010\u000f\u001a\u00020\u0010R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0012"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/otp/OtpRequestAction;", "", "identityApi", "Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;", "otpReason", "Lcom/bamtech/sdk4/identity/bam/OneTimePasscodeRequestReason;", "errorLocalization", "Lcom/bamtechmedia/dominguez/error/ErrorLocalization;", "(Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;Lcom/bamtech/sdk4/identity/bam/OneTimePasscodeRequestReason;Lcom/bamtechmedia/dominguez/error/ErrorLocalization;)V", "mapExceptionToActionState", "Lcom/bamtechmedia/dominguez/auth/otp/OtpRequestAction$RequestActionState;", "error", "", "requestOtpEmail", "Lio/reactivex/Observable;", "email", "", "RequestActionState", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.s0.x */
@@ -77,7 +77,7 @@ public final class C2940x {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7769a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p067s0.C2940x.C2941a.C2944c) r2).f7769a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7769a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p067s0.C2940x.C2941a.C2944c) r2).f7769a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -89,7 +89,7 @@ public final class C2940x {
                     com.bamtechmedia.dominguez.auth.s0.x$a$c r2 = (com.bamtechmedia.dominguez.auth.p067s0.C2940x.C2941a.C2944c) r2
                     java.lang.String r0 = r1.f7769a
                     java.lang.String r2 = r2.f7769a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -147,7 +147,7 @@ public final class C2940x {
 
         /* renamed from: a */
         public final C2941a apply(Throwable th) {
-            C14100a.m44528b(th, "Error requesting OTP passcode email to be sent.", new Object[0]);
+            Timber.m44528b(th, "Error requesting OTP passcode email to be sent.", new Object[0]);
             return this.f7770c.m10709a(th);
         }
     }
@@ -164,7 +164,7 @@ public final class C2940x {
         C2943b bVar = C2943b.f7768a;
         if (bVar != null) {
             Observable<C2941a> i = requestOneTimePasscode.mo30043a((ObservableSource<T>) Observable.m38309b(bVar)).mo30154a(C2942a.f7767a).mo30198i(new C2945b(this));
-            C12880j.m40222a((Object) i, "identityApi.requestOneTi…tate(error)\n            }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) i, "identityApi.requestOneTi…tate(error)\n            }");
             return i;
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.auth.otp.OtpRequestAction.RequestActionState");

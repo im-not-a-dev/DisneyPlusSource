@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.p530x.C11998a;
 
 /* renamed from: g.e.b.o.o */
@@ -20,10 +20,10 @@ public final class C7625o {
             throw new C13142s("null cannot be cast to non-null type T");
         } else if (th instanceof C11998a) {
             List<Throwable> a = ((C11998a) th).mo30334a();
-            C12880j.m40222a((Object) a, "this.exceptions");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "this.exceptions");
             ArrayList arrayList = new ArrayList();
             for (Throwable th2 : a) {
-                C12880j.m40222a((Object) th2, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) th2, "it");
                 C13196t.m40545a((Collection) arrayList, (Iterable) m22611b(th2, cls));
             }
             return arrayList;

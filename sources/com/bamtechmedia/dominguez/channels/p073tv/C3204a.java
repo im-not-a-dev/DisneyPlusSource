@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.channels.p073tv.worker.SyncPlayNextChannelWork
 import kotlin.Metadata;
 import p096e.p155q.p156a.p157a.C4345g;
 import p096e.p155q.p156a.p157a.C4354j;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\b\u0006\u0018\u0000 \u001a2\u00020\u0001:\u0001\u001aB'\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\u000e\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eJ\u0006\u0010\u000f\u001a\u00020\u0010J\u0010\u0010\u0011\u001a\u00020\f2\u0006\u0010\u0012\u001a\u00020\u0013H\u0007J\u000e\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00130\u0015H\u0007J\u0006\u0010\u0016\u001a\u00020\u0010J\u0006\u0010\u0017\u001a\u00020\u0010J\u0006\u0010\u0018\u001a\u00020\u0010J\u0006\u0010\u0019\u001a\u00020\u0010R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000¨\u0006\u001b"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/channels/tv/ChannelManager;", "", "context", "Landroid/content/Context;", "channelSyncHelper", "Lcom/bamtechmedia/dominguez/channels/tv/worker/SyncChannelWorker$Helper;", "continueWatchingChannelSyncHelper", "Lcom/bamtechmedia/dominguez/channels/tv/worker/SyncPlayNextChannelWorker$Helper;", "hideChannelsWorkerHelper", "Lcom/bamtechmedia/dominguez/channels/tv/worker/HideChannelsWorker$Helper;", "(Landroid/content/Context;Lcom/bamtechmedia/dominguez/channels/tv/worker/SyncChannelWorker$Helper;Lcom/bamtechmedia/dominguez/channels/tv/worker/SyncPlayNextChannelWorker$Helper;Lcom/bamtechmedia/dominguez/channels/tv/worker/HideChannelsWorker$Helper;)V", "deleteAllProgramsFromChannel", "", "channelId", "", "deleteAllProgramsFromPlayNextChannel", "", "deleteWatchNextProgram", "watchNextProgram", "Landroidx/tvprovider/media/tv/WatchNextProgram;", "getAllWatchNextProgramsSavedInPlayNextChannel", "", "scheduleChannelDeletion", "scheduleSyncingChannels", "scheduleSyncingContinueWatchingForChannel", "scheduleSyncingWatchlistChannel", "Companion", "channels_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.channels.tv.a */
@@ -87,7 +87,7 @@ public final class C3204a {
             if (r3 == 0) goto L_0x002b
             e.q.a.a.j r3 = p096e.p155q.p156a.p157a.C4354j.m15020a(r1)     // Catch:{ all -> 0x0031 }
             java.lang.String r4 = "watchNext"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)     // Catch:{ all -> 0x0031 }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)     // Catch:{ all -> 0x0031 }
             r0.add(r3)     // Catch:{ all -> 0x0031 }
             goto L_0x0018
         L_0x002b:
@@ -111,7 +111,7 @@ public final class C3204a {
     /* renamed from: c */
     public final void mo12257c() {
         if (VERSION.SDK_INT >= 26) {
-            C14100a.m44522a("Scheduled channel deletion", new Object[0]);
+            Timber.m44522a("Scheduled channel deletion", new Object[0]);
             this.f8175d.mo12290a();
         }
     }
@@ -119,7 +119,7 @@ public final class C3204a {
     /* renamed from: d */
     public final void mo12258d() {
         if (VERSION.SDK_INT >= 26) {
-            C14100a.m44522a("Scheduled channel creatiĽon.", new Object[0]);
+            Timber.m44522a("Scheduled channel creatiĽon.", new Object[0]);
             this.f8173b.mo12292a("default_channel");
             this.f8173b.mo12292a("watchlist_channel");
             this.f8174c.mo12295a();
@@ -129,7 +129,7 @@ public final class C3204a {
     /* renamed from: e */
     public final void mo12259e() {
         if (VERSION.SDK_INT >= 26) {
-            C14100a.m44522a("Scheduled play next channel sync.", new Object[0]);
+            Timber.m44522a("Scheduled play next channel sync.", new Object[0]);
             this.f8174c.mo12295a();
         }
     }
@@ -137,7 +137,7 @@ public final class C3204a {
     /* renamed from: f */
     public final void mo12260f() {
         if (VERSION.SDK_INT >= 26) {
-            C14100a.m44522a("Scheduled watchlist channel sync.", new Object[0]);
+            Timber.m44522a("Scheduled watchlist channel sync.", new Object[0]);
             this.f8173b.mo12292a("watchlist_channel");
         }
     }

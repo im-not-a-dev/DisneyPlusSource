@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -47,12 +47,12 @@ public final class IntersectionTypeConstructor implements TypeConstructor {
         if (!(obj instanceof IntersectionTypeConstructor)) {
             return false;
         }
-        return C12880j.m40224a((Object) this.intersectedTypes, (Object) ((IntersectionTypeConstructor) obj).intersectedTypes);
+        return Intrinsics.areEqual((Object) this.intersectedTypes, (Object) ((IntersectionTypeConstructor) obj).intersectedTypes);
     }
 
     public KotlinBuiltIns getBuiltIns() {
         KotlinBuiltIns builtIns = ((KotlinType) this.intersectedTypes.iterator().next()).getConstructor().getBuiltIns();
-        C12880j.m40222a((Object) builtIns, "intersectedTypes.iterato…xt().constructor.builtIns");
+        Intrinsics.checkReturnedValueIsNotNull((Object) builtIns, "intersectedTypes.iterato…xt().constructor.builtIns");
         return builtIns;
     }
 

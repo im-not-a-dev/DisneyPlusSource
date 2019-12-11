@@ -5,7 +5,7 @@ import android.content.res.Resources;
 import android.util.TypedValue;
 import android.view.accessibility.AccessibilityManager;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.i */
 /* compiled from: ContextExt.kt */
@@ -29,7 +29,7 @@ public final class C5837i {
     /* renamed from: c */
     public static final boolean m18841c(Context context) {
         Resources resources = context.getResources();
-        C12880j.m40222a((Object) resources, "resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "resources");
         return resources.getConfiguration().orientation == 1;
     }
 
@@ -86,7 +86,7 @@ public final class C5837i {
         TypedValue typedValue = new TypedValue();
         context.getTheme().resolveAttribute(i, typedValue, true);
         Resources resources = context.getResources();
-        C12880j.m40222a((Object) resources, "resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "resources");
         return typedValue.getDimension(resources.getDisplayMetrics());
     }
 }

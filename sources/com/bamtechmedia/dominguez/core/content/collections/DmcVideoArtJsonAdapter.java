@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.collections;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11737m.C11739b;
@@ -19,13 +19,13 @@ public final class DmcVideoArtJsonAdapter extends C11725h<DmcVideoArt> {
     public DmcVideoArtJsonAdapter(C11760v vVar) {
         String str = "purpose";
         C11739b a = C11739b.m37729a(str, "mediaMetadata");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"purpose\", \"mediaMetadata\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"purpose\", \"mediaMetadata\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String?>(S…ns.emptySet(), \"purpose\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String?>(S…ns.emptySet(), \"purpose\")");
         this.nullableStringAdapter = a2;
         C11725h<DmcVideoArtMediaMetadata> a3 = vVar.mo29869a((Type) DmcVideoArtMediaMetadata.class, C13188p0.m40531a(), "dmcVideoMeta");
-        C12880j.m40222a((Object) a3, "moshi.adapter<DmcVideoAr…ptySet(), \"dmcVideoMeta\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<DmcVideoAr…ptySet(), \"dmcVideoMeta\")");
         this.nullableDmcVideoArtMediaMetadataAdapter = a3;
     }
 

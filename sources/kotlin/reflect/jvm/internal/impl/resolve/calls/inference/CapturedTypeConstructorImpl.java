@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.resolve.calls.inference;
 import java.util.Collection;
 import java.util.List;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
@@ -29,7 +29,7 @@ public final class CapturedTypeConstructorImpl implements CapturedTypeConstructo
 
     public KotlinBuiltIns getBuiltIns() {
         KotlinBuiltIns builtIns = getProjection().getType().getConstructor().getBuiltIns();
-        C12880j.m40222a((Object) builtIns, "projection.type.constructor.builtIns");
+        Intrinsics.checkReturnedValueIsNotNull((Object) builtIns, "projection.type.constructor.builtIns");
         return builtIns;
     }
 
@@ -56,7 +56,7 @@ public final class CapturedTypeConstructorImpl implements CapturedTypeConstructo
         } else {
             obj = getBuiltIns().getNullableAnyType();
         }
-        C12880j.m40222a(obj, "if (projection.projectio… builtIns.nullableAnyType");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "if (projection.projectio… builtIns.nullableAnyType");
         return C13183n.m40498a(obj);
     }
 

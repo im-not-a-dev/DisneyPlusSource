@@ -3,7 +3,7 @@ package com.bamtech.sdk4.internal.telemetry;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -24,7 +24,7 @@ final class DustEventBuffer$postFastEvent$1<T, R> implements Function<T, SingleS
     public final Single<TelemetryResponse> apply(String str) {
         TelemetryClient access$getClient$p = this.this$0.client;
         ServiceTransaction serviceTransaction = this.$transaction;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return access$getClient$p.postEvents(serviceTransaction, C13170i0.m40332a(C12907r.m40244a("{accessToken}", str)), C13183n.m40498a(this.$event));
     }
 }

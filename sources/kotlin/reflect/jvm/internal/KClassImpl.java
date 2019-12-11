@@ -8,7 +8,7 @@ import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12865c0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -88,7 +88,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             String str = "$";
             String str2 = "name";
             if (enclosingMethod != null) {
-                C12880j.m40222a((Object) simpleName, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) simpleName, str2);
                 StringBuilder sb = new StringBuilder();
                 sb.append(enclosingMethod.getName());
                 sb.append(str);
@@ -96,13 +96,13 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
             Constructor enclosingConstructor = cls.getEnclosingConstructor();
             if (enclosingConstructor != null) {
-                C12880j.m40222a((Object) simpleName, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) simpleName, str2);
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(enclosingConstructor.getName());
                 sb2.append(str);
                 return C12833x.m40139a(simpleName, sb2.toString(), (String) null, 2, (Object) null);
             }
-            C12880j.m40222a((Object) simpleName, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) simpleName, str2);
             return C12833x.m40136a(simpleName, '$', (String) null, 2, (Object) null);
         }
 
@@ -199,7 +199,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
     public KClassImpl(Class<T> cls) {
         this.jClass = cls;
         LazyVal<Data> lazy = ReflectProperties.lazy(new KClassImpl$data$1(this));
-        C12880j.m40222a((Object) lazy, "ReflectProperties.lazy { Data() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazy, "ReflectProperties.lazy { Data() }");
         this.data = lazy;
     }
 
@@ -300,7 +300,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof KClassImpl) && C12880j.m40224a((Object) C12731a.m39869b(this), (Object) C12731a.m39869b((KClass) obj));
+        return (obj instanceof KClassImpl) && Intrinsics.areEqual((Object) C12731a.m39869b(this), (Object) C12731a.m39869b((KClass) obj));
     }
 
     public List<Annotation> getAnnotations() {
@@ -313,7 +313,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             return C13185o.m40513a();
         }
         Collection<ConstructorDescriptor> constructors = descriptor.getConstructors();
-        C12880j.m40222a((Object) constructors, "descriptor.constructors");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constructors, "descriptor.constructors");
         return constructors;
     }
 
@@ -334,7 +334,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
     }
 
     public PropertyDescriptor getLocalProperty(int i) {
-        if (C12880j.m40224a((Object) getJClass().getSimpleName(), (Object) "DefaultImpls")) {
+        if (Intrinsics.areEqual((Object) getJClass().getSimpleName(), (Object) "DefaultImpls")) {
             Class declaringClass = getJClass().getDeclaringClass();
             if (declaringClass != null && declaringClass.isInterface()) {
                 KClass a = C12731a.m39867a(declaringClass);
@@ -353,7 +353,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
         if (deserializedClassDescriptor != null) {
             Class classProto = deserializedClassDescriptor.getClassProto();
             GeneratedExtension<Class, List<Property>> generatedExtension = JvmProtoBuf.classLocalVariable;
-            C12880j.m40222a((Object) generatedExtension, "JvmProtoBuf.classLocalVariable");
+            Intrinsics.checkReturnedValueIsNotNull((Object) generatedExtension, "JvmProtoBuf.classLocalVariable");
             Property property = (Property) ProtoBufUtilKt.getExtensionOrNull(classProto, generatedExtension, i);
             if (property != null) {
                 propertyDescriptor = (PropertyDescriptor) UtilKt.deserializeToDescriptor(getJClass(), property, deserializedClassDescriptor.getC().getNameResolver(), deserializedClassDescriptor.getC().getTypeTable(), deserializedClassDescriptor.getMetadataVersion(), KClassImpl$getLocalProperty$2$1$1.INSTANCE);
@@ -396,7 +396,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
 
     public final MemberScope getStaticScope$kotlin_reflection() {
         MemberScope staticScope = getDescriptor().getStaticScope();
-        C12880j.m40222a((Object) staticScope, "descriptor.staticScope");
+        Intrinsics.checkReturnedValueIsNotNull((Object) staticScope, "descriptor.staticScope");
         return staticScope;
     }
 
@@ -410,7 +410,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
 
     public KVisibility getVisibility() {
         Visibility visibility = getDescriptor().getVisibility();
-        C12880j.m40222a((Object) visibility, "descriptor.visibility");
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "descriptor.visibility");
         return UtilKt.toKVisibility(visibility);
     }
 
@@ -464,7 +464,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
         sb.append("class ");
         ClassId classId = getClassId();
         FqName packageFqName = classId.getPackageFqName();
-        C12880j.m40222a((Object) packageFqName, "classId.packageFqName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) packageFqName, "classId.packageFqName");
         if (packageFqName.isRoot()) {
             str = "";
         } else {
@@ -474,7 +474,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             str = sb2.toString();
         }
         String asString = classId.getRelativeClassName().asString();
-        C12880j.m40222a((Object) asString, "classId.relativeClassName.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "classId.relativeClassName.asString()");
         String a = C12832w.m40115a(asString, '.', '$', false, 4, (Object) null);
         StringBuilder sb3 = new StringBuilder();
         sb3.append(str);

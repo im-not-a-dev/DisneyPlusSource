@@ -9,7 +9,7 @@ import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import com.bamtech.sdk4.session.RenewSessionTransformers;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -60,7 +60,7 @@ public final class DefaultContentExtension implements ContentExtension {
         Single b = this.tokenProvider.getAccessToken(serviceTransaction).mo30220b(C11934b.m38500b());
         DefaultContentExtension$query$1 defaultContentExtension$query$1 = new DefaultContentExtension$query$1(this, serviceTransaction, graphQlRequest, searchOverrides, str);
         Single<String> a = b.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultContentExtension$query$1).mo30206a(this.sessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 
@@ -68,7 +68,7 @@ public final class DefaultContentExtension implements ContentExtension {
         Single b = this.tokenProvider.getAccessToken(serviceTransaction).mo30220b(C11934b.m38500b());
         DefaultContentExtension$query$2 defaultContentExtension$query$2 = new DefaultContentExtension$query$2(this, serviceTransaction, graphQlRequest, type, searchOverrides, str);
         Single<GraphQlResponse<T>> a = b.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultContentExtension$query$2).mo30206a(this.sessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 
@@ -80,7 +80,7 @@ public final class DefaultContentExtension implements ContentExtension {
         Single b = this.tokenProvider.getAccessToken(serviceTransaction).mo30220b(C11934b.m38500b());
         DefaultContentExtension$query$3 defaultContentExtension$query$3 = new DefaultContentExtension$query$3(this, serviceTransaction, graphQlRequest, cls, searchOverrides, str);
         Single<GraphQlResponse<T>> a = b.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultContentExtension$query$3).mo30206a(this.sessionTransformers.singleRenewSession(serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…enewSession(transaction))");
         return a;
     }
 }

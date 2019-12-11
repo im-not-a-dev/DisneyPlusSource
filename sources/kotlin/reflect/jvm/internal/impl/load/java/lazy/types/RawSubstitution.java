@@ -5,7 +5,7 @@ import java.util.List;
 import kotlin.C12898l;
 import kotlin.C12907r;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -62,7 +62,7 @@ public final class RawSubstitution extends TypeSubstitution {
             TypeProjection typeProjection = (TypeProjection) simpleType.getArguments().get(0);
             Variance projectionKind = typeProjection.getProjectionKind();
             KotlinType type = typeProjection.getType();
-            C12880j.m40222a((Object) type, "componentTypeProjection.type");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "componentTypeProjection.type");
             return C12907r.m40244a(KotlinTypeFactory.simpleType(simpleType.getAnnotations(), simpleType.getConstructor(), C13183n.m40498a(new TypeProjectionImpl(projectionKind, eraseType(type))), simpleType.isMarkedNullable()), valueOf);
         } else if (KotlinTypeKt.isError(simpleType)) {
             StringBuilder sb = new StringBuilder();
@@ -73,16 +73,16 @@ public final class RawSubstitution extends TypeSubstitution {
             Annotations annotations = simpleType.getAnnotations();
             TypeConstructor constructor = simpleType.getConstructor();
             List<TypeParameterDescriptor> parameters = simpleType.getConstructor().getParameters();
-            C12880j.m40222a((Object) parameters, "type.constructor.parameters");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "type.constructor.parameters");
             ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) parameters, 10));
             for (TypeParameterDescriptor typeParameterDescriptor : parameters) {
                 RawSubstitution rawSubstitution = INSTANCE;
-                C12880j.m40222a((Object) typeParameterDescriptor, "parameter");
+                Intrinsics.checkReturnedValueIsNotNull((Object) typeParameterDescriptor, "parameter");
                 arrayList.add(computeProjection$default(rawSubstitution, typeParameterDescriptor, javaTypeAttributes, null, 4, null));
             }
             boolean isMarkedNullable = simpleType.isMarkedNullable();
             MemberScope memberScope = classDescriptor.getMemberScope(INSTANCE);
-            C12880j.m40222a((Object) memberScope, "declaration.getMemberScope(RawSubstitution)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) memberScope, "declaration.getMemberScope(RawSubstitution)");
             return C12907r.m40244a(KotlinTypeFactory.simpleTypeWithNonTrivialMemberScope(annotations, constructor, arrayList, isMarkedNullable, memberScope), Boolean.valueOf(true));
         }
     }
@@ -123,7 +123,7 @@ public final class RawSubstitution extends TypeSubstitution {
             return new TypeProjectionImpl(Variance.INVARIANT, DescriptorUtilsKt.getBuiltIns(typeParameterDescriptor).getNothingType());
         } else {
             List parameters = kotlinType.getConstructor().getParameters();
-            C12880j.m40222a((Object) parameters, "erasedUpperBound.constructor.parameters");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "erasedUpperBound.constructor.parameters");
             if (!parameters.isEmpty()) {
                 typeProjection = new TypeProjectionImpl(Variance.OUT_VARIANCE, kotlinType);
             } else {

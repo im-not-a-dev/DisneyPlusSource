@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.p179a0.C4831f;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Function;
@@ -118,7 +118,7 @@ public final class C1752c {
     /* renamed from: a */
     public static final Single<List<Single<C4831f>>> m8115a(MediaApi mediaApi, MediaItem mediaItem, ThumbnailResolution thumbnailResolution) {
         Single<List<Single<C4831f>>> g = mediaApi.getBifThumbnailSets(mediaItem).mo30233g(new C1753a(mediaApi, thumbnailResolution));
-        C12880j.m40222a((Object) g, "getBifThumbnailSets(item…s, resolution)\n         }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "getBifThumbnailSets(item…s, resolution)\n         }");
         return g;
     }
 
@@ -134,12 +134,12 @@ public final class C1752c {
             Presentation presentation = (Presentation) list.get(i3);
             i3++;
             Single g = mediaApi.getBifThumbnail(presentation).mo30233g(new C1754b(presentation, (Presentation) list.get(i3), i, i2));
-            C12880j.m40222a((Object) g, "api.getBifThumbnail(pres…      )\n                }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) g, "api.getBifThumbnail(pres…      )\n                }");
             arrayList.add(g);
         }
         Presentation presentation2 = (Presentation) C13199w.m40593h((List) list);
         Single g2 = mediaApi.getBifThumbnail(presentation2).mo30233g(new C1755c(presentation2, i, i2));
-        C12880j.m40222a((Object) g2, "api.getBifThumbnail(last…    height)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g2, "api.getBifThumbnail(last…    height)\n            }");
         arrayList.add(g2);
         return arrayList;
     }

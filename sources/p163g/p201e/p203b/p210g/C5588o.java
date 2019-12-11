@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.core.framework.C5741g;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p503n.p504a.C11786a0;
 import p163g.p503n.p504a.C11793e;
@@ -136,7 +136,7 @@ public final class C5588o extends C5741g<C5597p> {
         /* renamed from: a */
         public final void accept(C5597p pVar) {
             C5588o oVar = this.f13168c;
-            C12880j.m40222a((Object) pVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) pVar, "it");
             oVar.m18414a(pVar);
         }
     }
@@ -174,9 +174,9 @@ public final class C5588o extends C5741g<C5597p> {
     /* renamed from: y */
     public final void mo17342y() {
         Observable e = Observable.m38311c(10, TimeUnit.SECONDS, C11934b.m38498a()).mo30193g(C5591c.f13164c).mo30154a(C5597p.START).mo30180c((C11945a) new C5592d(this)).mo30188e((Consumer<? super Disposable>) new C5594e<Object>(this));
-        C12880j.m40222a((Object) e, "Observable.timer(MAX_RET… allDisposables.add(it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "Observable.timer(MAX_RET… allDisposables.add(it) }");
         Object a = e.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C5595f(this), new C5596g(this));
     }
 

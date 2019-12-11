@@ -6,7 +6,7 @@ import com.bamtech.sdk4.media.offline.CachedMedia;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.Triple;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 import p520io.reactivex.Observable;
 import p520io.reactivex.Single;
@@ -42,7 +42,7 @@ final class DefaultOfflineMediaApi$removeAllLicensesOnLogout$2<T, R> implements 
                 exoCachedMedia.setExpiration(null);
                 MediaStorage access$getMediaStorage$p = this.this$0.this$0.mediaStorage;
                 ServiceTransaction serviceTransaction = serviceTransaction;
-                C12880j.m40222a((Object) serviceTransaction, "transaction");
+                Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
                 access$getMediaStorage$p.store(serviceTransaction, exoCachedMedia).mo30053d();
                 return triple;
             }

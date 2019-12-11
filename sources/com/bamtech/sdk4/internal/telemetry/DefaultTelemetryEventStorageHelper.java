@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.UUID;
 import kotlin.C13147x;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -37,11 +37,11 @@ public final class DefaultTelemetryEventStorageHelper implements TelemetryEventS
         try {
             StringBuilder sb = new StringBuilder();
             DateTime now = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
             sb.append(now.getMillis());
             sb.append('-');
             String uuid = UUID.randomUUID().toString();
-            C12880j.m40222a((Object) uuid, "UUID.randomUUID().toString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) uuid, "UUID.randomUUID().toString()");
             sb.append(C12839z.m40187f(uuid, 7));
             sb.append(".json");
             return new Success(sb.toString());

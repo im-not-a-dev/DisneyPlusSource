@@ -5,7 +5,7 @@ import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import com.bamtech.sdk4.session.SessionInfo;
 import com.bamtech.sdk4.session.SessionInfoExtension;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -25,7 +25,7 @@ public final class DefaultSessionInfoExtension implements SessionInfoExtension {
 
     private final Single<SessionInfo> getRemoteSessionInfo(ServiceTransaction serviceTransaction) {
         Single<SessionInfo> a = this.tokenProvider.getAccessToken(serviceTransaction).mo30220b(C11934b.m38500b()).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultSessionInfoExtension$getRemoteSessionInfo$1<Object,Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…sToken)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…sToken)\n                }");
         return a;
     }
 
@@ -34,7 +34,7 @@ public final class DefaultSessionInfoExtension implements SessionInfoExtension {
             return getRemoteSessionInfo(serviceTransaction);
         }
         Single<SessionInfo> a = this.sessionInfoUpdater.getLocalSessionInfo().mo30109a((SingleSource<? extends T>) getRemoteSessionInfo(serviceTransaction));
-        C12880j.m40222a((Object) a, "sessionInfoUpdater.getLo…SessionInfo(transaction))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "sessionInfoUpdater.getLo…SessionInfo(transaction))");
         return a;
     }
 }

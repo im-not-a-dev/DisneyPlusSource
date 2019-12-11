@@ -6,7 +6,7 @@ import com.bamtech.sdk4.purchase.AccessStatus;
 import com.bamtechmedia.dominguez.paywall.exceptions.PaywallError;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\f\u0003\u0004\u0005\u0006\u0007\b\t\n\u000b\f\r\u000eB\u0007\b\u0002¢\u0006\u0002\u0010\u0002\u0001\f\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a¨\u0006\u001b"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent;", "", "()V", "Cancelled", "Error", "GrantAccessFromTempAccess", "ProductQuerySuccess", "PurchaseSuccess", "Reset", "RestoreSuccess", "SetupSuccess", "SubscriptionActivated", "SubscriptionActive", "TempAccessGranted", "TempAccessResolved", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$SetupSuccess;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$PurchaseSuccess;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$SubscriptionActive;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$SubscriptionActivated;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$ProductQuerySuccess;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$RestoreSuccess;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$Cancelled;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$Error;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$Reset;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$TempAccessGranted;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$TempAccessResolved;", "Lcom/bamtechmedia/dominguez/paywall/PaywallServiceEvent$GrantAccessFromTempAccess;", "paywallApi_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.v.p */
@@ -52,7 +52,7 @@ public abstract class C7887p {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f17016b, (java.lang.Object) r3.f17016b) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f17016b, (java.lang.Object) r3.f17016b) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -64,11 +64,11 @@ public abstract class C7887p {
                 g.e.b.v.p$b r3 = (p163g.p201e.p203b.p319v.C7887p.C7889b) r3
                 com.bamtechmedia.dominguez.paywall.exceptions.PaywallError r0 = r2.f17015a
                 com.bamtechmedia.dominguez.paywall.exceptions.PaywallError r1 = r3.f17015a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 java.lang.String r0 = r2.f17016b
                 java.lang.String r3 = r3.f17016b
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -133,7 +133,7 @@ public abstract class C7887p {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17018a, (java.lang.Object) ((p163g.p201e.p203b.p319v.C7887p.C7891d) r2).f17018a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17018a, (java.lang.Object) ((p163g.p201e.p203b.p319v.C7887p.C7891d) r2).f17018a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -145,7 +145,7 @@ public abstract class C7887p {
                 g.e.b.v.p$d r2 = (p163g.p201e.p203b.p319v.C7887p.C7891d) r2
                 java.util.Map<java.lang.String, com.bamnet.iap.BamnetIAPProduct> r0 = r1.f17018a
                 java.util.Map<java.lang.String, com.bamnet.iap.BamnetIAPProduct> r2 = r2.f17018a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -188,7 +188,7 @@ public abstract class C7887p {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17019a, (java.lang.Object) ((p163g.p201e.p203b.p319v.C7887p.C7892e) r2).f17019a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17019a, (java.lang.Object) ((p163g.p201e.p203b.p319v.C7887p.C7892e) r2).f17019a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -200,7 +200,7 @@ public abstract class C7887p {
                 g.e.b.v.p$e r2 = (p163g.p201e.p203b.p319v.C7887p.C7892e) r2
                 com.bamnet.iap.BamnetIAPPurchase r0 = r1.f17019a
                 com.bamnet.iap.BamnetIAPPurchase r2 = r2.f17019a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -294,7 +294,7 @@ public abstract class C7887p {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17021a, (java.lang.Object) ((p163g.p201e.p203b.p319v.C7887p.C7894g) r2).f17021a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17021a, (java.lang.Object) ((p163g.p201e.p203b.p319v.C7887p.C7894g) r2).f17021a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -306,7 +306,7 @@ public abstract class C7887p {
                 g.e.b.v.p$g r2 = (p163g.p201e.p203b.p319v.C7887p.C7894g) r2
                 com.bamtech.sdk4.purchase.AccessStatus r0 = r1.f17021a
                 com.bamtech.sdk4.purchase.AccessStatus r2 = r2.f17021a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -378,7 +378,7 @@ public abstract class C7887p {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17024a, (java.lang.Object) ((p163g.p201e.p203b.p319v.C7887p.C7897j) r2).f17024a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17024a, (java.lang.Object) ((p163g.p201e.p203b.p319v.C7887p.C7897j) r2).f17024a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -390,7 +390,7 @@ public abstract class C7887p {
                 g.e.b.v.p$j r2 = (p163g.p201e.p203b.p319v.C7887p.C7897j) r2
                 com.bamtech.sdk4.purchase.AccessStatus r0 = r1.f17024a
                 com.bamtech.sdk4.purchase.AccessStatus r2 = r2.f17024a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -462,7 +462,7 @@ public abstract class C7887p {
             if (this != obj) {
                 if (obj instanceof C7899l) {
                     C7899l lVar = (C7899l) obj;
-                    if (C12880j.m40224a((Object) this.f17026a, (Object) lVar.f17026a)) {
+                    if (Intrinsics.areEqual((Object) this.f17026a, (Object) lVar.f17026a)) {
                         if (this.f17027b == lVar.f17027b) {
                             return true;
                         }

@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
@@ -24,16 +24,16 @@ public final class AvailabilityJsonAdapter extends C11725h<Availability> {
         String str2 = "appears";
         String str3 = "region";
         C11739b a = C11739b.m37729a(str3, str2, "expires", "minPromotionalStartDate", str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"r…alStartDate\", \"kidsMode\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"r…alStartDate\", \"kidsMode\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str3);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ons.emptySet(), \"region\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ons.emptySet(), \"region\")");
         this.stringAdapter = a2;
         C11725h<DateTime> a3 = vVar.mo29869a((Type) DateTime.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a3, "moshi.adapter<DateTime?>…ns.emptySet(), \"appears\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<DateTime?>…ns.emptySet(), \"appears\")");
         this.nullableDateTimeAdapter = a3;
         C11725h<Boolean> a4 = vVar.mo29869a((Type) Boolean.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a4, "moshi.adapter<Boolean?>(…s.emptySet(), \"kidsMode\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<Boolean?>(…s.emptySet(), \"kidsMode\")");
         this.nullableBooleanAdapter = a4;
     }
 

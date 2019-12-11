@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.BuiltInsPackageFragment;
 import kotlin.reflect.jvm.internal.impl.builtins.FunctionInterfacePackageFragment;
 import kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassDescriptor.Kind;
@@ -38,7 +38,7 @@ public final class BuiltInFictitiousFunctionClassFactory implements ClassDescrip
             int length = byClassNamePrefix.getClassNamePrefix().length();
             if (str != null) {
                 String substring = str.substring(length);
-                C12880j.m40222a((Object) substring, "(this as java.lang.String).substring(startIndex)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.String).substring(startIndex)");
                 Integer num = toInt(substring);
                 if (num != null) {
                     kindWithArity = new KindWithArity(byClassNamePrefix, num.intValue());
@@ -99,7 +99,7 @@ public final class BuiltInFictitiousFunctionClassFactory implements ClassDescrip
             if (this != obj) {
                 if (obj instanceof KindWithArity) {
                     KindWithArity kindWithArity = (KindWithArity) obj;
-                    if (C12880j.m40224a((Object) this.kind, (Object) kindWithArity.kind)) {
+                    if (Intrinsics.areEqual((Object) this.kind, (Object) kindWithArity.kind)) {
                         if (this.arity == kindWithArity.arity) {
                             return true;
                         }
@@ -138,12 +138,12 @@ public final class BuiltInFictitiousFunctionClassFactory implements ClassDescrip
     public ClassDescriptor createClass(ClassId classId) {
         if (!classId.isLocal() && !classId.isNestedClass()) {
             String asString = classId.getRelativeClassName().asString();
-            C12880j.m40222a((Object) asString, "classId.relativeClassName.asString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) asString, "classId.relativeClassName.asString()");
             if (!C12833x.m40154a((CharSequence) asString, (CharSequence) "Function", false, 2, (Object) null)) {
                 return null;
             }
             FqName packageFqName = classId.getPackageFqName();
-            C12880j.m40222a((Object) packageFqName, "classId.packageFqName");
+            Intrinsics.checkReturnedValueIsNotNull((Object) packageFqName, "classId.packageFqName");
             KindWithArity access$parseClassName = Companion.parseClassName(asString, packageFqName);
             if (access$parseClassName != null) {
                 Kind component1 = access$parseClassName.component1();
@@ -177,7 +177,7 @@ public final class BuiltInFictitiousFunctionClassFactory implements ClassDescrip
 
     public boolean shouldCreateClass(FqName fqName, Name name) {
         String asString = name.asString();
-        C12880j.m40222a((Object) asString, "name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "name.asString()");
         if ((C12832w.m40123b(asString, "Function", false, 2, null) || C12832w.m40123b(asString, "KFunction", false, 2, null) || C12832w.m40123b(asString, "SuspendFunction", false, 2, null) || C12832w.m40123b(asString, "KSuspendFunction", false, 2, null)) && Companion.parseClassName(asString, fqName) != null) {
             return true;
         }

@@ -7,7 +7,7 @@ import com.bamtechmedia.dominguez.collections.p080o0.C3444j.C3445a;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\u000f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J \u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\u000bH\u0002J>\u0010\f\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\n\u001a\u00020\u000b2\u0014\u0010\u000f\u001a\u0010\u0012\u0004\u0012\u00020\u000b\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u0010H\u0002JB\u0010\u0011\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\b\b\u0002\u0010\t\u001a\u00020\b2\u0006\u0010\r\u001a\u00020\u000e2\b\b\u0002\u0010\n\u001a\u00020\u000b2\u0016\b\u0002\u0010\u000f\u001a\u0010\u0012\u0004\u0012\u00020\u000b\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u0010R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0012"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/collections/ui/ShelfListItemScaleHelper;", "", "foregroundDrawableHelper", "Lcom/bamtechmedia/dominguez/collections/ui/ShelfListItemForegroundDrawableHelper;", "(Lcom/bamtechmedia/dominguez/collections/ui/ShelfListItemForegroundDrawableHelper;)V", "resetScalingItemDecorationValues", "", "focusableRootView", "Landroid/view/View;", "viewToTransform", "alphaFocusEffectEnabled", "", "setFocusChangeListener", "config", "Lcom/bamtechmedia/dominguez/collections/config/ContainerConfig;", "actionOnFocusChange", "Lkotlin/Function1;", "setup", "collectionsApi_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.collections.ui.c */
@@ -57,7 +57,7 @@ public final class C3493c {
         View view3 = view;
         int dimensionPixelSize = view.getResources().getDimensionPixelSize(C3423b.default_container_focus_padding);
         if (dimensionPixelSize > 0) {
-            boolean z2 = jVar.mo12627g() != C3445a.HERO_SNAP && (C12880j.m40224a((Object) jVar.mo12623d(), (Object) "brand") ^ true);
+            boolean z2 = jVar.mo12627g() != C3445a.HERO_SNAP && (Intrinsics.areEqual((Object) jVar.mo12623d(), (Object) "brand") ^ true);
             C3494a aVar = r0;
             C3494a aVar2 = new C3494a(this, function1, view, view2, dimensionPixelSize, z, z2, jVar, this.f8769a, view, view2, dimensionPixelSize, z, z2, jVar.mo12633l());
             view.setOnFocusChangeListener(aVar);

@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.core.content.PromoLabel;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11737m.C11739b;
@@ -23,13 +23,13 @@ public final class DmcLabelJsonAdapter extends C11725h<DmcLabel> {
         String str = "promoLabels";
         String str2 = "watchlistLabel";
         C11739b a = C11739b.m37729a(str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"w…istLabel\", \"promoLabels\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"w…istLabel\", \"promoLabels\")");
         this.options = a;
         C11725h<DmcWatchlistLabel> a2 = vVar.mo29869a((Type) DmcWatchlistLabel.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a2, "moshi.adapter<DmcWatchli…ySet(), \"watchlistLabel\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<DmcWatchli…ySet(), \"watchlistLabel\")");
         this.nullableDmcWatchlistLabelAdapter = a2;
         C11725h<List<PromoLabel>> a3 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, PromoLabel.class), C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a3, "moshi.adapter<List<Promo…mptySet(), \"promoLabels\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<List<Promo…mptySet(), \"promoLabels\")");
         this.nullableListOfPromoLabelAdapter = a3;
     }
 

@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.renderer;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -23,11 +23,11 @@ public interface ClassifierNamePolicy {
         public String renderClassifier(ClassifierDescriptor classifierDescriptor, DescriptorRenderer descriptorRenderer) {
             if (classifierDescriptor instanceof TypeParameterDescriptor) {
                 Name name = ((TypeParameterDescriptor) classifierDescriptor).getName();
-                C12880j.m40222a((Object) name, "classifier.name");
+                Intrinsics.checkReturnedValueIsNotNull((Object) name, "classifier.name");
                 return descriptorRenderer.renderName(name, false);
             }
             FqNameUnsafe fqName = DescriptorUtils.getFqName(classifierDescriptor);
-            C12880j.m40222a((Object) fqName, "DescriptorUtils.getFqName(classifier)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "DescriptorUtils.getFqName(classifier)");
             return descriptorRenderer.renderFqName(fqName);
         }
     }
@@ -49,7 +49,7 @@ public interface ClassifierNamePolicy {
                 kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor r2 = (kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor) r2
                 kotlin.reflect.jvm.internal.impl.name.Name r2 = r2.getName()
                 java.lang.String r0 = "classifier.name"
-                kotlin.jvm.internal.C12880j.m40222a(r2, r0)
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r0)
                 r0 = 0
                 java.lang.String r2 = r3.renderName(r2, r0)
                 return r2
@@ -79,15 +79,15 @@ public interface ClassifierNamePolicy {
 
         private final String qualifiedNameForSourceCode(ClassifierDescriptor classifierDescriptor) {
             Name name = classifierDescriptor.getName();
-            C12880j.m40222a((Object) name, "descriptor.name");
+            Intrinsics.checkReturnedValueIsNotNull((Object) name, "descriptor.name");
             String render = RenderingUtilsKt.render(name);
             if (classifierDescriptor instanceof TypeParameterDescriptor) {
                 return render;
             }
             DeclarationDescriptor containingDeclaration = classifierDescriptor.getContainingDeclaration();
-            C12880j.m40222a((Object) containingDeclaration, "descriptor.containingDeclaration");
+            Intrinsics.checkReturnedValueIsNotNull((Object) containingDeclaration, "descriptor.containingDeclaration");
             String qualifierName = qualifierName(containingDeclaration);
-            if (qualifierName != null && (!C12880j.m40224a((Object) qualifierName, (Object) ""))) {
+            if (qualifierName != null && (!Intrinsics.areEqual((Object) qualifierName, (Object) ""))) {
                 StringBuilder sb = new StringBuilder();
                 sb.append(qualifierName);
                 sb.append(".");
@@ -105,7 +105,7 @@ public interface ClassifierNamePolicy {
                 return null;
             }
             FqNameUnsafe unsafe = ((PackageFragmentDescriptor) declarationDescriptor).getFqName().toUnsafe();
-            C12880j.m40222a((Object) unsafe, "descriptor.fqName.toUnsafe()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) unsafe, "descriptor.fqName.toUnsafe()");
             return RenderingUtilsKt.render(unsafe);
         }
 

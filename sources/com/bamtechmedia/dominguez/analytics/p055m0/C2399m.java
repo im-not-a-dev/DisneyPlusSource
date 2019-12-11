@@ -9,7 +9,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 
@@ -86,7 +86,7 @@ public final class C2399m implements C2434c {
     /* renamed from: a */
     public Single<Map<String, String>> mo11521a() {
         Single<Map<String, String>> a = Single.m38401c((Callable<? extends T>) new C2401b<Object>(this)).mo30220b(this.f6644d).mo30203a(1000, TimeUnit.MILLISECONDS, this.f6644d);
-        C12880j.m40222a((Object) a, "Single.fromCallable {\n  …ILLISECONDS, ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.fromCallable {\n  …ILLISECONDS, ioScheduler)");
         return a;
     }
 }

@@ -25,7 +25,7 @@ import java.util.Set;
 import javax.inject.Provider;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Observable;
@@ -63,20 +63,20 @@ public final class DefaultBookmarkApi implements BookmarksApi {
     public final Single<List<Bookmark>> fetchMissingBookmarks(ServiceTransaction serviceTransaction, String str, List<String> list) {
         if (!list.isEmpty()) {
             Single a = getRuntimes(serviceTransaction, list, str).mo30205a((SingleSource<U>) DefaultImpls.getSessionInfo$default((SessionInfoExtension) this.sessionManager.get(), serviceTransaction, false, 2, null), (C11947c<? super T, ? super U, ? extends R>) new DefaultBookmarkApi$fetchMissingBookmarks$$inlined$zipWith$1<Object,Object,Object>());
-            C12880j.m40222a((Object) a, "zipWith(other, BiFunctio…-> zipper.invoke(t, u) })");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "zipWith(other, BiFunctio…-> zipper.invoke(t, u) })");
             Single<List<Bookmark>> h = a.mo30235h(DefaultBookmarkApi$fetchMissingBookmarks$2.INSTANCE);
-            C12880j.m40222a((Object) h, "getRuntimes(transaction,…  }\n                    }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "getRuntimes(transaction,…  }\n                    }");
             return h;
         }
         Single<List<Bookmark>> b = Single.m38399b(C13185o.m40513a());
-        C12880j.m40222a((Object) b, "Single.just(listOf())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(listOf())");
         return b;
     }
 
     private final Single<List<BookmarkRuntime>> getRuntimes(ServiceTransaction serviceTransaction, List<String> list, String str) {
         SearchQuery searchQuery = new SearchQuery("core/DmcVideos", null, new ContentVariables(list), 2, null);
         Single<List<BookmarkRuntime>> g = DustExtensionsKt.withDust(this.extension.query(serviceTransaction, DmcVideoResponse.class, (GraphQlRequest) searchQuery, str), serviceTransaction, BookmarksApiKt.getCONTENT_API_QUERY(Dust$Events.INSTANCE), (Object) C13170i0.m40332a(C12907r.m40244a("context", searchQuery.getContext()))).mo30233g(DefaultBookmarkApi$getRuntimes$1.INSTANCE);
-        C12880j.m40222a((Object) g, "extension.query(transact…          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "extension.query(transact…          }\n            }");
         return g;
     }
 
@@ -124,32 +124,32 @@ public final class DefaultBookmarkApi implements BookmarksApi {
         if (list.isEmpty()) {
             InvalidRequestException invalidRequestException = new InvalidRequestException(serviceTransaction.getId(), C13183n.m40498a(new ContentIdsMissingError(null, null, 3, null)), null, 4, null);
             Single<List<Bookmark>> a = Single.m38395a((Throwable) invalidRequestException);
-            C12880j.m40222a((Object) a, "Single.error(InvalidRequ…ntentIdsMissingError())))");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.error(InvalidRequ…ntentIdsMissingError())))");
             return a;
         }
         BookmarksQuery bookmarksQuery = new BookmarksQuery(null, null, list, 3, null);
         LocalBookmarkStore localBookmarkStore2 = this.localBookmarkStore;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Single fetchBookmarks = localBookmarkStore2.fetchBookmarks(serviceTransaction, list);
         DefaultBookmarkApi$getBookmarks$1 defaultBookmarkApi$getBookmarks$1 = new DefaultBookmarkApi$getBookmarks$1(this, serviceTransaction, bookmarksQuery, str, list);
         Single<List<Bookmark>> b = fetchBookmarks.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultBookmarkApi$getBookmarks$1).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "localBookmarkStore.fetch…scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "localBookmarkStore.fetch…scribeOn(Schedulers.io())");
         return b;
     }
 
     public Single<List<Bookmark>> getLocalBookmarks(List<String> list) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         LocalBookmarkStore localBookmarkStore2 = this.localBookmarkStore;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return localBookmarkStore2.fetchBookmarks(serviceTransaction, list);
     }
 
     public Completable importBookmarks(List<Bookmark> list) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) this.transactionProvider.get();
         LocalBookmarkStore localBookmarkStore2 = this.localBookmarkStore;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Completable b = localBookmarkStore2.fetchBookmarks(serviceTransaction, null).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultBookmarkApi$importBookmarks$1<Object,Object>(this, list));
-        C12880j.m40222a((Object) b, "localBookmarkStore.fetch…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "localBookmarkStore.fetch…      }\n                }");
         return b;
     }
 
@@ -179,7 +179,7 @@ public final class DefaultBookmarkApi implements BookmarksApi {
 
     public final Completable purgeOnProfileChangeOrLogoutInternal$plugin_bookmarks_release() {
         Completable d = Observable.m38308b((ObservableSource<? extends T>) this.logoutNotifier, (ObservableSource<? extends T>) this.profileEventNotifier).mo30182d((Function<? super T, ? extends CompletableSource>) new DefaultBookmarkApi$purgeOnProfileChangeOrLogoutInternal$1<Object,Object>(this));
-        C12880j.m40222a((Object) d, "Observable.merge(logoutN…          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "Observable.merge(logoutN…          }\n            }");
         return d;
     }
 }

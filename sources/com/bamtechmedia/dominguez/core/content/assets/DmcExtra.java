@@ -274,7 +274,7 @@ public final class DmcExtra extends C3635i implements C3686h {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:40:0x00f4, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8985A0, (java.lang.Object) r3.f8985A0) != false) goto L_0x00f9;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8985A0, (java.lang.Object) r3.f8985A0) != false) goto L_0x00f9;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -286,79 +286,79 @@ public final class DmcExtra extends C3635i implements C3686h {
             com.bamtechmedia.dominguez.core.content.assets.DmcExtra r3 = (com.bamtechmedia.dominguez.core.content.assets.DmcExtra) r3
             java.lang.String r0 = r2.mo12903f()
             java.lang.String r1 = r3.mo12903f()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             com.bamtechmedia.dominguez.core.content.assets.DmcAssetType r0 = r2.mo12928V()
             com.bamtechmedia.dominguez.core.content.assets.DmcAssetType r1 = r3.mo12928V()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.lang.Long r0 = r2.mo12913w()
             java.lang.Long r1 = r3.mo12913w()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.lang.String r0 = r2.mo12912u()
             java.lang.String r1 = r3.mo12912u()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r0 = r2.f8990m0
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r1 = r3.f8990m0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.util.List r0 = r2.mo12847a()
             java.util.List r1 = r3.mo12847a()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.PlaybackUrl> r0 = r2.f8992o0
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.PlaybackUrl> r1 = r3.f8992o0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.lang.String r0 = r2.mo12910s()
             java.lang.String r1 = r3.mo12910s()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             com.bamtechmedia.dominguez.core.content.assets.DmcMediaMetadata r0 = r2.f8994q0
             com.bamtechmedia.dominguez.core.content.assets.DmcMediaMetadata r1 = r3.f8994q0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.util.List r0 = r2.mo12915x()
             java.util.List r1 = r3.mo12915x()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             com.bamtechmedia.dominguez.core.content.assets.DmcVideoMeta r0 = r2.f8996s0
             com.bamtechmedia.dominguez.core.content.assets.DmcVideoMeta r1 = r3.f8996s0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             com.bamtechmedia.dominguez.core.content.assets.MediaRights r0 = r2.f8997t0
             com.bamtechmedia.dominguez.core.content.assets.MediaRights r1 = r3.f8997t0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.lang.String r0 = r2.getMediaId()
             java.lang.String r1 = r3.getMediaId()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.lang.String r0 = r2.getContentType()
             java.lang.String r1 = r3.getContentType()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.util.List r0 = r2.mo12839H()
             java.util.List r1 = r3.mo12839H()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.DmcDisclaimerLabel> r0 = r2.f9001x0
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.DmcDisclaimerLabel> r1 = r3.f9001x0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.util.List r0 = r2.mo12896c()
             java.util.List r1 = r3.mo12896c()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.lang.String r0 = r2.mo12909r()
             java.lang.String r1 = r3.mo12909r()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x00f7
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.DmcTag> r0 = r2.f8985A0
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.DmcTag> r3 = r3.f8985A0
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x00f7
             goto L_0x00f9
         L_0x00f7:

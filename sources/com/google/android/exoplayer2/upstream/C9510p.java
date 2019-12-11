@@ -10,7 +10,7 @@ import android.util.SparseArray;
 import com.google.android.exoplayer2.p393v0.C9532c0;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9542g;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9557m;
 import com.google.android.exoplayer2.p393v0.C9557m.C9558a;
 import com.google.android.exoplayer2.upstream.BandwidthMeter.C9434a;
@@ -111,7 +111,7 @@ public final class C9510p implements BandwidthMeter, TransferListener {
                 context2 = context.getApplicationContext();
             }
             this.f22174a = context2;
-            this.f22175b = m29234b(C9554k0.m29395a(context));
+            this.f22175b = m29234b(Util.m29395a(context));
             this.f22176c = 2000;
             this.f22177d = C9542g.f22257a;
             this.f22178e = true;
@@ -489,7 +489,7 @@ public final class C9510p implements BandwidthMeter, TransferListener {
             goto L_0x0015
         L_0x000f:
             android.content.Context r0 = r10.f22159a     // Catch:{ all -> 0x005a }
-            int r0 = com.google.android.exoplayer2.p393v0.C9554k0.m29427b(r0)     // Catch:{ all -> 0x005a }
+            int r0 = com.google.android.exoplayer2.p393v0.Util.m29427b(r0)     // Catch:{ all -> 0x005a }
         L_0x0015:
             int r2 = r10.f22167i     // Catch:{ all -> 0x005a }
             if (r2 != r0) goto L_0x001b
@@ -617,7 +617,7 @@ public final class C9510p implements BandwidthMeter, TransferListener {
         if (context == null) {
             i2 = 0;
         } else {
-            i2 = C9554k0.m29427b(context);
+            i2 = Util.m29427b(context);
         }
         this.f22167i = i2;
         this.f22170l = m29223a(this.f22167i);

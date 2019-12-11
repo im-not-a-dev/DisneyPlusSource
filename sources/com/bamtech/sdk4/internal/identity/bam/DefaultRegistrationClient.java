@@ -5,7 +5,7 @@ import com.bamtech.sdk4.internal.networking.ConverterProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.functions.Function;
@@ -24,7 +24,7 @@ public final class DefaultRegistrationClient implements RegistrationClient {
 
     public <T> Completable register(ServiceTransaction serviceTransaction, RegistrationRequest<T> registrationRequest, Map<String, String> map) {
         Completable b = this.configurationProvider.getServiceLink(serviceTransaction, DefaultRegistrationClient$register$1.INSTANCE).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultRegistrationClient$register$2<Object,Object>(this, map, serviceTransaction, registrationRequest));
-        C12880j.m40222a((Object) b, "configurationProvider.ge…REATE)\n\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "configurationProvider.ge…REATE)\n\n                }");
         return b;
     }
 }

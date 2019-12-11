@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content.collections;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11737m.C11739b;
@@ -22,13 +22,13 @@ public final class DmcUrlJsonAdapter extends C11725h<DmcUrl> {
         String str = "regions";
         String str2 = "url";
         C11739b a = C11739b.m37729a(str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"url\", \"regions\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"url\", \"regions\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String?>(S…ctions.emptySet(), \"url\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String?>(S…ctions.emptySet(), \"url\")");
         this.nullableStringAdapter = a2;
         C11725h<List<String>> a3 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, String.class), C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a3, "moshi.adapter<List<Strin…ns.emptySet(), \"regions\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<List<Strin…ns.emptySet(), \"regions\")");
         this.nullableListOfStringAdapter = a3;
     }
 

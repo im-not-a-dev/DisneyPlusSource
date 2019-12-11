@@ -4,7 +4,7 @@ import com.google.android.exoplayer2.C8679b0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.p356g.C8749c;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9141f0;
 import com.google.android.exoplayer2.source.dash.p376k.C9119e;
 import java.io.IOException;
@@ -59,7 +59,7 @@ final class C9109i implements C9141f0 {
         if (j2 != -9223372036854775807L) {
             mo23660a(j2);
         } else if (j != -9223372036854775807L) {
-            this.f20398Z = C9554k0.m29386a(this.f20394V, j, false, false);
+            this.f20398Z = Util.m29386a(this.f20394V, j, false, false);
         }
     }
 
@@ -75,7 +75,7 @@ final class C9109i implements C9141f0 {
 
     /* renamed from: d */
     public int mo23576d(long j) {
-        int max = Math.max(this.f20398Z, C9554k0.m29386a(this.f20394V, j, true, false));
+        int max = Math.max(this.f20398Z, Util.m29386a(this.f20394V, j, true, false));
         int i = max - this.f20398Z;
         this.f20398Z = max;
         return i;
@@ -84,7 +84,7 @@ final class C9109i implements C9141f0 {
     /* renamed from: a */
     public void mo23660a(long j) {
         boolean z = false;
-        this.f20398Z = C9554k0.m29386a(this.f20394V, j, true, false);
+        this.f20398Z = Util.m29386a(this.f20394V, j, true, false);
         if (this.f20395W && this.f20398Z == this.f20394V.length) {
             z = true;
         }

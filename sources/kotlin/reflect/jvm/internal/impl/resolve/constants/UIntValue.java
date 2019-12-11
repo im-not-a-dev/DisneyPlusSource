@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FindClassInModuleKt;
@@ -18,7 +18,7 @@ public final class UIntValue extends UnsignedValueConstant<Integer> {
 
     public KotlinType getType(ModuleDescriptor moduleDescriptor) {
         ClassId classId = KotlinBuiltIns.FQ_NAMES.uInt;
-        C12880j.m40222a((Object) classId, "KotlinBuiltIns.FQ_NAMES.uInt");
+        Intrinsics.checkReturnedValueIsNotNull((Object) classId, "KotlinBuiltIns.FQ_NAMES.uInt");
         ClassDescriptor findClassAcrossModuleDependencies = FindClassInModuleKt.findClassAcrossModuleDependencies(moduleDescriptor, classId);
         if (findClassAcrossModuleDependencies != null) {
             SimpleType defaultType = findClassAcrossModuleDependencies.getDefaultType();
@@ -27,7 +27,7 @@ public final class UIntValue extends UnsignedValueConstant<Integer> {
             }
         }
         SimpleType createErrorType = ErrorUtils.createErrorType("Unsigned type UInt not found");
-        C12880j.m40222a((Object) createErrorType, "ErrorUtils.createErrorTy…ned type UInt not found\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createErrorType, "ErrorUtils.createErrorTy…ned type UInt not found\")");
         return createErrorType;
     }
 

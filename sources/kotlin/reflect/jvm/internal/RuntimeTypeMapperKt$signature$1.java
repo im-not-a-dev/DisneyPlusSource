@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal;
 
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.structure.ReflectClassUtilKt;
 
@@ -16,7 +16,7 @@ final class RuntimeTypeMapperKt$signature$1 extends C12881k implements Function1
     }
 
     public final String invoke(Class<?> cls) {
-        C12880j.m40222a((Object) cls, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) cls, "it");
         return ReflectClassUtilKt.getDesc(cls);
     }
 }

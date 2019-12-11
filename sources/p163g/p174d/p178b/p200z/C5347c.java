@@ -6,7 +6,7 @@ import java.util.List;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p174d.p178b.p200z.C5342b.C5343a;
 
@@ -222,10 +222,10 @@ public class C5347c extends C5342b {
         int measuredHeight = view.getMeasuredHeight();
         Object obj = this.f12829c.get(Integer.valueOf(view.hashCode()));
         if (obj != null) {
-            C12880j.m40222a(obj, "viewYPositionMap[view.hashCode()]!!");
+            Intrinsics.checkReturnedValueIsNotNull(obj, "viewYPositionMap[view.hashCode()]!!");
             return measuredHeight + ((Number) obj).intValue();
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

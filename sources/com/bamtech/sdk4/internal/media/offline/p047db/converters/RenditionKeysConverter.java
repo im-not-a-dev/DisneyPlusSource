@@ -6,7 +6,7 @@ import com.google.android.exoplayer2.offline.StreamKey;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12815k;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0000\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J&\u0010\u0006\u001a\u0016\u0012\u0004\u0012\u00020\b\u0018\u00010\u0007j\n\u0012\u0004\u0012\u00020\b\u0018\u0001`\t2\b\u0010\n\u001a\u0004\u0018\u00010\u000bH\u0007J\u001a\u0010\f\u001a\u0004\u0018\u00010\u000b2\u000e\u0010\n\u001a\n\u0012\u0004\u0012\u00020\b\u0018\u00010\rH\u0007R\u0016\u0010\u0003\u001a\n \u0005*\u0004\u0018\u00010\u00040\u0004X\u0004¢\u0006\u0002\n\u0000¨\u0006\u000e"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/media/offline/db/converters/RenditionKeysConverter;", "", "()V", "gson", "Lcom/bamtech/shadow/gson/Gson;", "kotlin.jvm.PlatformType", "toRenditionKeys", "Ljava/util/ArrayList;", "Lcom/google/android/exoplayer2/offline/StreamKey;", "Lkotlin/collections/ArrayList;", "value", "", "toString", "", "plugin-offline-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -54,7 +54,7 @@ public final class RenditionKeysConverter {
         } else {
             ArrayList arrayList5 = (ArrayList) gson.mo11044a(str, new RenditionKeysConverter$toRenditionKeys$compatList$1().getType());
             ArrayList<StreamKey> arrayList6 = new ArrayList<>();
-            C12880j.m40222a((Object) arrayList5, "compatList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) arrayList5, "compatList");
             ArrayList<StreamKeyCompat> arrayList7 = new ArrayList<>();
             for (Object next : arrayList5) {
                 if (((StreamKeyCompat) next).getFormatVersion() <= 1) {

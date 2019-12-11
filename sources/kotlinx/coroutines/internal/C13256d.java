@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlinx.coroutines.internal.d */
 /* compiled from: Concurrent.kt */
@@ -29,7 +29,7 @@ public final class C13256d {
     /* renamed from: a */
     public static final <E> Set<E> m40746a(int i) {
         Set<E> newSetFromMap = Collections.newSetFromMap(new IdentityHashMap(i));
-        C12880j.m40222a((Object) newSetFromMap, "Collections.newSetFromMa…ityHashMap(expectedSize))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) newSetFromMap, "Collections.newSetFromMa…ityHashMap(expectedSize))");
         return newSetFromMap;
     }
 

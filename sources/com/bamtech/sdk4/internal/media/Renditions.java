@@ -48,7 +48,7 @@ public final class Renditions {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.subtitles, (java.lang.Object) r3.subtitles) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.subtitles, (java.lang.Object) r3.subtitles) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -60,11 +60,11 @@ public final class Renditions {
             com.bamtech.sdk4.internal.media.Renditions r3 = (com.bamtech.sdk4.internal.media.Renditions) r3
             java.util.List<java.lang.Object> r0 = r2.audio
             java.util.List<java.lang.Object> r1 = r3.audio
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             java.util.List<java.lang.Object> r0 = r2.subtitles
             java.util.List<java.lang.Object> r3 = r3.subtitles
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:

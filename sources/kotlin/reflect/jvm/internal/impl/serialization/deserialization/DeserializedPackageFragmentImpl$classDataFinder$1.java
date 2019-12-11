@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
@@ -22,7 +22,7 @@ final class DeserializedPackageFragmentImpl$classDataFinder$1 extends C12881k im
             return access$getContainerSource$p;
         }
         SourceElement sourceElement = SourceElement.NO_SOURCE;
-        C12880j.m40222a((Object) sourceElement, "SourceElement.NO_SOURCE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement, "SourceElement.NO_SOURCE");
         return sourceElement;
     }
 }

@@ -50,7 +50,7 @@ import com.bamtechmedia.dominguez.config.C3572r0;
 import com.bamtechmedia.dominguez.config.C3572r0.C3573a;
 import javax.inject.Provider;
 import kotlin.C12898l;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.e.b.o.f */
 /* compiled from: ErrorLocalizationImpl.kt */
@@ -89,125 +89,125 @@ public final class C7615f implements C7614e {
     private final String m22595b(ServiceExceptionCase serviceExceptionCase) {
         String str = "frauddetectionviolation";
         String str2 = "unexpectederror";
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) AuthenticationExpired.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) AuthenticationExpired.INSTANCE)) {
             return "authenticationexpired";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) LocationNotAllowed.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) LocationNotAllowed.INSTANCE)) {
             return "locationnotallowed";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) LocationAcquisitionError.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) LocationAcquisitionError.INSTANCE)) {
             return "locationacquisitionerror";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) TemporarilyUnavailable.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) TemporarilyUnavailable.INSTANCE)) {
             return "temporarilyunavailable";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) NetworkConnectionError.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) NetworkConnectionError.INSTANCE)) {
             return "networkconnectionerror";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) LoginRequired.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) LoginRequired.INSTANCE)) {
             return "loginrequired";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) Blackout.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) Blackout.INSTANCE)) {
             return "blackout";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) NotEntitled.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) NotEntitled.INSTANCE)) {
             return "notentitled";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) StreamConcurrencyViolation.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) StreamConcurrencyViolation.INSTANCE)) {
             return "streamconcurrency";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) MediaUnavailable.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) MediaUnavailable.INSTANCE)) {
             return "mediaunavailable";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) InvalidToken.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) InvalidToken.INSTANCE)) {
             return "invalidtoken";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) KeyNotFoundException.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) KeyNotFoundException.INSTANCE)) {
             return "keynotfoundexception";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) AttributeValidation.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) AttributeValidation.INSTANCE)) {
             return "attributevalidation";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) AccountNotFound.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) AccountNotFound.INSTANCE)) {
             return "accountnotfound";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) LinkSubscriptionPartialError.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) LinkSubscriptionPartialError.INSTANCE)) {
             return "linksubscriptionpartialerror";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) InvalidCredentials.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) InvalidCredentials.INSTANCE)) {
             return "invalidcredentials";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) AuthenticationBlocked.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) AuthenticationBlocked.INSTANCE)) {
             return "authenticationblocked";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) InvalidEmail.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) InvalidEmail.INSTANCE)) {
             return "invalidemail";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) UpdateIdentityConflict.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) UpdateIdentityConflict.INSTANCE)) {
             return "updateidentityconflict";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) RateLimited.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) RateLimited.INSTANCE)) {
             return "ratelimited";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) InvalidPasscode.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) InvalidPasscode.INSTANCE)) {
             return "invalidpasscode";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) InvalidPassword.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) InvalidPassword.INSTANCE)) {
             return "invalidpassword";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) InvalidRequest.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) InvalidRequest.INSTANCE)) {
             return "invalidrequest";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) ResetTokenAlreadyUsed.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) ResetTokenAlreadyUsed.INSTANCE)) {
             return "resettokenalreadyused";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) ResetTokenInvalid.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) ResetTokenInvalid.INSTANCE)) {
             return "resettokeninvalid";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) ActivationFailed.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) ActivationFailed.INSTANCE)) {
             return "activationfailed";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) RetryFailed.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) RetryFailed.INSTANCE)) {
             return "retryfailed";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) ConfigurationNotFound.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) ConfigurationNotFound.INSTANCE)) {
             return "configurationnotfound";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) UserProfileNotFound.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) UserProfileNotFound.INSTANCE)) {
             return "userprofilenotfound";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) ProfileRetrievalError.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) ProfileRetrievalError.INSTANCE)) {
             return "profileretrievalerror";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) UserProfileUpdateFailed.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) UserProfileUpdateFailed.INSTANCE)) {
             return "userprofileupdatefailed";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) MaximumProfilesReached.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) MaximumProfilesReached.INSTANCE)) {
             return "maximumprofilesreached";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) UserProfileDeleteFailed.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) UserProfileDeleteFailed.INSTANCE)) {
             return "userprofiledeletefailed";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) AttributeUpdateFailed.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) AttributeUpdateFailed.INSTANCE)) {
             return "attributeupdatefailed";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) AuthorizationExpired.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) AuthorizationExpired.INSTANCE)) {
             return "authorizationexpired";
         }
-        if (C12880j.m40224a((Object) serviceExceptionCase, (Object) DownloadLimitReached.INSTANCE) || C12880j.m40224a((Object) serviceExceptionCase, (Object) FraudDetectionViolation.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) DownloadLimitReached.INSTANCE) || Intrinsics.areEqual((Object) serviceExceptionCase, (Object) FraudDetectionViolation.INSTANCE)) {
             return str;
         }
-        if (!C12880j.m40224a((Object) serviceExceptionCase, (Object) UnexpectedError.INSTANCE)) {
-            if (C12880j.m40224a((Object) serviceExceptionCase, (Object) IdentityNotFound.INSTANCE)) {
+        if (!Intrinsics.areEqual((Object) serviceExceptionCase, (Object) UnexpectedError.INSTANCE)) {
+            if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) IdentityNotFound.INSTANCE)) {
                 return "identitynotfound";
             }
-            if (C12880j.m40224a((Object) serviceExceptionCase, (Object) AccountBlocked.INSTANCE)) {
+            if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) AccountBlocked.INSTANCE)) {
                 return "accountblocked";
             }
-            if (C12880j.m40224a((Object) serviceExceptionCase, (Object) ThumbnailsNotAvailable.INSTANCE)) {
+            if (Intrinsics.areEqual((Object) serviceExceptionCase, (Object) ThumbnailsNotAvailable.INSTANCE)) {
                 return "thumbnailsnotavailable";
             }
-            if (!C12880j.m40224a((Object) serviceExceptionCase, (Object) AccountIdMissing.INSTANCE) && !C12880j.m40224a((Object) serviceExceptionCase, (Object) KidsModeEnabled.INSTANCE) && !C12880j.m40224a((Object) serviceExceptionCase, (Object) SecurityLevelInsufficient.INSTANCE)) {
+            if (!Intrinsics.areEqual((Object) serviceExceptionCase, (Object) AccountIdMissing.INSTANCE) && !Intrinsics.areEqual((Object) serviceExceptionCase, (Object) KidsModeEnabled.INSTANCE) && !Intrinsics.areEqual((Object) serviceExceptionCase, (Object) SecurityLevelInsufficient.INSTANCE)) {
                 throw new C12898l();
             }
         }

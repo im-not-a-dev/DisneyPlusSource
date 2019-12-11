@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.structure;
 
 import java.lang.reflect.Modifier;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities;
 import kotlin.reflect.jvm.internal.impl.descriptors.Visibility;
 import kotlin.reflect.jvm.internal.impl.load.java.JavaVisibilities;
@@ -20,11 +20,11 @@ public interface ReflectJavaModifierListOwner extends JavaModifierListOwner {
             int modifiers = reflectJavaModifierListOwner.getModifiers();
             if (Modifier.isPublic(modifiers)) {
                 Visibility visibility2 = Visibilities.PUBLIC;
-                C12880j.m40222a((Object) visibility2, "Visibilities.PUBLIC");
+                Intrinsics.checkReturnedValueIsNotNull((Object) visibility2, "Visibilities.PUBLIC");
                 return visibility2;
             } else if (Modifier.isPrivate(modifiers)) {
                 Visibility visibility3 = Visibilities.PRIVATE;
-                C12880j.m40222a((Object) visibility3, "Visibilities.PRIVATE");
+                Intrinsics.checkReturnedValueIsNotNull((Object) visibility3, "Visibilities.PRIVATE");
                 return visibility3;
             } else if (Modifier.isProtected(modifiers)) {
                 if (Modifier.isStatic(modifiers)) {
@@ -32,11 +32,11 @@ public interface ReflectJavaModifierListOwner extends JavaModifierListOwner {
                 } else {
                     visibility = JavaVisibilities.PROTECTED_AND_PACKAGE;
                 }
-                C12880j.m40222a((Object) visibility, "if (Modifier.isStatic(mo…ies.PROTECTED_AND_PACKAGE");
+                Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "if (Modifier.isStatic(mo…ies.PROTECTED_AND_PACKAGE");
                 return visibility;
             } else {
                 Visibility visibility4 = JavaVisibilities.PACKAGE_VISIBILITY;
-                C12880j.m40222a((Object) visibility4, "JavaVisibilities.PACKAGE_VISIBILITY");
+                Intrinsics.checkReturnedValueIsNotNull((Object) visibility4, "JavaVisibilities.PACKAGE_VISIBILITY");
                 return visibility4;
             }
         }

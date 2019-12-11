@@ -3,7 +3,7 @@ package p163g.p201e.p203b.p307o.p309q;
 import com.bamtechmedia.dominguez.core.framework.C5741g;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p204d.C5403j0;
 import p163g.p503n.p504a.C11792d0;
@@ -46,7 +46,7 @@ public final class C7636c extends C5741g<C7637a> {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f16651a, (java.lang.Object) ((p163g.p201e.p203b.p307o.p309q.C7636c.C7637a) r2).f16651a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f16651a, (java.lang.Object) ((p163g.p201e.p203b.p307o.p309q.C7636c.C7637a) r2).f16651a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -58,7 +58,7 @@ public final class C7636c extends C5741g<C7637a> {
                 g.e.b.o.q.c$a r2 = (p163g.p201e.p203b.p307o.p309q.C7636c.C7637a) r2
                 java.lang.String r0 = r1.f16651a
                 java.lang.String r2 = r2.f16651a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -109,7 +109,7 @@ public final class C7636c extends C5741g<C7637a> {
         /* renamed from: a */
         public final void accept(String str) {
             C7636c cVar = this.f16652c;
-            C12880j.m40222a((Object) str, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, "it");
             cVar.m22625b(str);
         }
     }
@@ -126,7 +126,7 @@ public final class C7636c extends C5741g<C7637a> {
 
         /* renamed from: a */
         public final void mo20563a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -170,7 +170,7 @@ public final class C7636c extends C5741g<C7637a> {
     /* renamed from: y */
     private final Disposable m22626y() {
         Object a = this.f16650a.mo17142a().mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         return ((C11792d0) a).mo29920a(new C7638b(this), C7639c.f16653c);
     }
 }

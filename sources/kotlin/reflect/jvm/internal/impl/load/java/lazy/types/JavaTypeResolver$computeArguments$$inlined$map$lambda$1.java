@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.types;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -29,7 +29,7 @@ final class JavaTypeResolver$computeArguments$$inlined$map$lambda$1 extends C128
 
     public final KotlinType invoke() {
         TypeParameterDescriptor typeParameterDescriptor = this.$parameter;
-        C12880j.m40222a((Object) typeParameterDescriptor, "parameter");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameterDescriptor, "parameter");
         return JavaTypeResolverKt.getErasedUpperBound(typeParameterDescriptor, this.$attr$inlined.getUpperBoundOfTypeParameter(), new Function0<KotlinType>(this) {
             final /* synthetic */ JavaTypeResolver$computeArguments$$inlined$map$lambda$1 this$0;
 
@@ -40,12 +40,12 @@ final class JavaTypeResolver$computeArguments$$inlined$map$lambda$1 extends C128
             public final KotlinType invoke() {
                 ClassifierDescriptor declarationDescriptor = this.this$0.$constructor$inlined.getDeclarationDescriptor();
                 if (declarationDescriptor != null) {
-                    C12880j.m40222a((Object) declarationDescriptor, "constructor.declarationDescriptor!!");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) declarationDescriptor, "constructor.declarationDescriptor!!");
                     SimpleType defaultType = declarationDescriptor.getDefaultType();
-                    C12880j.m40222a((Object) defaultType, "constructor.declarationDescriptor!!.defaultType");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) defaultType, "constructor.declarationDescriptor!!.defaultType");
                     return TypeUtilsKt.replaceArgumentsWithStarProjections(defaultType);
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         });

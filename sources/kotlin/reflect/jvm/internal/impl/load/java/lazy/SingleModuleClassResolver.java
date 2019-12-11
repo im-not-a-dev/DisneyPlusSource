@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass;
 import kotlin.reflect.jvm.internal.impl.resolve.jvm.JavaDescriptorResolver;
@@ -14,7 +14,7 @@ public final class SingleModuleClassResolver implements ModuleClassResolver {
         if (javaDescriptorResolver != null) {
             return javaDescriptorResolver.resolveClass(javaClass);
         }
-        C12880j.m40227c("resolver");
+        Intrinsics.throwUninitializedPropertyAccessException("resolver");
         throw null;
     }
 

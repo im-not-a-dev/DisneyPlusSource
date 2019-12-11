@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.config.C3524e;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.content.search.f */
 /* compiled from: SearchApiConfig.kt */
@@ -22,7 +22,7 @@ public final class C3741f {
         List a = m12680a();
         ArrayList arrayList = new ArrayList();
         for (Object next : a) {
-            if (C12880j.m40224a(((Map) next).get("queryId"), (Object) str)) {
+            if (Intrinsics.areEqual(((Map) next).get("queryId"), (Object) str)) {
                 arrayList.add(next);
             }
         }

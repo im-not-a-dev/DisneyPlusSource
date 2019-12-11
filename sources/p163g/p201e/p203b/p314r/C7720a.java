@@ -16,7 +16,7 @@ import com.bamtechmedia.dominguez.core.utils.C5837i;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001B!\b\u0007\u0012\b\b\u0001\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0012\u0010\f\u001a\u0004\u0018\u00010\r2\u0006\u0010\u000e\u001a\u00020\u000fH\u0002J4\u0010\u0010\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u00122\u0012\u0010\u0014\u001a\u000e\u0012\u0004\u0012\u00020\u0016\u0012\u0004\u0012\u00020\r0\u0015H\u0002J\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0016J\u0018\u0010\u001b\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001c\u001a\u00020\u0012H\u0016J\u0010\u0010\u001d\u001a\u00020\u00182\u0006\u0010\u001e\u001a\u00020\u001fH\u0016J\u0010\u0010 \u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0016R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0003X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006!"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/kidsmode/BackgroundHelperImpl;", "Lcom/bamtechmedia/dominguez/core/design/helper/BackgroundHelper;", "kidsMode", "", "backgroundLoader", "Lcom/bamtechmedia/dominguez/kidsmode/BackgroundLoader;", "activity", "Landroidx/fragment/app/FragmentActivity;", "(ZLcom/bamtechmedia/dominguez/kidsmode/BackgroundLoader;Landroidx/fragment/app/FragmentActivity;)V", "displayMetrics", "Landroid/util/DisplayMetrics;", "isCutAlreadySet", "createAppBitmapDrawable", "Landroid/graphics/drawable/BitmapDrawable;", "drawable", "Landroid/graphics/drawable/Drawable;", "createBitmapDrawable", "bitmapWidth", "", "bitmapHeight", "createBitmap", "Lkotlin/Function1;", "Landroid/graphics/Bitmap;", "loadAppBackground", "", "view", "Landroid/view/View;", "loadCutHeightBackground", "viewHeight", "loadFitBackground", "imageView", "Landroid/widget/ImageView;", "loadNavBackground", "kidsMode_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -174,7 +174,7 @@ public final class C7720a implements C3848a {
         this.f16780e = dVar;
         DisplayMetrics displayMetrics = new DisplayMetrics();
         WindowManager windowManager = this.f16780e.getWindowManager();
-        C12880j.m40222a((Object) windowManager, "activity.windowManager");
+        Intrinsics.checkReturnedValueIsNotNull((Object) windowManager, "activity.windowManager");
         windowManager.getDefaultDisplay().getMetrics(displayMetrics);
         this.f16776a = displayMetrics;
     }
@@ -210,12 +210,12 @@ public final class C7720a implements C3848a {
         int intrinsicWidth = drawable.getIntrinsicWidth();
         Context applicationContext = this.f16780e.getApplicationContext();
         String str = "activity.applicationContext";
-        C12880j.m40222a((Object) applicationContext, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) applicationContext, str);
         if (C5837i.m18843e(applicationContext)) {
             i = drawable.getIntrinsicHeight();
         } else {
             Context applicationContext2 = this.f16780e.getApplicationContext();
-            C12880j.m40222a((Object) applicationContext2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) applicationContext2, str);
             if (C5837i.m18842d(applicationContext2)) {
                 i = this.f16776a.heightPixels / 2;
             } else {
@@ -232,7 +232,7 @@ public final class C7720a implements C3848a {
         Canvas canvas = new Canvas(createBitmap);
         drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
         drawable.draw(canvas);
-        C12880j.m40222a((Object) createBitmap, "bitmap");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createBitmap, "bitmap");
         return (BitmapDrawable) function1.invoke(createBitmap);
     }
 }

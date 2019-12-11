@@ -18,7 +18,7 @@ public class C12879i extends C12863c implements C12878h, KFunction {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:16:0x004e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a(getBoundReceiver(), r5.getBoundReceiver()) != false) goto L_0x0052;
+        if (kotlin.jvm.internal.Intrinsics.areEqual(getBoundReceiver(), r5.getBoundReceiver()) != false) goto L_0x0052;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r5) {
@@ -53,7 +53,7 @@ public class C12879i extends C12863c implements C12878h, KFunction {
             if (r1 == 0) goto L_0x0051
             java.lang.Object r1 = r4.getBoundReceiver()
             java.lang.Object r5 = r5.getBoundReceiver()
-            boolean r5 = kotlin.jvm.internal.C12880j.m40224a(r1, r5)
+            boolean r5 = kotlin.jvm.internal.Intrinsics.areEqual(r1, r5)
             if (r5 == 0) goto L_0x0051
             goto L_0x0052
         L_0x0051:

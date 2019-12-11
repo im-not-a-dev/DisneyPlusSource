@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.types.checker;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -199,7 +199,7 @@ public interface ClassicTypeSystemContext extends TypeSystemInferenceExtensionCo
         public static TypeParameterMarker getParameter(ClassicTypeSystemContext classicTypeSystemContext, TypeConstructorMarker typeConstructorMarker, int i) {
             if (typeConstructorMarker instanceof TypeConstructor) {
                 Object obj = ((TypeConstructor) typeConstructorMarker).getParameters().get(i);
-                C12880j.m40222a(obj, "this.parameters[index]");
+                Intrinsics.checkReturnedValueIsNotNull(obj, "this.parameters[index]");
                 return (TypeParameterMarker) obj;
             }
             StringBuilder sb = new StringBuilder();
@@ -225,7 +225,7 @@ public interface ClassicTypeSystemContext extends TypeSystemInferenceExtensionCo
         public static TypeVariance getVariance(ClassicTypeSystemContext classicTypeSystemContext, TypeArgumentMarker typeArgumentMarker) {
             if (typeArgumentMarker instanceof TypeProjection) {
                 Variance projectionKind = ((TypeProjection) typeArgumentMarker).getProjectionKind();
-                C12880j.m40222a((Object) projectionKind, "this.projectionKind");
+                Intrinsics.checkReturnedValueIsNotNull((Object) projectionKind, "this.projectionKind");
                 return ClassicTypeSystemContextKt.convertVariance(projectionKind);
             }
             StringBuilder sb = new StringBuilder();
@@ -345,7 +345,7 @@ public interface ClassicTypeSystemContext extends TypeSystemInferenceExtensionCo
                 sb.append(C12895y.m40230a(typeConstructorMarker.getClass()));
                 throw new IllegalArgumentException(sb.toString().toString());
             } else if (typeConstructorMarker2 instanceof TypeConstructor) {
-                return C12880j.m40224a((Object) typeConstructorMarker, (Object) typeConstructorMarker2);
+                return Intrinsics.areEqual((Object) typeConstructorMarker, (Object) typeConstructorMarker2);
             } else {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(str2);
@@ -542,7 +542,7 @@ public interface ClassicTypeSystemContext extends TypeSystemInferenceExtensionCo
         public static Collection<KotlinTypeMarker> supertypes(ClassicTypeSystemContext classicTypeSystemContext, TypeConstructorMarker typeConstructorMarker) {
             if (typeConstructorMarker instanceof TypeConstructor) {
                 Collection<KotlinTypeMarker> supertypes = ((TypeConstructor) typeConstructorMarker).getSupertypes();
-                C12880j.m40222a((Object) supertypes, "this.supertypes");
+                Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "this.supertypes");
                 return supertypes;
             }
             StringBuilder sb = new StringBuilder();
@@ -600,7 +600,7 @@ public interface ClassicTypeSystemContext extends TypeSystemInferenceExtensionCo
         public static TypeVariance getVariance(ClassicTypeSystemContext classicTypeSystemContext, TypeParameterMarker typeParameterMarker) {
             if (typeParameterMarker instanceof TypeParameterDescriptor) {
                 Variance variance = ((TypeParameterDescriptor) typeParameterMarker).getVariance();
-                C12880j.m40222a((Object) variance, "this.variance");
+                Intrinsics.checkReturnedValueIsNotNull((Object) variance, "this.variance");
                 return ClassicTypeSystemContextKt.convertVariance(variance);
             }
             StringBuilder sb = new StringBuilder();

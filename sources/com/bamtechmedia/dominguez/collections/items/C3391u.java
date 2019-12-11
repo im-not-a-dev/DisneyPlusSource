@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.C12898l;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p586h0.C12757d;
 import kotlin.p590y.C13162e0;
 import kotlin.p590y.C13180m;
@@ -158,7 +158,7 @@ public final class C3391u {
         C3444j jVar2 = jVar;
         C3626b bVar2 = bVar;
         C3700c<? extends C3626b> cVar2 = cVar;
-        if (C12880j.m40224a((Object) jVar.mo12636o(), (Object) "bookmark")) {
+        if (Intrinsics.areEqual((Object) jVar.mo12636o(), (Object) "bookmark")) {
             C3357b bVar3 = this.f8544b;
             if (bVar2 != null) {
                 return bVar3.mo12457a(jVar, str2, (C3693o) bVar2, this.f8548f);
@@ -166,11 +166,11 @@ public final class C3391u {
             throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Playable");
         }
         String str3 = str2;
-        if (C12880j.m40224a((Object) jVar.mo12636o(), (Object) "category")) {
+        if (Intrinsics.areEqual((Object) jVar.mo12636o(), (Object) "category")) {
             return this.f8545c.mo12485a(jVar, bVar2, map);
         }
         Map<String, String> map2 = map;
-        if (C12880j.m40224a((Object) jVar.mo12636o(), (Object) "character")) {
+        if (Intrinsics.areEqual((Object) jVar.mo12636o(), (Object) "character")) {
             return this.f8543a.mo12556a(jVar, str2, cVar, bVar, cVar2.indexOf(bVar2), this.f8547e && this.f8549g.mo17734a(28), map, this.f8548f, str);
         }
         return C3398a.m11652a(this.f8543a, jVar, str2, cVar, bVar, cVar2.indexOf(bVar2), false, map, this.f8548f, str, 32, null);

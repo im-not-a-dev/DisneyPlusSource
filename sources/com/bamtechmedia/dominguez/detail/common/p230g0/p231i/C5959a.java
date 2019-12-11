@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.collections.items.C3392v;
 import com.bamtechmedia.dominguez.collections.p081ui.ShelfItemRecyclerView;
 import com.bamtechmedia.dominguez.core.content.sets.C3788m;
 import com.bamtechmedia.dominguez.core.utils.C5844l0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p287k.C7310d;
 import p163g.p201e.p203b.p287k.C7312f;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -38,7 +38,7 @@ public final class C5959a extends C3384s implements C5960b {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13784Z, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.common.p230g0.p231i.C5959a) r2).f13784Z) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13784Z, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.common.p230g0.p231i.C5959a) r2).f13784Z) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -50,7 +50,7 @@ public final class C5959a extends C3384s implements C5960b {
             com.bamtechmedia.dominguez.detail.common.g0.i.a r2 = (com.bamtechmedia.dominguez.detail.common.p230g0.p231i.C5959a) r2
             com.bamtechmedia.dominguez.collections.items.v r0 = r1.f13784Z
             com.bamtechmedia.dominguez.collections.items.v r2 = r2.f13784Z
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:
@@ -88,7 +88,7 @@ public final class C5959a extends C3384s implements C5960b {
         this.f13783Y = (TextView) bVar.mo20994a().findViewById(C7310d.episodeDescription);
         bVar.itemView.setTag(C7310d.viewHelperIgnoreOffset, Boolean.valueOf(true));
         ShelfItemRecyclerView shelfItemRecyclerView = (ShelfItemRecyclerView) bVar.itemView.findViewById(C7310d.shelfRecyclerView);
-        C12880j.m40222a((Object) shelfItemRecyclerView, "recyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemRecyclerView, "recyclerView");
         shelfItemRecyclerView.setVisibility(mo12515i().isEmpty() ^ true ? 0 : 8);
     }
 

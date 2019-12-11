@@ -36,7 +36,7 @@ import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p171c.p172a.p173a.C4793a;
 import p163g.p201e.p203b.p287k.C7310d;
@@ -188,10 +188,10 @@ public final class C5962d extends C11866a implements OnKeyListener {
         public final void invoke(boolean z) {
             C5962d dVar = this.f13800c;
             TextView textView = (TextView) this.f13798U.mo20994a().findViewById(C7310d.assetItemTitle);
-            C12880j.m40222a((Object) textView, "viewHolder.assetItemTitle");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "viewHolder.assetItemTitle");
             dVar.m19119a(textView, z);
             ImageView imageView = (ImageView) this.f13798U.mo20994a().findViewById(C7310d.assetItemPlayIcon);
-            C12880j.m40222a((Object) imageView, "viewHolder.assetItemPlayIcon");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "viewHolder.assetItemPlayIcon");
             imageView.setVisibility(z ? 0 : 8);
             C5960b a = this.f13800c.mo17898a();
             if (a != null) {
@@ -199,7 +199,7 @@ public final class C5962d extends C11866a implements OnKeyListener {
             }
             if (z) {
                 View view = this.f13798U.itemView;
-                C12880j.m40222a((Object) view, "viewHolder.itemView");
+                Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
                 ViewParent parent = view.getParent();
                 if (!(parent instanceof ShelfItemRecyclerView)) {
                     parent = null;
@@ -234,7 +234,7 @@ public final class C5962d extends C11866a implements OnKeyListener {
     public boolean equals(Object obj) {
         if (obj instanceof C5962d) {
             C5962d dVar = (C5962d) obj;
-            if (C12880j.m40224a((Object) dVar.f13787V.mo12903f(), (Object) this.f13787V.mo12903f()) && C12880j.m40224a((Object) dVar.f13787V.getContentType(), (Object) this.f13787V.getContentType()) && C12880j.m40224a((Object) dVar.f13786U, (Object) this.f13786U) && dVar.f13790Y.size() == this.f13790Y.size()) {
+            if (Intrinsics.areEqual((Object) dVar.f13787V.mo12903f(), (Object) this.f13787V.mo12903f()) && Intrinsics.areEqual((Object) dVar.f13787V.getContentType(), (Object) this.f13787V.getContentType()) && Intrinsics.areEqual((Object) dVar.f13786U, (Object) this.f13786U) && dVar.f13790Y.size() == this.f13790Y.size()) {
                 return true;
             }
         }
@@ -247,7 +247,7 @@ public final class C5962d extends C11866a implements OnKeyListener {
         }
         C5962d dVar = (C5962d) eVar;
         if (dVar != null) {
-            return new C5963a(!C12880j.m40224a((Object) dVar.f13787V, (Object) this.f13787V));
+            return new C5963a(!Intrinsics.areEqual((Object) dVar.f13787V, (Object) this.f13787V));
         }
         return null;
     }
@@ -255,7 +255,7 @@ public final class C5962d extends C11866a implements OnKeyListener {
     public long getId() {
         try {
             UUID fromString = UUID.fromString(this.f13787V.mo12903f());
-            C12880j.m40222a((Object) fromString, "UUID.fromString(playable.contentId)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) fromString, "UUID.fromString(playable.contentId)");
             return fromString.getMostSignificantBits() & Long.MAX_VALUE;
         } catch (IllegalArgumentException unused) {
             return super.getId();
@@ -272,7 +272,7 @@ public final class C5962d extends C11866a implements OnKeyListener {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof C5962d) && C12880j.m40224a((Object) ((C5962d) eVar).f13787V.mo12903f(), (Object) this.f13787V.mo12903f());
+        return (eVar instanceof C5962d) && Intrinsics.areEqual((Object) ((C5962d) eVar).f13787V.mo12903f(), (Object) this.f13787V.mo12903f());
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x001d, code lost:
@@ -417,7 +417,7 @@ public final class C5962d extends C11866a implements OnKeyListener {
             android.view.View r0 = r0.findViewById(r1)
             android.widget.TextView r0 = (android.widget.TextView) r0
             java.lang.String r1 = "assetItemTitle"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             r5.m19118a(r0)
         L_0x0064:
             com.bamtechmedia.dominguez.core.content.paging.e r0 = r5.f13791Z
@@ -450,10 +450,10 @@ public final class C5962d extends C11866a implements OnKeyListener {
         Image a = C3646q.m12401a(this.f13787V);
         AspectRatioImageView aspectRatioImageView = (AspectRatioImageView) bVar.mo20994a().findViewById(C7310d.assetItemImage);
         String str = "holder.assetItemImage";
-        C12880j.m40222a((Object) aspectRatioImageView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) aspectRatioImageView, str);
         C3444j jVar = this.f13786U;
         AspectRatioImageView aspectRatioImageView2 = (AspectRatioImageView) bVar.mo20994a().findViewById(C7310d.assetItemImage);
-        C12880j.m40222a((Object) aspectRatioImageView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) aspectRatioImageView2, str);
         C5763b.m18702a(aspectRatioImageView, a, C3849b.m12935a(C3849b.f9526a, C3623a.f9125b0.mo13248a().mo13242X(), 0, 2, null), null, Integer.valueOf(C3446k.m11762a(jVar, aspectRatioImageView2)), false, false, false, 116, null);
     }
 
@@ -461,9 +461,9 @@ public final class C5962d extends C11866a implements OnKeyListener {
     private final void m19122a(C11867b bVar, int i) {
         C3493c cVar = this.f13788W;
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         ShelfItemLayout shelfItemLayout = (ShelfItemLayout) bVar.mo20994a().findViewById(C7310d.cardView);
-        C12880j.m40222a((Object) shelfItemLayout, "viewHolder.cardView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemLayout, "viewHolder.cardView");
         C3493c.m11865a(cVar, view, shelfItemLayout, this.f13786U, false, new C5966d(this, bVar, i), 8, null);
     }
 

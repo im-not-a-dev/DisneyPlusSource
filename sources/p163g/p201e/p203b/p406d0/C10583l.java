@@ -3,7 +3,7 @@ package p163g.p201e.p203b.p406d0;
 import com.bamtechmedia.dominguez.core.framework.C5741g;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p503n.p504a.C11793e;
 import p163g.p503n.p504a.C11839v;
 import p520io.reactivex.C11912b;
@@ -54,7 +54,7 @@ public final class C10583l extends C5741g<C10587d> {
 
         /* renamed from: a */
         public final void mo27460a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -128,9 +128,9 @@ public final class C10583l extends C5741g<C10587d> {
         super(null, 1, null);
         this.f25028c = kVar;
         Completable b = Completable.m38158b(5, TimeUnit.SECONDS, C11934b.m38498a());
-        C12880j.m40222a((Object) b, "Completable.timer(DISPLA…Schedulers.computation())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.timer(DISPLA…Schedulers.computation())");
         Object a = b.mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
         ((C11839v) a).mo29926a(new C10584a(this), C10585b.f25030c);
     }
 

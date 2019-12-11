@@ -10,7 +10,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12860a0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.calls.Caller.DefaultImpls;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0011\n\u0002\b\u0007\n\u0002\u0010 \n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b0\u0018\u0000 \u001e*\n\b\u0000\u0010\u0001 \u0001*\u00020\u00022\b\u0012\u0004\u0012\u0002H\u00010\u0003:\b\u001b\u001c\u001d\u001e\u001f !\"B3\b\u0002\u0012\u0006\u0010\u0004\u001a\u00028\u0000\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\f\u0010\u0007\u001a\b\u0012\u0002\b\u0003\u0018\u00010\b\u0012\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u00060\n¢\u0006\u0002\u0010\u000bJ\u0012\u0010\u0017\u001a\u00020\u00182\b\u0010\u0019\u001a\u0004\u0018\u00010\u001aH\u0004R\u0017\u0010\u0007\u001a\b\u0012\u0002\b\u0003\u0018\u00010\b¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\rR\u0013\u0010\u0004\u001a\u00028\u0000¢\u0006\n\n\u0002\u0010\u0010\u001a\u0004\b\u000e\u0010\u000fR\u001a\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u00060\u0012X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0014R\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0016\u0001\u0007#$%&'()¨\u0006*"}, mo31007d2 = {"Lkotlin/reflect/jvm/internal/calls/CallerImpl;", "M", "Ljava/lang/reflect/Member;", "Lkotlin/reflect/jvm/internal/calls/Caller;", "member", "returnType", "Ljava/lang/reflect/Type;", "instanceClass", "Ljava/lang/Class;", "valueParameterTypes", "", "(Ljava/lang/reflect/Member;Ljava/lang/reflect/Type;Ljava/lang/Class;[Ljava/lang/reflect/Type;)V", "getInstanceClass", "()Ljava/lang/Class;", "getMember", "()Ljava/lang/reflect/Member;", "Ljava/lang/reflect/Member;", "parameterTypes", "", "getParameterTypes", "()Ljava/util/List;", "getReturnType", "()Ljava/lang/reflect/Type;", "checkObjectInstance", "", "obj", "", "AccessorForHiddenBoundConstructor", "AccessorForHiddenConstructor", "BoundConstructor", "Companion", "Constructor", "FieldGetter", "FieldSetter", "Method", "Lkotlin/reflect/jvm/internal/calls/CallerImpl$Constructor;", "Lkotlin/reflect/jvm/internal/calls/CallerImpl$BoundConstructor;", "Lkotlin/reflect/jvm/internal/calls/CallerImpl$AccessorForHiddenConstructor;", "Lkotlin/reflect/jvm/internal/calls/CallerImpl$AccessorForHiddenBoundConstructor;", "Lkotlin/reflect/jvm/internal/calls/CallerImpl$Method;", "Lkotlin/reflect/jvm/internal/calls/CallerImpl$FieldGetter;", "Lkotlin/reflect/jvm/internal/calls/CallerImpl$FieldSetter;", "kotlin-reflection"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -30,9 +30,9 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
         public AccessorForHiddenBoundConstructor(java.lang.reflect.Constructor<?> constructor, Object obj) {
             Object obj2;
             Class declaringClass = constructor.getDeclaringClass();
-            C12880j.m40222a((Object) declaringClass, "constructor.declaringClass");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaringClass, "constructor.declaringClass");
             Type[] genericParameterTypes = constructor.getGenericParameterTypes();
-            C12880j.m40222a((Object) genericParameterTypes, "constructor.genericParameterTypes");
+            Intrinsics.checkReturnedValueIsNotNull((Object) genericParameterTypes, "constructor.genericParameterTypes");
             if (genericParameterTypes.length <= 2) {
                 obj2 = new Type[0];
             } else {
@@ -62,9 +62,9 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
         public AccessorForHiddenConstructor(java.lang.reflect.Constructor<?> constructor) {
             Object obj;
             Class declaringClass = constructor.getDeclaringClass();
-            C12880j.m40222a((Object) declaringClass, "constructor.declaringClass");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaringClass, "constructor.declaringClass");
             Type[] genericParameterTypes = constructor.getGenericParameterTypes();
-            C12880j.m40222a((Object) genericParameterTypes, "constructor.genericParameterTypes");
+            Intrinsics.checkReturnedValueIsNotNull((Object) genericParameterTypes, "constructor.genericParameterTypes");
             if (genericParameterTypes.length <= 1) {
                 obj = new Type[0];
             } else {
@@ -93,9 +93,9 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
 
         public BoundConstructor(java.lang.reflect.Constructor<?> constructor, Object obj) {
             Class declaringClass = constructor.getDeclaringClass();
-            C12880j.m40222a((Object) declaringClass, "constructor.declaringClass");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaringClass, "constructor.declaringClass");
             Type[] genericParameterTypes = constructor.getGenericParameterTypes();
-            C12880j.m40222a((Object) genericParameterTypes, "constructor.genericParameterTypes");
+            Intrinsics.checkReturnedValueIsNotNull((Object) genericParameterTypes, "constructor.genericParameterTypes");
             super(constructor, declaringClass, null, genericParameterTypes, null);
             this.boundReceiver = obj;
         }
@@ -126,13 +126,13 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
     public static final class Constructor extends CallerImpl<java.lang.reflect.Constructor<?>> {
         public Constructor(java.lang.reflect.Constructor<?> constructor) {
             Class declaringClass = constructor.getDeclaringClass();
-            C12880j.m40222a((Object) declaringClass, "constructor.declaringClass");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaringClass, "constructor.declaringClass");
             Class declaringClass2 = constructor.getDeclaringClass();
-            C12880j.m40222a((Object) declaringClass2, "klass");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaringClass2, "klass");
             Class declaringClass3 = declaringClass2.getDeclaringClass();
             Class cls = (declaringClass3 == null || Modifier.isStatic(declaringClass2.getModifiers())) ? null : declaringClass3;
             Type[] genericParameterTypes = constructor.getGenericParameterTypes();
-            C12880j.m40222a((Object) genericParameterTypes, "constructor.genericParameterTypes");
+            Intrinsics.checkReturnedValueIsNotNull((Object) genericParameterTypes, "constructor.genericParameterTypes");
             super(constructor, declaringClass, cls, genericParameterTypes, null);
         }
 
@@ -210,7 +210,7 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
 
         private FieldGetter(Field field, boolean z) {
             Type genericType = field.getGenericType();
-            C12880j.m40222a((Object) genericType, "field.genericType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) genericType, "field.genericType");
             super(field, genericType, z ? field.getDeclaringClass() : null, new Type[0], null);
         }
     }
@@ -299,10 +299,10 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
 
         private FieldSetter(Field field, boolean z, boolean z2) {
             Class cls = Void.TYPE;
-            C12880j.m40222a((Object) cls, "Void.TYPE");
+            Intrinsics.checkReturnedValueIsNotNull((Object) cls, "Void.TYPE");
             Class declaringClass = z2 ? field.getDeclaringClass() : null;
             Type genericType = field.getGenericType();
-            C12880j.m40222a((Object) genericType, "field.genericType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) genericType, "field.genericType");
             Type[] typeArr = {genericType};
             super(field, cls, declaringClass, typeArr, null);
             this.notNull = z;
@@ -351,7 +351,7 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
             public BoundStatic(java.lang.reflect.Method method, Object obj) {
                 Object obj2;
                 Type[] genericParameterTypes = method.getGenericParameterTypes();
-                C12880j.m40222a((Object) genericParameterTypes, "method.genericParameterTypes");
+                Intrinsics.checkReturnedValueIsNotNull((Object) genericParameterTypes, "method.genericParameterTypes");
                 if (genericParameterTypes.length <= 1) {
                     obj2 = new Type[0];
                 } else {
@@ -447,16 +447,16 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
             }
             if ((i & 4) != 0) {
                 typeArr = method.getGenericParameterTypes();
-                C12880j.m40222a((Object) typeArr, "method.genericParameterTypes");
+                Intrinsics.checkReturnedValueIsNotNull((Object) typeArr, "method.genericParameterTypes");
             }
             this(method, z, typeArr);
         }
 
         private Method(java.lang.reflect.Method method, boolean z, Type[] typeArr) {
             Type genericReturnType = method.getGenericReturnType();
-            C12880j.m40222a((Object) genericReturnType, "method.genericReturnType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) genericReturnType, "method.genericReturnType");
             super(method, genericReturnType, z ? method.getDeclaringClass() : null, typeArr, null);
-            this.isVoidMethod = C12880j.m40224a((Object) getReturnType(), (Object) Void.TYPE);
+            this.isVoidMethod = Intrinsics.areEqual((Object) getReturnType(), (Object) Void.TYPE);
         }
     }
 

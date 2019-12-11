@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentProvider;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
@@ -17,7 +17,7 @@ public final class DeserializedClassDataFinder implements ClassDataFinder {
     public ClassData findClassData(ClassId classId) {
         PackageFragmentProvider packageFragmentProvider2 = this.packageFragmentProvider;
         FqName packageFqName = classId.getPackageFqName();
-        C12880j.m40222a((Object) packageFqName, "classId.packageFqName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) packageFqName, "classId.packageFqName");
         for (PackageFragmentDescriptor packageFragmentDescriptor : packageFragmentProvider2.getPackageFragments(packageFqName)) {
             if (packageFragmentDescriptor instanceof DeserializedPackageFragment) {
                 ClassData findClassData = ((DeserializedPackageFragment) packageFragmentDescriptor).getClassDataFinder().findClassData(classId);

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.nio.charset.Charset;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 import okio.BufferedSource;
 import okio.C14280f;
@@ -71,7 +71,7 @@ public final class C8544a {
         Charset charset = C12801c.f29474a;
         if (sb2 != null) {
             byte[] bytes = sb2.getBytes(charset);
-            C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
             fVar.write(bytes);
             this.f18233b.flush();
             return;

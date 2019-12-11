@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.location.GeoLocation;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.disposables.Disposable;
@@ -27,9 +27,9 @@ final class DefaultLocationResolver$getLocation$1<T, R> implements Function<T, S
     public final Single<GeoLocation> apply(LocationConfiguration locationConfiguration) {
         long timeout = locationConfiguration.getTimeout();
         Single h = this.this$0.geoProvider.getLocation(timeout).mo30227d((Consumer<? super T>) new DefaultLocationResolver$getLocation$1$providerLocation$1<Object>(this)).mo30235h(new DefaultLocationResolver$getLocation$1$providerLocation$2(this));
-        C12880j.m40222a((Object) h, "geoProvider.getLocation(…                        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "geoProvider.getLocation(…                        }");
         Single g = Single.m38387a(timeout, TimeUnit.SECONDS).mo30233g(new DefaultLocationResolver$getLocation$1$timeoutLocation$1(this));
-        C12880j.m40222a((Object) g, "Single.timer(timeout, Ti…                        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "Single.timer(timeout, Ti…                        }");
         return Single.m38393a((Iterable<? extends SingleSource<? extends T>>) C13185o.m40512a((Object[]) new Single[]{h, g})).mo30222c((Consumer<? super Disposable>) new Consumer<Disposable>(this) {
             final /* synthetic */ DefaultLocationResolver$getLocation$1 this$0;
 

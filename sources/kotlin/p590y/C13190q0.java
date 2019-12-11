@@ -3,7 +3,7 @@ package kotlin.p590y;
 import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlin.y.q0 */
 /* compiled from: _Sets.kt */
@@ -14,7 +14,7 @@ class C13190q0 extends C13188p0 {
         boolean z = false;
         for (Object next : set) {
             boolean z2 = true;
-            if (!z && C12880j.m40224a(next, (Object) t)) {
+            if (!z && Intrinsics.areEqual(next, (Object) t)) {
                 z = true;
                 z2 = false;
             }

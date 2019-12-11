@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSourc
 import com.bamtechmedia.dominguez.detail.series.data.RemoteSeriesDetailDataSource.ContinueWatchingSeriesResponse;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -21,10 +21,10 @@ public final class C6036x5dccebc9 extends C11725h<ContinueWatchingSeriesResponse
 
     public C6036x5dccebc9(C11760v vVar) {
         C11739b a = C11739b.m37729a("ContinueWatchingSeries");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"ContinueWatchingSeries\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"ContinueWatchingSeries\")");
         this.options = a;
         C11725h<ContinueWatchingSeries> a2 = vVar.mo29869a((Type) ContinueWatchingSeries.class, C13188p0.m40531a(), "continueWatchingSeries");
-        C12880j.m40222a((Object) a2, "moshi.adapter<RemoteSeri…\"continueWatchingSeries\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<RemoteSeri…\"continueWatchingSeries\")");
         this.continueWatchingSeriesAdapter = a2;
     }
 

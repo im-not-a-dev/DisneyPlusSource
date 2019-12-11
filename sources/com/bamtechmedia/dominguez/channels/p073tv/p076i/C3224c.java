@@ -1,6 +1,6 @@
 package com.bamtechmedia.dominguez.channels.p073tv.p076i;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 
 /* renamed from: com.bamtechmedia.dominguez.channels.tv.i.c */
@@ -100,8 +100,8 @@ public final class C3224c {
         if (this != obj) {
             if (obj instanceof C3224c) {
                 C3224c cVar = (C3224c) obj;
-                if (C12880j.m40224a((Object) this.f8195a, (Object) cVar.f8195a) && C12880j.m40224a((Object) this.f8196b, (Object) cVar.f8196b) && C12880j.m40224a((Object) this.f8197c, (Object) cVar.f8197c) && C12880j.m40224a((Object) this.f8198d, (Object) cVar.f8198d) && C12880j.m40224a((Object) this.f8199e, (Object) cVar.f8199e)) {
-                    if (!(this.f8200f == cVar.f8200f) || !C12880j.m40224a((Object) this.f8201g, (Object) cVar.f8201g) || !C12880j.m40224a((Object) this.f8202h, (Object) cVar.f8202h) || !C12880j.m40224a((Object) this.f8203i, (Object) cVar.f8203i) || !C12880j.m40224a((Object) this.f8204j, (Object) cVar.f8204j) || !C12880j.m40224a((Object) this.f8205k, (Object) cVar.f8205k) || !C12880j.m40224a((Object) this.f8206l, (Object) cVar.f8206l)) {
+                if (Intrinsics.areEqual((Object) this.f8195a, (Object) cVar.f8195a) && Intrinsics.areEqual((Object) this.f8196b, (Object) cVar.f8196b) && Intrinsics.areEqual((Object) this.f8197c, (Object) cVar.f8197c) && Intrinsics.areEqual((Object) this.f8198d, (Object) cVar.f8198d) && Intrinsics.areEqual((Object) this.f8199e, (Object) cVar.f8199e)) {
+                    if (!(this.f8200f == cVar.f8200f) || !Intrinsics.areEqual((Object) this.f8201g, (Object) cVar.f8201g) || !Intrinsics.areEqual((Object) this.f8202h, (Object) cVar.f8202h) || !Intrinsics.areEqual((Object) this.f8203i, (Object) cVar.f8203i) || !Intrinsics.areEqual((Object) this.f8204j, (Object) cVar.f8204j) || !Intrinsics.areEqual((Object) this.f8205k, (Object) cVar.f8205k) || !Intrinsics.areEqual((Object) this.f8206l, (Object) cVar.f8206l)) {
                         return false;
                     }
                 }

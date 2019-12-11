@@ -7,7 +7,7 @@ import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
@@ -541,12 +541,12 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
             int r10 = r6.f18356h0
             if (r10 > 0) goto L_0x0040
             java.lang.String r10 = r6.f18346Y
-            java.lang.String r10 = com.google.android.exoplayer2.p393v0.C9554k0.m29396a(r10, r8)
+            java.lang.String r10 = com.google.android.exoplayer2.p393v0.Util.m29396a(r10, r8)
             if (r10 == 0) goto L_0x0030
             goto L_0x0040
         L_0x0030:
             java.lang.String r6 = r6.f18346Y
-            java.lang.String r6 = com.google.android.exoplayer2.p393v0.C9554k0.m29396a(r6, r9)
+            java.lang.String r6 = com.google.android.exoplayer2.p393v0.Util.m29396a(r6, r9)
             if (r6 == 0) goto L_0x003d
             r1[r3] = r9
             int r5 = r5 + 1
@@ -630,14 +630,14 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
             boolean r10 = r5.f20624d0
             if (r10 == 0) goto L_0x018b
             if (r1 == 0) goto L_0x018b
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.C9554k0.m29396a(r1, r8)
+            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.m29396a(r1, r8)
             if (r8 == 0) goto L_0x00bc
             r8 = 1
             goto L_0x00bd
         L_0x00bc:
             r8 = 0
         L_0x00bd:
-            java.lang.String r10 = com.google.android.exoplayer2.p393v0.C9554k0.m29396a(r1, r9)
+            java.lang.String r10 = com.google.android.exoplayer2.p393v0.Util.m29396a(r1, r9)
             if (r10 == 0) goto L_0x00c5
             r10 = 1
             goto L_0x00c6
@@ -764,7 +764,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
                 arrayList3.clear();
                 boolean z = true;
                 for (int i2 = 0; i2 < list.size(); i2++) {
-                    if (C9554k0.m29414a((Object) str, (Object) ((C9183a) list4.get(i2)).f20759c)) {
+                    if (Util.m29414a((Object) str, (Object) ((C9183a) list4.get(i2)).f20759c)) {
                         C9183a aVar = (C9183a) list4.get(i2);
                         arrayList3.add(Integer.valueOf(i2));
                         arrayList.add(aVar.f20757a);
@@ -773,7 +773,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
                     }
                 }
                 C9167m a = m27495a(1, (Uri[]) arrayList.toArray(new Uri[0]), (Format[]) arrayList2.toArray(new Format[0]), null, Collections.emptyList(), map, j);
-                list3.add(C9554k0.m29417a((List<Integer>) arrayList3));
+                list3.add(Util.m29417a((List<Integer>) arrayList3));
                 list2.add(a);
                 if (this.f20624d0 && z) {
                     a.mo23833a(new TrackGroupArray(new C9199j0((Format[]) arrayList2.toArray(new Format[0]))), 0, TrackGroupArray.f20167W);
@@ -816,7 +816,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
 
     /* renamed from: a */
     private static Format m27493a(Format format) {
-        String a = C9554k0.m29396a(format.f18346Y, 2);
+        String a = Util.m29396a(format.f18346Y, 2);
         return Format.m24882a(format.f18350c, format.f18342U, format.f18348a0, C9566t.m29511d(a), a, format.f18347Z, format.f18345X, format.f18355g0, format.f18356h0, format.f18357i0, null, format.f18343V, format.f18344W);
     }
 
@@ -846,7 +846,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
             i = i6;
             str = str5;
         } else {
-            String a = C9554k0.m29396a(format3.f18346Y, 1);
+            String a = Util.m29396a(format3.f18346Y, 1);
             Metadata metadata3 = format3.f18347Z;
             if (z) {
                 int i7 = format3.f18363o0;

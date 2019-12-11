@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0.p371v;
 
 import com.bamtech.sdk4.internal.configuration.ContentServiceClientExtras;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.s0.v.f */
 /* compiled from: FixedSampleSizeRechunker */
@@ -45,7 +45,7 @@ final class C8969f {
         int i2 = ContentServiceClientExtras.URL_SIZE_LIMIT / i;
         int i3 = 0;
         for (int a : iArr2) {
-            i3 += C9554k0.m29381a(a, i2);
+            i3 += Util.m29381a(a, i2);
         }
         long[] jArr2 = new long[i3];
         int[] iArr3 = new int[i3];

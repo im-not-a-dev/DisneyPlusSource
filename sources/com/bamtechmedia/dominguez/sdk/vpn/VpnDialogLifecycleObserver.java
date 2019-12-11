@@ -17,7 +17,7 @@ import com.uber.autodispose.android.lifecycle.C10541b;
 import kotlin.C12898l;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p277b0.C7231w;
 import p163g.p201e.p203b.p277b0.C7232x;
 import p163g.p201e.p203b.p307o.C7614e;
@@ -56,7 +56,7 @@ public final class VpnDialogLifecycleObserver implements C0710d {
         /* renamed from: a */
         public final void accept(C7142a aVar) {
             VpnDialogLifecycleObserver vpnDialogLifecycleObserver = this.f15789c;
-            C12880j.m40222a((Object) aVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "it");
             vpnDialogLifecycleObserver.m21663a(aVar);
         }
     }
@@ -73,7 +73,7 @@ public final class VpnDialogLifecycleObserver implements C0710d {
 
         /* renamed from: a */
         public final void mo19963a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -102,11 +102,11 @@ public final class VpnDialogLifecycleObserver implements C0710d {
     /* renamed from: b */
     public void mo4127b(C0722m mVar) {
         Flowable a = this.f15788c.mo19964a().mo30071a(C11992a.m38600a());
-        C12880j.m40222a((Object) a, "vpnBlocking.vpnStatusStr…dSchedulers.mainThread())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "vpnBlocking.vpnStatusStr…dSchedulers.mainThread())");
         C10541b a2 = C10541b.m33255a(mVar, C0716a.ON_DESTROY);
-        C12880j.m40222a((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
         Object a3 = a.mo30079a((C11932e<T, ? extends R>) C11793e.m37930a((C11790c0) a2));
-        C12880j.m40222a(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11842x) a3).mo29927a(new C7139a(this), C7140b.f15790c);
     }
 
@@ -135,7 +135,7 @@ public final class VpnDialogLifecycleObserver implements C0710d {
     public final void m21663a(C7142a aVar) {
         if (aVar instanceof C7143a) {
             m21664a((Throwable) ((C7143a) aVar).mo19967a());
-        } else if (C12880j.m40224a((Object) aVar, (Object) C7144b.f15794a)) {
+        } else if (Intrinsics.areEqual((Object) aVar, (Object) C7144b.f15794a)) {
             m21665b();
         } else {
             throw new C12898l();
@@ -146,9 +146,9 @@ public final class VpnDialogLifecycleObserver implements C0710d {
     private final void m21664a(Throwable th) {
         if (m21666d() == null) {
             View inflate = this.f15787V.getLayoutInflater().inflate(C7232x.vpn_blocked_view, (ViewGroup) this.f15787V.findViewById(16908290), true);
-            C12880j.m40222a((Object) inflate, "view");
+            Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "view");
             TextView textView = (TextView) inflate.findViewById(C7231w.vpn_error_message);
-            C12880j.m40222a((Object) textView, "view.vpn_error_message");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "view.vpn_error_message");
             textView.setText(this.f15786U.mo20537a(th));
         }
     }

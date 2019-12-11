@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.components;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -27,7 +27,7 @@ final class JavaAnnotationTargetMapper$mapJavaTargetArguments$1 extends C12881k 
             }
         }
         SimpleType createErrorType = ErrorUtils.createErrorType("Error: AnnotationTarget[]");
-        C12880j.m40222a((Object) createErrorType, "ErrorUtils.createErrorTy…ror: AnnotationTarget[]\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createErrorType, "ErrorUtils.createErrorTy…ror: AnnotationTarget[]\")");
         return createErrorType;
     }
 }

@@ -28,7 +28,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p122j.C4025a;
 import p163g.p509o.p510a.p511l.C11866a;
@@ -80,7 +80,7 @@ public final class C3034c extends C11866a implements C3032a {
                     break;
                 }
                 obj = it.next();
-                if (C12880j.m40224a((Object) ((LegalDocument) obj).getDocumentCode(), (Object) this.f7898c)) {
+                if (Intrinsics.areEqual((Object) ((LegalDocument) obj).getDocumentCode(), (Object) this.f7898c)) {
                     break;
                 }
             }
@@ -88,7 +88,7 @@ public final class C3034c extends C11866a implements C3032a {
             if (legalDocument != null) {
                 str = legalDocument.getTitle();
             }
-            if (C12880j.m40224a((Object) str, (Object) C5880u.m18936a(C2721j0.terms))) {
+            if (Intrinsics.areEqual((Object) str, (Object) C5880u.m18936a(C2721j0.terms))) {
                 C3034c.this.f7894W.mo12143c();
             }
             List<LegalDocument> list = this.f7896U;
@@ -164,30 +164,30 @@ public final class C3034c extends C11866a implements C3032a {
     public void bind(C11867b bVar, int i) {
         View view = bVar.itemView;
         String str = "viewHolder.itemView";
-        C12880j.m40222a((Object) view, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, str);
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "viewHolder.itemView.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "viewHolder.itemView.context");
         String str2 = "viewHolder.legalese_tv";
         if (C5837i.m18843e(context)) {
             TextView textView = (TextView) bVar.mo20994a().findViewById(C2716h0.legalese_tv);
-            C12880j.m40222a((Object) textView, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, str2);
             textView.setText(this.f7892U.getContent().getText());
             return;
         }
         LegalContent content = this.f7892U.getContent();
         TextView textView2 = (TextView) bVar.mo20994a().findViewById(C2716h0.legalese_tv);
-        C12880j.m40222a((Object) textView2, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, str2);
         textView2.setText(content.getText());
         for (LegalLink legalLink : content.getLinks()) {
             Linkify.addLinks((TextView) bVar.mo20994a().findViewById(C2716h0.legalese_tv), Pattern.compile(legalLink.getLabel()), null, null, new C3037c(legalLink));
         }
         TextView textView3 = (TextView) bVar.mo20994a().findViewById(C2716h0.legalese_tv);
-        C12880j.m40222a((Object) textView3, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView3, str2);
         textView3.setTransformationMethod(new C3038d(new C3036b(content, this, bVar), 0, 2, null));
         View view2 = bVar.itemView;
-        C12880j.m40222a((Object) view2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view2, str);
         View view3 = bVar.itemView;
-        C12880j.m40222a((Object) view3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) view3, str);
         view2.setBackground(C4025a.m13798c(view3.getContext(), this.f7895c ? C2714g0.background_legalese_signup : C2711f0.vader_white_10));
     }
 }

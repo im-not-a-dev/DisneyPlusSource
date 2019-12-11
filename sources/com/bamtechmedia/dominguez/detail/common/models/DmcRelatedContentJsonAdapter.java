@@ -5,7 +5,7 @@ import com.bamtechmedia.dominguez.core.content.paging.DefaultPagingMetaData;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -27,16 +27,16 @@ public final class DmcRelatedContentJsonAdapter extends C11725h<DmcRelatedConten
         String str2 = "meta";
         String str3 = "items";
         C11739b a = C11739b.m37729a(str3, str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"i…meta\", \"experimentToken\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"i…meta\", \"experimentToken\")");
         this.options = a;
         C11725h<List<C3632f>> a2 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, C3632f.class), C13188p0.m40531a(), str3);
-        C12880j.m40222a((Object) a2, "moshi.adapter<List<DmcAs…ions.emptySet(), \"items\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<List<DmcAs…ions.emptySet(), \"items\")");
         this.listOfDmcAssetAdapter = a2;
         C11725h<DefaultPagingMetaData> a3 = vVar.mo29869a((Type) DefaultPagingMetaData.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a3, "moshi.adapter<DefaultPag…tions.emptySet(), \"meta\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<DefaultPag…tions.emptySet(), \"meta\")");
         this.defaultPagingMetaDataAdapter = a3;
         C11725h<String> a4 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a4, "moshi.adapter<String?>(S…Set(), \"experimentToken\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<String?>(S…Set(), \"experimentToken\")");
         this.nullableStringAdapter = a4;
     }
 

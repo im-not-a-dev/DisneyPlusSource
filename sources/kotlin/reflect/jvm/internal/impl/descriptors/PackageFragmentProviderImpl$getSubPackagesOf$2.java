@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.descriptors;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
 
@@ -19,6 +19,6 @@ final class PackageFragmentProviderImpl$getSubPackagesOf$2 extends C12881k imple
     }
 
     public final boolean invoke(FqName fqName) {
-        return !fqName.isRoot() && C12880j.m40224a((Object) fqName.parent(), (Object) this.$fqName);
+        return !fqName.isRoot() && Intrinsics.areEqual((Object) fqName.parent(), (Object) this.$fqName);
     }
 }

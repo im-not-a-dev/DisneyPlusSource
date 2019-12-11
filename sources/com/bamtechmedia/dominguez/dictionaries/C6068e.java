@@ -7,7 +7,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11780y;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Consumer;
@@ -46,7 +46,7 @@ public final class C6068e {
                 String a2 = this.f13972c.m19441b(dictionary.mo18327b(), this.f13971U);
                 Map a3 = dictionary.mo18326a();
                 ParameterizedType b = this.f13972c.m19440a();
-                C12880j.m40222a((Object) b, "type");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "type");
                 a.mo17636a(a2, a3, b);
             }
         }
@@ -69,13 +69,13 @@ public final class C6068e {
 
         /* renamed from: a */
         public final void accept(List<Dictionary> list) {
-            C12880j.m40222a((Object) list, "dictionaries");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "dictionaries");
             for (Dictionary dictionary : list) {
                 C5756a a = this.f13974c.f13970b;
                 String a2 = this.f13974c.m19441b(dictionary.mo18327b(), this.f13973U);
                 Map a3 = dictionary.mo18326a();
                 ParameterizedType b = this.f13974c.m19440a();
-                C12880j.m40222a((Object) b, "type");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "type");
                 a.mo17636a(a2, a3, b);
             }
         }
@@ -109,7 +109,7 @@ public final class C6068e {
     public final Map<String, String> mo18346a(String str, String str2) {
         C5756a aVar = this.f13970b;
         ParameterizedType a = m19440a();
-        C12880j.m40222a((Object) a, "type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "type");
         String b = m19441b(str, str2);
         StringBuilder sb = new StringBuilder();
         sb.append("dictionary_fallback_");
@@ -123,14 +123,14 @@ public final class C6068e {
     /* renamed from: a */
     public final Single<List<Dictionary>> mo18345a(List<String> list, String str) {
         Single<List<Dictionary>> a = this.f13969a.mo18357a(list, str).mo30207a((Consumer<? super T>) new C6070b<Object>(this, str));
-        C12880j.m40222a((Object) a, "request.dictionariesOnce…          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "request.dictionariesOnce…          }\n            }");
         return a;
     }
 
     /* renamed from: a */
     public final Single<List<Dictionary>> mo18344a(String str) {
         Single<List<Dictionary>> a = this.f13969a.mo18356a(str).mo30207a((Consumer<? super T>) new C6069a<Object>(this, str));
-        C12880j.m40222a((Object) a, "request.initialDictionar…          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "request.initialDictionar…          }\n            }");
         return a;
     }
 }

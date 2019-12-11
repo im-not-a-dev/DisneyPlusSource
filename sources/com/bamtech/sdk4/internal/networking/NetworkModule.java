@@ -15,7 +15,7 @@ import java.net.Proxy;
 import java.security.KeyStore;
 import javax.net.ssl.X509TrustManager;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14247n;
 import okhttp3.Cache;
 import okhttp3.Interceptor;
@@ -38,7 +38,7 @@ public final class NetworkModule {
         Builder builder = new Builder();
         String str = (String) optional.mo27107c();
         if (str != null) {
-            C12880j.m40222a((Object) str, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, "it");
             builder.mo35818a((Interceptor) new C1692a(str));
         }
         if (proxy != null) {
@@ -53,7 +53,7 @@ public final class NetworkModule {
 
     public final OkHttpClient okHttpClient(Builder builder) {
         OkHttpClient a = builder.mo35820a();
-        C12880j.m40222a((Object) a, "builder.build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "builder.build()");
         return a;
     }
 
@@ -65,7 +65,7 @@ public final class NetworkModule {
         }
         String str = (String) optional2.mo27107c();
         if (str != null) {
-            C12880j.m40222a((Object) str, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) str, "it");
             builder.mo35818a((Interceptor) new C1692a(str));
         }
         if (proxy != null) {

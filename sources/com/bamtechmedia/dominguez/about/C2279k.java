@@ -4,7 +4,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import com.bamtech.sdk4.content.SearchOverrides;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0007\u0018\u0000 \u00142\u00020\u0001:\u0001\u0014B\u0011\b\u0007\u0012\b\b\u0001\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0006\u0010\u0012\u001a\u00020\u0013R(\u0010\u0007\u001a\u0004\u0018\u00010\u00062\b\u0010\u0005\u001a\u0004\u0018\u00010\u00068F@FX\u000e¢\u0006\f\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000bR\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R(\u0010\r\u001a\u0004\u0018\u00010\f2\b\u0010\u0005\u001a\u0004\u0018\u00010\f8F@FX\u000e¢\u0006\f\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011¨\u0006\u0015"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/about/PersistedDebugOverrides;", "", "debugPreferences", "Landroid/content/SharedPreferences;", "(Landroid/content/SharedPreferences;)V", "value", "", "countryCodeOverride", "getCountryCodeOverride", "()Ljava/lang/String;", "setCountryCodeOverride", "(Ljava/lang/String;)V", "Lorg/joda/time/DateTime;", "timeTravelOverride", "getTimeTravelOverride", "()Lorg/joda/time/DateTime;", "setTimeTravelOverride", "(Lorg/joda/time/DateTime;)V", "searchOverrides", "Lcom/bamtech/sdk4/content/SearchOverrides;", "Companion", "about_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -37,7 +37,7 @@ public final class C2279k {
     /* renamed from: a */
     public final void mo11327a(DateTime dateTime) {
         Editor edit = this.f6414a.edit();
-        C12880j.m40222a((Object) edit, "editor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
         String str = "timeTravelDate";
         if (dateTime != null) {
             edit.putLong(str, dateTime.getMillis());
@@ -73,7 +73,7 @@ public final class C2279k {
     /* renamed from: a */
     public final void mo11326a(String str) {
         Editor edit = this.f6414a.edit();
-        C12880j.m40222a((Object) edit, "editor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "editor");
         edit.putString("SearchLocationOverride", str);
         edit.apply();
     }

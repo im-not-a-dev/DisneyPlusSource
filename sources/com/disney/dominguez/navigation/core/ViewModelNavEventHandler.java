@@ -11,9 +11,9 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0006\u0018\u0000 \u001d2\u00020\u00012\u00020\u0002:\u0002\u001d\u001eB!\b\u0000\u0012\b\b\u0002\u0010\u0003\u001a\u00020\u0004\u0012\u000e\b\u0002\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006¢\u0006\u0002\u0010\bJ\u0017\u0010\u0016\u001a\u00020\u00172\f\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\u00190\u0006H\bJ\u0010\u0010\u001a\u001a\u00020\u00172\u0006\u0010\u001b\u001a\u00020\u0010H\u0016J\u0010\u0010\u001c\u001a\u00020\u00172\u0006\u0010\u001b\u001a\u00020\u0010H\u0003R(\u0010\n\u001a\u0004\u0018\u00010\u00022\b\u0010\t\u001a\u0004\u0018\u00010\u0002@GX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u000e¢\u0006\u0002\n\u0000R\u001a\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u00130\u0012X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0014\u0010\u0015¨\u0006\u001f"}, mo31007d2 = {"Lcom/disney/dominguez/navigation/core/ViewModelNavEventHandler;", "Landroidx/lifecycle/ViewModel;", "Lcom/disney/dominguez/navigation/core/NavEventHandler;", "handler", "Landroid/os/Handler;", "isOnMainThread", "Lkotlin/Function0;", "", "(Landroid/os/Handler;Lkotlin/jvm/functions/Function0;)V", "value", "delegate", "getDelegate", "()Lcom/disney/dominguez/navigation/core/NavEventHandler;", "setDelegate", "(Lcom/disney/dominguez/navigation/core/NavEventHandler;)V", "pendingNavEvent", "Lcom/disney/dominguez/navigation/core/NavEventHandler$NavEvent;", "registeredLifecycles", "", "", "getRegisteredLifecycles$core_ui_framework_release", "()Ljava/util/Set;", "logIfEnabled", "", "message", "", "navigate", "navEvent", "navigateOnUI", "Companion", "Observer", "core-ui-framework_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: ViewModelNavEventHandler.kt */
@@ -82,7 +82,7 @@ public final class ViewModelNavEventHandler extends C0741y implements C8436a {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f17972U, (java.lang.Object) r3.f17972U) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f17972U, (java.lang.Object) r3.f17972U) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -94,11 +94,11 @@ public final class ViewModelNavEventHandler extends C0741y implements C8436a {
                 com.disney.dominguez.navigation.core.ViewModelNavEventHandler$Observer r3 = (com.disney.dominguez.navigation.core.ViewModelNavEventHandler.Observer) r3
                 com.disney.dominguez.navigation.core.ViewModelNavEventHandler r0 = r2.f17973c
                 com.disney.dominguez.navigation.core.ViewModelNavEventHandler r1 = r3.f17973c
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 com.disney.dominguez.navigation.core.a r0 = r2.f17972U
                 com.disney.dominguez.navigation.core.a r3 = r3.f17972U
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -150,7 +150,7 @@ public final class ViewModelNavEventHandler extends C0741y implements C8436a {
         }
 
         public final boolean invoke() {
-            return C12880j.m40224a((Object) Looper.getMainLooper(), (Object) Looper.myLooper());
+            return Intrinsics.areEqual((Object) Looper.getMainLooper(), (Object) Looper.myLooper());
         }
     }
 
@@ -214,11 +214,11 @@ public final class ViewModelNavEventHandler extends C0741y implements C8436a {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Navigating: ");
                     sb.append(aVar);
-                    C14100a.m44522a(sb.toString(), new Object[0]);
+                    Timber.m44522a(sb.toString(), new Object[0]);
                 }
                 aVar2.mo21645a(aVar);
             } catch (Exception e) {
-                C14100a.m44528b(e, "Navigation failed, setting pendingNavEvent", new Object[0]);
+                Timber.m44528b(e, "Navigation failed, setting pendingNavEvent", new Object[0]);
                 this.f17967U = aVar;
             }
         } else {

@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p382u0.p390t;
 import android.text.Layout.Alignment;
 import android.text.SpannableStringBuilder;
 import com.google.android.exoplayer2.p382u0.C9322b;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 
 /* renamed from: com.google.android.exoplayer2.u0.t.e */
 /* compiled from: WebvttCue */
@@ -144,7 +144,7 @@ public final class C9382e extends C9322b {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Unrecognized alignment: ");
                     sb.append(this.f21647d);
-                    C9563q.m29500d("WebvttCueBuilder", sb.toString());
+                    Log.m29500d("WebvttCueBuilder", sb.toString());
                     this.f21652i = 0;
                 } else {
                     this.f21652i = 2;

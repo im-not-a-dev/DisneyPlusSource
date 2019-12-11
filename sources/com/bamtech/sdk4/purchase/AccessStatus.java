@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -87,17 +87,17 @@ public final class AccessStatus implements Serializable {
         this.transaction = serviceTransaction;
         if (this.isTemporary) {
             completable = Completable.m38160b((SingleSource<T>) retry());
-            C12880j.m40222a((Object) completable, "Completable.fromSingle<P…ctivationResult>(retry())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) completable, "Completable.fromSingle<P…ctivationResult>(retry())");
         } else {
             completable = Completable.m38169h();
-            C12880j.m40222a((Object) completable, "Completable.complete()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) completable, "Completable.complete()");
         }
         this.hasBecomePermanent = completable;
     }
 
     private final Single<PurchaseActivationResult> retry() {
         Single<PurchaseActivationResult> j = Single.m38396a((Callable<? extends SingleSource<? extends T>>) new AccessStatus$retry$1<Object>(this)).mo30238j(new AccessStatus$retry$2(this));
-        C12880j.m40222a((Object) j, "Single.defer {\n         …      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "Single.defer {\n         …      }\n                }");
         return j;
     }
 

@@ -12,14 +12,14 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.Observable;
 import p520io.reactivex.ObservableSource;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.subjects.PublishSubject;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u001e\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \"2\u00020\u0001:\u0001\"B\u000f\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0014\u0010\u0011\u001a\u00020\u00122\f\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\u00150\u0014J\u0010\u0010\u0016\u001a\u00020\t2\u0006\u0010\u0017\u001a\u00020\u0018H\u0007J\u0006\u0010\u0019\u001a\u00020\u0012J\u000e\u0010\u001a\u001a\u00020\u00122\u0006\u0010\u001b\u001a\u00020\u000eJ\f\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\t0\u001dJ\u0006\u0010\u001e\u001a\u00020\u0012J\u0006\u0010\u001f\u001a\u00020\u0012J\u0016\u0010 \u001a\b\u0012\u0004\u0012\u00020\t0!2\u0006\u0010\u0017\u001a\u00020\u0018H\u0002R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006R\u0017\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\b¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000bR\u0017\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000e0\r¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010¨\u0006#"}, mo31007d2 = {"Lcom/bamtech/player/bif/BifBitmapManager;", "", "bifs", "Lcom/bamtech/player/bif/BifEntryList;", "(Lcom/bamtech/player/bif/BifEntryList;)V", "getBifs", "()Lcom/bamtech/player/bif/BifEntryList;", "bitmapQueue", "Ljava/util/Queue;", "Landroid/graphics/Bitmap;", "getBitmapQueue", "()Ljava/util/Queue;", "timestampSubject", "Lio/reactivex/subjects/PublishSubject;", "", "getTimestampSubject", "()Lio/reactivex/subjects/PublishSubject;", "addAll", "", "elements", "", "Lcom/bamtech/player/bif/BifEntry;", "bitmapAtIndex", "index", "", "clear", "loadBitmap", "timestampMs", "onBitmap", "Lio/reactivex/Observable;", "onStart", "onStop", "singleBitmapAtIndex", "Lio/reactivex/Single;", "Companion", "bamplayer-core_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.d.b.a0.a */
@@ -138,7 +138,7 @@ public final class C4817a {
 
         /* renamed from: a */
         public final void mo16216a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -146,7 +146,7 @@ public final class C4817a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -182,7 +182,7 @@ public final class C4817a {
     public C4817a(C4826d dVar) {
         this.f11970c = dVar;
         PublishSubject<Long> q = PublishSubject.m38553q();
-        C12880j.m40222a((Object) q, "PublishSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) q, "PublishSubject.create()");
         this.f11968a = q;
         this.f11969b = new LinkedBlockingQueue(10);
     }
@@ -195,7 +195,7 @@ public final class C4817a {
     /* renamed from: c */
     public final Observable<Bitmap> mo16208c() {
         Observable<Bitmap> j = this.f11968a.mo30193g(new C4819b(this)).mo30199j(new C4820c(this));
-        C12880j.m40222a((Object) j, "timestampSubject\n       …vable()\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "timestampSubject\n       …vable()\n                }");
         return j;
     }
 
@@ -235,7 +235,7 @@ public final class C4817a {
             g.d.b.a0.a$f r0 = p163g.p174d.p178b.p179a0.C4817a.C4823f.f11976c
             io.reactivex.Single r3 = r3.mo30237i(r0)
             java.lang.String r0 = "Single\n                .…rorReturn { errorBitmap }"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r0)
             return r3
         */
         throw new UnsupportedOperationException("Method not decompiled: p163g.p174d.p178b.p179a0.C4817a.m16758b(int):io.reactivex.Single");
@@ -246,7 +246,7 @@ public final class C4817a {
         String str = "emptyBitmap";
         if (i == -1) {
             Bitmap bitmap = f11966e;
-            C12880j.m40222a((Object) bitmap, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) bitmap, str);
             return bitmap;
         }
         byte[] c = ((C4825c) this.f11970c.mo16232c().get(i)).mo16224c();
@@ -262,7 +262,7 @@ public final class C4817a {
                 this.f11969b.offer(bitmap2);
             }
             Bitmap bitmap3 = f11966e;
-            C12880j.m40222a((Object) bitmap3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) bitmap3, str);
             return bitmap3;
         }
         this.f11969b.offer(decodeByteArray);

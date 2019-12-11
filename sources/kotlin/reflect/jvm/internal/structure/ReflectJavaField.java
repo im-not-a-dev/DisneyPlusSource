@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.structure;
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaField;
 import kotlin.reflect.jvm.internal.structure.ReflectJavaType.Factory;
 
@@ -31,7 +31,7 @@ public final class ReflectJavaField extends ReflectJavaMember implements JavaFie
     public ReflectJavaType getType() {
         Factory factory = ReflectJavaType.Factory;
         Type genericType = getMember().getGenericType();
-        C12880j.m40222a((Object) genericType, "member.genericType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) genericType, "member.genericType");
         return factory.create(genericType);
     }
 }

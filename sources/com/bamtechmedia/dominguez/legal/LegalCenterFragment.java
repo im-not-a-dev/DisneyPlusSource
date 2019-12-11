@@ -28,7 +28,7 @@ import java.util.List;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -113,7 +113,7 @@ public final class LegalCenterFragment extends C11888g {
         if (cVar != null) {
             return cVar;
         }
-        C12880j.m40227c("adapter");
+        Intrinsics.throwUninitializedPropertyAccessException("adapter");
         throw null;
     }
 
@@ -126,7 +126,7 @@ public final class LegalCenterFragment extends C11888g {
         if (legalCenterItemsFactory != null) {
             return legalCenterItemsFactory;
         }
-        C12880j.m40227c("itemsFactory");
+        Intrinsics.throwUninitializedPropertyAccessException("itemsFactory");
         throw null;
     }
 
@@ -152,7 +152,7 @@ public final class LegalCenterFragment extends C11888g {
         if (legalCenterViewModel != null) {
             return legalCenterViewModel;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -187,7 +187,7 @@ public final class LegalCenterFragment extends C11888g {
                     View view = getView();
                     if (view != null) {
                         Context requireContext = requireContext();
-                        C12880j.m40222a((Object) requireContext, "requireContext()");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
                         view.postDelayed(new LegalCenterFragment$onStart$$inlined$postDelayed$1(this), C5837i.m18843e(requireContext) ? 0 : 200);
                         return;
                     }
@@ -195,10 +195,10 @@ public final class LegalCenterFragment extends C11888g {
                 }
                 return;
             }
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
-        C12880j.m40227c(str);
+        Intrinsics.throwUninitializedPropertyAccessException(str);
         throw null;
     }
 
@@ -214,15 +214,15 @@ public final class LegalCenterFragment extends C11888g {
             if (window != null) {
                 Context context = view.getContext();
                 String str = "view.context";
-                C12880j.m40222a((Object) context, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) context, str);
                 window.setBackgroundDrawableResource(C5837i.m18839b(context, C6117R.attr.themeBackgroundColor, null, false, 6, null));
                 Context context2 = view.getContext();
-                C12880j.m40222a((Object) context2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) context2, str);
                 window.setNavigationBarColor(C5837i.m18835a(context2, C6117R.attr.navBarBackground, null, false, 6, null));
             }
         }
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C6117R.C6119id.recycler_view);
-        C12880j.m40222a((Object) recyclerView, "recycler_view");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "recycler_view");
         C11848c<C11863k> cVar = this.adapter;
         if (cVar != null) {
             RecyclerViewExtKt.m18800a(this, recyclerView, cVar);
@@ -231,7 +231,7 @@ public final class LegalCenterFragment extends C11888g {
                 findViewById2.setOnClickListener(new LegalCenterFragment$onViewCreated$2(this));
             }
             Context requireContext = requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             if (C5837i.m18843e(requireContext)) {
                 ScrollView scrollView = (ScrollView) _$_findCachedViewById(C6117R.C6119id.legalScrollView);
                 if (scrollView != null) {
@@ -251,7 +251,7 @@ public final class LegalCenterFragment extends C11888g {
             }
             return;
         }
-        C12880j.m40227c("adapter");
+        Intrinsics.throwUninitializedPropertyAccessException("adapter");
         throw null;
     }
 

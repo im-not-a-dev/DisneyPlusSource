@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.metadata.p359j;
 
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.metadata.j.f */
 /* compiled from: CommentFrame */
@@ -49,7 +49,7 @@ public final class C8766f extends C8773i {
             return false;
         }
         C8766f fVar = (C8766f) obj;
-        if (!C9554k0.m29414a((Object) this.f18615V, (Object) fVar.f18615V) || !C9554k0.m29414a((Object) this.f18614U, (Object) fVar.f18614U) || !C9554k0.m29414a((Object) this.f18616W, (Object) fVar.f18616W)) {
+        if (!Util.m29414a((Object) this.f18615V, (Object) fVar.f18615V) || !Util.m29414a((Object) this.f18614U, (Object) fVar.f18614U) || !Util.m29414a((Object) this.f18616W, (Object) fVar.f18616W)) {
             z = false;
         }
         return z;
@@ -87,13 +87,13 @@ public final class C8766f extends C8773i {
     C8766f(Parcel parcel) {
         super("COMM");
         String readString = parcel.readString();
-        C9554k0.m29394a(readString);
+        Util.castNonNull(readString);
         this.f18614U = readString;
         String readString2 = parcel.readString();
-        C9554k0.m29394a(readString2);
+        Util.castNonNull(readString2);
         this.f18615V = readString2;
         String readString3 = parcel.readString();
-        C9554k0.m29394a(readString3);
+        Util.castNonNull(readString3);
         this.f18616W = readString3;
     }
 }

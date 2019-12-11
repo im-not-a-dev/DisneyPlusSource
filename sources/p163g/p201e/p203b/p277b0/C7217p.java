@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -110,7 +110,7 @@ public final class C7217p implements MediaApi {
     /* renamed from: a */
     public final <T> Single<T> mo20048a(Function1<? super MediaApi, ? extends Single<? extends T>> function1) {
         Single<T> a = this.f15940a.mo20041e().mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C7221d<Object,Object>(function1));
-        C12880j.m40222a((Object) a, "sessionProvider.sessionO…ock.invoke(it.mediaApi) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "sessionProvider.sessionO…ock.invoke(it.mediaApi) }");
         return a;
     }
 

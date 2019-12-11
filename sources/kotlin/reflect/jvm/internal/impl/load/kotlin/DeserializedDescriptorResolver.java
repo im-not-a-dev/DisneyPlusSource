@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.load.kotlin;
 
 import java.util.Set;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.header.KotlinClassHeader;
@@ -57,25 +57,25 @@ public final class DeserializedDescriptorResolver {
         if (deserializationComponents != null) {
             return deserializationComponents.getConfiguration().getSkipMetadataVersionCheck();
         }
-        C12880j.m40227c("components");
+        Intrinsics.throwUninitializedPropertyAccessException("components");
         throw null;
     }
 
     private final boolean isCompiledWith13M1(KotlinJvmBinaryClass kotlinJvmBinaryClass) {
         DeserializationComponents deserializationComponents = this.components;
         if (deserializationComponents != null) {
-            return !deserializationComponents.getConfiguration().getSkipMetadataVersionCheck() && kotlinJvmBinaryClass.getClassHeader().isPreRelease() && C12880j.m40224a((Object) kotlinJvmBinaryClass.getClassHeader().getMetadataVersion(), (Object) KOTLIN_1_3_M1_METADATA_VERSION);
+            return !deserializationComponents.getConfiguration().getSkipMetadataVersionCheck() && kotlinJvmBinaryClass.getClassHeader().isPreRelease() && Intrinsics.areEqual((Object) kotlinJvmBinaryClass.getClassHeader().getMetadataVersion(), (Object) KOTLIN_1_3_M1_METADATA_VERSION);
         }
-        C12880j.m40227c("components");
+        Intrinsics.throwUninitializedPropertyAccessException("components");
         throw null;
     }
 
     private final boolean isPreReleaseInvisible(KotlinJvmBinaryClass kotlinJvmBinaryClass) {
         DeserializationComponents deserializationComponents = this.components;
         if (deserializationComponents != null) {
-            return (deserializationComponents.getConfiguration().getReportErrorsOnPreReleaseDependencies() && (kotlinJvmBinaryClass.getClassHeader().isPreRelease() || C12880j.m40224a((Object) kotlinJvmBinaryClass.getClassHeader().getMetadataVersion(), (Object) KOTLIN_1_1_EAP_METADATA_VERSION))) || isCompiledWith13M1(kotlinJvmBinaryClass);
+            return (deserializationComponents.getConfiguration().getReportErrorsOnPreReleaseDependencies() && (kotlinJvmBinaryClass.getClassHeader().isPreRelease() || Intrinsics.areEqual((Object) kotlinJvmBinaryClass.getClassHeader().getMetadataVersion(), (Object) KOTLIN_1_1_EAP_METADATA_VERSION))) || isCompiledWith13M1(kotlinJvmBinaryClass);
         }
-        C12880j.m40227c("components");
+        Intrinsics.throwUninitializedPropertyAccessException("components");
         throw null;
     }
 
@@ -122,7 +122,7 @@ public final class DeserializedDescriptorResolver {
                     DeserializedPackageMemberScope deserializedPackageMemberScope = new DeserializedPackageMemberScope(packageFragmentDescriptor, packageR, jvmNameResolver, metadataVersion, jvmPackagePartSource, deserializationComponents, DeserializedDescriptorResolver$createKotlinPackagePartScope$2.INSTANCE);
                     return deserializedPackageMemberScope;
                 }
-                C12880j.m40227c("components");
+                Intrinsics.throwUninitializedPropertyAccessException("components");
                 throw null;
             }
         }
@@ -134,7 +134,7 @@ public final class DeserializedDescriptorResolver {
         if (deserializationComponents != null) {
             return deserializationComponents;
         }
-        C12880j.m40227c("components");
+        Intrinsics.throwUninitializedPropertyAccessException("components");
         throw null;
     }
 
@@ -175,7 +175,7 @@ public final class DeserializedDescriptorResolver {
         if (deserializationComponents != null) {
             return deserializationComponents.getClassDeserializer().deserializeClass(kotlinJvmBinaryClass.getClassId(), readClassData$descriptors_jvm);
         }
-        C12880j.m40227c("components");
+        Intrinsics.throwUninitializedPropertyAccessException("components");
         throw null;
     }
 

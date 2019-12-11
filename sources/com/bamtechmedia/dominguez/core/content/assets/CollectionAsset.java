@@ -7,7 +7,7 @@ import com.bamtechmedia.dominguez.core.content.collections.C3680n;
 import com.bamtechmedia.dominguez.core.content.collections.CollectionSlug;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11733i;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\b\b\u0018\u00002\u00020\u00012\u00020\u0002:\u0001,B=\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0004\u0012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006\u0012\u000e\u0010\b\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010\u0006\u0012\u000e\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\u0006¢\u0006\u0002\u0010\fJ\u000b\u0010\u001e\u001a\u0004\u0018\u00010\u0004HÆ\u0003J\u0014\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006HÀ\u0003¢\u0006\u0002\b J\u0011\u0010!\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010\u0006HÆ\u0003J\u0011\u0010\"\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\u0006HÆ\u0003JI\u0010#\u001a\u00020\u00002\n\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u00042\u000e\b\u0002\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u00062\u0010\b\u0002\u0010\b\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010\u00062\u0010\b\u0002\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\u0006HÆ\u0001J\u0013\u0010$\u001a\u00020%2\b\u0010&\u001a\u0004\u0018\u00010'HÖ\u0003J\t\u0010(\u001a\u00020)HÖ\u0001J\u0010\u0010*\u001a\u00020%2\u0006\u0010&\u001a\u00020\u0001H\u0016J\t\u0010+\u001a\u00020\u0010HÖ\u0001R\u0013\u0010\u0003\u001a\u0004\u0018\u00010\u0004¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u0013\u0010\u000f\u001a\u0004\u0018\u00010\u00108F¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0012R\u0013\u0010\u0013\u001a\u0004\u0018\u00010\u00108F¢\u0006\u0006\u001a\u0004\b\u0014\u0010\u0012R\u001c\u0010\b\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010\u0006X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0016R\u0017\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u00180\u00068F¢\u0006\u0006\u001a\u0004\b\u0019\u0010\u0016R\u001a\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u001a\u0010\u0016R\u0014\u0010\u001b\u001a\u00020\u00108VX\u0004¢\u0006\u0006\u001a\u0004\b\u001c\u0010\u0012R\u001c\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\u0006X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u001d\u0010\u0016¨\u0006-"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/content/assets/CollectionAsset;", "Lcom/bamtechmedia/dominguez/core/content/assets/Asset;", "Lcom/bamtechmedia/dominguez/core/content/VideoArtAsset;", "collectionGroup", "Lcom/bamtechmedia/dominguez/core/content/assets/CollectionAsset$CollectionGroup;", "texts", "", "Lcom/bamtechmedia/dominguez/core/content/assets/TextEntry;", "images", "Lcom/bamtechmedia/dominguez/core/content/assets/Image;", "videoArt", "Lcom/bamtechmedia/dominguez/core/content/collections/VideoArt;", "(Lcom/bamtechmedia/dominguez/core/content/assets/CollectionAsset$CollectionGroup;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V", "getCollectionGroup", "()Lcom/bamtechmedia/dominguez/core/content/assets/CollectionAsset$CollectionGroup;", "collectionKey", "", "getCollectionKey", "()Ljava/lang/String;", "contentClass", "getContentClass", "getImages", "()Ljava/util/List;", "slugs", "Lcom/bamtechmedia/dominguez/core/content/collections/CollectionSlug;", "getSlugs", "getTexts$coreContentApi_release", "title", "getTitle", "getVideoArt", "component1", "component2", "component2$coreContentApi_release", "component3", "component4", "copy", "equals", "", "other", "", "hashCode", "", "isSameAs", "toString", "CollectionGroup", "coreContentApi_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -63,7 +63,7 @@ public final class CollectionAsset implements C3626b, C3793w {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8949c, (java.lang.Object) r3.f8949c) != false) goto L_0x0029;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8949c, (java.lang.Object) r3.f8949c) != false) goto L_0x0029;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -75,15 +75,15 @@ public final class CollectionAsset implements C3626b, C3793w {
                 com.bamtechmedia.dominguez.core.content.assets.CollectionAsset$CollectionGroup r3 = (com.bamtechmedia.dominguez.core.content.assets.CollectionAsset.CollectionGroup) r3
                 java.lang.String r0 = r2.f8947a
                 java.lang.String r1 = r3.f8947a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 java.lang.String r0 = r2.f8948b
                 java.lang.String r1 = r3.f8948b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 java.util.List<com.bamtechmedia.dominguez.core.content.collections.CollectionSlug> r0 = r2.f8949c
                 java.util.List<com.bamtechmedia.dominguez.core.content.collections.CollectionSlug> r3 = r3.f8949c
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0027
                 goto L_0x0029
             L_0x0027:
@@ -180,7 +180,7 @@ public final class CollectionAsset implements C3626b, C3793w {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x0036, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) mo12839H(), (java.lang.Object) r3.mo12839H()) != false) goto L_0x003b;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) mo12839H(), (java.lang.Object) r3.mo12839H()) != false) goto L_0x003b;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -192,19 +192,19 @@ public final class CollectionAsset implements C3626b, C3793w {
             com.bamtechmedia.dominguez.core.content.assets.CollectionAsset r3 = (com.bamtechmedia.dominguez.core.content.assets.CollectionAsset) r3
             com.bamtechmedia.dominguez.core.content.assets.CollectionAsset$CollectionGroup r0 = r2.f8946c
             com.bamtechmedia.dominguez.core.content.assets.CollectionAsset$CollectionGroup r1 = r3.f8946c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0039
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r0 = r2.f8943U
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r1 = r3.f8943U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0039
             java.util.List r0 = r2.mo12847a()
             java.util.List r1 = r3.mo12847a()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0039
             java.util.List r0 = r2.mo12839H()
             java.util.List r3 = r3.mo12839H()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0039
             goto L_0x003b
         L_0x0039:
@@ -262,6 +262,6 @@ public final class CollectionAsset implements C3626b, C3793w {
 
     /* renamed from: a */
     public boolean mo12848a(C3626b bVar) {
-        return (bVar instanceof CollectionAsset) && C12880j.m40224a((Object) ((CollectionAsset) bVar).mo12841O(), (Object) mo12841O());
+        return (bVar instanceof CollectionAsset) && Intrinsics.areEqual((Object) ((CollectionAsset) bVar).mo12841O(), (Object) mo12841O());
     }
 }

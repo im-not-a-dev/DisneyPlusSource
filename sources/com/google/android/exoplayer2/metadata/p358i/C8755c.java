@@ -5,7 +5,7 @@ import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.C8738a;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.metadata.i.c */
 /* compiled from: IcyInfo */
@@ -61,7 +61,7 @@ public final class C8755c implements C8737b {
             return false;
         }
         C8755c cVar = (C8755c) obj;
-        if (!C9554k0.m29414a((Object) this.f18596c, (Object) cVar.f18596c) || !C9554k0.m29414a((Object) this.f18595U, (Object) cVar.f18595U)) {
+        if (!Util.m29414a((Object) this.f18596c, (Object) cVar.f18596c) || !Util.m29414a((Object) this.f18595U, (Object) cVar.f18595U)) {
             z = false;
         }
         return z;

@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.types;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.components.TypeUsage;
 
@@ -42,8 +42,8 @@ public final class JavaTypeAttributes {
         if (this != obj) {
             if (obj instanceof JavaTypeAttributes) {
                 JavaTypeAttributes javaTypeAttributes = (JavaTypeAttributes) obj;
-                if (C12880j.m40224a((Object) this.howThisTypeIsUsed, (Object) javaTypeAttributes.howThisTypeIsUsed) && C12880j.m40224a((Object) this.flexibility, (Object) javaTypeAttributes.flexibility)) {
-                    if (!(this.isForAnnotationParameter == javaTypeAttributes.isForAnnotationParameter) || !C12880j.m40224a((Object) this.upperBoundOfTypeParameter, (Object) javaTypeAttributes.upperBoundOfTypeParameter)) {
+                if (Intrinsics.areEqual((Object) this.howThisTypeIsUsed, (Object) javaTypeAttributes.howThisTypeIsUsed) && Intrinsics.areEqual((Object) this.flexibility, (Object) javaTypeAttributes.flexibility)) {
+                    if (!(this.isForAnnotationParameter == javaTypeAttributes.isForAnnotationParameter) || !Intrinsics.areEqual((Object) this.upperBoundOfTypeParameter, (Object) javaTypeAttributes.upperBoundOfTypeParameter)) {
                         return false;
                     }
                 }

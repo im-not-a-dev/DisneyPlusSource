@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
 import kotlin.C12898l;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -39,7 +39,7 @@ public final class KClassValue extends ConstantValue<Value> {
             int i = 0;
             while (KotlinBuiltIns.isArray(kotlinType2)) {
                 kotlinType2 = ((TypeProjection) C13199w.m40599k(kotlinType2.getArguments())).getType();
-                C12880j.m40222a((Object) kotlinType2, "type.arguments.single().type");
+                Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType2, "type.arguments.single().type");
                 i++;
             }
             ClassifierDescriptor declarationDescriptor = kotlinType2.getConstructor().getDeclarationDescriptor();
@@ -51,7 +51,7 @@ public final class KClassValue extends ConstantValue<Value> {
                 kClassValue = new KClassValue(classId, i);
             } else if (declarationDescriptor instanceof TypeParameterDescriptor) {
                 ClassId classId2 = ClassId.topLevel(KotlinBuiltIns.FQ_NAMES.any.toSafe());
-                C12880j.m40222a((Object) classId2, "ClassId.topLevel(KotlinB…ns.FQ_NAMES.any.toSafe())");
+                Intrinsics.checkReturnedValueIsNotNull((Object) classId2, "ClassId.topLevel(KotlinB…ns.FQ_NAMES.any.toSafe())");
                 kClassValue = new KClassValue(classId2, 0);
             }
             return kClassValue;
@@ -75,7 +75,7 @@ public final class KClassValue extends ConstantValue<Value> {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.type, (java.lang.Object) ((kotlin.reflect.jvm.internal.impl.resolve.constants.KClassValue.Value.LocalClass) r2).type) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.type, (java.lang.Object) ((kotlin.reflect.jvm.internal.impl.resolve.constants.KClassValue.Value.LocalClass) r2).type) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -87,7 +87,7 @@ public final class KClassValue extends ConstantValue<Value> {
                     kotlin.reflect.jvm.internal.impl.resolve.constants.KClassValue$Value$LocalClass r2 = (kotlin.reflect.jvm.internal.impl.resolve.constants.KClassValue.Value.LocalClass) r2
                     kotlin.reflect.jvm.internal.impl.types.KotlinType r0 = r1.type
                     kotlin.reflect.jvm.internal.impl.types.KotlinType r2 = r2.type
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -131,7 +131,7 @@ public final class KClassValue extends ConstantValue<Value> {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.value, (java.lang.Object) ((kotlin.reflect.jvm.internal.impl.resolve.constants.KClassValue.Value.NormalClass) r2).value) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.value, (java.lang.Object) ((kotlin.reflect.jvm.internal.impl.resolve.constants.KClassValue.Value.NormalClass) r2).value) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -143,7 +143,7 @@ public final class KClassValue extends ConstantValue<Value> {
                     kotlin.reflect.jvm.internal.impl.resolve.constants.KClassValue$Value$NormalClass r2 = (kotlin.reflect.jvm.internal.impl.resolve.constants.KClassValue.Value.NormalClass) r2
                     kotlin.reflect.jvm.internal.impl.resolve.constants.ClassLiteralValue r0 = r1.value
                     kotlin.reflect.jvm.internal.impl.resolve.constants.ClassLiteralValue r2 = r2.value
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -209,11 +209,11 @@ public final class KClassValue extends ConstantValue<Value> {
             ClassDescriptor findClassAcrossModuleDependencies = FindClassInModuleKt.findClassAcrossModuleDependencies(moduleDescriptor, component1);
             if (findClassAcrossModuleDependencies != null) {
                 SimpleType defaultType = findClassAcrossModuleDependencies.getDefaultType();
-                C12880j.m40222a((Object) defaultType, "descriptor.defaultType");
+                Intrinsics.checkReturnedValueIsNotNull((Object) defaultType, "descriptor.defaultType");
                 KotlinType replaceArgumentsWithStarProjections = TypeUtilsKt.replaceArgumentsWithStarProjections(defaultType);
                 for (int i = 0; i < component2; i++) {
                     replaceArgumentsWithStarProjections = moduleDescriptor.getBuiltIns().getArrayType(Variance.INVARIANT, replaceArgumentsWithStarProjections);
-                    C12880j.m40222a((Object) replaceArgumentsWithStarProjections, "module.builtIns.getArray…Variance.INVARIANT, type)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) replaceArgumentsWithStarProjections, "module.builtIns.getArray…Variance.INVARIANT, type)");
                 }
                 return replaceArgumentsWithStarProjections;
             }
@@ -224,7 +224,7 @@ public final class KClassValue extends ConstantValue<Value> {
             sb.append(component2);
             sb.append(')');
             SimpleType createErrorType = ErrorUtils.createErrorType(sb.toString());
-            C12880j.m40222a((Object) createErrorType, "ErrorUtils.createErrorTy…sions=$arrayDimensions)\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createErrorType, "ErrorUtils.createErrorTy…sions=$arrayDimensions)\")");
             return createErrorType;
         }
         throw new C12898l();
@@ -233,7 +233,7 @@ public final class KClassValue extends ConstantValue<Value> {
     public KotlinType getType(ModuleDescriptor moduleDescriptor) {
         Annotations empty = Annotations.Companion.getEMPTY();
         ClassDescriptor kClass = moduleDescriptor.getBuiltIns().getKClass();
-        C12880j.m40222a((Object) kClass, "module.builtIns.kClass");
+        Intrinsics.checkReturnedValueIsNotNull((Object) kClass, "module.builtIns.kClass");
         return KotlinTypeFactory.simpleNotNullType(empty, kClass, C13183n.m40498a(new TypeProjectionImpl(getArgumentType(moduleDescriptor))));
     }
 

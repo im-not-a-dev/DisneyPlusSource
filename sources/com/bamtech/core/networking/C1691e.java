@@ -5,7 +5,7 @@ import com.bamtech.core.networking.handlers.ResponseTransformer;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14256t;
 import okhttp3.C14258u;
 import okhttp3.C14262x;
@@ -39,7 +39,7 @@ public final class C1691e {
             java.nio.charset.Charset r1 = kotlin.p588j0.C12801c.f29474a
             byte[] r5 = r5.getBytes(r1)
             java.lang.String r1 = "(this as java.lang.String).getBytes(charset)"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r1)
             okhttp3.x r5 = okhttp3.C14262x.m45502a(r0, r5)
             if (r5 == 0) goto L_0x0029
             goto L_0x0031
@@ -50,7 +50,7 @@ public final class C1691e {
             okhttp3.x r5 = okhttp3.C14262x.m45502a(r5, r0)
         L_0x0031:
             java.lang.String r0 = "requestBody"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r0)
             com.bamtech.core.networking.Request r2 = m7797a(r2, r3, r4, r5, (EXTRA) r6)
             return r2
         */
@@ -64,7 +64,7 @@ public final class C1691e {
         }
         if ((i & 4) != 0) {
             xVar = C14262x.m45502a((C14258u) null, new byte[0]);
-            C12880j.m40222a((Object) xVar, "OkRequestBody.create(null, byteArrayOf())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) xVar, "OkRequestBody.create(null, byteArrayOf())");
         }
         if ((i & 8) != 0) {
             obj = null;
@@ -90,7 +90,7 @@ public final class C1691e {
                 String method = link.getMethod();
                 if (method != null) {
                     String upperCase = method.toUpperCase();
-                    C12880j.m40222a((Object) upperCase, "(this as java.lang.String).toUpperCase()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) upperCase, "(this as java.lang.String).toUpperCase()");
                     switch (upperCase.hashCode()) {
                         case 70454:
                             if (upperCase.equals("GET")) {
@@ -129,7 +129,7 @@ public final class C1691e {
                             }
                             break;
                     }
-                    C12880j.m40222a((Object) aVar, "builder");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "builder");
                     Request request = new Request(okHttpClient, aVar, responseTransformer, link.getTimeout(), TimeUnit.SECONDS, extra);
                     return request;
                 }
@@ -143,11 +143,11 @@ public final class C1691e {
     public static final <OUT, EXTRA> Call m7799a(Request<? extends OUT, ? extends EXTRA> request) {
         if (request.mo7481d() > 0) {
             Call a = request.mo7479b().mo35803q().mo35813a(request.mo7481d(), request.mo7482e()).mo35820a().mo35727a(request.mo7478a().mo35846a());
-            C12880j.m40222a((Object) a, "client.newBuilder()\n    ….newCall(builder.build())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "client.newBuilder()\n    ….newCall(builder.build())");
             return a;
         }
         Call a2 = request.mo7479b().mo35727a(request.mo7478a().mo35846a());
-        C12880j.m40222a((Object) a2, "client.newCall(builder.build())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "client.newCall(builder.build())");
         return a2;
     }
 }

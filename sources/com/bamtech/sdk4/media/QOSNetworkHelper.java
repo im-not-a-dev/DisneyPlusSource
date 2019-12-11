@@ -13,7 +13,7 @@ import java.net.UnknownHostException;
 import kotlin.C12898l;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0000\u0018\u00002\u00020\u0001B\u0011\b\u0007\u0012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003¢\u0006\u0002\u0010\u0004J\b\u0010\u0007\u001a\u00020\bH\u0007J\u0006\u0010\t\u001a\u00020\nJ\b\u0010\u000b\u001a\u00020\nH\u0003J\u0012\u0010\f\u001a\u0004\u0018\u00010\r2\b\u0010\u000e\u001a\u0004\u0018\u00010\u000fR\u0013\u0010\u0002\u001a\u0004\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0010"}, mo31007d2 = {"Lcom/bamtech/sdk4/media/QOSNetworkHelper;", "Lcom/bamtech/sdk4/plugin/Extension;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "getContext", "()Landroid/content/Context;", "connectionStatus", "Lcom/bamtech/sdk4/media/ConnectionStatus;", "currentNetworkType", "Lcom/bamtech/sdk4/media/NetworkType;", "getMobileNetworkType", "translateLicenseError", "Lcom/bamtech/sdk4/media/NetworkError;", "error", "", "extension-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: QOSNetworkHelper.kt */
@@ -62,10 +62,10 @@ public final class QOSNetworkHelper implements Extension {
                 if (bool == null) {
                     return ConnectionStatus.disconnected;
                 }
-                if (C12880j.m40224a((Object) bool, (Object) Boolean.valueOf(false))) {
+                if (Intrinsics.areEqual((Object) bool, (Object) Boolean.valueOf(false))) {
                     return ConnectionStatus.disconnected;
                 }
-                if (C12880j.m40224a((Object) bool, (Object) Boolean.valueOf(true))) {
+                if (Intrinsics.areEqual((Object) bool, (Object) Boolean.valueOf(true))) {
                     return ConnectionStatus.connected;
                 }
                 throw new C12898l();

@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p382u0.p388r;
 
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9325e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -36,7 +36,7 @@ final class C9375f implements C9325e {
 
     /* renamed from: a */
     public int mo24145a(long j) {
-        int a = C9554k0.m29386a(this.f21600U, j, false, false);
+        int a = Util.m29386a(this.f21600U, j, false, false);
         if (a < this.f21600U.length) {
             return a;
         }

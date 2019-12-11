@@ -1,6 +1,6 @@
 package com.bamtechmedia.dominguez.main.p235x;
 
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtechmedia.dominguez.main.x.a */
 /* compiled from: AccountStateHolderExt.kt */
@@ -18,6 +18,6 @@ public final class C6216a {
         sb.append("' to '");
         sb.append(dVar);
         sb.append("' since it is not allowed");
-        C14100a.m44522a(sb.toString(), new Object[0]);
+        Timber.m44522a(sb.toString(), new Object[0]);
     }
 }

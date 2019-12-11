@@ -190,7 +190,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
                 }
                 long j4 = j2;
                 long j5 = j - j4;
-                long a = j5 - C8883r.m25967a(this.f20958e0);
+                long a = j5 - C8883r.msToUs(this.f20958e0);
                 if (a < 5000000) {
                     a = Math.min(5000000, j5 / 2);
                 }

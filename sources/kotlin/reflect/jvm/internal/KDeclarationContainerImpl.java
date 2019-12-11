@@ -10,7 +10,7 @@ import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12866d;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -73,7 +73,7 @@ public abstract class KDeclarationContainerImpl implements C12866d {
 
         public final boolean accept(CallableMemberDescriptor callableMemberDescriptor) {
             Kind kind = callableMemberDescriptor.getKind();
-            C12880j.m40222a((Object) kind, "member.kind");
+            Intrinsics.checkReturnedValueIsNotNull((Object) kind, "member.kind");
             return kind.isReal() == (this == DECLARED);
         }
     }
@@ -84,11 +84,11 @@ public abstract class KDeclarationContainerImpl implements C12866d {
         int size = ((loadParameterTypes.size() + 32) - 1) / 32;
         for (int i = 0; i < size; i++) {
             Class cls = Integer.TYPE;
-            C12880j.m40222a((Object) cls, "Integer.TYPE");
+            Intrinsics.checkReturnedValueIsNotNull((Object) cls, "Integer.TYPE");
             list.add(cls);
         }
         Object obj = z ? DEFAULT_CONSTRUCTOR_MARKER : Object.class;
-        C12880j.m40222a(obj, "if (isConstructor) DEFAU…RKER else Any::class.java");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "if (isConstructor) DEFAU…RKER else Any::class.java");
         list.add(obj);
     }
 
@@ -170,7 +170,7 @@ public abstract class KDeclarationContainerImpl implements C12866d {
             }
         }
         for (Class cls3 : cls.getInterfaces()) {
-            C12880j.m40222a((Object) cls3, "superInterface");
+            Intrinsics.checkReturnedValueIsNotNull((Object) cls3, "superInterface");
             Method lookupMethod2 = lookupMethod(cls3, str, clsArr, cls2);
             if (lookupMethod2 != null) {
                 return lookupMethod2;
@@ -190,9 +190,9 @@ public abstract class KDeclarationContainerImpl implements C12866d {
             int i4 = i2 - 1;
             if (str != null) {
                 String substring = str.substring(i3, i4);
-                C12880j.m40222a((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
                 Class<?> loadClass = safeClassLoader.loadClass(C12832w.m40115a(substring, '/', '.', false, 4, (Object) null));
-                C12880j.m40222a((Object) loadClass, "jClass.safeClassLoader.l…d - 1).replace('/', '.'))");
+                Intrinsics.checkReturnedValueIsNotNull((Object) loadClass, "jClass.safeClassLoader.l…d - 1).replace('/', '.'))");
                 return loadClass;
             }
             throw new C13142s("null cannot be cast to non-null type java.lang.String");
@@ -201,7 +201,7 @@ public abstract class KDeclarationContainerImpl implements C12866d {
         } else {
             if (charAt == 'V') {
                 Class<?> cls = Void.TYPE;
-                C12880j.m40222a((Object) cls, "Void.TYPE");
+                Intrinsics.checkReturnedValueIsNotNull((Object) cls, "Void.TYPE");
                 return cls;
             } else if (charAt == 'I') {
                 return Integer.TYPE;
@@ -257,16 +257,16 @@ public abstract class KDeclarationContainerImpl implements C12866d {
             java.lang.Class[] r1 = (java.lang.Class[]) r1     // Catch:{ NoSuchMethodException -> 0x0060 }
             java.lang.reflect.Method r1 = r7.getDeclaredMethod(r8, r1)     // Catch:{ NoSuchMethodException -> 0x0060 }
             java.lang.String r2 = "result"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)     // Catch:{ NoSuchMethodException -> 0x0060 }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)     // Catch:{ NoSuchMethodException -> 0x0060 }
             java.lang.Class r2 = r1.getReturnType()     // Catch:{ NoSuchMethodException -> 0x0060 }
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r2, r10)     // Catch:{ NoSuchMethodException -> 0x0060 }
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r2, r10)     // Catch:{ NoSuchMethodException -> 0x0060 }
             if (r2 == 0) goto L_0x001d
             r0 = r1
             goto L_0x0060
         L_0x001d:
             java.lang.reflect.Method[] r7 = r7.getDeclaredMethods()     // Catch:{ NoSuchMethodException -> 0x0060 }
             java.lang.String r1 = "declaredMethods"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r1)     // Catch:{ NoSuchMethodException -> 0x0060 }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r1)     // Catch:{ NoSuchMethodException -> 0x0060 }
             int r1 = r7.length     // Catch:{ NoSuchMethodException -> 0x0060 }
             r2 = 0
             r3 = 0
@@ -274,12 +274,12 @@ public abstract class KDeclarationContainerImpl implements C12866d {
             if (r3 >= r1) goto L_0x0060
             r4 = r7[r3]     // Catch:{ NoSuchMethodException -> 0x0060 }
             java.lang.String r5 = "method"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r5)     // Catch:{ NoSuchMethodException -> 0x0060 }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r5)     // Catch:{ NoSuchMethodException -> 0x0060 }
             java.lang.String r5 = r4.getName()     // Catch:{ NoSuchMethodException -> 0x0060 }
-            boolean r5 = kotlin.jvm.internal.C12880j.m40224a(r5, r8)     // Catch:{ NoSuchMethodException -> 0x0060 }
+            boolean r5 = kotlin.jvm.internal.Intrinsics.areEqual(r5, r8)     // Catch:{ NoSuchMethodException -> 0x0060 }
             if (r5 == 0) goto L_0x0058
             java.lang.Class r5 = r4.getReturnType()     // Catch:{ NoSuchMethodException -> 0x0060 }
-            boolean r5 = kotlin.jvm.internal.C12880j.m40224a(r5, r10)     // Catch:{ NoSuchMethodException -> 0x0060 }
+            boolean r5 = kotlin.jvm.internal.Intrinsics.areEqual(r5, r10)     // Catch:{ NoSuchMethodException -> 0x0060 }
             if (r5 == 0) goto L_0x0058
             java.lang.Class[] r5 = r4.getParameterTypes()     // Catch:{ NoSuchMethodException -> 0x0060 }
             if (r5 == 0) goto L_0x0054
@@ -288,7 +288,7 @@ public abstract class KDeclarationContainerImpl implements C12866d {
             r5 = 1
             goto L_0x0059
         L_0x0054:
-            kotlin.jvm.internal.C12880j.m40220a()     // Catch:{ NoSuchMethodException -> 0x0060 }
+            kotlin.jvm.internal.Intrinsics.throwNpe()     // Catch:{ NoSuchMethodException -> 0x0060 }
             throw r0
         L_0x0058:
             r5 = 0
@@ -317,7 +317,7 @@ public abstract class KDeclarationContainerImpl implements C12866d {
     }
 
     public final Method findDefaultMethod(String str, String str2, boolean z) {
-        if (C12880j.m40224a((Object) str, (Object) "<init>")) {
+        if (Intrinsics.areEqual((Object) str, (Object) "<init>")) {
             return null;
         }
         ArrayList arrayList = new ArrayList();
@@ -335,17 +335,17 @@ public abstract class KDeclarationContainerImpl implements C12866d {
     public final FunctionDescriptor findFunctionDescriptor(String str, String str2) {
         Iterable iterable;
         String str3;
-        if (C12880j.m40224a((Object) str, (Object) "<init>")) {
+        if (Intrinsics.areEqual((Object) str, (Object) "<init>")) {
             iterable = C13199w.m40606q(getConstructorDescriptors());
         } else {
             Name identifier = Name.identifier(str);
-            C12880j.m40222a((Object) identifier, "Name.identifier(name)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(name)");
             iterable = getFunctions(identifier);
         }
         Iterable iterable2 = iterable;
         ArrayList arrayList = new ArrayList();
         for (Object next : iterable2) {
-            if (C12880j.m40224a((Object) RuntimeTypeMapper.INSTANCE.mapSignature((FunctionDescriptor) next).asString(), (Object) str2)) {
+            if (Intrinsics.areEqual((Object) RuntimeTypeMapper.INSTANCE.mapSignature((FunctionDescriptor) next).asString(), (Object) str2)) {
                 arrayList.add(next);
             }
         }
@@ -378,7 +378,7 @@ public abstract class KDeclarationContainerImpl implements C12866d {
     }
 
     public final Method findMethodBySignature(String str, String str2) {
-        if (C12880j.m40224a((Object) str, (Object) "<init>")) {
+        if (Intrinsics.areEqual((Object) str, (Object) "<init>")) {
             return null;
         }
         return lookupMethod(getMethodOwner(), str, loadParameterTypes(str2), loadReturnType(str2));
@@ -405,11 +405,11 @@ public abstract class KDeclarationContainerImpl implements C12866d {
         }
         Name identifier = Name.identifier(str);
         String str7 = "Name.identifier(name)";
-        C12880j.m40222a((Object) identifier, str7);
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, str7);
         Collection properties = getProperties(identifier);
         ArrayList arrayList = new ArrayList();
         for (Object next : properties) {
-            if (C12880j.m40224a((Object) RuntimeTypeMapper.INSTANCE.mapPropertySignature((PropertyDescriptor) next).asString(), (Object) str5)) {
+            if (Intrinsics.areEqual((Object) RuntimeTypeMapper.INSTANCE.mapPropertySignature((PropertyDescriptor) next).asString(), (Object) str5)) {
                 arrayList.add(next);
             }
         }
@@ -439,14 +439,14 @@ public abstract class KDeclarationContainerImpl implements C12866d {
                 ((List) obj).add(next2);
             }
             Collection values = C13170i0.m40333a(linkedHashMap, C12914x62283bb.INSTANCE).values();
-            C12880j.m40222a((Object) values, "properties\n             …                }).values");
+            Intrinsics.checkReturnedValueIsNotNull((Object) values, "properties\n             …                }).values");
             List list = (List) C13199w.m40592h((Iterable) values);
             if (list.size() == 1) {
-                C12880j.m40222a((Object) list, "mostVisibleProperties");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list, "mostVisibleProperties");
                 return (PropertyDescriptor) C13199w.m40589f(list);
             }
             Name identifier2 = Name.identifier(str);
-            C12880j.m40222a((Object) identifier2, str7);
+            Intrinsics.checkReturnedValueIsNotNull((Object) identifier2, str7);
             String a = C13199w.m40559a(getProperties(identifier2), "\n", null, null, 0, null, KDeclarationContainerImpl$findPropertyDescriptor$allMembers$1.INSTANCE, 30, null);
             StringBuilder sb3 = new StringBuilder();
             sb3.append(str10);
@@ -504,7 +504,7 @@ public abstract class KDeclarationContainerImpl implements C12866d {
             kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor r4 = (kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor) r4
             kotlin.reflect.jvm.internal.impl.descriptors.Visibility r5 = r4.getVisibility()
             kotlin.reflect.jvm.internal.impl.descriptors.Visibility r6 = kotlin.reflect.jvm.internal.impl.descriptors.Visibilities.INVISIBLE_FAKE
-            boolean r5 = kotlin.jvm.internal.C12880j.m40224a(r5, r6)
+            boolean r5 = kotlin.jvm.internal.Intrinsics.areEqual(r5, r6)
             r5 = r5 ^ 1
             if (r5 == 0) goto L_0x0044
             boolean r4 = r9.accept(r4)

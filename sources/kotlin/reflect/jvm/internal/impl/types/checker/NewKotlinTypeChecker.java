@@ -92,7 +92,7 @@ public final class NewKotlinTypeChecker implements KotlinTypeChecker {
             r5.<init>(r6, r7, r8, r9, r10)
             return r1
         L_0x007e:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r4
         L_0x0082:
             boolean r1 = r0 instanceof kotlin.reflect.jvm.internal.impl.resolve.constants.IntegerValueTypeConstructor

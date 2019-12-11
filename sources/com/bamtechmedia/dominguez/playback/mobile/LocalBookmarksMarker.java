@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.core.content.C3693o;
 import com.uber.autodispose.android.lifecycle.C10541b;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p503n.p504a.C11786a0;
 import p163g.p503n.p504a.C11790c0;
 import p163g.p503n.p504a.C11793e;
@@ -58,7 +58,7 @@ public final class LocalBookmarksMarker implements C0710d {
 
         /* renamed from: a */
         public final void mo19176a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -101,11 +101,11 @@ public final class LocalBookmarksMarker implements C0710d {
     /* renamed from: f */
     public void mo4131f(C0722m mVar) {
         Observable b = Observable.m38307b(1, TimeUnit.MINUTES, this.f14728U);
-        C12880j.m40222a((Object) b, "Observable.interval(1, T…eUnit.MINUTES, scheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Observable.interval(1, T…eUnit.MINUTES, scheduler)");
         C10541b a = C10541b.m33255a(mVar, C0716a.ON_STOP);
-        C12880j.m40222a((Object) a, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
         Object a2 = b.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a((C11790c0) a));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a2).mo29915a(new C6513a(this), C6514b.f14731c);
     }
 }

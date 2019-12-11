@@ -7,7 +7,7 @@ import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import org.joda.time.Days;
 import org.joda.time.Period;
@@ -105,7 +105,7 @@ public final class C10638m {
     /* renamed from: a */
     public final int m33384a(Period period) {
         Days standardDays = period.toStandardDays();
-        C12880j.m40222a((Object) standardDays, "freeTrialPeriod.toStandardDays()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) standardDays, "freeTrialPeriod.toStandardDays()");
         return standardDays.getDays();
     }
 

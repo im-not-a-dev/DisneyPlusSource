@@ -7,7 +7,7 @@ import kotlin.C12898l;
 import kotlin.C13142s;
 import kotlin.C13147x;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
@@ -61,16 +61,16 @@ public final class CapturedTypeApproximationKt {
                 TypeProjection projection = ((CapturedTypeConstructor) constructor).getProjection();
                 CapturedTypeApproximationKt$approximateCapturedTypes$1 capturedTypeApproximationKt$approximateCapturedTypes$1 = new CapturedTypeApproximationKt$approximateCapturedTypes$1(kotlinType);
                 KotlinType type = projection.getType();
-                C12880j.m40222a((Object) type, "typeProjection.type");
+                Intrinsics.checkReturnedValueIsNotNull((Object) type, "typeProjection.type");
                 KotlinType invoke = capturedTypeApproximationKt$approximateCapturedTypes$1.invoke(type);
                 int i = WhenMappings.$EnumSwitchMapping$1[projection.getProjectionKind().ordinal()];
                 if (i == 1) {
                     SimpleType nullableAnyType = TypeUtilsKt.getBuiltIns(kotlinType).getNullableAnyType();
-                    C12880j.m40222a((Object) nullableAnyType, "type.builtIns.nullableAnyType");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) nullableAnyType, "type.builtIns.nullableAnyType");
                     approximationBounds = new ApproximationBounds<>(invoke, nullableAnyType);
                 } else if (i == 2) {
                     SimpleType nothingType = TypeUtilsKt.getBuiltIns(kotlinType).getNothingType();
-                    C12880j.m40222a((Object) nothingType, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) nothingType, str);
                     approximationBounds = new ApproximationBounds<>(capturedTypeApproximationKt$approximateCapturedTypes$1.invoke((KotlinType) nothingType), invoke);
                 } else {
                     StringBuilder sb = new StringBuilder();
@@ -88,11 +88,11 @@ public final class CapturedTypeApproximationKt {
             ArrayList arrayList2 = new ArrayList();
             List arguments = kotlinType.getArguments();
             List parameters = constructor.getParameters();
-            C12880j.m40222a((Object) parameters, "typeConstructor.parameters");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "typeConstructor.parameters");
             for (Pair pair : C13199w.m40586e((Iterable) arguments, (Iterable) parameters)) {
                 TypeProjection typeProjection = (TypeProjection) pair.mo31013a();
                 TypeParameterDescriptor typeParameterDescriptor = (TypeParameterDescriptor) pair.mo31014b();
-                C12880j.m40222a((Object) typeParameterDescriptor, "typeParameter");
+                Intrinsics.checkReturnedValueIsNotNull((Object) typeParameterDescriptor, "typeParameter");
                 TypeArgument typeArgument = toTypeArgument(typeProjection, typeParameterDescriptor);
                 if (typeProjection.isStarProjection()) {
                     arrayList.add(typeArgument);
@@ -121,7 +121,7 @@ public final class CapturedTypeApproximationKt {
             }
             if (z) {
                 obj = TypeUtilsKt.getBuiltIns(kotlinType).getNothingType();
-                C12880j.m40222a(obj, str);
+                Intrinsics.checkReturnedValueIsNotNull(obj, str);
             } else {
                 obj = replaceTypeArguments(kotlinType, arrayList);
             }
@@ -137,12 +137,12 @@ public final class CapturedTypeApproximationKt {
             return typeProjection;
         }
         KotlinType type = typeProjection.getType();
-        C12880j.m40222a((Object) type, "typeProjection.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "typeProjection.type");
         if (!TypeUtils.contains(type, C13129x21acc51c.INSTANCE)) {
             return typeProjection;
         }
         Variance projectionKind = typeProjection.getProjectionKind();
-        C12880j.m40222a((Object) projectionKind, "typeProjection.projectionKind");
+        Intrinsics.checkReturnedValueIsNotNull((Object) projectionKind, "typeProjection.projectionKind");
         if (projectionKind == Variance.OUT_VARIANCE) {
             return new TypeProjectionImpl(projectionKind, (KotlinType) approximateCapturedTypes(type).getUpper());
         }
@@ -177,7 +177,7 @@ public final class CapturedTypeApproximationKt {
 
     private static final TypeProjection substituteCapturedTypesWithProjections(TypeProjection typeProjection) {
         TypeSubstitutor create = TypeSubstitutor.create((TypeSubstitution) new C13130x12aaa596());
-        C12880j.m40222a((Object) create, "TypeSubstitutor.create(o…ojection\n        }\n    })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) create, "TypeSubstitutor.create(o…ojection\n        }\n    })");
         return create.substituteWithoutApproximation(typeProjection);
     }
 
@@ -186,21 +186,21 @@ public final class CapturedTypeApproximationKt {
         String str = "type";
         if (i == 1) {
             KotlinType type = typeProjection.getType();
-            C12880j.m40222a((Object) type, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, str);
             KotlinType type2 = typeProjection.getType();
-            C12880j.m40222a((Object) type2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) type2, str);
             return new TypeArgument(typeParameterDescriptor, type, type2);
         } else if (i == 2) {
             KotlinType type3 = typeProjection.getType();
-            C12880j.m40222a((Object) type3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) type3, str);
             SimpleType nullableAnyType = DescriptorUtilsKt.getBuiltIns(typeParameterDescriptor).getNullableAnyType();
-            C12880j.m40222a((Object) nullableAnyType, "typeParameter.builtIns.nullableAnyType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) nullableAnyType, "typeParameter.builtIns.nullableAnyType");
             return new TypeArgument(typeParameterDescriptor, type3, nullableAnyType);
         } else if (i == 3) {
             SimpleType nothingType = DescriptorUtilsKt.getBuiltIns(typeParameterDescriptor).getNothingType();
-            C12880j.m40222a((Object) nothingType, "typeParameter.builtIns.nothingType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) nothingType, "typeParameter.builtIns.nothingType");
             KotlinType type4 = typeProjection.getType();
-            C12880j.m40222a((Object) type4, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) type4, str);
             return new TypeArgument(typeParameterDescriptor, nothingType, type4);
         } else {
             throw new C12898l();
@@ -211,7 +211,7 @@ public final class CapturedTypeApproximationKt {
         boolean isConsistent = typeArgument.isConsistent();
         if (!C13147x.f29590a || isConsistent) {
             CapturedTypeApproximationKt$toTypeProjection$2 capturedTypeApproximationKt$toTypeProjection$2 = new CapturedTypeApproximationKt$toTypeProjection$2(typeArgument);
-            if (C12880j.m40224a((Object) typeArgument.getInProjection(), (Object) typeArgument.getOutProjection())) {
+            if (Intrinsics.areEqual((Object) typeArgument.getInProjection(), (Object) typeArgument.getOutProjection())) {
                 return new TypeProjectionImpl(typeArgument.getInProjection());
             }
             if (KotlinBuiltIns.isNothing(typeArgument.getInProjection()) && typeArgument.getTypeParameter().getVariance() != Variance.IN_VARIANCE) {

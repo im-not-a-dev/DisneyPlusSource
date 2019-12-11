@@ -15,7 +15,7 @@ import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9568u;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public final class C8978j implements C8912g, C8920o {
 
     /* renamed from: v */
-    private static final int f19632v = C9554k0.m29428b("qt  ");
+    private static final int f19632v = Util.m29428b("qt  ");
 
     /* renamed from: a */
     private final int f19633a;

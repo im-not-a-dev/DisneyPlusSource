@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve;
 
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -26,7 +26,7 @@ final class C13088x10bda471 implements TypeConstructorEquality {
 
     /* renamed from: invoke */
     public final boolean equals(TypeConstructor typeConstructor, TypeConstructor typeConstructor2) {
-        if (C12880j.m40224a((Object) typeConstructor, (Object) typeConstructor2)) {
+        if (Intrinsics.areEqual((Object) typeConstructor, (Object) typeConstructor2)) {
             return true;
         }
         ClassifierDescriptor declarationDescriptor = typeConstructor.getDeclarationDescriptor();
@@ -46,7 +46,7 @@ final class C13088x10bda471 implements TypeConstructorEquality {
             }
 
             public final boolean invoke(DeclarationDescriptor declarationDescriptor, DeclarationDescriptor declarationDescriptor2) {
-                return C12880j.m40224a((Object) declarationDescriptor, (Object) this.this$0.f29570$a) && C12880j.m40224a((Object) declarationDescriptor2, (Object) this.this$0.f29571$b);
+                return Intrinsics.areEqual((Object) declarationDescriptor, (Object) this.this$0.f29570$a) && Intrinsics.areEqual((Object) declarationDescriptor2, (Object) this.this$0.f29571$b);
             }
         });
     }

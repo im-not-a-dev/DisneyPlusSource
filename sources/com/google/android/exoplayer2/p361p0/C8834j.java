@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.provider.Settings.Global;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 @TargetApi(21)
@@ -43,8 +43,8 @@ public final class C8834j {
 
     /* renamed from: b */
     private static boolean m25615b() {
-        if (C9554k0.f22281a >= 17) {
-            if ("Amazon".equals(C9554k0.f22283c)) {
+        if (Util.SDK_INT >= 17) {
+            if ("Amazon".equals(Util.MANUFACTURER)) {
                 return true;
             }
         }

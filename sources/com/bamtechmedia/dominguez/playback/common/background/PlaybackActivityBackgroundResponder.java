@@ -15,14 +15,14 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p174d.p178b.C5273h;
 import p520io.reactivex.disposables.CompositeDisposable;
 import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001B/\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0016J\u0010\u0010\u001b\u001a\u00020\u00182\u0006\u0010\u001c\u001a\u00020\u001dH\u0016J\b\u0010\u001e\u001a\u00020\u0018H\u0002J\r\u0010\u001f\u001a\u00020\u0018H\u0001¢\u0006\u0002\b R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0011\u001a\u00020\u0012X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000¨\u0006!"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/background/PlaybackActivityBackgroundResponder;", "Lcom/bamtechmedia/dominguez/core/background/BackgroundResponder;", "activity", "Landroidx/fragment/app/FragmentActivity;", "appPresence", "Lcom/bamtechmedia/dominguez/core/lifecycle/AppPresenceApi;", "mainActivityIntentFactory", "Lcom/bamtechmedia/dominguez/playback/api/MainActivityIntentFactory;", "playerView", "Lcom/bamtech/player/AbstractPlayerView;", "convivaSetup", "Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;", "(Landroidx/fragment/app/FragmentActivity;Lcom/bamtechmedia/dominguez/core/lifecycle/AppPresenceApi;Lcom/bamtechmedia/dominguez/playback/api/MainActivityIntentFactory;Lcom/bamtech/player/AbstractPlayerView;Lcom/bamtechmedia/dominguez/playback/common/analytics/ConvivaSetup;)V", "getAppPresence", "()Lcom/bamtechmedia/dominguez/core/lifecycle/AppPresenceApi;", "bufferingDisposable", "Lio/reactivex/disposables/CompositeDisposable;", "engine", "Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "getEngine", "()Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "setEngine", "(Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;)V", "onDestroy", "", "owner", "Landroidx/lifecycle/LifecycleOwner;", "processPresence", "presence", "Lcom/bamtechmedia/dominguez/core/lifecycle/AppPresenceApi$AppPresenceResponse;", "routeToTargetOriginPage", "showControlsWhenBufferingIsComplete", "showControlsWhenBufferingIsComplete$playback_release", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: PlaybackActivityBackgroundResponder.kt */
@@ -104,7 +104,7 @@ public final class PlaybackActivityBackgroundResponder extends BackgroundRespond
 
         /* renamed from: a */
         public final void mo18877a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -112,7 +112,7 @@ public final class PlaybackActivityBackgroundResponder extends BackgroundRespond
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -152,7 +152,7 @@ public final class PlaybackActivityBackgroundResponder extends BackgroundRespond
             if (sDK4ExoPlaybackEngine != null) {
                 sDK4ExoPlaybackEngine.mo7537b().mo16972T0();
             } else {
-                C12880j.m40227c("engine");
+                Intrinsics.throwUninitializedPropertyAccessException("engine");
                 throw null;
             }
         }
@@ -204,7 +204,7 @@ public final class PlaybackActivityBackgroundResponder extends BackgroundRespond
             r5.mo30250b(r0)
             goto L_0x0082
         L_0x003e:
-            kotlin.jvm.internal.C12880j.m40227c(r2)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r2)
             throw r1
         L_0x0042:
             boolean r0 = r5 instanceof com.bamtechmedia.dominguez.core.lifecycle.C5765a.C5766a.C5767a
@@ -227,13 +227,13 @@ public final class PlaybackActivityBackgroundResponder extends BackgroundRespond
             r5.mo30247a()
             goto L_0x0082
         L_0x006f:
-            kotlin.jvm.internal.C12880j.m40227c(r2)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r2)
             throw r1
         L_0x0073:
-            kotlin.jvm.internal.C12880j.m40227c(r2)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r2)
             throw r1
         L_0x0077:
-            kotlin.jvm.internal.C12880j.m40227c(r2)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r2)
             throw r1
         L_0x007b:
             boolean r5 = r5 instanceof com.bamtechmedia.dominguez.core.lifecycle.C5765a.C5766a.C5769c

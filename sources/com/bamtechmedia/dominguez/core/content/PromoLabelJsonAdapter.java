@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
@@ -22,19 +22,19 @@ public final class PromoLabelJsonAdapter extends C11725h<PromoLabel> {
 
     public PromoLabelJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("type", "sunrise", "sunset", "subType", "seasonNumber", "episodeSequenceNumber");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"t… \"episodeSequenceNumber\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"t… \"episodeSequenceNumber\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "type");
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…tions.emptySet(), \"type\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…tions.emptySet(), \"type\")");
         this.stringAdapter = a2;
         C11725h<DateTime> a3 = vVar.mo29869a((Type) DateTime.class, C13188p0.m40531a(), "sunrise");
-        C12880j.m40222a((Object) a3, "moshi.adapter<DateTime>(…ns.emptySet(), \"sunrise\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<DateTime>(…ns.emptySet(), \"sunrise\")");
         this.dateTimeAdapter = a3;
         C11725h<String> a4 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "subType");
-        C12880j.m40222a((Object) a4, "moshi.adapter<String?>(S…ns.emptySet(), \"subType\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<String?>(S…ns.emptySet(), \"subType\")");
         this.nullableStringAdapter = a4;
         C11725h<Integer> a5 = vVar.mo29869a((Type) Integer.class, C13188p0.m40531a(), "seasonNumber");
-        C12880j.m40222a((Object) a5, "moshi.adapter<Int?>(Int:…ptySet(), \"seasonNumber\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<Int?>(Int:…ptySet(), \"seasonNumber\")");
         this.nullableIntAdapter = a5;
     }
 

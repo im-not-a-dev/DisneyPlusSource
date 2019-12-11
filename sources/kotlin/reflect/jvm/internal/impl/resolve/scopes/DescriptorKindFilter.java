@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: MemberScope.kt */
 public final class DescriptorKindFilter {
@@ -132,7 +132,7 @@ public final class DescriptorKindFilter {
         CALLABLES_MASK = i3 | i5;
         Field[] fields = cls.getFields();
         String str4 = "T::class.java.fields";
-        C12880j.m40222a((Object) fields, str4);
+        Intrinsics.checkReturnedValueIsNotNull((Object) fields, str4);
         ArrayList arrayList = new ArrayList();
         int length = fields.length;
         int i6 = 0;
@@ -142,7 +142,7 @@ public final class DescriptorKindFilter {
                 break;
             }
             Field field = fields[i6];
-            C12880j.m40222a((Object) field, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) field, str);
             if (Modifier.isStatic(field.getModifiers())) {
                 arrayList.add(field);
             }
@@ -164,9 +164,9 @@ public final class DescriptorKindFilter {
             DescriptorKindFilter descriptorKindFilter = (DescriptorKindFilter) obj3;
             if (descriptorKindFilter != null) {
                 int i7 = descriptorKindFilter.kindMask;
-                C12880j.m40222a((Object) field2, str3);
+                Intrinsics.checkReturnedValueIsNotNull((Object) field2, str3);
                 String name = field2.getName();
-                C12880j.m40222a((Object) name, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) name, str2);
                 obj2 = new MaskToName(i7, name);
             } else {
                 obj2 = null;
@@ -177,10 +177,10 @@ public final class DescriptorKindFilter {
         }
         DEBUG_PREDEFINED_FILTERS_MASK_NAMES = C13199w.m40606q(arrayList2);
         Field[] fields2 = cls.getFields();
-        C12880j.m40222a((Object) fields2, str4);
+        Intrinsics.checkReturnedValueIsNotNull((Object) fields2, str4);
         ArrayList arrayList3 = new ArrayList();
         for (Field field3 : fields2) {
-            C12880j.m40222a((Object) field3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) field3, str);
             if (Modifier.isStatic(field3.getModifiers())) {
                 arrayList3.add(field3);
             }
@@ -188,8 +188,8 @@ public final class DescriptorKindFilter {
         ArrayList<Field> arrayList4 = new ArrayList<>();
         for (Object next : arrayList3) {
             Field field4 = (Field) next;
-            C12880j.m40222a((Object) field4, str);
-            if (C12880j.m40224a((Object) field4.getType(), (Object) Integer.TYPE)) {
+            Intrinsics.checkReturnedValueIsNotNull((Object) field4, str);
+            if (Intrinsics.areEqual((Object) field4.getType(), (Object) Integer.TYPE)) {
                 arrayList4.add(next);
             }
         }
@@ -199,9 +199,9 @@ public final class DescriptorKindFilter {
             if (obj4 != null) {
                 int intValue = ((Integer) obj4).intValue();
                 if (intValue == ((-intValue) & intValue)) {
-                    C12880j.m40222a((Object) field5, str3);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) field5, str3);
                     String name2 = field5.getName();
-                    C12880j.m40222a((Object) name2, str2);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) name2, str2);
                     obj = new MaskToName(intValue, name2);
                 } else {
                     obj = null;

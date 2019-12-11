@@ -8,7 +8,7 @@ import java.util.List;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\b\b\u0018\u00002\u00020\u0001:\u0001\u0016B\u001b\u0012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0002\u0010\u0007J\u000f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003HÆ\u0003J\t\u0010\r\u001a\u00020\u0006HÆ\u0003J#\u0010\u000e\u001a\u00020\u00002\u000e\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u00032\b\b\u0002\u0010\u0005\u001a\u00020\u0006HÆ\u0001J\u0013\u0010\u000f\u001a\u00020\u00102\b\u0010\u0011\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u0012\u001a\u00020\u0013HÖ\u0001J\t\u0010\u0014\u001a\u00020\u0015HÖ\u0001R\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0017\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000b¨\u0006\u0017"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/configuration/Client;", "", "links", "", "Lcom/bamtech/core/networking/Link;", "configHostParams", "Lcom/bamtech/sdk4/internal/configuration/HostParams;", "(Ljava/util/List;Lcom/bamtech/sdk4/internal/configuration/HostParams;)V", "getConfigHostParams", "()Lcom/bamtech/sdk4/internal/configuration/HostParams;", "getLinks", "()Ljava/util/List;", "component1", "component2", "copy", "equals", "", "other", "hashCode", "", "toString", "", "ClientBuilder", "sdk-configuration"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: EmbeddedConfiguration.kt */
@@ -32,7 +32,7 @@ public final class Client {
             if (hostParams != null) {
                 return new Client(arrayList, hostParams);
             }
-            C12880j.m40227c("configHostParams");
+            Intrinsics.throwUninitializedPropertyAccessException("configHostParams");
             throw null;
         }
 
@@ -56,7 +56,7 @@ public final class Client {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.configHostParams, (java.lang.Object) r3.configHostParams) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.configHostParams, (java.lang.Object) r3.configHostParams) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -68,11 +68,11 @@ public final class Client {
             com.bamtech.sdk4.internal.configuration.Client r3 = (com.bamtech.sdk4.internal.configuration.Client) r3
             java.util.List<com.bamtech.core.networking.Link> r0 = r2.links
             java.util.List<com.bamtech.core.networking.Link> r1 = r3.links
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.bamtech.sdk4.internal.configuration.HostParams r0 = r2.configHostParams
             com.bamtech.sdk4.internal.configuration.HostParams r3 = r3.configHostParams
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:

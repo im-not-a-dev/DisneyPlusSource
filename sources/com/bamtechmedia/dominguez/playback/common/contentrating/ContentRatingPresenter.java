@@ -35,7 +35,7 @@ import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0005\u0018\u0000 ;2\u00020\u0001:\u0002;<B3\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\b\b\u0001\u0010\t\u001a\u00020\n¢\u0006\u0002\u0010\u000bJ\"\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u00132\b\u0010\u0014\u001a\u0004\u0018\u00010\u0015H\u0002J \u0010\u0016\u001a\u00020\u000f2\u000e\u0010\u0017\u001a\n\u0012\u0004\u0012\u00020\u0015\u0018\u00010\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0002J\u0018\u0010\u001b\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u001c\u001a\u00020\u001dH\u0002J\u0010\u0010\u001e\u001a\u00020\u000f2\u0006\u0010\u001f\u001a\u00020\u001dH\u0002J \u0010 \u001a\u00020\u001d2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\u00152\u0006\u0010$\u001a\u00020%H\u0002J\u0006\u0010&\u001a\u00020\u000fJ&\u0010'\u001a\u00020\u000f2\u0006\u0010(\u001a\u00020)2\u0006\u0010\u0012\u001a\u00020\u00132\u0006\u0010*\u001a\u00020%2\u0006\u0010+\u001a\u00020,J\u001a\u0010-\u001a\u00020\u00152\u0006\u0010\u0010\u001a\u00020\u00112\b\u0010\u0014\u001a\u0004\u0018\u00010\u0015H\u0002J\u0010\u0010.\u001a\u00020\u00152\u0006\u0010\u0010\u001a\u00020\u0011H\u0002J\u000e\u0010/\u001a\u00020\u000f2\u0006\u00100\u001a\u000201J\u0010\u00102\u001a\u00020\u000f2\u0006\u00103\u001a\u000204H\u0016J\"\u00105\u001a\u00020\u000f2\u0006\u00106\u001a\u00020\u001d2\b\u0010#\u001a\u0004\u0018\u00010\u00152\u0006\u00107\u001a\u000208H\u0002J\u0015\u00109\u001a\u00020\u000f2\u0006\u00100\u001a\u000201H\u0000¢\u0006\u0002\b:R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\f\u001a\u0004\u0018\u00010\rX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006="}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingPresenter;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "resources", "Landroid/content/res/Resources;", "ratingFormatter", "Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;", "ratingsDictionary", "Lcom/bamtechmedia/dominguez/config/StringDictionary;", "stringDictionary", "mainScheduler", "Lio/reactivex/Scheduler;", "(Landroid/content/res/Resources;Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;Lcom/bamtechmedia/dominguez/config/StringDictionary;Lcom/bamtechmedia/dominguez/config/StringDictionary;Lio/reactivex/Scheduler;)V", "ratingDisposable", "Lio/reactivex/disposables/Disposable;", "addAdvisories", "", "rating", "Lcom/bamtechmedia/dominguez/core/content/assets/Rating;", "elements", "Lcom/bamtechmedia/dominguez/playback/common/contentrating/ContentRatingPresenter$ContentRatingElements;", "graphicContent", "", "addDisclaimers", "disclaimerIds", "", "disclaimerContainer", "Landroid/widget/LinearLayout;", "addRating", "ratingIdText", "Landroid/widget/TextView;", "applyPaddingAndBorder", "textView", "createDisclaimerTextView", "parent", "Landroid/view/View;", "text", "index", "", "dismissContentRatingTimer", "displayContentRatingOverlay", "playable", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "secondDuration", "contentRatingListeners", "Lcom/bamtechmedia/dominguez/playback/common/listeners/ContentRatingListeners;", "getRatingAdvisory", "getRatingString", "hideContentRatingOverlay", "contentRatingParent", "Landroidx/constraintlayout/widget/ConstraintLayout;", "onDestroy", "owner", "Landroidx/lifecycle/LifecycleOwner;", "setupRatingLine", "view", "hasPredecessor", "", "showContentRatingOverlay", "showContentRatingOverlay$playback_release", "Companion", "ContentRatingElements", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: ContentRatingPresenter.kt */
@@ -114,7 +114,7 @@ public final class ContentRatingPresenter implements C0710d {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f14348d, (java.lang.Object) r3.f14348d) != false) goto L_0x0033;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f14348d, (java.lang.Object) r3.f14348d) != false) goto L_0x0033;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -126,19 +126,19 @@ public final class ContentRatingPresenter implements C0710d {
                 com.bamtechmedia.dominguez.playback.common.contentrating.ContentRatingPresenter$b r3 = (com.bamtechmedia.dominguez.playback.common.contentrating.ContentRatingPresenter.C6280b) r3
                 android.widget.TextView r0 = r2.f14345a
                 android.widget.TextView r1 = r3.f14345a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0031
                 android.widget.TextView r0 = r2.f14346b
                 android.widget.TextView r1 = r3.f14346b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0031
                 android.widget.LinearLayout r0 = r2.f14347c
                 android.widget.LinearLayout r1 = r3.f14347c
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0031
                 androidx.constraintlayout.widget.ConstraintLayout r0 = r2.f14348d
                 androidx.constraintlayout.widget.ConstraintLayout r3 = r3.f14348d
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0031
                 goto L_0x0033
             L_0x0031:
@@ -211,7 +211,7 @@ public final class ContentRatingPresenter implements C0710d {
 
         /* renamed from: a */
         public final void mo18890a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -219,7 +219,7 @@ public final class ContentRatingPresenter implements C0710d {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -296,7 +296,7 @@ public final class ContentRatingPresenter implements C0710d {
             java.lang.Object r5 = r4.next()
             r6 = r5
             java.lang.String r6 = (java.lang.String) r6
-            boolean r6 = kotlin.jvm.internal.C12880j.m40224a(r6, r1)
+            boolean r6 = kotlin.jvm.internal.Intrinsics.areEqual(r6, r1)
             r6 = r6 ^ 1
             if (r6 == 0) goto L_0x0026
             r3.add(r5)
@@ -312,7 +312,7 @@ public final class ContentRatingPresenter implements C0710d {
             java.lang.Object r4 = r8.next()
             r5 = r4
             java.lang.String r5 = (java.lang.String) r5
-            boolean r5 = kotlin.jvm.internal.C12880j.m40224a(r5, r1)
+            boolean r5 = kotlin.jvm.internal.Intrinsics.areEqual(r5, r1)
             if (r5 == 0) goto L_0x0046
             r2 = r4
         L_0x005a:

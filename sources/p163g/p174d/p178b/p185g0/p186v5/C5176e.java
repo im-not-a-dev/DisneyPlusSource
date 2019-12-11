@@ -2,7 +2,7 @@ package p163g.p174d.p178b.p185g0.p186v5;
 
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.b.g0.v5.e */
 /* compiled from: AudioFocusFlow */
@@ -30,7 +30,7 @@ public class C5176e {
             z = false;
         }
         sb.append(z);
-        C14100a.m44529c(sb.toString(), new Object[0]);
+        Timber.m44529c(sb.toString(), new Object[0]);
     }
 
     /* access modifiers changed from: 0000 */

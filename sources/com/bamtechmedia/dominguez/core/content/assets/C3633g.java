@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.core.content.GenreMeta;
 import com.bamtechmedia.dominguez.core.content.collections.C3680n;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.content.assets.g */
 /* compiled from: DmcBrowsable.kt */
@@ -158,6 +158,6 @@ public abstract class C3633g implements C3651b, C3632f, C3793w {
 
     /* renamed from: a */
     public boolean mo12848a(C3626b bVar) {
-        return (bVar instanceof C3651b) && C12880j.m40224a((Object) ((C3651b) bVar).mo12903f(), (Object) mo12903f());
+        return (bVar instanceof C3651b) && Intrinsics.areEqual((Object) ((C3651b) bVar).mo12903f(), (Object) mo12903f());
     }
 }

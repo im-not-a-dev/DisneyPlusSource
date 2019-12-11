@@ -24,10 +24,10 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p122j.C4027b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000p\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0012\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0010\u0007\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 :2\u00020\u00012\u00020\u0002:\u0001:B\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004¢\u0006\u0002\u0010\u0005J\b\u0010\u000f\u001a\u00020\u0010H\u0002J\b\u0010\u0011\u001a\u00020\u0010H\u0002J\b\u0010\u0012\u001a\u00020\tH\u0002J\u0010\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u0016H\u0002J\b\u0010\u0017\u001a\u00020\u0010H\u0016J\u0012\u0010\u0018\u001a\u00020\u00102\b\u0010\u0019\u001a\u0004\u0018\u00010\u001aH\u0016J\b\u0010\u001b\u001a\u00020\u0010H\u0016J\u0010\u0010\u001c\u001a\u00020\u00102\u0006\u0010\u0015\u001a\u00020\u0016H\u0016J\u001a\u0010\u001d\u001a\u00020\u00102\u0006\u0010\u001e\u001a\u00020\u00162\b\u0010\u001f\u001a\u0004\u0018\u00010 H\u0016J\u0012\u0010!\u001a\u00020\u00102\b\u0010\"\u001a\u0004\u0018\u00010 H\u0016J\u0010\u0010#\u001a\u00020\u00102\u0006\u0010$\u001a\u00020%H\u0016J\u0012\u0010&\u001a\u00020\u00102\b\u0010\u001f\u001a\u0004\u0018\u00010 H\u0016J\u0016\u0010'\u001a\u00020\u00102\u0006\u0010(\u001a\u00020\u00162\u0006\u0010)\u001a\u00020*J\u0012\u0010+\u001a\u00020\u00102\b\u0010,\u001a\u0004\u0018\u00010 H\u0016J\u0010\u0010-\u001a\u00020\u00102\u0006\u0010$\u001a\u00020%H\u0016J\u0010\u0010.\u001a\u00020\u00102\u0006\u0010/\u001a\u000200H\u0016J\b\u00101\u001a\u00020\u0010H\u0002J\u000e\u00102\u001a\u00020\t2\u0006\u00103\u001a\u00020\u0016J\u0006\u00104\u001a\u00020\tJ\u0018\u00105\u001a\u00020\u00102\u0006\u00106\u001a\u0002072\u0006\u00108\u001a\u00020\u0016H\u0002J\b\u00109\u001a\u00020\u0010H\u0002R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\b\u001a\u00020\tX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\b\u0010\n\"\u0004\b\u000b\u0010\fR\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u000e¢\u0006\u0002\n\u0000¨\u0006;"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/search/SpeechRecognizerHelper;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "Landroid/speech/RecognitionListener;", "fragment", "Lcom/bamtechmedia/dominguez/search/SearchTvFragment;", "(Lcom/bamtechmedia/dominguez/search/SearchTvFragment;)V", "context", "Landroid/content/Context;", "isListening", "", "()Z", "setListening", "(Z)V", "speechRecognizer", "Landroid/speech/SpeechRecognizer;", "cancelListening", "", "endMicrophoneAnimation", "hasRecordAudioPermission", "mapSpeechRecognizerError", "", "error", "", "onBeginningOfSpeech", "onBufferReceived", "buffer", "", "onEndOfSpeech", "onError", "onEvent", "eventType", "params", "Landroid/os/Bundle;", "onPartialResults", "partialResults", "onPause", "owner", "Landroidx/lifecycle/LifecycleOwner;", "onReadyForSpeech", "onRequestPermissionResult", "requestCode", "grantResults", "", "onResults", "results", "onResume", "onRmsChanged", "rmsdB", "", "onVoiceButtonClick", "shouldConsumeBackKey", "keyCode", "shouldShowMicrophone", "startAnimation", "imageView", "Landroid/widget/ImageView;", "id", "startMicrophoneAnimation", "Companion", "search_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: SpeechRecognizerHelper.kt */
@@ -88,7 +88,7 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
         public final void invoke() {
             SpeechRecognizerHelper speechRecognizerHelper = this.f17117c;
             ImageView imageView = (ImageView) speechRecognizerHelper.f17114W._$_findCachedViewById(C8048n.microphoneOvalOneImageView);
-            C12880j.m40222a((Object) imageView, "fragment.microphoneOvalOneImageView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "fragment.microphoneOvalOneImageView");
             speechRecognizerHelper.m23203a(imageView, C8044j.rotate_counter_clockwise);
         }
     }
@@ -108,7 +108,7 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
         public final void invoke() {
             SpeechRecognizerHelper speechRecognizerHelper = this.f17118c;
             ImageView imageView = (ImageView) speechRecognizerHelper.f17114W._$_findCachedViewById(C8048n.microphoneOvalTwoImageView);
-            C12880j.m40222a((Object) imageView, "fragment.microphoneOvalTwoImageView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "fragment.microphoneOvalTwoImageView");
             speechRecognizerHelper.m23203a(imageView, C8044j.rotate_clockwise);
         }
     }
@@ -128,7 +128,7 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
         public final void invoke() {
             SpeechRecognizerHelper speechRecognizerHelper = this.f17119c;
             ImageView imageView = (ImageView) speechRecognizerHelper.f17114W._$_findCachedViewById(C8048n.microphoneOvalThreeImageView);
-            C12880j.m40222a((Object) imageView, "fragment.microphoneOvalThreeImageView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "fragment.microphoneOvalThreeImageView");
             speechRecognizerHelper.m23203a(imageView, C8044j.rotate_clockwise);
         }
     }
@@ -140,7 +140,7 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
     public SpeechRecognizerHelper(C8068y yVar) {
         this.f17114W = yVar;
         Context requireContext = this.f17114W.requireContext();
-        C12880j.m40222a((Object) requireContext, "fragment.requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "fragment.requireContext()");
         this.f17115c = requireContext;
     }
 
@@ -186,7 +186,7 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
     /* renamed from: e */
     private final void m23208e() {
         Animation loadAnimation = AnimationUtils.loadAnimation(this.f17114W.getContext(), C8044j.voice_indicator_scale_down);
-        C12880j.m40222a((Object) loadAnimation, "scaleDownAnimation");
+        Intrinsics.checkReturnedValueIsNotNull((Object) loadAnimation, "scaleDownAnimation");
         loadAnimation.setFillEnabled(true);
         loadAnimation.setFillAfter(true);
         ((ImageView) this.f17114W._$_findCachedViewById(C8048n.microphoneOvalOneImageView)).startAnimation(loadAnimation);
@@ -234,19 +234,19 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
         this.f17113V = true;
         ImageView imageView = (ImageView) this.f17114W._$_findCachedViewById(C8048n.microphoneOvalOneImageView);
         ImageView imageView2 = imageView;
-        C12880j.m40222a((Object) imageView, "fragment.microphoneOvalOneImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "fragment.microphoneOvalOneImageView");
         C7961c cVar = r1;
         C7961c cVar2 = new C7961c(this);
         C3800a.m12829a(imageView2, 0.0f, 0.0f, 0.0f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0, 0, null, null, cVar, null, 196606, null);
         ImageView imageView3 = (ImageView) this.f17114W._$_findCachedViewById(C8048n.microphoneOvalTwoImageView);
         ImageView imageView4 = imageView3;
-        C12880j.m40222a((Object) imageView3, "fragment.microphoneOvalTwoImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView3, "fragment.microphoneOvalTwoImageView");
         C7962d dVar = r1;
         C7962d dVar2 = new C7962d(this);
         C3800a.m12829a(imageView4, 0.0f, 0.0f, 0.0f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0, 0, null, null, dVar, null, 196606, null);
         ImageView imageView5 = (ImageView) this.f17114W._$_findCachedViewById(C8048n.microphoneOvalThreeImageView);
         ImageView imageView6 = imageView5;
-        C12880j.m40222a((Object) imageView5, "fragment.microphoneOvalThreeImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView5, "fragment.microphoneOvalThreeImageView");
         C7963e eVar = r1;
         C7963e eVar2 = new C7963e(this);
         C3800a.m12829a(imageView6, 0.0f, 0.0f, 0.0f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0, 0, null, null, eVar, null, 196606, null);
@@ -300,7 +300,7 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
     }
 
     public void onError(int i) {
-        C14100a.m44522a("Error using speech recognition: %s", m23205b(i));
+        Timber.m44522a("Error using speech recognition: %s", m23205b(i));
         if (i == 8) {
             SpeechRecognizer speechRecognizer = this.f17112U;
             if (speechRecognizer != null) {
@@ -354,7 +354,7 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
         String str = "fragment.microphoneImageViewContainer";
         if (mo20921b()) {
             FrameLayout frameLayout = (FrameLayout) this.f17114W._$_findCachedViewById(C8048n.microphoneImageViewContainer);
-            C12880j.m40222a((Object) frameLayout, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) frameLayout, str);
             C5852n0.m18890c(frameLayout);
             if (this.f17112U == null) {
                 this.f17112U = SpeechRecognizer.createSpeechRecognizer(this.f17115c);
@@ -364,7 +364,7 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
             return;
         }
         FrameLayout frameLayout2 = (FrameLayout) this.f17114W._$_findCachedViewById(C8048n.microphoneImageViewContainer);
-        C12880j.m40222a((Object) frameLayout2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) frameLayout2, str);
         C5852n0.m18887b(frameLayout2);
     }
 

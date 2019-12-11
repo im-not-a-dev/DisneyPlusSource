@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import java.util.Locale;
 import p163g.p174d.p178b.p181c0.C4938a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.d.b.n */
 /* compiled from: PlayerPreferences */
@@ -88,7 +88,7 @@ public class C5312n {
         StringBuilder sb = new StringBuilder();
         sb.append("Language code was too long, Max length: 5. Your language code: ");
         sb.append(str);
-        C14100a.m44526b(sb.toString(), new Object[0]);
+        Timber.m44526b(sb.toString(), new Object[0]);
         return this.f12795a;
     }
 

@@ -12,7 +12,7 @@ import java.util.Set;
 import kotlin.C13147x;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
@@ -110,7 +110,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         Annotations empty = Annotations.Companion.getEMPTY();
         Name name = javaMethod.getName();
         KotlinType makeNotNullable = TypeUtils.makeNotNullable(kotlinType);
-        C12880j.m40222a((Object) makeNotNullable, "TypeUtils.makeNotNullable(returnType)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) makeNotNullable, "TypeUtils.makeNotNullable(returnType)");
         ValueParameterDescriptorImpl valueParameterDescriptorImpl = new ValueParameterDescriptorImpl(constructorDescriptor, null, i, empty, name, makeNotNullable, javaMethod.getHasAnnotationParameterDefaultValue(), false, false, kotlinType2 != null ? TypeUtils.makeNotNullable(kotlinType2) : null, getC().getComponents().getSourceElementFactory().source(javaMethod));
         List<ValueParameterDescriptor> list2 = list;
         list.add(valueParameterDescriptorImpl);
@@ -118,7 +118,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
 
     private final void addFunctionFromSupertypes(Collection<SimpleFunctionDescriptor> collection, Name name, Collection<? extends SimpleFunctionDescriptor> collection2, boolean z) {
         Collection<SimpleFunctionDescriptor> resolveOverridesForNonStaticMembers = DescriptorResolverUtils.resolveOverridesForNonStaticMembers(name, collection2, collection, getOwnerDescriptor(), getC().getComponents().getErrorReporter());
-        C12880j.m40222a((Object) resolveOverridesForNonStaticMembers, "resolveOverridesForNonSt…s.errorReporter\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resolveOverridesForNonStaticMembers, "resolveOverridesForNonSt…s.errorReporter\n        )");
         if (!z) {
             collection.addAll(resolveOverridesForNonStaticMembers);
             return;
@@ -128,7 +128,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         for (SimpleFunctionDescriptor simpleFunctionDescriptor : resolveOverridesForNonStaticMembers) {
             SimpleFunctionDescriptor simpleFunctionDescriptor2 = (SimpleFunctionDescriptor) SpecialBuiltinMembers.getOverriddenSpecialBuiltin(simpleFunctionDescriptor);
             if (simpleFunctionDescriptor2 != null) {
-                C12880j.m40222a((Object) simpleFunctionDescriptor, "resolvedOverride");
+                Intrinsics.checkReturnedValueIsNotNull((Object) simpleFunctionDescriptor, "resolvedOverride");
                 simpleFunctionDescriptor = createHiddenCopyIfBuiltinAlreadyAccidentallyOverridden(simpleFunctionDescriptor, simpleFunctionDescriptor2, d);
             }
             arrayList.add(simpleFunctionDescriptor);
@@ -169,7 +169,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         ArrayList arrayList2 = new ArrayList();
         ArrayList arrayList3 = new ArrayList();
         for (Object next : methods) {
-            if (C12880j.m40224a((Object) ((JavaMethod) next).getName(), (Object) JvmAnnotationNames.DEFAULT_ANNOTATION_MEMBER_NAME)) {
+            if (Intrinsics.areEqual((Object) ((JavaMethod) next).getName(), (Object) JvmAnnotationNames.DEFAULT_ANNOTATION_MEMBER_NAME)) {
                 arrayList2.add(next);
             } else {
                 arrayList3.add(next);
@@ -214,7 +214,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         }
         ClassDescriptor ownerDescriptor2 = getOwnerDescriptor();
         JavaClassConstructorDescriptor createJavaConstructor = JavaClassConstructorDescriptor.createJavaConstructor(ownerDescriptor2, Annotations.Companion.getEMPTY(), true, getC().getComponents().getSourceElementFactory().source(this.jClass));
-        C12880j.m40222a((Object) createJavaConstructor, "JavaClassConstructorDesc….source(jClass)\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createJavaConstructor, "JavaClassConstructorDesc….source(jClass)\n        )");
         if (isAnnotationType) {
             list = createAnnotationConstructorParameters(createJavaConstructor);
         } else {
@@ -238,7 +238,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
                     break;
                 }
                 SimpleFunctionDescriptor simpleFunctionDescriptor2 = (SimpleFunctionDescriptor) it.next();
-                if (!(!C12880j.m40224a((Object) simpleFunctionDescriptor, (Object) simpleFunctionDescriptor2)) || simpleFunctionDescriptor2.getInitialSignatureDescriptor() != null || !doesOverride(simpleFunctionDescriptor2, callableDescriptor)) {
+                if (!(!Intrinsics.areEqual((Object) simpleFunctionDescriptor, (Object) simpleFunctionDescriptor2)) || simpleFunctionDescriptor2.getInitialSignatureDescriptor() != null || !doesOverride(simpleFunctionDescriptor2, callableDescriptor)) {
                     z = false;
                     continue;
                 } else {
@@ -258,14 +258,14 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         if (build != null) {
             return (SimpleFunctionDescriptor) build;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
     private final SimpleFunctionDescriptor createOverrideForBuiltinFunctionWithErasedParameterIfNeeded(FunctionDescriptor functionDescriptor, Function1<? super Name, ? extends Collection<? extends SimpleFunctionDescriptor>> function1) {
         Object obj;
         Name name = functionDescriptor.getName();
-        C12880j.m40222a((Object) name, "overridden.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "overridden.name");
         Iterator it = ((Iterable) function1.invoke(name)).iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -283,16 +283,16 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         }
         CopyBuilder newCopyBuilder = simpleFunctionDescriptor.newCopyBuilder();
         List<ValueParameterDescriptor> valueParameters = functionDescriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters, "overridden.valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "overridden.valueParameters");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) valueParameters, 10));
         for (ValueParameterDescriptor valueParameterDescriptor : valueParameters) {
-            C12880j.m40222a((Object) valueParameterDescriptor, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, "it");
             KotlinType type = valueParameterDescriptor.getType();
-            C12880j.m40222a((Object) type, "it.type");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "it.type");
             arrayList.add(new ValueParameterData(type, valueParameterDescriptor.declaresDefaultValue()));
         }
         List valueParameters2 = simpleFunctionDescriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters2, "override.valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters2, "override.valueParameters");
         newCopyBuilder.setValueParameters(UtilKt.copyValueParameters(arrayList, valueParameters2, functionDescriptor));
         newCopyBuilder.setSignatureChange();
         newCopyBuilder.setPreserveSourceElement();
@@ -346,7 +346,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             if (r11 == 0) goto L_0x001b
             goto L_0x0020
         L_0x001b:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r1
         L_0x001f:
             r11 = r1
@@ -406,11 +406,11 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             kotlin.reflect.jvm.internal.impl.types.KotlinType r0 = r8.getType()
             r10.initialize(r0)
             java.lang.String r0 = "DescriptorFactory.create…escriptor.type)\n        }"
-            kotlin.jvm.internal.C12880j.m40222a(r10, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r10, r0)
             if (r11 == 0) goto L_0x00f1
             java.util.List r0 = r11.getValueParameters()
             java.lang.String r1 = "setterMethod.valueParameters"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.lang.Object r0 = kotlin.p590y.C13199w.m40591g(r0)
             kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor r0 = (kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor) r0
             if (r0 == 0) goto L_0x00da
@@ -439,10 +439,10 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             r8.initialize(r10, r1)
             return r8
         L_0x00f5:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r1
         L_0x00f9:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r1
         */
         throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassMemberScope.createPropertyDescriptorByMethods(kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor, kotlin.jvm.functions.Function1):kotlin.reflect.jvm.internal.impl.load.java.descriptors.JavaPropertyDescriptor");
@@ -452,9 +452,9 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         KotlinType kotlinType2;
         JavaMethod javaMethod2 = javaMethod;
         JavaPropertyDescriptor create = JavaPropertyDescriptor.create(getOwnerDescriptor(), LazyJavaAnnotationsKt.resolveAnnotations(getC(), javaMethod2), modality, javaMethod.getVisibility(), false, javaMethod.getName(), getC().getComponents().getSourceElementFactory().source(javaMethod2), false);
-        C12880j.m40222a((Object) create, "JavaPropertyDescriptor.c…inal = */ false\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) create, "JavaPropertyDescriptor.c…inal = */ false\n        )");
         PropertyGetterDescriptorImpl createDefaultGetter = DescriptorFactory.createDefaultGetter(create, Annotations.Companion.getEMPTY());
-        C12880j.m40222a((Object) createDefaultGetter, "DescriptorFactory.create…iptor, Annotations.EMPTY)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createDefaultGetter, "DescriptorFactory.create…iptor, Annotations.EMPTY)");
         create.initialize(createDefaultGetter, null);
         if (kotlinType != null) {
             kotlinType2 = kotlinType;
@@ -482,7 +482,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         if (build != null) {
             return (SimpleFunctionDescriptor) build;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -494,7 +494,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             r5 = this;
             java.util.List r0 = r6.getValueParameters()
             java.lang.String r1 = "valueParameters"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.lang.Object r0 = kotlin.p590y.C13199w.m40595i(r0)
             kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor r0 = (kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor) r0
             r2 = 0
@@ -530,7 +530,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             if (r0 == 0) goto L_0x008a
             kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor$CopyBuilder r2 = r6.newCopyBuilder()
             java.util.List r6 = r6.getValueParameters()
-            kotlin.jvm.internal.C12880j.m40222a(r6, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r1)
             r1 = 1
             java.util.List r6 = kotlin.p590y.C13199w.m40575c(r6, r1)
             kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor$CopyBuilder r6 = r2.setValueParameters(r6)
@@ -576,9 +576,9 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
 
     private final boolean doesOverride(CallableDescriptor callableDescriptor, CallableDescriptor callableDescriptor2) {
         OverrideCompatibilityInfo isOverridableByWithoutExternalConditions = OverridingUtil.DEFAULT.isOverridableByWithoutExternalConditions(callableDescriptor2, callableDescriptor, true);
-        C12880j.m40222a((Object) isOverridableByWithoutExternalConditions, "OverridingUtil.DEFAULT.i…erDescriptor, this, true)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) isOverridableByWithoutExternalConditions, "OverridingUtil.DEFAULT.i…erDescriptor, this, true)");
         Result result = isOverridableByWithoutExternalConditions.getResult();
-        C12880j.m40222a((Object) result, "OverridingUtil.DEFAULT.i…iptor, this, true).result");
+        Intrinsics.checkReturnedValueIsNotNull((Object) result, "OverridingUtil.DEFAULT.i…iptor, this, true).result");
         if (result != Result.OVERRIDABLE || JavaIncompatibilityRulesOverridabilityCondition.Companion.doesJavaOverrideHaveIncompatibleValueParameterKinds(callableDescriptor2, callableDescriptor)) {
             return false;
         }
@@ -589,7 +589,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         boolean z;
         BuiltinMethodsWithDifferentJvmName builtinMethodsWithDifferentJvmName = BuiltinMethodsWithDifferentJvmName.INSTANCE;
         Name name = simpleFunctionDescriptor.getName();
-        C12880j.m40222a((Object) name, "name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "name");
         List<Name> builtinFunctionNamesByJvmName = builtinMethodsWithDifferentJvmName.getBuiltinFunctionNamesByJvmName(name);
         if ((builtinFunctionNamesByJvmName instanceof Collection) && builtinFunctionNamesByJvmName.isEmpty()) {
             return false;
@@ -632,7 +632,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         if (BuiltinMethodsWithDifferentJvmName.INSTANCE.isRemoveAtByIndex(simpleFunctionDescriptor)) {
             functionDescriptor = functionDescriptor.getOriginal();
         }
-        C12880j.m40222a((Object) functionDescriptor, "if (superDescriptor.isRe…iginal else subDescriptor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) functionDescriptor, "if (superDescriptor.isRe…iginal else subDescriptor");
         return doesOverride(functionDescriptor, simpleFunctionDescriptor);
     }
 
@@ -643,7 +643,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             return false;
         }
         Name name = simpleFunctionDescriptor.getName();
-        C12880j.m40222a((Object) name, "name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "name");
         Set<SimpleFunctionDescriptor> functionsFromSupertypes = getFunctionsFromSupertypes(name);
         if ((functionsFromSupertypes instanceof Collection) && functionsFromSupertypes.isEmpty()) {
             return false;
@@ -666,7 +666,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
     private final SimpleFunctionDescriptor findGetterByName(PropertyDescriptor propertyDescriptor, String str, Function1<? super Name, ? extends Collection<? extends SimpleFunctionDescriptor>> function1) {
         SimpleFunctionDescriptor simpleFunctionDescriptor;
         Name identifier = Name.identifier(str);
-        C12880j.m40222a((Object) identifier, "Name.identifier(getterName)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(getterName)");
         Iterator it = ((Iterable) function1.invoke(identifier)).iterator();
         do {
             simpleFunctionDescriptor = null;
@@ -699,14 +699,14 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             return findGetterByName(propertyDescriptor, str, function1);
         }
         String str2 = JvmAbi.getterName(propertyDescriptor.getName().asString());
-        C12880j.m40222a((Object) str2, "JvmAbi.getterName(name.asString())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) str2, "JvmAbi.getterName(name.asString())");
         return findGetterByName(propertyDescriptor, str2, function1);
     }
 
     private final SimpleFunctionDescriptor findSetterOverride(PropertyDescriptor propertyDescriptor, Function1<? super Name, ? extends Collection<? extends SimpleFunctionDescriptor>> function1) {
         SimpleFunctionDescriptor simpleFunctionDescriptor;
         Name identifier = Name.identifier(JvmAbi.setterName(propertyDescriptor.getName().asString()));
-        C12880j.m40222a((Object) identifier, "Name.identifier(JvmAbi.s…terName(name.asString()))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(JvmAbi.s…terName(name.asString()))");
         Iterator it = ((Iterable) function1.invoke(identifier)).iterator();
         do {
             simpleFunctionDescriptor = null;
@@ -719,9 +719,9 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
                 if (returnType != null && KotlinBuiltIns.isUnit(returnType)) {
                     KotlinTypeChecker kotlinTypeChecker = KotlinTypeChecker.DEFAULT;
                     List valueParameters = simpleFunctionDescriptor2.getValueParameters();
-                    C12880j.m40222a((Object) valueParameters, "descriptor.valueParameters");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "descriptor.valueParameters");
                     Object k = C13199w.m40599k(valueParameters);
-                    C12880j.m40222a(k, "descriptor.valueParameters.single()");
+                    Intrinsics.checkReturnedValueIsNotNull(k, "descriptor.valueParameters.single()");
                     if (kotlinTypeChecker.equalTypes(((ValueParameterDescriptor) k).getType(), propertyDescriptor.getType())) {
                         simpleFunctionDescriptor = simpleFunctionDescriptor2;
                         continue;
@@ -736,20 +736,20 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
 
     private final Visibility getConstructorVisibility(ClassDescriptor classDescriptor) {
         Visibility visibility = classDescriptor.getVisibility();
-        C12880j.m40222a((Object) visibility, "classDescriptor.visibility");
-        if (!C12880j.m40224a((Object) visibility, (Object) JavaVisibilities.PROTECTED_STATIC_VISIBILITY)) {
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "classDescriptor.visibility");
+        if (!Intrinsics.areEqual((Object) visibility, (Object) JavaVisibilities.PROTECTED_STATIC_VISIBILITY)) {
             return visibility;
         }
         Visibility visibility2 = JavaVisibilities.PROTECTED_AND_PACKAGE;
-        C12880j.m40222a((Object) visibility2, "JavaVisibilities.PROTECTED_AND_PACKAGE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) visibility2, "JavaVisibilities.PROTECTED_AND_PACKAGE");
         return visibility2;
     }
 
     private final Set<SimpleFunctionDescriptor> getFunctionsFromSupertypes(Name name) {
         TypeConstructor typeConstructor = getOwnerDescriptor().getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "ownerDescriptor.typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "ownerDescriptor.typeConstructor");
         Collection<KotlinType> supertypes = typeConstructor.getSupertypes();
-        C12880j.m40222a((Object) supertypes, "ownerDescriptor.typeConstructor.supertypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "ownerDescriptor.typeConstructor.supertypes");
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         for (KotlinType memberScope : supertypes) {
             C13196t.m40545a((Collection) linkedHashSet, (Iterable) memberScope.getMemberScope().getContributedFunctions(name, NoLookupLocation.WHEN_GET_SUPER_MEMBERS));
@@ -759,9 +759,9 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
 
     private final Set<PropertyDescriptor> getPropertiesFromSupertypes(Name name) {
         TypeConstructor typeConstructor = getOwnerDescriptor().getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "ownerDescriptor.typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "ownerDescriptor.typeConstructor");
         Collection<KotlinType> supertypes = typeConstructor.getSupertypes();
-        C12880j.m40222a((Object) supertypes, "ownerDescriptor.typeConstructor.supertypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "ownerDescriptor.typeConstructor.supertypes");
         ArrayList arrayList = new ArrayList();
         for (KotlinType memberScope : supertypes) {
             Collection<PropertyDescriptor> contributedVariables = memberScope.getMemberScope().getContributedVariables(name, NoLookupLocation.WHEN_GET_SUPER_MEMBERS);
@@ -777,8 +777,8 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
     private final boolean hasSameJvmDescriptorButDoesNotOverride(SimpleFunctionDescriptor simpleFunctionDescriptor, FunctionDescriptor functionDescriptor) {
         String computeJvmDescriptor$default = MethodSignatureMappingKt.computeJvmDescriptor$default(simpleFunctionDescriptor, false, false, 2, null);
         FunctionDescriptor original = functionDescriptor.getOriginal();
-        C12880j.m40222a((Object) original, "builtinWithErasedParameters.original");
-        if (!C12880j.m40224a((Object) computeJvmDescriptor$default, (Object) MethodSignatureMappingKt.computeJvmDescriptor$default(original, false, false, 2, null)) || doesOverride(simpleFunctionDescriptor, functionDescriptor)) {
+        Intrinsics.checkReturnedValueIsNotNull((Object) original, "builtinWithErasedParameters.original");
+        if (!Intrinsics.areEqual((Object) computeJvmDescriptor$default, (Object) MethodSignatureMappingKt.computeJvmDescriptor$default(original, false, false, 2, null)) || doesOverride(simpleFunctionDescriptor, functionDescriptor)) {
             return false;
         }
         return true;
@@ -793,7 +793,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             r6 = this;
             kotlin.reflect.jvm.internal.impl.name.Name r0 = r7.getName()
             java.lang.String r1 = "function.name"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.util.List r0 = kotlin.reflect.jvm.internal.impl.load.java.PropertiesConventionUtilKt.getPropertyNamesCandidatesByAccessorName(r0)
             boolean r1 = r0 instanceof java.util.Collection
             r2 = 1
@@ -892,7 +892,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         String jvmMethodNameIfSpecial = SpecialBuiltinMembers.getJvmMethodNameIfSpecial(simpleFunctionDescriptor2);
         if (jvmMethodNameIfSpecial != null) {
             Name identifier = Name.identifier(jvmMethodNameIfSpecial);
-            C12880j.m40222a((Object) identifier, "Name.identifier(nameInJava)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(nameInJava)");
             for (SimpleFunctionDescriptor createRenamedCopy : (Collection) function1.invoke(identifier)) {
                 SimpleFunctionDescriptor createRenamedCopy2 = createRenamedCopy(createRenamedCopy, name);
                 if (doesOverrideRenamedDescriptor(simpleFunctionDescriptor2, createRenamedCopy2)) {
@@ -901,7 +901,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             }
             return null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -911,7 +911,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             return null;
         }
         Name name = simpleFunctionDescriptor.getName();
-        C12880j.m40222a((Object) name, "descriptor.name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "descriptor.name");
         Iterator it = ((Iterable) function1.invoke(name)).iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -934,11 +934,11 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
     public final JavaClassConstructorDescriptor resolveConstructor(JavaConstructor javaConstructor) {
         ClassDescriptor ownerDescriptor2 = getOwnerDescriptor();
         JavaClassConstructorDescriptor createJavaConstructor = JavaClassConstructorDescriptor.createJavaConstructor(ownerDescriptor2, LazyJavaAnnotationsKt.resolveAnnotations(getC(), javaConstructor), false, getC().getComponents().getSourceElementFactory().source(javaConstructor));
-        C12880j.m40222a((Object) createJavaConstructor, "JavaClassConstructorDesc…ce(constructor)\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createJavaConstructor, "JavaClassConstructorDesc…ce(constructor)\n        )");
         LazyJavaResolverContext childForMethod = ContextKt.childForMethod(getC(), createJavaConstructor, javaConstructor, ownerDescriptor2.getDeclaredTypeParameters().size());
         ResolvedValueParameters resolveValueParameters = resolveValueParameters(childForMethod, createJavaConstructor, javaConstructor.getValueParameters());
         List declaredTypeParameters = ownerDescriptor2.getDeclaredTypeParameters();
-        C12880j.m40222a((Object) declaredTypeParameters, "classDescriptor.declaredTypeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredTypeParameters, "classDescriptor.declaredTypeParameters");
         List<JavaTypeParameter> typeParameters = javaConstructor.getTypeParameters();
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) typeParameters, 10));
         for (JavaTypeParameter resolveTypeParameter : typeParameters) {
@@ -946,7 +946,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             if (resolveTypeParameter2 != null) {
                 arrayList.add(resolveTypeParameter2);
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -985,14 +985,14 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         BuiltinMethodsWithSpecialGenericSignature builtinMethodsWithSpecialGenericSignature = BuiltinMethodsWithSpecialGenericSignature.INSTANCE;
         Name name = simpleFunctionDescriptor.getName();
         String str = "name";
-        C12880j.m40222a((Object) name, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, str);
         boolean sameAsBuiltinMethodWithErasedValueParameters = builtinMethodsWithSpecialGenericSignature.getSameAsBuiltinMethodWithErasedValueParameters(name);
         boolean z = false;
         if (!sameAsBuiltinMethodWithErasedValueParameters) {
             return false;
         }
         Name name2 = simpleFunctionDescriptor.getName();
-        C12880j.m40222a((Object) name2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) name2, str);
         Set<SimpleFunctionDescriptor> functionsFromSupertypes = getFunctionsFromSupertypes(name2);
         ArrayList arrayList = new ArrayList();
         for (SimpleFunctionDescriptor overriddenBuiltinFunctionWithErasedValueParametersInJava : functionsFromSupertypes) {
@@ -1054,7 +1054,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         }
         SmartSet create = SmartSet.Companion.create();
         Collection resolveOverridesForNonStaticMembers = DescriptorResolverUtils.resolveOverridesForNonStaticMembers(name, functionsFromSupertypes, C13185o.m40513a(), getOwnerDescriptor(), ErrorReporter.DO_NOTHING);
-        C12880j.m40222a((Object) resolveOverridesForNonStaticMembers, "resolveOverridesForNonSt…rter.DO_NOTHING\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resolveOverridesForNonStaticMembers, "resolveOverridesForNonSt…rter.DO_NOTHING\n        )");
         addOverriddenSpecialMethods(name, collection, resolveOverridesForNonStaticMembers, collection, new LazyJavaClassMemberScope$computeNonDeclaredFunctions$3(this));
         addOverriddenSpecialMethods(name, collection, resolveOverridesForNonStaticMembers, create, new LazyJavaClassMemberScope$computeNonDeclaredFunctions$4(this));
         ArrayList arrayList2 = new ArrayList();
@@ -1077,7 +1077,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             addPropertyOverrideByMethod(propertiesFromSupertypes, collection, new LazyJavaClassMemberScope$computeNonDeclaredProperties$1(this));
             addPropertyOverrideByMethod(propertiesFromSupertypes, create, new LazyJavaClassMemberScope$computeNonDeclaredProperties$2(this));
             Collection resolveOverridesForNonStaticMembers = DescriptorResolverUtils.resolveOverridesForNonStaticMembers(name, C13190q0.m40534a(propertiesFromSupertypes, (Iterable) create), collection, getOwnerDescriptor(), getC().getComponents().getErrorReporter());
-            C12880j.m40222a((Object) resolveOverridesForNonStaticMembers, "resolveOverridesForNonSt…rorReporter\n            )");
+            Intrinsics.checkReturnedValueIsNotNull((Object) resolveOverridesForNonStaticMembers, "resolveOverridesForNonSt…rorReporter\n            )");
             collection.addAll(resolveOverridesForNonStaticMembers);
         }
     }
@@ -1089,9 +1089,9 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         }
         LinkedHashSet linkedHashSet = new LinkedHashSet(((DeclaredMemberIndex) getDeclaredMemberIndex().invoke()).getFieldNames());
         TypeConstructor typeConstructor = getOwnerDescriptor().getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "ownerDescriptor.typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "ownerDescriptor.typeConstructor");
         Collection<KotlinType> supertypes = typeConstructor.getSupertypes();
-        C12880j.m40222a((Object) supertypes, "ownerDescriptor.typeConstructor.supertypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "ownerDescriptor.typeConstructor.supertypes");
         for (KotlinType memberScope : supertypes) {
             C13196t.m40545a((Collection) linkedHashSet, (Iterable) memberScope.getMemberScope().getVariableNames());
         }
@@ -1137,17 +1137,17 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
     /* access modifiers changed from: protected */
     public MethodSignatureData resolveMethodSignature(JavaMethod javaMethod, List<? extends TypeParameterDescriptor> list, KotlinType kotlinType, List<? extends ValueParameterDescriptor> list2) {
         PropagatedSignature resolvePropagatedSignature = getC().getComponents().getSignaturePropagator().resolvePropagatedSignature(javaMethod, getOwnerDescriptor(), kotlinType, null, list2, list);
-        C12880j.m40222a((Object) resolvePropagatedSignature, "c.components.signaturePr…dTypeParameters\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resolvePropagatedSignature, "c.components.signaturePr…dTypeParameters\n        )");
         KotlinType returnType = resolvePropagatedSignature.getReturnType();
-        C12880j.m40222a((Object) returnType, "propagated.returnType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) returnType, "propagated.returnType");
         KotlinType receiverType = resolvePropagatedSignature.getReceiverType();
         List valueParameters = resolvePropagatedSignature.getValueParameters();
-        C12880j.m40222a((Object) valueParameters, "propagated.valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "propagated.valueParameters");
         List typeParameters = resolvePropagatedSignature.getTypeParameters();
-        C12880j.m40222a((Object) typeParameters, "propagated.typeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, "propagated.typeParameters");
         boolean hasStableParameterNames = resolvePropagatedSignature.hasStableParameterNames();
         List errors = resolvePropagatedSignature.getErrors();
-        C12880j.m40222a((Object) errors, "propagated.errors");
+        Intrinsics.checkReturnedValueIsNotNull((Object) errors, "propagated.errors");
         MethodSignatureData methodSignatureData = new MethodSignatureData(returnType, receiverType, valueParameters, typeParameters, hasStableParameterNames, errors);
         return methodSignatureData;
     }
@@ -1162,9 +1162,9 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
     /* access modifiers changed from: protected */
     public HashSet<Name> computeFunctionNames(DescriptorKindFilter descriptorKindFilter, Function1<? super Name, Boolean> function1) {
         TypeConstructor typeConstructor = getOwnerDescriptor().getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "ownerDescriptor.typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "ownerDescriptor.typeConstructor");
         Collection<KotlinType> supertypes = typeConstructor.getSupertypes();
-        C12880j.m40222a((Object) supertypes, "ownerDescriptor.typeConstructor.supertypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "ownerDescriptor.typeConstructor.supertypes");
         HashSet<Name> hashSet = new HashSet<>();
         for (KotlinType memberScope : supertypes) {
             C13196t.m40545a((Collection) hashSet, (Iterable) memberScope.getMemberScope().getFunctionNames());

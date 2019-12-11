@@ -7,7 +7,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -17,7 +17,7 @@ import p163g.p201e.p203b.p312q.C7689j;
 import p163g.p201e.p203b.p312q.C7718y;
 import p163g.p201e.p203b.p327y.p328g.C7930a;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\u0018\u00002\u00020\u0001B\u001d\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0016\u0010\t\u001a\u00020\n2\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\fH\u0002J\u0016\u0010\r\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u0011J\u000e\u0010\u0012\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\u000fJ\f\u0010\u0013\u001a\u00020\u0014*\u00020\u000fH\u0002R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0015"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/globalnav/tab/TabViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/AutoDisposeViewModel;", "router", "Lcom/bamtechmedia/dominguez/globalnav/tab/TabRouter;", "serviceAvailabilityState", "Lcom/bamtechmedia/dominguez/portability/api/ServiceAvailabilityState;", "deepLinkRouter", "Lcom/bamtechmedia/dominguez/deeplink/DeepLinkRouter;", "(Lcom/bamtechmedia/dominguez/globalnav/tab/TabRouter;Lcom/bamtechmedia/dominguez/portability/api/ServiceAvailabilityState;Lcom/bamtechmedia/dominguez/deeplink/DeepLinkRouter;)V", "observeServiceAvailableStream", "", "whenEnabled", "Lkotlin/Function0;", "startDeepLink", "tab", "Lcom/bamtechmedia/dominguez/globalnav/GlobalNavTab;", "deepLink", "Lokhttp3/HttpUrl;", "startTab", "isExcludedFromPortabilityCheck", "", "globalNav_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.q.d0.l */
@@ -52,7 +52,7 @@ public final class C7677l extends C5733a {
 
         /* renamed from: a */
         public final void accept(Boolean bool) {
-            C12880j.m40222a((Object) bool, "enabled");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bool, "enabled");
             if (bool.booleanValue()) {
                 this.f16719U.invoke();
             } else {
@@ -74,7 +74,7 @@ public final class C7677l extends C5733a {
 
         /* renamed from: a */
         public final void mo20596a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -82,7 +82,7 @@ public final class C7677l extends C5733a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -118,7 +118,7 @@ public final class C7677l extends C5733a {
         public final void invoke() {
             C7292e a = this.f16724c.f16718c;
             Fragment fragment = this.f16722U;
-            C12880j.m40222a((Object) fragment, "rootFragment");
+            Intrinsics.checkReturnedValueIsNotNull((Object) fragment, "rootFragment");
             a.mo20099a(fragment, this.f16723V);
         }
     }
@@ -167,11 +167,11 @@ public final class C7677l extends C5733a {
     /* renamed from: a */
     public final void mo20594a(C7689j jVar, HttpUrl httpUrl) {
         Fragment fragment = (Fragment) jVar.mo20603Y().newInstance();
-        C12880j.m40222a((Object) fragment, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fragment, "it");
         fragment.setArguments(jVar.mo20602X());
         if (m22691b(jVar)) {
             C7292e eVar = this.f16718c;
-            C12880j.m40222a((Object) fragment, "rootFragment");
+            Intrinsics.checkReturnedValueIsNotNull((Object) fragment, "rootFragment");
             eVar.mo20099a(fragment, httpUrl);
             return;
         }
@@ -195,7 +195,7 @@ public final class C7677l extends C5733a {
             g.n.a.h r1 = p163g.p503n.p504a.C11793e.m37930a(r1)
             java.lang.Object r0 = r0.mo30161a(r1)
             java.lang.String r1 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.a0 r0 = (p163g.p503n.p504a.C11786a0) r0
             g.e.b.q.d0.l$a r1 = new g.e.b.q.d0.l$a
             r1.<init>(r3, r4)

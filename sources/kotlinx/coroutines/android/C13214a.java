@@ -2,7 +2,7 @@ package kotlinx.coroutines.android;
 
 import android.os.Handler;
 import android.os.Looper;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12688f;
 import kotlinx.coroutines.C13343m0;
 
@@ -42,7 +42,7 @@ public final class C13214a extends C13215b implements C13343m0 {
 
     /* renamed from: b */
     public boolean mo34349b(C12688f fVar) {
-        return !this.f29649V || (C12880j.m40224a((Object) Looper.myLooper(), (Object) this.f29650c.getLooper()) ^ true);
+        return !this.f29649V || (Intrinsics.areEqual((Object) Looper.myLooper(), (Object) this.f29650c.getLooper()) ^ true);
     }
 
     public boolean equals(Object obj) {
@@ -57,7 +57,7 @@ public final class C13214a extends C13215b implements C13343m0 {
         String str = this.f29648U;
         if (str == null) {
             String handler = this.f29650c.toString();
-            C12880j.m40222a((Object) handler, "handler.toString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) handler, "handler.toString()");
             return handler;
         } else if (!this.f29649V) {
             return str;

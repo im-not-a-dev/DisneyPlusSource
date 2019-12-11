@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement;
 
 import java.util.Set;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: signatureEnhancement.kt */
 public final class SignatureEnhancementKt {
@@ -15,7 +15,7 @@ public final class SignatureEnhancementKt {
     public static final <T> T select(Set<? extends T> set, T t, T t2, T t3, boolean z) {
         if (z) {
             T t4 = set.contains(t) ? t : set.contains(t2) ? t2 : null;
-            if (C12880j.m40224a((Object) t4, (Object) t) && C12880j.m40224a((Object) t3, (Object) t2)) {
+            if (Intrinsics.areEqual((Object) t4, (Object) t) && Intrinsics.areEqual((Object) t3, (Object) t2)) {
                 t4 = null;
             } else if (t3 != null) {
                 t4 = t3;

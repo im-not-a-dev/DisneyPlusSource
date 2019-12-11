@@ -77,7 +77,7 @@ public final class TextEntry implements Parcelable {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x0038, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f9110X, (java.lang.Object) r3.f9110X) != false) goto L_0x003d;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f9110X, (java.lang.Object) r3.f9110X) != false) goto L_0x003d;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -89,23 +89,23 @@ public final class TextEntry implements Parcelable {
             com.bamtechmedia.dominguez.core.content.assets.TextEntry r3 = (com.bamtechmedia.dominguez.core.content.assets.TextEntry) r3
             java.lang.String r0 = r2.f9111c
             java.lang.String r1 = r3.f9111c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             java.lang.String r0 = r2.f9107U
             java.lang.String r1 = r3.f9107U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             java.lang.String r0 = r2.f9108V
             java.lang.String r1 = r3.f9108V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             java.lang.String r0 = r2.f9109W
             java.lang.String r1 = r3.f9109W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             java.lang.String r0 = r2.f9110X
             java.lang.String r3 = r3.f9110X
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x003b
             goto L_0x003d
         L_0x003b:

@@ -2,9 +2,9 @@ package com.google.android.exoplayer2.p382u0.p388r;
 
 import com.google.android.exoplayer2.p382u0.C9323c;
 import com.google.android.exoplayer2.p382u0.C9327g;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9556l0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.ArrayDeque;
@@ -117,7 +117,7 @@ public final class C9367a extends C9323c {
             StringBuilder sb = new StringBuilder();
             sb.append("Ignoring non-pixel tts extent: ");
             sb.append(a);
-            C9563q.m29500d(str, sb.toString());
+            Log.m29500d(str, sb.toString());
             return null;
         }
         try {
@@ -126,7 +126,7 @@ public final class C9367a extends C9323c {
             StringBuilder sb2 = new StringBuilder();
             sb2.append("Ignoring malformed tts extent: ");
             sb2.append(a);
-            C9563q.m29500d(str, sb2.toString());
+            Log.m29500d(str, sb2.toString());
             return null;
         }
     }
@@ -173,7 +173,7 @@ public final class C9367a extends C9323c {
                             StringBuilder sb = new StringBuilder();
                             sb.append("Ignoring unsupported tag: ");
                             sb.append(newPullParser.getName());
-                            C9563q.m29499c(str2, sb.toString());
+                            Log.m29499c(str2, sb.toString());
                             i2++;
                             bVar3 = bVar;
                         } else {
@@ -191,7 +191,7 @@ public final class C9367a extends C9323c {
                                         bVar4.mo24194a(a2);
                                     }
                                 } catch (C9327g e) {
-                                    C9563q.m29498b(str2, "Suppressing parser error", e);
+                                    Log.m29498b(str2, "Suppressing parser error", e);
                                     i2++;
                                 }
                             }
@@ -236,7 +236,7 @@ public final class C9367a extends C9323c {
     /* renamed from: b */
     private String[] m28573b(String str) {
         String trim = str.trim();
-        return trim.isEmpty() ? new String[0] : C9554k0.m29423a(trim, "\\s+");
+        return trim.isEmpty() ? new String[0] : Util.m29423a(trim, "\\s+");
     }
 
     /* renamed from: a */
@@ -247,7 +247,7 @@ public final class C9367a extends C9323c {
         float f = 1.0f;
         String attributeValue2 = xmlPullParser.getAttributeValue(str, "frameRateMultiplier");
         if (attributeValue2 != null) {
-            String[] a = C9554k0.m29423a(attributeValue2, " ");
+            String[] a = Util.m29423a(attributeValue2, " ");
             if (a.length == 2) {
                 f = ((float) Integer.parseInt(a[0])) / ((float) Integer.parseInt(a[1]));
             } else {
@@ -280,7 +280,7 @@ public final class C9367a extends C9323c {
             StringBuilder sb = new StringBuilder();
             sb.append(str);
             sb.append(attributeValue);
-            C9563q.m29500d(str2, sb.toString());
+            Log.m29500d(str2, sb.toString());
             return aVar;
         }
         try {
@@ -299,7 +299,7 @@ public final class C9367a extends C9323c {
             StringBuilder sb3 = new StringBuilder();
             sb3.append(str);
             sb3.append(attributeValue);
-            C9563q.m29500d(str2, sb3.toString());
+            Log.m29500d(str2, sb3.toString());
             return aVar;
         }
     }
@@ -374,20 +374,20 @@ public final class C9367a extends C9323c {
                     StringBuilder sb = new StringBuilder();
                     sb.append(str2);
                     sb.append(a2);
-                    C9563q.m29500d(str, sb.toString());
+                    Log.m29500d(str, sb.toString());
                     return null;
                 }
             } else if (!matcher2.matches()) {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("Ignoring region with unsupported origin: ");
                 sb2.append(a2);
-                C9563q.m29500d(str, sb2.toString());
+                Log.m29500d(str, sb2.toString());
                 return null;
             } else if (cVar2 == null) {
                 StringBuilder sb3 = new StringBuilder();
                 sb3.append(str3);
                 sb3.append(a2);
-                C9563q.m29500d(str, sb3.toString());
+                Log.m29500d(str, sb3.toString());
                 return null;
             } else {
                 try {
@@ -398,7 +398,7 @@ public final class C9367a extends C9323c {
                     StringBuilder sb4 = new StringBuilder();
                     sb4.append(str2);
                     sb4.append(a2);
-                    C9563q.m29500d(str, sb4.toString());
+                    Log.m29500d(str, sb4.toString());
                     return null;
                 }
             }
@@ -415,20 +415,20 @@ public final class C9367a extends C9323c {
                         StringBuilder sb5 = new StringBuilder();
                         sb5.append(str4);
                         sb5.append(a2);
-                        C9563q.m29500d(str, sb5.toString());
+                        Log.m29500d(str, sb5.toString());
                         return null;
                     }
                 } else if (!matcher4.matches()) {
                     StringBuilder sb6 = new StringBuilder();
                     sb6.append("Ignoring region with unsupported extent: ");
                     sb6.append(a2);
-                    C9563q.m29500d(str, sb6.toString());
+                    Log.m29500d(str, sb6.toString());
                     return null;
                 } else if (cVar2 == null) {
                     StringBuilder sb7 = new StringBuilder();
                     sb7.append(str3);
                     sb7.append(a2);
-                    C9563q.m29500d(str, sb7.toString());
+                    Log.m29500d(str, sb7.toString());
                     return null;
                 } else {
                     try {
@@ -439,13 +439,13 @@ public final class C9367a extends C9323c {
                         StringBuilder sb8 = new StringBuilder();
                         sb8.append(str4);
                         sb8.append(a2);
-                        C9563q.m29500d(str, sb8.toString());
+                        Log.m29500d(str, sb8.toString());
                         return null;
                     }
                 }
                 String a4 = C9556l0.m29462a(xmlPullParser2, "displayAlign");
                 if (a4 != null) {
-                    String k = C9554k0.m29457k(a4);
+                    String k = Util.m29457k(a4);
                     char c = 65535;
                     int hashCode = k.hashCode();
                     if (hashCode != -1364013995) {
@@ -469,10 +469,10 @@ public final class C9367a extends C9323c {
                 C9372c cVar32 = new C9372c(a, f2, f, 0, i, f4, f3, 1, 1.0f / ((float) aVar.f21559a));
                 return cVar32;
             }
-            C9563q.m29500d(str, "Ignoring region without an extent");
+            Log.m29500d(str, "Ignoring region without an extent");
             return null;
         }
-        C9563q.m29500d(str, "Ignoring region without an origin");
+        Log.m29500d(str, "Ignoring region without an origin");
         return null;
     }
 
@@ -582,7 +582,7 @@ public final class C9367a extends C9323c {
         L_0x007f:
             goto L_0x01fb
         L_0x0081:
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.m29457k(r3)
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.m29457k(r3)
             int r4 = r3.hashCode()
             switch(r4) {
                 case -1461280213: goto L_0x00ab;
@@ -639,7 +639,7 @@ public final class C9367a extends C9323c {
             r2.mo24209c(r10)
             goto L_0x01fb
         L_0x00e2:
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.C9554k0.m29457k(r3)
+            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.m29457k(r3)
             int r4 = r3.hashCode()
             switch(r4) {
                 case -1364013995: goto L_0x0116;
@@ -735,7 +735,7 @@ public final class C9367a extends C9323c {
             r4.append(r6)
             r4.append(r3)
             java.lang.String r3 = r4.toString()
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r5, r3)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r5, r3)
             goto L_0x01fb
         L_0x019e:
             com.google.android.exoplayer2.u0.r.e r2 = r11.m28566a(r2)
@@ -753,7 +753,7 @@ public final class C9367a extends C9323c {
             r4.append(r6)
             r4.append(r3)
             java.lang.String r3 = r4.toString()
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r5, r3)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r5, r3)
             goto L_0x01fb
         L_0x01c7:
             com.google.android.exoplayer2.u0.r.e r2 = r11.m28566a(r2)
@@ -767,7 +767,7 @@ public final class C9367a extends C9323c {
             r4.append(r6)
             r4.append(r3)
             java.lang.String r3 = r4.toString()
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r5, r3)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r5, r3)
             goto L_0x01fb
         L_0x01e8:
             java.lang.String r4 = r12.getName()
@@ -971,12 +971,12 @@ public final class C9367a extends C9323c {
     /* renamed from: a */
     private static void m28569a(String str, C9374e eVar) throws C9327g {
         Matcher matcher;
-        String[] a = C9554k0.m29423a(str, "\\s+");
+        String[] a = Util.m29423a(str, "\\s+");
         if (a.length == 1) {
             matcher = f21552q.matcher(str);
         } else if (a.length == 2) {
             matcher = f21552q.matcher(a[1]);
-            C9563q.m29500d("TtmlDecoder", "Multiple values in fontSize attribute. Picking the second value for vertical font size and ignoring the first.");
+            Log.m29500d("TtmlDecoder", "Multiple values in fontSize attribute. Picking the second value for vertical font size and ignoring the first.");
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append("Invalid number of entries for fontSize: ");

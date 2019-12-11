@@ -5,7 +5,7 @@ import android.util.SparseIntArray;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
 import com.google.android.exoplayer2.source.C9141f0;
@@ -300,7 +300,7 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
                     iArr[i2] = new int[]{i3};
                     i2 = i4;
                 } else {
-                    String[] a2 = C9554k0.m29423a(a.f20447b, ",");
+                    String[] a2 = Util.m29423a(a.f20447b, ",");
                     int[] iArr2 = new int[(a2.length + 1)];
                     iArr2[0] = i3;
                     int i5 = 1;
@@ -670,7 +670,7 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
                     if (str == null) {
                         return new Format[]{m27143a(aVar.f20418a)};
                     }
-                    String[] a = C9554k0.m29423a(str, ";");
+                    String[] a = Util.m29423a(str, ";");
                     Format[] formatArr = new Format[a.length];
                     for (int i3 = 0; i3 < a.length; i3++) {
                         Matcher matcher = f20341o0.matcher(a[i3]);

@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.core.recycler.C5812b.C5813a;
 import com.bamtechmedia.dominguez.core.recycler.RecyclerViewSnapScrollHelper;
 import com.bamtechmedia.dominguez.core.recycler.RecyclerViewSnapScrollHelper.C5805c;
 import com.bamtechmedia.dominguez.core.recycler.RecyclerViewSnapScrollHelper.C5805c.C5807b;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5363f;
 
 /* renamed from: com.bamtechmedia.dominguez.discover.k */
@@ -34,15 +34,15 @@ public final class C6107k implements C5813a {
         }
         RecyclerViewSnapScrollHelper r = this.f14044a.mo12327r();
         C0722m viewLifecycleOwner = this.f14044a.getViewLifecycleOwner();
-        C12880j.m40222a((Object) viewLifecycleOwner, "fragment.viewLifecycleOwner");
+        Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "fragment.viewLifecycleOwner");
         RecyclerView recyclerView2 = (RecyclerView) this.f14044a._$_findCachedViewById(C5363f.discoverRecyclerView);
         String str = "fragment.discoverRecyclerView";
-        C12880j.m40222a((Object) recyclerView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
         RecyclerView recyclerView3 = (RecyclerView) this.f14044a._$_findCachedViewById(C5363f.discoverRecyclerView);
-        C12880j.m40222a((Object) recyclerView3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView3, str);
         int paddingTop = recyclerView3.getPaddingTop();
         RecyclerView recyclerView4 = (RecyclerView) this.f14044a._$_findCachedViewById(C5363f.discoverRecyclerView);
-        C12880j.m40222a((Object) recyclerView4, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView4, str);
         r.mo17710a(viewLifecycleOwner, recyclerView2, (C5805c) new C5807b(paddingTop, recyclerView4.getPaddingBottom()));
     }
 }

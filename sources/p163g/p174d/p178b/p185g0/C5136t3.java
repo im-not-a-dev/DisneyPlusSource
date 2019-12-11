@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.View;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.C5300m;
 import p163g.p174d.p178b.p185g0.p187w5.C5186a;
 import p163g.p174d.p178b.p185g0.p187w5.C5187b;
@@ -106,7 +106,7 @@ public final class C5136t3 extends C5170v3 {
         if (C5187b.m17511a(this.f12453Z)) {
             Activity activity = this.f12453Z;
             C5300m mVar = this.f12487U;
-            C12880j.m40222a((Object) mVar, "events");
+            Intrinsics.checkReturnedValueIsNotNull((Object) mVar, "events");
             C5187b.m17510a(activity, mVar, this.f12451X, this.f12452Y);
             return;
         }

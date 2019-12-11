@@ -11,7 +11,7 @@ import java.util.Locale;
 import javax.inject.Provider;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -71,7 +71,7 @@ public final class DefaultLegalApi implements LegalApi {
         HttpUrl e = HttpUrl.m44643e(sb.toString());
         if (e != null) {
             HttpUrl a = e.mo35758i().mo35770a("langPref", determineLanguageCode(str2)).mo35772a();
-            C12880j.m40222a((Object) a, "requireNotNull(HttpUrl.p…de))\n            .build()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "requireNotNull(HttpUrl.p…de))\n            .build()");
             return a;
         }
         throw new IllegalArgumentException("Required value was null.".toString());
@@ -85,7 +85,7 @@ public final class DefaultLegalApi implements LegalApi {
         HttpUrl e = HttpUrl.m44643e(sb.toString());
         if (e != null) {
             HttpUrl a = e.mo35758i().mo35770a("langPref", determineLanguageCode(str)).mo35772a();
-            C12880j.m40222a((Object) a, "requireNotNull(HttpUrl.p…de))\n            .build()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "requireNotNull(HttpUrl.p…de))\n            .build()");
             return a;
         }
         throw new IllegalArgumentException("Required value was null.".toString());
@@ -99,7 +99,7 @@ public final class DefaultLegalApi implements LegalApi {
         HttpUrl e = HttpUrl.m44643e(sb.toString());
         if (e != null) {
             HttpUrl a = e.mo35758i().mo35770a("langPref", determineLanguageCode(str)).mo35770a("countryCode", str).mo35772a();
-            C12880j.m40222a((Object) a, "requireNotNull(HttpUrl.p…ode)\n            .build()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "requireNotNull(HttpUrl.p…ode)\n            .build()");
             return a;
         }
         throw new IllegalArgumentException("Required value was null.".toString());
@@ -112,16 +112,16 @@ public final class DefaultLegalApi implements LegalApi {
             sb.append(languageTag);
             sb.append('-');
             Locale locale = Locale.US;
-            C12880j.m40222a((Object) locale, "Locale.US");
+            Intrinsics.checkReturnedValueIsNotNull((Object) locale, "Locale.US");
             if (str != null) {
                 String upperCase = str.toUpperCase(locale);
-                C12880j.m40222a((Object) upperCase, "(this as java.lang.String).toUpperCase(locale)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) upperCase, "(this as java.lang.String).toUpperCase(locale)");
                 sb.append(upperCase);
                 return sb.toString();
             }
             throw new C13142s("null cannot be cast to non-null type java.lang.String");
         }
-        C12880j.m40222a((Object) languageTag, "defaultLangCode");
+        Intrinsics.checkReturnedValueIsNotNull((Object) languageTag, "defaultLangCode");
         return languageTag;
     }
 
@@ -132,18 +132,18 @@ public final class DefaultLegalApi implements LegalApi {
         aVar.mo35840a(ACCEPT_HEADER, MIME_TYPE_JSON);
         aVar.mo35847b();
         Request a = aVar.mo35846a();
-        C12880j.m40222a((Object) a, "Request.Builder()\n      …et()\n            .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Request.Builder()\n      …et()\n            .build()");
         OkHttpClient okHttpClient2 = this.okHttpClient;
         C11725h<LegalDocContentResponse> hVar = this.legalDocContentAdapter;
-        C12880j.m40222a((Object) hVar, "legalDocContentAdapter");
+        Intrinsics.checkReturnedValueIsNotNull((Object) hVar, "legalDocContentAdapter");
         Single<LegalDocContentResponse> g = C5879c.m18933a(a, okHttpClient2).mo30233g(new DefaultLegalApi$legalDocContentOnce$$inlined$createTypedSingle$1(hVar));
-        C12880j.m40222a((Object) g, "createSingle(client).map…)?.toObject<T>(adapter) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "createSingle(client).map…)?.toObject<T>(adapter) }");
         return g;
     }
 
     private final Single<SiteConfigResponse> siteConfigOnce() {
         Single<SiteConfigResponse> a = this.countryCodeProvider.mo17142a().mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultLegalApi$siteConfigOnce$1<Object,Object>(this));
-        C12880j.m40222a((Object) a, "countryCodeProvider.coun…figAdapter)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "countryCodeProvider.coun…figAdapter)\n            }");
         return a;
     }
 
@@ -152,25 +152,25 @@ public final class DefaultLegalApi implements LegalApi {
         Single a2 = this.countryCodeProvider.mo17142a();
         DefaultLegalApi$createNrtAccount$1 defaultLegalApi$createNrtAccount$1 = new DefaultLegalApi$createNrtAccount$1(this, str, list2, list, a);
         Completable b = a2.mo30217b((Function<? super T, ? extends CompletableSource>) defaultLegalApi$createNrtAccount$1);
-        C12880j.m40222a((Object) b, "countryCodeProvider.coun…omplete() }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "countryCodeProvider.coun…omplete() }\n            }");
         return b;
     }
 
     public Single<List<LegalDisclosure>> getLegalData() {
         Single<List<LegalDisclosure>> g = siteConfigOnce().mo30233g(DefaultLegalApi$getLegalData$1.INSTANCE);
-        C12880j.m40222a((Object) g, "siteConfigOnce().map {\n …)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "siteConfigOnce().map {\n …)\n            }\n        }");
         return g;
     }
 
     public Single<LegalDocContent> getLegalDocContent(String str) {
         Single<LegalDocContent> a = this.countryCodeProvider.mo17142a().mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultLegalApi$getLegalDocContent$1<Object,Object>(this, str));
-        C12880j.m40222a((Object) a, "countryCodeProvider.coun…(it.data) }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "countryCodeProvider.coun…(it.data) }\n            }");
         return a;
     }
 
     public Single<List<MarketingEntity>> getMarketingData() {
         Single<List<MarketingEntity>> g = siteConfigOnce().mo30233g(DefaultLegalApi$getMarketingData$1.INSTANCE);
-        C12880j.m40222a((Object) g, "siteConfigOnce().map {\n …)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "siteConfigOnce().map {\n …)\n            }\n        }");
         return g;
     }
 }

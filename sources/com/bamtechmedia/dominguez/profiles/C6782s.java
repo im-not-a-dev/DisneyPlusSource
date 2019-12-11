@@ -33,7 +33,7 @@ public final class C6782s {
             io.reactivex.functions.Function r1 = (p520io.reactivex.functions.Function) r1
             io.reactivex.Single r0 = r0.mo30233g(r1)
             java.lang.String r1 = "profileRepository.active….map(Profile::isAutoPlay)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             return r0
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtechmedia.dominguez.profiles.C6782s.mo19523a():io.reactivex.Single");

@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import java.util.Set;
 import kotlin.C13147x;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12883m;
 import kotlin.jvm.internal.C12884n;
 import kotlin.jvm.internal.C12891u;
@@ -141,7 +141,7 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
         Class<DescriptorRendererOptionsImpl> cls = DescriptorRendererOptionsImpl.class;
         DescriptorRendererOptionsImpl descriptorRendererOptionsImpl = new DescriptorRendererOptionsImpl();
         for (Field field : cls.getDeclaredFields()) {
-            C12880j.m40222a((Object) field, "field");
+            Intrinsics.checkReturnedValueIsNotNull((Object) field, "field");
             if ((field.getModifiers() & 8) == 0) {
                 field.setAccessible(true);
                 Object obj = field.get(this);
@@ -152,7 +152,7 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
                 if (bVar != null) {
                     String name = field.getName();
                     String str = "field.name";
-                    C12880j.m40222a((Object) name, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) name, str);
                     boolean b = true ^ C12832w.m40123b(name, "is", false, 2, null);
                     if (!C13147x.f29590a || b) {
                         KClass a = C12895y.m40230a((Class) cls);
@@ -160,7 +160,7 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
                         StringBuilder sb = new StringBuilder();
                         sb.append("get");
                         String name3 = field.getName();
-                        C12880j.m40222a((Object) name3, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) name3, str);
                         sb.append(C12832w.m40125f(name3));
                         field.set(descriptorRendererOptionsImpl, descriptorRendererOptionsImpl.property(bVar.getValue(this, new C12891u(a, name2, sb.toString()))));
                     } else {

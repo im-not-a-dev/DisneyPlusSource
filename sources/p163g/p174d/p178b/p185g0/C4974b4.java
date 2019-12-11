@@ -12,7 +12,7 @@ import p163g.p174d.p178b.p196m0.C5311f;
 import p163g.p174d.p178b.p200z.C5342b;
 import p163g.p174d.p178b.p200z.C5342b.C5343a;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @SuppressLint({"CheckResult"})
 /* renamed from: g.d.b.g0.b4 */
@@ -133,9 +133,9 @@ public class C4974b4 implements C5271z3 {
                 this.f12217Y.add(str);
                 return;
             }
-            C14100a.m44532e("Attempting to double lock controls with \"%s\" ", str);
+            Timber.m44532e("Attempting to double lock controls with \"%s\" ", str);
         } else if (!this.f12217Y.remove(str)) {
-            C14100a.m44532e("Attempting to unlock controls with \"%s\" when controls are unlocked", str);
+            Timber.m44532e("Attempting to unlock controls with \"%s\" when controls are unlocked", str);
         }
     }
 

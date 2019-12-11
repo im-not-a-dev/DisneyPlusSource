@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
@@ -21,7 +21,7 @@ public final class FieldOverridabilityCondition implements ExternalOverridabilit
         }
         PropertyDescriptor propertyDescriptor = (PropertyDescriptor) callableDescriptor2;
         PropertyDescriptor propertyDescriptor2 = (PropertyDescriptor) callableDescriptor;
-        if (!C12880j.m40224a((Object) propertyDescriptor.getName(), (Object) propertyDescriptor2.getName())) {
+        if (!Intrinsics.areEqual((Object) propertyDescriptor.getName(), (Object) propertyDescriptor2.getName())) {
             return Result.UNKNOWN;
         }
         if (JavaDescriptorUtilKt.isJavaField(propertyDescriptor) && JavaDescriptorUtilKt.isJavaField(propertyDescriptor2)) {

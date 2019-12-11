@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.load.kotlin;
 
 import kotlin.C12898l;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType.Array;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType.Object;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType.Primitive;
@@ -25,9 +25,9 @@ final class JvmTypeFactoryImpl implements JvmTypeFactory<JvmType> {
             return jvmType;
         }
         JvmClassName byFqNameWithoutInnerClasses = JvmClassName.byFqNameWithoutInnerClasses(primitive.getJvmPrimitiveType().getWrapperFqName());
-        C12880j.m40222a((Object) byFqNameWithoutInnerClasses, "JvmClassName.byFqNameWit…mitiveType.wrapperFqName)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) byFqNameWithoutInnerClasses, "JvmClassName.byFqNameWit…mitiveType.wrapperFqName)");
         String internalName = byFqNameWithoutInnerClasses.getInternalName();
-        C12880j.m40222a((Object) internalName, "JvmClassName.byFqNameWit…apperFqName).internalName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) internalName, "JvmClassName.byFqNameWit…apperFqName).internalName");
         return createObjectType(internalName);
     }
 
@@ -63,7 +63,7 @@ final class JvmTypeFactoryImpl implements JvmTypeFactory<JvmType> {
                 }
                 if (!C13147x.f29590a || z) {
                     String substring = str.substring(1, str.length() - 1);
-                    C12880j.m40222a((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
                     jvmType = new Object(substring);
                 } else {
                     StringBuilder sb = new StringBuilder();
@@ -74,7 +74,7 @@ final class JvmTypeFactoryImpl implements JvmTypeFactory<JvmType> {
                 }
             } else {
                 String substring2 = str.substring(1);
-                C12880j.m40222a((Object) substring2, "(this as java.lang.String).substring(startIndex)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) substring2, "(this as java.lang.String).substring(startIndex)");
                 jvmType = new Array(createFromString(substring2));
             }
             return jvmType;

@@ -22,7 +22,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p503n.p504a.C11792d0;
@@ -44,7 +44,7 @@ import p520io.reactivex.p527w.p529c.C11992a;
 import p520io.reactivex.subjects.C11976a;
 import p520io.reactivex.subjects.C11978b;
 import p520io.reactivex.subjects.PublishSubject;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u0000 72\u00020\u00012\u00020\u0002:\u000278B5\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e¢\u0006\u0002\u0010\u000fJ\b\u0010*\u001a\u00020+H\u0016J\b\u0010,\u001a\u00020+H\u0002J\b\u0010-\u001a\u00020+H\u0002J\b\u0010.\u001a\u00020+H\u0016J\b\u0010/\u001a\u00020+H\u0016J\b\u00100\u001a\u00020+H\u0014J\b\u00101\u001a\u00020+H\u0002J\b\u00102\u001a\u00020+H\u0003J\u000e\u00103\u001a\b\u0012\u0004\u0012\u00020\u001604H\u0016J\b\u00105\u001a\u000206H\u0016R\u000e\u0010\u0010\u001a\u00020\u0011X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00160\u0015X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X.¢\u0006\u0002\n\u0000R\u0014\u0010\u0019\u001a\u00020\u00168VX\u0004¢\u0006\u0006\u001a\u0004\b\u0019\u0010\u001aR\u000e\u0010\u001b\u001a\u00020\u001cX\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\u001d\u001a\u00020\u001e8BX\u0004¢\u0006\u0006\u001a\u0004\b\u001f\u0010 R\u000e\u0010!\u001a\u00020\"X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020$X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010%\u001a\b\u0012\u0004\u0012\u00020\u00160&X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010'\u001a\u00020\u0011X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010(\u001a\u00020\u00168VX\u0004¢\u0006\u0006\u001a\u0004\b)\u0010\u001a¨\u00069"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/connectivity/OfflineStateViewModel;", "Landroidx/lifecycle/AndroidViewModel;", "Lcom/bamtechmedia/dominguez/core/OfflineState;", "application", "Landroid/app/Application;", "config", "Lcom/bamtechmedia/dominguez/core/CoreCommonConfig;", "appPresence", "Lcom/bamtechmedia/dominguez/core/lifecycle/AppPresenceApi;", "offlineStateTracker", "Lcom/bamtechmedia/dominguez/connectivity/OfflineStateTracker;", "computationScheduler", "Lio/reactivex/Scheduler;", "networkConnectivityCheck", "Lcom/bamtechmedia/dominguez/connectivity/NetworkConnectivityCheck;", "(Landroid/app/Application;Lcom/bamtechmedia/dominguez/core/CoreCommonConfig;Lcom/bamtechmedia/dominguez/core/lifecycle/AppPresenceApi;Lcom/bamtechmedia/dominguez/connectivity/OfflineStateTracker;Lio/reactivex/Scheduler;Lcom/bamtechmedia/dominguez/connectivity/NetworkConnectivityCheck;)V", "allSubscriptions", "Lio/reactivex/disposables/CompositeDisposable;", "connectivityManager", "Landroid/net/ConnectivityManager;", "connectivitySubject", "Lio/reactivex/subjects/BehaviorSubject;", "", "foregroundDisposable", "Lio/reactivex/disposables/Disposable;", "isOnline", "()Z", "isPerformingPing", "Ljava/util/concurrent/atomic/AtomicBoolean;", "minimumOfflineDurationSeconds", "", "getMinimumOfflineDurationSeconds", "()J", "networkCallback", "Lcom/bamtechmedia/dominguez/connectivity/OfflineStateViewModel$NetworkCallback;", "scopeSubject", "Lio/reactivex/subjects/CompletableSubject;", "timerSubject", "Lio/reactivex/subjects/PublishSubject;", "timerSubscription", "wasPreviouslyOffline", "getWasPreviouslyOffline", "cancelInProgressChecksForMinDuration", "", "cancelInProgressChecksWhenForegrounded", "internalMarkOnline", "markOffline", "markOnline", "onCleared", "performPing", "startTimer", "whenOfflineForMinimumDuration", "Lio/reactivex/Observable;", "whenOnline", "Lio/reactivex/Completable;", "Companion", "NetworkCallback", "connectivity_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.g.l */
@@ -197,7 +197,7 @@ public final class C5570l extends C0702a implements C3796d {
 
         /* renamed from: a */
         public final void mo17332a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -205,7 +205,7 @@ public final class C5570l extends C0702a implements C3796d {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -248,7 +248,7 @@ public final class C5570l extends C0702a implements C3796d {
         /* renamed from: a */
         public final void accept(Boolean bool) {
             C5855o oVar = C5855o.f13640a;
-            C12880j.m40222a((Object) bool, "reached");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bool, "reached");
             if (bool.booleanValue()) {
                 this.f13152c.m18382C();
             } else {
@@ -305,7 +305,7 @@ public final class C5570l extends C0702a implements C3796d {
 
         /* renamed from: a */
         public final void mo17336a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -313,7 +313,7 @@ public final class C5570l extends C0702a implements C3796d {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -339,9 +339,9 @@ public final class C5570l extends C0702a implements C3796d {
 
         /* renamed from: a */
         public final void accept(Boolean bool) {
-            if (C12880j.m40224a((Object) bool, (Object) Boolean.valueOf(true))) {
+            if (Intrinsics.areEqual((Object) bool, (Object) Boolean.valueOf(true))) {
                 this.f13156c.mo17326z();
-            } else if (C12880j.m40224a((Object) bool, (Object) Boolean.valueOf(false))) {
+            } else if (Intrinsics.areEqual((Object) bool, (Object) Boolean.valueOf(false))) {
                 this.f13156c.m18384E();
             }
         }
@@ -440,17 +440,17 @@ public final class C5570l extends C0702a implements C3796d {
         this.f13144g0 = rVar;
         this.f13145h0 = fVar;
         C11978b j = C11978b.m38573j();
-        C12880j.m40222a((Object) j, "CompletableSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) j, "CompletableSubject.create()");
         this.f13133V = j;
         Object systemService = mo4111y().getSystemService("connectivity");
         if (systemService != null) {
             this.f13134W = (ConnectivityManager) systemService;
             boolean z = true;
             C11976a<Boolean> e = C11976a.m38562e(Boolean.valueOf(true));
-            C12880j.m40222a((Object) e, "BehaviorSubject.createDefault(true)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) e, "BehaviorSubject.createDefault(true)");
             this.f13135X = e;
             PublishSubject<Boolean> q = PublishSubject.m38553q();
-            C12880j.m40222a((Object) q, "PublishSubject.create()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) q, "PublishSubject.create()");
             this.f13136Y = q;
             this.f13137Z = new CompositeDisposable();
             this.f13139b0 = new C5572b(this);
@@ -496,7 +496,7 @@ public final class C5570l extends C0702a implements C3796d {
             io.reactivex.functions.Consumer r2 = (p520io.reactivex.functions.Consumer) r2
             io.reactivex.disposables.Disposable r0 = r0.mo30157a(r1, r2)
             java.lang.String r1 = "appPresence.streamUpdate…nDuration() }, Timber::e)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             r4.f13138a0 = r0
             return
         */
@@ -520,9 +520,9 @@ public final class C5570l extends C0702a implements C3796d {
     private final void m18383D() {
         if (!this.f13140c0.getAndSet(true)) {
             Single b = this.f13145h0.mo17320a().mo30203a(5, TimeUnit.SECONDS, this.f13144g0).mo30220b(this.f13144g0).mo30219b((C11945a) new C5576f(this));
-            C12880j.m40222a((Object) b, "networkConnectivityCheck…rformingPing.set(false) }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "networkConnectivityCheck…rformingPing.set(false) }");
             Object a = b.mo30215a((C11974s<T, ? extends R>) C11793e.m37931a((CompletableSource) this.f13133V));
-            C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(scope))");
+            Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(scope))");
             ((C11792d0) a).mo29920a(new C5577g(this), new C5578h(this));
         }
     }
@@ -568,20 +568,20 @@ public final class C5570l extends C0702a implements C3796d {
 
     /* renamed from: j */
     public boolean mo13695j() {
-        return C12880j.m40224a((Object) (Boolean) this.f13135X.mo30311o(), (Object) Boolean.valueOf(true));
+        return Intrinsics.areEqual((Object) (Boolean) this.f13135X.mo30311o(), (Object) Boolean.valueOf(true));
     }
 
     /* renamed from: k */
     public Observable<Boolean> mo13696k() {
         Observable<Boolean> b = this.f13135X.mo30164b().mo30184d((Consumer<? super T>) new C5581k<Object>(this)).mo30150a((C11952h<? super T>) C5582l.f13157c).mo30193g(C5583m.f13158c).mo30165b((ObservableSource<? extends T>) this.f13136Y);
-        C12880j.m40222a((Object) b, "connectivitySubject\n    … .mergeWith(timerSubject)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "connectivitySubject\n    … .mergeWith(timerSubject)");
         return b;
     }
 
     /* renamed from: n */
     public Completable mo13697n() {
         Completable c = this.f13135X.mo30150a((C11952h<? super T>) C5584n.f13159c).mo30186d().mo30228e().mo30051b(this.f13144g0).mo30040a(C11992a.m38600a()).mo30052c((Consumer<? super Disposable>) new C5585o<Object>(this));
-        C12880j.m40222a((Object) c, "connectivitySubject.filt…llSubscriptions.add(it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "connectivitySubject.filt…llSubscriptions.add(it) }");
         return c;
     }
 
@@ -595,7 +595,7 @@ public final class C5570l extends C0702a implements C3796d {
             this.f13134W.unregisterNetworkCallback(this.f13139b0);
             return;
         }
-        C12880j.m40227c("foregroundDisposable");
+        Intrinsics.throwUninitializedPropertyAccessException("foregroundDisposable");
         throw null;
     }
 

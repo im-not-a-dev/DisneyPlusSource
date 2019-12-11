@@ -13,7 +13,7 @@ import com.bamtechmedia.dominguez.auth.p064p0.C2763b;
 import com.bamtechmedia.dominguez.auth.p065q0.C2783b;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Single;
@@ -178,20 +178,20 @@ public final class C2693a0 implements C2742c {
     /* renamed from: a */
     public Completable mo11733a() {
         Completable b = this.f7446a.mo30217b((Function<? super T, ? extends CompletableSource>) new C2697b<Object,Object>(this));
-        C12880j.m40222a((Object) b, "sessionStateOnce\n       …          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "sessionStateOnce\n       …          }\n            }");
         return b;
     }
 
     /* access modifiers changed from: private */
     /* renamed from: a */
     public final Completable m10327a(C2694a aVar) {
-        if (C12880j.m40224a((Object) aVar, (Object) C2695a.f7450a)) {
+        if (Intrinsics.areEqual((Object) aVar, (Object) C2695a.f7450a)) {
             Completable b = this.f7447b.mo11569a().mo30050b((C11945a) new C2698c(this));
-            C12880j.m40222a((Object) b, "logInAction.onLogin().do…thListener.onLoggedIn() }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "logInAction.onLogin().do…thListener.onLoggedIn() }");
             return b;
-        } else if (C12880j.m40224a((Object) aVar, (Object) C2696b.f7451a)) {
+        } else if (Intrinsics.areEqual((Object) aVar, (Object) C2696b.f7451a)) {
             Completable b2 = this.f7449d.mo11780a().mo30217b((Function<? super T, ? extends CompletableSource>) new C2699d<Object,Object>(this));
-            C12880j.m40222a((Object) b2, "autoLoginAction.autoLogi…}\n            }\n        }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b2, "autoLoginAction.autoLogi…}\n            }\n        }");
             return b2;
         } else {
             throw new C12898l();

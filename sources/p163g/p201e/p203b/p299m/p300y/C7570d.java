@@ -23,7 +23,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p096e.p121h.p122j.p124d.C4039f;
@@ -35,7 +35,7 @@ import p163g.p201e.p203b.p299m.p300y.p302i.C7579a;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.subjects.C11978b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u0000 02\u00020\u00012\u00020\u0002:\u00010B\u0005¢\u0006\u0002\u0010\u0003J\u0010\u0010\u0018\u001a\u00020\u00192\u0006\u0010\u001a\u001a\u00020\u001bH\u0002J\r\u0010\u001c\u001a\u00020\u001dH\u0001¢\u0006\u0002\b\u001eJ\b\u0010\u001f\u001a\u00020 H\u0002J\u0010\u0010!\u001a\u00020\u001d2\u0006\u0010\"\u001a\u00020#H\u0002J\u0012\u0010$\u001a\u00020\u001d2\b\u0010%\u001a\u0004\u0018\u00010&H\u0016J&\u0010'\u001a\u0004\u0018\u00010(2\u0006\u0010)\u001a\u00020*2\b\u0010+\u001a\u0004\u0018\u00010,2\b\u0010%\u001a\u0004\u0018\u00010&H\u0016J\b\u0010-\u001a\u00020\u001dH\u0016J\u001a\u0010.\u001a\u00020\u001d2\u0006\u0010/\u001a\u00020(2\b\u0010%\u001a\u0004\u0018\u00010&H\u0016R&\u0010\u0004\u001a\u0004\u0018\u00010\u00058\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\u0006\u0010\u0003\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\nR&\u0010\u000b\u001a\u0004\u0018\u00010\f8\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\r\u0010\u0003\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\u001a\u0010\u0012\u001a\u00020\u0013X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0014\u0010\u0015\"\u0004\b\u0016\u0010\u0017¨\u00061"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/dialogs/tier0/Tier0DialogFragment;", "Landroidx/fragment/app/Fragment;", "Lcom/bamtechmedia/dominguez/dialogs/TierDialogMarker;", "()V", "dismissDisposable", "Lio/reactivex/disposables/Disposable;", "dismissDisposable$annotations", "getDismissDisposable$dialogs_release", "()Lio/reactivex/disposables/Disposable;", "setDismissDisposable$dialogs_release", "(Lio/reactivex/disposables/Disposable;)V", "dismissSubject", "Lio/reactivex/subjects/CompletableSubject;", "dismissSubject$annotations", "getDismissSubject$dialogs_release", "()Lio/reactivex/subjects/CompletableSubject;", "setDismissSubject$dialogs_release", "(Lio/reactivex/subjects/CompletableSubject;)V", "textSizeCalculator", "Lcom/bamtechmedia/dominguez/dialogs/tier0/textsize/Tier0TextSizeCalculator;", "getTextSizeCalculator", "()Lcom/bamtechmedia/dominguez/dialogs/tier0/textsize/Tier0TextSizeCalculator;", "setTextSizeCalculator", "(Lcom/bamtechmedia/dominguez/dialogs/tier0/textsize/Tier0TextSizeCalculator;)V", "createCustomPaint", "Landroid/graphics/Paint;", "context", "Landroid/content/Context;", "dismissFragment", "", "dismissFragment$dialogs_release", "getTitleFromArgs", "", "launchTier0Message", "tier0MessageView", "Lcom/bamtechmedia/dominguez/dialogs/tier0/Tier0Launcher;", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onCreateView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "onDestroyView", "onViewCreated", "view", "Companion", "dialogs_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.m.y.d */
@@ -111,7 +111,7 @@ public final class C7570d extends Fragment implements C7566x {
 
         /* renamed from: a */
         public final void mo20511a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -119,7 +119,7 @@ public final class C7570d extends Fragment implements C7566x {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -192,11 +192,11 @@ public final class C7570d extends Fragment implements C7566x {
         super.onCreate(bundle);
         Context requireContext = requireContext();
         Resources resources = requireContext.getResources();
-        C12880j.m40222a((Object) resources, "resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "resources");
         DisplayMetrics displayMetrics = resources.getDisplayMetrics();
         float integer = (float) requireContext.getResources().getInteger(C7563u.max_permitted_text_length);
-        C12880j.m40222a((Object) requireContext, "this");
-        C12880j.m40222a((Object) displayMetrics, "displayMetrics");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "this");
+        Intrinsics.checkReturnedValueIsNotNull((Object) displayMetrics, "displayMetrics");
         this.f16574c = new C7579a(requireContext, displayMetrics, m22526a(requireContext), integer);
     }
 
@@ -267,7 +267,7 @@ public final class C7570d extends Fragment implements C7566x {
             if (aVar != null) {
                 fVar.mo20512a(gVar, p, C7579a.m22537a(aVar, p, null, 2, null), this.f16571U);
             } else {
-                C12880j.m40227c("textSizeCalculator");
+                Intrinsics.throwUninitializedPropertyAccessException("textSizeCalculator");
                 throw null;
             }
         } else {

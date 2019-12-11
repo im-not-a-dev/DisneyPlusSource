@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.annotations;
 
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.p589f0.C12872a;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
 
@@ -38,7 +38,7 @@ public interface Annotations extends Iterable<AnnotationDescriptor>, C12872a {
                     break;
                 }
                 obj = it.next();
-                if (C12880j.m40224a((Object) ((AnnotationDescriptor) obj).getFqName(), (Object) fqName)) {
+                if (Intrinsics.areEqual((Object) ((AnnotationDescriptor) obj).getFqName(), (Object) fqName)) {
                     break;
                 }
             }

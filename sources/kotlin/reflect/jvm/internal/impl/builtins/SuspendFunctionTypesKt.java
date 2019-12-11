@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
 import kotlin.reflect.jvm.internal.impl.descriptors.Modality;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -35,9 +35,9 @@ public final class SuspendFunctionTypesKt {
     static {
         ModuleDescriptor errorModule = ErrorUtils.getErrorModule();
         String str = "ErrorUtils.getErrorModule()";
-        C12880j.m40222a((Object) errorModule, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) errorModule, str);
         FqName fqName = DescriptorUtils.COROUTINES_PACKAGE_FQ_NAME_EXPERIMENTAL;
-        C12880j.m40222a((Object) fqName, "DescriptorUtils.COROUTIN…KAGE_FQ_NAME_EXPERIMENTAL");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "DescriptorUtils.COROUTIN…KAGE_FQ_NAME_EXPERIMENTAL");
         MutableClassDescriptor mutableClassDescriptor = new MutableClassDescriptor(new EmptyPackageFragmentDescriptor(errorModule, fqName), ClassKind.INTERFACE, false, false, DescriptorUtils.CONTINUATION_INTERFACE_FQ_NAME_EXPERIMENTAL.shortName(), SourceElement.NO_SOURCE, LockBasedStorageManager.NO_LOCKS);
         mutableClassDescriptor.setModality(Modality.ABSTRACT);
         mutableClassDescriptor.setVisibility(Visibilities.PUBLIC);
@@ -46,9 +46,9 @@ public final class SuspendFunctionTypesKt {
         mutableClassDescriptor.createTypeConstructor();
         FAKE_CONTINUATION_CLASS_DESCRIPTOR_EXPERIMENTAL = mutableClassDescriptor;
         ModuleDescriptor errorModule2 = ErrorUtils.getErrorModule();
-        C12880j.m40222a((Object) errorModule2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) errorModule2, str);
         FqName fqName2 = DescriptorUtils.COROUTINES_PACKAGE_FQ_NAME_RELEASE;
-        C12880j.m40222a((Object) fqName2, "DescriptorUtils.COROUTINES_PACKAGE_FQ_NAME_RELEASE");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName2, "DescriptorUtils.COROUTINES_PACKAGE_FQ_NAME_RELEASE");
         MutableClassDescriptor mutableClassDescriptor2 = new MutableClassDescriptor(new EmptyPackageFragmentDescriptor(errorModule2, fqName2), ClassKind.INTERFACE, false, false, DescriptorUtils.CONTINUATION_INTERFACE_FQ_NAME_RELEASE.shortName(), SourceElement.NO_SOURCE, LockBasedStorageManager.NO_LOCKS);
         mutableClassDescriptor2.setModality(Modality.ABSTRACT);
         mutableClassDescriptor2.setVisibility(Visibilities.PUBLIC);
@@ -59,9 +59,9 @@ public final class SuspendFunctionTypesKt {
 
     public static final boolean isContinuation(FqName fqName, boolean z) {
         if (z) {
-            return C12880j.m40224a((Object) fqName, (Object) DescriptorUtils.CONTINUATION_INTERFACE_FQ_NAME_RELEASE);
+            return Intrinsics.areEqual((Object) fqName, (Object) DescriptorUtils.CONTINUATION_INTERFACE_FQ_NAME_RELEASE);
         }
-        return C12880j.m40224a((Object) fqName, (Object) DescriptorUtils.CONTINUATION_INTERFACE_FQ_NAME_EXPERIMENTAL);
+        return Intrinsics.areEqual((Object) fqName, (Object) DescriptorUtils.CONTINUATION_INTERFACE_FQ_NAME_EXPERIMENTAL);
     }
 
     public static final SimpleType transformSuspendFunctionToRuntimeFunctionType(KotlinType kotlinType, boolean z) {
@@ -82,10 +82,10 @@ public final class SuspendFunctionTypesKt {
             } else {
                 typeConstructor = FAKE_CONTINUATION_CLASS_DESCRIPTOR_EXPERIMENTAL.getTypeConstructor();
             }
-            C12880j.m40222a((Object) typeConstructor, "if (isReleaseCoroutines)…ERIMENTAL.typeConstructor");
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "if (isReleaseCoroutines)…ERIMENTAL.typeConstructor");
             List a = C13199w.m40563a((Collection) arrayList, (Object) KotlinTypeFactory.simpleType(empty, typeConstructor, C13183n.m40498a(TypeUtilsKt.asTypeProjection(FunctionTypesKt.getReturnTypeFromFunctionType(kotlinType))), false));
             SimpleType nullableAnyType = TypeUtilsKt.getBuiltIns(kotlinType).getNullableAnyType();
-            C12880j.m40222a((Object) nullableAnyType, "suspendFunType.builtIns.nullableAnyType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) nullableAnyType, "suspendFunType.builtIns.nullableAnyType");
             return FunctionTypesKt.createFunctionType$default(builtIns, annotations, receiverTypeFromFunctionType, a, null, nullableAnyType, false, 64, null).makeNullableAsSpecified(kotlinType.isMarkedNullable());
         }
         StringBuilder sb = new StringBuilder();

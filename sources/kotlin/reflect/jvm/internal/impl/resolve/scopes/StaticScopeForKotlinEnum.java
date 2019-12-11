@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.C13147x;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -54,7 +54,7 @@ public final class StaticScopeForKotlinEnum extends MemberScopeImpl {
         List functions = getFunctions();
         ArrayList<SimpleFunctionDescriptor> arrayList = new ArrayList<>(1);
         for (Object next : functions) {
-            if (C12880j.m40224a((Object) ((SimpleFunctionDescriptor) next).getName(), (Object) name)) {
+            if (Intrinsics.areEqual((Object) ((SimpleFunctionDescriptor) next).getName(), (Object) name)) {
                 arrayList.add(next);
             }
         }

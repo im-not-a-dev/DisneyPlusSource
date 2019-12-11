@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.zip.CRC32;
 import java.util.zip.Inflater;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: okio.j */
 /* compiled from: GzipSource.kt */
@@ -154,17 +154,17 @@ public final class C14284j implements C14302x {
                         if (sVar != null) {
                             j = 0;
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     }
                     return;
                 }
             } while (sVar != null);
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -173,7 +173,7 @@ public final class C14284j implements C14302x {
         if (i2 != i) {
             Object[] objArr = {str, Integer.valueOf(i2), Integer.valueOf(i)};
             String format = String.format("%s: actual 0x%08x != expected 0x%08x", Arrays.copyOf(objArr, objArr.length));
-            C12880j.m40222a((Object) format, "java.lang.String.format(this, *args)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) format, "java.lang.String.format(this, *args)");
             throw new IOException(format);
         }
     }

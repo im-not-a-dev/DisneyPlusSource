@@ -13,7 +13,7 @@ import com.bamtech.sdk4.media.QOSNetworkHelper;
 import java.util.Properties;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -35,10 +35,10 @@ public final class TestWidevineDrmProvider extends DefaultWidevineDrmProvider {
                 return super.getWidevineLicenseLink$extension_media_release(serviceTransaction, str);
             }
             Single<Pair<Link, TelemetryServiceConfiguration>> a = getConfigurationProvider$extension_media_release().getServiceLink(serviceTransaction, TestWidevineDrmProvider$getWidevineLicenseLink$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new TestWidevineDrmProvider$getWidevineLicenseLink$2<Object,Object>(property));
-            C12880j.m40222a((Object) a, "configurationProvider.ge…ry)\n                    }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…ry)\n                    }");
             return a;
         }
-        C12880j.m40227c("properties");
+        Intrinsics.throwUninitializedPropertyAccessException("properties");
         throw null;
     }
 }

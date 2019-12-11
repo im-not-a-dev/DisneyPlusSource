@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.components;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.lazy.LazyJavaResolverContext;
@@ -22,7 +22,7 @@ final class JavaAnnotationDescriptor$type$2 extends C12881k implements Function0
 
     public final SimpleType invoke() {
         ClassDescriptor builtInClassByFqName = this.f29551$c.getModule().getBuiltIns().getBuiltInClassByFqName(this.this$0.getFqName());
-        C12880j.m40222a((Object) builtInClassByFqName, "c.module.builtIns.getBuiltInClassByFqName(fqName)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) builtInClassByFqName, "c.module.builtIns.getBuiltInClassByFqName(fqName)");
         return builtInClassByFqName.getDefaultType();
     }
 }

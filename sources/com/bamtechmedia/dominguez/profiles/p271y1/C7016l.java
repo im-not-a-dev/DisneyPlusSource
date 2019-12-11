@@ -12,7 +12,7 @@ import java.util.List;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13180m;
 import p096e.p121h.p135s.C4121a0;
 import p163g.p201e.p203b.p330z.C7946e;
@@ -78,7 +78,7 @@ public final class C7016l extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f15587W, (java.lang.Object) ((com.bamtechmedia.dominguez.profiles.p271y1.C7016l) r2).f15587W) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f15587W, (java.lang.Object) ((com.bamtechmedia.dominguez.profiles.p271y1.C7016l) r2).f15587W) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -90,7 +90,7 @@ public final class C7016l extends C11866a {
             com.bamtechmedia.dominguez.profiles.y1.l r2 = (com.bamtechmedia.dominguez.profiles.p271y1.C7016l) r2
             java.util.List<com.bamtechmedia.dominguez.profiles.y1.h> r0 = r1.f15587W
             java.util.List<com.bamtechmedia.dominguez.profiles.y1.h> r2 = r2.f15587W
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:
@@ -125,10 +125,10 @@ public final class C7016l extends C11866a {
 
     public void bind(C11867b bVar, int i) {
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         LinearLayout linearLayout = (LinearLayout) view.findViewById(C7946e.profilesPickerLayout);
         Context context = linearLayout.getContext();
-        C12880j.m40222a((Object) context, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
         linearLayout.setGravity(C5837i.m18842d(context) ? 17 : 8388611);
         this.f15586V = linearLayout.getResources().getInteger(C7947f.profile_picker_column) * i;
         linearLayout.removeAllViews();
@@ -137,7 +137,7 @@ public final class C7016l extends C11866a {
             int i3 = i2 + 1;
             if (i2 >= 0) {
                 C7005h hVar = (C7005h) next;
-                C12880j.m40222a((Object) linearLayout, "this");
+                Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, "this");
                 View a = hVar.mo19726a(linearLayout);
                 a.setTranslationY(20.0f);
                 a.setAlpha(0.0f);

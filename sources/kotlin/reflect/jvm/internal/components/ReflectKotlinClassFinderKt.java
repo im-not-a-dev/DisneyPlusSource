@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.components;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
 
@@ -11,10 +11,10 @@ public final class ReflectKotlinClassFinderKt {
     /* access modifiers changed from: private */
     public static final String toRuntimeFqName(ClassId classId) {
         String asString = classId.getRelativeClassName().asString();
-        C12880j.m40222a((Object) asString, "relativeClassName.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "relativeClassName.asString()");
         String a = C12832w.m40115a(asString, '.', '$', false, 4, (Object) null);
         FqName packageFqName = classId.getPackageFqName();
-        C12880j.m40222a((Object) packageFqName, "packageFqName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) packageFqName, "packageFqName");
         if (packageFqName.isRoot()) {
             return a;
         }

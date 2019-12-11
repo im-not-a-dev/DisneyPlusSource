@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.structure;
 import java.lang.reflect.GenericArrayType;
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaArrayType;
 import kotlin.reflect.jvm.internal.structure.ReflectJavaType.Factory;
 
@@ -20,7 +20,7 @@ public final class ReflectJavaArrayType extends ReflectJavaType implements JavaA
         if (reflectType2 instanceof GenericArrayType) {
             Factory factory = ReflectJavaType.Factory;
             Type genericComponentType = ((GenericArrayType) reflectType2).getGenericComponentType();
-            C12880j.m40222a((Object) genericComponentType, "genericComponentType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) genericComponentType, "genericComponentType");
             reflectJavaType = factory.create(genericComponentType);
         } else {
             if (reflectType2 instanceof Class) {
@@ -28,7 +28,7 @@ public final class ReflectJavaArrayType extends ReflectJavaType implements JavaA
                 if (cls.isArray()) {
                     Factory factory2 = ReflectJavaType.Factory;
                     Class componentType2 = cls.getComponentType();
-                    C12880j.m40222a((Object) componentType2, "getComponentType()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) componentType2, "getComponentType()");
                     reflectJavaType = factory2.create(componentType2);
                 }
             }

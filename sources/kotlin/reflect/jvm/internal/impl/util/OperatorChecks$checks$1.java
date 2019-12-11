@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.util;
 
 import java.util.List;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
@@ -18,7 +18,7 @@ final class OperatorChecks$checks$1 extends C12881k implements Function1<Functio
 
     public final String invoke(FunctionDescriptor functionDescriptor) {
         List valueParameters = functionDescriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters, "valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "valueParameters");
         ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) C13199w.m40595i(valueParameters);
         boolean z = false;
         if (valueParameterDescriptor != null) {

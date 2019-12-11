@@ -20,7 +20,7 @@ import p163g.p201e.p203b.p278h.C7245j;
 import p512h.p513c.p514k.C11885d;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.subjects.C11978b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 \u00172\u00020\u0001:\u0001\u0017B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u000b\u001a\u00020\f2\b\u0010\r\u001a\u0004\u0018\u00010\u000eH\u0016J&\u0010\u000f\u001a\u0004\u0018\u00010\u00102\u0006\u0010\u0011\u001a\u00020\u00122\b\u0010\u0013\u001a\u0004\u0018\u00010\u00142\b\u0010\r\u001a\u0004\u0018\u00010\u000eH\u0016J\u001a\u0010\u0015\u001a\u00020\f2\u0006\u0010\u0016\u001a\u00020\u00102\b\u0010\r\u001a\u0004\u0018\u00010\u000eH\u0016R\u000e\u0010\u0003\u001a\u00020\u0004X.¢\u0006\u0002\n\u0000R\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\n¨\u0006\u0018"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/ctvactivation/dialog/DeviceActivationInfoFragment;", "Ldagger/android/support/DaggerAppCompatDialogFragment;", "()V", "deviceNameText", "", "dismissSubject", "Lio/reactivex/subjects/CompletableSubject;", "getDismissSubject$ctvActivation_release", "()Lio/reactivex/subjects/CompletableSubject;", "setDismissSubject$ctvActivation_release", "(Lio/reactivex/subjects/CompletableSubject;)V", "onCreate", "", "savedInstanceState", "Landroid/os/Bundle;", "onCreateView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "onViewCreated", "view", "Companion", "ctvActivation_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.h.m.a */
@@ -97,7 +97,7 @@ public final class C7255a extends C11885d {
 
         /* renamed from: a */
         public final void mo20079a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -105,7 +105,7 @@ public final class C7255a extends C11885d {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -170,7 +170,7 @@ public final class C7255a extends C11885d {
             android.view.View r3 = r2._$_findCachedViewById(r3)
             android.widget.TextView r3 = (android.widget.TextView) r3
             java.lang.String r4 = "content_text"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             int r4 = p163g.p201e.p203b.p278h.C7244i.ctv_activation
             java.lang.String r0 = r2.f15981U
             if (r0 == 0) goto L_0x0065
@@ -183,15 +183,15 @@ public final class C7255a extends C11885d {
             if (r3 == 0) goto L_0x0064
             androidx.lifecycle.m r4 = r2.getViewLifecycleOwner()
             java.lang.String r0 = "viewLifecycleOwner"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
             androidx.lifecycle.i$a r0 = androidx.lifecycle.C0715i.C0716a.ON_DESTROY
             com.uber.autodispose.android.lifecycle.b r4 = com.uber.autodispose.android.lifecycle.C10541b.m33255a(r4, r0)
             java.lang.String r0 = "AndroidLifecycleScopePro…om(\n    this, untilEvent)"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
             g.n.a.h r4 = p163g.p503n.p504a.C11793e.m37930a(r4)
             java.lang.Object r3 = r3.mo30048a(r4)
             java.lang.String r4 = "this.`as`(AutoDispose.au…isposable<Any>(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             g.n.a.v r3 = (p163g.p503n.p504a.C11839v) r3
             if (r3 == 0) goto L_0x0064
             g.e.b.h.m.a$b r4 = new g.e.b.h.m.a$b
@@ -208,7 +208,7 @@ public final class C7255a extends C11885d {
             return
         L_0x0065:
             java.lang.String r3 = "deviceNameText"
-            kotlin.jvm.internal.C12880j.m40227c(r3)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r3)
             r3 = 0
             throw r3
         */

@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.detail.common;
 
 import com.bamtechmedia.dominguez.core.content.assets.C3626b;
 import com.bamtechmedia.dominguez.core.content.paging.C3700c;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.detail.common.o */
 /* compiled from: Tab.kt */
@@ -46,8 +46,8 @@ public final class C5989o extends C6008x {
         if (this != obj) {
             if (obj instanceof C5989o) {
                 C5989o oVar = (C5989o) obj;
-                if (C12880j.m40224a((Object) m19184a(), (Object) oVar.m19184a())) {
-                    if (!(mo18028d() == oVar.mo18028d()) || !C12880j.m40224a((Object) mo18027c(), (Object) oVar.mo18027c()) || !C12880j.m40224a((Object) mo18026b(), (Object) oVar.mo18026b())) {
+                if (Intrinsics.areEqual((Object) m19184a(), (Object) oVar.m19184a())) {
+                    if (!(mo18028d() == oVar.mo18028d()) || !Intrinsics.areEqual((Object) mo18027c(), (Object) oVar.mo18027c()) || !Intrinsics.areEqual((Object) mo18026b(), (Object) oVar.mo18026b())) {
                         return false;
                     }
                 }

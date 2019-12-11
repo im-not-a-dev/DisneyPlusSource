@@ -8,7 +8,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import kotlin.C12907r;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.SimpleFunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.MethodSignatureMappingKt;
@@ -30,34 +30,34 @@ public final class BuiltinMethodsWithDifferentJvmName {
     static {
         String desc = JvmPrimitiveType.INT.getDesc();
         String str = "JvmPrimitiveType.INT.desc";
-        C12880j.m40222a((Object) desc, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc, str);
         REMOVE_AT_NAME_AND_SIGNATURE = SpecialBuiltinMembers.method("java/util/List", "removeAt", desc, "Ljava/lang/Object;");
         SignatureBuildingComponents signatureBuildingComponents = SignatureBuildingComponents.INSTANCE;
         String str2 = "Number";
         String javaLang = signatureBuildingComponents.javaLang(str2);
         String desc2 = JvmPrimitiveType.BYTE.getDesc();
-        C12880j.m40222a((Object) desc2, "JvmPrimitiveType.BYTE.desc");
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc2, "JvmPrimitiveType.BYTE.desc");
         String str3 = "";
         String javaLang2 = signatureBuildingComponents.javaLang(str2);
         String desc3 = JvmPrimitiveType.SHORT.getDesc();
-        C12880j.m40222a((Object) desc3, "JvmPrimitiveType.SHORT.desc");
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc3, "JvmPrimitiveType.SHORT.desc");
         String javaLang3 = signatureBuildingComponents.javaLang(str2);
         String desc4 = JvmPrimitiveType.INT.getDesc();
-        C12880j.m40222a((Object) desc4, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc4, str);
         String javaLang4 = signatureBuildingComponents.javaLang(str2);
         String desc5 = JvmPrimitiveType.LONG.getDesc();
-        C12880j.m40222a((Object) desc5, "JvmPrimitiveType.LONG.desc");
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc5, "JvmPrimitiveType.LONG.desc");
         String javaLang5 = signatureBuildingComponents.javaLang(str2);
         String desc6 = JvmPrimitiveType.FLOAT.getDesc();
-        C12880j.m40222a((Object) desc6, "JvmPrimitiveType.FLOAT.desc");
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc6, "JvmPrimitiveType.FLOAT.desc");
         String javaLang6 = signatureBuildingComponents.javaLang(str2);
         String desc7 = JvmPrimitiveType.DOUBLE.getDesc();
-        C12880j.m40222a((Object) desc7, "JvmPrimitiveType.DOUBLE.desc");
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc7, "JvmPrimitiveType.DOUBLE.desc");
         String javaLang7 = signatureBuildingComponents.javaLang("CharSequence");
         String desc8 = JvmPrimitiveType.INT.getDesc();
-        C12880j.m40222a((Object) desc8, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc8, str);
         String desc9 = JvmPrimitiveType.CHAR.getDesc();
-        C12880j.m40222a((Object) desc9, "JvmPrimitiveType.CHAR.desc");
+        Intrinsics.checkReturnedValueIsNotNull((Object) desc9, "JvmPrimitiveType.CHAR.desc");
         NAME_AND_SIGNATURE_TO_JVM_REPRESENTATION_NAME_MAP = C13173j0.m40356a(C12907r.m40244a(SpecialBuiltinMembers.method(javaLang, "toByte", str3, desc2), Name.identifier("byteValue")), C12907r.m40244a(SpecialBuiltinMembers.method(javaLang2, "toShort", str3, desc3), Name.identifier("shortValue")), C12907r.m40244a(SpecialBuiltinMembers.method(javaLang3, "toInt", str3, desc4), Name.identifier("intValue")), C12907r.m40244a(SpecialBuiltinMembers.method(javaLang4, "toLong", str3, desc5), Name.identifier("longValue")), C12907r.m40244a(SpecialBuiltinMembers.method(javaLang5, "toFloat", str3, desc6), Name.identifier("floatValue")), C12907r.m40244a(SpecialBuiltinMembers.method(javaLang6, "toDouble", str3, desc7), Name.identifier("doubleValue")), C12907r.m40244a(REMOVE_AT_NAME_AND_SIGNATURE, Name.identifier("remove")), C12907r.m40244a(SpecialBuiltinMembers.method(javaLang7, "get", desc8, desc9), Name.identifier("charAt")));
         Map<NameAndSignature, Name> map = NAME_AND_SIGNATURE_TO_JVM_REPRESENTATION_NAME_MAP;
         LinkedHashMap linkedHashMap = new LinkedHashMap(C13173j0.m40349a(map.size()));
@@ -119,6 +119,6 @@ public final class BuiltinMethodsWithDifferentJvmName {
     }
 
     public final boolean isRemoveAtByIndex(SimpleFunctionDescriptor simpleFunctionDescriptor) {
-        return C12880j.m40224a((Object) simpleFunctionDescriptor.getName().asString(), (Object) "removeAt") && C12880j.m40224a((Object) MethodSignatureMappingKt.computeJvmSignature(simpleFunctionDescriptor), (Object) REMOVE_AT_NAME_AND_SIGNATURE.getSignature());
+        return Intrinsics.areEqual((Object) simpleFunctionDescriptor.getName().asString(), (Object) "removeAt") && Intrinsics.areEqual((Object) MethodSignatureMappingKt.computeJvmSignature(simpleFunctionDescriptor), (Object) REMOVE_AT_NAME_AND_SIGNATURE.getSignature());
     }
 }

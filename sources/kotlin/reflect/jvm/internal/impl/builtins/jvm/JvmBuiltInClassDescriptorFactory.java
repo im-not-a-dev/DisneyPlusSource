@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 
 import java.util.Collection;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -52,10 +52,10 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
 
     static {
         Name shortName = KotlinBuiltIns.FQ_NAMES.cloneable.shortName();
-        C12880j.m40222a((Object) shortName, "KotlinBuiltIns.FQ_NAMES.cloneable.shortName()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) shortName, "KotlinBuiltIns.FQ_NAMES.cloneable.shortName()");
         CLONEABLE_NAME = shortName;
         ClassId classId = ClassId.topLevel(KotlinBuiltIns.FQ_NAMES.cloneable.toSafe());
-        C12880j.m40222a((Object) classId, "ClassId.topLevel(KotlinB…NAMES.cloneable.toSafe())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) classId, "ClassId.topLevel(KotlinB…NAMES.cloneable.toSafe())");
         CLONEABLE_CLASS_ID = classId;
     }
 
@@ -70,21 +70,21 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
     }
 
     public ClassDescriptor createClass(ClassId classId) {
-        if (C12880j.m40224a((Object) classId, (Object) CLONEABLE_CLASS_ID)) {
+        if (Intrinsics.areEqual((Object) classId, (Object) CLONEABLE_CLASS_ID)) {
             return getCloneable();
         }
         return null;
     }
 
     public Collection<ClassDescriptor> getAllContributedClassesIfPossible(FqName fqName) {
-        if (C12880j.m40224a((Object) fqName, (Object) KOTLIN_FQ_NAME)) {
+        if (Intrinsics.areEqual((Object) fqName, (Object) KOTLIN_FQ_NAME)) {
             return C13186o0.m40524a(getCloneable());
         }
         return C13188p0.m40531a();
     }
 
     public boolean shouldCreateClass(FqName fqName, Name name) {
-        return C12880j.m40224a((Object) name, (Object) CLONEABLE_NAME) && C12880j.m40224a((Object) fqName, (Object) KOTLIN_FQ_NAME);
+        return Intrinsics.areEqual((Object) name, (Object) CLONEABLE_NAME) && Intrinsics.areEqual((Object) fqName, (Object) KOTLIN_FQ_NAME);
     }
 
     public /* synthetic */ JvmBuiltInClassDescriptorFactory(StorageManager storageManager, ModuleDescriptor moduleDescriptor2, Function1 function1, int i, DefaultConstructorMarker defaultConstructorMarker) {

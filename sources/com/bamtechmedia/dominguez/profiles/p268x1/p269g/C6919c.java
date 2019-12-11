@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.profiles.p263u1.p265e.C6865a;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -82,7 +82,7 @@ public final class C6919c implements C6861a {
                 C6930i a = this.f15404c.f15402c.f15394a;
                 C6919c cVar = this.f15404c.f15402c;
                 C7019z zVar = this.f15403U;
-                C12880j.m40222a((Object) zVar, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) zVar, "it");
                 List a2 = cVar.m21156b(zVar);
                 Boolean Z = this.f15404c.f15399U.mo19794Z();
                 boolean booleanValue = Z != null ? Z.booleanValue() : false;
@@ -130,7 +130,7 @@ public final class C6919c implements C6861a {
             Language language = new Language(null, str, "", Y, C13185o.m40513a());
             return language;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -150,7 +150,7 @@ public final class C6919c implements C6861a {
     /* renamed from: a */
     public Single<Language> mo19626a(C7019z zVar, String str, List<Language> list) {
         Single<Language> a = Single.m38399b(zVar).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6921b<Object,Object>(this, zVar, str, list));
-        C12880j.m40222a((Object) a, "Single.just(languagePref…guage(it)))\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.just(languagePref…guage(it)))\n            }");
         return a;
     }
 

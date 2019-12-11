@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal;
 import java.util.List;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -38,12 +38,12 @@ public final class KTypeParameterImpl implements KTypeParameter, KClassifierImpl
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof KTypeParameterImpl) && C12880j.m40224a((Object) getDescriptor(), (Object) ((KTypeParameterImpl) obj).getDescriptor());
+        return (obj instanceof KTypeParameterImpl) && Intrinsics.areEqual((Object) getDescriptor(), (Object) ((KTypeParameterImpl) obj).getDescriptor());
     }
 
     public String getName() {
         String asString = getDescriptor().getName().asString();
-        C12880j.m40222a((Object) asString, "descriptor.name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "descriptor.name.asString()");
         return asString;
     }
 

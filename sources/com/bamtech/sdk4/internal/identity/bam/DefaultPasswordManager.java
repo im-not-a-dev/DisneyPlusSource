@@ -5,7 +5,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Single;
@@ -39,7 +39,7 @@ public final class DefaultPasswordManager implements CommonIdentityTokenManager,
         if (completable != null) {
             return completable;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -49,7 +49,7 @@ public final class DefaultPasswordManager implements CommonIdentityTokenManager,
 
     public Completable updateEmail(ServiceTransaction serviceTransaction, String str, String str2) {
         Completable b = getIdentityToken(serviceTransaction).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultPasswordManager$updateEmail$1<Object,Object>(this, serviceTransaction, str, str2));
-        C12880j.m40222a((Object) b, "getIdentityToken(transac…ord), tokenMap)\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "getIdentityToken(transac…ord), tokenMap)\n        }");
         return b;
     }
 }

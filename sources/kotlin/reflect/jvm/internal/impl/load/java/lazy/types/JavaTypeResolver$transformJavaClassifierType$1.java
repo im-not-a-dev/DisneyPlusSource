@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.types;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClassifierType;
 import kotlin.reflect.jvm.internal.impl.types.ErrorUtils;
@@ -21,7 +21,7 @@ final class JavaTypeResolver$transformJavaClassifierType$1 extends C12881k imple
         sb.append("Unresolved java class ");
         sb.append(this.$javaType.getPresentableText());
         SimpleType createErrorType = ErrorUtils.createErrorType(sb.toString());
-        C12880j.m40222a((Object) createErrorType, "ErrorUtils.createErrorTy…vaType.presentableText}\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createErrorType, "ErrorUtils.createErrorTy…vaType.presentableText}\")");
         return createErrorType;
     }
 }

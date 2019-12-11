@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p361p0;
 import android.annotation.TargetApi;
 import android.media.AudioTimestamp;
 import android.media.AudioTrack;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.p0.p */
 /* compiled from: AudioTimestampPoller */
@@ -77,7 +77,7 @@ final class C8849p {
     }
 
     public C8849p(AudioTrack audioTrack) {
-        if (C9554k0.f22281a >= 19) {
+        if (Util.SDK_INT >= 19) {
             this.f18850a = new C8850a(audioTrack);
             mo23135g();
             return;

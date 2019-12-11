@@ -71,7 +71,7 @@ public final class UserActivityClientTelemetryData implements TelemetryClientPay
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x003c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.data, (java.lang.Object) r3.data) != false) goto L_0x0041;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.data, (java.lang.Object) r3.data) != false) goto L_0x0041;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -83,23 +83,23 @@ public final class UserActivityClientTelemetryData implements TelemetryClientPay
             com.bamtech.sdk4.useractivity.internal.UserActivityClientTelemetryData r3 = (com.bamtech.sdk4.useractivity.internal.UserActivityClientTelemetryData) r3
             java.lang.String r0 = r2.category
             java.lang.String r1 = r3.category
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003f
             java.lang.String r0 = r2.getEvent()
             java.lang.String r1 = r3.getEvent()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003f
             java.lang.String r0 = r2.eventId
             java.lang.String r1 = r3.eventId
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003f
             org.joda.time.DateTime r0 = r2.timestamp
             org.joda.time.DateTime r1 = r3.timestamp
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003f
             com.bamtech.sdk4.useractivity.internal.ClientData r0 = r2.data
             com.bamtech.sdk4.useractivity.internal.ClientData r3 = r3.data
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x003f
             goto L_0x0041
         L_0x003f:

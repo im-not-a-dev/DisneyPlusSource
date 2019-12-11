@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okio.BufferedSource;
 import okio.C14287m;
 import okio.C14302x;
@@ -168,7 +168,7 @@ public final class C5756a {
             java.lang.String r6 = r2.toString()
             r2 = 0
             java.lang.Object[] r2 = new java.lang.Object[r2]
-            p686n.p687a.C14100a.m44528b(r1, r6, r2)
+            p686n.p687a.Timber.m44528b(r1, r6, r2)
         L_0x0036:
             okio.x r6 = r4.m18681a(r7, r8)
             if (r6 == 0) goto L_0x0058
@@ -199,7 +199,7 @@ public final class C5756a {
     private final C14302x m18681a(Integer num, String str) {
         if (num != null) {
             InputStream openRawResource = this.f13515a.getResources().openRawResource(num.intValue());
-            C12880j.m40222a((Object) openRawResource, "context.resources.openRawResource(it)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) openRawResource, "context.resources.openRawResource(it)");
             C14302x a = C14287m.m45724a(openRawResource);
             if (a != null) {
                 return a;
@@ -215,7 +215,7 @@ public final class C5756a {
     private final C14302x m18682a(String str) {
         try {
             InputStream open = this.f13515a.getAssets().open(str);
-            C12880j.m40222a((Object) open, "context.assets.open(it)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) open, "context.assets.open(it)");
             return C14287m.m45724a(open);
         } catch (IOException unused) {
             return null;

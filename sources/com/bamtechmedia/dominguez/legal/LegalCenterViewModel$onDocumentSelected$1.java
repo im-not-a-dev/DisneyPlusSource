@@ -29,7 +29,7 @@ final class LegalCenterViewModel$onDocumentSelected$1 extends C12881k implements
             if (r0 == 0) goto L_0x0038
             com.bamtechmedia.dominguez.legal.api.LegalDocument r0 = r10.getOpenDocument()
             com.bamtechmedia.dominguez.legal.api.LegalDocument r1 = r9.$document
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             r0 = r0 ^ 1
             if (r0 == 0) goto L_0x0013
             goto L_0x0038

@@ -44,7 +44,7 @@ public final class C3678l {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f9221a, (java.lang.Object) ((com.bamtechmedia.dominguez.core.content.collections.C3678l) r2).f9221a) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f9221a, (java.lang.Object) ((com.bamtechmedia.dominguez.core.content.collections.C3678l) r2).f9221a) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -56,7 +56,7 @@ public final class C3678l {
             com.bamtechmedia.dominguez.core.content.collections.l r2 = (com.bamtechmedia.dominguez.core.content.collections.C3678l) r2
             javax.inject.Provider<java.lang.String> r0 = r1.f9221a
             javax.inject.Provider<java.lang.String> r2 = r2.f9221a
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:

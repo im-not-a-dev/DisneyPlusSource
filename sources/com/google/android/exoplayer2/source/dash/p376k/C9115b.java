@@ -78,7 +78,7 @@ public class C9115b implements C8807a<C9115b> {
 
     /* renamed from: c */
     public final long mo23677c(int i) {
-        return C8883r.m25967a(mo23676b(i));
+        return C8883r.msToUs(mo23676b(i));
     }
 
     /* renamed from: a */

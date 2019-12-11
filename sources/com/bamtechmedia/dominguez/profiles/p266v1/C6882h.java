@@ -11,10 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p330z.C7949h;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\b\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0001%B'\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\b\b\u0002\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\u0014\u0010\u0017\u001a\u00020\u00182\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u001b0\u001aJ\u001a\u0010\u001c\u001a\u00020\u00182\b\u0010\u001d\u001a\u0004\u0018\u00010\u001e2\u0006\u0010\u001f\u001a\u00020\u0005H\u0002J\u0010\u0010 \u001a\u00020\u00182\u0006\u0010!\u001a\u00020\u001bH\u0016J\u0018\u0010\"\u001a\u00020\u00182\u0006\u0010!\u001a\u00020\u001b2\u0006\u0010\n\u001a\u00020\u000bH\u0016J\u0006\u0010#\u001a\u00020\u0018J\u0006\u0010$\u001a\u00020\u0018R\u0014\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R&\u0010\u0010\u001a\u0004\u0018\u00010\u00078\u0006@\u0006X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006&"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/profiles/avatar/ChooseAvatarViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/profiles/avatar/ChooseAvatarViewModel$State;", "Lcom/bamtechmedia/dominguez/collections/items/CollectionItemClickHandler;", "isEditMode", "", "tempProfile", "Lcom/bamtechmedia/dominguez/profiles/TempProfile;", "profileNavRouter", "Lcom/bamtechmedia/dominguez/profiles/ProfileNavRouter;", "requestCode", "", "(ZLcom/bamtechmedia/dominguez/profiles/TempProfile;Lcom/bamtechmedia/dominguez/profiles/ProfileNavRouter;I)V", "defaultAvatarList", "", "Lcom/bamtechmedia/dominguez/core/content/Avatar;", "profile", "profile$annotations", "()V", "getProfile", "()Lcom/bamtechmedia/dominguez/profiles/TempProfile;", "setProfile", "(Lcom/bamtechmedia/dominguez/profiles/TempProfile;)V", "cacheHiddenAvatars", "", "hiddenAssets", "", "Lcom/bamtechmedia/dominguez/core/content/assets/Asset;", "onAvatarSelected", "avatarId", "", "avatarUserSelected", "onDetailClicked", "item", "onPlayClicked", "skip", "startNext", "State", "profiles_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.profiles.v1.h */
@@ -76,7 +76,7 @@ public final class C6882h extends C5741g<C6883a> implements C3345c {
             if (this != obj) {
                 if (obj instanceof C6883a) {
                     C6883a aVar = (C6883a) obj;
-                    if ((this.f15341a == aVar.f15341a) && C12880j.m40224a((Object) this.f15342b, (Object) aVar.f15342b)) {
+                    if ((this.f15341a == aVar.f15341a) && Intrinsics.areEqual((Object) this.f15342b, (Object) aVar.f15342b)) {
                         if (this.f15343c == aVar.f15343c) {
                             return true;
                         }
@@ -202,7 +202,7 @@ public final class C6882h extends C5741g<C6883a> implements C3345c {
         StringBuilder sb = new StringBuilder();
         sb.append("Can not handle item of type: ");
         sb.append(bVar.getClass());
-        C14100a.m44532e(sb.toString(), new Object[0]);
+        Timber.m44532e(sb.toString(), new Object[0]);
     }
 
     /* renamed from: a */
@@ -215,7 +215,7 @@ public final class C6882h extends C5741g<C6883a> implements C3345c {
         StringBuilder sb = new StringBuilder();
         sb.append("## Choose Avatars -> user elected to skip avatar selection: using avatar with id: ");
         sb.append(j);
-        C14100a.m44522a(sb.toString(), new Object[0]);
+        Timber.m44522a(sb.toString(), new Object[0]);
         m21077a(j, false);
     }
 

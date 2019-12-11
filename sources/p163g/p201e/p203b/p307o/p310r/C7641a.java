@@ -16,7 +16,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -27,7 +27,7 @@ import p163g.p201e.p203b.p307o.C7622l;
 import p163g.p201e.p203b.p307o.p308p.C7630d;
 import p512h.p513c.p514k.C11890i;
 import p520io.reactivex.functions.C11945a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0006\u0018\u0000 )2\u00020\u00012\u00020\u0002:\u0001)B\u0005¢\u0006\u0002\u0010\u0003J&\u0010\u0016\u001a\u0004\u0018\u00010\u00172\u0006\u0010\u0018\u001a\u00020\u00192\b\u0010\u001a\u001a\u0004\u0018\u00010\u001b2\b\u0010\u001c\u001a\u0004\u0018\u00010\u001dH\u0016J\u0010\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020!H\u0002J\u0010\u0010\"\u001a\u00020\u001f2\u0006\u0010#\u001a\u00020$H\u0016J\b\u0010%\u001a\u00020\u001fH\u0016J\b\u0010&\u001a\u00020\u001fH\u0016J\u001a\u0010'\u001a\u00020\u001f2\u0006\u0010(\u001a\u00020\u00172\b\u0010\u001c\u001a\u0004\u0018\u00010\u001dH\u0016R\u001e\u0010\u0004\u001a\u00020\u00058\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\tR\u001e\u0010\n\u001a\u00020\u000b8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR\u001e\u0010\u0010\u001a\u00020\u00118\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015¨\u0006*"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/error/tier3/NoConnectionFragment;", "Ldagger/android/support/DaggerFragment;", "Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView$RetryListener;", "()V", "offlineState", "Lcom/bamtechmedia/dominguez/core/OfflineState;", "getOfflineState", "()Lcom/bamtechmedia/dominguez/core/OfflineState;", "setOfflineState", "(Lcom/bamtechmedia/dominguez/core/OfflineState;)V", "offlineViewModel", "Lcom/bamtechmedia/dominguez/connectivity/OfflineViewModel;", "getOfflineViewModel", "()Lcom/bamtechmedia/dominguez/connectivity/OfflineViewModel;", "setOfflineViewModel", "(Lcom/bamtechmedia/dominguez/connectivity/OfflineViewModel;)V", "reloadListener", "Lcom/bamtechmedia/dominguez/error/api/ReloadListener;", "getReloadListener", "()Lcom/bamtechmedia/dominguez/error/api/ReloadListener;", "setReloadListener", "(Lcom/bamtechmedia/dominguez/error/api/ReloadListener;)V", "onCreateView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "savedInstanceState", "Landroid/os/Bundle;", "onOfflineStateUpdate", "", "timerState", "Lcom/bamtechmedia/dominguez/connectivity/TimerState;", "onRetryClicked", "isOffline", "", "onStart", "onStop", "onViewCreated", "view", "Companion", "error_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.o.r.a */
@@ -122,7 +122,7 @@ public final class C7641a extends C11890i implements C5641a {
 
         /* renamed from: a */
         public final void mo20569a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -130,7 +130,7 @@ public final class C7641a extends C11890i implements C5641a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -176,7 +176,7 @@ public final class C7641a extends C11890i implements C5641a {
         if (dVar != null) {
             return dVar;
         }
-        C12880j.m40227c("reloadListener");
+        Intrinsics.throwUninitializedPropertyAccessException("reloadListener");
         throw null;
     }
 
@@ -195,7 +195,7 @@ public final class C7641a extends C11890i implements C5641a {
             if (oVar != null) {
                 oVar.mo17342y();
             } else {
-                C12880j.m40227c("offlineViewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("offlineViewModel");
                 throw null;
             }
         }
@@ -203,7 +203,7 @@ public final class C7641a extends C11890i implements C5641a {
         if (dVar != null) {
             dVar.mo11889f();
         } else {
-            C12880j.m40227c("reloadListener");
+            Intrinsics.throwUninitializedPropertyAccessException("reloadListener");
             throw null;
         }
     }
@@ -216,7 +216,7 @@ public final class C7641a extends C11890i implements C5641a {
             ((NoConnectionView) _$_findCachedViewById(C7621k.noConnection)).setRetryListener(this);
             return;
         }
-        C12880j.m40227c("offlineViewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("offlineViewModel");
         throw null;
     }
 
@@ -256,11 +256,11 @@ public final class C7641a extends C11890i implements C5641a {
             androidx.lifecycle.i$a r4 = androidx.lifecycle.C0715i.C0716a.ON_STOP
             com.uber.autodispose.android.lifecycle.b r4 = com.uber.autodispose.android.lifecycle.C10541b.m33255a(r2, r4)
             java.lang.String r0 = "AndroidLifecycleScopePro…om(\n    this, untilEvent)"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
             g.n.a.h r4 = p163g.p503n.p504a.C11793e.m37930a(r4)
             java.lang.Object r3 = r3.mo30048a(r4)
             java.lang.String r4 = "this.`as`(AutoDispose.au…isposable<Any>(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             g.n.a.v r3 = (p163g.p503n.p504a.C11839v) r3
             g.e.b.o.r.a$c r4 = new g.e.b.o.r.a$c
             r4.<init>(r2)
@@ -274,15 +274,15 @@ public final class C7641a extends C11890i implements C5641a {
             r3.mo29926a(r4, r0)
             goto L_0x0060
         L_0x005c:
-            kotlin.jvm.internal.C12880j.m40227c(r1)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r1)
             throw r0
         L_0x0060:
             return
         L_0x0061:
-            kotlin.jvm.internal.C12880j.m40227c(r1)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r1)
             throw r0
         L_0x0065:
-            kotlin.jvm.internal.C12880j.m40227c(r1)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r1)
             throw r0
         */
         throw new UnsupportedOperationException("Method not decompiled: p163g.p201e.p203b.p307o.p310r.C7641a.onViewCreated(android.view.View, android.os.Bundle):void");

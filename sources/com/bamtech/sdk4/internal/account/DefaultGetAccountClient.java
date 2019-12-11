@@ -9,7 +9,7 @@ import com.bamtech.sdk4.internal.networking.ConverterProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -41,7 +41,7 @@ public final class DefaultGetAccountClient implements GetAccountClient {
 
     public Single<? extends Account> getAccount(ServiceTransaction serviceTransaction, Map<String, String> map, Class<? extends Account> cls) {
         Single<? extends Account> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultGetAccountClient$getAccount$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultGetAccountClient$getAccount$2<Object,Object>(this, map, serviceTransaction, cls));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…CCOUNT)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…CCOUNT)\n                }");
         return a;
     }
 }

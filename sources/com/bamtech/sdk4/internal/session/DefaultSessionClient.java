@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.session.SessionInfo;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -25,7 +25,7 @@ public final class DefaultSessionClient implements SessionClient {
 
     public Single<SessionInfo> getSessionInfo(ServiceTransaction serviceTransaction, Map<String, String> map) {
         Single<SessionInfo> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultSessionClient$getSessionInfo$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultSessionClient$getSessionInfo$2<Object,Object>(this, map, serviceTransaction));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…FO)\n                    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…FO)\n                    }");
         return a;
     }
 }

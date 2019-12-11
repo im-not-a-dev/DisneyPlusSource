@@ -34,7 +34,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p307o.p308p.C7629c;
 import p512h.p513c.p514k.C11890i;
@@ -258,11 +258,11 @@ public final class C2833f extends C11890i implements C2413n {
             if (hVar != null) {
                 hVar.mo11850b(m10520q());
             } else {
-                C12880j.m40227c("viewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("viewModel");
                 throw null;
             }
         } else {
-            C12880j.m40227c("analytics");
+            Intrinsics.throwUninitializedPropertyAccessException("analytics");
             throw null;
         }
     }
@@ -285,7 +285,7 @@ public final class C2833f extends C11890i implements C2413n {
         if (dVar != null) {
             return dVar.mo13695j();
         }
-        C12880j.m40227c("offlineState");
+        Intrinsics.throwUninitializedPropertyAccessException("offlineState");
         throw null;
     }
 
@@ -334,7 +334,7 @@ public final class C2833f extends C11890i implements C2413n {
         if (hVar != null) {
             return hVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -344,7 +344,7 @@ public final class C2833f extends C11890i implements C2413n {
         if (bVar != null) {
             return bVar;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
@@ -362,7 +362,7 @@ public final class C2833f extends C11890i implements C2413n {
         OnboardingToolbar onboardingToolbar = (OnboardingToolbar) _$_findCachedViewById(C2716h0.registerAccountOnboardingToolbar);
         if (onboardingToolbar != null) {
             C0532d requireActivity = requireActivity();
-            C12880j.m40222a((Object) requireActivity, "requireActivity()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
             onboardingToolbar.mo17459a(requireActivity, getView(), (NestedScrollView) _$_findCachedViewById(C2716h0.registerAccountScrollView), (ConstraintLayout) _$_findCachedViewById(C2716h0.registerAccountLayout), false, new C2834a(this));
         }
         C2842h hVar = this.f7597U;
@@ -373,16 +373,16 @@ public final class C2833f extends C11890i implements C2413n {
                 if (cVar != null) {
                     int i = C2716h0.registerAccountContainer;
                     C0538i childFragmentManager = getChildFragmentManager();
-                    C12880j.m40222a((Object) childFragmentManager, "childFragmentManager");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "childFragmentManager");
                     cVar.mo20550a(i, childFragmentManager);
                     return;
                 }
-                C12880j.m40227c("offlineRouter");
+                Intrinsics.throwUninitializedPropertyAccessException("offlineRouter");
                 throw null;
             }
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -402,7 +402,7 @@ public final class C2833f extends C11890i implements C2413n {
             if (rVar != null) {
                 textView.setText(rVar.mo11802y());
             } else {
-                C12880j.m40227c("authHostViewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("authHostViewModel");
                 throw null;
             }
         }
@@ -413,7 +413,7 @@ public final class C2833f extends C11890i implements C2413n {
             if (hVar != null) {
                 passwordInputLayout.setInputTextValue(hVar.mo11852y());
             } else {
-                C12880j.m40227c("viewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("viewModel");
                 throw null;
             }
         }

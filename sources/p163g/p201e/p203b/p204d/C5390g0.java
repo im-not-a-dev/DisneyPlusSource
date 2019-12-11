@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.analytics.p057o0.C2435d;
 import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Function;
 
@@ -54,7 +54,7 @@ public final class C5390g0 implements C2435d {
     /* renamed from: b */
     public Single<Map<String, String>> mo11526b() {
         Single<Map<String, String>> g = this.f12897a.mo17142a().mo30233g(C5392b.f12898c);
-        C12880j.m40222a((Object) g, "countryCodeProvider.coun…COUNTRY_CODE_KEY to it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "countryCodeProvider.coun…COUNTRY_CODE_KEY to it) }");
         return g;
     }
 }

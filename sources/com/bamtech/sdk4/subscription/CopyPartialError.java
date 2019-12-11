@@ -57,7 +57,7 @@ public final class CopyPartialError implements ErrorReason {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x0036, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.limit, (java.lang.Object) r3.limit) != false) goto L_0x003b;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.limit, (java.lang.Object) r3.limit) != false) goto L_0x003b;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -69,19 +69,19 @@ public final class CopyPartialError implements ErrorReason {
             com.bamtech.sdk4.subscription.CopyPartialError r3 = (com.bamtech.sdk4.subscription.CopyPartialError) r3
             java.lang.String r0 = r2.getCode()
             java.lang.String r1 = r3.getCode()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0039
             java.lang.String r0 = r2.getDescription()
             java.lang.String r1 = r3.getDescription()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0039
             java.lang.String r0 = r2.subscriptionId
             java.lang.String r1 = r3.subscriptionId
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0039
             java.lang.Integer r0 = r2.limit
             java.lang.Integer r3 = r3.limit
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0039
             goto L_0x003b
         L_0x0039:

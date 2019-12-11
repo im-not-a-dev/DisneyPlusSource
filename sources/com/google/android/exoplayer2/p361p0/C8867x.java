@@ -23,8 +23,8 @@ import com.google.android.exoplayer2.p381t0.C9271b;
 import com.google.android.exoplayer2.p381t0.C9273c;
 import com.google.android.exoplayer2.p381t0.C9275d.C9278c;
 import com.google.android.exoplayer2.p381t0.C9284e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9565s;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import java.util.ArrayList;
@@ -125,20 +125,20 @@ public class C8867x extends C9271b implements C9565s {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:5:0x0018, code lost:
-        if ("AXON 7 mini".equals(com.google.android.exoplayer2.p393v0.C9554k0.f22284d) != false) goto L_0x001a;
+        if ("AXON 7 mini".equals(com.google.android.exoplayer2.p393v0.Util.MODEL) != false) goto L_0x001a;
      */
     /* renamed from: H */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private static boolean m25824H() {
         /*
-            int r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             r1 = 23
             if (r0 != r1) goto L_0x001c
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "ZTE B2017G"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x001a
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22284d
+            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
             java.lang.String r1 = "AXON 7 mini"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x001c
@@ -279,7 +279,7 @@ public class C8867x extends C9271b implements C9565s {
         if (!C9566t.m29517j(str)) {
             return 0;
         }
-        int i = C9554k0.f22281a >= 21 ? 32 : 0;
+        int i = Util.SDK_INT >= 21 ? 32 : 0;
         boolean a = C8872q.m25888a(lVar, format.f18353e0);
         int i2 = 4;
         int i3 = 8;
@@ -344,8 +344,8 @@ public class C8867x extends C9271b implements C9565s {
 
     /* renamed from: b */
     private static boolean m25830b(String str) {
-        if (C9554k0.f22281a < 21 && "OMX.SEC.mp3.dec".equals(str)) {
-            if ("samsung".equals(C9554k0.f22283c) && (C9554k0.f22282b.startsWith("baffin") || C9554k0.f22282b.startsWith("grand") || C9554k0.f22282b.startsWith("fortuna") || C9554k0.f22282b.startsWith("gprimelte") || C9554k0.f22282b.startsWith("j2y18lte") || C9554k0.f22282b.startsWith("ms01"))) {
+        if (Util.SDK_INT < 21 && "OMX.SEC.mp3.dec".equals(str)) {
+            if ("samsung".equals(Util.MANUFACTURER) && (Util.DEVICE.startsWith("baffin") || Util.DEVICE.startsWith("grand") || Util.DEVICE.startsWith("fortuna") || Util.DEVICE.startsWith("gprimelte") || Util.DEVICE.startsWith("j2y18lte") || Util.DEVICE.startsWith("ms01"))) {
                 return true;
             }
         }
@@ -487,7 +487,7 @@ public class C8867x extends C9271b implements C9565s {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Too many stream changes, so dropping change at ");
                 sb.append(this.f18971l1[this.f18985z1 - 1]);
-                C9563q.m29500d("MediaCodecAudioRenderer", sb.toString());
+                Log.m29500d("MediaCodecAudioRenderer", sb.toString());
             } else {
                 this.f18985z1 = i + 1;
             }
@@ -631,8 +631,8 @@ public class C8867x extends C9271b implements C9565s {
     /* renamed from: a */
     private int m25826a(C9270a aVar, Format format) {
         if ("OMX.google.raw.decoder".equals(aVar.f21082a)) {
-            int i = C9554k0.f22281a;
-            if (i < 24 && (i != 23 || !C9554k0.m29446d(this.f18968i1))) {
+            int i = Util.SDK_INT;
+            if (i < 24 && (i != 23 || !Util.m29446d(this.f18968i1))) {
                 return -1;
             }
         }
@@ -642,7 +642,7 @@ public class C8867x extends C9271b implements C9565s {
     /* access modifiers changed from: protected */
     /* renamed from: a */
     public boolean mo23190a(Format format, Format format2) {
-        return C9554k0.m29414a((Object) format.f18349b0, (Object) format2.f18349b0) && format.f18363o0 == format2.f18363o0 && format.f18364p0 == format2.f18364p0 && format.mo22607b(format2);
+        return Util.m29414a((Object) format.f18349b0, (Object) format2.f18349b0) && format.f18363o0 == format2.f18363o0 && format.f18364p0 == format2.f18364p0 && format.mo22607b(format2);
     }
 
     /* access modifiers changed from: protected */
@@ -655,13 +655,13 @@ public class C8867x extends C9271b implements C9565s {
         mediaFormat.setInteger("sample-rate", format.f18364p0);
         C9284e.m28167a(mediaFormat, format.f18352d0);
         C9284e.m28165a(mediaFormat, "max-input-size", i);
-        if (C9554k0.f22281a >= 23) {
+        if (Util.SDK_INT >= 23) {
             mediaFormat.setInteger("priority", 0);
             if (f != -1.0f && !m25824H()) {
                 mediaFormat.setFloat("operating-rate", f);
             }
         }
-        if (C9554k0.f22281a <= 28) {
+        if (Util.SDK_INT <= 28) {
             if ("audio/ac4".equals(format.f18349b0)) {
                 mediaFormat.setInteger("ac4-is-sync", 1);
             }
@@ -671,8 +671,8 @@ public class C8867x extends C9271b implements C9565s {
 
     /* renamed from: a */
     private static boolean m25829a(String str) {
-        if (C9554k0.f22281a < 24 && "OMX.SEC.aac.dec".equals(str)) {
-            if ("samsung".equals(C9554k0.f22283c) && (C9554k0.f22282b.startsWith("zeroflte") || C9554k0.f22282b.startsWith("herolte") || C9554k0.f22282b.startsWith("heroqlte"))) {
+        if (Util.SDK_INT < 24 && "OMX.SEC.aac.dec".equals(str)) {
+            if ("samsung".equals(Util.MANUFACTURER) && (Util.DEVICE.startsWith("zeroflte") || Util.DEVICE.startsWith("herolte") || Util.DEVICE.startsWith("heroqlte"))) {
                 return true;
             }
         }

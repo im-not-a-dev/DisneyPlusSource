@@ -5,7 +5,7 @@ import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12865c0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlinx.coroutines.C13292j0;
 import kotlinx.coroutines.C13323k0;
 import kotlinx.coroutines.internal.C13266g;
@@ -73,7 +73,7 @@ public abstract class C13301c<E> implements C13321q<E> {
         Object d = gVar.mo34422d();
         if (d != null) {
             int i = 0;
-            for (C13268i iVar = (C13268i) d; !C12880j.m40224a((Object) iVar, (Object) gVar); iVar = iVar.mo34423e()) {
+            for (C13268i iVar = (C13268i) d; !Intrinsics.areEqual((Object) iVar, (Object) gVar); iVar = iVar.mo34423e()) {
                 if (iVar instanceof C13268i) {
                     i++;
                 }

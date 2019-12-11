@@ -23,7 +23,7 @@ import java.util.Map;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p135s.C4127b0;
 import p163g.p201e.p203b.p307o.C7621k;
@@ -112,12 +112,12 @@ public final class C7631a extends C11890i {
     /* renamed from: e */
     private final void m22619e(String str) {
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         if (C5837i.m18840b(requireContext)) {
             C3572r0 r0Var = this.f16643U;
             if (r0Var != null) {
                 String string = requireContext().getString(C7623m.contact_csr_phone);
-                C12880j.m40222a((Object) string, "requireContext().getStri…string.contact_csr_phone)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) string, "requireContext().getStri…string.contact_csr_phone)");
                 String a = C3575s0.m12040a(r0Var, string, C5838i0.m18844a(str), null, 4, null);
                 Button button = (Button) _$_findCachedViewById(C7621k.callButton);
                 if (button != null) {
@@ -130,7 +130,7 @@ public final class C7631a extends C11890i {
                 }
                 return;
             }
-            C12880j.m40227c("appDictionary");
+            Intrinsics.throwUninitializedPropertyAccessException("appDictionary");
             throw null;
         }
         Button button3 = (Button) _$_findCachedViewById(C7621k.callButton);
@@ -143,37 +143,37 @@ public final class C7631a extends C11890i {
     /* renamed from: f */
     public final void m22620f(String str) {
         TextView textView = (TextView) _$_findCachedViewById(C7621k.title);
-        C12880j.m40222a((Object) textView, "title");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "title");
         C3572r0 r0Var = this.f16643U;
         String str2 = "appDictionary";
         if (r0Var != null) {
             textView.setText(C3573a.m12035a(r0Var, C7623m.contact_csr_title, (Map) null, 2, (Object) null));
             TextView textView2 = (TextView) _$_findCachedViewById(C7621k.subtitle);
-            C12880j.m40222a((Object) textView2, "subtitle");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "subtitle");
             C3572r0 r0Var2 = this.f16643U;
             if (r0Var2 != null) {
                 String string = requireContext().getString(C7623m.contact_csr_subtitle);
-                C12880j.m40222a((Object) string, "requireContext().getStri…ing.contact_csr_subtitle)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) string, "requireContext().getStri…ing.contact_csr_subtitle)");
                 textView2.setText(C3575s0.m12040a(r0Var2, string, C5838i0.m18844a(str), null, 4, null));
                 Context requireContext = requireContext();
-                C12880j.m40222a((Object) requireContext, "requireContext()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
                 String str3 = "dismissButton";
                 if (C5837i.m18843e(requireContext)) {
                     Button button = (Button) _$_findCachedViewById(C7621k.dismissButton);
-                    C12880j.m40222a((Object) button, str3);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) button, str3);
                     button.setText(C5880u.m18936a(C7623m.btn_ok));
                     return;
                 }
                 Button button2 = (Button) _$_findCachedViewById(C7621k.dismissButton);
-                C12880j.m40222a((Object) button2, str3);
+                Intrinsics.checkReturnedValueIsNotNull((Object) button2, str3);
                 button2.setText(C5880u.m18936a(C7623m.btn_dismiss));
                 m22619e(str);
                 return;
             }
-            C12880j.m40227c(str2);
+            Intrinsics.throwUninitializedPropertyAccessException(str2);
             throw null;
         }
-        C12880j.m40227c(str2);
+        Intrinsics.throwUninitializedPropertyAccessException(str2);
         throw null;
     }
 
@@ -216,7 +216,7 @@ public final class C7631a extends C11890i {
             C5755i.m18679a(this, cVar, null, null, new C7632a(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 

@@ -19,7 +19,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -31,7 +31,7 @@ import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.C11945a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000j\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\u0004\u0018\u0000 72\u00020\u0001:\u00017B\u0005¢\u0006\u0002\u0010\u0002J\b\u0010&\u001a\u00020'H\u0002J\u0012\u0010(\u001a\u00020)2\b\u0010*\u001a\u0004\u0018\u00010+H\u0016J$\u0010,\u001a\u00020-2\u0006\u0010.\u001a\u00020/2\b\u00100\u001a\u0004\u0018\u0001012\b\u0010*\u001a\u0004\u0018\u00010+H\u0016J\u0010\u00102\u001a\u00020)2\u0006\u00103\u001a\u000204H\u0002J\b\u00105\u001a\u00020)H\u0002J\b\u00106\u001a\u00020'H\u0002R\u001e\u0010\u0003\u001a\u00020\u00048\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001b\u0010\t\u001a\u00020\n8BX\u0002¢\u0006\f\n\u0004\b\f\u0010\r\u001a\u0004\b\t\u0010\u000bR\u001e\u0010\u000e\u001a\u00020\u000f8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0010\u0010\u0011\"\u0004\b\u0012\u0010\u0013R\u001e\u0010\u0014\u001a\u00020\u00158\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0016\u0010\u0017\"\u0004\b\u0018\u0010\u0019R\u001e\u0010\u001a\u001a\u00020\u001b8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u001c\u0010\u001d\"\u0004\b\u001e\u0010\u001fR\u001e\u0010 \u001a\u00020!8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\"\u0010#\"\u0004\b$\u0010%¨\u00068"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/logout/LogOutDialogFragment;", "Ldagger/android/support/DaggerAppCompatDialogFragment;", "()V", "ioScheduler", "Lio/reactivex/Scheduler;", "getIoScheduler", "()Lio/reactivex/Scheduler;", "setIoScheduler", "(Lio/reactivex/Scheduler;)V", "isSoftLogout", "", "()Z", "isSoftLogout$delegate", "Lcom/bamtechmedia/dominguez/core/utils/BooleanFragmentArgumentDelegate;", "languageSwitcher", "Lcom/bamtechmedia/dominguez/dictionaries/LanguageSwitcher;", "getLanguageSwitcher", "()Lcom/bamtechmedia/dominguez/dictionaries/LanguageSwitcher;", "setLanguageSwitcher", "(Lcom/bamtechmedia/dominguez/dictionaries/LanguageSwitcher;)V", "logOutAction", "Lcom/bamtechmedia/dominguez/auth/logout/LogOutAction;", "getLogOutAction", "()Lcom/bamtechmedia/dominguez/auth/logout/LogOutAction;", "setLogOutAction", "(Lcom/bamtechmedia/dominguez/auth/logout/LogOutAction;)V", "logOutListener", "Lcom/bamtechmedia/dominguez/auth/api/LogOutListener;", "getLogOutListener", "()Lcom/bamtechmedia/dominguez/auth/api/LogOutListener;", "setLogOutListener", "(Lcom/bamtechmedia/dominguez/auth/api/LogOutListener;)V", "userProfileModeTracker", "Lcom/bamtechmedia/dominguez/profiles/api/UserProfileModeTracker;", "getUserProfileModeTracker", "()Lcom/bamtechmedia/dominguez/profiles/api/UserProfileModeTracker;", "setUserProfileModeTracker", "(Lcom/bamtechmedia/dominguez/profiles/api/UserProfileModeTracker;)V", "logOut", "Lio/reactivex/disposables/Disposable;", "onCreate", "", "savedInstanceState", "Landroid/os/Bundle;", "onCreateView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "onLogOutError", "throwable", "", "onLogoutComplete", "softLogOut", "Companion", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.r0.e */
@@ -232,13 +232,13 @@ public final class C2797e extends C11885d {
             C6090n nVar = this.f7554W;
             if (nVar != null) {
                 Disposable a = b.mo30034a((CompletableSource) nVar.mo18350a(null)).mo30047a(C2800c.f7559a, new C2806g(new C2801d(this)));
-                C12880j.m40222a((Object) a, "logOutAction.onLogout()\n…ribe({}, ::onLogOutError)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a, "logOutAction.onLogout()\n…ribe({}, ::onLogOutError)");
                 return a;
             }
-            C12880j.m40227c("languageSwitcher");
+            Intrinsics.throwUninitializedPropertyAccessException("languageSwitcher");
             throw null;
         }
-        C12880j.m40227c("logOutAction");
+        Intrinsics.throwUninitializedPropertyAccessException("logOutAction");
         throw null;
     }
 
@@ -252,11 +252,11 @@ public final class C2797e extends C11885d {
             if (dVar != null) {
                 dVar.mo11753a();
             } else {
-                C12880j.m40227c("logOutListener");
+                Intrinsics.throwUninitializedPropertyAccessException("logOutListener");
                 throw null;
             }
         } else {
-            C12880j.m40227c("userProfileModeTracker");
+            Intrinsics.throwUninitializedPropertyAccessException("userProfileModeTracker");
             throw null;
         }
     }
@@ -269,13 +269,13 @@ public final class C2797e extends C11885d {
             C6090n nVar = this.f7554W;
             if (nVar != null) {
                 Disposable a = b.mo30034a((CompletableSource) nVar.mo18350a(null)).mo30047a(C2803f.f7560a, new C2806g(new C2804g(this)));
-                C12880j.m40222a((Object) a, "logOutAction.onSoftLogou…ribe({}, ::onLogOutError)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a, "logOutAction.onSoftLogou…ribe({}, ::onLogOutError)");
                 return a;
             }
-            C12880j.m40227c("languageSwitcher");
+            Intrinsics.throwUninitializedPropertyAccessException("languageSwitcher");
             throw null;
         }
-        C12880j.m40227c("logOutAction");
+        Intrinsics.throwUninitializedPropertyAccessException("logOutAction");
         throw null;
     }
 
@@ -299,7 +299,7 @@ public final class C2797e extends C11885d {
         } else {
             m10471p();
         }
-        C12880j.m40222a((Object) inflate, "inflater.inflate(R.layou…)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "inflater.inflate(R.layou…)\n            }\n        }");
         return inflate;
     }
 
@@ -311,7 +311,7 @@ public final class C2797e extends C11885d {
     /* access modifiers changed from: private */
     /* renamed from: a */
     public final void m10469a(Throwable th) {
-        C14100a.m44527b(th);
+        Timber.m44527b(th);
         C13145v vVar = C13145v.f29587a;
         m10472q();
     }

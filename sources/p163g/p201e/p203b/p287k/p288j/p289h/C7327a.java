@@ -38,7 +38,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p287k.C7310d;
 import p163g.p201e.p203b.p287k.C7312f;
 import p163g.p201e.p203b.p287k.p288j.C7316a;
@@ -48,7 +48,8 @@ import p163g.p509o.p510a.C11853e;
 import p163g.p509o.p510a.p511l.C11866a;
 import p163g.p509o.p510a.p511l.C11867b;
 
-@Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000¶\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0010\u0000\n\u0002\b\u0013\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\b\u0018\u00002\u00020\u0001:\u0001WB\u0001\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\n\b\u0001\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0006\u0010\f\u001a\u00020\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\u0006\u0010\u0010\u001a\u00020\u0011\u0012\u0018\u0010\u0012\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00150\u00140\u0013\u0012\b\u0010\u0016\u001a\u0004\u0018\u00010\u0017\u0012\u0006\u0010\u0018\u001a\u00020\u0019\u0012\u0006\u0010\u001a\u001a\u00020\u001b\u0012\u0006\u0010\u001c\u001a\u00020\u001d¢\u0006\u0002\u0010\u001eJ\u0010\u0010)\u001a\u00020*2\u0006\u0010+\u001a\u00020,H\u0002J\u0018\u0010-\u001a\u00020*2\u0006\u0010.\u001a\u00020/2\u0006\u00100\u001a\u000201H\u0016J&\u0010-\u001a\u00020*2\u0006\u00102\u001a\u00020/2\u0006\u00100\u001a\u0002012\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0016J\u0010\u00106\u001a\u00020*2\u0006\u0010.\u001a\u00020/H\u0007J\t\u00107\u001a\u00020\u0003HÂ\u0003J\u000b\u00108\u001a\u0004\u0018\u00010\u0017HÂ\u0003J\t\u00109\u001a\u00020\u0019HÂ\u0003J\t\u0010:\u001a\u00020\u001bHÂ\u0003J\t\u0010;\u001a\u00020\u001dHÂ\u0003J\t\u0010<\u001a\u00020\u0005HÂ\u0003J\u000b\u0010=\u001a\u0004\u0018\u00010\u0007HÆ\u0003J\t\u0010>\u001a\u00020\tHÂ\u0003J\t\u0010?\u001a\u00020\u000bHÂ\u0003J\t\u0010@\u001a\u00020\rHÂ\u0003J\t\u0010A\u001a\u00020\u000fHÂ\u0003J\t\u0010B\u001a\u00020\u0011HÂ\u0003J\u001b\u0010C\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00150\u00140\u0013HÂ\u0003J¡\u0001\u0010D\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00052\n\b\u0003\u0010\u0006\u001a\u0004\u0018\u00010\u00072\b\b\u0002\u0010\b\u001a\u00020\t2\b\b\u0002\u0010\n\u001a\u00020\u000b2\b\b\u0002\u0010\f\u001a\u00020\r2\b\b\u0002\u0010\u000e\u001a\u00020\u000f2\b\b\u0002\u0010\u0010\u001a\u00020\u00112\u001a\b\u0002\u0010\u0012\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00150\u00140\u00132\n\b\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u00172\b\b\u0002\u0010\u0018\u001a\u00020\u00192\b\b\u0002\u0010\u001a\u001a\u00020\u001b2\b\b\u0002\u0010\u001c\u001a\u00020\u001dHÆ\u0001J\u0013\u0010E\u001a\u00020\"2\b\u0010F\u001a\u0004\u0018\u000105HÖ\u0003J\u0018\u0010G\u001a\u0004\u0018\u0001052\f\u0010H\u001a\b\u0012\u0002\b\u0003\u0018\u00010IH\u0016J\b\u0010J\u001a\u000201H\u0016J\t\u0010K\u001a\u000201HÖ\u0001J\u0016\u0010L\u001a\u00020\"2\f\u0010F\u001a\b\u0012\u0002\b\u0003\u0018\u00010IH\u0016J\t\u0010M\u001a\u00020NHÖ\u0001J\u001a\u0010O\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002J\u001a\u0010P\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002J\u001a\u0010Q\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002J\u001a\u0010R\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002J\u000e\u0010S\u001a\u0004\u0018\u00010T*\u00020UH\u0002J\u001a\u0010V\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002R\u000e\u0010\u0018\u001a\u00020\u0019X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001dX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\rX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u0013\u0010\u0006\u001a\u0004\u0018\u00010\u0007¢\u0006\b\n\u0000\u001a\u0004\b\u001f\u0010 R \u0010\u0012\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00150\u00140\u0013X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010!\u001a\u00020\"8BX\u0004¢\u0006\u0006\u001a\u0004\b!\u0010#R\u0014\u0010$\u001a\u00020%8BX\u0004¢\u0006\u0006\u001a\u0004\b&\u0010'R\u000e\u0010(\u001a\u00020\"X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0016\u001a\u0004\u0018\u00010\u0017X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006X"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/detail/movie/mobile/MovieDetailHeaderItem;", "Lcom/xwray/groupie/kotlinandroidextensions/Item;", "dataParams", "Lcom/bamtechmedia/dominguez/detail/movie/MovieHeaderMetadataParams;", "titleTreatment", "Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;", "downloadState", "Lcom/bamtechmedia/dominguez/offline/DownloadState;", "ratingHelper", "Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;", "runtimeConverter", "Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;", "contentTypeRouter", "Lcom/bamtechmedia/dominguez/core/content/ContentTypeRouter;", "movieDetailViewModel", "Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;", "bookmarkStateBinder", "Lcom/bamtechmedia/dominguez/detail/common/DetailBookmarkStateBinder;", "downloadStateMapper", "Lcom/google/common/base/Optional;", "Lcom/google/common/base/Function;", "Lcom/bamtechmedia/dominguez/core/design/widgets/DownloadStatusView$State;", "preferences", "Lcom/bamtechmedia/dominguez/offline/DownloadPreferences;", "analytics", "Lcom/bamtechmedia/dominguez/detail/movie/MovieDetailAnalytics;", "promoLabelFormatter", "Lcom/bamtechmedia/dominguez/detail/common/PromoLabelFormatter;", "contentDetailConfig", "Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;", "(Lcom/bamtechmedia/dominguez/detail/movie/MovieHeaderMetadataParams;Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;Lcom/bamtechmedia/dominguez/offline/DownloadState;Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;Lcom/bamtechmedia/dominguez/core/content/ContentTypeRouter;Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;Lcom/bamtechmedia/dominguez/detail/common/DetailBookmarkStateBinder;Lcom/google/common/base/Optional;Lcom/bamtechmedia/dominguez/offline/DownloadPreferences;Lcom/bamtechmedia/dominguez/detail/movie/MovieDetailAnalytics;Lcom/bamtechmedia/dominguez/detail/common/PromoLabelFormatter;Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;)V", "getDownloadState", "()Lcom/bamtechmedia/dominguez/offline/DownloadState;", "isDownloadButtonEnabled", "", "()Z", "movie", "Lcom/bamtechmedia/dominguez/core/content/Movie;", "getMovie", "()Lcom/bamtechmedia/dominguez/core/content/Movie;", "movieDetailLoaded", "addFocusChangeListenerToScaleView", "", "view", "Landroid/view/View;", "bind", "viewHolder", "Lcom/xwray/groupie/kotlinandroidextensions/ViewHolder;", "position", "", "holder", "payloads", "", "", "bindPlaybackListener", "component1", "component10", "component11", "component12", "component13", "component2", "component3", "component4", "component5", "component6", "component7", "component8", "component9", "copy", "equals", "other", "getChangePayload", "newItem", "Lcom/xwray/groupie/Item;", "getLayout", "hashCode", "isSameAs", "toString", "", "bindDownloadStatus", "bindMovie", "bindPlayRestartButtons", "bindWatchlistStatus", "getPhoto", "Lcom/bamtechmedia/dominguez/core/content/assets/Image;", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "requestInitialFocus", "ChangePayload", "contentDetail_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
+@Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000¶\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0010\u0000\n\u0002\b\u0013\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\b\u0018\u00002\u00020\u0001:\u0001WB
+\u0001\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\n\b\u0001\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0006\u0010\f\u001a\u00020\r\u0012\u0006\u0010\u000e\u001a\u00020\u000f\u0012\u0006\u0010\u0010\u001a\u00020\u0011\u0012\u0018\u0010\u0012\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00150\u00140\u0013\u0012\b\u0010\u0016\u001a\u0004\u0018\u00010\u0017\u0012\u0006\u0010\u0018\u001a\u00020\u0019\u0012\u0006\u0010\u001a\u001a\u00020\u001b\u0012\u0006\u0010\u001c\u001a\u00020\u001d¢\u0006\u0002\u0010\u001eJ\u0010\u0010)\u001a\u00020*2\u0006\u0010+\u001a\u00020,H\u0002J\u0018\u0010-\u001a\u00020*2\u0006\u0010.\u001a\u00020/2\u0006\u00100\u001a\u000201H\u0016J&\u0010-\u001a\u00020*2\u0006\u00102\u001a\u00020/2\u0006\u00100\u001a\u0002012\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0016J\u0010\u00106\u001a\u00020*2\u0006\u0010.\u001a\u00020/H\u0007J\t\u00107\u001a\u00020\u0003HÂ\u0003J\u000b\u00108\u001a\u0004\u0018\u00010\u0017HÂ\u0003J\t\u00109\u001a\u00020\u0019HÂ\u0003J\t\u0010:\u001a\u00020\u001bHÂ\u0003J\t\u0010;\u001a\u00020\u001dHÂ\u0003J\t\u0010<\u001a\u00020\u0005HÂ\u0003J\u000b\u0010=\u001a\u0004\u0018\u00010\u0007HÆ\u0003J\t\u0010>\u001a\u00020\tHÂ\u0003J\t\u0010?\u001a\u00020\u000bHÂ\u0003J\t\u0010@\u001a\u00020\rHÂ\u0003J\t\u0010A\u001a\u00020\u000fHÂ\u0003J\t\u0010B\u001a\u00020\u0011HÂ\u0003J\u001b\u0010C\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00150\u00140\u0013HÂ\u0003J¡\u0001\u0010D\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00052\n\b\u0003\u0010\u0006\u001a\u0004\u0018\u00010\u00072\b\b\u0002\u0010\b\u001a\u00020\t2\b\b\u0002\u0010\n\u001a\u00020\u000b2\b\b\u0002\u0010\f\u001a\u00020\r2\b\b\u0002\u0010\u000e\u001a\u00020\u000f2\b\b\u0002\u0010\u0010\u001a\u00020\u00112\u001a\b\u0002\u0010\u0012\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00150\u00140\u00132\n\b\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u00172\b\b\u0002\u0010\u0018\u001a\u00020\u00192\b\b\u0002\u0010\u001a\u001a\u00020\u001b2\b\b\u0002\u0010\u001c\u001a\u00020\u001dHÆ\u0001J\u0013\u0010E\u001a\u00020\"2\b\u0010F\u001a\u0004\u0018\u000105HÖ\u0003J\u0018\u0010G\u001a\u0004\u0018\u0001052\f\u0010H\u001a\b\u0012\u0002\b\u0003\u0018\u00010IH\u0016J\b\u0010J\u001a\u000201H\u0016J\t\u0010K\u001a\u000201HÖ\u0001J\u0016\u0010L\u001a\u00020\"2\f\u0010F\u001a\b\u0012\u0002\b\u0003\u0018\u00010IH\u0016J\t\u0010M\u001a\u00020NHÖ\u0001J\u001a\u0010O\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002J\u001a\u0010P\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002J\u001a\u0010Q\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002J\u001a\u0010R\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002J\u000e\u0010S\u001a\u0004\u0018\u00010T*\u00020UH\u0002J\u001a\u0010V\u001a\u00020**\u00020/2\f\u00103\u001a\b\u0012\u0004\u0012\u00020504H\u0002R\u000e\u0010\u0018\u001a\u00020\u0019X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001dX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\rX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u0013\u0010\u0006\u001a\u0004\u0018\u00010\u0007¢\u0006\b\n\u0000\u001a\u0004\b\u001f\u0010 R \u0010\u0012\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00150\u00140\u0013X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010!\u001a\u00020\"8BX\u0004¢\u0006\u0006\u001a\u0004\b!\u0010#R\u0014\u0010$\u001a\u00020%8BX\u0004¢\u0006\u0006\u001a\u0004\b&\u0010'R\u000e\u0010(\u001a\u00020\"X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0016\u001a\u0004\u0018\u00010\u0017X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006X"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/detail/movie/mobile/MovieDetailHeaderItem;", "Lcom/xwray/groupie/kotlinandroidextensions/Item;", "dataParams", "Lcom/bamtechmedia/dominguez/detail/movie/MovieHeaderMetadataParams;", "titleTreatment", "Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;", "downloadState", "Lcom/bamtechmedia/dominguez/offline/DownloadState;", "ratingHelper", "Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;", "runtimeConverter", "Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;", "contentTypeRouter", "Lcom/bamtechmedia/dominguez/core/content/ContentTypeRouter;", "movieDetailViewModel", "Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;", "bookmarkStateBinder", "Lcom/bamtechmedia/dominguez/detail/common/DetailBookmarkStateBinder;", "downloadStateMapper", "Lcom/google/common/base/Optional;", "Lcom/google/common/base/Function;", "Lcom/bamtechmedia/dominguez/core/design/widgets/DownloadStatusView$State;", "preferences", "Lcom/bamtechmedia/dominguez/offline/DownloadPreferences;", "analytics", "Lcom/bamtechmedia/dominguez/detail/movie/MovieDetailAnalytics;", "promoLabelFormatter", "Lcom/bamtechmedia/dominguez/detail/common/PromoLabelFormatter;", "contentDetailConfig", "Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;", "(Lcom/bamtechmedia/dominguez/detail/movie/MovieHeaderMetadataParams;Lcom/bamtechmedia/dominguez/core/design/helper/TitleTreatment;Lcom/bamtechmedia/dominguez/offline/DownloadState;Lcom/bamtechmedia/dominguez/core/content/RatingAdvisoriesFormatter;Lcom/bamtechmedia/dominguez/core/utils/RuntimeConverter;Lcom/bamtechmedia/dominguez/core/content/ContentTypeRouter;Lcom/bamtechmedia/dominguez/detail/movie/viewmodel/MovieDetailViewModel;Lcom/bamtechmedia/dominguez/detail/common/DetailBookmarkStateBinder;Lcom/google/common/base/Optional;Lcom/bamtechmedia/dominguez/offline/DownloadPreferences;Lcom/bamtechmedia/dominguez/detail/movie/MovieDetailAnalytics;Lcom/bamtechmedia/dominguez/detail/common/PromoLabelFormatter;Lcom/bamtechmedia/dominguez/detail/common/tv/ContentDetailConfig;)V", "getDownloadState", "()Lcom/bamtechmedia/dominguez/offline/DownloadState;", "isDownloadButtonEnabled", "", "()Z", "movie", "Lcom/bamtechmedia/dominguez/core/content/Movie;", "getMovie", "()Lcom/bamtechmedia/dominguez/core/content/Movie;", "movieDetailLoaded", "addFocusChangeListenerToScaleView", "", "view", "Landroid/view/View;", "bind", "viewHolder", "Lcom/xwray/groupie/kotlinandroidextensions/ViewHolder;", "position", "", "holder", "payloads", "", "", "bindPlaybackListener", "component1", "component10", "component11", "component12", "component13", "component2", "component3", "component4", "component5", "component6", "component7", "component8", "component9", "copy", "equals", "other", "getChangePayload", "newItem", "Lcom/xwray/groupie/Item;", "getLayout", "hashCode", "isSameAs", "toString", "", "bindDownloadStatus", "bindMovie", "bindPlayRestartButtons", "bindWatchlistStatus", "getPhoto", "Lcom/bamtechmedia/dominguez/core/content/assets/Image;", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "requestInitialFocus", "ChangePayload", "contentDetail_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.k.j.h.a */
 /* compiled from: MovieDetailHeaderItem.kt */
 public final class C7327a extends C11866a {
@@ -283,7 +284,7 @@ public final class C7327a extends C11866a {
         }
 
         public final void onFocusChange(View view, boolean z) {
-            C12880j.m40222a((Object) view, "view");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view, "view");
             C5852n0.m18880a(view, z);
         }
     }
@@ -399,7 +400,7 @@ public final class C7327a extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:28:0x0088, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f16100g0, (java.lang.Object) r3.f16100g0) != false) goto L_0x008d;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f16100g0, (java.lang.Object) r3.f16100g0) != false) goto L_0x008d;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -411,55 +412,55 @@ public final class C7327a extends C11866a {
             g.e.b.k.j.h.a r3 = (p163g.p201e.p203b.p287k.p288j.p289h.C7327a) r3
             g.e.b.k.j.g r0 = r2.f16087U
             g.e.b.k.j.g r1 = r3.f16087U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.bamtechmedia.dominguez.core.i.p.c r0 = r2.f16088V
             com.bamtechmedia.dominguez.core.i.p.c r1 = r3.f16088V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.bamtechmedia.dominguez.offline.d r0 = r2.f16089W
             com.bamtechmedia.dominguez.offline.d r1 = r3.f16089W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.bamtechmedia.dominguez.core.content.q r0 = r2.f16090X
             com.bamtechmedia.dominguez.core.content.q r1 = r3.f16090X
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.bamtechmedia.dominguez.core.utils.c0 r0 = r2.f16091Y
             com.bamtechmedia.dominguez.core.utils.c0 r1 = r3.f16091Y
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.bamtechmedia.dominguez.core.content.c r0 = r2.f16092Z
             com.bamtechmedia.dominguez.core.content.c r1 = r3.f16092Z
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             g.e.b.k.j.k.b r0 = r2.f16093a0
             g.e.b.k.j.k.b r1 = r3.f16093a0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.bamtechmedia.dominguez.detail.common.e r0 = r2.f16094b0
             com.bamtechmedia.dominguez.detail.common.e r1 = r3.f16094b0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.google.common.base.Optional<com.google.common.base.c<com.bamtechmedia.dominguez.offline.d, com.bamtechmedia.dominguez.core.design.widgets.DownloadStatusView$b>> r0 = r2.f16096c0
             com.google.common.base.Optional<com.google.common.base.c<com.bamtechmedia.dominguez.offline.d, com.bamtechmedia.dominguez.core.design.widgets.DownloadStatusView$b>> r1 = r3.f16096c0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.bamtechmedia.dominguez.offline.c r0 = r2.f16097d0
             com.bamtechmedia.dominguez.offline.c r1 = r3.f16097d0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             g.e.b.k.j.a r0 = r2.f16098e0
             g.e.b.k.j.a r1 = r3.f16098e0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.bamtechmedia.dominguez.detail.common.r r0 = r2.f16099f0
             com.bamtechmedia.dominguez.detail.common.r r1 = r3.f16099f0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x008b
             com.bamtechmedia.dominguez.detail.common.g0.c r0 = r2.f16100g0
             com.bamtechmedia.dominguez.detail.common.g0.c r3 = r3.f16100g0
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x008b
             goto L_0x008d
         L_0x008b:
@@ -475,7 +476,7 @@ public final class C7327a extends C11866a {
     public Object getChangePayload(C11853e<?> eVar) {
         if (eVar != null) {
             C7327a aVar = (C7327a) eVar;
-            C7328a aVar2 = new C7328a(!C12880j.m40224a((Object) aVar.m21968a(), (Object) m21968a()), aVar.f16095c != (this.f16087U.mo20123d() != null), !C12880j.m40224a((Object) aVar.f16087U.mo20127g(), (Object) this.f16087U.mo20127g()), !C12880j.m40224a((Object) aVar.f16089W, (Object) this.f16089W), aVar.f16087U.mo20128h() != this.f16087U.mo20128h(), !C12880j.m40224a((Object) aVar.f16087U.mo20126f(), (Object) this.f16087U.mo20126f()), !C12880j.m40224a((Object) aVar.f16087U.mo20124e(), (Object) this.f16087U.mo20124e()), !C12880j.m40224a((Object) m21967a((C3693o) aVar.f16087U.mo20122c()), (Object) m21967a((C3693o) this.f16087U.mo20122c())));
+            C7328a aVar2 = new C7328a(!Intrinsics.areEqual((Object) aVar.m21968a(), (Object) m21968a()), aVar.f16095c != (this.f16087U.mo20123d() != null), !Intrinsics.areEqual((Object) aVar.f16087U.mo20127g(), (Object) this.f16087U.mo20127g()), !Intrinsics.areEqual((Object) aVar.f16089W, (Object) this.f16089W), aVar.f16087U.mo20128h() != this.f16087U.mo20128h(), !Intrinsics.areEqual((Object) aVar.f16087U.mo20126f(), (Object) this.f16087U.mo20126f()), !Intrinsics.areEqual((Object) aVar.f16087U.mo20124e(), (Object) this.f16087U.mo20124e()), !Intrinsics.areEqual((Object) m21967a((C3693o) aVar.f16087U.mo20122c()), (Object) m21967a((C3693o) this.f16087U.mo20122c())));
             return aVar2;
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.detail.movie.mobile.MovieDetailHeaderItem");
@@ -519,7 +520,7 @@ public final class C7327a extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof C7327a) && C12880j.m40224a((Object) ((C7327a) eVar).m21968a().mo12903f(), (Object) m21968a().mo12903f());
+        return (eVar instanceof C7327a) && Intrinsics.areEqual((Object) ((C7327a) eVar).m21968a().mo12903f(), (Object) m21968a().mo12903f());
     }
 
     public String toString() {
@@ -653,7 +654,7 @@ public final class C7327a extends C11866a {
             boolean r7 = r5.f16095c
             if (r7 != 0) goto L_0x00b1
             java.lang.String r7 = "playerButton"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r7)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r7)
             r7 = 8
             r0.setVisibility(r7)
             android.view.View r6 = r6.mo20994a()
@@ -719,7 +720,7 @@ public final class C7327a extends C11866a {
             android.view.View r5 = r5.findViewById(r0)
             android.widget.ImageView r5 = (android.widget.ImageView) r5
             java.lang.String r0 = "watchlistButton"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r0)
             boolean r0 = r4.f16095c
             r1 = 0
             if (r0 == 0) goto L_0x0016
@@ -829,12 +830,12 @@ public final class C7327a extends C11866a {
                 if (z && this.f16095c) {
                     View findViewById = bVar.itemView.findViewById(C7310d.startPlayerButton);
                     ImageView imageView = (ImageView) bVar.itemView.findViewById(C7310d.watchlistButton);
-                    C12880j.m40222a((Object) findViewById, "playerButton");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) findViewById, "playerButton");
                     if (findViewById.getVisibility() == 0) {
                         findViewById.requestFocus();
                         return;
                     }
-                    C12880j.m40222a((Object) imageView, "addWatchlistButton");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "addWatchlistButton");
                     if (imageView.getVisibility() != 0) {
                         z4 = false;
                     }
@@ -931,7 +932,7 @@ public final class C7327a extends C11866a {
             android.view.View r0 = r0.findViewById(r3)
             android.widget.TextView r0 = (android.widget.TextView) r0
             java.lang.String r3 = "metaData"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             boolean r4 = r10.f16095c
             r5 = 8
             if (r4 == 0) goto L_0x0086
@@ -945,7 +946,7 @@ public final class C7327a extends C11866a {
             int r4 = p163g.p201e.p203b.p287k.C7310d.metaData
             android.view.View r0 = r0.findViewById(r4)
             android.widget.TextView r0 = (android.widget.TextView) r0
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             com.bamtechmedia.dominguez.core.content.q r3 = r10.f16090X
             com.bamtechmedia.dominguez.core.content.n r4 = r10.m21968a()
             android.text.Spannable r3 = r3.mo13546a(r4)
@@ -955,7 +956,7 @@ public final class C7327a extends C11866a {
             android.view.View r0 = r0.findViewById(r3)
             android.widget.TextView r0 = (android.widget.TextView) r0
             java.lang.String r3 = "videoDetailDescription"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             boolean r4 = r10.f16095c
             if (r4 == 0) goto L_0x00be
             r4 = 0
@@ -968,7 +969,7 @@ public final class C7327a extends C11866a {
             int r4 = p163g.p201e.p203b.p287k.C7310d.videoDetailDescription
             android.view.View r0 = r0.findViewById(r4)
             android.widget.TextView r0 = (android.widget.TextView) r0
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             g.e.b.k.j.g r3 = r10.f16087U
             java.lang.String r3 = r3.mo20121b()
             r0.setText(r3)
@@ -981,7 +982,7 @@ public final class C7327a extends C11866a {
             android.view.View r3 = r3.findViewById(r4)
             android.widget.TextView r3 = (android.widget.TextView) r3
             java.lang.String r4 = "promoLabelTextView"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             g.e.b.k.j.g r6 = r10.f16087U
             com.bamtechmedia.dominguez.core.content.PromoLabel r6 = r6.mo20124e()
             if (r6 == 0) goto L_0x0114
@@ -1014,7 +1015,7 @@ public final class C7327a extends C11866a {
             int r6 = p163g.p201e.p203b.p287k.C7310d.promoLabelTextView
             android.view.View r3 = r3.findViewById(r6)
             android.widget.TextView r3 = (android.widget.TextView) r3
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             r3.setText(r0)
             com.bamtechmedia.dominguez.detail.common.g0.c r0 = r10.f16100g0
             boolean r0 = r0.mo17876e()
@@ -1024,7 +1025,7 @@ public final class C7327a extends C11866a {
             android.view.View r0 = r0.findViewById(r3)
             android.widget.TextView r0 = (android.widget.TextView) r0
             java.lang.String r3 = "formatAvailability"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             g.e.b.k.j.g r4 = r10.f16087U
             java.lang.CharSequence r4 = r4.mo20120a()
             if (r4 == 0) goto L_0x015a
@@ -1053,17 +1054,17 @@ public final class C7327a extends C11866a {
             int r4 = p163g.p201e.p203b.p287k.C7310d.formatAvailability
             android.view.View r0 = r0.findViewById(r4)
             android.widget.TextView r0 = (android.widget.TextView) r0
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             g.e.b.k.j.g r3 = r10.f16087U
             java.lang.CharSequence r3 = r3.mo20120a()
             r0.setText(r3)
         L_0x0182:
             android.view.View r0 = r11.itemView
             java.lang.String r3 = "itemView"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             android.content.Context r0 = r0.getContext()
             java.lang.String r3 = "itemView.context"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r3)
             boolean r0 = com.bamtechmedia.dominguez.core.utils.C5837i.m18842d(r0)
             if (r0 == 0) goto L_0x0216
             android.view.View r0 = r11.mo20994a()
@@ -1161,9 +1162,9 @@ public final class C7327a extends C11866a {
         m21971a(bVar, list);
         m21978d(bVar, list);
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "itemView");
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "itemView.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "itemView.context");
         if (C5837i.m18843e(context)) {
             m21980e(bVar, list);
         }
@@ -1257,7 +1258,7 @@ public final class C7327a extends C11866a {
             com.bamtechmedia.dominguez.core.design.widgets.DownloadStatusView$b r7 = (com.bamtechmedia.dominguez.core.design.widgets.DownloadStatusView.C5635b) r7
             if (r7 == 0) goto L_0x0098
             java.lang.String r0 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r0)
             r6.mo17399a(r7)
         L_0x0098:
             return
@@ -1268,7 +1269,7 @@ public final class C7327a extends C11866a {
     /* renamed from: a */
     private final void m21970a(View view) {
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "view.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "view.context");
         if (C5837i.m18843e(context)) {
             view.setOnFocusChangeListener(C7329b.f16109c);
         }

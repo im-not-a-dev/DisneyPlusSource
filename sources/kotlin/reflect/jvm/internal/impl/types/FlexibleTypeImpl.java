@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.types;
 
 import kotlin.C12898l;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer;
@@ -37,7 +37,7 @@ public final class FlexibleTypeImpl extends FlexibleType implements CustomTypeVa
             if (!C13147x.f29590a || z) {
                 boolean z2 = !FlexibleTypesKt.isFlexible(getUpperBound());
                 if (!C13147x.f29590a || z2) {
-                    boolean a = true ^ C12880j.m40224a((Object) getLowerBound(), (Object) getUpperBound());
+                    boolean a = true ^ Intrinsics.areEqual((Object) getLowerBound(), (Object) getUpperBound());
                     if (!C13147x.f29590a || a) {
                         boolean isSubtypeOf = KotlinTypeChecker.DEFAULT.isSubtypeOf(getLowerBound(), getUpperBound());
                         if (C13147x.f29590a && !isSubtypeOf) {
@@ -75,7 +75,7 @@ public final class FlexibleTypeImpl extends FlexibleType implements CustomTypeVa
     }
 
     public boolean isTypeVariable() {
-        return (getLowerBound().getConstructor().getDeclarationDescriptor() instanceof TypeParameterDescriptor) && C12880j.m40224a((Object) getLowerBound().getConstructor(), (Object) getUpperBound().getConstructor());
+        return (getLowerBound().getConstructor().getDeclarationDescriptor() instanceof TypeParameterDescriptor) && Intrinsics.areEqual((Object) getLowerBound().getConstructor(), (Object) getUpperBound().getConstructor());
     }
 
     public UnwrappedType makeNullableAsSpecified(boolean z) {

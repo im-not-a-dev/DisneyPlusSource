@@ -7,7 +7,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p174d.p178b.C5294k;
@@ -590,7 +590,7 @@ public final class C5234e extends C5184w4 {
         if (kVar != null) {
             mo16751b(kVar.mo16887a(this.f12590X, z));
         } else {
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
     }

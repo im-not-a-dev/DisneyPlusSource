@@ -21,7 +21,7 @@ import kotlin.C13142s;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -218,7 +218,7 @@ public final class C8457a implements C8456a {
             PublicKey a = m24581f().mo21755a(new X509EncodedKeySpec(i.getEncoded()));
             if (a != null) {
                 String b = C14092a.m44494b(((C13790d) a).getEncoded());
-                C12880j.m40222a((Object) b, "Base64.toBase64String(publicKey.encoded)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "Base64.toBase64String(publicKey.encoded)");
                 return b;
             }
             throw new C13142s("null cannot be cast to non-null type org.spongycastle.jce.interfaces.ECPublicKey");
@@ -269,7 +269,7 @@ public final class C8457a implements C8456a {
             Charset charset = C12801c.f29474a;
             if (a != null) {
                 byte[] bytes = a.getBytes(charset);
-                C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
                 EncryptedMessage encryptedMessage = new EncryptedMessage(0, mo21726a(payload), m24578a(bytes, b), 1, null);
                 return encryptedMessage;
             }
@@ -283,7 +283,7 @@ public final class C8457a implements C8456a {
         C8465c a = m24576a(this, null, 1, null);
         a.engineInit(1, (Key) dVar, (AlgorithmParameterSpec) m24580e(), new SecureRandom());
         String b = C14092a.m44494b(a.engineDoFinal(bArr, 0, bArr.length));
-        C12880j.m40222a((Object) b, "Base64.toBase64String(bytes)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Base64.toBase64String(bytes)");
         return b;
     }
 
@@ -298,11 +298,11 @@ public final class C8457a implements C8456a {
             Charset charset = C12801c.f29474a;
             if (a != null) {
                 byte[] bytes = a.getBytes(charset);
-                C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
                 m24585j().mo34953a(true, (C13697f) C13774c.m42284a((PrivateKey) h));
                 m24585j().mo34954a(bytes, 0, bytes.length);
                 String b = C14092a.m44494b(m24585j().mo34956a());
-                C12880j.m40222a((Object) b, "Base64.toBase64String(sig)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "Base64.toBase64String(sig)");
                 return b;
             }
             throw new C13142s("null cannot be cast to non-null type java.lang.String");
@@ -324,9 +324,9 @@ public final class C8457a implements C8456a {
             Charset charset = C12801c.f29474a;
             if (payload != null) {
                 byte[] bytes = payload.getBytes(charset);
-                C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
                 byte[] a2 = C14092a.m44492a(bytes);
-                C12880j.m40222a((Object) a2, "encryptedData");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a2, "encryptedData");
                 Object a3 = C8569d.f18269a.mo21940a(Payload.class, new String(a.engineDoFinal(a2, 0, a2.length), C12801c.f29474a));
                 if (((Payload) a3) == null) {
                     z = false;
@@ -365,7 +365,7 @@ public final class C8457a implements C8456a {
                 Charset charset = C12801c.f29474a;
                 if (a != null) {
                     byte[] bytes = a.getBytes(charset);
-                    C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
                     m24585j().mo34953a(false, (C13697f) C13774c.m42285a((PublicKey) b));
                     m24585j().mo34954a(bytes, 0, bytes.length);
                     return m24585j().mo34955a(C14092a.m44491a(signature));

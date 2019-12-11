@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 import javax.inject.Provider;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14264y;
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
@@ -26,7 +26,7 @@ import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.p525e0.C11934b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u0000*\b\b\u0000\u0010\u0001*\u00020\u00022\u00020\u0002:\u0002\"#BM\b\u0000\u0012\f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004\u0012\f\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00070\u0004\u0012\f\u0010\b\u001a\b\u0012\u0004\u0012\u00020\t0\u0004\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\u000b0\u0004\u0012\f\u0010\f\u001a\b\u0012\u0004\u0012\u00028\u00000\r¢\u0006\u0002\u0010\u000eJ\u0016\u0010\u001b\u001a\b\u0012\u0004\u0012\u00028\u00000\u001a2\b\b\u0002\u0010\u001c\u001a\u00020\u001dJ\u000e\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\u001f0\u001aH\u0002J\u0016\u0010 \u001a\u0010\u0012\f\u0012\n \u0015*\u0004\u0018\u00010\u001f0\u001f0!H\u0002R\u0012\u0010\u000f\u001a\u0004\u0018\u00018\u0000X\u000e¢\u0006\u0004\n\u0002\u0010\u0010R\u0014\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\b\u001a\b\u0012\u0004\u0012\u00020\t0\u0004X\u0004¢\u0006\u0002\n\u0000R8\u0010\u0013\u001a&\u0012\f\u0012\n \u0015*\u0004\u0018\u00018\u00008\u0000 \u0015*\u0012\u0012\f\u0012\n \u0015*\u0004\u0018\u00018\u00008\u0000\u0018\u00010\u00140\u00148BX\u0004¢\u0006\u0006\u001a\u0004\b\u0016\u0010\u0017R\u0014\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00070\u0004X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\n\u001a\b\u0012\u0004\u0012\u00020\u000b0\u0004X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\f\u001a\b\u0012\u0004\u0012\u00028\u00000\rX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0019\u001a\b\u0012\u0004\u0012\u00028\u00000\u001aX\u0004¢\u0006\u0002\n\u0000¨\u0006$"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/config/ConfigLoader;", "T", "", "client", "Ljavax/inject/Provider;", "Lokhttp3/OkHttpClient;", "moshi", "Lcom/squareup/moshi/Moshi;", "documentStore", "Lcom/bamtechmedia/dominguez/core/documents/DocumentStore;", "overrideConfigResolver", "Lcom/bamtechmedia/dominguez/config/OverrideConfigResolver;", "parameters", "Lcom/bamtechmedia/dominguez/config/ConfigLoader$Parameters;", "(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Lcom/bamtechmedia/dominguez/config/ConfigLoader$Parameters;)V", "cached", "Ljava/lang/Object;", "configId", "", "jsonAdapter", "Lcom/squareup/moshi/JsonAdapter;", "kotlin.jvm.PlatformType", "getJsonAdapter", "()Lcom/squareup/moshi/JsonAdapter;", "path", "single", "Lio/reactivex/Single;", "fetchConfig", "ignoreCache", "", "loadFromNetwork", "Lokio/BufferedSource;", "localOverride", "Lio/reactivex/Maybe;", "Factory", "Parameters", "config_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.config.h */
@@ -158,7 +158,7 @@ public final class C3532h<T> {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:16:0x004c, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8854g, (java.lang.Object) r3.f8854g) != false) goto L_0x0051;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8854g, (java.lang.Object) r3.f8854g) != false) goto L_0x0051;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -170,31 +170,31 @@ public final class C3532h<T> {
                 com.bamtechmedia.dominguez.config.h$b r3 = (com.bamtechmedia.dominguez.config.C3532h.C3534b) r3
                 java.lang.String r0 = r2.f8848a
                 java.lang.String r1 = r3.f8848a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x004f
                 java.lang.reflect.Type r0 = r2.f8849b
                 java.lang.reflect.Type r1 = r3.f8849b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x004f
                 java.lang.String r0 = r2.f8850c
                 java.lang.String r1 = r3.f8850c
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x004f
                 java.lang.String r0 = r2.f8851d
                 java.lang.String r1 = r3.f8851d
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x004f
                 java.lang.Long r0 = r2.f8852e
                 java.lang.Long r1 = r3.f8852e
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x004f
                 java.lang.Integer r0 = r2.f8853f
                 java.lang.Integer r1 = r3.f8853f
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x004f
                 kotlin.jvm.functions.Function0<T> r0 = r2.f8854g
                 kotlin.jvm.functions.Function0<T> r3 = r3.f8854g
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x004f
                 goto L_0x0051
             L_0x004f:
@@ -338,7 +338,7 @@ public final class C3532h<T> {
             sb.append("' from '");
             sb.append(this.f8859c.f8843i.mo12744g());
             sb.append('\'');
-            C14100a.m44529c(sb.toString(), new Object[0]);
+            Timber.m44529c(sb.toString(), new Object[0]);
         }
     }
 
@@ -358,7 +358,7 @@ public final class C3532h<T> {
             StringBuilder sb = new StringBuilder();
             sb.append("Successfully loaded config from '");
             sb.append(this.f8860c.f8843i.mo12744g());
-            C14100a.m44529c(sb.toString(), new Object[0]);
+            Timber.m44529c(sb.toString(), new Object[0]);
         }
     }
 
@@ -457,7 +457,7 @@ public final class C3532h<T> {
             sb.append("Failed to load from network '");
             sb.append(this.f8865c.f8843i.mo12744g());
             sb.append("'. Trying documentStore");
-            C14100a.m44528b(th, sb.toString(), new Object[0]);
+            Timber.m44528b(th, sb.toString(), new Object[0]);
         }
     }
 
@@ -502,7 +502,7 @@ public final class C3532h<T> {
             sb.append("Config '");
             sb.append(this.f8867c.f8835a);
             sb.append("' not available in document store. Falling back to default");
-            C14100a.m44528b(th, sb.toString(), new Object[0]);
+            Timber.m44528b(th, sb.toString(), new Object[0]);
         }
     }
 
@@ -546,7 +546,7 @@ public final class C3532h<T> {
             sb.append("Config of type '");
             sb.append(this.f8869c.f8843i.mo12743f());
             sb.append("; loaded");
-            C14100a.m44529c(sb.toString(), new Object[0]);
+            Timber.m44529c(sb.toString(), new Object[0]);
         }
     }
 
@@ -573,7 +573,7 @@ public final class C3532h<T> {
         this.f8842h = provider4;
         this.f8843i = bVar;
         Single<T> d = m11953c().mo30109a((SingleSource<? extends T>) m11951b()).mo30233g(new C3542j(this)).mo30207a((Consumer<? super T>) new C3543k<Object>(this)).mo30218b((Consumer<? super Throwable>) new C3544l<Object>(this)).mo30237i(new C3545m(this)).mo30218b((Consumer<? super Throwable>) new C3546n<Object>(this)).mo30237i(new C3547o(this)).mo30227d((Consumer<? super T>) new C3548p<Object>(this)).mo30227d((Consumer<? super T>) new C3549q<Object>(this)).mo30236i().mo30197i().mo30186d();
-        C12880j.m40222a((Object) d, "localOverride()\n        …)\n        .firstOrError()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "localOverride()\n        …)\n        .firstOrError()");
         this.f8837c = d;
         StringBuilder sb = new StringBuilder();
         sb.append("configs");
@@ -585,18 +585,18 @@ public final class C3532h<T> {
     /* renamed from: b */
     private final Single<BufferedSource> m11951b() {
         Single g = Single.m38401c((Callable<? extends T>) new C3536d<Object>(this)).mo30220b(C11934b.m38500b()).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C3537e<Object,Object>(this)).mo30222c((Consumer<? super Disposable>) new C3538f<Object>(this)).mo30227d((Consumer<? super T>) new C3539g<Object>(this)).mo30233g(new C3540h(this));
-        C12880j.m40222a((Object) g, "Single.fromCallable { cl…url}, ${it.message()}\") }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "Single.fromCallable { cl…url}, ${it.message()}\") }");
         Long e = this.f8843i.mo12741e();
         TimeUnit timeUnit = TimeUnit.MILLISECONDS;
         C11969r b = C11934b.m38500b();
-        C12880j.m40222a((Object) b, "Schedulers.io()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Schedulers.io()");
         return C5826e0.m18821a(g, e, timeUnit, b);
     }
 
     /* renamed from: c */
     private final Maybe<BufferedSource> m11953c() {
         Maybe<BufferedSource> b = Maybe.m38257b((Callable<? extends T>) new C3541i<Object>(this));
-        C12880j.m40222a((Object) b, "Maybe.fromCallable<Buffe…rs.localConfigOverride) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Maybe.fromCallable<Buffe…rs.localConfigOverride) }");
         return b;
     }
 
@@ -617,7 +617,7 @@ public final class C3532h<T> {
     /* renamed from: a */
     public final Single<T> mo12735a(boolean z) {
         Single<T> a = Maybe.m38257b((Callable<? extends T>) new C3535c<Object>(this, z)).mo30109a((SingleSource<? extends T>) this.f8837c);
-        C12880j.m40222a((Object) a, "Maybe.fromCallable<T> { …   .switchIfEmpty(single)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Maybe.fromCallable<T> { …   .switchIfEmpty(single)");
         return a;
     }
 }

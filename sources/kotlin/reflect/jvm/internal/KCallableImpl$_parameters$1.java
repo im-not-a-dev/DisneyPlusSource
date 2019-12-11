@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.KParameter;
 import kotlin.reflect.KParameter.Kind;
@@ -54,14 +54,14 @@ final class KCallableImpl$_parameters$1 extends C12881k implements Function0<Arr
             i = 0;
         }
         List valueParameters = descriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters, "descriptor.valueParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "descriptor.valueParameters");
         int size = valueParameters.size();
         while (i2 < size) {
             int i4 = i + 1;
             arrayList.add(new KParameterImpl(this.this$0, i, Kind.VALUE, new Function0<ValueParameterDescriptor>() {
                 public final ValueParameterDescriptor invoke() {
                     Object obj = descriptor.getValueParameters().get(i2);
-                    C12880j.m40222a(obj, "descriptor.valueParameters[i]");
+                    Intrinsics.checkReturnedValueIsNotNull(obj, "descriptor.valueParameters[i]");
                     return (ValueParameterDescriptor) obj;
                 }
             }));

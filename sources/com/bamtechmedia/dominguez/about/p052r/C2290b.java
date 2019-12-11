@@ -23,7 +23,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KClass;
@@ -319,32 +319,32 @@ public final class C2290b implements OnClickListener {
         Integer valueOf = Integer.valueOf(0);
         KClass a = C12895y.m40230a(Integer.class);
         String str = "SCENARIO_OVERWRITE_POSITION";
-        if (C12880j.m40224a((Object) a, (Object) C12895y.m40230a(String.class))) {
+        if (Intrinsics.areEqual((Object) a, (Object) C12895y.m40230a(String.class))) {
             if (!(valueOf instanceof String)) {
                 valueOf = null;
             }
             num = (Integer) sharedPreferences.getString(str, (String) valueOf);
-        } else if (C12880j.m40224a((Object) a, (Object) C12895y.m40230a(Integer.TYPE))) {
+        } else if (Intrinsics.areEqual((Object) a, (Object) C12895y.m40230a(Integer.TYPE))) {
             num = Integer.valueOf(sharedPreferences.getInt(str, valueOf != null ? valueOf.intValue() : -1));
-        } else if (C12880j.m40224a((Object) a, (Object) C12895y.m40230a(Boolean.TYPE))) {
+        } else if (Intrinsics.areEqual((Object) a, (Object) C12895y.m40230a(Boolean.TYPE))) {
             if (!(valueOf instanceof Boolean)) {
                 valueOf = null;
             }
             Boolean bool = (Boolean) valueOf;
             num = (Integer) Boolean.valueOf(sharedPreferences.getBoolean(str, bool != null ? bool.booleanValue() : false));
-        } else if (C12880j.m40224a((Object) a, (Object) C12895y.m40230a(Float.TYPE))) {
+        } else if (Intrinsics.areEqual((Object) a, (Object) C12895y.m40230a(Float.TYPE))) {
             if (!(valueOf instanceof Float)) {
                 valueOf = null;
             }
             Float f = (Float) valueOf;
             num = (Integer) Float.valueOf(sharedPreferences.getFloat(str, f != null ? f.floatValue() : -1.0f));
-        } else if (C12880j.m40224a((Object) a, (Object) C12895y.m40230a(Long.TYPE))) {
+        } else if (Intrinsics.areEqual((Object) a, (Object) C12895y.m40230a(Long.TYPE))) {
             if (!(valueOf instanceof Long)) {
                 valueOf = null;
             }
             Long l = (Long) valueOf;
             num = (Integer) Long.valueOf(sharedPreferences.getLong(str, l != null ? l.longValue() : -1));
-        } else if (C12880j.m40224a((Object) a, (Object) C12895y.m40230a(DateTime.class))) {
+        } else if (Intrinsics.areEqual((Object) a, (Object) C12895y.m40230a(DateTime.class))) {
             if (!(valueOf instanceof String)) {
                 valueOf = null;
             }
@@ -399,7 +399,7 @@ public final class C2290b implements OnClickListener {
             r8 = this;
             java.util.Set r9 = r9.mo5631b()
             java.lang.String r0 = "workInfo.tags"
-            kotlin.jvm.internal.C12880j.m40222a(r9, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r9, r0)
             java.util.ArrayList r0 = new java.util.ArrayList
             r0.<init>()
             java.util.Iterator r9 = r9.iterator()
@@ -410,13 +410,13 @@ public final class C2290b implements OnClickListener {
             r2 = r1
             java.lang.String r2 = (java.lang.String) r2
             java.lang.String r3 = "sdk-download-worker"
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r2, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r2, r3)
             r4 = 1
             r3 = r3 ^ r4
             r5 = 0
             if (r3 == 0) goto L_0x003a
             java.lang.String r3 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             r3 = 2
             r6 = 0
             java.lang.String r7 = "com.bamtech"

@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.detail.common;
 
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11847b;
 
 /* renamed from: com.bamtechmedia.dominguez.detail.common.w */
@@ -51,8 +51,8 @@ public final class C6007w extends C6008x {
         if (this != obj) {
             if (obj instanceof C6007w) {
                 C6007w wVar = (C6007w) obj;
-                if (C12880j.m40224a((Object) mo18025a(), (Object) wVar.mo18025a())) {
-                    if (!(mo18028d() == wVar.mo18028d()) || !C12880j.m40224a((Object) mo18027c(), (Object) wVar.mo18027c()) || !C12880j.m40224a((Object) mo18026b(), (Object) wVar.mo18026b())) {
+                if (Intrinsics.areEqual((Object) mo18025a(), (Object) wVar.mo18025a())) {
+                    if (!(mo18028d() == wVar.mo18028d()) || !Intrinsics.areEqual((Object) mo18027c(), (Object) wVar.mo18027c()) || !Intrinsics.areEqual((Object) mo18026b(), (Object) wVar.mo18026b())) {
                         return false;
                     }
                 }

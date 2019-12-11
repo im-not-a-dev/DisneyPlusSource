@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.profiles.x1.g.o */
 /* compiled from: LanguageExt.kt */
@@ -14,7 +14,7 @@ public final class C6936o {
         ArrayList arrayList = new ArrayList();
         for (String str : list) {
             Locale forLanguageTag = Locale.forLanguageTag(str);
-            C12880j.m40222a((Object) forLanguageTag, "Locale.forLanguageTag(it)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) forLanguageTag, "Locale.forLanguageTag(it)");
             C13196t.m40545a((Collection) arrayList, (Iterable) C13185o.m40520c(str, forLanguageTag.getLanguage()));
         }
         return C13199w.m40579d(arrayList);

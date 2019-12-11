@@ -17,7 +17,7 @@ import android.view.WindowManager;
 import com.google.android.exoplayer2.Player.VideoComponent;
 import com.google.android.exoplayer2.p391ui.p392r.C9424d.C9425a;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p394w0.C9597n;
 import com.google.android.exoplayer2.p394w0.p395s.C9605a;
 import javax.microedition.khronos.egl.EGLConfig;
@@ -212,7 +212,7 @@ public final class C9430h extends GLSurfaceView {
         Object systemService = context.getSystemService("sensor");
         C9537e.m29296a(systemService);
         this.f21915c = (SensorManager) systemService;
-        Sensor defaultSensor = C9554k0.f22281a >= 18 ? this.f21915c.getDefaultSensor(15) : null;
+        Sensor defaultSensor = Util.SDK_INT >= 18 ? this.f21915c.getDefaultSensor(15) : null;
         if (defaultSensor == null) {
             defaultSensor = this.f21915c.getDefaultSensor(11);
         }

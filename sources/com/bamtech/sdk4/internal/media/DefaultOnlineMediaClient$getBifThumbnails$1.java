@@ -23,7 +23,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Maybe;
@@ -101,12 +101,12 @@ final class DefaultOnlineMediaClient$getBifThumbnails$1<V> implements Callable<M
                     String bif_thumbnails = MediaServiceConfigurationKt.getBIF_THUMBNAILS(Dust$Events.INSTANCE);
                     Call a3 = C1691e.m7799a(a2);
                     Maybe b = C1681c.m7780a(a2, a3).mo30234h().mo30124c((C11945a) new C1897x2456365c(a3)).mo30119b(C11934b.m38500b());
-                    C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
                     Maybe a4 = b.mo30116b((Consumer<? super Disposable>) new C1898x2456365d<Object>(serviceTransaction2, bif_thumbnails)).mo30102a((Consumer<? super Throwable>) new C1899x2456365e<Object>(a2, serviceTransaction2, bif_thumbnails)).mo30103a((Function<? super T, ? extends MaybeSource<? extends R>>) new C1900x2456365f<Object,Object>(serviceTransaction2, bif_thumbnails));
-                    C12880j.m40222a((Object) a4, "this.asMaybe()\n        .…)\n            }\n        }");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a4, "this.asMaybe()\n        .…)\n            }\n        }");
                     return a4.mo30119b(C11934b.m38500b()).mo30131f(C19242.INSTANCE);
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         });

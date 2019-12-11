@@ -217,7 +217,7 @@ public final class HlsMediaSource extends C9229o implements C9193e {
         long j;
         long j2;
         HlsMediaPlaylist hlsMediaPlaylist2 = hlsMediaPlaylist;
-        long b = hlsMediaPlaylist2.f20699m ? C8883r.m25968b(hlsMediaPlaylist2.f20692f) : -9223372036854775807L;
+        long b = hlsMediaPlaylist2.f20699m ? C8883r.usToMs(hlsMediaPlaylist2.f20692f) : -9223372036854775807L;
         int i = hlsMediaPlaylist2.f20690d;
         long j3 = (i == 2 || i == 1) ? b : -9223372036854775807L;
         long j4 = hlsMediaPlaylist2.f20691e;

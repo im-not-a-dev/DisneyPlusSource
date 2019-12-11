@@ -12,7 +12,7 @@ import com.bamtechmedia.dominguez.playback.p237m.p252q.C6509d;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.Observable;
 import p520io.reactivex.Single;
@@ -56,7 +56,7 @@ public final class C6581c implements C6507c {
     /* renamed from: b */
     public Maybe<C3693o> mo19169b(C3693o oVar) {
         Maybe<C3693o> h = Maybe.m38259h();
-        C12880j.m40222a((Object) h, "Maybe.empty()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Maybe.empty()");
         return h;
     }
 
@@ -64,22 +64,22 @@ public final class C6581c implements C6507c {
     public Observable<C6501b> mo19167a(boolean z, C3693o oVar, C3693o oVar2, boolean z2, C6341e eVar, Function1<? super C3693o, C13145v> function1) {
         if (!z || oVar2 == null) {
             Observable<C6501b> b = Observable.m38309b(C6504c.f14719a);
-            C12880j.m40222a((Object) b, "Observable.just(IgnoreUpNext)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "Observable.just(IgnoreUpNext)");
             return b;
         }
         Single g = this.f14876a.mo19159a(eVar, oVar2, z2).mo30233g(new C6582a(z2));
-        C12880j.m40222a((Object) g, "dialogTypeResolver.nextD…ilestone = isMilestone) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "dialogTypeResolver.nextD…ilestone = isMilestone) }");
         Single a = g.mo30212a(C6501b.class);
-        C12880j.m40222a((Object) a, "cast(R::class.java)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "cast(R::class.java)");
         Observable<C6501b> i = a.mo30236i();
-        C12880j.m40222a((Object) i, "dialogTypeResolver.nextD…          .toObservable()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "dialogTypeResolver.nextD…          .toObservable()");
         return i;
     }
 
     /* renamed from: a */
     public Single<C3693o> mo19168a(String str) {
         Single<C3693o> a = Single.m38395a(new Throwable("No offline episodes for tv"));
-        C12880j.m40222a((Object) a, "Single.error(Throwable(\"…ffline episodes for tv\"))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.error(Throwable(\"…ffline episodes for tv\"))");
         return a;
     }
 }

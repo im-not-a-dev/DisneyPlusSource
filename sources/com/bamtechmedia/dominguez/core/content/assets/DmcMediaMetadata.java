@@ -95,7 +95,7 @@ public final class DmcMediaMetadata implements Parcelable, C3638l {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x003a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f9008W, (java.lang.Object) r3.f9008W) != false) goto L_0x003f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f9008W, (java.lang.Object) r3.f9008W) != false) goto L_0x003f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -107,19 +107,19 @@ public final class DmcMediaMetadata implements Parcelable, C3638l {
             com.bamtechmedia.dominguez.core.content.assets.DmcMediaMetadata r3 = (com.bamtechmedia.dominguez.core.content.assets.DmcMediaMetadata) r3
             java.lang.Float r0 = r2.mo12957n()
             java.lang.Float r1 = r3.mo12957n()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003d
             java.lang.String r0 = r2.getFormat()
             java.lang.String r1 = r3.getFormat()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003d
             java.util.List r0 = r2.mo12950X()
             java.util.List r1 = r3.mo12950X()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003d
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.Language> r0 = r2.f9008W
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.Language> r3 = r3.f9008W
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x003d
             goto L_0x003f
         L_0x003d:

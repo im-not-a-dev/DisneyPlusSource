@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 import p163g.p201e.p203b.p330z.C7943b;
 import p163g.p201e.p203b.p330z.C7946e;
@@ -64,7 +64,7 @@ public final class C6962g extends C11866a {
                 }
                 TextView textView = (TextView) this.f15476c.mo20994a().findViewById(C7946e.languageName);
                 View view2 = this.f15475V.itemView;
-                C12880j.m40222a((Object) view2, "holder.itemView");
+                Intrinsics.checkReturnedValueIsNotNull((Object) view2, "holder.itemView");
                 textView.setTextColor(C4025a.m13788a(view2.getContext(), C7943b.vader_white));
             }
         }
@@ -83,8 +83,8 @@ public final class C6962g extends C11866a {
         if (this != obj) {
             if (obj instanceof C6962g) {
                 C6962g gVar = (C6962g) obj;
-                if (C12880j.m40224a((Object) this.f15470U, (Object) gVar.f15470U)) {
-                    if (!(this.f15471V == gVar.f15471V) || !C12880j.m40224a((Object) this.f15472W, (Object) gVar.f15472W)) {
+                if (Intrinsics.areEqual((Object) this.f15470U, (Object) gVar.f15470U)) {
+                    if (!(this.f15471V == gVar.f15471V) || !Intrinsics.areEqual((Object) this.f15472W, (Object) gVar.f15472W)) {
                         return false;
                     }
                 }
@@ -134,10 +134,10 @@ public final class C6962g extends C11866a {
         }
         TextView textView = (TextView) bVar.mo20994a().findViewById(C7946e.languageName);
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "holder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "holder.itemView");
         textView.setTextColor(C4025a.m13788a(view.getContext(), this.f15473c ? C7943b.vader_white : C7943b.vader_grey8));
         TextView textView2 = (TextView) bVar.mo20994a().findViewById(C7946e.languageName);
-        C12880j.m40222a((Object) textView2, "languageName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "languageName");
         textView2.setText(this.f15470U);
         bVar.mo20994a().findViewById(C7946e.rootView).setOnClickListener(new C6963a(bVar, this, bVar));
     }
@@ -150,7 +150,7 @@ public final class C6962g extends C11866a {
         }
         TextView textView = (TextView) bVar.mo20994a().findViewById(C7946e.languageName);
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "holder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "holder.itemView");
         textView.setTextColor(C4025a.m13788a(view.getContext(), C7943b.vader_grey8));
         this.f15473c = false;
     }

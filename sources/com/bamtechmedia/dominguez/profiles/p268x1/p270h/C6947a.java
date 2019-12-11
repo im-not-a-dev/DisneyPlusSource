@@ -23,7 +23,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -160,10 +160,10 @@ public final class C6947a extends C11890i implements C7717x {
                     this.f15456Y.mo29963a((Collection<? extends C11847b>) dVar.mo19709a(aVar, eVar));
                     return;
                 }
-                C12880j.m40227c("itemListener");
+                Intrinsics.throwUninitializedPropertyAccessException("itemListener");
                 throw null;
             }
-            C12880j.m40227c("languageItemFactory");
+            Intrinsics.throwUninitializedPropertyAccessException("languageItemFactory");
             throw null;
         } else if (a instanceof C6956b) {
             this.f15456Y.mo13700a(((C6956b) a).mo19703a()).notifyChanged(Boolean.valueOf(false));
@@ -191,7 +191,7 @@ public final class C6947a extends C11890i implements C7717x {
             C5755i.m18679a(this, cVar, null, null, new C6949b(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -199,12 +199,12 @@ public final class C6947a extends C11890i implements C7717x {
         super.onViewCreated(view, bundle);
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C7946e.recyclerView);
         String str = "recyclerView";
-        C12880j.m40222a((Object) recyclerView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str);
         RecyclerViewExtKt.m18800a(this, recyclerView, this.f15456Y);
         DisneyTitleToolbar disneyTitleToolbar = (DisneyTitleToolbar) _$_findCachedViewById(C7946e.toolbar);
         if (disneyTitleToolbar != null) {
             RecyclerView recyclerView2 = (RecyclerView) _$_findCachedViewById(C7946e.recyclerView);
-            C12880j.m40222a((Object) recyclerView2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
             DisneyTitleToolbar.m18445a(disneyTitleToolbar, recyclerView2, null, null, null, null, 0, new C6950c(this), 62, null);
         }
     }

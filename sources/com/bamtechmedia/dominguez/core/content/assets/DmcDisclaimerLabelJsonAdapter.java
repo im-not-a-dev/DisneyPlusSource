@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -19,10 +19,10 @@ public final class DmcDisclaimerLabelJsonAdapter extends C11725h<DmcDisclaimerLa
     public DmcDisclaimerLabelJsonAdapter(C11760v vVar) {
         String str = "value";
         C11739b a = C11739b.m37729a(str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"value\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"value\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"value\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"value\")");
         this.stringAdapter = a2;
     }
 

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.impl.ModuleDescriptorImpl;
@@ -20,7 +20,7 @@ final class JvmBuiltIns$settings$2 extends C12881k implements Function0<JvmBuilt
 
     public final JvmBuiltInsSettings invoke() {
         ModuleDescriptorImpl builtInsModule = this.this$0.getBuiltInsModule();
-        C12880j.m40222a((Object) builtInsModule, "builtInsModule");
+        Intrinsics.checkReturnedValueIsNotNull((Object) builtInsModule, "builtInsModule");
         return new JvmBuiltInsSettings(builtInsModule, this.$storageManager, new Function0<ModuleDescriptor>(this) {
             final /* synthetic */ JvmBuiltIns$settings$2 this$0;
 

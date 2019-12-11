@@ -5,7 +5,7 @@ import com.bamtechmedia.dominguez.analytics.p057o0.C2434c;
 import java.util.Map;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11760v;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
@@ -60,7 +60,7 @@ public final class C2383c implements C2434c {
                 java.lang.Class<com.bamtechmedia.dominguez.analytics.AdobeConfig> r2 = com.bamtechmedia.dominguez.analytics.AdobeConfig.class
                 g.m.a.h r1 = r1.mo29866a(r2)     // Catch:{ IOException -> 0x004d }
                 java.lang.String r2 = "inputStream"
-                kotlin.jvm.internal.C12880j.m40222a(r0, r2)     // Catch:{ IOException -> 0x004d }
+                kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)     // Catch:{ IOException -> 0x004d }
                 okio.x r0 = okio.C14287m.m45724a(r0)     // Catch:{ IOException -> 0x004d }
                 okio.BufferedSource r0 = okio.C14287m.m45716a(r0)     // Catch:{ IOException -> 0x004d }
                 r2 = 0
@@ -85,7 +85,7 @@ public final class C2383c implements C2434c {
                 throw r2     // Catch:{ IOException -> 0x004d }
             L_0x004d:
                 r0 = move-exception
-                p686n.p687a.C14100a.m44523a(r0)
+                p686n.p687a.Timber.m44523a(r0)
                 java.util.Map r0 = kotlin.p590y.C13173j0.m40350a()
             L_0x0055:
                 return r0
@@ -103,7 +103,7 @@ public final class C2383c implements C2434c {
     /* renamed from: a */
     public Single<Map<String, String>> mo11521a() {
         Single<Map<String, String>> d = Single.m38401c((Callable<? extends T>) new C2384a<Object>(this)).mo30220b(this.f6611c).mo30226d();
-        C12880j.m40222a((Object) d, "Single.fromCallable {\n  …heduler)\n        .cache()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "Single.fromCallable {\n  …heduler)\n        .cache()");
         return d;
     }
 }

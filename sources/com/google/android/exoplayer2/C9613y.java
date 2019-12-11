@@ -12,8 +12,8 @@ import com.google.android.exoplayer2.PlayerMessage.Target;
 import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9542g;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.source.TrackGroupArray;
@@ -28,7 +28,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /* renamed from: com.google.android.exoplayer2.y */
 /* compiled from: ExoPlayerImpl */
-final class C9613y extends C8812p implements ExoPlayer {
+final class C9613y extends BasePlayer implements ExoPlayer {
 
     /* renamed from: b */
     final C9318m f22486b;
@@ -238,9 +238,9 @@ final class C9613y extends C8812p implements ExoPlayer {
         sb.append(" [");
         sb.append("ExoPlayerLib/2.10.5");
         sb.append("] [");
-        sb.append(C9554k0.f22285e);
+        sb.append(Util.DEVICE_DEBUG_INFO);
         sb.append("]");
-        C9563q.m29499c("ExoPlayerImpl", sb.toString());
+        Log.m29499c("ExoPlayerImpl", sb.toString());
         C9537e.m29301b(l0VarArr2.length > 0);
         C9537e.m29296a(l0VarArr);
         this.f22487c = l0VarArr2;
@@ -295,11 +295,11 @@ final class C9613y extends C8812p implements ExoPlayer {
         sb.append("ExoPlayerLib/2.10.5");
         String str = "] [";
         sb.append(str);
-        sb.append(C9554k0.f22285e);
+        sb.append(Util.DEVICE_DEBUG_INFO);
         sb.append(str);
         sb.append(C8672a0.m24989a());
         sb.append("]");
-        C9563q.m29499c("ExoPlayerImpl", sb.toString());
+        Log.m29499c("ExoPlayerImpl", sb.toString());
         this.f22490f.mo24822c();
         this.f22489e.removeCallbacksAndMessages(null);
         this.f22504t = m29763a(false, false, 1);
@@ -316,7 +316,7 @@ final class C9613y extends C8812p implements ExoPlayer {
         }
         C8725h0 h0Var = this.f22504t;
         if (h0Var.f18542j.equals(h0Var.f18535c)) {
-            j = C8883r.m25968b(this.f22504t.f18543k);
+            j = C8883r.usToMs(this.f22504t.f18543k);
         } else {
             j = getDuration();
         }
@@ -352,7 +352,7 @@ final class C9613y extends C8812p implements ExoPlayer {
         if (h0Var2.f18537e == -9223372036854775807L) {
             j = h0Var2.f18533a.mo22663a(getCurrentWindowIndex(), this.f18741a).mo22689a();
         } else {
-            j = this.f22493i.mo22687e() + C8883r.m25968b(this.f22504t.f18537e);
+            j = this.f22493i.mo22687e() + C8883r.usToMs(this.f22504t.f18537e);
         }
         return j;
     }
@@ -376,7 +376,7 @@ final class C9613y extends C8812p implements ExoPlayer {
             return this.f22507w;
         }
         if (this.f22504t.f18535c.mo23494a()) {
-            return C8883r.m25968b(this.f22504t.f18545m);
+            return C8883r.usToMs(this.f22504t.f18545m);
         }
         C8725h0 h0Var = this.f22504t;
         return m29762a(h0Var.f18535c, h0Var.f18545m);
@@ -409,7 +409,7 @@ final class C9613y extends C8812p implements ExoPlayer {
         C8725h0 h0Var = this.f22504t;
         MediaPeriodId mediaPeriodId = h0Var.f18535c;
         h0Var.f18533a.mo22662a(mediaPeriodId.f20147a, this.f22493i);
-        return C8883r.m25968b(this.f22493i.mo22675a(mediaPeriodId.f20148b, mediaPeriodId.f20149c));
+        return C8883r.usToMs(this.f22493i.mo22675a(mediaPeriodId.f20148b, mediaPeriodId.f20149c));
     }
 
     public boolean getPlayWhenReady() {
@@ -445,7 +445,7 @@ final class C9613y extends C8812p implements ExoPlayer {
     }
 
     public long getTotalBufferedDuration() {
-        return C8883r.m25968b(this.f22504t.f18544l);
+        return C8883r.usToMs(this.f22504t.f18544l);
     }
 
     public VideoComponent getVideoComponent() {
@@ -479,7 +479,7 @@ final class C9613y extends C8812p implements ExoPlayer {
         this.f22501q = true;
         this.f22499o++;
         if (isPlayingAd()) {
-            C9563q.m29500d("ExoPlayerImpl", "seekTo ignored because an ad is playing");
+            Log.m29500d("ExoPlayerImpl", "seekTo ignored because an ad is playing");
             this.f22489e.obtainMessage(0, 1, -1, this.f22504t).sendToTarget();
             return;
         }
@@ -488,12 +488,12 @@ final class C9613y extends C8812p implements ExoPlayer {
             this.f22507w = j == -9223372036854775807L ? 0 : j;
             this.f22506v = 0;
         } else {
-            long b = j == -9223372036854775807L ? timeline.mo22663a(i, this.f18741a).mo22691b() : C8883r.m25967a(j);
+            long b = j == -9223372036854775807L ? timeline.mo22663a(i, this.f18741a).mo22691b() : C8883r.msToUs(j);
             Pair a = timeline.mo22658a(this.f18741a, this.f22493i, i, b);
-            this.f22507w = C8883r.m25968b(b);
+            this.f22507w = C8883r.usToMs(b);
             this.f22506v = timeline.mo22656a(a.first);
         }
-        this.f22490f.mo24815a(timeline, i, C8883r.m25967a(j));
+        this.f22490f.mo24815a(timeline, i, C8883r.msToUs(j));
         m29770a((C8814b) C8680c.f18428a);
     }
 
@@ -696,7 +696,7 @@ final class C9613y extends C8812p implements ExoPlayer {
 
     /* renamed from: a */
     private long m29762a(MediaPeriodId mediaPeriodId, long j) {
-        long b = C8883r.m25968b(j);
+        long b = C8883r.usToMs(j);
         this.f22504t.f18533a.mo22662a(mediaPeriodId.f20147a, this.f22493i);
         return b + this.f22493i.mo22687e();
     }

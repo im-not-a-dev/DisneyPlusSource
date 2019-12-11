@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.analytics;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.analytics.a0 */
 /* compiled from: GlimpseTime.kt */
@@ -24,8 +24,8 @@ public final class C2335a0 {
         SimpleDateFormat simpleDateFormat = f6534a;
         simpleDateFormat.setTimeZone(timeZone);
         String format = simpleDateFormat.format(new Date());
-        C12880j.m40222a((Object) format, "dateFormat.format(Date())");
-        C12880j.m40222a((Object) format, "run {\n            val ti….format(Date())\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) format, "dateFormat.format(Date())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) format, "run {\n            val ti….format(Date())\n        }");
         return format;
     }
 }

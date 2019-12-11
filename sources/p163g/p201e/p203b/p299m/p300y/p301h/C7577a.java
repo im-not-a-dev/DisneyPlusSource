@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import java.util.HashMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 import p163g.p201e.p203b.p299m.C7559q;
 import p163g.p201e.p203b.p299m.C7562t;
@@ -56,7 +56,7 @@ public abstract class C7577a extends ConstraintLayout implements C7575f {
         public boolean onPreDraw() {
             this.f16586V.mo18304a(this.f16587W);
             ViewTreeObserver viewTreeObserver = this.f16585U;
-            C12880j.m40222a((Object) viewTreeObserver, "vto");
+            Intrinsics.checkReturnedValueIsNotNull((Object) viewTreeObserver, "vto");
             if (viewTreeObserver.isAlive()) {
                 this.f16585U.removeOnPreDrawListener(this);
             } else {

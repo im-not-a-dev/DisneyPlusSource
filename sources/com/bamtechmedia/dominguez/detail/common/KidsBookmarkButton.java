@@ -13,7 +13,7 @@ import com.bamtechmedia.dominguez.detail.common.C5897a.C5898a.C5902d;
 import com.bamtechmedia.dominguez.detail.common.C5897a.C5898a.C5903e;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p135s.C4127b0;
 import p163g.p201e.p203b.p287k.C7312f;
 import p163g.p201e.p203b.p287k.C7315i;
@@ -108,7 +108,7 @@ public final class KidsBookmarkButton extends C5897a {
         super(context, attributeSet, i);
         ViewGroup.inflate(context, C7312f.bookmark_kids_layout, this);
         int[] iArr = C7315i.KidsBookmarkButton;
-        C12880j.m40222a((Object) iArr, "R.styleable.KidsBookmarkButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) iArr, "R.styleable.KidsBookmarkButton");
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, 0, 0);
         this.f13685u0 = obtainStyledAttributes.getResourceId(C7315i.KidsBookmarkButton_bookmarkProgressBar, 0);
         this.f13686v0 = obtainStyledAttributes.getResourceId(C7315i.KidsBookmarkButton_bookmarkProgressTextView, 0);

@@ -48,7 +48,7 @@ public class C8309p {
         public <Model> void mo21491a(Class<Model> cls, List<C8306n<Model, ?>> list) {
             if (((C8311a) this.f17777a.put(cls, new C8311a(list))) != null) {
                 StringBuilder sb = new StringBuilder();
-                sb.append("Already cached loaders for model: ");
+                sb.append("Already cached loaders forMODEL: ");
                 sb.append(cls);
                 throw new IllegalStateException(sb.toString());
             }
@@ -69,13 +69,13 @@ public class C8309p {
     }
 
     /* renamed from: a */
-    public synchronized <Model, Data> void mo21487a(Class<Model> cls, Class<Data> cls2, C8308o<? extends Model, ? extends Data> oVar) {
+    public synchronized <Model, Data> void mo21487a(Class<Model> cls, Class<Data> cls2, C8308o<? extendsMODEL, ? extends Data> oVar) {
         this.f17775a.mo21495a(cls, cls2, oVar);
         this.f17776b.mo21490a();
     }
 
     /* renamed from: b */
-    public synchronized <Model, Data> void mo21488b(Class<Model> cls, Class<Data> cls2, C8308o<? extends Model, ? extends Data> oVar) {
+    public synchronized <Model, Data> void mo21488b(Class<Model> cls, Class<Data> cls2, C8308o<? extendsMODEL, ? extends Data> oVar) {
         m24132a(this.f17775a.mo21498b(cls, cls2, oVar));
         this.f17776b.mo21490a();
     }
@@ -86,7 +86,7 @@ public class C8309p {
     }
 
     /* renamed from: a */
-    private <Model, Data> void m24132a(List<C8308o<? extends Model, ? extends Data>> list) {
+    private <Model, Data> void m24132a(List<C8308o<? extendsMODEL, ? extends Data>> list) {
         for (C8308o a : list) {
             a.mo19955a();
         }

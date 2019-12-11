@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p287k.p288j.C7319b;
 import p163g.p500m.p501a.C11724g;
 import p163g.p500m.p501a.C11733i;
@@ -109,7 +109,7 @@ public final class MovieDetailRemoteDataSource implements C7319b {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13863b, (java.lang.Object) r3.f13863b) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13863b, (java.lang.Object) r3.f13863b) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -121,11 +121,11 @@ public final class MovieDetailRemoteDataSource implements C7319b {
                 com.bamtechmedia.dominguez.detail.movie.data.MovieDetailRemoteDataSource$ContinueWatchingVideo r3 = (com.bamtechmedia.dominguez.detail.movie.data.MovieDetailRemoteDataSource.ContinueWatchingVideo) r3
                 com.bamtechmedia.dominguez.detail.common.BookmarkHit r0 = r2.f13862a
                 com.bamtechmedia.dominguez.detail.common.BookmarkHit r1 = r3.f13862a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 com.bamtechmedia.dominguez.core.content.assets.DmcLabel r0 = r2.f13863b
                 com.bamtechmedia.dominguez.core.content.assets.DmcLabel r3 = r3.f13863b
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -182,7 +182,7 @@ public final class MovieDetailRemoteDataSource implements C7319b {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f13864a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.movie.data.MovieDetailRemoteDataSource.ContinueWatchingVideoResponse) r2).f13864a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f13864a, (java.lang.Object) ((com.bamtechmedia.dominguez.detail.movie.data.MovieDetailRemoteDataSource.ContinueWatchingVideoResponse) r2).f13864a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -194,7 +194,7 @@ public final class MovieDetailRemoteDataSource implements C7319b {
                 com.bamtechmedia.dominguez.detail.movie.data.MovieDetailRemoteDataSource$ContinueWatchingVideoResponse r2 = (com.bamtechmedia.dominguez.detail.movie.data.MovieDetailRemoteDataSource.ContinueWatchingVideoResponse) r2
                 com.bamtechmedia.dominguez.detail.movie.data.MovieDetailRemoteDataSource$ContinueWatchingVideo r0 = r1.f13864a
                 com.bamtechmedia.dominguez.detail.movie.data.MovieDetailRemoteDataSource$ContinueWatchingVideo r2 = r2.f13864a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -346,14 +346,14 @@ public final class MovieDetailRemoteDataSource implements C7319b {
     /* renamed from: a */
     public Single<C6024b> mo18055a(String str, String str2) {
         Single<C6024b> g = this.f13858a.mo13577a(DmcVideoBundleResponse.class, "core/DmcVideoBundle", C13173j0.m40356a(C12907r.m40244a("familyId", str), C12907r.m40244a("includePromoLabels", C13185o.m40520c("ComingSoon", "NewlyAdded"))), str2).mo30233g(new C6013b(this));
-        C12880j.m40222a((Object) g, "searchApi.typedSearch<Dm…)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.typedSearch<Dm…)\n            }\n        }");
         return g;
     }
 
     /* renamed from: b */
     public Single<C6026d> mo18056b(String str, String str2) {
         Single<C6026d> i = this.f13860c.mo12186a(str).mo30120b(C13173j0.m40350a()).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6014c<Object,Object>(this, str, str2)).mo30233g(C6015d.f13869c).mo30203a(this.f13861d.mo17875d(), TimeUnit.SECONDS, C11934b.m38500b()).mo30237i(C6016e.f13870c);
-        C12880j.m40222a((Object) i, "localBookmarks.lastMovie…false, bookmark = null) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "localBookmarks.lastMovie…false, bookmark = null) }");
         return i;
     }
 

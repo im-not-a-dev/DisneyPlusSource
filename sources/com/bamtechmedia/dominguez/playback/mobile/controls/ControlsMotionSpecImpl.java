@@ -21,14 +21,14 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p096e.p121h.p122j.C4025a;
 import p163g.p174d.p178b.C5313o;
 import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u0000 $2\u00020\u0001:\u0002$%B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J(\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\u000fH\u0007J\b\u0010\u0010\u001a\u00020\bH\u0003J\r\u0010\u0011\u001a\u00020\u0012H\u0001¢\u0006\u0002\b\u0013J\u0010\u0010\u0014\u001a\u00020\b2\u0006\u0010\u0015\u001a\u00020\u0016H\u0016J\u0010\u0010\u0017\u001a\u00020\b2\u0006\u0010\u0015\u001a\u00020\u0016H\u0016J \u0010\u0018\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u0019\u001a\u00020\fH\u0002J\b\u0010\u001a\u001a\u00020\bH\u0002J\u0010\u0010\u001b\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nH\u0003J\u0010\u0010\u001c\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nH\u0003J(\u0010\u001d\u001a\u00020\b2\u0006\u0010\u001e\u001a\u00020\u001f2\u0006\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020\f2\u0006\u0010\u0018\u001a\u00020\fH\u0002J\b\u0010#\u001a\u00020\bH\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000¨\u0006&"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/mobile/controls/ControlsMotionSpecImpl;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "engine", "Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "(Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;)V", "seekAnimator", "Landroid/animation/ValueAnimator;", "animatedHeightScaler", "", "seekBar", "Landroid/widget/SeekBar;", "initLevel", "", "maxLevel", "durationMillis", "", "createSeekbarThumbScaler", "isMarshmallowOrGreater", "", "isMarshmallowOrGreater$playback_release", "onCreate", "owner", "Landroidx/lifecycle/LifecycleOwner;", "onDestroy", "percentScaled", "animatedFraction", "removeAnimator", "scaleSeekDown", "scaleSeekUp", "scaleThumbAndBar", "context", "Landroid/content/Context;", "seekDrawables", "Lcom/bamtechmedia/dominguez/playback/mobile/controls/ControlsMotionSpecImpl$SeekBarDrawables;", "percentOfOriginalSize", "setInitialThumbSize", "Companion", "SeekBarDrawables", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: ControlsMotionSpecImpl.kt */
@@ -125,13 +125,13 @@ public final class ControlsMotionSpecImpl implements C0710d {
         public final void onAnimationUpdate(ValueAnimator valueAnimator) {
             ControlsMotionSpecImpl controlsMotionSpecImpl = this.f14737a;
             Context context = this.f14738b;
-            C12880j.m40222a((Object) context, "context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
             LayerDrawable layerDrawable = this.f14739c;
             GradientDrawable gradientDrawable = this.f14740d;
             Drawable drawable = this.f14741e;
             if (drawable != null) {
                 C6516b bVar = new C6516b(layerDrawable, gradientDrawable, (GradientDrawable) drawable);
-                C12880j.m40222a((Object) valueAnimator, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueAnimator, "it");
                 Object animatedValue = valueAnimator.getAnimatedValue();
                 if (animatedValue != null) {
                     controlsMotionSpecImpl.m20274a(context, bVar, ((Float) animatedValue).floatValue(), this.f14737a.m20271a(this.f14742f, this.f14743g, valueAnimator.getAnimatedFraction()));
@@ -177,16 +177,16 @@ public final class ControlsMotionSpecImpl implements C0710d {
             if (f != null) {
                 SeekBar r = f.mo16823r();
                 if (r != null) {
-                    C12880j.m40222a((Object) bool, "wasTouched");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) bool, "wasTouched");
                     String str = "it";
                     if (bool.booleanValue()) {
                         ControlsMotionSpecImpl controlsMotionSpecImpl = this.f14745c;
-                        C12880j.m40222a((Object) r, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) r, str);
                         controlsMotionSpecImpl.m20278b(r);
                         return;
                     }
                     ControlsMotionSpecImpl controlsMotionSpecImpl2 = this.f14745c;
-                    C12880j.m40222a((Object) r, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) r, str);
                     controlsMotionSpecImpl2.m20275a(r);
                 }
             }
@@ -206,7 +206,7 @@ public final class ControlsMotionSpecImpl implements C0710d {
 
         /* renamed from: a */
         public final void mo19185a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -214,7 +214,7 @@ public final class ControlsMotionSpecImpl implements C0710d {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {

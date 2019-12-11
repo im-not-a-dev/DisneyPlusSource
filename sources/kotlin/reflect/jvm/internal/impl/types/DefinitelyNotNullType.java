@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.types.checker.NewTypeVariableConstructor;
@@ -32,7 +32,7 @@ public final class DefinitelyNotNullType extends DelegatingSimpleType implements
             }
             if (unwrappedType instanceof FlexibleType) {
                 FlexibleType flexibleType = (FlexibleType) unwrappedType;
-                boolean a = C12880j.m40224a((Object) flexibleType.getLowerBound().getConstructor(), (Object) flexibleType.getUpperBound().getConstructor());
+                boolean a = Intrinsics.areEqual((Object) flexibleType.getLowerBound().getConstructor(), (Object) flexibleType.getUpperBound().getConstructor());
                 if (C13147x.f29590a && !a) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("DefinitelyNotNullType for flexible type (");

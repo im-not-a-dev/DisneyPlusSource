@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Set;
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
 import kotlin.reflect.jvm.internal.impl.utils.DFS.AbstractNodeHandler;
@@ -29,7 +29,7 @@ public final class LazyJavaStaticClassScope$flatMapJavaStaticSupertypesScopes$2 
             return true;
         }
         MemberScope staticScope = classDescriptor.getStaticScope();
-        C12880j.m40222a((Object) staticScope, "current.staticScope");
+        Intrinsics.checkReturnedValueIsNotNull((Object) staticScope, "current.staticScope");
         if (!(staticScope instanceof LazyJavaStaticScope)) {
             return true;
         }

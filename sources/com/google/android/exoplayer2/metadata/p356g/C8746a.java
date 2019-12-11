@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.metadata.g.a */
@@ -133,7 +133,7 @@ public final class C8746a implements C8737b {
             return false;
         }
         C8746a aVar = (C8746a) obj;
-        if (this.f18573V != aVar.f18573V || this.f18574W != aVar.f18574W || !C9554k0.m29414a((Object) this.f18577c, (Object) aVar.f18577c) || !C9554k0.m29414a((Object) this.f18572U, (Object) aVar.f18572U) || !Arrays.equals(this.f18575X, aVar.f18575X)) {
+        if (this.f18573V != aVar.f18573V || this.f18574W != aVar.f18574W || !Util.m29414a((Object) this.f18577c, (Object) aVar.f18577c) || !Util.m29414a((Object) this.f18572U, (Object) aVar.f18572U) || !Arrays.equals(this.f18575X, aVar.f18575X)) {
             z = false;
         }
         return z;
@@ -180,15 +180,15 @@ public final class C8746a implements C8737b {
 
     C8746a(Parcel parcel) {
         String readString = parcel.readString();
-        C9554k0.m29394a(readString);
+        Util.castNonNull(readString);
         this.f18577c = readString;
         String readString2 = parcel.readString();
-        C9554k0.m29394a(readString2);
+        Util.castNonNull(readString2);
         this.f18572U = readString2;
         this.f18573V = parcel.readLong();
         this.f18574W = parcel.readLong();
         byte[] createByteArray = parcel.createByteArray();
-        C9554k0.m29394a(createByteArray);
+        Util.castNonNull(createByteArray);
         this.f18575X = createByteArray;
     }
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Class;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Constructor;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Function;
@@ -35,7 +35,7 @@ public final class JvmProtoBufUtil {
     static {
         ExtensionRegistryLite newInstance = ExtensionRegistryLite.newInstance();
         JvmProtoBuf.registerAllExtensions(newInstance);
-        C12880j.m40222a((Object) newInstance, "ExtensionRegistryLite.ne…f::registerAllExtensions)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) newInstance, "ExtensionRegistryLite.ne…f::registerAllExtensions)");
         EXTENSION_REGISTRY = newInstance;
     }
 
@@ -52,9 +52,9 @@ public final class JvmProtoBufUtil {
     public static final boolean isMovedFromInterfaceCompanion(Property property) {
         BooleanFlagField is_moved_from_interface_companion = JvmFlags.INSTANCE.getIS_MOVED_FROM_INTERFACE_COMPANION();
         Object extension = property.getExtension(JvmProtoBuf.flags);
-        C12880j.m40222a(extension, "proto.getExtension(JvmProtoBuf.flags)");
+        Intrinsics.checkReturnedValueIsNotNull(extension, "proto.getExtension(JvmProtoBuf.flags)");
         Boolean bool = is_moved_from_interface_companion.get(((Number) extension).intValue());
-        C12880j.m40222a((Object) bool, "JvmFlags.IS_MOVED_FROM_I…nsion(JvmProtoBuf.flags))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bool, "JvmFlags.IS_MOVED_FROM_I…nsion(JvmProtoBuf.flags))");
         return bool.booleanValue();
     }
 
@@ -67,7 +67,7 @@ public final class JvmProtoBufUtil {
 
     public static final Pair<JvmNameResolver, Class> readClassDataFrom(String[] strArr, String[] strArr2) {
         byte[] decodeBytes = BitEncoding.decodeBytes(strArr);
-        C12880j.m40222a((Object) decodeBytes, "BitEncoding.decodeBytes(data)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) decodeBytes, "BitEncoding.decodeBytes(data)");
         return readClassDataFrom(decodeBytes, strArr2);
     }
 
@@ -78,13 +78,13 @@ public final class JvmProtoBufUtil {
 
     private final JvmNameResolver readNameResolver(InputStream inputStream, String[] strArr) {
         StringTableTypes parseDelimitedFrom = StringTableTypes.parseDelimitedFrom(inputStream, EXTENSION_REGISTRY);
-        C12880j.m40222a((Object) parseDelimitedFrom, "JvmProtoBuf.StringTableT…this, EXTENSION_REGISTRY)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) parseDelimitedFrom, "JvmProtoBuf.StringTableT…this, EXTENSION_REGISTRY)");
         return new JvmNameResolver(parseDelimitedFrom, strArr);
     }
 
     public static final Pair<JvmNameResolver, Package> readPackageDataFrom(String[] strArr, String[] strArr2) {
         byte[] decodeBytes = BitEncoding.decodeBytes(strArr);
-        C12880j.m40222a((Object) decodeBytes, "BitEncoding.decodeBytes(data)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) decodeBytes, "BitEncoding.decodeBytes(data)");
         return readPackageDataFrom(decodeBytes, strArr2);
     }
 
@@ -95,16 +95,16 @@ public final class JvmProtoBufUtil {
     public final Method getJvmConstructorSignature(Constructor constructor, NameResolver nameResolver, TypeTable typeTable) {
         String str;
         GeneratedExtension<Constructor, JvmMethodSignature> generatedExtension = JvmProtoBuf.constructorSignature;
-        C12880j.m40222a((Object) generatedExtension, "JvmProtoBuf.constructorSignature");
+        Intrinsics.checkReturnedValueIsNotNull((Object) generatedExtension, "JvmProtoBuf.constructorSignature");
         JvmMethodSignature jvmMethodSignature = (JvmMethodSignature) ProtoBufUtilKt.getExtensionOrNull(constructor, generatedExtension);
         String string = (jvmMethodSignature == null || !jvmMethodSignature.hasName()) ? "<init>" : nameResolver.getString(jvmMethodSignature.getName());
         if (jvmMethodSignature == null || !jvmMethodSignature.hasDesc()) {
             List<ValueParameter> valueParameterList = constructor.getValueParameterList();
-            C12880j.m40222a((Object) valueParameterList, "proto.valueParameterList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterList, "proto.valueParameterList");
             ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) valueParameterList, 10));
             for (ValueParameter valueParameter : valueParameterList) {
                 JvmProtoBufUtil jvmProtoBufUtil = INSTANCE;
-                C12880j.m40222a((Object) valueParameter, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueParameter, "it");
                 String mapTypeDefault = jvmProtoBufUtil.mapTypeDefault(ProtoTypeTableUtilKt.type(valueParameter, typeTable), nameResolver);
                 if (mapTypeDefault == null) {
                     return null;
@@ -127,7 +127,7 @@ public final class JvmProtoBufUtil {
             r3 = this;
             kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite$GeneratedExtension<kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Property, kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$JvmPropertySignature> r0 = kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.propertySignature
             java.lang.String r1 = "JvmProtoBuf.propertySignature"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.lang.Object r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.ProtoBufUtilKt.getExtensionOrNull(r4, r0)
             kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$JvmPropertySignature r0 = (kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.JvmPropertySignature) r0
             r1 = 0
@@ -178,16 +178,16 @@ public final class JvmProtoBufUtil {
         NameResolver nameResolver2 = nameResolver;
         TypeTable typeTable2 = typeTable;
         GeneratedExtension<Function, JvmMethodSignature> generatedExtension = JvmProtoBuf.methodSignature;
-        C12880j.m40222a((Object) generatedExtension, "JvmProtoBuf.methodSignature");
+        Intrinsics.checkReturnedValueIsNotNull((Object) generatedExtension, "JvmProtoBuf.methodSignature");
         JvmMethodSignature jvmMethodSignature = (JvmMethodSignature) ProtoBufUtilKt.getExtensionOrNull(function2, generatedExtension);
         int name = (jvmMethodSignature == null || !jvmMethodSignature.hasName()) ? function.getName() : jvmMethodSignature.getName();
         if (jvmMethodSignature == null || !jvmMethodSignature.hasDesc()) {
             List b = C13185o.m40517b((Object) ProtoTypeTableUtilKt.receiverType(function2, typeTable2));
             List<ValueParameter> valueParameterList = function.getValueParameterList();
-            C12880j.m40222a((Object) valueParameterList, "proto.valueParameterList");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterList, "proto.valueParameterList");
             ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) valueParameterList, 10));
             for (ValueParameter valueParameter : valueParameterList) {
-                C12880j.m40222a((Object) valueParameter, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueParameter, "it");
                 arrayList.add(ProtoTypeTableUtilKt.type(valueParameter, typeTable2));
             }
             List<Type> d = C13199w.m40583d((Collection) b, (Iterable) arrayList);

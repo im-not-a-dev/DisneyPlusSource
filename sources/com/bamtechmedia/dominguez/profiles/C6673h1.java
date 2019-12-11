@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.profiles;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Function;
 
@@ -44,7 +44,7 @@ public final class C6673h1 {
     /* renamed from: a */
     public static final Single<Boolean> m20690a(C6667g1 g1Var) {
         Single<Boolean> a = g1Var.mo19381b().mo30233g(C6674a.f15025c).mo30213a(Boolean.valueOf(false));
-        C12880j.m40222a((Object) a, "activeProfileOnce().map ….onErrorReturnItem(false)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "activeProfileOnce().map ….onErrorReturnItem(false)");
         return a;
     }
 }

@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
@@ -43,7 +43,7 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
         }
 
         public boolean equals(Object obj) {
-            return (obj instanceof FindClassRequest) && C12880j.m40224a((Object) this.name, (Object) ((FindClassRequest) obj).name);
+            return (obj instanceof FindClassRequest) && Intrinsics.areEqual((Object) this.name, (Object) ((FindClassRequest) obj).name);
         }
 
         public final JavaClass getJavaClass() {

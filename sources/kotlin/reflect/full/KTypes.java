@@ -1,7 +1,7 @@
 package kotlin.reflect.full;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KType;
 import kotlin.reflect.jvm.internal.KTypeImpl;
 import kotlin.reflect.jvm.internal.impl.types.FlexibleTypesKt;
@@ -24,7 +24,7 @@ public final class KTypes {
         if (kType.isMarkedNullable()) {
             if (!z) {
                 KotlinType makeNotNullable = TypeUtils.makeNotNullable(((KTypeImpl) kType).getType());
-                C12880j.m40222a((Object) makeNotNullable, "TypeUtils.makeNotNullabl…(this as KTypeImpl).type)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) makeNotNullable, "TypeUtils.makeNotNullabl…(this as KTypeImpl).type)");
                 kType = new KTypeImpl(makeNotNullable, new KTypes$withNullability$1(kType));
             }
             return kType;
@@ -32,12 +32,12 @@ public final class KTypes {
         KotlinType type = ((KTypeImpl) kType).getType();
         if (FlexibleTypesKt.isFlexible(type)) {
             KotlinType makeNullableAsSpecified = TypeUtils.makeNullableAsSpecified(type, z);
-            C12880j.m40222a((Object) makeNullableAsSpecified, "TypeUtils.makeNullableAs…ied(kotlinType, nullable)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) makeNullableAsSpecified, "TypeUtils.makeNullableAs…ied(kotlinType, nullable)");
             return new KTypeImpl(makeNullableAsSpecified, new KTypes$withNullability$2(kType));
         }
         if (z) {
             KotlinType makeNullable = TypeUtils.makeNullable(type);
-            C12880j.m40222a((Object) makeNullable, "TypeUtils.makeNullable(kotlinType)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) makeNullable, "TypeUtils.makeNullable(kotlinType)");
             kType = new KTypeImpl(makeNullable, new KTypes$withNullability$3(kType));
         }
         return kType;

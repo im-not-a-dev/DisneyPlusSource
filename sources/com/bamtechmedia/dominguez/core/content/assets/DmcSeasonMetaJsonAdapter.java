@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11737m.C11739b;
@@ -18,10 +18,10 @@ public final class DmcSeasonMetaJsonAdapter extends C11725h<DmcSeasonMeta> {
     public DmcSeasonMetaJsonAdapter(C11760v vVar) {
         String str = "labels";
         C11739b a = C11739b.m37729a(str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"labels\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"labels\")");
         this.options = a;
         C11725h<DmcLabel> a2 = vVar.mo29869a((Type) DmcLabel.class, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<DmcLabel?>…ons.emptySet(), \"labels\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<DmcLabel?>…ons.emptySet(), \"labels\")");
         this.nullableDmcLabelAdapter = a2;
     }
 

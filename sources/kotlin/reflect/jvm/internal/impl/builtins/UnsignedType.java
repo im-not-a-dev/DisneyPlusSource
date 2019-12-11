@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.builtins;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
 import kotlin.reflect.jvm.internal.impl.name.Name;
@@ -19,7 +19,7 @@ public enum UnsignedType {
     private UnsignedType(ClassId classId2) {
         this.classId = classId2;
         Name shortClassName = this.classId.getShortClassName();
-        C12880j.m40222a((Object) shortClassName, "classId.shortClassName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) shortClassName, "classId.shortClassName");
         this.typeName = shortClassName;
         FqName packageFqName = this.classId.getPackageFqName();
         StringBuilder sb = new StringBuilder();

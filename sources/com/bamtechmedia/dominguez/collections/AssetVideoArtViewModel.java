@@ -9,7 +9,7 @@ import androidx.lifecycle.C0722m;
 import com.bamtechmedia.dominguez.collections.C3317e.C3318a;
 import com.bamtechmedia.dominguez.core.content.collections.C3680n;
 import com.google.android.exoplayer2.C8729j0;
-import com.google.android.exoplayer2.C8802o0;
+import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.C9612x;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.PlaybackParameters;
@@ -32,7 +32,7 @@ import kotlin.C13145v;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -55,7 +55,7 @@ public final class AssetVideoArtViewModel extends C0702a implements C3317e {
     private final Lazy f8303U;
 
     /* renamed from: V */
-    private C8802o0 f8304V;
+    private SimpleExoPlayer f8304V;
     /* access modifiers changed from: private */
 
     /* renamed from: W */
@@ -197,10 +197,10 @@ public final class AssetVideoArtViewModel extends C0702a implements C3317e {
     }
 
     /* renamed from: A */
-    private final C8802o0 m11307A() {
-        C8802o0 b = C9612x.m29761b(mo4111y());
+    private final SimpleExoPlayer m11307A() {
+        SimpleExoPlayer b = C9612x.m29761b(mo4111y());
         b.addListener(new C3278b(this));
-        C12880j.m40222a((Object) b, "ExoPlayerFactory.newSimp…       }\n        })\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "ExoPlayerFactory.newSimp…       }\n        })\n    }");
         return b;
     }
 
@@ -214,9 +214,9 @@ public final class AssetVideoArtViewModel extends C0702a implements C3317e {
     /* renamed from: C */
     private final void m11309C() {
         this.f8305W = null;
-        C8802o0 o0Var = this.f8304V;
+        SimpleExoPlayer o0Var = this.f8304V;
         this.f8307Y = o0Var != null ? o0Var.getCurrentPosition() : 0;
-        C8802o0 o0Var2 = this.f8304V;
+        SimpleExoPlayer o0Var2 = this.f8304V;
         if (o0Var2 != null) {
             o0Var2.mo7651k();
         }
@@ -257,7 +257,7 @@ public final class AssetVideoArtViewModel extends C0702a implements C3317e {
 
     /* renamed from: c */
     public void mo12322c() {
-        C8802o0 o0Var = this.f8304V;
+        SimpleExoPlayer o0Var = this.f8304V;
         if (o0Var != null) {
             o0Var.stop(true);
         }
@@ -310,7 +310,7 @@ public final class AssetVideoArtViewModel extends C0702a implements C3317e {
                 playerView = this.f8305W;
             }
             if (playerView != null) {
-                C8802o0 o0Var = this.f8304V;
+                SimpleExoPlayer o0Var = this.f8304V;
                 if (o0Var == null) {
                     o0Var = m11307A();
                     this.f8304V = o0Var;

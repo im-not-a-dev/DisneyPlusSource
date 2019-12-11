@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.analytics;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -23,16 +23,16 @@ public final class AudienceManagerJsonAdapter extends C11725h<AudienceManager> {
         String str2 = "analyticsForwardingEnabled";
         String str3 = "server";
         C11739b a = C11739b.m37729a(str3, str2, str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"s…rdingEnabled\", \"timeout\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"s…rdingEnabled\", \"timeout\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str3);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ons.emptySet(), \"server\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ons.emptySet(), \"server\")");
         this.stringAdapter = a2;
         C11725h<Boolean> a3 = vVar.mo29869a((Type) Boolean.TYPE, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a3, "moshi.adapter<Boolean>(B…lyticsForwardingEnabled\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<Boolean>(B…lyticsForwardingEnabled\")");
         this.booleanAdapter = a3;
         C11725h<Integer> a4 = vVar.mo29869a((Type) Integer.TYPE, C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a4, "moshi.adapter<Int>(Int::…ns.emptySet(), \"timeout\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<Int>(Int::…ns.emptySet(), \"timeout\")");
         this.intAdapter = a4;
     }
 

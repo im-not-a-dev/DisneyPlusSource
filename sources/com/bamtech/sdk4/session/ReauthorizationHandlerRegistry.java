@@ -7,7 +7,7 @@ import com.bamtech.sdk4.service.InvalidStateException.Companion;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KClass;
 import p520io.reactivex.Completable;
@@ -23,7 +23,7 @@ public final class ReauthorizationHandlerRegistry {
         if (reauthorizeMode2 instanceof NoAction) {
             DefaultImpls.log$default(serviceTransaction, this, "Exchange", "No action was requested", null, false, 24, null);
             Completable a = Completable.m38154a(th);
-            C12880j.m40222a((Object) a, "Completable.error(throwable)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.error(throwable)");
             return a;
         } else if (reauthorizationHandler != null) {
             DefaultImpls.log$default(serviceTransaction, this, "Exchange", "Handler found", null, false, 24, null);
@@ -32,7 +32,7 @@ public final class ReauthorizationHandlerRegistry {
             ServiceTransaction serviceTransaction2 = serviceTransaction;
             DefaultImpls.log$default(serviceTransaction, this, "Exchange", "There was no available handler", null, false, 24, null);
             Completable a2 = Completable.m38154a((Throwable) Companion.create$default(InvalidStateException.Companion, serviceTransaction.getId(), "plugin.not.found", "App was supposed to provide a ReauthorizationHandler but did not ", null, 8, null));
-            C12880j.m40222a((Object) a2, "Completable.error(exception)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a2, "Completable.error(exception)");
             return a2;
         }
     }

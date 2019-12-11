@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import com.bamtechmedia.dominguez.core.content.C3693o;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0003\b&\u0018\u00002\u00020\u0001:\u0001\u0012B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\b\u0010\u000f\u001a\u00020\u0010H&J\u000e\u0010\u0011\u001a\u00020\u00102\u0006\u0010\t\u001a\u00020\nR\u001a\u0010\t\u001a\u00020\nX.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000e¨\u0006\u0013"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/detail/common/BookmarkButton;", "Landroidx/constraintlayout/widget/ConstraintLayout;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "defStyle", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "buttonState", "Lcom/bamtechmedia/dominguez/detail/common/BookmarkButton$State;", "getButtonState", "()Lcom/bamtechmedia/dominguez/detail/common/BookmarkButton$State;", "setButtonState", "(Lcom/bamtechmedia/dominguez/detail/common/BookmarkButton$State;)V", "setChildViewProperties", "", "setState", "State", "contentDetail_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.detail.common.a */
@@ -62,7 +62,7 @@ public abstract class C5897a extends ConstraintLayout {
                 if (this != obj) {
                     if (obj instanceof C5900b) {
                         C5900b bVar = (C5900b) obj;
-                        if (C12880j.m40224a((Object) this.f13689a, (Object) bVar.f13689a)) {
+                        if (Intrinsics.areEqual((Object) this.f13689a, (Object) bVar.f13689a)) {
                             if (this.f13690b == bVar.f13690b) {
                                 return true;
                             }
@@ -131,7 +131,7 @@ public abstract class C5897a extends ConstraintLayout {
                 if (this != obj) {
                     if (obj instanceof C5902d) {
                         C5902d dVar = (C5902d) obj;
-                        if (!(this.f13692a == dVar.f13692a) || !C12880j.m40224a((Object) this.f13693b, (Object) dVar.f13693b)) {
+                        if (!(this.f13692a == dVar.f13692a) || !Intrinsics.areEqual((Object) this.f13693b, (Object) dVar.f13693b)) {
                             return false;
                         }
                     }
@@ -203,7 +203,7 @@ public abstract class C5897a extends ConstraintLayout {
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("buttonState");
+        Intrinsics.throwUninitializedPropertyAccessException("buttonState");
         throw null;
     }
 
@@ -213,8 +213,8 @@ public abstract class C5897a extends ConstraintLayout {
 
     public final void setState(C5898a aVar) {
         this.f13687r0 = aVar;
-        setVisibility(C12880j.m40224a((Object) aVar, (Object) C5903e.f13694a) ^ true ? 0 : 8);
-        setAlpha(C12880j.m40224a((Object) aVar, (Object) C5903e.f13694a) ^ true ? 1.0f : 0.0f);
+        setVisibility(Intrinsics.areEqual((Object) aVar, (Object) C5903e.f13694a) ^ true ? 0 : 8);
+        setAlpha(Intrinsics.areEqual((Object) aVar, (Object) C5903e.f13694a) ^ true ? 1.0f : 0.0f);
         mo2144c();
     }
 

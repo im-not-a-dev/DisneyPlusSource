@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.metadata.p359j;
 
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.metadata.j.b */
@@ -54,7 +54,7 @@ public final class C8758b extends C8773i {
             return false;
         }
         C8758b bVar = (C8758b) obj;
-        if (this.f18600W != bVar.f18600W || !C9554k0.m29414a((Object) this.f18598U, (Object) bVar.f18598U) || !C9554k0.m29414a((Object) this.f18599V, (Object) bVar.f18599V) || !Arrays.equals(this.f18601X, bVar.f18601X)) {
+        if (this.f18600W != bVar.f18600W || !Util.m29414a((Object) this.f18598U, (Object) bVar.f18598U) || !Util.m29414a((Object) this.f18599V, (Object) bVar.f18599V) || !Arrays.equals(this.f18601X, bVar.f18601X)) {
             z = false;
         }
         return z;
@@ -92,14 +92,14 @@ public final class C8758b extends C8773i {
     C8758b(Parcel parcel) {
         super("APIC");
         String readString = parcel.readString();
-        C9554k0.m29394a(readString);
+        Util.castNonNull(readString);
         this.f18598U = readString;
         String readString2 = parcel.readString();
-        C9554k0.m29394a(readString2);
+        Util.castNonNull(readString2);
         this.f18599V = readString2;
         this.f18600W = parcel.readInt();
         byte[] createByteArray = parcel.createByteArray();
-        C9554k0.m29394a(createByteArray);
+        Util.castNonNull(createByteArray);
         this.f18601X = createByteArray;
     }
 }

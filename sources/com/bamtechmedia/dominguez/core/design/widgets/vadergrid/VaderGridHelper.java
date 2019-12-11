@@ -14,7 +14,7 @@ import androidx.lifecycle.C0710d;
 import androidx.lifecycle.C0722m;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001:\u0003\u0012\u0013\u0014B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0016\u0010\u000b\u001a\u00020\f2\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bJ \u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0007\u001a\u00020\bH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X.¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX.¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000¨\u0006\u0015"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/design/widgets/vadergrid/VaderGridHelper;", "", "()V", "PREFERENCE_KEY", "", "application", "Landroid/app/Application;", "preferences", "Landroid/content/SharedPreferences;", "viewId", "", "setup", "", "update", "context", "Landroid/content/Context;", "window", "Landroid/view/Window;", "ActivityLifecycleCallbacks", "ActivityWindowLifecycleObserver", "DialogWindowLifecycleObserver", "lib_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: VaderGridHelper.kt */
@@ -47,7 +47,7 @@ public final class VaderGridHelper {
             VaderGridHelper vaderGridHelper = VaderGridHelper.f13464b;
             Activity activity = this.f13466c;
             Window window = activity.getWindow();
-            C12880j.m40222a((Object) window, "activity.window");
+            Intrinsics.checkReturnedValueIsNotNull((Object) window, "activity.window");
             vaderGridHelper.m18635a(activity, window, this.f13465U);
         }
 
@@ -72,11 +72,11 @@ public final class VaderGridHelper {
         }
 
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String str) {
-            if (C12880j.m40224a((Object) str, (Object) "VADER_GRID_ENABLED")) {
+            if (Intrinsics.areEqual((Object) str, (Object) "VADER_GRID_ENABLED")) {
                 VaderGridHelper vaderGridHelper = VaderGridHelper.f13464b;
                 Activity activity = this.f13466c;
                 Window window = activity.getWindow();
-                C12880j.m40222a((Object) window, "activity.window");
+                Intrinsics.checkReturnedValueIsNotNull((Object) window, "activity.window");
                 vaderGridHelper.m18635a(activity, window, this.f13465U);
             }
         }
@@ -126,21 +126,21 @@ public final class VaderGridHelper {
                 if (window != null) {
                     VaderGridHelper vaderGridHelper = VaderGridHelper.f13464b;
                     Context requireContext = this.f13468c.requireContext();
-                    C12880j.m40222a((Object) requireContext, "dialogFragment.requireContext()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "dialogFragment.requireContext()");
                     vaderGridHelper.m18635a(requireContext, window, this.f13467U);
                 }
             }
         }
 
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String str) {
-            if (C12880j.m40224a((Object) str, (Object) "VADER_GRID_ENABLED")) {
+            if (Intrinsics.areEqual((Object) str, (Object) "VADER_GRID_ENABLED")) {
                 Dialog dialog = this.f13468c.getDialog();
                 if (dialog != null) {
                     Window window = dialog.getWindow();
                     if (window != null) {
                         VaderGridHelper vaderGridHelper = VaderGridHelper.f13464b;
                         Context requireContext = this.f13468c.requireContext();
-                        C12880j.m40222a((Object) requireContext, "dialogFragment.requireContext()");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "dialogFragment.requireContext()");
                         vaderGridHelper.m18635a(requireContext, window, this.f13467U);
                     }
                 }

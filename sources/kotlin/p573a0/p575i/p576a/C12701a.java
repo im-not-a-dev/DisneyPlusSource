@@ -5,7 +5,7 @@ import kotlin.C12900n;
 import kotlin.C12900n.C12901a;
 import kotlin.C12903o;
 import kotlin.C13145v;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 
 /* renamed from: kotlin.a0.i.a.a */
@@ -57,7 +57,7 @@ public abstract class C12701a implements C12683c<Object>, C12705e, Serializable 
                     C12900n.m40236a(obj2);
                 }
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }

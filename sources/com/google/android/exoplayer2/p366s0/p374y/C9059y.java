@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p366s0.p374y;
 import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p393v0.C9545h0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
 
@@ -137,7 +137,7 @@ final class C9059y {
 
     /* renamed from: a */
     private int m26871a(C8913h hVar) {
-        this.f20105b.mo24683a(C9554k0.f22286f);
+        this.f20105b.mo24683a(Util.EMPTY_BYTE_ARRAY);
         this.f20106c = true;
         hVar.mo23297c();
         return 0;

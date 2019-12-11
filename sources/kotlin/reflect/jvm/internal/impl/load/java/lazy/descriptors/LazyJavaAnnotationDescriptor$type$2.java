@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JavaToKotlinClassMap;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -22,7 +22,7 @@ final class LazyJavaAnnotationDescriptor$type$2 extends C12881k implements Funct
     public final SimpleType invoke() {
         FqName fqName = this.this$0.getFqName();
         if (fqName != null) {
-            C12880j.m40222a((Object) fqName, "fqName ?: return@createL…fqName: $javaAnnotation\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "fqName ?: return@createL…fqName: $javaAnnotation\")");
             ClassDescriptor mapJavaToKotlin$default = JavaToKotlinClassMap.mapJavaToKotlin$default(JavaToKotlinClassMap.INSTANCE, fqName, this.this$0.f29556c.getModule().getBuiltIns(), null, 4, null);
             if (mapJavaToKotlin$default == null) {
                 JavaClass resolve = this.this$0.javaAnnotation.resolve();

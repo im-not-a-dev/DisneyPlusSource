@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
 
 /* compiled from: ClassLiteralValue.kt */
@@ -25,7 +25,7 @@ public final class ClassLiteralValue {
         if (this != obj) {
             if (obj instanceof ClassLiteralValue) {
                 ClassLiteralValue classLiteralValue = (ClassLiteralValue) obj;
-                if (C12880j.m40224a((Object) this.classId, (Object) classLiteralValue.classId)) {
+                if (Intrinsics.areEqual((Object) this.classId, (Object) classLiteralValue.classId)) {
                     if (this.arrayNestedness == classLiteralValue.arrayNestedness) {
                         return true;
                     }
@@ -61,7 +61,7 @@ public final class ClassLiteralValue {
             sb.append(">");
         }
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
         return sb2;
     }
 }

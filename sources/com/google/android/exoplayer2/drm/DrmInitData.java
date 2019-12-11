@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.C8883r;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -89,7 +89,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
 
         /* renamed from: a */
         public boolean mo22763a(UUID uuid) {
-            return C8883r.f19042a.equals(this.f18463U) || uuid.equals(this.f18463U);
+            return C8883r.UUID_NIL.equals(this.f18463U) || uuid.equals(this.f18463U);
         }
 
         public int describeContents() {
@@ -105,7 +105,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
                 return true;
             }
             C8692b bVar = (C8692b) obj;
-            if (!C9554k0.m29414a((Object) this.f18464V, (Object) bVar.f18464V) || !C9554k0.m29414a((Object) this.f18465W, (Object) bVar.f18465W) || !C9554k0.m29414a((Object) this.f18463U, (Object) bVar.f18463U) || !Arrays.equals(this.f18466X, bVar.f18466X)) {
+            if (!Util.m29414a((Object) this.f18464V, (Object) bVar.f18464V) || !Util.m29414a((Object) this.f18465W, (Object) bVar.f18465W) || !Util.m29414a((Object) this.f18463U, (Object) bVar.f18463U) || !Arrays.equals(this.f18466X, bVar.f18466X)) {
                 z = false;
             }
             return z;
@@ -158,7 +158,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
             this.f18463U = new UUID(parcel.readLong(), parcel.readLong());
             this.f18464V = parcel.readString();
             String readString = parcel.readString();
-            C9554k0.m29394a(readString);
+            Util.castNonNull(readString);
             this.f18465W = readString;
             this.f18466X = parcel.createByteArray();
             this.f18467Y = parcel.readByte() != 0;
@@ -215,7 +215,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
             return false;
         }
         DrmInitData drmInitData = (DrmInitData) obj;
-        if (!C9554k0.m29414a((Object) this.f18460V, (Object) drmInitData.f18460V) || !Arrays.equals(this.f18462c, drmInitData.f18462c)) {
+        if (!Util.m29414a((Object) this.f18460V, (Object) drmInitData.f18460V) || !Arrays.equals(this.f18462c, drmInitData.f18462c)) {
             z = false;
         }
         return z;
@@ -259,7 +259,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
     DrmInitData(Parcel parcel) {
         this.f18460V = parcel.readString();
         Object[] createTypedArray = parcel.createTypedArray(C8692b.CREATOR);
-        C9554k0.m29394a(createTypedArray);
+        Util.castNonNull(createTypedArray);
         this.f18462c = (C8692b[]) createTypedArray;
         this.f18461W = this.f18462c.length;
     }
@@ -271,7 +271,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
 
     /* renamed from: a */
     public DrmInitData mo22752a(String str) {
-        if (C9554k0.m29414a((Object) this.f18460V, (Object) str)) {
+        if (Util.m29414a((Object) this.f18460V, (Object) str)) {
             return this;
         }
         return new DrmInitData(str, false, this.f18462c);
@@ -305,7 +305,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         L_0x001c:
             com.google.android.exoplayer2.drm.DrmInitData$b[] r1 = r2.f18462c
             com.google.android.exoplayer2.drm.DrmInitData$b[] r3 = r3.f18462c
-            java.lang.Object[] r3 = com.google.android.exoplayer2.p393v0.C9554k0.m29421a((T[]) r1, (T[]) r3)
+            java.lang.Object[] r3 = com.google.android.exoplayer2.p393v0.Util.m29421a((T[]) r1, (T[]) r3)
             com.google.android.exoplayer2.drm.DrmInitData$b[] r3 = (com.google.android.exoplayer2.drm.DrmInitData.C8692b[]) r3
             com.google.android.exoplayer2.drm.DrmInitData r1 = new com.google.android.exoplayer2.drm.DrmInitData
             r1.<init>(r0, r3)
@@ -316,8 +316,8 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
 
     /* renamed from: a */
     public int compare(C8692b bVar, C8692b bVar2) {
-        if (C8883r.f19042a.equals(bVar.f18463U)) {
-            return C8883r.f19042a.equals(bVar2.f18463U) ? 0 : 1;
+        if (C8883r.UUID_NIL.equals(bVar.f18463U)) {
+            return C8883r.UUID_NIL.equals(bVar2.f18463U) ? 0 : 1;
         }
         return bVar.f18463U.compareTo(bVar2.f18463U);
     }

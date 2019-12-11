@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.core.utils;
 
 import android.annotation.SuppressLint;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p171c.p172a.p173a.C4793a;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.v */
@@ -24,7 +24,7 @@ public final class C5882v {
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("overrideStrings");
+        Intrinsics.throwUninitializedPropertyAccessException("overrideStrings");
         throw null;
     }
 

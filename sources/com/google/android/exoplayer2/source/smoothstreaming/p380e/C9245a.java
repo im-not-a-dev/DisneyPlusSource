@@ -7,7 +7,7 @@ import com.google.android.exoplayer2.offline.StreamKey;
 import com.google.android.exoplayer2.p366s0.p371v.C8984n;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9549j0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -117,7 +117,7 @@ public class C9245a implements C8807a<C9245a> {
             String str6 = str;
             String str7 = str2;
             int i6 = i;
-            this(str, str2, i, str3, j, str4, i2, i3, i4, i5, str5, formatArr, list, C9554k0.m29418a(list, 1000000, j), C9554k0.m29439c(j2, 1000000, j));
+            this(str, str2, i, str3, j, str4, i2, i3, i4, i5, str5, formatArr, list, Util.m29418a(list, 1000000, j), Util.m29439c(j2, 1000000, j));
         }
 
         /* renamed from: a */
@@ -134,7 +134,7 @@ public class C9245a implements C8807a<C9245a> {
 
         /* renamed from: a */
         public int mo23983a(long j) {
-            return C9554k0.m29429b(this.f21027o, j, true, true);
+            return Util.m29429b(this.f21027o, j, true, true);
         }
 
         /* renamed from: a */
@@ -182,9 +182,9 @@ public class C9245a implements C8807a<C9245a> {
 
     public C9245a(int i, int i2, long j, long j2, long j3, int i3, boolean z, C9246a aVar, C9247b[] bVarArr) {
         long j4 = -9223372036854775807L;
-        long c = j2 == 0 ? -9223372036854775807L : C9554k0.m29439c(j2, 1000000, j);
+        long c = j2 == 0 ? -9223372036854775807L : Util.m29439c(j2, 1000000, j);
         if (j3 != 0) {
-            j4 = C9554k0.m29439c(j3, 1000000, j);
+            j4 = Util.m29439c(j3, 1000000, j);
         }
         this(i, i2, c, j4, i3, z, aVar, bVarArr);
     }

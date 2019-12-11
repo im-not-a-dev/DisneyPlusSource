@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.about.C2284o;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11853e;
 import p163g.p509o.p510a.p511l.C11866a;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -55,7 +55,7 @@ public final class C2331e extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f6498V, (java.lang.Object) r3.f6498V) != false) goto L_0x0029;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f6498V, (java.lang.Object) r3.f6498V) != false) goto L_0x0029;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -67,15 +67,15 @@ public final class C2331e extends C11866a {
             com.bamtechmedia.dominguez.about.r.i.e r3 = (com.bamtechmedia.dominguez.about.p052r.p053i.C2331e) r3
             java.lang.String r0 = r2.f6499c
             java.lang.String r1 = r3.f6499c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.lang.String r0 = r2.f6497U
             java.lang.String r1 = r3.f6497U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             kotlin.jvm.functions.Function0<kotlin.v> r0 = r2.f6498V
             kotlin.jvm.functions.Function0<kotlin.v> r3 = r3.f6498V
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0027
             goto L_0x0029
         L_0x0027:
@@ -106,7 +106,7 @@ public final class C2331e extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return eVar == this || ((eVar instanceof C2331e) && C12880j.m40224a((Object) ((C2331e) eVar).f6499c, (Object) this.f6499c));
+        return eVar == this || ((eVar instanceof C2331e) && Intrinsics.areEqual((Object) ((C2331e) eVar).f6499c, (Object) this.f6499c));
     }
 
     public String toString() {
@@ -130,36 +130,36 @@ public final class C2331e extends C11866a {
     public void bind(C11867b bVar, int i) {
         TextView textView = (TextView) bVar.mo20994a().findViewById(C2283n.titleAboutTextView);
         String str = "titleAboutTextView";
-        C12880j.m40222a((Object) textView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, str);
         textView.setText(this.f6499c);
         TextView textView2 = (TextView) bVar.mo20994a().findViewById(C2283n.valueAboutTextView);
         String str2 = "valueAboutTextView";
-        C12880j.m40222a((Object) textView2, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, str2);
         textView2.setText(this.f6497U);
         TextView textView3 = (TextView) bVar.mo20994a().findViewById(C2283n.valueAboutTextView);
-        C12880j.m40222a((Object) textView3, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView3, str2);
         textView3.setVisibility(this.f6497U.length() > 0 ? 0 : 8);
         String str3 = "root";
         if (this.f6498V != null) {
             bVar.mo30014c().setOnClickListener(new C2332a(this));
             TextView textView4 = (TextView) bVar.mo20994a().findViewById(C2283n.titleAboutTextView);
-            C12880j.m40222a((Object) textView4, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView4, str);
             TextView textView5 = (TextView) bVar.mo20994a().findViewById(C2283n.titleAboutTextView);
-            C12880j.m40222a((Object) textView5, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView5, str);
             textView4.setPaintFlags(textView5.getPaintFlags() | 8);
         } else {
             bVar.mo30014c().setOnClickListener(null);
             View c = bVar.mo30014c();
-            C12880j.m40222a((Object) c, str3);
+            Intrinsics.checkReturnedValueIsNotNull((Object) c, str3);
             c.setClickable(false);
             TextView textView6 = (TextView) bVar.mo20994a().findViewById(C2283n.titleAboutTextView);
-            C12880j.m40222a((Object) textView6, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView6, str);
             TextView textView7 = (TextView) bVar.mo20994a().findViewById(C2283n.titleAboutTextView);
-            C12880j.m40222a((Object) textView7, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView7, str);
             textView6.setPaintFlags(textView7.getPaintFlags() & -9);
         }
         View c2 = bVar.mo30014c();
-        C12880j.m40222a((Object) c2, str3);
+        Intrinsics.checkReturnedValueIsNotNull((Object) c2, str3);
         c2.setFocusable(true);
     }
 }

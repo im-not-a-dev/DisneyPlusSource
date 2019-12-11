@@ -27,7 +27,7 @@ import kotlin.C12898l;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p122j.C4025a;
 import p096e.p121h.p135s.C4127b0;
@@ -204,7 +204,7 @@ public abstract class C5704a extends ConstraintLayout {
             if (i != 2) {
                 return false;
             }
-            C12880j.m40222a((Object) textView, "view");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "view");
             this.f13431b.invoke(this.f13430a.getInputTextValue());
             return true;
         }
@@ -277,7 +277,7 @@ public abstract class C5704a extends ConstraintLayout {
             this.f13435c.mo17564b(z);
             Context context = this.f13435c.getContext();
             String str = "context";
-            C12880j.m40222a((Object) context, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, str);
             if (!C5837i.m18843e(context)) {
                 List<View> list = this.f13434U;
                 if (list != null) {
@@ -296,7 +296,7 @@ public abstract class C5704a extends ConstraintLayout {
             }
             if (z) {
                 Context context2 = this.f13435c.getContext();
-                C12880j.m40222a((Object) context2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) context2, str);
                 if (!C5837i.m18843e(context2)) {
                     C5843l.f13627a.mo17744b(this.f13435c.getInputEditText());
                     return;
@@ -335,7 +335,7 @@ public abstract class C5704a extends ConstraintLayout {
     /* renamed from: e */
     private final void m18604e() {
         Context context = getContext();
-        C12880j.m40222a((Object) context, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
         if (C5837i.m18843e(context)) {
             TextInputEditText inputEditText = getInputEditText();
             inputEditText.setBackground(C4025a.m13798c(inputEditText.getContext(), this.f13419y0.mo17580a()));
@@ -394,7 +394,7 @@ public abstract class C5704a extends ConstraintLayout {
     public final void setHint(String str) {
         if (str != null) {
             Context context = getContext();
-            C12880j.m40222a((Object) context, "context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
             if (C5837i.m18843e(context)) {
                 getInputEditText().setHint(str);
             } else {
@@ -416,7 +416,7 @@ public abstract class C5704a extends ConstraintLayout {
 
     public final void setTitle(String str) {
         Context context = getContext();
-        C12880j.m40222a((Object) context, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
         if (C5837i.m18843e(context)) {
             TextView title = getTitle();
             if (title != null) {
@@ -438,22 +438,22 @@ public abstract class C5704a extends ConstraintLayout {
         super(context, attributeSet, i);
         Resources resources = context.getResources();
         String str = "resources";
-        C12880j.m40222a((Object) resources, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, str);
         this.f13412r0 = (int) TypedValue.applyDimension(1, 12.0f, resources.getDisplayMetrics());
         Resources resources2 = context.getResources();
-        C12880j.m40222a((Object) resources2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources2, str);
         this.f13413s0 = (int) TypedValue.applyDimension(1, 16.0f, resources2.getDisplayMetrics());
         Resources resources3 = context.getResources();
-        C12880j.m40222a((Object) resources3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources3, str);
         this.f13414t0 = (int) TypedValue.applyDimension(1, 18.0f, resources3.getDisplayMetrics());
         Resources resources4 = context.getResources();
-        C12880j.m40222a((Object) resources4, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources4, str);
         this.f13415u0 = (int) TypedValue.applyDimension(1, 36.0f, resources4.getDisplayMetrics());
         Resources resources5 = context.getResources();
-        C12880j.m40222a((Object) resources5, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources5, str);
         this.f13416v0 = (int) TypedValue.applyDimension(1, 32.0f, resources5.getDisplayMetrics());
         Resources resources6 = context.getResources();
-        C12880j.m40222a((Object) resources6, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources6, str);
         this.f13417w0 = (int) TypedValue.applyDimension(1, 28.0f, resources6.getDisplayMetrics());
         this.f13419y0 = C5706b.NONE;
     }
@@ -461,7 +461,7 @@ public abstract class C5704a extends ConstraintLayout {
     /* renamed from: a */
     public final void mo17573a(Context context, AttributeSet attributeSet) {
         int[] iArr = C3843m.CustomTextInputLayout;
-        C12880j.m40222a((Object) iArr, "R.styleable.CustomTextInputLayout");
+        Intrinsics.checkReturnedValueIsNotNull((Object) iArr, "R.styleable.CustomTextInputLayout");
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, 0, 0);
         setHint(C5880u.m18939a(obtainStyledAttributes, C3843m.CustomTextInputLayout_customHint, isInEditMode()));
         setTitle(C5880u.m18939a(obtainStyledAttributes, C3843m.CustomTextInputLayout_customTitle, isInEditMode()));
@@ -550,7 +550,7 @@ public abstract class C5704a extends ConstraintLayout {
                 }
             }
             Context context = textInputEditText.getContext();
-            C12880j.m40222a((Object) context, "context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
             if (!C5837i.m18843e(context)) {
                 CharSequence hint = textInputEditText.getHint();
                 if (hint != null && (!C12832w.m40118a(hint))) {

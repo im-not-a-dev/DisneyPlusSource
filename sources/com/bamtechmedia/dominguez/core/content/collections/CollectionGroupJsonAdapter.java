@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content.collections;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -23,13 +23,13 @@ public final class CollectionGroupJsonAdapter extends C11725h<CollectionGroup> {
         String str = "slugs";
         String str2 = "key";
         C11739b a = C11739b.m37729a(str2, "collectionGroupId", "contentClass", str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"k… \"contentClass\", \"slugs\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"k… \"contentClass\", \"slugs\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), str2);
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ctions.emptySet(), \"key\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ctions.emptySet(), \"key\")");
         this.stringAdapter = a2;
         C11725h<List<CollectionSlug>> a3 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, CollectionSlug.class), C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a3, "moshi.adapter<List<Colle…ions.emptySet(), \"slugs\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<List<Colle…ions.emptySet(), \"slugs\")");
         this.listOfCollectionSlugAdapter = a3;
     }
 

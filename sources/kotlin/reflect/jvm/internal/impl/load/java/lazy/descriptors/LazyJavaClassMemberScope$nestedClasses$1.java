@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 import java.util.Map;
 import java.util.Set;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.impl.ClassDescriptorBase;
 import kotlin.reflect.jvm.internal.impl.descriptors.impl.EnumEntrySyntheticClassDescriptor;
@@ -45,7 +45,7 @@ final class LazyJavaClassMemberScope$nestedClasses$1 extends C12881k implements 
         ClassId classId = DescriptorUtilsKt.getClassId(this.this$0.getOwnerDescriptor());
         if (classId != null) {
             ClassId createNestedClassId = classId.createNestedClassId(name2);
-            C12880j.m40222a((Object) createNestedClassId, "ownerDescriptor.classId!…createNestedClassId(name)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createNestedClassId, "ownerDescriptor.classId!…createNestedClassId(name)");
             Request request = new Request(createNestedClassId, null, this.this$0.jClass, 2, null);
             JavaClass findClass = finder.findClass(request);
             if (findClass == null) {
@@ -55,7 +55,7 @@ final class LazyJavaClassMemberScope$nestedClasses$1 extends C12881k implements 
             this.f29559$c.getComponents().getJavaClassesTracker().reportClass(lazyJavaClassDescriptor);
             return lazyJavaClassDescriptor;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

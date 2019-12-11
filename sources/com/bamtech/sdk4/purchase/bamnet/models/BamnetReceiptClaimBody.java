@@ -8,7 +8,7 @@ import com.bamtech.sdk4.purchase.bamnet.BamnetClaimException;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.json.JSONObject;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b0\u0018\u00002\u00020\u0001:\u0001\u0003B\u0007\b\u0002¢\u0006\u0002\u0010\u0002\u0001\u0003\u0004\u0005\u0006¨\u0006\u0007"}, mo31007d2 = {"Lcom/bamtech/sdk4/purchase/bamnet/models/BamnetReceiptClaimBody;", "Lcom/bamtech/sdk4/purchase/ReceiptClaimBody;", "()V", "Factory", "Lcom/bamtech/sdk4/purchase/bamnet/models/AmazonReceiptClaimBody;", "Lcom/bamtech/sdk4/purchase/bamnet/models/GoogleReceiptClaimBody;", "Lcom/bamtech/sdk4/purchase/bamnet/models/MockReceiptClaimBody;", "plugin-iap-bamnet_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -42,7 +42,7 @@ public abstract class BamnetReceiptClaimBody implements ReceiptClaimBody {
                     int i = WhenMappings.$EnumSwitchMapping$0[b.ordinal()];
                     if (i == 1) {
                         JSONObject d = ((BamnetIAPPurchase) C13199w.m40589f((List) list)).mo7209d();
-                        C12880j.m40222a((Object) d, "receiptList.first().receiptJSON");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) d, "receiptList.first().receiptJSON");
                         return new AmazonReceiptClaimBody(BamnetReceiptItemKt.safeGetString(d, BamnetReceiptItem.Companion.getAMAZON_USER_ID()), arrayList);
                     } else if (i == 2) {
                         return new GoogleReceiptClaimBody(arrayList);

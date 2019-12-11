@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
@@ -39,7 +39,7 @@ public final class CloneableClassScope extends GivenFunctionsMemberScope {
 
     static {
         Name identifier = Name.identifier("clone");
-        C12880j.m40222a((Object) identifier, "Name.identifier(\"clone\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(\"clone\")");
         CLONE_NAME = identifier;
     }
 

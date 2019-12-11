@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.profiles.p263u1.p264d.C6862b;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.profiles.x1.g.a */
 /* compiled from: AbstractCaptionsHandler.kt */
@@ -69,8 +69,8 @@ public abstract class C6917a {
                 String b0 = language2.mo13107b0();
                 if (b0 != null) {
                     String lowerCase = b0.toLowerCase();
-                    C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
-                    if (!C12880j.m40224a((Object) lowerCase, (Object) mo19683a()) || !C12880j.m40224a((Object) language2.mo13104Y(), (Object) str)) {
+                    Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
+                    if (!Intrinsics.areEqual((Object) lowerCase, (Object) mo19683a()) || !Intrinsics.areEqual((Object) language2.mo13104Y(), (Object) str)) {
                         z = false;
                         continue;
                     } else {

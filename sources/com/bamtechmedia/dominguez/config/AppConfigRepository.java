@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p503n.p504a.C11790c0;
 import p163g.p503n.p504a.C11792d0;
@@ -32,7 +32,7 @@ import p520io.reactivex.C11974s;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000h\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010$\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0007\u0018\u0000 *2\u00020\u0001:\u0003*+,B)\b\u0007\u0012\b\b\u0001\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\u0014\u0010\"\u001a\u0010\u0012\f\u0012\n \u001d*\u0004\u0018\u00010\f0\f0\u001cJ&\u0010#\u001a\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0002\b\u0003\u0018\u00010\u00142\u0010\u0010$\u001a\f\u0012\u0004\u0012\u00020\u0011\u0012\u0002\b\u00030\u0014H\u0002J\u0006\u0010%\u001a\u00020&J\u0010\u0010'\u001a\u00020(2\u0006\u0010)\u001a\u00020\u0003H\u0016R\u0011\u0010\u000b\u001a\u00020\f¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u00110\u0010X\u0004¢\u0006\u0002\n\u0000R \u0010\u0012\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u00150\u00140\u0013X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0011X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u001aX\u000e¢\u0006\u0002\n\u0000R>\u0010\u001b\u001a,\u0012(\u0012&\u0012\u0004\u0012\u00020\u0011\u0012\u0006\u0012\u0004\u0018\u00010\u0015 \u001d*\u0012\u0012\u0004\u0012\u00020\u0011\u0012\u0006\u0012\u0004\u0018\u00010\u0015\u0018\u00010\u00140\u00140\u001c8BX\u0004¢\u0006\u0006\u001a\u0004\b\u001e\u0010\u001fR\u000e\u0010 \u001a\u00020\u0011X\u0004¢\u0006\u0002\n\u0000R\u0016\u0010!\u001a\n \u001d*\u0004\u0018\u00010\u00110\u0011X\u0004¢\u0006\u0002\n\u0000¨\u0006-"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/config/AppConfigRepository;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "processLifecycleOwner", "Landroidx/lifecycle/LifecycleOwner;", "configLoaderFactory", "Lcom/bamtechmedia/dominguez/config/ConfigLoader$Factory;", "context", "Landroid/content/Context;", "buildInfo", "Lcom/bamtechmedia/dominguez/core/BuildInfo;", "(Landroidx/lifecycle/LifecycleOwner;Lcom/bamtechmedia/dominguez/config/ConfigLoader$Factory;Landroid/content/Context;Lcom/bamtechmedia/dominguez/core/BuildInfo;)V", "appConfigMap", "Lcom/bamtechmedia/dominguez/config/AppConfigMap;", "getAppConfigMap", "()Lcom/bamtechmedia/dominguez/config/AppConfigMap;", "configKeys", "", "", "configLoader", "Lcom/bamtechmedia/dominguez/config/ConfigLoader;", "", "", "envPath", "firstStart", "Ljava/util/concurrent/atomic/AtomicBoolean;", "loaded", "", "mapOnce", "Lio/reactivex/Single;", "kotlin.jvm.PlatformType", "getMapOnce", "()Lio/reactivex/Single;", "platformPath", "versionPath", "appConfigMapOnce", "deviceOverride", "map", "initialize", "Lio/reactivex/Completable;", "onStart", "", "owner", "Companion", "DefaultAppConfigMap", "LazyAppConfigMap", "config_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: AppConfigRepository.kt */
@@ -149,7 +149,7 @@ public final class AppConfigRepository implements C0710d {
         /* renamed from: a */
         public Map<String, ?> mo12717a() {
             Object c = AppConfigRepository.this.m11893e().mo30224c();
-            C12880j.m40222a(c, "mapOnce.blockingGet()");
+            Intrinsics.checkReturnedValueIsNotNull(c, "mapOnce.blockingGet()");
             return (Map) c;
         }
     }
@@ -233,7 +233,7 @@ public final class AppConfigRepository implements C0710d {
 
         /* renamed from: a */
         public final void accept(Map<String, ? extends Object> map) {
-            C14100a.m44522a("Refreshed AppConfig", new Object[0]);
+            Timber.m44522a("Refreshed AppConfig", new Object[0]);
         }
     }
 
@@ -249,7 +249,7 @@ public final class AppConfigRepository implements C0710d {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44526b("Failed to refresh AppConfig", new Object[0]);
+            Timber.m44526b("Failed to refresh AppConfig", new Object[0]);
         }
     }
 
@@ -358,7 +358,7 @@ public final class AppConfigRepository implements C0710d {
     /* renamed from: e */
     public final Single<Map<String, Object>> m11893e() {
         Single<Map<String, Object>> d = C3532h.m11948a(this.f8798Z, false, 1, null).mo30233g(new C3511f(this)).mo30227d((Consumer<? super T>) new C3512g<Object>(this));
-        C12880j.m40222a((Object) d, "configLoader.fetchConfig…Success { loaded = true }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "configLoader.fetchConfig…Success { loaded = true }");
         return d;
     }
 
@@ -370,7 +370,7 @@ public final class AppConfigRepository implements C0710d {
     /* renamed from: b */
     public final Single<C3524e> mo12714b() {
         Single<C3524e> g = m11893e().mo30233g(C3509d.f8804c);
-        C12880j.m40222a((Object) g, "mapOnce.map<AppConfigMap…DefaultAppConfigMap(it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "mapOnce.map<AppConfigMap…DefaultAppConfigMap(it) }");
         return g;
     }
 
@@ -404,9 +404,9 @@ public final class AppConfigRepository implements C0710d {
         if (!this.f8795W.getAndSet(false)) {
             Single a = this.f8798Z.mo12735a(true);
             C10541b a2 = C10541b.m33254a(mVar);
-            C12880j.m40222a((Object) a2, "AndroidLifecycleScopeProvider.from(\n    this)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a2, "AndroidLifecycleScopeProvider.from(\n    this)");
             Object a3 = a.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a((C11790c0) a2));
-            C12880j.m40222a(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
+            Intrinsics.checkReturnedValueIsNotNull(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
             ((C11792d0) a3).mo29920a(C3513h.f8808c, C3514i.f8809c);
         }
     }

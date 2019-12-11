@@ -65,7 +65,7 @@ public final class C7175e {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:16:0x004c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f15863g, (java.lang.Object) r3.f15863g) != false) goto L_0x0051;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f15863g, (java.lang.Object) r3.f15863g) != false) goto L_0x0051;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -77,31 +77,31 @@ public final class C7175e {
             g.e.b.a0.k.e r3 = (p163g.p201e.p203b.p275a0.p276k.C7175e) r3
             java.lang.String r0 = r2.f15857a
             java.lang.String r1 = r3.f15857a
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.lang.Integer r0 = r2.f15858b
             java.lang.Integer r1 = r3.f15858b
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.lang.Integer r0 = r2.f15859c
             java.lang.Integer r1 = r3.f15859c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             g.e.b.a0.g$a r0 = r2.f15860d
             g.e.b.a0.g$a r1 = r3.f15860d
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             java.lang.Integer r0 = r2.f15861e
             java.lang.Integer r1 = r3.f15861e
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             g.e.b.a0.g$b r0 = r2.f15862f
             g.e.b.a0.g$b r1 = r3.f15862f
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x004f
             g.e.b.a0.a r0 = r2.f15863g
             g.e.b.a0.a r3 = r3.f15863g
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x004f
             goto L_0x0051
         L_0x004f:
@@ -188,7 +188,7 @@ public final class C7175e {
             int r0 = r0.intValue()
             float r0 = (float) r0
             android.content.res.Resources r4 = r14.getResources()
-            kotlin.jvm.internal.C12880j.m40222a(r4, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r1)
             android.util.DisplayMetrics r4 = r4.getDisplayMetrics()
             float r0 = android.util.TypedValue.applyDimension(r2, r0, r4)
             int r0 = (int) r0
@@ -207,7 +207,7 @@ public final class C7175e {
             int r0 = r0.intValue()
             float r0 = (float) r0
             android.content.res.Resources r14 = r14.getResources()
-            kotlin.jvm.internal.C12880j.m40222a(r14, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r14, r1)
             android.util.DisplayMetrics r14 = r14.getDisplayMetrics()
             float r14 = android.util.TypedValue.applyDimension(r2, r0, r14)
             int r14 = (int) r14

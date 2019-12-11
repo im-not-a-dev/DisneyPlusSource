@@ -4,7 +4,7 @@ import java.lang.ref.WeakReference;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.components.RuntimeModuleData;
 import kotlin.reflect.jvm.internal.structure.ReflectClassUtilKt;
 
@@ -24,7 +24,7 @@ public final class ModuleByClassLoaderKt {
         if (weakReference != null) {
             RuntimeModuleData runtimeModuleData = (RuntimeModuleData) weakReference.get();
             if (runtimeModuleData != null) {
-                C12880j.m40222a((Object) runtimeModuleData, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) runtimeModuleData, "it");
                 return runtimeModuleData;
             }
             moduleByClassLoader.remove(weakClassLoaderBox, weakReference);

@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.token.TokenExchangeRequest.TokenExchange;
 import java.util.Map;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.FormBody.Builder;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -51,13 +51,13 @@ public final class DefaultTokenClient implements TokenClient {
             throw new C12898l();
         }
         Single<TokenExchangeResponse> a = this.locationResolver.getLocation(serviceTransaction).mo30233g(new DefaultTokenClient$exchange$1(this, serviceTransaction, builder)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultTokenClient$exchange$2<Object,Object>(this, serviceTransaction, map));
-        C12880j.m40222a((Object) a, "locationResolver.getLoca…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "locationResolver.getLoca…      }\n                }");
         return a;
     }
 
     public final boolean isInvalid$sdk_core_api_release(TokenExchangeErrorResponse tokenExchangeErrorResponse) {
-        if (C12880j.m40224a((Object) "invalid_grant", (Object) tokenExchangeErrorResponse.getError())) {
-            if (C12880j.m40224a((Object) "invalid-token", (Object) tokenExchangeErrorResponse.getError_description())) {
+        if (Intrinsics.areEqual((Object) "invalid_grant", (Object) tokenExchangeErrorResponse.getError())) {
+            if (Intrinsics.areEqual((Object) "invalid-token", (Object) tokenExchangeErrorResponse.getError_description())) {
                 return true;
             }
         }
@@ -65,8 +65,8 @@ public final class DefaultTokenClient implements TokenClient {
     }
 
     public final boolean isTokenExpired$sdk_core_api_release(TokenExchangeErrorResponse tokenExchangeErrorResponse) {
-        if (C12880j.m40224a((Object) "invalid_grant", (Object) tokenExchangeErrorResponse.getError())) {
-            if (C12880j.m40224a((Object) "expired-token", (Object) tokenExchangeErrorResponse.getError_description())) {
+        if (Intrinsics.areEqual((Object) "invalid_grant", (Object) tokenExchangeErrorResponse.getError())) {
+            if (Intrinsics.areEqual((Object) "expired-token", (Object) tokenExchangeErrorResponse.getError_description())) {
                 return true;
             }
         }

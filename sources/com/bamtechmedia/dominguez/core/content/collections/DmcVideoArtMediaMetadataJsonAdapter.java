@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content.collections;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11737m.C11739b;
@@ -20,10 +20,10 @@ public final class DmcVideoArtMediaMetadataJsonAdapter extends C11725h<DmcVideoA
     public DmcVideoArtMediaMetadataJsonAdapter(C11760v vVar) {
         String str = "urls";
         C11739b a = C11739b.m37729a(str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"urls\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"urls\")");
         this.options = a;
         C11725h<List<DmcUrl>> a2 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, DmcUrl.class), C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<List<DmcUr…tions.emptySet(), \"urls\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<List<DmcUr…tions.emptySet(), \"urls\")");
         this.nullableListOfDmcUrlAdapter = a2;
     }
 

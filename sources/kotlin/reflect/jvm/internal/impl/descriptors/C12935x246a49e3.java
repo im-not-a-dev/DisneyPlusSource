@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors;
 
 import java.util.List;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p587i0.C12775h;
 
@@ -17,7 +17,7 @@ final class C12935x246a49e3 extends C12881k implements Function1<DeclarationDesc
 
     public final C12775h<TypeParameterDescriptor> invoke(DeclarationDescriptor declarationDescriptor) {
         List typeParameters = ((CallableDescriptor) declarationDescriptor).getTypeParameters();
-        C12880j.m40222a((Object) typeParameters, "(it as CallableDescriptor).typeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, "(it as CallableDescriptor).typeParameters");
         return C13199w.m40577c((Iterable) typeParameters);
     }
 }

@@ -12,7 +12,7 @@ import com.google.android.exoplayer2.p361p0.C8842n;
 import com.google.android.exoplayer2.p381t0.C9273c;
 import com.google.android.exoplayer2.p382u0.C9332k;
 import com.google.android.exoplayer2.p382u0.C9333l;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p394w0.C9593m;
 import com.google.android.exoplayer2.p394w0.C9603r;
 import com.google.android.exoplayer2.p394w0.p395s.C9606b;
@@ -87,7 +87,7 @@ public class C9577w implements RenderersFactory {
             }
             try {
                 arrayList2.add(size, (C8733l0) Class.forName("com.google.android.exoplayer2.ext.vp9.LibvpxVideoRenderer").getConstructor(new Class[]{Long.TYPE, Handler.class, C9603r.class, Integer.TYPE}).newInstance(new Object[]{Long.valueOf(j), handler, rVar, Integer.valueOf(50)}));
-                C9563q.m29499c("DefaultRenderersFactory", "Loaded LibvpxVideoRenderer.");
+                Log.m29499c("DefaultRenderersFactory", "Loaded LibvpxVideoRenderer.");
             } catch (ClassNotFoundException unused) {
             } catch (Exception e) {
                 throw new RuntimeException("Error instantiating VP9 extension", e);
@@ -164,7 +164,7 @@ public class C9577w implements RenderersFactory {
             int r7 = r2 + 1
             r11.add(r2, r0)     // Catch:{ ClassNotFoundException -> 0x0072, Exception -> 0x0068 }
             java.lang.String r0 = "Loaded LibopusAudioRenderer."
-            com.google.android.exoplayer2.p393v0.C9563q.m29499c(r12, r0)     // Catch:{ ClassNotFoundException -> 0x0072, Exception -> 0x0068 }
+            com.google.android.exoplayer2.p393v0.Log.m29499c(r12, r0)     // Catch:{ ClassNotFoundException -> 0x0072, Exception -> 0x0068 }
             goto L_0x0072
         L_0x0068:
             r0 = move-exception
@@ -192,7 +192,7 @@ public class C9577w implements RenderersFactory {
             int r2 = r7 + 1
             r11.add(r7, r0)     // Catch:{ ClassNotFoundException -> 0x00a9, Exception -> 0x009f }
             java.lang.String r0 = "Loaded LibflacAudioRenderer."
-            com.google.android.exoplayer2.p393v0.C9563q.m29499c(r12, r0)     // Catch:{ ClassNotFoundException -> 0x00a9, Exception -> 0x009f }
+            com.google.android.exoplayer2.p393v0.Log.m29499c(r12, r0)     // Catch:{ ClassNotFoundException -> 0x00a9, Exception -> 0x009f }
             goto L_0x00a9
         L_0x009f:
             r0 = move-exception
@@ -219,7 +219,7 @@ public class C9577w implements RenderersFactory {
             com.google.android.exoplayer2.l0 r0 = (com.google.android.exoplayer2.C8733l0) r0     // Catch:{ ClassNotFoundException -> 0x00dd, Exception -> 0x00d4 }
             r11.add(r2, r0)     // Catch:{ ClassNotFoundException -> 0x00dd, Exception -> 0x00d4 }
             java.lang.String r0 = "Loaded FfmpegAudioRenderer."
-            com.google.android.exoplayer2.p393v0.C9563q.m29499c(r12, r0)     // Catch:{ ClassNotFoundException -> 0x00dd, Exception -> 0x00d4 }
+            com.google.android.exoplayer2.p393v0.Log.m29499c(r12, r0)     // Catch:{ ClassNotFoundException -> 0x00dd, Exception -> 0x00d4 }
             goto L_0x00dd
         L_0x00d4:
             r0 = move-exception

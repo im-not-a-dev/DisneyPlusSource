@@ -13,7 +13,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p132q.p133h.C4106b;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\r\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0011\b\u0007\u0012\b\b\u0001\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\"\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0012\u0010\t\u001a\u000e\u0012\u0004\u0012\u00020\u000b\u0012\u0004\u0012\u00020\f0\nJ\u0010\u0010\r\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u000e"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/legal/LegalLinkSpanHelper;", "", "isTelevision", "", "(Z)V", "applySpans", "", "content", "Lcom/bamtechmedia/dominguez/legal/api/LegalDocContent;", "onNonUrlClicked", "Lkotlin/Function1;", "Lcom/bamtechmedia/dominguez/legal/api/LegalLink;", "", "televisionSpanned", "legal_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -50,7 +50,7 @@ public final class LegalLinkSpanHelper {
                 int start = legalLink.getStart() + legalLink.getLabel().length();
                 if (text != null) {
                     String substring = text.substring(i, start);
-                    C12880j.m40222a((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
                     sb.append(substring);
                     sb.append(' ');
                     sb.append('(');
@@ -64,10 +64,10 @@ public final class LegalLinkSpanHelper {
                 String text2 = legalDocContent.getText();
                 if (text2 != null) {
                     String substring2 = text2.substring(i);
-                    C12880j.m40222a((Object) substring2, "(this as java.lang.String).substring(startIndex)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) substring2, "(this as java.lang.String).substring(startIndex)");
                     sb.append(substring2);
                     String sb2 = sb.toString();
-                    C12880j.m40222a((Object) sb2, "builder.toString()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "builder.toString()");
                     return sb2;
                 }
                 throw new C13142s(str);
@@ -101,7 +101,7 @@ public final class LegalLinkSpanHelper {
             }
         }
         for (LegalLink legalLink2 : C13199w.m40562a((Iterable) arrayList, (Comparator) new LegalLinkSpanHelper$applySpans$$inlined$sortedBy$1())) {
-            spannableString.setSpan(C12880j.m40224a((Object) legalLink2.getHref(), (Object) str) ^ true ? new URLSpan(legalLink2.getHref()) : new LegalLinkSpanHelper$applySpans$$inlined$onEach$lambda$1(legalLink2, function1, spannableString), legalLink2.getStart(), legalLink2.getStart() + legalLink2.getLabel().length(), 33);
+            spannableString.setSpan(Intrinsics.areEqual((Object) legalLink2.getHref(), (Object) str) ^ true ? new URLSpan(legalLink2.getHref()) : new LegalLinkSpanHelper$applySpans$$inlined$onEach$lambda$1(legalLink2, function1, spannableString), legalLink2.getStart(), legalLink2.getStart() + legalLink2.getLabel().length(), 33);
         }
         return spannableString;
     }

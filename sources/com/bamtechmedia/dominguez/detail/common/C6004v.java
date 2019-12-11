@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import kotlin.C12907r;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.Single;
@@ -98,12 +98,12 @@ public final class C6004v implements C5983k {
     public Maybe<C5982j> mo17936a(String str, C5982j jVar, String str2) {
         if (this.f13844a.get() || !jVar.mo13457f0().mo13412a0()) {
             Maybe<C5982j> h = Maybe.m38259h();
-            C12880j.m40222a((Object) h, "Maybe.empty()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "Maybe.empty()");
             return h;
         }
         this.f13844a.set(true);
         Maybe<C5982j> h2 = m19225a(C13173j0.m40356a(C12907r.m40244a("familyId", str), C12907r.m40244a("page", Integer.valueOf(jVar.mo13457f0().mo13410Y())), C12907r.m40244a("pageSize", Integer.valueOf(jVar.mo13457f0().mo13411Z()))), str2).mo30220b(this.f13846c).mo30233g(new C6006b(this, jVar)).mo30234h();
-        C12880j.m40222a((Object) h2, "performRequest(map, tran…              }.toMaybe()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h2, "performRequest(map, tran…              }.toMaybe()");
         return h2;
     }
 

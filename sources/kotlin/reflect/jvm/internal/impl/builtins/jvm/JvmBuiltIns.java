@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 
 import java.util.List;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -84,11 +84,11 @@ public final class JvmBuiltIns extends KotlinBuiltIns {
     /* access modifiers changed from: protected */
     public List<ClassDescriptorFactory> getClassDescriptorFactories() {
         Iterable classDescriptorFactories = super.getClassDescriptorFactories();
-        C12880j.m40222a((Object) classDescriptorFactories, "super.getClassDescriptorFactories()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) classDescriptorFactories, "super.getClassDescriptorFactories()");
         StorageManager storageManager = getStorageManager();
-        C12880j.m40222a((Object) storageManager, "storageManager");
+        Intrinsics.checkReturnedValueIsNotNull((Object) storageManager, "storageManager");
         ModuleDescriptorImpl builtInsModule = getBuiltInsModule();
-        C12880j.m40222a((Object) builtInsModule, "builtInsModule");
+        Intrinsics.checkReturnedValueIsNotNull((Object) builtInsModule, "builtInsModule");
         JvmBuiltInClassDescriptorFactory jvmBuiltInClassDescriptorFactory = new JvmBuiltInClassDescriptorFactory(storageManager, builtInsModule, null, 4, null);
         return C13199w.m40581d(classDescriptorFactories, (Object) jvmBuiltInClassDescriptorFactory);
     }

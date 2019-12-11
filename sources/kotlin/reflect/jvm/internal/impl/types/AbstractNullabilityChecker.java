@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.types;
 import java.util.ArrayDeque;
 import java.util.Set;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.SupertypesPolicy;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.SupertypesPolicy.LowerIfFlexible;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.SupertypesPolicy.None;
@@ -61,10 +61,10 @@ public final class AbstractNullabilityChecker {
                 while (!supertypesDeque.isEmpty()) {
                     if (supertypesSet.size() <= 1000) {
                         SimpleTypeMarker simpleTypeMarker3 = (SimpleTypeMarker) supertypesDeque.pop();
-                        C12880j.m40222a((Object) simpleTypeMarker3, "current");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) simpleTypeMarker3, "current");
                         if (supertypesSet.add(simpleTypeMarker3)) {
                             SupertypesPolicy supertypesPolicy2 = abstractTypeCheckerContext2.isMarkedNullable(simpleTypeMarker3) ? None.INSTANCE : supertypesPolicy;
-                            if (!(!C12880j.m40224a((Object) supertypesPolicy2, (Object) None.INSTANCE))) {
+                            if (!(!Intrinsics.areEqual((Object) supertypesPolicy2, (Object) None.INSTANCE))) {
                                 supertypesPolicy2 = null;
                             }
                             if (supertypesPolicy2 != null) {
@@ -93,10 +93,10 @@ public final class AbstractNullabilityChecker {
                 abstractTypeCheckerContext.clear();
                 return false;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -116,10 +116,10 @@ public final class AbstractNullabilityChecker {
                 while (!supertypesDeque.isEmpty()) {
                     if (supertypesSet.size() <= 1000) {
                         SimpleTypeMarker simpleTypeMarker3 = (SimpleTypeMarker) supertypesDeque.pop();
-                        C12880j.m40222a((Object) simpleTypeMarker3, "current");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) simpleTypeMarker3, "current");
                         if (supertypesSet.add(simpleTypeMarker3)) {
                             SupertypesPolicy supertypesPolicy = abstractTypeCheckerContext2.isMarkedNullable(simpleTypeMarker3) ? None.INSTANCE : LowerIfFlexible.INSTANCE;
-                            if (!(!C12880j.m40224a((Object) supertypesPolicy, (Object) None.INSTANCE))) {
+                            if (!(!Intrinsics.areEqual((Object) supertypesPolicy, (Object) None.INSTANCE))) {
                                 supertypesPolicy = null;
                             }
                             if (supertypesPolicy != null) {
@@ -148,10 +148,10 @@ public final class AbstractNullabilityChecker {
                 abstractTypeCheckerContext.clear();
                 return false;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

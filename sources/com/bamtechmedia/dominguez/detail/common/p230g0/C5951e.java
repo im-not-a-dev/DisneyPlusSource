@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.core.content.assets.Image;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p275a0.C7159g;
 import p163g.p201e.p203b.p275a0.C7159g.C7160a;
@@ -70,7 +70,7 @@ public final class C5951e {
         /* renamed from: a */
         public final void mo17886a(C7162c cVar) {
             Resources resources = this.f13762U.getResources();
-            C12880j.m40222a((Object) resources, "backgroundImageView.resources");
+            Intrinsics.checkReturnedValueIsNotNull((Object) resources, "backgroundImageView.resources");
             cVar.mo19996e(Integer.valueOf(resources.getDisplayMetrics().widthPixels));
             cVar.mo19986a(C7161b.JPEG);
             Integer valueOf = Integer.valueOf(C7309c.fallback_1_78_tile);
@@ -130,17 +130,17 @@ public final class C5951e {
     /* renamed from: a */
     public final void mo17885a(Fragment fragment, C3626b bVar) {
         ImageView imageView = (ImageView) fragment.getView().findViewById(C7310d.contentDetailBackgroundImage);
-        C12880j.m40222a((Object) imageView, "fragment.contentDetailBackgroundImage");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "fragment.contentDetailBackgroundImage");
         m19097a(this, imageView, bVar, false, 4, null);
         if (VERSION.SDK_INT >= this.f13761b.mo13754b()) {
             ImageView imageView2 = (ImageView) fragment.getView().findViewById(C7310d.contentDetailBlurredBackgroundImage);
-            C12880j.m40222a((Object) imageView2, "fragment.contentDetailBlurredBackgroundImage");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView2, "fragment.contentDetailBlurredBackgroundImage");
             m19096a(imageView2, bVar, true);
         }
         Image a = bVar.mo12845a(C3688j.TITLE_TREATMENT, C3623a.f9125b0.mo13248a());
         C7159g gVar = this.f13760a;
         ImageView imageView3 = (ImageView) fragment.getView().findViewById(C7310d.includeTitleImage);
-        C12880j.m40222a((Object) imageView3, "fragment.includeTitleImage");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView3, "fragment.includeTitleImage");
         gVar.mo19957a(imageView3, a != null ? a.mo13085U() : null, C5954c.f13765c);
     }
 

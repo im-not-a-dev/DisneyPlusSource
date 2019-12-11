@@ -9,7 +9,7 @@ import com.bamtech.sdk4.media.MediaItem;
 import java.util.List;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.MaybeSource;
 import p520io.reactivex.functions.Function;
@@ -37,11 +37,11 @@ final class DefaultMediaManager$getBifThumbnailSets$1<T, R> implements Function<
             if (bif != null) {
                 return access$getOnlineMediaClient$p.getBifThumbnails(serviceTransaction, bif, ThumbnailResolution.ALL, C13170i0.m40332a(C12907r.m40244a("{accessToken}", str)));
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         Maybe<List<BifThumbnailSet>> c = Maybe.m38258c(C13185o.m40513a());
-        C12880j.m40222a((Object) c, "Maybe.just(listOf())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Maybe.just(listOf())");
         return c;
     }
 }

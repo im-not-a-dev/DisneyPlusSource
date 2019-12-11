@@ -11,7 +11,7 @@ import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.io.EOFException;
 import java.io.IOException;
 import java.util.Arrays;
@@ -27,10 +27,10 @@ public final class C8927b implements C8912g {
     private static final int[] f19177q = {18, 24, 33, 37, 41, 47, 51, 59, 61, 6, 1, 1, 1, 1, 1, 1};
 
     /* renamed from: r */
-    private static final byte[] f19178r = C9554k0.m29447d("#!AMR\n");
+    private static final byte[] f19178r = Util.m29447d("#!AMR\n");
 
     /* renamed from: s */
-    private static final byte[] f19179s = C9554k0.m29447d("#!AMR-WB\n");
+    private static final byte[] f19179s = Util.m29447d("#!AMR-WB\n");
 
     /* renamed from: t */
     private static final int f19180t = f19177q[8];

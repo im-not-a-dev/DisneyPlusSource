@@ -2,7 +2,7 @@ package com.bamtech.sdk4.media;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 
 @DontObfuscate
@@ -30,7 +30,7 @@ public final class PlayheadBookmarkBuilder {
             Playhead playhead3 = new Playhead(contentId, playhead2, dateTime.getMillis(), str);
             return playhead3;
         }
-        C12880j.m40227c("lastUpdated");
+        Intrinsics.throwUninitializedPropertyAccessException("lastUpdated");
         throw null;
     }
 
@@ -43,7 +43,7 @@ public final class PlayheadBookmarkBuilder {
         if (dateTime != null) {
             return dateTime;
         }
-        C12880j.m40227c("lastUpdated");
+        Intrinsics.throwUninitializedPropertyAccessException("lastUpdated");
         throw null;
     }
 

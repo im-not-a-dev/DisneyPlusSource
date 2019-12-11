@@ -3,7 +3,7 @@ package com.bamtech.player.exo;
 import com.bamtech.player.exo.p040h.C1709a;
 import com.bamtech.player.exo.p045m.C1735c;
 import com.google.android.exoplayer2.C8729j0;
-import com.google.android.exoplayer2.C8802o0;
+import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.C8883r;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.PlaybackParameters;
@@ -25,7 +25,7 @@ import java.util.List;
 import p163g.p174d.p178b.C5300m;
 import p163g.p174d.p178b.p184f0.C4956a;
 import p163g.p174d.p178b.p184f0.C4958c;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtech.player.exo.d */
 /* compiled from: ExoPlayerListeners.kt */
@@ -35,7 +35,7 @@ public final class C1705d implements EventListener, C8743e {
     private int f5945U = -1;
 
     /* renamed from: V */
-    private final C8802o0 f5946V;
+    private final SimpleExoPlayer f5946V;
 
     /* renamed from: W */
     private final C1706e f5947W;
@@ -49,7 +49,7 @@ public final class C1705d implements EventListener, C8743e {
     /* renamed from: c */
     private int f5950c;
 
-    public C1705d(C8802o0 o0Var, C1706e eVar, C1735c cVar, C4958c cVar2, C5300m mVar) {
+    public C1705d(SimpleExoPlayer o0Var, C1706e eVar, C1735c cVar, C4958c cVar2, C5300m mVar) {
         this.f5946V = o0Var;
         this.f5947W = eVar;
         this.f5948X = cVar2;
@@ -98,7 +98,7 @@ public final class C1705d implements EventListener, C8743e {
         StringBuilder sb = new StringBuilder();
         sb.append("onLoadingChanged: ");
         sb.append(z);
-        C14100a.m44529c(sb.toString(), new Object[0]);
+        Timber.m44529c(sb.toString(), new Object[0]);
     }
 
     public void onPlaybackParametersChanged(PlaybackParameters playbackParameters) {
@@ -129,7 +129,7 @@ public final class C1705d implements EventListener, C8743e {
                     sb3.append(aVar.f21151c);
                     str = sb3.toString();
                 }
-                C14100a.m44528b(a, str, new Object[0]);
+                Timber.m44528b(a, str, new Object[0]);
             }
         } else if (i == 0 && (exoPlaybackException.mo22595b() instanceof C9230p)) {
             this.f5947W.mo7596D();
@@ -184,7 +184,7 @@ public final class C1705d implements EventListener, C8743e {
                 for (String f : list) {
                     C4956a f2 = this.f5948X.mo16436f(f);
                     if (f2 != null) {
-                        f2.f12168U = C8883r.m25968b(iVar.f20588a.f20692f);
+                        f2.f12168U = C8883r.usToMs(iVar.f20588a.f20692f);
                         arrayList.add(f2);
                     }
                 }
@@ -206,7 +206,7 @@ public final class C1705d implements EventListener, C8743e {
 
     /* renamed from: a */
     private final long m7861a(C9163i iVar) {
-        return C8883r.m25968b(iVar.f20588a.f20692f);
+        return C8883r.usToMs(iVar.f20588a.f20692f);
     }
 
     /* renamed from: a */

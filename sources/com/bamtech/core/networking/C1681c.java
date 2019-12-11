@@ -2,7 +2,7 @@ package com.bamtech.core.networking;
 
 import java.io.IOException;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14235h;
 import okhttp3.Call;
 import okhttp3.Response;
@@ -45,13 +45,13 @@ public final class C1681c {
             public void mo7493a(Call call, IOException iOException) {
                 C11986t tVar = this.f5876U;
                 String str = "emitter";
-                C12880j.m40222a((Object) tVar, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) tVar, str);
                 if (!tVar.isDisposed()) {
                     try {
                         this.f5877c.f5875b.mo7483f().mo7524a(iOException, call.mo35725m0());
                     } catch (Throwable th) {
                         C11986t tVar2 = this.f5876U;
-                        C12880j.m40222a((Object) tVar2, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) tVar2, str);
                         if (!tVar2.isDisposed()) {
                             this.f5876U.onError(th);
                         }
@@ -65,7 +65,7 @@ public final class C1681c {
                     this.f5876U.onSuccess(this.f5877c.f5875b.mo7483f().mo7525a(response));
                 } catch (Throwable th) {
                     C11986t tVar = this.f5876U;
-                    C12880j.m40222a((Object) tVar, "emitter");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) tVar, "emitter");
                     if (!tVar.isDisposed()) {
                         if (th instanceof IOException) {
                             mo7493a(call, th);
@@ -91,7 +91,7 @@ public final class C1681c {
     /* renamed from: a */
     public static final <OUT, EXTRA> Single<Response<OUT>> m7780a(Request<? extends OUT, ? extends EXTRA> request, Call call) {
         Single<Response<OUT>> a = Single.m38392a((C11988v<T>) new C1682a<T>(call, request));
-        C12880j.m40222a((Object) a, "Single.create<Response<O…       }\n        })\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.create<Response<O…       }\n        })\n    }");
         return a;
     }
 }

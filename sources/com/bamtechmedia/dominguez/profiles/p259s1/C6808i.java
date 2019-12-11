@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import net.danlew.android.joda.DateUtils;
 import p163g.p201e.p203b.p307o.C7614e;
@@ -212,16 +212,16 @@ public final class C6808i extends C5741g<C6809a> {
             if (this != obj) {
                 if (obj instanceof C6809a) {
                     C6809a aVar = (C6809a) obj;
-                    if (C12880j.m40224a((Object) this.f15228a, (Object) aVar.f15228a)) {
+                    if (Intrinsics.areEqual((Object) this.f15228a, (Object) aVar.f15228a)) {
                         if (this.f15229b == aVar.f15229b) {
                             if (this.f15230c == aVar.f15230c) {
-                                if ((this.f15231d == aVar.f15231d) && C12880j.m40224a((Object) this.f15232e, (Object) aVar.f15232e)) {
+                                if ((this.f15231d == aVar.f15231d) && Intrinsics.areEqual((Object) this.f15232e, (Object) aVar.f15232e)) {
                                     if (this.f15233f == aVar.f15233f) {
                                         if (this.f15234g == aVar.f15234g) {
                                             if (this.f15235h == aVar.f15235h) {
                                                 if (this.f15236i == aVar.f15236i) {
-                                                    if ((this.f15237j == aVar.f15237j) && C12880j.m40224a((Object) this.f15238k, (Object) aVar.f15238k) && C12880j.m40224a((Object) this.f15239l, (Object) aVar.f15239l)) {
-                                                        if ((this.f15240m == aVar.f15240m) && C12880j.m40224a((Object) this.f15241n, (Object) aVar.f15241n)) {
+                                                    if ((this.f15237j == aVar.f15237j) && Intrinsics.areEqual((Object) this.f15238k, (Object) aVar.f15238k) && Intrinsics.areEqual((Object) this.f15239l, (Object) aVar.f15239l)) {
+                                                        if ((this.f15240m == aVar.f15240m) && Intrinsics.areEqual((Object) this.f15241n, (Object) aVar.f15241n)) {
                                                             if (this.f15242o == aVar.f15242o) {
                                                                 return true;
                                                             }
@@ -425,7 +425,7 @@ public final class C6808i extends C5741g<C6809a> {
         public final C6626c0 apply(List<? extends C6626c0> list) {
             Object obj;
             boolean z;
-            C12880j.m40222a((Object) list, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "it");
             Iterator it = list.iterator();
             while (true) {
                 if (!it.hasNext()) {
@@ -438,7 +438,7 @@ public final class C6808i extends C5741g<C6809a> {
                     z = c0Var.isDefault();
                     continue;
                 } else {
-                    z = C12880j.m40224a((Object) c0Var.getProfileId(), (Object) this.f15243c.mo19556y().getProfileId());
+                    z = Intrinsics.areEqual((Object) c0Var.getProfileId(), (Object) this.f15243c.mo19556y().getProfileId());
                     continue;
                 }
                 if (z) {
@@ -545,7 +545,7 @@ public final class C6808i extends C5741g<C6809a> {
                 if (X2 != null) {
                     return C6809a.m20942a(aVar, eVar, T, O, false, null, 0, isDefault, d, R, false, aVar2, profileName, isDefault2, X2, true, 40, null);
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -573,7 +573,7 @@ public final class C6808i extends C5741g<C6809a> {
 
         /* renamed from: a */
         public final void mo19581a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -685,7 +685,7 @@ public final class C6808i extends C5741g<C6809a> {
         /* renamed from: a */
         public final void accept(Throwable th) {
             C6808i iVar = this.f15259c;
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             iVar.m20925a(th);
         }
     }
@@ -752,7 +752,7 @@ public final class C6808i extends C5741g<C6809a> {
             if (X != null) {
                 return C6809a.m20942a(aVar, null, false, false, false, null, 0, false, false, false, false, null, null, false, X, false, 24575, null);
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
     }
@@ -812,7 +812,7 @@ public final class C6808i extends C5741g<C6809a> {
         /* renamed from: a */
         public final void accept(Throwable th) {
             C6808i iVar = this.f15267c;
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             iVar.m20925a(th);
         }
     }
@@ -961,11 +961,11 @@ public final class C6808i extends C5741g<C6809a> {
     /* renamed from: E */
     public final void m20920E() {
         C6771b y = this.f15222h.mo19724y();
-        if (C12880j.m40224a((Object) y, (Object) C6776c.f15157c)) {
+        if (Intrinsics.areEqual((Object) y, (Object) C6776c.f15157c)) {
             C6672a.m20687a(this.f15215a, false, true, 1, null);
-        } else if (C12880j.m40224a((Object) y, (Object) C6778d.f15158c)) {
+        } else if (Intrinsics.areEqual((Object) y, (Object) C6778d.f15158c)) {
             C6672a.m20689a(this.f15215a, false, false, true, 3, null);
-        } else if (C12880j.m40224a((Object) y, (Object) C6774b.f15156c)) {
+        } else if (Intrinsics.areEqual((Object) y, (Object) C6774b.f15156c)) {
             C6672a.m20689a(this.f15215a, !this.f15218d, false, true, 2, null);
         } else {
             this.f15216b.close();
@@ -994,13 +994,13 @@ public final class C6808i extends C5741g<C6809a> {
                     C6654e0 e0Var = new C6654e0(h, a, z, j, S, c, zVar);
                     return e0Var;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -1008,7 +1008,7 @@ public final class C6808i extends C5741g<C6809a> {
     public final void mo19547A() {
         updateState(C6818i.f15256c);
         Object a = this.f15219e.mo19376a(this.f15217c.getProfileId()).mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
         ((C11839v) a).mo29926a(new C6819j(this), new C6821k(this));
     }
 
@@ -1022,7 +1022,7 @@ public final class C6808i extends C5741g<C6809a> {
                 String k = aVar2.mo19571k();
                 C6654e0 g = m20930g(isDefault);
                 Completable a = m20922a(isDefault, k, g, aVar2.mo19560b()).mo30217b((Function<? super T, ? extends CompletableSource>) new C6825o<Object,Object>(g, this)).mo30050b((C11945a) new C6826p(this)).mo30036a((Consumer<? super Throwable>) new C6827q<Object>(this));
-                C12880j.m40222a((Object) a, "profileSingle\n          …Error { handleError(it) }");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a, "profileSingle\n          …Error { handleError(it) }");
                 C5826e0.m18823a(a, null, null, 3, null);
             }
         }
@@ -1105,7 +1105,7 @@ public final class C6808i extends C5741g<C6809a> {
             io.reactivex.Single r2 = r2.mo30087b()
             java.lang.Object r2 = r2.mo30224c()
             java.lang.String r3 = "profilesRepository.profi…stOrError().blockingGet()"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             java.lang.Iterable r2 = (java.lang.Iterable) r2
             boolean r3 = r2 instanceof java.util.Collection
             if (r3 == 0) goto L_0x0038
@@ -1129,7 +1129,7 @@ public final class C6808i extends C5741g<C6809a> {
             java.lang.String r3 = r3.getProfileId()
             com.bamtechmedia.dominguez.profiles.r1 r4 = r5.f15217c
             java.lang.String r4 = r4.getProfileId()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r3, r4)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r3, r4)
             r3 = r3 ^ r1
             if (r3 == 0) goto L_0x0065
             r3 = 1
@@ -1173,7 +1173,7 @@ public final class C6808i extends C5741g<C6809a> {
             return this.f15219e.mo19380a(str, e0Var, eVar);
         }
         Single<C6626c0> a = C6668a.m20672a(this.f15219e, false, 1, null).mo30087b().mo30233g(new C6810b(this)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6811c<Object,Object>(this, str, e0Var));
-        C12880j.m40222a((Object) a, "profilesRepository.profi…ame, profileAttributes) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "profilesRepository.profi…ame, profileAttributes) }");
         return a;
     }
 
@@ -1186,7 +1186,7 @@ public final class C6808i extends C5741g<C6809a> {
     /* renamed from: a */
     private final void m20923a(C6780r1 r1Var) {
         Object a = this.f15220f.mo19404a(r1Var.mo19364j()).mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C6813e(this, r1Var), C6815f.f15253c);
     }
 }

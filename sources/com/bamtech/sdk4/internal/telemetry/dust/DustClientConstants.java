@@ -55,7 +55,7 @@ public interface DustClientConstants {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.name, (java.lang.Object) r3.name) != false) goto L_0x0029;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.name, (java.lang.Object) r3.name) != false) goto L_0x0029;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -67,15 +67,15 @@ public interface DustClientConstants {
                 com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants$Application r3 = (com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants.Application) r3
                 java.lang.String r0 = r2.f6080id
                 java.lang.String r1 = r3.f6080id
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 java.lang.String r0 = r2.version
                 java.lang.String r1 = r3.version
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 java.lang.String r0 = r2.name
                 java.lang.String r3 = r3.name
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0027
                 goto L_0x0029
             L_0x0027:
@@ -133,7 +133,7 @@ public interface DustClientConstants {
         private final String brand;
         private final DeviceType deviceType;
         private final String manufacturer;
-        private final String model;
+        private final StringMODEL;
 
         /* renamed from: os */
         private final String f6081os;
@@ -204,7 +204,7 @@ public interface DustClientConstants {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:14:0x0042, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.deviceType, (java.lang.Object) r3.deviceType) != false) goto L_0x0047;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.deviceType, (java.lang.Object) r3.deviceType) != false) goto L_0x0047;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -216,27 +216,27 @@ public interface DustClientConstants {
                 com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants$Device r3 = (com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants.Device) r3
                 java.lang.String r0 = r2.brand
                 java.lang.String r1 = r3.brand
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.lang.String r0 = r2.manufacturer
                 java.lang.String r1 = r3.manufacturer
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.lang.String r0 = r2.model
                 java.lang.String r1 = r3.model
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.lang.String r0 = r2.product
                 java.lang.String r1 = r3.product
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 java.lang.String r0 = r2.f6081os
                 java.lang.String r1 = r3.f6081os
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0045
                 com.bamtech.sdk4.configuration.DeviceType r0 = r2.deviceType
                 com.bamtech.sdk4.configuration.DeviceType r3 = r3.deviceType
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0045
                 goto L_0x0047
             L_0x0045:
@@ -298,7 +298,7 @@ public interface DustClientConstants {
             sb.append(this.brand);
             sb.append(", manufacturer=");
             sb.append(this.manufacturer);
-            sb.append(", model=");
+            sb.append(",MODEL=");
             sb.append(this.model);
             sb.append(", product=");
             sb.append(this.product);
@@ -346,7 +346,7 @@ public interface DustClientConstants {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.platform, (java.lang.Object) r3.platform) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.platform, (java.lang.Object) r3.platform) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -358,11 +358,11 @@ public interface DustClientConstants {
                 com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants$Sdk r3 = (com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants.Sdk) r3
                 java.lang.String r0 = r2.version
                 java.lang.String r1 = r3.version
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 java.lang.String r0 = r2.platform
                 java.lang.String r3 = r3.platform
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:

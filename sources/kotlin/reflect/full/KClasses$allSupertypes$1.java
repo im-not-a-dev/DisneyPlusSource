@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KClass;
 import kotlin.reflect.KClassifier;
 import kotlin.reflect.KType;
@@ -42,7 +42,7 @@ final class KClasses$allSupertypes$1<N> implements Neighbors<KType> {
                     if (kType2 != null) {
                         KotlinType substitute = create.substitute(((KTypeImpl) kType2).getType(), Variance.INVARIANT);
                         if (substitute != null) {
-                            C12880j.m40222a((Object) substitute, "substitutor.substitute((…: $supertype ($current)\")");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) substitute, "substitutor.substitute((…: $supertype ($current)\")");
                             arrayList.add(new KTypeImpl(substitute, KClasses$allSupertypes$1$1$1$1.INSTANCE));
                         } else {
                             StringBuilder sb = new StringBuilder();

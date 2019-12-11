@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -18,7 +18,7 @@ final class ConstantValueFactory$createArrayValue$3 extends C12881k implements F
 
     public final SimpleType invoke(ModuleDescriptor moduleDescriptor) {
         SimpleType primitiveArrayKotlinType = moduleDescriptor.getBuiltIns().getPrimitiveArrayKotlinType(this.$componentType);
-        C12880j.m40222a((Object) primitiveArrayKotlinType, "module.builtIns.getPrimi…KotlinType(componentType)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) primitiveArrayKotlinType, "module.builtIns.getPrimi…KotlinType(componentType)");
         return primitiveArrayKotlinType;
     }
 }

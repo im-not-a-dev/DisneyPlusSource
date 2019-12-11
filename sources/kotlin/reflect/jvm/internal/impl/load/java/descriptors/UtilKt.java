@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import kotlin.C13147x;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
@@ -36,14 +36,14 @@ public final class UtilKt {
                 int index = valueParameterDescriptor.getIndex();
                 Annotations annotations = valueParameterDescriptor.getAnnotations();
                 Name name = valueParameterDescriptor.getName();
-                C12880j.m40222a((Object) name, "oldParameter.name");
+                Intrinsics.checkReturnedValueIsNotNull((Object) name, "oldParameter.name");
                 KotlinType type = valueParameterData.getType();
                 boolean hasDefaultValue = valueParameterData.getHasDefaultValue();
                 boolean isCrossinline = valueParameterDescriptor.isCrossinline();
                 boolean isNoinline = valueParameterDescriptor.isNoinline();
                 KotlinType arrayElementType = valueParameterDescriptor.getVarargElementType() != null ? DescriptorUtilsKt.getModule(callableDescriptor).getBuiltIns().getArrayElementType(valueParameterData.getType()) : null;
                 SourceElement source = valueParameterDescriptor.getSource();
-                C12880j.m40222a((Object) source, "oldParameter.source");
+                Intrinsics.checkReturnedValueIsNotNull((Object) source, "oldParameter.source");
                 ValueParameterDescriptorImpl valueParameterDescriptorImpl = r4;
                 ValueParameterDescriptorImpl valueParameterDescriptorImpl2 = new ValueParameterDescriptorImpl(callableDescriptor, null, index, annotations, name, type, hasDefaultValue, isCrossinline, isNoinline, arrayElementType, source);
                 arrayList.add(valueParameterDescriptorImpl);
@@ -61,7 +61,7 @@ public final class UtilKt {
     public static final AnnotationDefaultValue getDefaultValueFromAnnotation(ValueParameterDescriptor valueParameterDescriptor) {
         Annotations annotations = valueParameterDescriptor.getAnnotations();
         FqName fqName = JvmAnnotationNames.DEFAULT_VALUE_FQ_NAME;
-        C12880j.m40222a((Object) fqName, "JvmAnnotationNames.DEFAULT_VALUE_FQ_NAME");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "JvmAnnotationNames.DEFAULT_VALUE_FQ_NAME");
         AnnotationDescriptor findAnnotation = annotations.findAnnotation(fqName);
         if (findAnnotation != null) {
             ConstantValue firstArgument = DescriptorUtilsKt.firstArgument(findAnnotation);
@@ -80,7 +80,7 @@ public final class UtilKt {
         }
         Annotations annotations2 = valueParameterDescriptor.getAnnotations();
         FqName fqName2 = JvmAnnotationNames.DEFAULT_NULL_FQ_NAME;
-        C12880j.m40222a((Object) fqName2, "JvmAnnotationNames.DEFAULT_NULL_FQ_NAME");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName2, "JvmAnnotationNames.DEFAULT_NULL_FQ_NAME");
         if (annotations2.hasAnnotation(fqName2)) {
             return NullDefaultValue.INSTANCE;
         }

@@ -24,7 +24,7 @@ import java.util.List;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p312q.C7700r;
 import p163g.p509o.p510a.C11848c;
@@ -74,7 +74,7 @@ public final class C10597i extends C3280a implements C7700r, C2413n {
             requireActivity().onBackPressed();
             return;
         }
-        C12880j.m40227c("watchlistAnalytics");
+        Intrinsics.throwUninitializedPropertyAccessException("watchlistAnalytics");
         throw null;
     }
 
@@ -117,26 +117,26 @@ public final class C10597i extends C3280a implements C7700r, C2413n {
         String str = "recyclerView";
         if (disneyTitleToolbar != null) {
             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C10589b.recyclerView);
-            C12880j.m40222a((Object) recyclerView, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str);
             C3848a aVar = this.f25039h0;
             if (aVar != null) {
                 DisneyTitleToolbar.m18445a(disneyTitleToolbar, recyclerView, aVar, null, null, null, 0, new C10598a(this), 60, null);
             } else {
-                C12880j.m40227c("backgroundHelper");
+                Intrinsics.throwUninitializedPropertyAccessException("backgroundHelper");
                 throw null;
             }
         }
         ((RecyclerView) _$_findCachedViewById(C10589b.recyclerView)).requestFocus();
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         float dimension = requireContext.getResources().getDimension(C10588a.watchlist_header_size);
         RecyclerViewSnapScrollHelper r = mo12327r();
         C0722m viewLifecycleOwner = getViewLifecycleOwner();
-        C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+        Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
         RecyclerView recyclerView2 = (RecyclerView) _$_findCachedViewById(C10589b.recyclerView);
-        C12880j.m40222a((Object) recyclerView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
         RecyclerView recyclerView3 = (RecyclerView) _$_findCachedViewById(C10589b.recyclerView);
-        C12880j.m40222a((Object) recyclerView3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView3, str);
         r.mo17710a(viewLifecycleOwner, recyclerView2, (C5805c) new C5807b(0, (int) (dimension + ((float) recyclerView3.getPaddingBottom())), 1, null));
     }
 
@@ -145,12 +145,12 @@ public final class C10597i extends C3280a implements C7700r, C2413n {
         List list;
         EmptyStateView emptyStateView = (EmptyStateView) _$_findCachedViewById(C10589b.watchlistEmptyState);
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C10589b.recyclerView);
-        C12880j.m40222a((Object) recyclerView, "recyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "recyclerView");
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C10589b.watchlistProgressBar);
-        C12880j.m40222a((Object) progressBar, "watchlistProgressBar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "watchlistProgressBar");
         NoConnectionView noConnectionView = (NoConnectionView) _$_findCachedViewById(C10589b.watchlistNoConnection);
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         if (C5837i.m18843e(requireContext)) {
             list = C13183n.m40498a(new C10605n(C10591d.watchlist_title));
         } else {
@@ -167,7 +167,7 @@ public final class C10597i extends C3280a implements C7700r, C2413n {
             if (eVar != null) {
                 eVar.mo27465a();
             } else {
-                C12880j.m40227c("watchlistAnalytics");
+                Intrinsics.throwUninitializedPropertyAccessException("watchlistAnalytics");
                 throw null;
             }
         }

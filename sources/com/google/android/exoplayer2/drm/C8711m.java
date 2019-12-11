@@ -1,13 +1,13 @@
 package com.google.android.exoplayer2.drm;
 
-import com.google.android.exoplayer2.drm.C8712n;
+import com.google.android.exoplayer2.drm.ExoMediaCrypto;
 import com.google.android.exoplayer2.drm.DrmSession.C8694a;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import java.util.Map;
 
 /* renamed from: com.google.android.exoplayer2.drm.m */
 /* compiled from: ErrorStateDrmSession */
-public final class C8711m<T extends C8712n> implements DrmSession<T> {
+public final class C8711m<T extends ExoMediaCrypto> implements DrmSession<T> {
 
     /* renamed from: a */
     private final C8694a f18505a;

@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Set;
 import kotlin.C12907r;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -86,8 +86,8 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
             if (this != obj) {
                 if (obj instanceof MethodSignatureData) {
                     MethodSignatureData methodSignatureData = (MethodSignatureData) obj;
-                    if (C12880j.m40224a((Object) this.returnType, (Object) methodSignatureData.returnType) && C12880j.m40224a((Object) this.receiverType, (Object) methodSignatureData.receiverType) && C12880j.m40224a((Object) this.valueParameters, (Object) methodSignatureData.valueParameters) && C12880j.m40224a((Object) this.typeParameters, (Object) methodSignatureData.typeParameters)) {
-                        if (!(this.hasStableParameterNames == methodSignatureData.hasStableParameterNames) || !C12880j.m40224a((Object) this.errors, (Object) methodSignatureData.errors)) {
+                    if (Intrinsics.areEqual((Object) this.returnType, (Object) methodSignatureData.returnType) && Intrinsics.areEqual((Object) this.receiverType, (Object) methodSignatureData.receiverType) && Intrinsics.areEqual((Object) this.valueParameters, (Object) methodSignatureData.valueParameters) && Intrinsics.areEqual((Object) this.typeParameters, (Object) methodSignatureData.typeParameters)) {
+                        if (!(this.hasStableParameterNames == methodSignatureData.hasStableParameterNames) || !Intrinsics.areEqual((Object) this.errors, (Object) methodSignatureData.errors)) {
                             return false;
                         }
                     }
@@ -193,7 +193,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
     private final PropertyDescriptorImpl createPropertyDescriptor(JavaField javaField) {
         boolean z = !javaField.isFinal();
         JavaPropertyDescriptor create = JavaPropertyDescriptor.create(getOwnerDescriptor(), LazyJavaAnnotationsKt.resolveAnnotations(this.f29563c, javaField), Modality.FINAL, javaField.getVisibility(), z, javaField.getName(), this.f29563c.getComponents().getSourceElementFactory().source(javaField), isFinalStatic(javaField));
-        C12880j.m40222a((Object) create, "JavaPropertyDescriptor.c…d.isFinalStatic\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) create, "JavaPropertyDescriptor.c…d.isFinalStatic\n        )");
         return create;
     }
 
@@ -215,7 +215,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
             return transformJavaType;
         }
         KotlinType makeNotNullable = TypeUtils.makeNotNullable(transformJavaType);
-        C12880j.m40222a((Object) makeNotNullable, "TypeUtils.makeNotNullable(propertyType)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) makeNotNullable, "TypeUtils.makeNotNullable(propertyType)");
         return makeNotNullable;
     }
 
@@ -340,7 +340,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
     public final JavaMethodDescriptor resolveMethodToFunctionDescriptor(JavaMethod javaMethod) {
         Map map;
         JavaMethodDescriptor createJavaMethod = JavaMethodDescriptor.createJavaMethod(getOwnerDescriptor(), LazyJavaAnnotationsKt.resolveAnnotations(this.f29563c, javaMethod), javaMethod.getName(), this.f29563c.getComponents().getSourceElementFactory().source(javaMethod));
-        C12880j.m40222a((Object) createJavaMethod, "JavaMethodDescriptor.cre….source(method)\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createJavaMethod, "JavaMethodDescriptor.cre….source(method)\n        )");
         LazyJavaResolverContext childForMethod$default = ContextKt.childForMethod$default(this.f29563c, createJavaMethod, javaMethod, 0, 4, null);
         List typeParameters = javaMethod.getTypeParameters();
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) typeParameters, 10));
@@ -352,7 +352,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
                 if (resolveTypeParameter != null) {
                     arrayList.add(resolveTypeParameter);
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             } else {
@@ -420,7 +420,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
             kotlin.reflect.jvm.internal.impl.load.java.lazy.types.JavaTypeAttributes r6 = kotlin.reflect.jvm.internal.impl.load.java.lazy.types.JavaTypeResolverKt.toAttributes$default(r6, r3, r8, r7, r8)
             kotlin.reflect.jvm.internal.impl.name.FqName r7 = kotlin.reflect.jvm.internal.impl.load.java.JvmAnnotationNames.PARAMETER_NAME_FQ_NAME
             java.lang.String r11 = "JvmAnnotationNames.PARAMETER_NAME_FQ_NAME"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r11)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r11)
             kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor r7 = r10.findAnnotation(r7)
             if (r7 == 0) goto L_0x0061
             kotlin.reflect.jvm.internal.impl.resolve.constants.ConstantValue r7 = kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt.firstArgument(r7)
@@ -481,14 +481,14 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
             kotlin.reflect.jvm.internal.impl.name.Name r6 = r22.getName()
             java.lang.String r6 = r6.asString()
             java.lang.String r8 = "equals"
-            boolean r6 = kotlin.jvm.internal.C12880j.m40224a(r6, r8)
+            boolean r6 = kotlin.jvm.internal.Intrinsics.areEqual(r6, r8)
             if (r6 == 0) goto L_0x00f6
             int r6 = r23.size()
             if (r6 != r12) goto L_0x00f6
             kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor r6 = r21.getModule()
             kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns r6 = r6.getBuiltIns()
             kotlin.reflect.jvm.internal.impl.types.SimpleType r6 = r6.getNullableAnyType()
-            boolean r6 = kotlin.jvm.internal.C12880j.m40224a(r6, r13)
+            boolean r6 = kotlin.jvm.internal.Intrinsics.areEqual(r6, r13)
             if (r6 == 0) goto L_0x00f6
             java.lang.String r6 = "other"
             kotlin.reflect.jvm.internal.impl.name.Name r6 = kotlin.reflect.jvm.internal.impl.name.Name.identifier(r6)
@@ -532,7 +532,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
             r4 = r12
         L_0x0131:
             java.lang.String r6 = "if (function.name.asStri…(\"p$index\")\n            }"
-            kotlin.jvm.internal.C12880j.m40222a(r11, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r11, r6)
             kotlin.reflect.jvm.internal.impl.descriptors.impl.ValueParameterDescriptorImpl r14 = new kotlin.reflect.jvm.internal.impl.descriptors.impl.ValueParameterDescriptorImpl
             r8 = 0
             r17 = 0

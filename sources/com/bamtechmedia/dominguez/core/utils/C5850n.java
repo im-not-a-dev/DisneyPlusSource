@@ -9,7 +9,7 @@ import java.util.Set;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -70,15 +70,15 @@ public final class C5850n implements SharedPreferences {
 
     public Editor edit() {
         Editor edit = m18874a().edit();
-        C12880j.m40222a((Object) edit, "preferences.edit()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) edit, "preferences.edit()");
         return edit;
     }
 
     public Map<String, ?> getAll() {
         SharedPreferences a = m18874a();
-        C12880j.m40222a((Object) a, "preferences");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "preferences");
         Map<String, ?> all = a.getAll();
-        C12880j.m40222a((Object) all, "preferences.all");
+        Intrinsics.checkReturnedValueIsNotNull((Object) all, "preferences.all");
         return all;
     }
 

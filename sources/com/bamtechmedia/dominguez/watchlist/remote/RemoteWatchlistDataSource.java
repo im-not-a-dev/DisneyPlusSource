@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.core.utils.C5884x;
 import java.util.List;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11724g;
 import p163g.p500m.p501a.C11733i;
 import p520io.reactivex.Single;
@@ -41,7 +41,7 @@ public final class RemoteWatchlistDataSource {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17340a, (java.lang.Object) ((com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.AddToWatchlistResponse) r2).f17340a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17340a, (java.lang.Object) ((com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.AddToWatchlistResponse) r2).f17340a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -53,7 +53,7 @@ public final class RemoteWatchlistDataSource {
                 com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$AddToWatchlistResponse r2 = (com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.AddToWatchlistResponse) r2
                 com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$WatchlistUpdateResponse r0 = r1.f17340a
                 com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$WatchlistUpdateResponse r2 = r2.f17340a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -105,7 +105,7 @@ public final class RemoteWatchlistDataSource {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17341a, (java.lang.Object) ((com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.DeleteFromWatchlistResponse) r2).f17341a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17341a, (java.lang.Object) ((com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.DeleteFromWatchlistResponse) r2).f17341a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -117,7 +117,7 @@ public final class RemoteWatchlistDataSource {
                 com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$DeleteFromWatchlistResponse r2 = (com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.DeleteFromWatchlistResponse) r2
                 com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$WatchlistUpdateResponse r0 = r1.f17341a
                 com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$WatchlistUpdateResponse r2 = r2.f17341a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -165,7 +165,7 @@ public final class RemoteWatchlistDataSource {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17342a, (java.lang.Object) ((com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.WatchlistHit) r2).f17342a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17342a, (java.lang.Object) ((com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.WatchlistHit) r2).f17342a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -177,7 +177,7 @@ public final class RemoteWatchlistDataSource {
                 com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$WatchlistHit r2 = (com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.WatchlistHit) r2
                 java.lang.String r0 = r1.f17342a
                 java.lang.String r2 = r2.f17342a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -225,7 +225,7 @@ public final class RemoteWatchlistDataSource {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17343a, (java.lang.Object) ((com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.WatchlistUpdateResponse) r2).f17343a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17343a, (java.lang.Object) ((com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.WatchlistUpdateResponse) r2).f17343a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -237,7 +237,7 @@ public final class RemoteWatchlistDataSource {
                 com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$WatchlistUpdateResponse r2 = (com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource.WatchlistUpdateResponse) r2
                 java.util.List<com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$WatchlistHit> r0 = r1.f17343a
                 java.util.List<com.bamtechmedia.dominguez.watchlist.remote.RemoteWatchlistDataSource$WatchlistHit> r2 = r2.f17343a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -345,14 +345,14 @@ public final class RemoteWatchlistDataSource {
     /* renamed from: a */
     public final Single<? extends List<WatchlistHit>> mo21108a(List<String> list) {
         Single<? extends List<WatchlistHit>> g = this.f17339a.mo13577a(AddToWatchlistResponse.class, "core/AddToWatchlist", C13173j0.m40356a(C12907r.m40244a("contentIds", list), C12907r.m40244a("requestedAt", Long.valueOf(System.currentTimeMillis()))), null).mo30233g(C8099b.f17344c);
-        C12880j.m40222a((Object) g, "searchApi.typedSearch<Ad…istItems.checkNotNull() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.typedSearch<Ad…istItems.checkNotNull() }");
         return g;
     }
 
     /* renamed from: b */
     public final Single<List<WatchlistHit>> mo21109b(List<String> list) {
         Single<List<WatchlistHit>> g = this.f17339a.mo13577a(DeleteFromWatchlistResponse.class, "core/DeleteFromWatchlist", C13173j0.m40356a(C12907r.m40244a("contentIds", list), C12907r.m40244a("requestedAt", Long.valueOf(System.currentTimeMillis()))), null).mo30233g(C8100c.f17345c);
-        C12880j.m40222a((Object) g, "searchApi.typedSearch<De…istItems.checkNotNull() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "searchApi.typedSearch<De…istItems.checkNotNull() }");
         return g;
     }
 }

@@ -14,7 +14,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.Dust$Events;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Completable;
@@ -50,9 +50,9 @@ final class DefaultSubscriptionClient$linkSubscriptionsFromDevice$2<T, R> implem
         String subscriptions_link = SubscriptionServiceConfigurationKt.getSUBSCRIPTIONS_LINK(Dust$Events.INSTANCE);
         Call a2 = C1691e.m7799a(a);
         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new C2058xa63eee13(a2)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single g = b.mo30222c((Consumer<? super Disposable>) new C2059xa63eee14<Object>(serviceTransaction2, subscriptions_link)).mo30218b((Consumer<? super Throwable>) new C2060xa63eee15<Object>(a, serviceTransaction2, subscriptions_link)).mo30233g(new C2061xa63eee16(serviceTransaction2, subscriptions_link));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g.mo30228e();
     }
 }

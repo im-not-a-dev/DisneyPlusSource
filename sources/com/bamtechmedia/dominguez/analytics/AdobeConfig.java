@@ -70,7 +70,7 @@ public final class AdobeConfig {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:18:0x0056, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f6510h, (java.lang.Object) r3.f6510h) != false) goto L_0x005b;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f6510h, (java.lang.Object) r3.f6510h) != false) goto L_0x005b;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -82,35 +82,35 @@ public final class AdobeConfig {
             com.bamtechmedia.dominguez.analytics.AdobeConfig r3 = (com.bamtechmedia.dominguez.analytics.AdobeConfig) r3
             java.lang.String r0 = r2.f6503a
             java.lang.String r1 = r3.f6503a
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.analytics.MarketingCloud r0 = r2.f6504b
             com.bamtechmedia.dominguez.analytics.MarketingCloud r1 = r3.f6504b
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.analytics.Target r0 = r2.f6505c
             com.bamtechmedia.dominguez.analytics.Target r1 = r3.f6505c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.analytics.AudienceManager r0 = r2.f6506d
             com.bamtechmedia.dominguez.analytics.AudienceManager r1 = r3.f6506d
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.analytics.Acquisition r0 = r2.f6507e
             com.bamtechmedia.dominguez.analytics.Acquisition r1 = r3.f6507e
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.analytics.Analytics r0 = r2.f6508f
             com.bamtechmedia.dominguez.analytics.Analytics r1 = r3.f6508f
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             java.util.List<java.lang.String> r0 = r2.f6509g
             java.util.List<java.lang.String> r1 = r3.f6509g
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0059
             com.bamtechmedia.dominguez.analytics.Remotes r0 = r2.f6510h
             com.bamtechmedia.dominguez.analytics.Remotes r3 = r3.f6510h
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0059
             goto L_0x005b
         L_0x0059:

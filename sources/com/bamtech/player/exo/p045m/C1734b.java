@@ -3,8 +3,8 @@ package com.bamtech.player.exo.p045m;
 import android.app.Activity;
 import android.support.p001v4.media.session.MediaControllerCompat;
 import android.support.p001v4.media.session.MediaSessionCompat;
-import com.google.android.exoplayer2.C8802o0;
-import kotlin.jvm.internal.C12880j;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtech.player.exo.m.b */
 /* compiled from: MediaSessionManager.kt */
@@ -20,9 +20,9 @@ public final class C1734b {
     private final Activity f6020c;
 
     /* renamed from: d */
-    private final C8802o0 f6021d;
+    private final SimpleExoPlayer f6021d;
 
-    public C1734b(Activity activity, C8802o0 o0Var) {
+    public C1734b(Activity activity, SimpleExoPlayer o0Var) {
         this.f6020c = activity;
         this.f6021d = o0Var;
     }
@@ -39,7 +39,7 @@ public final class C1734b {
             C1733a aVar = new C1733a(mediaSessionCompat, this.f6021d, null, 4, null);
             return aVar;
         }
-        C12880j.m40227c("mediaSession");
+        Intrinsics.throwUninitializedPropertyAccessException("mediaSession");
         throw null;
     }
 
@@ -57,10 +57,10 @@ public final class C1734b {
                 this.f6019b = mo7749b();
                 return;
             }
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
-        C12880j.m40227c(str);
+        Intrinsics.throwUninitializedPropertyAccessException(str);
         throw null;
     }
 
@@ -71,7 +71,7 @@ public final class C1734b {
         if (aVar != null) {
             aVar.mo7745a();
         } else {
-            C12880j.m40227c("mediaSessionConnection");
+            Intrinsics.throwUninitializedPropertyAccessException("mediaSessionConnection");
             throw null;
         }
     }
@@ -85,11 +85,11 @@ public final class C1734b {
             if (aVar != null) {
                 aVar.mo7747b();
             } else {
-                C12880j.m40227c("mediaSessionConnection");
+                Intrinsics.throwUninitializedPropertyAccessException("mediaSessionConnection");
                 throw null;
             }
         } else {
-            C12880j.m40227c("mediaSession");
+            Intrinsics.throwUninitializedPropertyAccessException("mediaSession");
             throw null;
         }
     }

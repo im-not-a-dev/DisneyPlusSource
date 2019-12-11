@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13152b0;
 import kotlin.reflect.jvm.internal.impl.builtins.FunctionTypesKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
@@ -43,18 +43,18 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
         private final ValueParameterDescriptor createValueParameter(FunctionInvokeDescriptor functionInvokeDescriptor, int i, TypeParameterDescriptor typeParameterDescriptor) {
             String str;
             String asString = typeParameterDescriptor.getName().asString();
-            C12880j.m40222a((Object) asString, "typeParameter.name.asString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) asString, "typeParameter.name.asString()");
             int hashCode = asString.hashCode();
             if (hashCode != 69) {
                 if (hashCode == 84 && asString.equals("T")) {
                     str = "instance";
                     Annotations empty = Annotations.Companion.getEMPTY();
                     Name identifier = Name.identifier(str);
-                    C12880j.m40222a((Object) identifier, "Name.identifier(name)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(name)");
                     SimpleType defaultType = typeParameterDescriptor.getDefaultType();
-                    C12880j.m40222a((Object) defaultType, "typeParameter.defaultType");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) defaultType, "typeParameter.defaultType");
                     SourceElement sourceElement = SourceElement.NO_SOURCE;
-                    C12880j.m40222a((Object) sourceElement, "SourceElement.NO_SOURCE");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement, "SourceElement.NO_SOURCE");
                     ValueParameterDescriptorImpl valueParameterDescriptorImpl = new ValueParameterDescriptorImpl(functionInvokeDescriptor, null, i, empty, identifier, defaultType, false, false, false, null, sourceElement);
                     return valueParameterDescriptorImpl;
                 }
@@ -62,24 +62,24 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
                 str = "receiver";
                 Annotations empty2 = Annotations.Companion.getEMPTY();
                 Name identifier2 = Name.identifier(str);
-                C12880j.m40222a((Object) identifier2, "Name.identifier(name)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) identifier2, "Name.identifier(name)");
                 SimpleType defaultType2 = typeParameterDescriptor.getDefaultType();
-                C12880j.m40222a((Object) defaultType2, "typeParameter.defaultType");
+                Intrinsics.checkReturnedValueIsNotNull((Object) defaultType2, "typeParameter.defaultType");
                 SourceElement sourceElement2 = SourceElement.NO_SOURCE;
-                C12880j.m40222a((Object) sourceElement2, "SourceElement.NO_SOURCE");
+                Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement2, "SourceElement.NO_SOURCE");
                 ValueParameterDescriptorImpl valueParameterDescriptorImpl2 = new ValueParameterDescriptorImpl(functionInvokeDescriptor, null, i, empty2, identifier2, defaultType2, false, false, false, null, sourceElement2);
                 return valueParameterDescriptorImpl2;
             }
             if (asString != null) {
                 str = asString.toLowerCase();
-                C12880j.m40222a((Object) str, "(this as java.lang.String).toLowerCase()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) str, "(this as java.lang.String).toLowerCase()");
                 Annotations empty22 = Annotations.Companion.getEMPTY();
                 Name identifier22 = Name.identifier(str);
-                C12880j.m40222a((Object) identifier22, "Name.identifier(name)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) identifier22, "Name.identifier(name)");
                 SimpleType defaultType22 = typeParameterDescriptor.getDefaultType();
-                C12880j.m40222a((Object) defaultType22, "typeParameter.defaultType");
+                Intrinsics.checkReturnedValueIsNotNull((Object) defaultType22, "typeParameter.defaultType");
                 SourceElement sourceElement22 = SourceElement.NO_SOURCE;
-                C12880j.m40222a((Object) sourceElement22, "SourceElement.NO_SOURCE");
+                Intrinsics.checkReturnedValueIsNotNull((Object) sourceElement22, "SourceElement.NO_SOURCE");
                 ValueParameterDescriptorImpl valueParameterDescriptorImpl22 = new ValueParameterDescriptorImpl(functionInvokeDescriptor, null, i, empty22, identifier22, defaultType22, false, false, false, null, sourceElement22);
                 return valueParameterDescriptorImpl22;
             }
@@ -124,12 +124,12 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
         boolean z3 = size == 0 || size == 1;
         if (!C13147x.f29590a || z3) {
             List<ValueParameterDescriptor> valueParameters = getValueParameters();
-            C12880j.m40222a((Object) valueParameters, "valueParameters");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "valueParameters");
             ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) valueParameters, 10));
             for (ValueParameterDescriptor valueParameterDescriptor : valueParameters) {
-                C12880j.m40222a((Object) valueParameterDescriptor, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, "it");
                 Name name = valueParameterDescriptor.getName();
-                C12880j.m40222a((Object) name, "it.name");
+                Intrinsics.checkReturnedValueIsNotNull((Object) name, "it.name");
                 int index = valueParameterDescriptor.getIndex();
                 int i = index - size;
                 if (i >= 0) {
@@ -162,12 +162,12 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
                 }
             }
             CopyConfiguration original = newCopyBuilder.setHasSynthesizedParameterNames(z2).setValueParameters((List) arrayList).setOriginal((CallableMemberDescriptor) getOriginal());
-            C12880j.m40222a((Object) original, "newCopyBuilder(TypeSubst…   .setOriginal(original)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) original, "newCopyBuilder(TypeSubst…   .setOriginal(original)");
             FunctionDescriptor doSubstitute = super.doSubstitute(original);
             if (doSubstitute != null) {
                 return doSubstitute;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         throw new AssertionError("Assertion failed");
@@ -187,7 +187,7 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
         }
         List valueParameters = functionInvokeDescriptor.getValueParameters();
         String str = "substituted.valueParameters";
-        C12880j.m40222a((Object) valueParameters, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, str);
         String str2 = "it.type";
         String str3 = "it";
         boolean z2 = true;
@@ -198,9 +198,9 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
                     break;
                 }
                 ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) it.next();
-                C12880j.m40222a((Object) valueParameterDescriptor, str3);
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, str3);
                 KotlinType type = valueParameterDescriptor.getType();
-                C12880j.m40222a((Object) type, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) type, str2);
                 if (FunctionTypesKt.extractParameterNameFromFunctionTypeArgument(type) != null) {
                     z = true;
                     continue;
@@ -218,12 +218,12 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
             return functionInvokeDescriptor;
         }
         List<ValueParameterDescriptor> valueParameters2 = functionInvokeDescriptor.getValueParameters();
-        C12880j.m40222a((Object) valueParameters2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters2, str);
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) valueParameters2, 10));
         for (ValueParameterDescriptor valueParameterDescriptor2 : valueParameters2) {
-            C12880j.m40222a((Object) valueParameterDescriptor2, str3);
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor2, str3);
             KotlinType type2 = valueParameterDescriptor2.getType();
-            C12880j.m40222a((Object) type2, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) type2, str2);
             arrayList.add(FunctionTypesKt.extractParameterNameFromFunctionTypeArgument(type2));
         }
         return functionInvokeDescriptor.replaceParameterNames(arrayList);

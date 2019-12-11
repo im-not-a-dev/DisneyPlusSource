@@ -13,7 +13,7 @@ import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0000\u0018\u0000 \u00132\u00020\u0001:\u0002\u0013\u0014B\u0017\b\u0010\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006B\r\u0012\u0006\u0010\u0007\u001a\u00020\b¢\u0006\u0002\u0010\tJ\u0006\u0010\f\u001a\u00020\u0005J\u0006\u0010\r\u001a\u00020\u0005J\u0006\u0010\u000e\u001a\u00020\u000fJ\u0006\u0010\u0010\u001a\u00020\u0005J\b\u0010\u0011\u001a\u0004\u0018\u00010\u0012R\u0011\u0010\u0007\u001a\u00020\b¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000b¨\u0006\u0015"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/android/BootstrapProperties;", "", "context", "Landroid/content/Context;", "file", "", "(Landroid/content/Context;Ljava/lang/String;)V", "properties", "Ljava/util/Properties;", "(Ljava/util/Properties;)V", "getProperties", "()Ljava/util/Properties;", "getApiKey", "getClientId", "getConfigHostType", "Lcom/bamtech/sdk4/internal/configuration/ConfigurationHostName;", "getEnvironment", "getHttpProxy", "Ljava/net/Proxy;", "Companion", "Loader", "sdk_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: BootstrapProperties.kt */
@@ -50,7 +50,7 @@ public final class BootstrapProperties {
                 if (access$getProperties$cp != null) {
                     return access$getProperties$cp;
                 }
-                C12880j.m40227c("properties");
+                Intrinsics.throwUninitializedPropertyAccessException("properties");
                 throw null;
             }
 
@@ -118,7 +118,7 @@ public final class BootstrapProperties {
 
     public final String getApiKey() {
         String property = this.properties.getProperty("api.key");
-        C12880j.m40222a((Object) property, "properties.getProperty(API_KEY)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) property, "properties.getProperty(API_KEY)");
         return property;
     }
 
@@ -139,7 +139,7 @@ public final class BootstrapProperties {
 
     public final String getEnvironment() {
         String property = this.properties.getProperty("environment");
-        C12880j.m40222a((Object) property, "properties.getProperty(ENVIRONMENT)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) property, "properties.getProperty(ENVIRONMENT)");
         return property;
     }
 

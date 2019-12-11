@@ -14,6 +14,6 @@ public final /* synthetic */ class C9535d implements ThreadFactory {
     }
 
     public final Thread newThread(Runnable runnable) {
-        return C9554k0.m29401a(this.f22246c, runnable);
+        return Util.m29401a(this.f22246c, runnable);
     }
 }

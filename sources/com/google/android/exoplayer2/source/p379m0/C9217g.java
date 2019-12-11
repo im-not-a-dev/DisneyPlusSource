@@ -5,8 +5,8 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.source.C9137e0;
 import com.google.android.exoplayer2.source.C9141f0;
 import com.google.android.exoplayer2.source.C9143g0;
@@ -534,7 +534,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
     private C9209a m27777b(int i) {
         C9209a aVar = (C9209a) this.f20892d0.get(i);
         ArrayList<C9209a> arrayList = this.f20892d0;
-        C9554k0.m29409a((List<T>) arrayList, i, arrayList.size());
+        Util.m29409a((List<T>) arrayList, i, arrayList.size());
         this.f20901m0 = Math.max(this.f20901m0, this.f20892d0.size());
         int i2 = 0;
         this.f20894f0.mo23750a(aVar.mo23927a(0));
@@ -617,7 +617,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
                     }
                 }
             } else {
-                C9563q.m29500d("ChunkSampleStream", "Ignoring attempt to cancel non-cancelable load.");
+                Log.m29500d("ChunkSampleStream", "Ignoring attempt to cancel non-cancelable load.");
             }
         }
         if (cVar == null) {
@@ -642,7 +642,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
     private void m27774a(int i) {
         int min = Math.min(m27773a(i, 0), this.f20901m0);
         if (min > 0) {
-            C9554k0.m29409a((List<T>) this.f20892d0, 0, min);
+            Util.m29409a((List<T>) this.f20892d0, 0, min);
             this.f20901m0 -= min;
         }
     }

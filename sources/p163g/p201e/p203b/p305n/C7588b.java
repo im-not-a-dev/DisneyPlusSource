@@ -41,7 +41,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -200,7 +200,7 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
         if (cVar != null) {
             cVar.mo20439a(Integer.valueOf(z ? C5365h.network_error_message : C5365h.error_collection_unavailable), Integer.valueOf(C5365h.btn_action1_collection_unavailable));
         } else {
-            C12880j.m40227c("deepLinkDialog");
+            Intrinsics.throwUninitializedPropertyAccessException("deepLinkDialog");
             throw null;
         }
     }
@@ -231,16 +231,16 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
     /* renamed from: a */
     public C3503a mo12229a(C11848c<C11863k> cVar) {
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.editorialRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "editorialRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "editorialRecyclerView");
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C5363f.editorialProgressBar);
-        C12880j.m40222a((Object) progressBar, "editorialProgressBar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "editorialProgressBar");
         C3503a aVar = new C3503a(cVar, recyclerView, progressBar, (NoConnectionView) _$_findCachedViewById(C5363f.editorialNoConnectionView), null, null, 48, null);
         return aVar;
     }
 
     public void onDestroyView() {
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "this.requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "this.requireContext()");
         if (C5837i.m18843e(requireContext)) {
             View view = getView();
             if (view != null) {
@@ -257,7 +257,7 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
     public void onGlobalFocusChanged(View view, View view2) {
         if (!isRemoving() && view2 != null) {
             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.editorialRecyclerView);
-            C12880j.m40222a((Object) recyclerView, "editorialRecyclerView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "editorialRecyclerView");
             if (C5852n0.m18889b(view2, (View) recyclerView)) {
                 Optional<C7603j> optional = this.f16605i0;
                 if (optional != null) {
@@ -268,7 +268,7 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
                     }
                     return;
                 }
-                C12880j.m40227c("transitionHelper");
+                Intrinsics.throwUninitializedPropertyAccessException("transitionHelper");
                 throw null;
             }
         }
@@ -285,19 +285,19 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
             findViewById2.setOnClickListener(new C7593e(this));
         }
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "this.requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "this.requireContext()");
         if (C5837i.m18843e(requireContext)) {
             RecyclerViewSnapScrollHelper r = mo12327r();
             C0722m viewLifecycleOwner = getViewLifecycleOwner();
-            C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+            Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
             RecyclerView recyclerView = (RecyclerView) view.findViewById(C5363f.editorialRecyclerView);
             String str = "view.editorialRecyclerView";
-            C12880j.m40222a((Object) recyclerView, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str);
             RecyclerView recyclerView2 = (RecyclerView) view.findViewById(C5363f.editorialRecyclerView);
-            C12880j.m40222a((Object) recyclerView2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
             int paddingTop = recyclerView2.getPaddingTop();
             RecyclerView recyclerView3 = (RecyclerView) view.findViewById(C5363f.editorialRecyclerView);
-            C12880j.m40222a((Object) recyclerView3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView3, str);
             r.mo17710a(viewLifecycleOwner, recyclerView, (C5805c) new C5807b(paddingTop, recyclerView3.getPaddingBottom()));
             if (!C4187x.m14340E(view) || view.isLayoutRequested()) {
                 view.addOnLayoutChangeListener(new C7592d(this, view));
@@ -317,7 +317,7 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("editorialImageLoader");
+        Intrinsics.throwUninitializedPropertyAccessException("editorialImageLoader");
         throw null;
     }
 
@@ -332,14 +332,14 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
         if (optional != null) {
             return optional;
         }
-        C12880j.m40227c("transitionHelper");
+        Intrinsics.throwUninitializedPropertyAccessException("transitionHelper");
         throw null;
     }
 
     /* renamed from: a */
     public boolean mo12232a(int i) {
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         boolean z = false;
         if (C5837i.m18843e(requireContext)) {
             View view = getView();
@@ -347,20 +347,20 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
                 View findFocus = view.findFocus();
                 if (findFocus != null) {
                     boolean z2 = i == 20 || i == 21 || i == 22;
-                    if (!C12880j.m40224a((Object) findFocus, (Object) (RecyclerView) _$_findCachedViewById(C5363f.editorialRecyclerView)) || !z2) {
+                    if (!Intrinsics.areEqual((Object) findFocus, (Object) (RecyclerView) _$_findCachedViewById(C5363f.editorialRecyclerView)) || !z2) {
                         z = mo12323a(i, findFocus, false);
                     } else {
                         C5759b bVar = this.f16606j0;
                         if (bVar != null) {
                             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C5363f.editorialRecyclerView);
-                            C12880j.m40222a((Object) recyclerView, "editorialRecyclerView");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "editorialRecyclerView");
                             View a = bVar.mo17645a(recyclerView);
                             if (a != null) {
                                 z = a.requestFocus();
                             }
                             return z;
                         }
-                        C12880j.m40227c("focusFinder");
+                        Intrinsics.throwUninitializedPropertyAccessException("focusFinder");
                         throw null;
                     }
                 }
@@ -379,14 +379,14 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
         Throwable d = bVar.mo12656d();
         if (d != null) {
             Context requireContext = requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             StringBuilder sb = new StringBuilder();
             sb.append("Error: ");
             sb.append(d.getMessage());
             sb.append('.');
             Toast makeText = Toast.makeText(requireContext.getApplicationContext(), sb.toString(), 0);
             makeText.show();
-            C12880j.m40222a((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
         }
     }
 
@@ -396,7 +396,7 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
         String str = null;
         Image a2 = a != null ? a.mo12845a(C3688j.LOGO, C3623a.f9125b0.mo13250b()) : null;
         ImageView imageView = (ImageView) _$_findCachedViewById(C5363f.editorialLogoImageView);
-        C12880j.m40222a((Object) imageView, "editorialLogoImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "editorialLogoImageView");
         boolean z = true;
         imageView.setVisibility(a2 != null ? 0 : 8);
         ImageView imageView2 = (ImageView) _$_findCachedViewById(C5363f.editorialTopLogoImageView);
@@ -411,7 +411,7 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
             m22549a((ImageView) _$_findCachedViewById(C5363f.editorialLogoImageView), a2);
             m22549a((ImageView) _$_findCachedViewById(C5363f.editorialTopLogoImageView), a2);
             TextView textView = (TextView) _$_findCachedViewById(C5363f.editorialLogoTextView);
-            C12880j.m40222a((Object) textView, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, str2);
             textView.setText(null);
             TextView textView2 = (TextView) _$_findCachedViewById(C5363f.editorialTopLogoTextView);
             if (textView2 != null) {
@@ -425,7 +425,7 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
             str = a3.getTitle();
         }
         TextView textView3 = (TextView) _$_findCachedViewById(C5363f.editorialLogoTextView);
-        C12880j.m40222a((Object) textView3, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView3, str2);
         textView3.setText(str);
         TextView textView4 = (TextView) _$_findCachedViewById(C5363f.editorialTopLogoTextView);
         if (textView4 != null) {
@@ -440,7 +440,7 @@ public final class C7588b extends C3280a implements OnGlobalFocusChangeListener 
             if (gVar != null) {
                 gVar.mo19957a(imageView, image.mo13085U(), C7590b.f16610c);
             } else {
-                C12880j.m40227c("imageLoader");
+                Intrinsics.throwUninitializedPropertyAccessException("imageLoader");
                 throw null;
             }
         }

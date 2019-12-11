@@ -20,7 +20,7 @@ import com.bamtechmedia.dominguez.core.utils.C5880u;
 import java.util.HashMap;
 import kotlin.C13145v;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p135s.C4127b0;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001:\u0002 !B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0010\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0013\u001a\u00020\u0012H\u0002J\b\u0010\u0018\u001a\u00020\u0017H\u0002J\u0006\u0010\u0019\u001a\u00020\u0017J\u0010\u0010\u001a\u001a\u00020\u00172\u0006\u0010\u001b\u001a\u00020\u0007H\u0016J\u000e\u0010\u001c\u001a\u00020\u00172\u0006\u0010\u0013\u001a\u00020\u001dJ\u000e\u0010\u001c\u001a\u00020\u00172\u0006\u0010\u001e\u001a\u00020\nJ\u000e\u0010\u001f\u001a\u00020\u00172\u0006\u0010\u001c\u001a\u00020\nR\u000e\u0010\t\u001a\u00020\nX\u000e¢\u0006\u0002\n\u0000R\u001c\u0010\u000b\u001a\u0004\u0018\u00010\fX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\u000e\"\u0004\b\u000f\u0010\u0010R\u001e\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0012@BX\u000e¢\u0006\b\n\u0000\"\u0004\b\u0014\u0010\u0015¨\u0006\""}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView;", "Landroidx/constraintlayout/widget/ConstraintLayout;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "initialized", "", "retryListener", "Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView$RetryListener;", "getRetryListener", "()Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView$RetryListener;", "setRetryListener", "(Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView$RetryListener;)V", "value", "Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView$Type;", "type", "setType", "(Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView$Type;)V", "bindResources", "", "initView", "removeRetryListener", "setVisibility", "visibility", "show", "Lcom/bamtechmedia/dominguez/core/design/widgets/NoConnectionView$Type$CustomError;", "isOnline", "toggleLoading", "RetryListener", "Type", "lib_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -101,7 +101,7 @@ public final class NoConnectionView extends ConstraintLayout {
                 if (this != obj) {
                     if (obj instanceof C5643a) {
                         C5643a aVar = (C5643a) obj;
-                        if (!(this.f13253e == aVar.f13253e) || !C12880j.m40224a((Object) this.f13254f, (Object) aVar.f13254f) || !C12880j.m40224a((Object) this.f13255g, (Object) aVar.f13255g) || !C12880j.m40224a((Object) this.f13256h, (Object) aVar.f13256h)) {
+                        if (!(this.f13253e == aVar.f13253e) || !Intrinsics.areEqual((Object) this.f13254f, (Object) aVar.f13254f) || !Intrinsics.areEqual((Object) this.f13255g, (Object) aVar.f13255g) || !Intrinsics.areEqual((Object) this.f13256h, (Object) aVar.f13256h)) {
                             return false;
                         }
                     }
@@ -301,7 +301,7 @@ public final class NoConnectionView extends ConstraintLayout {
     }
 
     private final void setType(C5642b bVar) {
-        if (!C12880j.m40224a((Object) this.f13247t0, (Object) bVar)) {
+        if (!Intrinsics.areEqual((Object) this.f13247t0, (Object) bVar)) {
             m18478a(bVar);
         }
         this.f13247t0 = bVar;
@@ -338,7 +338,7 @@ public final class NoConnectionView extends ConstraintLayout {
         }
         if (!z) {
             Context context = getContext();
-            C12880j.m40222a((Object) context, "context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
             if (C5837i.m18843e(context)) {
                 LoadingButton loadingButton3 = (LoadingButton) mo2145c(C3838h.noConnectionRetryButton);
                 if (loadingButton3 != null) {
@@ -379,7 +379,7 @@ public final class NoConnectionView extends ConstraintLayout {
         m18479d();
         super.setVisibility(i);
         Context context = getContext();
-        C12880j.m40222a((Object) context, "context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
         if (C5837i.m18843e(context) && i == 0) {
             LoadingButton loadingButton = (LoadingButton) mo2145c(C3838h.noConnectionRetryButton);
             if (loadingButton != null) {
@@ -426,37 +426,37 @@ public final class NoConnectionView extends ConstraintLayout {
             if (g != null) {
                 int intValue = g.intValue();
                 TextView textView = (TextView) mo2145c(C3838h.noConnectionTitle);
-                C12880j.m40222a((Object) textView, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView, str);
                 C5880u.m18941a(textView, intValue);
                 vVar2 = C13145v.f29587a;
             } else {
                 vVar2 = null;
             }
             TextView textView2 = (TextView) mo2145c(C3838h.noConnectionTitle);
-            C12880j.m40222a((Object) textView2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView2, str);
             textView2.setVisibility(vVar2 != null ? 0 : 8);
             Integer f = aVar.mo17443f();
             if (f != null) {
                 int intValue2 = f.intValue();
                 TextView textView3 = (TextView) mo2145c(C3838h.noConnectionBody);
-                C12880j.m40222a((Object) textView3, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView3, str2);
                 C5880u.m18941a(textView3, intValue2);
                 vVar3 = C13145v.f29587a;
             } else {
                 vVar3 = null;
             }
             TextView textView4 = (TextView) mo2145c(C3838h.noConnectionBody);
-            C12880j.m40222a((Object) textView4, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView4, str2);
             textView4.setVisibility(vVar3 != null ? 0 : 8);
             String e = aVar.mo17441e();
             if (e != null) {
                 TextView textView5 = (TextView) mo2145c(C3838h.noConnectionBody);
-                C12880j.m40222a((Object) textView5, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView5, str2);
                 textView5.setText(e);
                 vVar4 = C13145v.f29587a;
             }
             TextView textView6 = (TextView) mo2145c(C3838h.noConnectionBody);
-            C12880j.m40222a((Object) textView6, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView6, str2);
             if (vVar4 == null) {
                 z = false;
             }
@@ -469,25 +469,25 @@ public final class NoConnectionView extends ConstraintLayout {
             if (d != null) {
                 int intValue3 = d.intValue();
                 TextView textView7 = (TextView) mo2145c(C3838h.noConnectionTitle);
-                C12880j.m40222a((Object) textView7, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView7, str);
                 C5880u.m18941a(textView7, intValue3);
                 vVar = C13145v.f29587a;
             } else {
                 vVar = null;
             }
             TextView textView8 = (TextView) mo2145c(C3838h.noConnectionTitle);
-            C12880j.m40222a((Object) textView8, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView8, str);
             textView8.setVisibility(vVar != null ? 0 : 8);
             Integer c = bVar.mo17439c();
             if (c != null) {
                 int intValue4 = c.intValue();
                 TextView textView9 = (TextView) mo2145c(C3838h.noConnectionBody);
-                C12880j.m40222a((Object) textView9, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView9, str2);
                 C5880u.m18941a(textView9, intValue4);
                 vVar4 = C13145v.f29587a;
             }
             TextView textView10 = (TextView) mo2145c(C3838h.noConnectionBody);
-            C12880j.m40222a((Object) textView10, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView10, str2);
             if (vVar4 == null) {
                 z = false;
             }

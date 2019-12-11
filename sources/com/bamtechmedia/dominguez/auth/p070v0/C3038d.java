@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.bamtechmedia.dominguez.auth.C2711f0;
 import kotlin.C13142s;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 
 /* renamed from: com.bamtechmedia.dominguez.auth.v0.d */
@@ -36,15 +36,15 @@ public final class C3038d<T extends URLSpan> implements TransformationMethod {
                 if (text != null) {
                     Spannable spannable = (Spannable) text;
                     Object[] spans = spannable.getSpans(0, textView.length(), URLSpan.class);
-                    C12880j.m40222a((Object) spans, "getSpans(0, view.length(), URLSpan::class.java)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) spans, "getSpans(0, view.length(), URLSpan::class.java)");
                     for (URLSpan uRLSpan : C13199w.m40601l((Iterable) C13174k.m40412l(spans))) {
                         int spanStart = spannable.getSpanStart(uRLSpan);
                         int spanEnd = spannable.getSpanEnd(uRLSpan);
                         spannable.removeSpan(uRLSpan);
                         Function1<String, T> function1 = this.f7903c;
-                        C12880j.m40222a((Object) uRLSpan, "oldSpan");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) uRLSpan, "oldSpan");
                         String url = uRLSpan.getURL();
-                        C12880j.m40222a((Object) url, "oldSpan.url");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) url, "oldSpan.url");
                         spannable.setSpan(function1.invoke(url), spanStart, spanEnd, 33);
                         spannable.setSpan(new ForegroundColorSpan(C4025a.m13788a(textView.getContext(), this.f7902U)), spanStart, spanEnd, 33);
                     }

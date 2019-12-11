@@ -6,7 +6,7 @@ import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9323c;
 import com.google.android.exoplayer2.p382u0.C9325e;
 import com.google.android.exoplayer2.p382u0.C9327g;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -124,7 +124,7 @@ public final class C9360a extends C9323c {
                     double d3 = (double) (v4 - 128);
                     int i6 = (int) ((d - (0.34414d * d3)) - (d2 * 0.71414d));
                     int i7 = (int) (d + (d3 * 1.772d));
-                    this.f21527b[v] = C9554k0.m29382a(i7, 0, 255) | (C9554k0.m29382a(i6, 0, 255) << 8) | (v5 << 24) | (C9554k0.m29382a(i4, 0, 255) << 16);
+                    this.f21527b[v] = Util.m29382a(i7, 0, 255) | (Util.m29382a(i6, 0, 255) << 8) | (v5 << 24) | (Util.m29382a(i4, 0, 255) << 16);
                     i3 = i5 + 1;
                 }
                 this.f21528c = true;
@@ -215,7 +215,7 @@ public final class C9360a extends C9323c {
             if (this.f21525q == null) {
                 this.f21525q = new Inflater();
             }
-            if (C9554k0.m29413a(wVar, this.f21523o, this.f21525q)) {
+            if (Util.m29413a(wVar, this.f21523o, this.f21525q)) {
                 C9572w wVar2 = this.f21523o;
                 wVar.mo24684a(wVar2.f22333a, wVar2.mo24690d());
             }

@@ -5,7 +5,7 @@ import com.bamtech.core.logging.LogLevel;
 import com.bamtech.core.logging.LogSink;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 2}, mo31006d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\u0002\b\u0016\u0018\u0000 \u000f2\u00020\u0001:\u0001\u000fB\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0018\u0010\u0005\u001a\u00020\u00062\u000e\u0010\u0007\u001a\n\u0012\u0002\b\u00030\bj\u0002`\tH\u0014J\u0018\u0010\n\u001a\u00020\u000b2\u000e\u0010\u0007\u001a\n\u0012\u0002\b\u00030\bj\u0002`\tH\u0014J\u0010\u0010\f\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000eH\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0010"}, mo31007d2 = {"Lcom/bamtech/core/logging/console/ConsoleLogSink;", "Lcom/bamtech/core/logging/LogSink;", "writer", "Lcom/bamtech/core/logging/console/LogWriter;", "(Lcom/bamtech/core/logging/console/LogWriter;)V", "isLoggable", "", "logEvent", "Lcom/bamtech/core/logging/LogEvent;", "Lcom/bamtech/core/logging/AnyEvent;", "log", "", "onError", "e", "", "Companion", "logging-console_release"}, mo31008k = 1, mo31009mv = {1, 1, 9})
 /* compiled from: ConsoleLogSink.kt */
@@ -75,7 +75,7 @@ public class ConsoleLogSink extends LogSink {
         String str2 = "null cannot be cast to non-null type java.lang.String";
         if (source2 != null) {
             String substring = source2.substring(b);
-            C12880j.m40222a((Object) substring, "(this as java.lang.String).substring(startIndex)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.String).substring(startIndex)");
             switch (WhenMappings.$EnumSwitchMapping$0[logEvent.getLevel().ordinal()]) {
                 case 1:
                 case 2:
@@ -110,7 +110,7 @@ public class ConsoleLogSink extends LogSink {
                         int min = Math.min(a, Companion.getMAX_LOG_LENGTH() + i2);
                         if (sb4 != null) {
                             String substring2 = sb4.substring(i2, min);
-                            C12880j.m40222a((Object) substring2, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) substring2, "(this as java.lang.Strin…ing(startIndex, endIndex)");
                             this.writer.println(i, substring, substring2);
                             if (min >= a) {
                                 i2 = min + 1;

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.annotations;
 
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: AnnotationUseSiteTarget.kt */
 public enum AnnotationUseSiteTarget {
@@ -22,7 +22,7 @@ public enum AnnotationUseSiteTarget {
             String name = name();
             if (name != null) {
                 str = name.toLowerCase();
-                C12880j.m40222a((Object) str, "(this as java.lang.String).toLowerCase()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) str, "(this as java.lang.String).toLowerCase()");
             } else {
                 throw new C13142s("null cannot be cast to non-null type java.lang.String");
             }

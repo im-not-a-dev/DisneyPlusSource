@@ -19,7 +19,7 @@ import java.util.function.UnaryOperator;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12871f;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.p589f0.C12872a;
 import p163g.p500m.p501a.C11724g;
 import p163g.p500m.p501a.C11733i;
@@ -29,7 +29,7 @@ import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000J\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u0000 \u001e2\u00020\u0001:\u0005\u001e\u001f !\"B\u000f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\b\u0010\u0010\u001a\u00020\u0006H\u0002J<\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u00130\u00122\u0006\u0010\u0014\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u00132\u0006\u0010\u0017\u001a\u00020\u00182\f\u0010\u0019\u001a\b\u0018\u00010\u0015j\u0002`\u001a2\b\b\u0002\u0010\u001b\u001a\u00020\u0018J\"\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\u00130\u001d2\u0006\u0010\u0014\u001a\u00020\u00152\f\u0010\u0019\u001a\b\u0018\u00010\u0015j\u0002`\u001aR\u000e\u0010\u0005\u001a\u00020\u0006X\u000e¢\u0006\u0002\n\u0000R$\u0010\u0007\u001a\u00020\u00068\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\b\u0010\t\u001a\u0004\b\n\u0010\u000b\"\u0004\b\f\u0010\rR\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u000e¢\u0006\u0002\n\u0000¨\u0006#"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/search/SearchRepository;", "", "searchApi", "Lcom/bamtechmedia/dominguez/core/content/search/DmgzSearchApi;", "(Lcom/bamtechmedia/dominguez/core/content/search/DmgzSearchApi;)V", "loadingInitialSearch", "", "loadingNextPage", "loadingNextPage$annotations", "()V", "getLoadingNextPage$search_release", "()Z", "setLoadingNextPage$search_release", "(Z)V", "searchDisposable", "Lio/reactivex/disposables/Disposable;", "isLoadingSearchData", "loadNextPage", "Lio/reactivex/Maybe;", "Lcom/bamtechmedia/dominguez/search/SearchRepository$SearchResults;", "queryText", "", "set", "positionInSet", "", "transactionId", "Lcom/bamtechmedia/dominguez/core/content/TransactionId;", "offsetFromEndToStartLoading", "searchQuery", "Lio/reactivex/Single;", "Companion", "DmcAssetWrapper", "DmcHits", "SearchResponse", "SearchResults", "search_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: SearchRepository.kt */
@@ -91,7 +91,7 @@ public final class SearchRepository {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17100c, (java.lang.Object) ((com.bamtechmedia.dominguez.search.SearchRepository.DmcAssetWrapper) r2).f17100c) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17100c, (java.lang.Object) ((com.bamtechmedia.dominguez.search.SearchRepository.DmcAssetWrapper) r2).f17100c) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -103,7 +103,7 @@ public final class SearchRepository {
                 com.bamtechmedia.dominguez.search.SearchRepository$DmcAssetWrapper r2 = (com.bamtechmedia.dominguez.search.SearchRepository.DmcAssetWrapper) r2
                 com.bamtechmedia.dominguez.core.content.assets.f r0 = r1.f17100c
                 com.bamtechmedia.dominguez.core.content.assets.f r2 = r2.f17100c
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -260,7 +260,7 @@ public final class SearchRepository {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:10:0x0032, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f17103W, (java.lang.Object) r3.f17103W) != false) goto L_0x0037;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f17103W, (java.lang.Object) r3.f17103W) != false) goto L_0x0037;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -272,19 +272,19 @@ public final class SearchRepository {
                 com.bamtechmedia.dominguez.search.SearchRepository$DmcHits r3 = (com.bamtechmedia.dominguez.search.SearchRepository.DmcHits) r3
                 java.util.List<com.bamtechmedia.dominguez.search.SearchRepository$DmcAssetWrapper> r0 = r2.f17104c
                 java.util.List<com.bamtechmedia.dominguez.search.SearchRepository$DmcAssetWrapper> r1 = r3.f17104c
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0035
                 java.lang.String r0 = r2.f17101U
                 java.lang.String r1 = r3.f17101U
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0035
                 com.bamtechmedia.dominguez.core.content.paging.DefaultPagingMetaData r0 = r2.m23193f0()
                 com.bamtechmedia.dominguez.core.content.paging.DefaultPagingMetaData r1 = r3.m23193f0()
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0035
                 java.util.List<com.bamtechmedia.dominguez.core.content.assets.b> r0 = r2.f17103W
                 java.util.List<com.bamtechmedia.dominguez.core.content.assets.b> r3 = r3.f17103W
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0035
                 goto L_0x0037
             L_0x0035:
@@ -299,7 +299,7 @@ public final class SearchRepository {
 
         public C3626b get(int i) {
             Object obj = this.f17103W.get(i);
-            C12880j.m40222a(obj, "get(...)");
+            Intrinsics.checkReturnedValueIsNotNull(obj, "get(...)");
             return (C3626b) obj;
         }
 
@@ -414,7 +414,7 @@ public final class SearchRepository {
                 r5 = r5 & 8
                 if (r5 == 0) goto L_0x0033
                 java.lang.String r4 = "real"
-                boolean r4 = kotlin.jvm.internal.C12880j.m40224a(r2, r4)
+                boolean r4 = kotlin.jvm.internal.Intrinsics.areEqual(r2, r4)
                 if (r4 == 0) goto L_0x002f
                 java.util.ArrayList r4 = new java.util.ArrayList
                 r5 = 10
@@ -466,7 +466,7 @@ public final class SearchRepository {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f17105a, (java.lang.Object) ((com.bamtechmedia.dominguez.search.SearchRepository.SearchResponse) r2).f17105a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f17105a, (java.lang.Object) ((com.bamtechmedia.dominguez.search.SearchRepository.SearchResponse) r2).f17105a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -478,7 +478,7 @@ public final class SearchRepository {
                 com.bamtechmedia.dominguez.search.SearchRepository$SearchResponse r2 = (com.bamtechmedia.dominguez.search.SearchRepository.SearchResponse) r2
                 com.bamtechmedia.dominguez.search.SearchRepository$DmcHits r0 = r1.f17105a
                 com.bamtechmedia.dominguez.search.SearchRepository$DmcHits r2 = r2.f17105a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -654,11 +654,11 @@ public final class SearchRepository {
         StringBuilder sb = new StringBuilder();
         sb.append("Starting initial search for query: ");
         sb.append(str);
-        C14100a.m44529c(sb.toString(), new Object[0]);
+        Timber.m44529c(sb.toString(), new Object[0]);
         Class<SearchResponse> cls = SearchResponse.class;
         String str3 = "core/disneysearch";
         Single<C7952b> b = this.f17099d.mo13577a(cls, str3, C13173j0.m40356a(C12907r.m40244a("index", "disney_global"), C12907r.m40244a("q", str)), str2).mo30222c((Consumer<? super Disposable>) new C7956f<Object>(this)).mo30233g(C7957g.f17110c).mo30219b((C11945a) new C7958h(this));
-        C12880j.m40222a((Object) b, "searchApi\n            .t…ngInitialSearch = false }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "searchApi\n            .t…ngInitialSearch = false }");
         return b;
     }
 
@@ -676,18 +676,18 @@ public final class SearchRepository {
             sb.append(Y);
             sb.append(" load for query: ");
             sb.append(str);
-            C14100a.m44529c(sb.toString(), new Object[0]);
+            Timber.m44529c(sb.toString(), new Object[0]);
             Disposable disposable = this.f17096a;
             if (disposable != null) {
                 disposable.dispose();
             }
             this.f17097b = true;
             Maybe<C7952b> a = this.f17099d.mo13577a(SearchResponse.class, "core/disneysearch", C13173j0.m40356a(C12907r.m40244a("index", "disney_global"), C12907r.m40244a("q", str), C12907r.m40244a("pageSize", Integer.valueOf(bVar.mo13457f0().mo13411Z())), C12907r.m40244a("page", Integer.valueOf(Y))), str2).mo30222c((Consumer<? super Disposable>) new C7953c<Object>(this)).mo30233g(new C7954d(bVar)).mo30234h().mo30104a((C11945a) new C7955e(this));
-            C12880j.m40222a((Object) a, "searchApi\n              …loadingNextPage = false }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "searchApi\n              …loadingNextPage = false }");
             return a;
         }
         Maybe<C7952b> h = Maybe.m38259h();
-        C12880j.m40222a((Object) h, "Maybe.empty()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Maybe.empty()");
         return h;
     }
 

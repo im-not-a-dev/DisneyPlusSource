@@ -5,7 +5,7 @@ import com.bamtechmedia.dominguez.core.content.paging.EpisodePagingMetaData;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -24,13 +24,13 @@ public final class SeriesBundleEpisodesJsonAdapter extends C11725h<SeriesBundleE
     public SeriesBundleEpisodesJsonAdapter(C11760v vVar) {
         String str = "videos";
         C11739b a = C11739b.m37729a(str, "meta");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"videos\", \"meta\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"videos\", \"meta\")");
         this.options = a;
         C11725h<List<DmcEpisode>> a2 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, DmcEpisode.class), C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<List<DmcEp…ons.emptySet(), \"videos\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<List<DmcEp…ons.emptySet(), \"videos\")");
         this.listOfDmcEpisodeAdapter = a2;
         C11725h<EpisodePagingMetaData> a3 = vVar.mo29869a((Type) EpisodePagingMetaData.class, C13188p0.m40531a(), "episodePagingMeta");
-        C12880j.m40222a((Object) a3, "moshi.adapter<EpisodePag…t(), \"episodePagingMeta\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<EpisodePag…t(), \"episodePagingMeta\")");
         this.nullableEpisodePagingMetaDataAdapter = a3;
     }
 

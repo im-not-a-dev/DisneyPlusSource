@@ -17,7 +17,7 @@ import com.bamtechmedia.dominguez.playback.C6328g;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p154p.C4267c;
 import p096e.p154p.C4317o;
 
@@ -87,7 +87,7 @@ public final class C6559a extends C0845e {
         dVar.mo2414a(C6327f.checkBoxImageView, 6, 0, 6, i2);
         C4267c cVar = new C4267c();
         Context context2 = constraintLayout.getContext();
-        C12880j.m40222a((Object) context2, "trackTvLayout.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context2, "trackTvLayout.context");
         cVar.mo15082a((long) context2.getResources().getInteger(C6328g.duration2_5));
         cVar.mo15083a((TimeInterpolator) new AccelerateDecelerateInterpolator());
         C4317o.m14847a(constraintLayout, cVar);
@@ -97,18 +97,18 @@ public final class C6559a extends C0845e {
     /* renamed from: a */
     public C0805c mo4652a(C0788a0 a0Var, C0794d0 d0Var, int i, List<Object> list) {
         View view = d0Var.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         ImageView imageView = (ImageView) view.findViewById(C6327f.checkBoxImageView);
-        C12880j.m40222a((Object) imageView, "viewHolder.itemView.checkBoxImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "viewHolder.itemView.checkBoxImageView");
         return new C6560a(imageView.isSelected());
     }
 
     /* renamed from: a */
     public C0805c mo4651a(C0788a0 a0Var, C0794d0 d0Var) {
         View view = d0Var.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         ImageView imageView = (ImageView) view.findViewById(C6327f.checkBoxImageView);
-        C12880j.m40222a((Object) imageView, "viewHolder.itemView.checkBoxImageView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "viewHolder.itemView.checkBoxImageView");
         return new C6560a(imageView.isSelected());
     }
 }

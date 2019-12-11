@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Set;
 import kotlin.C13145v;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p503n.p504a.C11792d0;
 import p163g.p503n.p504a.C11793e;
 import p163g.p503n.p504a.C11839v;
@@ -20,7 +20,7 @@ import p520io.reactivex.C11974s;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000d\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\r\n\u0002\b\u0004\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001)BQ\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u000e\u0010\r\u001a\n\u0012\u0004\u0012\u00020\u000f\u0018\u00010\u000e\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\u0011\u0012\b\u0010\u0012\u001a\u0004\u0018\u00010\u0013¢\u0006\u0002\u0010\u0014J\u0006\u0010\u0015\u001a\u00020\u0016J\u001e\u0010\u0017\u001a\u00020\u00162\f\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e2\u0006\u0010\u0018\u001a\u00020\u0002H\u0002J\u0010\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u0011H\u0002J\u0016\u0010\u001c\u001a\u00020\u00162\f\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000eH\u0002J\u0012\u0010\u001d\u001a\u00020\u00162\n\b\u0002\u0010\u001e\u001a\u0004\u0018\u00010\u000fJ\u0010\u0010\u001f\u001a\u00020\u00162\u0006\u0010\u001b\u001a\u00020\u0011H\u0002J\u0018\u0010 \u001a\u00020\u00162\u0006\u0010\u001b\u001a\u00020\u00112\u0006\u0010!\u001a\u00020\"H\u0002J\u000e\u0010#\u001a\u00020\u00162\u0006\u0010$\u001a\u00020\u0011J\f\u0010%\u001a\u00020&*\u00020\"H\u0002J\u0013\u0010'\u001a\u0004\u0018\u00010\u0016*\u00020\u0002H\u0002¢\u0006\u0002\u0010(R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000¨\u0006*"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/legal/LegalCenterViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/legal/LegalCenterViewModel$State;", "legalApi", "Lcom/bamtechmedia/dominguez/legal/api/LegalApi;", "spanHelper", "Lcom/bamtechmedia/dominguez/legal/LegalLinkSpanHelper;", "analytics", "Lcom/bamtechmedia/dominguez/legal/LegalCenterAnalytics;", "isTelevision", "", "legalDocumentFinder", "Lcom/bamtechmedia/dominguez/legal/LegalDocumentFinder;", "documents", "", "Lcom/bamtechmedia/dominguez/legal/api/LegalDocument;", "openDocumentCode", "", "requestedLegalItem", "Lcom/bamtechmedia/dominguez/legal/LegalDocumentFinder$LegalItem;", "(Lcom/bamtechmedia/dominguez/legal/api/LegalApi;Lcom/bamtechmedia/dominguez/legal/LegalLinkSpanHelper;Lcom/bamtechmedia/dominguez/legal/LegalCenterAnalytics;ZLcom/bamtechmedia/dominguez/legal/LegalDocumentFinder;Ljava/util/List;Ljava/lang/String;Lcom/bamtechmedia/dominguez/legal/LegalDocumentFinder$LegalItem;)V", "loadAllDisclosures", "", "loadDocumentContents", "currentState", "loadSingleDocumentContent", "Lio/reactivex/Completable;", "code", "onDisclosuresLoaded", "onDocumentSelected", "document", "onLegalContentLoadFailed", "onLegalContentLoaded", "content", "Lcom/bamtechmedia/dominguez/legal/api/LegalDocContent;", "retryLoadContent", "documentCode", "toSpannableString", "", "trackPageLoad", "(Lcom/bamtechmedia/dominguez/legal/LegalCenterViewModel$State;)Lkotlin/Unit;", "State", "legal_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: LegalCenterViewModel.kt */
@@ -127,7 +127,7 @@ public final class LegalCenterViewModel extends C5741g<State> {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:12:0x0038, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.failedContentDocumentCodes, (java.lang.Object) r3.failedContentDocumentCodes) != false) goto L_0x003d;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.failedContentDocumentCodes, (java.lang.Object) r3.failedContentDocumentCodes) != false) goto L_0x003d;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -139,23 +139,23 @@ public final class LegalCenterViewModel extends C5741g<State> {
                 com.bamtechmedia.dominguez.legal.LegalCenterViewModel$State r3 = (com.bamtechmedia.dominguez.legal.LegalCenterViewModel.State) r3
                 java.util.List<com.bamtechmedia.dominguez.legal.api.LegalDocument> r0 = r2.allDocuments
                 java.util.List<com.bamtechmedia.dominguez.legal.api.LegalDocument> r1 = r3.allDocuments
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x003b
                 java.lang.String r0 = r2.openDocumentCode
                 java.lang.String r1 = r3.openDocumentCode
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x003b
                 java.util.Map<java.lang.String, java.lang.CharSequence> r0 = r2.spannedDocumentContent
                 java.util.Map<java.lang.String, java.lang.CharSequence> r1 = r3.spannedDocumentContent
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x003b
                 java.lang.Throwable r0 = r2.loadDocumentsError
                 java.lang.Throwable r1 = r3.loadDocumentsError
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x003b
                 java.util.Set<java.lang.String> r0 = r2.failedContentDocumentCodes
                 java.util.Set<java.lang.String> r3 = r3.failedContentDocumentCodes
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x003b
                 goto L_0x003d
             L_0x003b:
@@ -193,7 +193,7 @@ public final class LegalCenterViewModel extends C5741g<State> {
                     break;
                 }
                 obj = it.next();
-                if (C12880j.m40224a((Object) ((LegalDocument) obj).getDocumentCode(), (Object) this.openDocumentCode)) {
+                if (Intrinsics.areEqual((Object) ((LegalDocument) obj).getDocumentCode(), (Object) this.openDocumentCode)) {
                     break;
                 }
             }
@@ -311,7 +311,7 @@ public final class LegalCenterViewModel extends C5741g<State> {
             com.bamtechmedia.dominguez.legal.api.LegalDocument r2 = (com.bamtechmedia.dominguez.legal.api.LegalDocument) r2
             java.lang.String r2 = r2.getDocumentCode()
             java.lang.String r3 = r6.getOpenDocumentCode()
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r2, r3)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r2, r3)
             r2 = r2 ^ 1
             if (r2 == 0) goto L_0x0009
             r0.add(r1)
@@ -325,7 +325,7 @@ public final class LegalCenterViewModel extends C5741g<State> {
         L_0x0037:
             io.reactivex.Completable r5 = p520io.reactivex.Completable.m38169h()
             java.lang.String r6 = "Completable.complete()"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
         L_0x0040:
             java.util.ArrayList r6 = new java.util.ArrayList
             r1 = 10
@@ -345,12 +345,12 @@ public final class LegalCenterViewModel extends C5741g<State> {
             io.reactivex.Completable r6 = p520io.reactivex.Completable.m38161b(r6)
             io.reactivex.Completable r5 = r5.mo30034a(r6)
             java.lang.String r6 = "(currentState.openDocume…tent(it.documentCode) }))"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
             g.n.a.c0 r6 = r4.getViewModelScope()
             g.n.a.h r6 = p163g.p503n.p504a.C11793e.m37930a(r6)
             java.lang.Object r5 = r5.mo30048a(r6)
             java.lang.String r6 = "this.`as`(AutoDispose.au…isposable<Any>(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
             g.n.a.v r5 = (p163g.p503n.p504a.C11839v) r5
             com.bamtechmedia.dominguez.legal.LegalCenterViewModel$loadDocumentContents$3 r6 = com.bamtechmedia.dominguez.legal.LegalCenterViewModel$loadDocumentContents$3.INSTANCE
             com.bamtechmedia.dominguez.legal.LegalCenterViewModel$loadDocumentContents$4 r0 = com.bamtechmedia.dominguez.legal.LegalCenterViewModel$loadDocumentContents$4.INSTANCE
@@ -362,7 +362,7 @@ public final class LegalCenterViewModel extends C5741g<State> {
 
     private final Completable loadSingleDocumentContent(String str) {
         Completable f = this.legalApi.getLegalDocContent(str).mo30227d((Consumer<? super T>) new LegalCenterViewModel$loadSingleDocumentContent$1<Object>(this, str)).mo30218b((Consumer<? super Throwable>) new LegalCenterViewModel$loadSingleDocumentContent$2<Object>(this, str)).mo30228e().mo30036a((Consumer<? super Throwable>) LegalCenterViewModel$loadSingleDocumentContent$3.INSTANCE).mo30055f();
-        C12880j.m40222a((Object) f, "legalApi.getLegalDocCont…       .onErrorComplete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) f, "legalApi.getLegalDocCont…       .onErrorComplete()");
         return f;
     }
 
@@ -372,7 +372,7 @@ public final class LegalCenterViewModel extends C5741g<State> {
         sb.append("Legal disclosures loaded: ");
         List<LegalDocument> list2 = list;
         sb.append(C13199w.m40559a(list2, ",", null, null, 0, null, LegalCenterViewModel$onDisclosuresLoaded$1.INSTANCE, 30, null));
-        C14100a.m44529c(sb.toString(), new Object[0]);
+        Timber.m44529c(sb.toString(), new Object[0]);
         updateState(new LegalCenterViewModel$onDisclosuresLoaded$2(this, list));
     }
 
@@ -409,11 +409,11 @@ public final class LegalCenterViewModel extends C5741g<State> {
     }
 
     public final void loadAllDisclosures() {
-        C14100a.m44529c("Loading all Legal Disclosures", new Object[0]);
+        Timber.m44529c("Loading all Legal Disclosures", new Object[0]);
         Single g = this.legalApi.getLegalData().mo30233g(LegalCenterViewModel$loadAllDisclosures$1.INSTANCE);
-        C12880j.m40222a((Object) g, "legalApi.getLegalData()\n…umentCode }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "legalApi.getLegalData()\n…umentCode }\n            }");
         Object a = g.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new LegalCenterViewModel$loadAllDisclosures$2(this), new LegalCenterViewModel$loadAllDisclosures$3(this));
     }
 
@@ -423,7 +423,7 @@ public final class LegalCenterViewModel extends C5741g<State> {
 
     public final void retryLoadContent(String str) {
         Object a = loadSingleDocumentContent(str).mo30048a((C11912b<? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
         ((C11839v) a).mo29926a(LegalCenterViewModel$retryLoadContent$1.INSTANCE, LegalCenterViewModel$retryLoadContent$2.INSTANCE);
     }
 }

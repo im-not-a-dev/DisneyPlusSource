@@ -15,7 +15,7 @@ import com.bamtech.sdk4.paywall.Paywall;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import p520io.reactivex.Single;
@@ -50,9 +50,9 @@ final class DefaultPaywallClient$getPaywall$2<T, R> implements Function<T, Singl
         String bam_paywall = PaywallServiceConfigurationKt.getBAM_PAYWALL(Dust$Events.INSTANCE);
         Call a2 = C1691e.m7799a(a);
         Single b = C1681c.m7780a(a, a2).mo30223c((C11945a) new DefaultPaywallClient$getPaywall$2$$special$$inlined$toSingle$1(a2)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single<Paywall> g = b.mo30222c((Consumer<? super Disposable>) new DefaultPaywallClient$getPaywall$2$$special$$inlined$toSingle$2<Object>(serviceTransaction2, bam_paywall)).mo30218b((Consumer<? super Throwable>) new DefaultPaywallClient$getPaywall$2$$special$$inlined$toSingle$3<Object>(a, serviceTransaction2, bam_paywall)).mo30233g(new DefaultPaywallClient$getPaywall$2$$special$$inlined$toSingle$4(serviceTransaction2, bam_paywall));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g;
     }
 }

@@ -7,7 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p586h0.C12757d;
 import kotlin.p590y.C13162e0;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
@@ -85,7 +85,7 @@ public final class AnnotationDeserializer {
             } else if (i == 2) {
                 if ((constantValue instanceof ArrayValue) && ((List) ((ArrayValue) constantValue).getValue()).size() == value.getArrayElementList().size()) {
                     KotlinType arrayElementType = getBuiltIns().getArrayElementType(kotlinType);
-                    C12880j.m40222a((Object) arrayElementType, "builtIns.getArrayElementType(expectedType)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) arrayElementType, "builtIns.getArrayElementType(expectedType)");
                     ArrayValue arrayValue = (ArrayValue) constantValue;
                     C12757d a = C13185o.m40514a((Collection) arrayValue.getValue());
                     if (!(a instanceof Collection) || !((Collection) a).isEmpty()) {
@@ -94,7 +94,7 @@ public final class AnnotationDeserializer {
                             int b = ((C13162e0) it).mo31079b();
                             ConstantValue constantValue2 = (ConstantValue) ((List) arrayValue.getValue()).get(b);
                             Value arrayElement = value.getArrayElement(b);
-                            C12880j.m40222a((Object) arrayElement, "value.getArrayElement(i)");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) arrayElement, "value.getArrayElement(i)");
                             if (!doesValueConformToExpectedType(constantValue2, arrayElementType, arrayElement)) {
                                 return false;
                             }
@@ -109,7 +109,7 @@ public final class AnnotationDeserializer {
             }
             return true;
         }
-        return C12880j.m40224a((Object) constantValue.getType(this.module), (Object) kotlinType);
+        return Intrinsics.areEqual((Object) constantValue.getType(this.module), (Object) kotlinType);
     }
 
     private final KotlinBuiltIns getBuiltIns() {
@@ -123,9 +123,9 @@ public final class AnnotationDeserializer {
         }
         Name name = NameResolverUtilKt.getName(nameResolver, argument.getNameId());
         KotlinType type = valueParameterDescriptor.getType();
-        C12880j.m40222a((Object) type, "parameter.type");
+        Intrinsics.checkReturnedValueIsNotNull((Object) type, "parameter.type");
         Value value = argument.getValue();
-        C12880j.m40222a((Object) value, "proto.value");
+        Intrinsics.checkReturnedValueIsNotNull((Object) value, "proto.value");
         return new Pair<>(name, resolveValueAndCheckExpectedType(type, value, nameResolver));
     }
 
@@ -156,11 +156,11 @@ public final class AnnotationDeserializer {
         Map a = C13173j0.m40350a();
         if (annotation.getArgumentCount() != 0 && !ErrorUtils.isError(resolveClass) && DescriptorUtils.isAnnotationClass(resolveClass)) {
             Collection constructors = resolveClass.getConstructors();
-            C12880j.m40222a((Object) constructors, "annotationClass.constructors");
+            Intrinsics.checkReturnedValueIsNotNull((Object) constructors, "annotationClass.constructors");
             ClassConstructorDescriptor classConstructorDescriptor = (ClassConstructorDescriptor) C13199w.m40603n(constructors);
             if (classConstructorDescriptor != null) {
                 List valueParameters = classConstructorDescriptor.getValueParameters();
-                C12880j.m40222a((Object) valueParameters, "constructor.valueParameters");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "constructor.valueParameters");
                 LinkedHashMap linkedHashMap = new LinkedHashMap(C12762h.m39913a(C13173j0.m40349a(C13187p.m40525a((Iterable) valueParameters, 10)), 16));
                 Iterator it = valueParameters.iterator();
                 while (true) {
@@ -170,14 +170,14 @@ public final class AnnotationDeserializer {
                     }
                     Object next = it.next();
                     ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) next;
-                    C12880j.m40222a((Object) valueParameterDescriptor, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, str);
                     linkedHashMap.put(valueParameterDescriptor.getName(), next);
                 }
                 List<Argument> argumentList = annotation.getArgumentList();
-                C12880j.m40222a((Object) argumentList, "proto.argumentList");
+                Intrinsics.checkReturnedValueIsNotNull((Object) argumentList, "proto.argumentList");
                 ArrayList arrayList = new ArrayList();
                 for (Argument argument : argumentList) {
-                    C12880j.m40222a((Object) argument, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) argument, str);
                     Pair resolveArgument = resolveArgument(argument, linkedHashMap, nameResolver);
                     if (resolveArgument != null) {
                         arrayList.add(resolveArgument);
@@ -200,7 +200,7 @@ public final class AnnotationDeserializer {
             int r1 = r7.getFlags()
             java.lang.Boolean r0 = r0.get(r1)
             java.lang.String r1 = "Flags.IS_UNSIGNED.get(value.flags)"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             boolean r0 = r0.booleanValue()
             kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Annotation$Argument$Value$Type r1 = r7.getType()
             if (r1 == 0) goto L_0x013e
@@ -229,7 +229,7 @@ public final class AnnotationDeserializer {
             kotlin.reflect.jvm.internal.impl.resolve.constants.ConstantValueFactory r0 = kotlin.reflect.jvm.internal.impl.resolve.constants.ConstantValueFactory.INSTANCE
             java.util.List r7 = r7.getArrayElementList()
             java.lang.String r1 = "value.arrayElementList"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r1)
             java.util.ArrayList r1 = new java.util.ArrayList
             r2 = 10
             int r2 = kotlin.p590y.C13187p.m40525a(r7, r2)
@@ -243,9 +243,9 @@ public final class AnnotationDeserializer {
             kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns r3 = r5.getBuiltIns()
             kotlin.reflect.jvm.internal.impl.types.SimpleType r3 = r3.getAnyType()
             java.lang.String r4 = "builtIns.anyType"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             java.lang.String r4 = "it"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r4)
             kotlin.reflect.jvm.internal.impl.resolve.constants.ConstantValue r2 = r5.resolveValue(r3, r2, r8)
             r1.add(r2)
             goto L_0x0040
@@ -256,7 +256,7 @@ public final class AnnotationDeserializer {
             kotlin.reflect.jvm.internal.impl.resolve.constants.AnnotationValue r6 = new kotlin.reflect.jvm.internal.impl.resolve.constants.AnnotationValue
             kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Annotation r7 = r7.getAnnotation()
             java.lang.String r0 = "value.annotation"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r0)
             kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor r7 = r5.deserializeAnnotation(r7, r8)
             r6.<init>(r7)
             goto L_0x013d

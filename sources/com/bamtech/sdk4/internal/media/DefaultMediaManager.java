@@ -24,7 +24,7 @@ import java.util.List;
 import javax.inject.Provider;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p584g0.C12747c;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Maybe;
@@ -74,12 +74,12 @@ public final class DefaultMediaManager implements MediaManager {
             completable = this.adEngineManager.updateCookies(serviceTransaction, AdEngineTrackingDataKt.parseTrackingData(onlineMediaItem));
         } else if (!isAdEngine) {
             completable = Completable.m38169h();
-            C12880j.m40222a((Object) completable, "Completable.complete()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) completable, "Completable.complete()");
         } else {
             throw new C12898l();
         }
         Single<? extends MediaItem> a = completable.mo30044a((SingleSource<T>) Single.m38399b(onlineMediaItem));
-        C12880j.m40222a((Object) a, "when (mediaItem.isAdEngi…n(Single.just(mediaItem))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "when (mediaItem.isAdEngi…n(Single.just(mediaItem))");
         return a;
     }
 
@@ -109,16 +109,16 @@ public final class DefaultMediaManager implements MediaManager {
                         return localBifThumbnail;
                     }
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
             Single<String> b = Single.m38399b("");
-            C12880j.m40222a((Object) b, "Single.just(\"\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(\"\")");
             return b;
         }
         Single<String> a = this.tokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultMediaManager$getBifThumbnail$1<Object,Object>(this, serviceTransaction, presentation));
-        C12880j.m40222a((Object) a, "tokenProvider.getAccessT…h))\n                    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "tokenProvider.getAccessT…h))\n                    }");
         return a;
     }
 
@@ -126,19 +126,19 @@ public final class DefaultMediaManager implements MediaManager {
         Single<List<BifThumbnailSet>> single;
         if (mediaItem instanceof OnlineMediaItem) {
             Single<List<BifThumbnailSet>> g = this.tokenProvider.getAccessToken(serviceTransaction).mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new DefaultMediaManager$getBifThumbnailSets$1<Object,Object>(this, mediaItem, serviceTransaction)).mo30134g();
-            C12880j.m40222a((Object) g, "tokenProvider.getAccessT…              .toSingle()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) g, "tokenProvider.getAccessT…              .toSingle()");
             return g;
         }
         OfflineMediaClient offlineMediaClient = (OfflineMediaClient) this.extensionInstanceProvider.get(OfflineMediaClient.class);
         if (offlineMediaClient == null) {
             single = Single.m38399b(C13185o.m40513a());
-            C12880j.m40222a((Object) single, "Single.just(listOf())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) single, "Single.just(listOf())");
         } else {
             Context context2 = this.context;
             if (context2 != null) {
                 single = offlineMediaClient.getLocalBifThumbnailSets(serviceTransaction, context2, mediaItem);
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -149,13 +149,13 @@ public final class DefaultMediaManager implements MediaManager {
         OfflineMediaClient offlineMediaClient = (OfflineMediaClient) this.extensionInstanceProvider.get(OfflineMediaClient.class);
         if (offlineMediaClient == null) {
             Maybe<MediaItem> h = Maybe.m38259h();
-            C12880j.m40222a((Object) h, "Maybe.empty<MediaItem>()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "Maybe.empty<MediaItem>()");
             return h;
         }
         Maybe d = DefaultImpls.getMediaItem$default(offlineMediaClient, serviceTransaction, mediaDescriptor, null, 4, null).mo30128d(new DefaultMediaManager$getCachedItem$1(this, serviceTransaction)).mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new DefaultMediaManager$getCachedItem$2<Object,Object>(this, serviceTransaction, mediaDescriptor)).mo30123c((Consumer<? super T>) new DefaultMediaManager$getCachedItem$3<Object>(this, serviceTransaction)).mo30127d();
         Playhead playhead = new Playhead(mediaDescriptor.getCachedMediaId(), 0, 0, "");
         Maybe<MediaItem> c = d.mo30115b((MaybeSource<? extends T>) Maybe.m38258c(playhead)).mo30103a((Function<? super T, ? extends MaybeSource<? extends R>>) new DefaultMediaManager$getCachedItem$4<Object,Object>(offlineMediaClient, serviceTransaction, mediaDescriptor)).mo30123c((Consumer<? super T>) new DefaultMediaManager$getCachedItem$5<Object>(this, playbackContext, mediaDescriptor));
-        C12880j.m40222a((Object) c, "offlineMediaClient.getMe…                        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "offlineMediaClient.getMe…                        }");
         return c;
     }
 
@@ -163,13 +163,13 @@ public final class DefaultMediaManager implements MediaManager {
         Maybe b = getCachedItem$sdk_core_api_release(serviceTransaction, mediaDescriptor, playbackContext).mo30115b((MaybeSource<? extends T>) getOnlineItem$sdk_core_api_release(serviceTransaction, mediaDescriptor, playbackContext));
         NotFoundException notFoundException = new NotFoundException(serviceTransaction.getId(), null, null, 6, null);
         Single<? extends MediaItem> a = b.mo30109a((SingleSource<? extends T>) Single.m38395a((Throwable) notFoundException));
-        C12880j.m40222a((Object) a, "getCachedItem(transactio…ception(transaction.id)))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "getCachedItem(transactio…ception(transaction.id)))");
         return a;
     }
 
     public final Maybe<MediaItem> getOnlineItem$sdk_core_api_release(ServiceTransaction serviceTransaction, MediaDescriptor mediaDescriptor, PlaybackContext playbackContext) {
         Maybe<MediaItem> c = this.onlineMediaClient.getMediaItem(serviceTransaction, mediaDescriptor, playbackContext).mo30131f(new DefaultMediaManager$getOnlineItem$1(this, serviceTransaction)).mo30123c((Consumer<? super T>) new DefaultMediaManager$getOnlineItem$2<Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) c, "onlineMediaClient.getMed…n, it)\n\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "onlineMediaClient.getMed…n, it)\n\n                }");
         return c;
     }
 
@@ -215,7 +215,7 @@ public final class DefaultMediaManager implements MediaManager {
             if (r4 == 0) goto L_0x004e
             goto L_0x004f
         L_0x004a:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r5
         L_0x004e:
             r2 = 0
@@ -233,7 +233,7 @@ public final class DefaultMediaManager implements MediaManager {
         L_0x006a:
             return r8
         L_0x006b:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r5
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtech.sdk4.internal.media.DefaultMediaManager.replacePlayheadIfNewer(com.bamtech.sdk4.internal.media.OnlineMediaItem, com.bamtech.sdk4.media.MediaPlayhead):com.bamtech.sdk4.media.MediaItem");

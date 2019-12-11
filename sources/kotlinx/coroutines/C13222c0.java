@@ -2,7 +2,7 @@ package kotlinx.coroutines;
 
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12680a;
 import kotlin.p573a0.C12688f;
 import kotlin.p573a0.C12688f.C12691b;
@@ -102,10 +102,10 @@ public final class C13222c0 extends C12680a implements C13225c2<String> {
         L_0x0013:
             java.lang.Thread r0 = java.lang.Thread.currentThread()
             java.lang.String r1 = "currentThread"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             java.lang.String r1 = r0.getName()
             java.lang.String r2 = "oldName"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             r4 = 0
             r5 = 0
             r6 = 6
@@ -124,7 +124,7 @@ public final class C13222c0 extends C12680a implements C13225c2<String> {
             r3 = 0
             java.lang.String r2 = r1.substring(r3, r2)
             java.lang.String r3 = "(this as java.lang.Strin…ing(startIndex, endIndex)"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r3)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r3)
             r4.append(r2)
             java.lang.String r2 = " @"
             r4.append(r2)
@@ -135,7 +135,7 @@ public final class C13222c0 extends C12680a implements C13225c2<String> {
             r4.append(r2)
             java.lang.String r9 = r4.toString()
             java.lang.String r2 = "StringBuilder(capacity).…builderAction).toString()"
-            kotlin.jvm.internal.C12880j.m40222a(r9, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r9, r2)
             r0.setName(r9)
             return r1
         */
@@ -145,7 +145,7 @@ public final class C13222c0 extends C12680a implements C13225c2<String> {
     /* renamed from: a */
     public void mo34357a(C12688f fVar, String str) {
         Thread currentThread = Thread.currentThread();
-        C12880j.m40222a((Object) currentThread, "Thread.currentThread()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) currentThread, "Thread.currentThread()");
         currentThread.setName(str);
     }
 }

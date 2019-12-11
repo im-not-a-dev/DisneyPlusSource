@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.components;
 
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -22,7 +22,7 @@ public final class JavaRetentionAnnotationDescriptor extends JavaAnnotationDescr
 
     public JavaRetentionAnnotationDescriptor(JavaAnnotation javaAnnotation, LazyJavaResolverContext lazyJavaResolverContext) {
         FqName fqName = KotlinBuiltIns.FQ_NAMES.retention;
-        C12880j.m40222a((Object) fqName, "KotlinBuiltIns.FQ_NAMES.retention");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "KotlinBuiltIns.FQ_NAMES.retention");
         super(lazyJavaResolverContext, javaAnnotation, fqName);
         this.allValueArguments$delegate = lazyJavaResolverContext.getStorageManager().createLazyValue(new JavaRetentionAnnotationDescriptor$allValueArguments$2(this));
     }

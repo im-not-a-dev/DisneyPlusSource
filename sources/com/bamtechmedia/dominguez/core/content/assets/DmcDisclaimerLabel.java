@@ -41,7 +41,7 @@ public final class DmcDisclaimerLabel implements Parcelable, C3683e {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0014, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) mo12863X(), (java.lang.Object) ((com.bamtechmedia.dominguez.core.content.assets.DmcDisclaimerLabel) r2).mo12863X()) != false) goto L_0x0019;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) mo12863X(), (java.lang.Object) ((com.bamtechmedia.dominguez.core.content.assets.DmcDisclaimerLabel) r2).mo12863X()) != false) goto L_0x0019;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -53,7 +53,7 @@ public final class DmcDisclaimerLabel implements Parcelable, C3683e {
             com.bamtechmedia.dominguez.core.content.assets.DmcDisclaimerLabel r2 = (com.bamtechmedia.dominguez.core.content.assets.DmcDisclaimerLabel) r2
             java.lang.String r0 = r1.mo12863X()
             java.lang.String r2 = r2.mo12863X()
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0017
             goto L_0x0019
         L_0x0017:

@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.util.Map;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -89,22 +89,22 @@ public final class C3634h extends C11725h<C3626b> {
                 if (hashCode != -711993159) {
                     if (hashCode == 756050958 && str.equals("promotional")) {
                         C11725h<? extends C3632f> a = this.f9138a.mo29866a(DmcExtra.class);
-                        C12880j.m40222a((Object) a, str2);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) a, str2);
                         return a;
                     }
                 } else if (str.equals("supplement")) {
                     C11725h<? extends C3632f> a2 = this.f9138a.mo29866a(DmcExtra.class);
-                    C12880j.m40222a((Object) a2, str2);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a2, str2);
                     return a2;
                 }
             } else if (str.equals("episode")) {
                 C11725h<? extends C3632f> a3 = this.f9138a.mo29866a(DmcEpisode.class);
-                C12880j.m40222a((Object) a3, "moshi.adapter(DmcEpisode::class.java)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter(DmcEpisode::class.java)");
                 return a3;
             }
         }
         C11725h<? extends C3632f> a4 = this.f9138a.mo29866a(DmcMovie.class);
-        C12880j.m40222a((Object) a4, "moshi.adapter(DmcMovie::class.java)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter(DmcMovie::class.java)");
         return a4;
     }
 }

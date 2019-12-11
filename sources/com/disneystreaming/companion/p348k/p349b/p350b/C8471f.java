@@ -4,7 +4,7 @@ import java.security.KeyPair;
 import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p602m.p613d.p639c.p640a.p641a.p642a.C13770e.C13771a;
 import p602m.p613d.p649d.p652c.C13796b;
 
@@ -46,7 +46,7 @@ public final class C8471f {
     /* renamed from: a */
     public final KeyPair mo21757a() {
         KeyPair generateKeyPair = this.f18028a.generateKeyPair();
-        C12880j.m40222a((Object) generateKeyPair, "generator.generateKeyPair()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) generateKeyPair, "generator.generateKeyPair()");
         return generateKeyPair;
     }
 }

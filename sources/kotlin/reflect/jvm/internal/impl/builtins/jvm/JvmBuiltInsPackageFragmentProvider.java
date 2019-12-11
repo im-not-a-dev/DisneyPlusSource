@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 
 import java.io.InputStream;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.functions.BuiltInFictitiousFunctionClassFactory;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses;
@@ -43,7 +43,7 @@ public final class JvmBuiltInsPackageFragmentProvider extends AbstractDeserializ
         ErrorReporter errorReporter = ErrorReporter.DO_NOTHING;
         ErrorReporter errorReporter2 = errorReporter;
         DeserializationComponents deserializationComponents = r0;
-        C12880j.m40222a((Object) errorReporter, "ErrorReporter.DO_NOTHING");
+        Intrinsics.checkReturnedValueIsNotNull((Object) errorReporter, "ErrorReporter.DO_NOTHING");
         DO_NOTHING do_nothing = DO_NOTHING.INSTANCE;
         ThrowException throwException = ThrowException.INSTANCE;
         DeserializationComponents deserializationComponents2 = deserializationComponents;

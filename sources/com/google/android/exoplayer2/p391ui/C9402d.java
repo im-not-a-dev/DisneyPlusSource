@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Looper;
 import android.widget.TextView;
 import com.google.android.exoplayer2.C8729j0;
-import com.google.android.exoplayer2.C8802o0;
+import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.PlaybackParameters;
@@ -27,9 +27,9 @@ public class C9402d implements EventListener, Runnable {
     private boolean f21737V;
 
     /* renamed from: c */
-    private final C8802o0 f21738c;
+    private final SimpleExoPlayer f21738c;
 
-    public C9402d(C8802o0 o0Var, TextView textView) {
+    public C9402d(SimpleExoPlayer o0Var, TextView textView) {
         C9537e.m29299a(o0Var.getApplicationLooper() == Looper.getMainLooper());
         this.f21738c = o0Var;
         this.f21736U = textView;

@@ -12,7 +12,7 @@ import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12860a0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.Visibility;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClassifierType;
@@ -46,7 +46,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements JavaCl
             return false;
         } else {
             Class[] parameterTypes = method.getParameterTypes();
-            C12880j.m40222a((Object) parameterTypes, "method.parameterTypes");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameterTypes, "method.parameterTypes");
             if (parameterTypes.length == 0) {
                 return true;
             }
@@ -55,12 +55,12 @@ public final class ReflectJavaClass extends ReflectJavaElement implements JavaCl
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof ReflectJavaClass) && C12880j.m40224a((Object) this.klass, (Object) ((ReflectJavaClass) obj).klass);
+        return (obj instanceof ReflectJavaClass) && Intrinsics.areEqual((Object) this.klass, (Object) ((ReflectJavaClass) obj).klass);
     }
 
     public FqName getFqName() {
         FqName asSingleFqName = ReflectClassUtilKt.getClassId(this.klass).asSingleFqName();
-        C12880j.m40222a((Object) asSingleFqName, "klass.classId.asSingleFqName()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asSingleFqName, "klass.classId.asSingleFqName()");
         return asSingleFqName;
     }
 
@@ -74,13 +74,13 @@ public final class ReflectJavaClass extends ReflectJavaElement implements JavaCl
 
     public Name getName() {
         Name identifier = Name.identifier(this.klass.getSimpleName());
-        C12880j.m40222a((Object) identifier, "Name.identifier(klass.simpleName)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(klass.simpleName)");
         return identifier;
     }
 
     public Collection<JavaClassifierType> getSupertypes() {
         Type type = Object.class;
-        if (C12880j.m40224a((Object) this.klass, (Object) type)) {
+        if (Intrinsics.areEqual((Object) this.klass, (Object) type)) {
             return C13185o.m40513a();
         }
         C12860a0 a0Var = new C12860a0(2);
@@ -90,7 +90,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements JavaCl
         }
         a0Var.mo31155a((Object) type);
         Type[] genericInterfaces = this.klass.getGenericInterfaces();
-        C12880j.m40222a((Object) genericInterfaces, "klass.genericInterfaces");
+        Intrinsics.checkReturnedValueIsNotNull((Object) genericInterfaces, "klass.genericInterfaces");
         a0Var.mo31157b(genericInterfaces);
         List<Type> c = C13185o.m40520c((Type[]) a0Var.mo31156a((Object[]) new Type[a0Var.mo31154a()]));
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) c, 10));
@@ -102,7 +102,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements JavaCl
 
     public List<ReflectJavaTypeParameter> getTypeParameters() {
         TypeVariable[] typeParameters = this.klass.getTypeParameters();
-        C12880j.m40222a((Object) typeParameters, "klass.typeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, "klass.typeParameters");
         ArrayList arrayList = new ArrayList(typeParameters.length);
         for (TypeVariable reflectJavaTypeParameter : typeParameters) {
             arrayList.add(new ReflectJavaTypeParameter(reflectJavaTypeParameter));
@@ -164,7 +164,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements JavaCl
 
     public List<ReflectJavaConstructor> getConstructors() {
         Constructor[] declaredConstructors = this.klass.getDeclaredConstructors();
-        C12880j.m40222a((Object) declaredConstructors, "klass.declaredConstructors");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredConstructors, "klass.declaredConstructors");
         return C12788p.m39999g(C12788p.m39994d(C12788p.m39990b(C13174k.m40401c((Object[]) declaredConstructors), ReflectJavaClass$constructors$1.INSTANCE), ReflectJavaClass$constructors$2.INSTANCE));
     }
 
@@ -174,19 +174,19 @@ public final class ReflectJavaClass extends ReflectJavaElement implements JavaCl
 
     public List<ReflectJavaField> getFields() {
         Field[] declaredFields = this.klass.getDeclaredFields();
-        C12880j.m40222a((Object) declaredFields, "klass.declaredFields");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredFields, "klass.declaredFields");
         return C12788p.m39999g(C12788p.m39994d(C12788p.m39990b(C13174k.m40401c((Object[]) declaredFields), ReflectJavaClass$fields$1.INSTANCE), ReflectJavaClass$fields$2.INSTANCE));
     }
 
     public List<Name> getInnerClassNames() {
         Class[] declaredClasses = this.klass.getDeclaredClasses();
-        C12880j.m40222a((Object) declaredClasses, "klass.declaredClasses");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredClasses, "klass.declaredClasses");
         return C12788p.m39999g(C12788p.m39996e(C12788p.m39990b(C13174k.m40401c((Object[]) declaredClasses), ReflectJavaClass$innerClassNames$1.INSTANCE), ReflectJavaClass$innerClassNames$2.INSTANCE));
     }
 
     public List<ReflectJavaMethod> getMethods() {
         Method[] declaredMethods = this.klass.getDeclaredMethods();
-        C12880j.m40222a((Object) declaredMethods, "klass.declaredMethods");
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredMethods, "klass.declaredMethods");
         return C12788p.m39999g(C12788p.m39994d(C12788p.m39989a(C13174k.m40401c((Object[]) declaredMethods), (Function1<? super T, Boolean>) new ReflectJavaClass$methods$1<Object,Boolean>(this)), ReflectJavaClass$methods$2.INSTANCE));
     }
 

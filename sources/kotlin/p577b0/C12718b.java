@@ -1,7 +1,7 @@
 package kotlin.p577b0;
 
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 
 /* renamed from: kotlin.b0.b */
@@ -25,7 +25,7 @@ public final class C12718b {
         if (a >= 65544) {
             try {
                 newInstance2 = Class.forName("kotlin.b0.e.a").newInstance();
-                C12880j.m40222a(newInstance2, str5);
+                Intrinsics.checkReturnedValueIsNotNull(newInstance2, str5);
                 if (newInstance2 != null) {
                     aVar = (C12716a) newInstance2;
                     f29405a = aVar;
@@ -40,12 +40,12 @@ public final class C12718b {
                 sb.append(str2);
                 sb.append(classLoader2);
                 Throwable initCause = new ClassCastException(sb.toString()).initCause(e);
-                C12880j.m40222a((Object) initCause, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) initCause, str);
                 throw initCause;
             } catch (ClassNotFoundException unused) {
                 try {
                     Object newInstance3 = Class.forName("kotlin.internal.JRE8PlatformImplementations").newInstance();
-                    C12880j.m40222a(newInstance3, str5);
+                    Intrinsics.checkReturnedValueIsNotNull(newInstance3, str5);
                     if (newInstance3 != null) {
                         try {
                             aVar = (C12716a) newInstance3;
@@ -58,7 +58,7 @@ public final class C12718b {
                             sb2.append(str2);
                             sb2.append(classLoader4);
                             Throwable initCause2 = new ClassCastException(sb2.toString()).initCause(e2);
-                            C12880j.m40222a((Object) initCause2, str);
+                            Intrinsics.checkReturnedValueIsNotNull((Object) initCause2, str);
                             throw initCause2;
                         }
                     } else {
@@ -71,7 +71,7 @@ public final class C12718b {
         if (a >= 65543) {
             try {
                 newInstance = Class.forName("kotlin.b0.d.a").newInstance();
-                C12880j.m40222a(newInstance, str5);
+                Intrinsics.checkReturnedValueIsNotNull(newInstance, str5);
                 if (newInstance != null) {
                     aVar = (C12716a) newInstance;
                     f29405a = aVar;
@@ -86,12 +86,12 @@ public final class C12718b {
                 sb3.append(str2);
                 sb3.append(classLoader6);
                 Throwable initCause3 = new ClassCastException(sb3.toString()).initCause(e3);
-                C12880j.m40222a((Object) initCause3, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) initCause3, str);
                 throw initCause3;
             } catch (ClassNotFoundException unused3) {
                 try {
                     Object newInstance4 = Class.forName("kotlin.internal.JRE7PlatformImplementations").newInstance();
-                    C12880j.m40222a(newInstance4, str5);
+                    Intrinsics.checkReturnedValueIsNotNull(newInstance4, str5);
                     if (newInstance4 != null) {
                         try {
                             aVar = (C12716a) newInstance4;
@@ -104,7 +104,7 @@ public final class C12718b {
                             sb4.append(str2);
                             sb4.append(classLoader8);
                             Throwable initCause4 = new ClassCastException(sb4.toString()).initCause(e4);
-                            C12880j.m40222a((Object) initCause4, str);
+                            Intrinsics.checkReturnedValueIsNotNull((Object) initCause4, str);
                             throw initCause4;
                         }
                     } else {
@@ -142,10 +142,10 @@ public final class C12718b {
         if (property != null) {
             String substring = property.substring(0, a);
             String str2 = "(this as java.lang.Strin…ing(startIndex, endIndex)";
-            C12880j.m40222a((Object) substring, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) substring, str2);
             if (property != null) {
                 String substring2 = property.substring(i2, a2);
-                C12880j.m40222a((Object) substring2, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) substring2, str2);
                 try {
                     i = (Integer.parseInt(substring) * DateUtils.FORMAT_ABBREV_MONTH) + Integer.parseInt(substring2);
                 } catch (NumberFormatException unused2) {

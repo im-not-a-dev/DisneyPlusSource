@@ -334,7 +334,7 @@ public interface MediaSourceEventListener {
 
         /* renamed from: a */
         private long m26928a(long j) {
-            long b = C8883r.m25968b(j);
+            long b = C8883r.usToMs(j);
             if (b == -9223372036854775807L) {
                 return -9223372036854775807L;
             }

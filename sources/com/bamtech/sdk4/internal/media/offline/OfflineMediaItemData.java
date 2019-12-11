@@ -61,7 +61,7 @@ public final class OfflineMediaItemData implements OfflineMediaItem {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:20:0x007c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) getPlaybackContext(), (java.lang.Object) r3.getPlaybackContext()) != false) goto L_0x0081;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) getPlaybackContext(), (java.lang.Object) r3.getPlaybackContext()) != false) goto L_0x0081;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -73,39 +73,39 @@ public final class OfflineMediaItemData implements OfflineMediaItem {
             com.bamtech.sdk4.internal.media.offline.OfflineMediaItemData r3 = (com.bamtech.sdk4.internal.media.offline.OfflineMediaItemData) r3
             java.lang.String r0 = r2.mediaCacheUrl
             java.lang.String r1 = r3.mediaCacheUrl
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x007f
             java.lang.String r0 = r2.contentId
             java.lang.String r1 = r3.contentId
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x007f
             com.bamtech.sdk4.media.MediaDescriptor r0 = r2.getDescriptor()
             com.bamtech.sdk4.media.MediaDescriptor r1 = r3.getDescriptor()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x007f
             java.util.List r0 = r2.getPlaylistVariants()
             java.util.List r1 = r3.getPlaylistVariants()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x007f
             java.util.Map r0 = r2.getTelemetry()
             java.util.Map r1 = r3.getTelemetry()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x007f
             java.util.Map r0 = r2.getAdEngine()
             java.util.Map r1 = r3.getAdEngine()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x007f
             java.util.Map r0 = r2.getConviva()
             java.util.Map r1 = r3.getConviva()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x007f
             com.bamtech.sdk4.MediaThumbnailLinks r0 = r2.getThumbnails()
             com.bamtech.sdk4.MediaThumbnailLinks r1 = r3.getThumbnails()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x007f
             com.bamtech.sdk4.media.PlaybackContext r0 = r2.getPlaybackContext()
             com.bamtech.sdk4.media.PlaybackContext r3 = r3.getPlaybackContext()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x007f
             goto L_0x0081
         L_0x007f:

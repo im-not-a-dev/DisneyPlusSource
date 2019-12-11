@@ -17,7 +17,7 @@ import p163g.p426g.p427a.p428i.C10819a;
 import p163g.p426g.p427a.p428i.C10821c;
 import p163g.p426g.p427a.p428i.C10821c.C10826e;
 import p163g.p426g.p427a.p429j.C10836j;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtech.player.exo.i.f */
 /* compiled from: ConvivaSessionManager */
@@ -122,7 +122,7 @@ public class C1716f {
                 this.f5986c = true;
             }
         } catch (Exception e) {
-            C14100a.m44528b(e, "Failed to initialize LivePass", new Object[0]);
+            Timber.m44528b(e, "Failed to initialize LivePass", new Object[0]);
         }
         return this.f5992i;
     }
@@ -130,18 +130,18 @@ public class C1716f {
     /* renamed from: c */
     public void mo7696c() {
         if (!this.f5986c || this.f5992i == null) {
-            C14100a.m44532e("ConvivaSessionManager", "Unable to clean session since client not initialized");
+            Timber.m44532e("ConvivaSessionManager", "Unable to clean session since client not initialized");
             return;
         }
         if (mo7697d()) {
             StringBuilder sb = new StringBuilder();
             sb.append("cleanup session: ");
             sb.append(this.f5993j);
-            C14100a.m44522a(sb.toString(), new Object[0]);
+            Timber.m44522a(sb.toString(), new Object[0]);
             try {
                 this.f5992i.mo27829b(this.f5993j);
             } catch (Exception e) {
-                C14100a.m44528b(e, "Failed to cleanup", new Object[0]);
+                Timber.m44528b(e, "Failed to cleanup", new Object[0]);
             }
             this.f5993j = -1;
         }
@@ -155,7 +155,7 @@ public class C1716f {
     /* renamed from: a */
     public void mo7693a(String str) {
         if (!this.f5986c || this.f5992i == null) {
-            C14100a.m44526b("ConvivaSessionManager", "Unable to create session since client not initialized");
+            Timber.m44526b("ConvivaSessionManager", "Unable to create session since client not initialized");
             return;
         }
         try {
@@ -166,7 +166,7 @@ public class C1716f {
             StringBuilder sb = new StringBuilder();
             sb.append("Unable to cleanup session: ");
             sb.append(e.toString());
-            C14100a.m44528b(e, sb.toString(), new Object[0]);
+            Timber.m44528b(e, sb.toString(), new Object[0]);
         }
         try {
             new HashMap().put("key", "value");
@@ -175,7 +175,7 @@ public class C1716f {
             this.f5992i.mo27827a(this.f5993j, this.f5987d);
             this.f5995l = str;
         } catch (Exception e2) {
-            C14100a.m44528b(e2, "Failed to create session", new Object[0]);
+            Timber.m44528b(e2, "Failed to create session", new Object[0]);
         }
     }
 
@@ -184,15 +184,15 @@ public class C1716f {
         m7968f();
         String str = "ConvivaSessionManager";
         if (!this.f5986c || this.f5992i == null) {
-            C14100a.m44526b(str, "Unable to start Ad since client not initialized");
+            Timber.m44526b(str, "Unable to start Ad since client not initialized");
         } else if (!mo7697d()) {
-            C14100a.m44526b("adStart() requires a session", new Object[0]);
+            Timber.m44526b("adStart() requires a session", new Object[0]);
         } else {
             try {
                 this.f5992i.mo27826a(this.f5993j, C10801k.SEPARATE, C10799i.SEPARATE, C10800j.PREROLL);
             } catch (Exception e) {
-                C14100a.m44526b(str, "Failed to start Ad");
-                C14100a.m44523a((Throwable) e);
+                Timber.m44526b(str, "Failed to start Ad");
+                Timber.m44523a((Throwable) e);
             }
         }
     }
@@ -203,13 +203,13 @@ public class C1716f {
             m7968f();
         }
         if (!this.f5986c || this.f5992i == null) {
-            C14100a.m44526b("ConvivaSessionManager", "Unable to report error since client not initialized");
+            Timber.m44526b("ConvivaSessionManager", "Unable to report error since client not initialized");
             return;
         }
         try {
             this.f5992i.mo27828a(this.f5993j, str, z ? C10810m.FATAL : C10810m.WARNING);
         } catch (Exception e) {
-            C14100a.m44528b(e, "Failed to report error", new Object[0]);
+            Timber.m44528b(e, "Failed to report error", new Object[0]);
         }
     }
 
@@ -217,14 +217,14 @@ public class C1716f {
     public void mo7688a() {
         m7968f();
         if (!this.f5986c || this.f5992i == null) {
-            C14100a.m44526b("ConvivaSessionManager", "Unable to stop Ad since client not initialized");
+            Timber.m44526b("ConvivaSessionManager", "Unable to stop Ad since client not initialized");
         } else if (!mo7697d()) {
-            C14100a.m44526b("adEnd() requires a session", new Object[0]);
+            Timber.m44526b("adEnd() requires a session", new Object[0]);
         } else {
             try {
                 this.f5992i.mo27825a(this.f5993j);
             } catch (Exception e) {
-                C14100a.m44528b(e, "Failed to end Ad", new Object[0]);
+                Timber.m44528b(e, "Failed to end Ad", new Object[0]);
             }
         }
     }
@@ -237,7 +237,7 @@ public class C1716f {
                 m7967e().mo27879b((int) j);
             }
         } catch (Exception e) {
-            C14100a.m44523a((Throwable) e);
+            Timber.m44523a((Throwable) e);
         }
     }
 
@@ -249,7 +249,7 @@ public class C1716f {
                 m7967e().mo27873a(i);
             }
         } catch (Exception e) {
-            C14100a.m44523a((Throwable) e);
+            Timber.m44523a((Throwable) e);
         }
     }
 
@@ -264,7 +264,7 @@ public class C1716f {
         try {
             this.f5987d.mo27875a(eVar);
         } catch (Exception e) {
-            C14100a.m44523a((Throwable) e);
+            Timber.m44523a((Throwable) e);
         }
     }
 }

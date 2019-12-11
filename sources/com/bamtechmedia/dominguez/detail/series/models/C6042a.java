@@ -144,7 +144,7 @@ public final class C6042a implements C6046d, Parcelable {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:14:0x0046, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13930Z, (java.lang.Object) r3.f13930Z) != false) goto L_0x004b;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13930Z, (java.lang.Object) r3.f13930Z) != false) goto L_0x004b;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -156,27 +156,27 @@ public final class C6042a implements C6046d, Parcelable {
             com.bamtechmedia.dominguez.detail.series.models.a r3 = (com.bamtechmedia.dominguez.detail.series.models.C6042a) r3
             com.bamtechmedia.dominguez.core.content.assets.DmcSeries r0 = r2.f13925U
             com.bamtechmedia.dominguez.core.content.assets.DmcSeries r1 = r3.f13925U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0049
             com.bamtechmedia.dominguez.core.content.PromoLabel r0 = r2.mo18283Z()
             com.bamtechmedia.dominguez.core.content.PromoLabel r1 = r3.mo18283Z()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0049
             com.bamtechmedia.dominguez.detail.series.models.SeriesBundleSeasons r0 = r2.f13927W
             com.bamtechmedia.dominguez.detail.series.models.SeriesBundleSeasons r1 = r3.f13927W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0049
             com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes r0 = r2.f13928X
             com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes r1 = r3.f13928X
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0049
             com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent r0 = r2.f13929Y
             com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent r1 = r3.f13929Y
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0049
             com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent r0 = r2.f13930Z
             com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent r3 = r3.f13930Z
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0049
             goto L_0x004b
         L_0x0049:

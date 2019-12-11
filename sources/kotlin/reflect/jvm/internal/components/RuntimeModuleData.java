@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.components;
 
 import kotlin.C13145v;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.ReflectionTypes;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns.Kind;
@@ -61,7 +61,7 @@ public final class RuntimeModuleData {
             sb.append(classLoader2);
             sb.append('>');
             Name special = Name.special(sb.toString());
-            C12880j.m40222a((Object) special, "Name.special(\"<runtime module for $classLoader>\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) special, "Name.special(\"<runtime module for $classLoader>\")");
             JvmBuiltIns jvmBuiltIns2 = jvmBuiltIns;
             ModuleDescriptorImpl moduleDescriptorImpl2 = new ModuleDescriptorImpl(special, lockBasedStorageManager2, jvmBuiltIns2, null, null, null, 56, null);
             jvmBuiltIns.setBuiltInsModule(moduleDescriptorImpl2);
@@ -81,12 +81,12 @@ public final class RuntimeModuleData {
             LockBasedStorageManager lockBasedStorageManager3 = lockBasedStorageManager2;
             SignaturePropagator signaturePropagator2 = signaturePropagator;
             SingleModuleClassResolver singleModuleClassResolver3 = singleModuleClassResolver2;
-            C12880j.m40222a((Object) signaturePropagator, "SignaturePropagator.DO_NOTHING");
+            Intrinsics.checkReturnedValueIsNotNull((Object) signaturePropagator, "SignaturePropagator.DO_NOTHING");
             RuntimeErrorReporter runtimeErrorReporter = RuntimeErrorReporter.INSTANCE;
             JavaResolverCache javaResolverCache = JavaResolverCache.EMPTY;
             JavaResolverCache javaResolverCache2 = javaResolverCache;
             String str = "JavaResolverCache.EMPTY";
-            C12880j.m40222a((Object) javaResolverCache, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) javaResolverCache, str);
             DoNothing doNothing = DoNothing.INSTANCE;
             Empty empty = Empty.INSTANCE;
             RuntimeSourceElementFactory runtimeSourceElementFactory = RuntimeSourceElementFactory.INSTANCE;
@@ -102,7 +102,7 @@ public final class RuntimeModuleData {
             LazyJavaPackageFragmentProvider lazyJavaPackageFragmentProvider = new LazyJavaPackageFragmentProvider(javaResolverComponents);
             jvmBuiltIns2.initialize(moduleDescriptorImpl3, true);
             JavaResolverCache javaResolverCache3 = JavaResolverCache.EMPTY;
-            C12880j.m40222a((Object) javaResolverCache3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) javaResolverCache3, str);
             JavaDescriptorResolver javaDescriptorResolver = new JavaDescriptorResolver(lazyJavaPackageFragmentProvider, javaResolverCache3);
             JavaClassDataFinder javaClassDataFinder = new JavaClassDataFinder(reflectKotlinClassFinder2, deserializedDescriptorResolver2);
             LockBasedStorageManager lockBasedStorageManager5 = lockBasedStorageManager4;
@@ -125,7 +125,7 @@ public final class RuntimeModuleData {
             ModuleDescriptorImpl moduleDescriptorImpl6 = moduleDescriptorImpl5;
             DeserializationComponentsForJava deserializationComponentsForJava2 = new DeserializationComponentsForJava(lockBasedStorageManager6, moduleDescriptorImpl4, defaultR2, javaClassDataFinder2, binaryClassAnnotationAndConstantLoaderImpl2, lazyJavaPackageFragmentProvider2, notFoundClasses2, RuntimeErrorReporter.INSTANCE, DO_NOTHING.INSTANCE, ContractDeserializer.Companion.getDEFAULT());
             ClassLoader classLoader3 = C13145v.class.getClassLoader();
-            C12880j.m40222a((Object) classLoader3, "stdlibClassLoader");
+            Intrinsics.checkReturnedValueIsNotNull((Object) classLoader3, "stdlibClassLoader");
             JvmBuiltInsPackageFragmentProvider jvmBuiltInsPackageFragmentProvider = new JvmBuiltInsPackageFragmentProvider(lockBasedStorageManager7, new ReflectKotlinClassFinder(classLoader3), moduleDescriptorImpl6, notFoundClasses2, jvmBuiltIns3.getSettings(), jvmBuiltIns3.getSettings(), DeserializationConfiguration.Default.INSTANCE);
             singleModuleClassResolver4.setResolver(javaDescriptorResolver);
             DeserializationComponentsForJava deserializationComponentsForJava3 = deserializationComponentsForJava;

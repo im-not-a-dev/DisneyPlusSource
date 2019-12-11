@@ -20,7 +20,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p201e.p203b.p299m.C7543f.C7544a;
@@ -33,7 +33,7 @@ import p520io.reactivex.C11960n;
 import p520io.reactivex.Observable;
 import p520io.reactivex.disposables.CompositeDisposable;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000h\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u0000 -2\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0002-.BE\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0012¢\u0006\u0002\u0010\u0013J\u000e\u0010\u001c\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u0004J\b\u0010\u001f\u001a\u00020\u001dH\u0002J\u001c\u0010 \u001a\u00020\u001d2\u0012\u0010!\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020$0#0\"H\u0002J\u0018\u0010%\u001a\u00020\u001d2\u0006\u0010&\u001a\u00020'2\u0006\u0010(\u001a\u00020\u0010H\u0002J\b\u0010)\u001a\u00020\u001dH\u0016J\u000e\u0010*\u001a\u00020\u001d2\u0006\u0010\u001e\u001a\u00020\u0004J\u0010\u0010+\u001a\u00020\u001d2\b\b\u0002\u0010(\u001a\u00020\u0010J\b\u0010,\u001a\u00020\u001dH\u0002R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R$\u0010\u0014\u001a\u00020\u00158\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\u0016\u0010\u0017\u001a\u0004\b\u0018\u0010\u0019\"\u0004\b\u001a\u0010\u001bR\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000¨\u0006/"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/otp/OtpViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/auth/otp/OtpViewModel$State;", "email", "", "requestAction", "Lcom/bamtechmedia/dominguez/auth/otp/OtpRequestAction;", "redeemAction", "Lcom/bamtechmedia/dominguez/auth/otp/OtpRedeemAction;", "authSuccessAction", "Lcom/bamtechmedia/dominguez/auth/AuthSuccessAction;", "errorRouter", "Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;", "dialogRouter", "Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;", "isTelevision", "", "otpAnalytics", "Lcom/bamtechmedia/dominguez/auth/otp/OtpAnalytics;", "(Ljava/lang/String;Lcom/bamtechmedia/dominguez/auth/otp/OtpRequestAction;Lcom/bamtechmedia/dominguez/auth/otp/OtpRedeemAction;Lcom/bamtechmedia/dominguez/auth/AuthSuccessAction;Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;ZLcom/bamtechmedia/dominguez/auth/otp/OtpAnalytics;)V", "disposables", "Lio/reactivex/disposables/CompositeDisposable;", "disposables$annotations", "()V", "getDisposables$auth_release", "()Lio/reactivex/disposables/CompositeDisposable;", "setDisposables$auth_release", "(Lio/reactivex/disposables/CompositeDisposable;)V", "authenticateWithPasscode", "", "passcode", "handleAuthSuccess", "handleRedeemStream", "redeemStream", "Lkotlin/Function0;", "Lio/reactivex/Observable;", "Lcom/bamtechmedia/dominguez/auth/otp/OtpRedeemAction$RedeemActionState;", "handleRequestActionState", "newState", "Lcom/bamtechmedia/dominguez/auth/otp/OtpRequestAction$RequestActionState;", "resend", "onCleared", "redeemForPasswordReset", "requestOtpEmail", "showResentMessage", "Companion", "State", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.s0.o0 */
@@ -179,7 +179,7 @@ public final class C2901o0 extends C5741g<C2903b> {
                 if (obj instanceof C2903b) {
                     C2903b bVar = (C2903b) obj;
                     if (this.f7722a == bVar.f7722a) {
-                        if ((this.f7723b == bVar.f7723b) && C12880j.m40224a((Object) this.f7724c, (Object) bVar.f7724c)) {
+                        if ((this.f7723b == bVar.f7723b) && Intrinsics.areEqual((Object) this.f7724c, (Object) bVar.f7724c)) {
                             if (this.f7725d == bVar.f7725d) {
                                 if (this.f7726e == bVar.f7726e) {
                                     if (this.f7727f == bVar.f7727f) {
@@ -472,7 +472,7 @@ public final class C2901o0 extends C5741g<C2903b> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error attempting to authenticate with OTP passcode.", new Object[0]);
+            Timber.m44528b(th, "Error attempting to authenticate with OTP passcode.", new Object[0]);
             C7627a.m22614a(this.f7738c.f7718f, null, 1, null);
         }
     }
@@ -552,7 +552,7 @@ public final class C2901o0 extends C5741g<C2903b> {
         /* renamed from: a */
         public final void accept(C2941a aVar) {
             C2901o0 o0Var = this.f7744c;
-            C12880j.m40222a((Object) aVar, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "it");
             o0Var.m10649a(aVar, this.f7743U);
         }
     }
@@ -570,7 +570,7 @@ public final class C2901o0 extends C5741g<C2903b> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error requesting OTP passcode email to be sent.", new Object[0]);
+            Timber.m44528b(th, "Error requesting OTP passcode email to be sent.", new Object[0]);
             C7627a.m22614a(this.f7745c.f7718f, null, 1, null);
         }
     }
@@ -637,7 +637,7 @@ public final class C2901o0 extends C5741g<C2903b> {
     /* renamed from: d */
     public final void mo11905d(boolean z) {
         Object a = this.f7715c.mo11943a(this.f7714b).mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C2917k(this, z), new C2918l(this));
     }
 
@@ -668,7 +668,7 @@ public final class C2901o0 extends C5741g<C2903b> {
     private final void m10650a(Function0<? extends Observable<C2929a>> function0) {
         C2906e eVar = new C2906e(this);
         Object a = ((Observable) function0.invoke()).mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C2920p0(new C2912f(eVar)), new C2913g(this));
     }
 }

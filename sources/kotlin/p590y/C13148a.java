@@ -5,7 +5,7 @@ import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12871f;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.p589f0.C12872a;
 
@@ -54,7 +54,7 @@ public abstract class C13148a<E> implements Collection<E>, C12872a {
             return false;
         }
         for (Object a : this) {
-            if (C12880j.m40224a(a, obj)) {
+            if (Intrinsics.areEqual(a, obj)) {
                 return true;
             }
         }

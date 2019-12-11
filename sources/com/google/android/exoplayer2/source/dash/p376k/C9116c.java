@@ -13,9 +13,9 @@ import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.metadata.p356g.C8746a;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9549j0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9556l0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.source.dash.p376k.C9127j.C9129b;
 import com.google.android.exoplayer2.source.dash.p376k.C9127j.C9130c;
@@ -119,7 +119,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r0 = 0
             java.lang.String r1 = "value"
             java.lang.String r5 = r5.getAttributeValue(r0, r1)
-            java.lang.String r5 = com.google.android.exoplayer2.p393v0.C9554k0.m29457k(r5)
+            java.lang.String r5 = com.google.android.exoplayer2.p393v0.Util.m29457k(r5)
             r0 = -1
             if (r5 != 0) goto L_0x000f
             return r0
@@ -295,7 +295,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r3 = 1
             r4 = 0
             if (r2 == 0) goto L_0x0098
-            java.lang.String r2 = com.google.android.exoplayer2.p393v0.C9554k0.m29457k(r2)
+            java.lang.String r2 = com.google.android.exoplayer2.p393v0.Util.m29457k(r2)
             r5 = -1
             int r6 = r2.hashCode()
             r7 = 489446379(0x1d2c5beb, float:2.281153E-21)
@@ -329,10 +329,10 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             if (r5 == r8) goto L_0x004b
             goto L_0x0098
         L_0x004b:
-            java.util.UUID r2 = com.google.android.exoplayer2.C8883r.f19045d
+            java.util.UUID r2 = com.google.android.exoplayer2.C8883r.WIDEVINE_UUID
             goto L_0x0050
         L_0x004e:
-            java.util.UUID r2 = com.google.android.exoplayer2.C8883r.f19046e
+            java.util.UUID r2 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
         L_0x0050:
             r5 = r1
             goto L_0x009a
@@ -360,9 +360,9 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             int r7 = r7 + 1
             goto L_0x0076
         L_0x0084:
-            java.util.UUID r5 = com.google.android.exoplayer2.C8883r.f19043b
+            java.util.UUID r5 = com.google.android.exoplayer2.C8883r.COMMON_PSSH_UUID
             byte[] r5 = com.google.android.exoplayer2.p366s0.p371v.C8980k.m26492a(r5, r6, r1)
-            java.util.UUID r6 = com.google.android.exoplayer2.C8883r.f19043b
+            java.util.UUID r6 = com.google.android.exoplayer2.C8883r.COMMON_PSSH_UUID
             r7 = r1
             r8 = 0
             r15 = r6
@@ -426,7 +426,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             if (r5 != 0) goto L_0x00f8
             java.lang.String r2 = "MpdParser"
             java.lang.String r9 = "Skipping malformed cenc:pssh data"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r2, r9)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r2, r9)
             r13 = r1
             goto L_0x00f9
         L_0x00f8:
@@ -436,7 +436,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x00b0
         L_0x00fb:
             if (r5 != 0) goto L_0x0122
-            java.util.UUID r10 = com.google.android.exoplayer2.C8883r.f19046e
+            java.util.UUID r10 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
             boolean r10 = r10.equals(r2)
             if (r10 == 0) goto L_0x0122
             java.lang.String r10 = "mspr:pro"
@@ -444,7 +444,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             if (r10 == 0) goto L_0x0122
             int r10 = r17.next()
             if (r10 != r9) goto L_0x0122
-            java.util.UUID r5 = com.google.android.exoplayer2.C8883r.f19046e
+            java.util.UUID r5 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
             java.lang.String r9 = r17.getText()
             byte[] r9 = android.util.Base64.decode(r9, r4)
             byte[] r5 = com.google.android.exoplayer2.p366s0.p371v.C8980k.m26491a(r5, r9)
@@ -632,7 +632,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Unable to parse CEA-608 channel number from: ");
                     sb.append(dVar.f20447b);
-                    C9563q.m29500d("MpdParser", sb.toString());
+                    Log.m29500d("MpdParser", sb.toString());
                 } else {
                     continue;
                 }
@@ -952,7 +952,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         if (attributeValue == null) {
             return j;
         }
-        return C9554k0.m29454h(attributeValue);
+        return Util.m29454h(attributeValue);
     }
 
     /* renamed from: b */
@@ -981,7 +981,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Unable to parse CEA-708 service block number from: ");
                     sb.append(dVar.f20447b);
-                    C9563q.m29500d("MpdParser", sb.toString());
+                    Log.m29500d("MpdParser", sb.toString());
                 } else {
                     continue;
                 }
@@ -1104,7 +1104,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         if (attributeValue == null) {
             return j;
         }
-        return C9554k0.m29455i(attributeValue);
+        return Util.m29455i(attributeValue);
     }
 
     /* access modifiers changed from: protected */
@@ -1848,13 +1848,13 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         long d = m27278d(xmlPullParser2, "id", 0);
         long d2 = m27278d(xmlPullParser2, "duration", -9223372036854775807L);
         long d3 = m27278d(xmlPullParser2, "presentationTime", 0);
-        long c = C9554k0.m29439c(d2, 1000, j);
-        long c2 = C9554k0.m29439c(d3, 1000000, j);
+        long c = Util.m29439c(d2, 1000, j);
+        long c2 = Util.m29439c(d3, 1000000, j);
         String b = m27272b(xmlPullParser2, "messageData", (String) null);
         byte[] a = mo23705a(xmlPullParser2, byteArrayOutputStream);
         Long valueOf = Long.valueOf(c2);
         if (b != null) {
-            a = C9554k0.m29447d(b);
+            a = Util.m29447d(b);
         }
         return Pair.create(valueOf, mo23684a(str, str2, d, c, a));
     }

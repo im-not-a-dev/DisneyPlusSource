@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy;
 
 import java.util.Iterator;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p587i0.C12775h;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
@@ -50,7 +50,7 @@ public final class LazyJavaAnnotations implements Annotations {
         C12775h d = C12788p.m39994d(C13199w.m40577c((Iterable) this.annotationOwner.getAnnotations()), this.annotationDescriptors);
         JavaAnnotationMapper javaAnnotationMapper = JavaAnnotationMapper.INSTANCE;
         FqName fqName = KotlinBuiltIns.FQ_NAMES.deprecated;
-        C12880j.m40222a((Object) fqName, "KotlinBuiltIns.FQ_NAMES.deprecated");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "KotlinBuiltIns.FQ_NAMES.deprecated");
         return C12788p.m39995e(C12788p.m39988a(d, javaAnnotationMapper.findMappedJavaAnnotation(fqName, this.annotationOwner, this.f29552c))).iterator();
     }
 }

@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 import kotlin.jvm.internal.C12871f;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.p589f0.C12872a;
 
 /* compiled from: TargetPlatform.kt */
@@ -42,7 +42,7 @@ public class TargetPlatform implements Collection<SimplePlatform>, C12872a {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof TargetPlatform) && !(C12880j.m40224a((Object) this.componentPlatforms, (Object) ((TargetPlatform) obj).componentPlatforms) ^ true);
+        return (obj instanceof TargetPlatform) && !(Intrinsics.areEqual((Object) this.componentPlatforms, (Object) ((TargetPlatform) obj).componentPlatforms) ^ true);
     }
 
     public final Set<SimplePlatform> getComponentPlatforms() {

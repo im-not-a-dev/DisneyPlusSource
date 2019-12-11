@@ -20,7 +20,7 @@ import com.bamnet.iap.p035c.p037d.C1675i;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Deprecated
 /* renamed from: com.bamnet.iap.c.b */
@@ -79,10 +79,10 @@ public class C1625b implements Market, C1669e, C1670f, C1668d {
         BamnetIAPResult bamnetIAPResult;
         String str = "set up complete";
         if (!eVar.mo7324c()) {
-            C14100a.m44522a("In-app Billing setup failed: %s", eVar.toString());
+            Timber.m44522a("In-app Billing setup failed: %s", eVar.toString());
             bamnetIAPResult = new BamnetIAPResult(1, str);
         } else {
-            C14100a.m44522a("In-app Billing is set up OK", new Object[0]);
+            Timber.m44522a("In-app Billing is set up OK", new Object[0]);
             bamnetIAPResult = new BamnetIAPResult(0, str);
         }
         this.f5745b.mo7224a(bamnetIAPResult);
@@ -200,16 +200,16 @@ public class C1625b implements Market, C1669e, C1670f, C1668d {
                 aVar = mo7247a(gVar);
                 i = 0;
             } else if (b == 7) {
-                C14100a.m44529c("onPurchaseResponse: already purchased, you should verify the subscription purchase on your side and make sure the purchase was granted to customer", new Object[0]);
+                Timber.m44529c("onPurchaseResponse: already purchased, you should verify the subscription purchase on your side and make sure the purchase was granted to customer", new Object[0]);
                 aVar = mo7247a(gVar);
                 i = 7;
             } else if (b != 9) {
-                C14100a.m44522a("onPurchaseResponse: Error in default case with response code: %s", Integer.valueOf(eVar.mo7323b()));
+                Timber.m44522a("onPurchaseResponse: Error in default case with response code: %s", Integer.valueOf(eVar.mo7323b()));
                 i = 6;
             }
             this.f5745b.mo7225a(new BamnetIAPResult(i, eVar.mo7322a()), (BamnetIAPPurchase) aVar);
         }
-        C14100a.m44522a("onPurchaseResponse: user cancelled", new Object[0]);
+        Timber.m44522a("onPurchaseResponse: user cancelled", new Object[0]);
         this.f5745b.mo7225a(new BamnetIAPResult(i, eVar.mo7322a()), (BamnetIAPPurchase) aVar);
     }
 }

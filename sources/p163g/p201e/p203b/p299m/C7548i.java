@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.dialogs.tier2.C6062c;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p299m.p300y.C7568b;
 import p163g.p201e.p203b.p299m.p300y.C7570d;
@@ -47,7 +47,7 @@ public final class C7548i implements C7547h {
         public final void mo20492a(C0532d dVar) {
             C7548i iVar = this.f16557c;
             C0538i supportFragmentManager = dVar.getSupportFragmentManager();
-            C12880j.m40222a((Object) supportFragmentManager, "supportFragmentManager");
+            Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager, "supportFragmentManager");
             C7568b a = iVar.m22505a(supportFragmentManager);
             if (a == null) {
                 a = (C7568b) (!(dVar instanceof C7568b) ? null : dVar);

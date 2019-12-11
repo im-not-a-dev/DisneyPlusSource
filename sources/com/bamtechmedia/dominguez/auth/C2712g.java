@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.core.utils.C5839j;
 import com.bamtechmedia.dominguez.core.utils.C5841k;
 import java.util.HashMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -78,7 +78,7 @@ public final class C2712g extends C11890i {
                 if (cVar != null) {
                     cVar.mo11767c();
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             } else if (m10347o() == 1) {
@@ -86,7 +86,7 @@ public final class C2712g extends C11890i {
                 if (cVar2 != null) {
                     cVar2.mo11768e();
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             }

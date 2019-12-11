@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11723f;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
@@ -33,10 +33,10 @@ public final class AspectRatioJsonAdapter extends C11725h<C3623a> {
             Matcher matcher = this.f8914a.matcher(str);
             if (matcher.find()) {
                 String group = matcher.group(1);
-                C12880j.m40222a((Object) group, "matcher.group(1)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) group, "matcher.group(1)");
                 float parseFloat = Float.parseFloat(group);
                 String group2 = matcher.group(2);
-                C12880j.m40222a((Object) group2, "matcher.group(2)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) group2, "matcher.group(2)");
                 f = parseFloat / Float.parseFloat(group2);
             } else {
                 f = Float.parseFloat(str);

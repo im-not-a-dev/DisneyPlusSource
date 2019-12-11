@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.kotlin;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinJvmBinaryClass.AnnotationArgumentVisitor;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinJvmBinaryClass.AnnotationVisitor;
@@ -73,7 +73,7 @@ public final class C13013x2cf49cf1 implements MemberVisitor {
     public AnnotationVisitor visitField(Name name, String str, Object obj) {
         Companion companion = MemberSignature.Companion;
         String asString = name.asString();
-        C12880j.m40222a((Object) asString, "name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "name.asString()");
         MemberSignature fromFieldNameAndDesc = companion.fromFieldNameAndDesc(asString, str);
         if (obj != null) {
             Object loadConstant = this.this$0.loadConstant(str, obj);
@@ -87,7 +87,7 @@ public final class C13013x2cf49cf1 implements MemberVisitor {
     public MethodAnnotationVisitor visitMethod(Name name, String str) {
         Companion companion = MemberSignature.Companion;
         String asString = name.asString();
-        C12880j.m40222a((Object) asString, "name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "name.asString()");
         return new AnnotationVisitorForMethod(companion.fromMethodNameAndDesc(asString, str));
     }
 }

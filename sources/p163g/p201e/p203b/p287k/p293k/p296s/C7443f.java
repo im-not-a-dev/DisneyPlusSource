@@ -12,7 +12,7 @@ import com.bamtechmedia.dominguez.detail.common.p229f0.C5925a;
 import com.bamtechmedia.dominguez.detail.series.models.C6046d;
 import java.util.List;
 import javax.inject.Provider;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p287k.p293k.C7382b;
 import p163g.p201e.p203b.p287k.p293k.C7391d;
 import p163g.p201e.p203b.p287k.p293k.p294q.C7410a.C7435b;
@@ -29,7 +29,7 @@ public final class C7443f extends C7436a {
 
     public C7443f(C7435b bVar, C3653c cVar, C7391d dVar, C3347e eVar, C7382b bVar2, C5984l lVar, C5917a aVar, Provider<C5981c> provider, C6000s sVar) {
         Object obj = provider.get();
-        C12880j.m40222a(obj, "itemViewStateUserIntent.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "itemViewStateUserIntent.get()");
         super(bVar, cVar, dVar, eVar, bVar2, lVar, (C5981c) obj, sVar, false);
         this.f16348i = aVar;
     }

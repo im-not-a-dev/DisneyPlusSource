@@ -19,7 +19,7 @@ import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
@@ -96,7 +96,7 @@ final class DefaultOnlineMediaClient$getMediaKey$$inlined$with$lambda$1<T, R> im
                 a2.cancel();
             }
         }).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single<byte[]> g = b.mo30222c((Consumer<? super Disposable>) new Consumer<Disposable>() {
             public final void accept(Disposable disposable) {
                 C1169c.m6003a(serviceTransaction2, dust_drm_silk_key);
@@ -105,7 +105,7 @@ final class DefaultOnlineMediaClient$getMediaKey$$inlined$with$lambda$1<T, R> im
             public final void accept(Throwable th) {
                 ServiceTransaction serviceTransaction = serviceTransaction2;
                 String str = dust_drm_silk_key;
-                C12880j.m40222a((Object) th, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
                 C1169c.m6004a(serviceTransaction, str, th, (DustConfigSettings) a.mo7480c());
             }
         }).mo30233g(new Function<T, R>() {
@@ -150,7 +150,7 @@ final class DefaultOnlineMediaClient$getMediaKey$$inlined$with$lambda$1<T, R> im
                 throw new UnsupportedOperationException("Method not decompiled: com.bamtech.sdk4.internal.media.DefaultOnlineMediaClient$getMediaKey$$inlined$with$lambda$1.C19066.apply(com.bamtech.core.networking.Response):java.lang.Object");
             }
         });
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g;
     }
 }

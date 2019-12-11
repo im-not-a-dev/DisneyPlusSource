@@ -8,7 +8,7 @@ import com.bumptech.glide.load.p339o.C8308o;
 import java.io.File;
 import java.io.InputStream;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Cache;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -40,7 +40,7 @@ public final class GlideModule extends C10708a {
     public void mo19914a(Context context, C10652e eVar, C10659l lVar) {
         OkHttpClient a = new Builder().mo35817a(new Cache(new File(context.getCacheDir(), "glide-cache"), 41943040)).mo35818a((Interceptor) new C7134e(0, 1, null)).mo35820a();
         C7116a aVar = new C7116a(context);
-        C12880j.m40222a((Object) a, "client");
-        eVar.mo27527g().mo27557b(C8292g.class, InputStream.class, (C8308o<? extends Model, ? extends Data>) new C7133a<Object,Object>(aVar, a));
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "client");
+        eVar.mo27527g().mo27557b(C8292g.class, InputStream.class, (C8308o<? extendsMODEL, ? extends Data>) new C7133a<Object,Object>(aVar, a));
     }
 }

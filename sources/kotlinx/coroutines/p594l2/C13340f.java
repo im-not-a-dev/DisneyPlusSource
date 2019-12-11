@@ -3,7 +3,7 @@ package kotlinx.coroutines.p594l2;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.C12688f;
 import kotlinx.coroutines.C13230d1;
@@ -64,7 +64,7 @@ public final class C13340f {
     /* renamed from: a */
     private static final <T> Observable<T> m40982a(C13233e0 e0Var, C12688f fVar, Function2<? super C13316l<? super T>, ? super C12683c<? super C13145v>, ? extends Object> function2) {
         Observable<T> a = Observable.m38301a((C11962p<T>) new C13341a<T>(e0Var, fVar, function2));
-        C12880j.m40222a((Object) a, "Observable.create { subs…AULT, coroutine, block)\n}");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Observable.create { subs…AULT, coroutine, block)\n}");
         return a;
     }
 

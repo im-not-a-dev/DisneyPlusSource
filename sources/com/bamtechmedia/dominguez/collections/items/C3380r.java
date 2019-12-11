@@ -19,7 +19,7 @@ import com.google.common.base.Optional;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p202a.C5363f;
 import p163g.p201e.p202a.C5364g;
@@ -125,7 +125,7 @@ public final class C3380r extends C3384s {
     private final void m11573a(View view, ShelfItemRecyclerView shelfItemRecyclerView) {
         C8094c cVar;
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "itemView.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "itemView.context");
         if (C5837i.m18843e(context)) {
             TvRecyclerViewAutoPagingBehaviour tvRecyclerViewAutoPagingBehaviour = new TvRecyclerViewAutoPagingBehaviour(shelfItemRecyclerView, view, this.f8522Y, mo12518l(), mo12513f(), null, 32, null);
             PageIndicatorView pageIndicatorView = (PageIndicatorView) view.findViewById(C5363f.pageIndicatorView);
@@ -151,7 +151,7 @@ public final class C3380r extends C3384s {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8525b0, (java.lang.Object) r3.f8525b0) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8525b0, (java.lang.Object) r3.f8525b0) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -163,11 +163,11 @@ public final class C3380r extends C3384s {
             com.bamtechmedia.dominguez.collections.items.r r3 = (com.bamtechmedia.dominguez.collections.items.C3380r) r3
             com.bamtechmedia.dominguez.collections.items.v r0 = r2.f8524a0
             com.bamtechmedia.dominguez.collections.items.v r1 = r3.f8524a0
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.google.common.base.Optional<com.bamtechmedia.dominguez.collections.n0.b> r0 = r2.f8525b0
             com.google.common.base.Optional<com.bamtechmedia.dominguez.collections.n0.b> r3 = r3.f8525b0
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:
@@ -221,14 +221,14 @@ public final class C3380r extends C3384s {
         this.f8522Y = new C3381a(this, view);
         ShelfItemRecyclerView shelfItemRecyclerView = (ShelfItemRecyclerView) createViewHolder.mo20994a().findViewById(C5363f.shelfRecyclerView);
         String str = "it.shelfRecyclerView";
-        C12880j.m40222a((Object) shelfItemRecyclerView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemRecyclerView, str);
         shelfItemRecyclerView.setImportantForAccessibility(2);
         new C5881a().mo5150a((RecyclerView) (ShelfItemRecyclerView) createViewHolder.mo20994a().findViewById(C5363f.shelfRecyclerView));
         ShelfItemRecyclerView shelfItemRecyclerView2 = (ShelfItemRecyclerView) createViewHolder.mo20994a().findViewById(C5363f.shelfRecyclerView);
-        C12880j.m40222a((Object) shelfItemRecyclerView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) shelfItemRecyclerView2, str);
         m11573a(view, shelfItemRecyclerView2);
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "itemView.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "itemView.context");
         if (!C5837i.m18843e(context)) {
             ((ShelfItemRecyclerView) createViewHolder.mo20994a().findViewById(C5363f.shelfRecyclerView)).mo4381a((C0807n) new C3371n());
         }

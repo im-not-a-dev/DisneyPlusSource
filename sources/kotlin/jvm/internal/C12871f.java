@@ -37,10 +37,10 @@ public final class C12871f {
                             }
                         }
                         objArr = Arrays.copyOf(objArr, i3);
-                        C12880j.m40222a((Object) objArr, "Arrays.copyOf(result, newSize)");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) objArr, "Arrays.copyOf(result, newSize)");
                     } else if (!it.hasNext()) {
                         Object[] copyOf = Arrays.copyOf(objArr, i2);
-                        C12880j.m40222a((Object) copyOf, "Arrays.copyOf(result, size)");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) copyOf, "Arrays.copyOf(result, size)");
                         return copyOf;
                     }
                     i = i2;
@@ -85,14 +85,14 @@ public final class C12871f {
                                 }
                             }
                             objArr2 = Arrays.copyOf(objArr2, i3);
-                            C12880j.m40222a((Object) objArr2, "Arrays.copyOf(result, newSize)");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) objArr2, "Arrays.copyOf(result, newSize)");
                         } else if (!it.hasNext()) {
                             if (objArr2 == objArr) {
                                 objArr[i2] = null;
                                 return objArr;
                             }
                             Object[] copyOf = Arrays.copyOf(objArr2, i2);
-                            C12880j.m40222a((Object) copyOf, "Arrays.copyOf(result, size)");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) copyOf, "Arrays.copyOf(result, size)");
                             return copyOf;
                         }
                         i = i2;

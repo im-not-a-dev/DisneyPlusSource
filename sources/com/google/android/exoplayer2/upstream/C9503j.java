@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.upstream;
 import android.net.Uri;
 import android.util.Base64;
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.io.IOException;
 import java.net.URLDecoder;
 
@@ -50,7 +50,7 @@ public final class C9503j extends C9497h {
         Uri uri = dataSpec.f21938a;
         String scheme = uri.getScheme();
         if ("data".equals(scheme)) {
-            String[] a = C9554k0.m29423a(uri.getSchemeSpecificPart(), ",");
+            String[] a = Util.m29423a(uri.getSchemeSpecificPart(), ",");
             if (a.length == 2) {
                 String str = a[1];
                 if (a[0].contains(";base64")) {
@@ -63,7 +63,7 @@ public final class C9503j extends C9497h {
                         throw new C8723g0(sb.toString(), e);
                     }
                 } else {
-                    this.f22136f = C9554k0.m29447d(URLDecoder.decode(str, "US-ASCII"));
+                    this.f22136f = Util.m29447d(URLDecoder.decode(str, "US-ASCII"));
                 }
                 long j = dataSpec.f21943f;
                 this.f22137g = j != -1 ? ((int) j) + this.f22138h : this.f22136f.length;
@@ -96,7 +96,7 @@ public final class C9503j extends C9497h {
         }
         int min = Math.min(i2, i3);
         byte[] bArr2 = this.f22136f;
-        C9554k0.m29394a(bArr2);
+        Util.castNonNull(bArr2);
         System.arraycopy(bArr2, this.f22138h, bArr, i, min);
         this.f22138h += min;
         mo24566a(min);

@@ -183,7 +183,7 @@ public final class C6022a implements Parcelable, C6024b {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x0032, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13885Z, (java.lang.Object) r3.f13885Z) != false) goto L_0x0037;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13885Z, (java.lang.Object) r3.f13885Z) != false) goto L_0x0037;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -195,19 +195,19 @@ public final class C6022a implements Parcelable, C6024b {
             com.bamtechmedia.dominguez.detail.movie.models.a r3 = (com.bamtechmedia.dominguez.detail.movie.models.C6022a) r3
             com.bamtechmedia.dominguez.core.content.PromoLabel r0 = r2.mo18107Z()
             com.bamtechmedia.dominguez.core.content.PromoLabel r1 = r3.mo18107Z()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0035
             com.bamtechmedia.dominguez.core.content.assets.DmcMovie r0 = r2.f13883X
             com.bamtechmedia.dominguez.core.content.assets.DmcMovie r1 = r3.f13883X
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0035
             com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent r0 = r2.f13884Y
             com.bamtechmedia.dominguez.detail.common.models.DmcExtraContent r1 = r3.f13884Y
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0035
             com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent r0 = r2.f13885Z
             com.bamtechmedia.dominguez.detail.common.models.DmcRelatedContent r3 = r3.f13885Z
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0035
             goto L_0x0037
         L_0x0035:

@@ -5,7 +5,7 @@ import androidx.fragment.app.C0538i;
 import androidx.fragment.app.Fragment;
 import java.util.List;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.j */
 /* compiled from: FragmentExt.kt */
@@ -16,7 +16,7 @@ public final class C5839j {
             List e = iVar.mo3159e();
             if (e != null) {
                 List e2 = iVar.mo3159e();
-                C12880j.m40222a((Object) e2, "fragments");
+                Intrinsics.checkReturnedValueIsNotNull((Object) e2, "fragments");
                 return (Fragment) C13199w.m40578d(e, C13185o.m40507a(e2) - 1);
             }
         }

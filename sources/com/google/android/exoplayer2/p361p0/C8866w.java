@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p361p0;
 
 import com.google.android.exoplayer2.p361p0.C8840m.C8841a;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.nio.ByteBuffer;
 
 /* renamed from: com.google.android.exoplayer2.p0.w */
@@ -16,7 +16,7 @@ final class C8866w extends C8854s {
 
     /* renamed from: a */
     public boolean mo23060a(int i, int i2, int i3) throws C8841a {
-        if (C9554k0.m29445d(i3)) {
+        if (Util.m29445d(i3)) {
             return mo23157b(i, i2, i3);
         }
         throw new C8841a(i, i2, i3);
@@ -29,7 +29,7 @@ final class C8866w extends C8854s {
 
     /* renamed from: a */
     public boolean mo23059a() {
-        return C9554k0.m29445d(this.f18890d);
+        return Util.m29445d(this.f18890d);
     }
 
     /* renamed from: a */

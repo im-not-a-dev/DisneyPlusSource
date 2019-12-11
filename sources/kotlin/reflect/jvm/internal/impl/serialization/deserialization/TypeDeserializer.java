@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13180m;
 import kotlin.reflect.jvm.internal.impl.builtins.FunctionTypesKt;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
@@ -124,9 +124,9 @@ public final class TypeDeserializer {
             int size2 = list.size() - 1;
             if (size2 >= 0) {
                 ClassDescriptor suspendFunction = typeConstructor.getBuiltIns().getSuspendFunction(size2);
-                C12880j.m40222a((Object) suspendFunction, "functionTypeConstructor.…getSuspendFunction(arity)");
+                Intrinsics.checkReturnedValueIsNotNull((Object) suspendFunction, "functionTypeConstructor.…getSuspendFunction(arity)");
                 TypeConstructor typeConstructor2 = suspendFunction.getTypeConstructor();
-                C12880j.m40222a((Object) typeConstructor2, "functionTypeConstructor.…on(arity).typeConstructor");
+                Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor2, "functionTypeConstructor.…on(arity).typeConstructor");
                 simpleType = KotlinTypeFactory.simpleType(annotations, typeConstructor2, list, z);
             }
         }
@@ -137,7 +137,7 @@ public final class TypeDeserializer {
         sb.append("Bad suspend function in metadata with constructor: ");
         sb.append(typeConstructor);
         SimpleType createErrorTypeWithArguments = ErrorUtils.createErrorTypeWithArguments(sb.toString(), list);
-        C12880j.m40222a((Object) createErrorTypeWithArguments, "ErrorUtils.createErrorTy…      arguments\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) createErrorTypeWithArguments, "ErrorUtils.createErrorTy…      arguments\n        )");
         return createErrorTypeWithArguments;
     }
 
@@ -156,7 +156,7 @@ public final class TypeDeserializer {
         if (typeProjection != null) {
             KotlinType type = typeProjection.getType();
             if (type != null) {
-                C12880j.m40222a((Object) type, "funType.getValueParamete…ll()?.type ?: return null");
+                Intrinsics.checkReturnedValueIsNotNull((Object) type, "funType.getValueParamete…ll()?.type ?: return null");
                 ClassifierDescriptor declarationDescriptor = type.getConstructor().getDeclarationDescriptor();
                 FqName fqNameSafe = declarationDescriptor != null ? DescriptorUtilsKt.getFqNameSafe(declarationDescriptor) : null;
                 boolean z = true;
@@ -164,7 +164,7 @@ public final class TypeDeserializer {
                     return (SimpleType) kotlinType;
                 }
                 KotlinType type2 = ((TypeProjection) C13199w.m40599k(type.getArguments())).getType();
-                C12880j.m40222a((Object) type2, "continuationArgumentType.arguments.single().type");
+                Intrinsics.checkReturnedValueIsNotNull((Object) type2, "continuationArgumentType.arguments.single().type");
                 DeclarationDescriptor containingDeclaration = this.f29576c.getContainingDeclaration();
                 if (!(containingDeclaration instanceof CallableDescriptor)) {
                     containingDeclaration = null;
@@ -173,7 +173,7 @@ public final class TypeDeserializer {
                 if (callableDescriptor != null) {
                     fqName = DescriptorUtilsKt.fqNameOrNull(callableDescriptor);
                 }
-                if (C12880j.m40224a((Object) fqName, (Object) SuspendFunctionTypeUtilKt.KOTLIN_SUSPEND_BUILT_IN_FUNCTION_FQ_NAME)) {
+                if (Intrinsics.areEqual((Object) fqName, (Object) SuspendFunctionTypeUtilKt.KOTLIN_SUSPEND_BUILT_IN_FUNCTION_FQ_NAME)) {
                     return createSimpleSuspendFunctionType(kotlinType, type2);
                 }
                 if (!this.experimentalSuspendFunctionTypeEncountered && (!releaseCoroutines || !SuspendFunctionTypesKt.isContinuation(fqNameSafe, !releaseCoroutines))) {
@@ -191,7 +191,7 @@ public final class TypeDeserializer {
         if (argument.getProjection() == Projection.STAR) {
             if (typeParameterDescriptor == null) {
                 SimpleType nullableAnyType = this.f29576c.getComponents().getModuleDescriptor().getBuiltIns().getNullableAnyType();
-                C12880j.m40222a((Object) nullableAnyType, "c.components.moduleDescr….builtIns.nullableAnyType");
+                Intrinsics.checkReturnedValueIsNotNull((Object) nullableAnyType, "c.components.moduleDescr….builtIns.nullableAnyType");
                 typeProjection = new TypeBasedStarProjectionImpl(nullableAnyType);
             } else {
                 typeProjection = new StarProjectionImpl(typeParameterDescriptor);
@@ -200,7 +200,7 @@ public final class TypeDeserializer {
         }
         ProtoEnumFlags protoEnumFlags = ProtoEnumFlags.INSTANCE;
         Projection projection = argument.getProjection();
-        C12880j.m40222a((Object) projection, "typeArgumentProto.projection");
+        Intrinsics.checkReturnedValueIsNotNull((Object) projection, "typeArgumentProto.projection");
         Variance variance = protoEnumFlags.variance(projection);
         Type type = ProtoTypeTableUtilKt.type(argument, this.f29576c.getTypeTable());
         if (type != null) {
@@ -218,7 +218,7 @@ public final class TypeDeserializer {
                 classDescriptor = typeDeserializer$typeConstructor$1.invoke(type.getClassName());
             }
             TypeConstructor typeConstructor = classDescriptor.getTypeConstructor();
-            C12880j.m40222a((Object) typeConstructor, "(classDescriptors(proto.…assName)).typeConstructor");
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "(classDescriptors(proto.…assName)).typeConstructor");
             return typeConstructor;
         } else if (type.hasTypeParameter()) {
             TypeConstructor typeParameterTypeConstructor = typeParameterTypeConstructor(type.getTypeParameter());
@@ -232,7 +232,7 @@ public final class TypeDeserializer {
             sb.append(this.containerPresentableName);
             sb.append('\"');
             TypeConstructor createErrorTypeConstructor = ErrorUtils.createErrorTypeConstructor(sb.toString());
-            C12880j.m40222a((Object) createErrorTypeConstructor, "ErrorUtils.createErrorTy…\\\"\"\n                    )");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createErrorTypeConstructor, "ErrorUtils.createErrorTy…\\\"\"\n                    )");
             return createErrorTypeConstructor;
         } else if (type.hasTypeParameterName()) {
             DeclarationDescriptor containingDeclaration = this.f29576c.getContainingDeclaration();
@@ -244,7 +244,7 @@ public final class TypeDeserializer {
                     break;
                 }
                 obj = it.next();
-                if (C12880j.m40224a((Object) ((TypeParameterDescriptor) obj).getName().asString(), (Object) string)) {
+                if (Intrinsics.areEqual((Object) ((TypeParameterDescriptor) obj).getName().asString(), (Object) string)) {
                     break;
                 }
             }
@@ -261,7 +261,7 @@ public final class TypeDeserializer {
             sb2.append(" in ");
             sb2.append(containingDeclaration);
             TypeConstructor createErrorTypeConstructor2 = ErrorUtils.createErrorTypeConstructor(sb2.toString());
-            C12880j.m40222a((Object) createErrorTypeConstructor2, "ErrorUtils.createErrorTy…ter $name in $container\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createErrorTypeConstructor2, "ErrorUtils.createErrorTy…ter $name in $container\")");
             return createErrorTypeConstructor2;
         } else if (type.hasTypeAliasName()) {
             ClassifierDescriptor classifierDescriptor = (ClassifierDescriptor) this.typeAliasDescriptors.invoke(Integer.valueOf(type.getTypeAliasName()));
@@ -269,11 +269,11 @@ public final class TypeDeserializer {
                 classifierDescriptor = typeDeserializer$typeConstructor$1.invoke(type.getTypeAliasName());
             }
             TypeConstructor typeConstructor3 = classifierDescriptor.getTypeConstructor();
-            C12880j.m40222a((Object) typeConstructor3, "(typeAliasDescriptors(pr…iasName)).typeConstructor");
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor3, "(typeAliasDescriptors(pr…iasName)).typeConstructor");
             return typeConstructor3;
         } else {
             TypeConstructor createErrorTypeConstructor3 = ErrorUtils.createErrorTypeConstructor("Unknown type");
-            C12880j.m40222a((Object) createErrorTypeConstructor3, "ErrorUtils.createErrorTy…nstructor(\"Unknown type\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createErrorTypeConstructor3, "ErrorUtils.createErrorTy…nstructor(\"Unknown type\")");
             return createErrorTypeConstructor3;
         }
     }
@@ -310,7 +310,7 @@ public final class TypeDeserializer {
         TypeConstructor typeConstructor = typeConstructor(type);
         if (ErrorUtils.isError(typeConstructor.getDeclarationDescriptor())) {
             SimpleType createErrorTypeWithCustomConstructor = ErrorUtils.createErrorTypeWithCustomConstructor(typeConstructor.toString(), typeConstructor);
-            C12880j.m40222a((Object) createErrorTypeWithCustomConstructor, "ErrorUtils.createErrorTy….toString(), constructor)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) createErrorTypeWithCustomConstructor, "ErrorUtils.createErrorTy….toString(), constructor)");
             return createErrorTypeWithCustomConstructor;
         }
         DeserializedAnnotations deserializedAnnotations = new DeserializedAnnotations(this.f29576c.getStorageManager(), new TypeDeserializer$simpleType$annotations$1(this, type));
@@ -322,7 +322,7 @@ public final class TypeDeserializer {
             if (i >= 0) {
                 Argument argument = (Argument) next;
                 List parameters = typeConstructor.getParameters();
-                C12880j.m40222a((Object) parameters, "constructor.parameters");
+                Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "constructor.parameters");
                 arrayList.add(typeArgument((TypeParameterDescriptor) C13199w.m40578d(parameters, i), argument));
                 i = i2;
             } else {
@@ -332,7 +332,7 @@ public final class TypeDeserializer {
         }
         List q = C13199w.m40606q(arrayList);
         Boolean bool = Flags.SUSPEND_TYPE.get(type.getFlags());
-        C12880j.m40222a((Object) bool, "Flags.SUSPEND_TYPE.get(proto.flags)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.SUSPEND_TYPE.get(proto.flags)");
         if (bool.booleanValue()) {
             simpleType = createSuspendFunctionType(deserializedAnnotations, typeConstructor, q, type.getNullable());
         } else {
@@ -368,7 +368,7 @@ public final class TypeDeserializer {
         if (flexibleUpperBound != null) {
             return this.f29576c.getComponents().getFlexibleTypeDeserializer().create(type, string, simpleType, simpleType(flexibleUpperBound));
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

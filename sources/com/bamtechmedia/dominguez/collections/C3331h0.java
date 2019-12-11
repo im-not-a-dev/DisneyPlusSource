@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.collections;
 import android.widget.TextView;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11847b;
 import p163g.p509o.p510a.p511l.C11866a;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -30,7 +30,7 @@ public final class C3331h0 implements C3316d0 {
 
         public void bind(C11867b bVar, int i) {
             TextView textView = (TextView) bVar.mo20994a().findViewById(C3337i0.errorMessage);
-            C12880j.m40222a((Object) textView, "errorMessage");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "errorMessage");
             textView.setText(this.f8386c.getLocalizedMessage());
         }
     }

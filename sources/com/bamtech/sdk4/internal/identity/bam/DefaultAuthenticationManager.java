@@ -13,7 +13,7 @@ import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
@@ -50,7 +50,7 @@ public final class DefaultAuthenticationManager implements AuthenticationManager
     /* access modifiers changed from: private */
     public final Single<IdentityToken> authenticateTask(ServiceTransaction serviceTransaction, AuthenticationRequest authenticationRequest) {
         Single<IdentityToken> b = this.accessTokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAuthenticationManager$authenticateTask$1<Object,Object>(this, serviceTransaction, authenticationRequest)).mo30233g(new DefaultAuthenticationManager$authenticateTask$2(this)).mo30226d().mo30218b((Consumer<? super Throwable>) new DefaultAuthenticationManager$authenticateTask$3<Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) b, "accessTokenProvider.getA…essage)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "accessTokenProvider.getA…essage)\n                }");
         return b;
     }
 
@@ -58,39 +58,39 @@ public final class DefaultAuthenticationManager implements AuthenticationManager
     public final <T> Single<T> releaseLockOnTerminate(Single<T> single) {
         DefaultAuthenticationManager$releaseLockOnTerminate$1 defaultAuthenticationManager$releaseLockOnTerminate$1 = new DefaultAuthenticationManager$releaseLockOnTerminate$1(this, single);
         Single<T> a = single.mo30223c((C11945a) new DefaultAuthenticationManager$releaseLockOnTerminate$2(defaultAuthenticationManager$releaseLockOnTerminate$1)).mo30210a((C11946b<? super T, ? super Throwable>) new DefaultAuthenticationManager$releaseLockOnTerminate$3<Object,Object>(defaultAuthenticationManager$releaseLockOnTerminate$1));
-        C12880j.m40222a((Object) a, "doOnDispose {\n          …eanUp()\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "doOnDispose {\n          …eanUp()\n                }");
         return a;
     }
 
     public synchronized Single<IdentityToken> authenticate(ServiceTransaction serviceTransaction, String str, String str2) {
         Single<IdentityToken> a;
         a = Single.m38396a((Callable<? extends SingleSource<? extends T>>) new DefaultAuthenticationManager$authenticate$1<Object>(this, serviceTransaction, str, str2));
-        C12880j.m40222a((Object) a, "Single.defer<IdentityTok…         }\n\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.defer<IdentityTok…         }\n\n            }");
         return a;
     }
 
     public <T> Single<IdentityToken> create(ServiceTransaction serviceTransaction, String str, String str2, T t, boolean z) {
         DefaultAuthenticationManager$create$1 defaultAuthenticationManager$create$1 = new DefaultAuthenticationManager$create$1(this, serviceTransaction, z, str, str2, t);
         Single<IdentityToken> a = Single.m38396a((Callable<? extends SingleSource<? extends T>>) defaultAuthenticationManager$create$1);
-        C12880j.m40222a((Object) a, "Single.defer<IdentityTok…          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.defer<IdentityTok…          }\n            }");
         return a;
     }
 
     public Single<List<AuthenticationFlow>> getAuthenticationFlow(ServiceTransaction serviceTransaction, String str) {
         Single<List<AuthenticationFlow>> g = this.accessTokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAuthenticationManager$getAuthenticationFlow$1<Object,Object>(this, serviceTransaction, str)).mo30233g(DefaultAuthenticationManager$getAuthenticationFlow$2.INSTANCE);
-        C12880j.m40222a((Object) g, "accessTokenProvider.getA…rations\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "accessTokenProvider.getA…rations\n                }");
         return g;
     }
 
     public Single<RedeemedPasscodeToken> redeemOneTimePasscode(ServiceTransaction serviceTransaction, String str, String str2) {
         Single<RedeemedPasscodeToken> g = this.accessTokenProvider.getAccessToken(serviceTransaction).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultAuthenticationManager$redeemOneTimePasscode$1<Object,Object>(this, serviceTransaction, str, str2)).mo30233g(DefaultAuthenticationManager$redeemOneTimePasscode$2.INSTANCE).mo30233g(new DefaultAuthenticationManager$redeemOneTimePasscode$3(this));
-        C12880j.m40222a((Object) g, "accessTokenProvider.getA…     it\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "accessTokenProvider.getA…     it\n                }");
         return g;
     }
 
     public Completable requestOneTimePasscode(ServiceTransaction serviceTransaction, String str, OneTimePasscodeRequestReason oneTimePasscodeRequestReason) {
         Completable b = this.accessTokenProvider.getAccessToken(serviceTransaction).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultAuthenticationManager$requestOneTimePasscode$1<Object,Object>(this, serviceTransaction, str, oneTimePasscodeRequestReason));
-        C12880j.m40222a((Object) b, "accessTokenProvider.getA…kenMap)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "accessTokenProvider.getA…kenMap)\n                }");
         return b;
     }
 
@@ -104,7 +104,7 @@ public final class DefaultAuthenticationManager implements AuthenticationManager
             return true;
         }
         DateTime plusSeconds = identity.getIssuedAt().plusSeconds(identity.getExpiresIn() - bamIdentityServiceExtras.getExpirationBufferSeconds());
-        C12880j.m40222a((Object) plusSeconds, "expiration");
+        Intrinsics.checkReturnedValueIsNotNull((Object) plusSeconds, "expiration");
         return plusSeconds.isBeforeNow();
     }
 }

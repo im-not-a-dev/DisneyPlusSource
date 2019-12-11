@@ -9,7 +9,7 @@ import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\b\b\u0018\u0000 !2\u00020\u0001:\u0002!\"B\u001d\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\t\u0010\u0013\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0014\u001a\u00020\u0005HÆ\u0003J\t\u0010\u0015\u001a\u00020\u0007HÆ\u0003J'\u0010\u0016\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00052\b\b\u0002\u0010\u0006\u001a\u00020\u0007HÆ\u0001J\u0013\u0010\u0017\u001a\u00020\u00182\b\u0010\u0019\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\u000e\u0010\u001a\u001a\u00020\u001b2\u0006\u0010\u001c\u001a\u00020\u001dJ\t\u0010\u001e\u001a\u00020\u001fHÖ\u0001J\t\u0010 \u001a\u00020\u0005HÖ\u0001R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u001a\u0010\u0004\u001a\u00020\u0005X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u001a\u0010\u0006\u001a\u00020\u0007X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012¨\u0006#"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/configuration/EmbeddedConfiguration;", "", "client", "Lcom/bamtech/sdk4/internal/configuration/Client;", "configVersion", "", "defaultConfigHostName", "Lcom/bamtech/sdk4/internal/configuration/ConfigurationHostName;", "(Lcom/bamtech/sdk4/internal/configuration/Client;Ljava/lang/String;Lcom/bamtech/sdk4/internal/configuration/ConfigurationHostName;)V", "getClient", "()Lcom/bamtech/sdk4/internal/configuration/Client;", "getConfigVersion", "()Ljava/lang/String;", "setConfigVersion", "(Ljava/lang/String;)V", "getDefaultConfigHostName", "()Lcom/bamtech/sdk4/internal/configuration/ConfigurationHostName;", "setDefaultConfigHostName", "(Lcom/bamtech/sdk4/internal/configuration/ConfigurationHostName;)V", "component1", "component2", "component3", "copy", "equals", "", "other", "getBootstrapLink", "Lcom/bamtech/core/networking/Link;", "bootstrapConfiguration", "Lcom/bamtech/sdk4/internal/configuration/BootstrapConfiguration;", "hashCode", "", "toString", "Companion", "EmbeddedConfigurationBuilder", "sdk-configuration"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: EmbeddedConfiguration.kt */
@@ -61,13 +61,13 @@ public final class EmbeddedConfiguration {
                     if (configurationHostName != null) {
                         return new EmbeddedConfiguration(client2, str, configurationHostName);
                     }
-                    C12880j.m40227c("defaultConfigHostName");
+                    Intrinsics.throwUninitializedPropertyAccessException("defaultConfigHostName");
                     throw null;
                 }
-                C12880j.m40227c("specVersion");
+                Intrinsics.throwUninitializedPropertyAccessException("specVersion");
                 throw null;
             }
-            C12880j.m40227c("client");
+            Intrinsics.throwUninitializedPropertyAccessException("client");
             throw null;
         }
 
@@ -80,7 +80,7 @@ public final class EmbeddedConfiguration {
             if (str != null) {
                 return str;
             }
-            C12880j.m40227c("specVersion");
+            Intrinsics.throwUninitializedPropertyAccessException("specVersion");
             throw null;
         }
 
@@ -105,7 +105,7 @@ public final class EmbeddedConfiguration {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.defaultConfigHostName, (java.lang.Object) r3.defaultConfigHostName) != false) goto L_0x0029;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.defaultConfigHostName, (java.lang.Object) r3.defaultConfigHostName) != false) goto L_0x0029;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -117,15 +117,15 @@ public final class EmbeddedConfiguration {
             com.bamtech.sdk4.internal.configuration.EmbeddedConfiguration r3 = (com.bamtech.sdk4.internal.configuration.EmbeddedConfiguration) r3
             com.bamtech.sdk4.internal.configuration.Client r0 = r2.client
             com.bamtech.sdk4.internal.configuration.Client r1 = r3.client
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             java.lang.String r0 = r2.configVersion
             java.lang.String r1 = r3.configVersion
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0027
             com.bamtech.sdk4.internal.configuration.ConfigurationHostName r0 = r2.defaultConfigHostName
             com.bamtech.sdk4.internal.configuration.ConfigurationHostName r3 = r3.defaultConfigHostName
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0027
             goto L_0x0029
         L_0x0027:
@@ -149,7 +149,7 @@ public final class EmbeddedConfiguration {
                     break;
                 }
                 obj = it.next();
-                if (C12880j.m40224a((Object) ((Link) obj).getRel(), (Object) "bootstrap")) {
+                if (Intrinsics.areEqual((Object) ((Link) obj).getRel(), (Object) "bootstrap")) {
                     break;
                 }
             }

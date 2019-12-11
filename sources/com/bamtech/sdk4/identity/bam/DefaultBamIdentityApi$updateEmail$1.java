@@ -4,7 +4,7 @@ import com.bamtech.sdk4.identity.IdentityToken;
 import com.bamtech.sdk4.internal.identity.bam.IdentityManager;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.functions.Function;
@@ -27,7 +27,7 @@ final class DefaultBamIdentityApi$updateEmail$1<T, R> implements Function<Identi
     public final Completable apply(IdentityToken identityToken) {
         IdentityManager identityManager = (IdentityManager) this.this$0.identityManager.get();
         ServiceTransaction serviceTransaction = this.$transaction;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         return identityManager.updateEmail(serviceTransaction, this.$newEmail, this.$password);
     }
 }

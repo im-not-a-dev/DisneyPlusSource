@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.playback.p237m.p252q;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0005\u0003\u0004\u0005\u0006\u0007B\u0007\b\u0002¢\u0006\u0002\u0010\u0002\u0001\u0005\b\t\n\u000b\f¨\u0006\r"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextAction;", "", "()V", "DisplayUpNextDialogElements", "HideUpNextDialog", "IgnoreUpNext", "IgnoreUpNextPreparing", "UpNextDialogIsShowing", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextAction$HideUpNextDialog;", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextAction$DisplayUpNextDialogElements;", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextAction$UpNextDialogIsShowing;", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextAction$IgnoreUpNext;", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextAction$IgnoreUpNextPreparing;", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.m.q.b */
@@ -50,7 +50,7 @@ public abstract class C6501b {
             if (this != obj) {
                 if (obj instanceof C6502a) {
                     C6502a aVar = (C6502a) obj;
-                    if (C12880j.m40224a((Object) this.f14715a, (Object) aVar.f14715a)) {
+                    if (Intrinsics.areEqual((Object) this.f14715a, (Object) aVar.f14715a)) {
                         if (this.f14716b == aVar.f14716b) {
                             if (this.f14717c == aVar.f14717c) {
                                 return true;

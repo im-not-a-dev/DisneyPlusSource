@@ -12,7 +12,7 @@ import java.util.HashMap;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p319v.C7900q;
 import p512h.p513c.p514k.C11890i;
@@ -107,20 +107,20 @@ public final class C7831a extends C11890i {
         if (qVar != null) {
             C0532d requireActivity = requireActivity();
             String str = "requireActivity()";
-            C12880j.m40222a((Object) requireActivity, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, str);
             qVar.mo20741a((Activity) requireActivity);
             C0532d requireActivity2 = requireActivity();
-            C12880j.m40222a((Object) requireActivity2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity2, str);
             C0715i lifecycle = requireActivity2.getLifecycle();
             MarketHolder marketHolder = this.f16934V;
             if (marketHolder != null) {
                 lifecycle.mo4134a(marketHolder);
             } else {
-                C12880j.m40227c("marketHolder");
+                Intrinsics.throwUninitializedPropertyAccessException("marketHolder");
                 throw null;
             }
         } else {
-            C12880j.m40227c("paywallServicesInteractor");
+            Intrinsics.throwUninitializedPropertyAccessException("paywallServicesInteractor");
             throw null;
         }
     }
@@ -132,7 +132,7 @@ public final class C7831a extends C11890i {
         if (marketHolder != null) {
             lifecycle.mo4134a(marketHolder);
         } else {
-            C12880j.m40227c("marketHolder");
+            Intrinsics.throwUninitializedPropertyAccessException("marketHolder");
             throw null;
         }
     }

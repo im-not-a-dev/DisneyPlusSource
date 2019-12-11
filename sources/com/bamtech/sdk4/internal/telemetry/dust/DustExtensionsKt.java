@@ -2,7 +2,7 @@ package com.bamtech.sdk4.internal.telemetry.dust;
 
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Observable;
 import p520io.reactivex.Single;
@@ -14,7 +14,7 @@ import p520io.reactivex.functions.Consumer;
 public final class DustExtensionsKt {
     public static final Completable withDust(Completable completable, ServiceTransaction serviceTransaction, String str, Object obj) {
         Completable a = completable.mo30052c((Consumer<? super Disposable>) new DustExtensionsKt$withDust$1<Object>(serviceTransaction, str, obj)).mo30036a((Consumer<? super Throwable>) new DustExtensionsKt$withDust$2<Object>(obj, serviceTransaction, str));
-        C12880j.m40222a((Object) a, "this\n            .doOnSu…evel.ERROR)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "this\n            .doOnSu…evel.ERROR)\n            }");
         return a;
     }
 
@@ -34,7 +34,7 @@ public final class DustExtensionsKt {
 
     public static final <T> Single<T> withDust(Single<T> single, ServiceTransaction serviceTransaction, String str, Object obj) {
         Single<T> b = single.mo30222c((Consumer<? super Disposable>) new DustExtensionsKt$withDust$3<Object>(serviceTransaction, str, obj)).mo30218b((Consumer<? super Throwable>) new DustExtensionsKt$withDust$4<Object>(obj, serviceTransaction, str));
-        C12880j.m40222a((Object) b, "this\n            .doOnSu…evel.ERROR)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "this\n            .doOnSu…evel.ERROR)\n            }");
         return b;
     }
 
@@ -47,7 +47,7 @@ public final class DustExtensionsKt {
 
     public static final <T> Observable<T> withDust(Observable<T> observable, ServiceTransaction serviceTransaction, String str, Object obj) {
         Observable<T> c = observable.mo30188e((Consumer<? super Disposable>) new DustExtensionsKt$withDust$7<Object>(serviceTransaction, str, obj)).mo30177c((Consumer<? super Throwable>) new DustExtensionsKt$withDust$8<Object>(obj, serviceTransaction, str));
-        C12880j.m40222a((Object) c, "this\n            .doOnSu…evel.ERROR)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "this\n            .doOnSu…evel.ERROR)\n            }");
         return c;
     }
 }

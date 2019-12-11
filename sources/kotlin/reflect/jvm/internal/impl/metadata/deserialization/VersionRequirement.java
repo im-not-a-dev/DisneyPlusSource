@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.C12679a;
 import kotlin.C12898l;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Class;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Constructor;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Function;
@@ -57,11 +57,11 @@ public final class VersionRequirement {
                 sb.append(messageLite.getClass());
                 throw new IllegalStateException(sb.toString());
             }
-            C12880j.m40222a((Object) list, "ids");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "ids");
             ArrayList arrayList = new ArrayList();
             for (Integer num : list) {
                 Companion companion = VersionRequirement.Companion;
-                C12880j.m40222a((Object) num, "id");
+                Intrinsics.checkReturnedValueIsNotNull((Object) num, "id");
                 VersionRequirement create = companion.create(num.intValue(), nameResolver, versionRequirementTable);
                 if (create != null) {
                     arrayList.add(create);
@@ -101,11 +101,11 @@ public final class VersionRequirement {
                 }
                 String str2 = str;
                 VersionKind versionKind = versionRequirement.getVersionKind();
-                C12880j.m40222a((Object) versionKind, "info.versionKind");
+                Intrinsics.checkReturnedValueIsNotNull((Object) versionKind, "info.versionKind");
                 VersionRequirement versionRequirement2 = new VersionRequirement(decode, versionKind, aVar2, valueOf, str2);
                 return versionRequirement2;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
     }

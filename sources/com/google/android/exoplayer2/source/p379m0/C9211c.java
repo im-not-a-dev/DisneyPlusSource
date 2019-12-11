@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.source.p379m0;
 
 import com.google.android.exoplayer2.p366s0.C8911f;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.source.C9137e0;
 import com.google.android.exoplayer2.source.p379m0.C9213e.C9215b;
 
@@ -30,7 +30,7 @@ public final class C9211c implements C9215b {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Unmatched track of type: ");
                 sb.append(i2);
-                C9563q.m29497b("BaseMediaChunkOutput", sb.toString());
+                Log.m29497b("BaseMediaChunkOutput", sb.toString());
                 return new C8911f();
             } else if (i2 == iArr[i3]) {
                 return this.f20855b[i3];

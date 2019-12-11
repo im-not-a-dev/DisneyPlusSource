@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.config.C3572r0;
 import com.bamtechmedia.dominguez.config.C3572r0.C3573a;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p275a0.C7146a;
 import p163g.p201e.p203b.p275a0.C7146a.C7148b;
 import p163g.p201e.p203b.p275a0.C7151d;
@@ -43,14 +43,14 @@ public final class C7172c implements C7176f {
     public C7172c(C3572r0 r0Var, C7152e eVar) {
         this.f15854b = eVar;
         Uri parse = Uri.parse(C3573a.m12035a(r0Var, C7151d.config_ripcut_base, (Map) null, 2, (Object) null));
-        C12880j.m40222a((Object) parse, "Uri.parse(dictionary.str…ring.config_ripcut_base))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) parse, "Uri.parse(dictionary.str…ring.config_ripcut_base))");
         this.f15853a = parse;
     }
 
     /* renamed from: a */
     public Uri mo20013a(C7175e eVar) {
         Builder appendPath = this.f15853a.buildUpon().appendPath(eVar.mo20020f()).appendPath(eVar.mo20018e().mo19971a());
-        C12880j.m40222a((Object) appendPath, "baseUri.buildUpon()\n    …uest.imageType.extension)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) appendPath, "baseUri.buildUpon()\n    …uest.imageType.extension)");
         m21737a(appendPath, "width", eVar.mo20021g());
         m21737a(appendPath, "height", eVar.mo20017d());
         C7160a a = eVar.mo20014a();
@@ -65,7 +65,7 @@ public final class C7172c implements C7176f {
         m21737a(appendPath, "scalingAlgorithm", this.f15854b.mo19973a());
         m21736a(appendPath, eVar.mo20018e());
         Uri build = appendPath.build();
-        C12880j.m40222a((Object) build, "baseUri.buildUpon()\n    …ageType)\n        .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) build, "baseUri.buildUpon()\n    …ageType)\n        .build()");
         return build;
     }
 

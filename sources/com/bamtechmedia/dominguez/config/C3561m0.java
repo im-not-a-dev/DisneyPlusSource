@@ -6,7 +6,7 @@ import android.net.Uri;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okio.BufferedSource;
 import okio.C14287m;
 import okio.C14302x;
@@ -31,7 +31,7 @@ public final class C3561m0 {
         /* renamed from: a */
         public final Uri mo12771a() {
             Uri parse = Uri.parse("content://com.disneystreaming.appconfigprovider.PROVIDER");
-            C12880j.m40222a((Object) parse, "Uri.parse(\"content://com…configprovider.PROVIDER\")");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parse, "Uri.parse(\"content://com…configprovider.PROVIDER\")");
             return parse;
         }
 
@@ -49,7 +49,7 @@ public final class C3561m0 {
         try {
             Uri build = f8895b.mo12771a().buildUpon().appendPath(str).build();
             Context context = this.f8896a;
-            C12880j.m40222a((Object) context, "context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
             AssetFileDescriptor openAssetFileDescriptor = context.getContentResolver().openAssetFileDescriptor(build, "r");
             if (openAssetFileDescriptor == null) {
                 return null;

@@ -29,7 +29,7 @@ import kotlin.Pair;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p449j.p450a.p451a.p467f.C11428c;
@@ -48,7 +48,7 @@ import p520io.reactivex.functions.Function;
 import p520io.reactivex.subjects.C11976a;
 import p520io.reactivex.subjects.C11983e;
 import p520io.reactivex.subjects.PublishSubject;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\b\u0007\u0018\u0000 92\u00020\u0001:\u00029:B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005\u0012\u0006\u0010\u0007\u001a\u00020\b¢\u0006\u0002\u0010\tJ \u0010\u001c\u001a\u00020\u001d2\b\u0010\u001e\u001a\u0004\u0018\u00010\u001f2\f\u0010 \u001a\b\u0012\u0004\u0012\u00020\u001d0!H\u0016J\u000e\u0010\"\u001a\b\u0012\u0004\u0012\u00020\u001f0#H\u0016J\u0019\u0010$\u001a\u00020\u001d2\u000e\b\u0004\u0010%\u001a\b\u0012\u0004\u0012\u00020\u001d0!H\bJ\u0010\u0010&\u001a\u00020\u001d2\u0006\u0010'\u001a\u00020(H\u0016J\"\u0010)\u001a\u00020\u001d2\u0006\u0010*\u001a\u00020\u00152\u0006\u0010+\u001a\u00020\u00152\b\u0010,\u001a\u0004\u0018\u00010-H\u0016J\u0012\u0010.\u001a\u00020\u001d2\b\u0010/\u001a\u0004\u0018\u00010\u0011H\u0002J\b\u0010\u0017\u001a\u00020\u001dH\u0002J\b\u00100\u001a\u00020\u001dH\u0002J\u0018\u00101\u001a\u00020\u001d2\u0006\u00102\u001a\u0002032\u0006\u00104\u001a\u000203H\u0016J\u001f\u00105\u001a\u00020\u001d2\u0014\b\u0004\u00106\u001a\u000e\u0012\u0004\u0012\u000208\u0012\u0004\u0012\u00020\u001d07H\bR\u0014\u0010\n\u001a\u00020\u000b8BX\u0004¢\u0006\u0006\u001a\u0004\b\f\u0010\rR\u0014\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u000e\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00110\u00100\u000fX\u0004¢\u0006\u0002\n\u0000R \u0010\u0012\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u00160\u00140\u0013X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u001c\u0010\u0017\u001a\n \u0019*\u0004\u0018\u00010\u00180\u00188BX\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u001b¨\u0006;"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/smartlock/SmartLockAutoLogin;", "Lcom/bamtechmedia/dominguez/auth/autologin/AutoLogin;", "context", "Landroid/content/Context;", "config", "Lio/reactivex/Single;", "Lcom/bamtechmedia/dominguez/smartlock/SmartLockConfig;", "passwordAvailability", "Lcom/bamtechmedia/dominguez/auth/autologin/PasswordAvailability;", "(Landroid/content/Context;Lio/reactivex/Single;Lcom/bamtechmedia/dominguez/auth/autologin/PasswordAvailability;)V", "client", "Lcom/google/android/gms/auth/api/credentials/CredentialsClient;", "getClient", "()Lcom/google/android/gms/auth/api/credentials/CredentialsClient;", "credentialsSubject", "Lio/reactivex/subjects/BehaviorSubject;", "Lcom/google/common/base/Optional;", "Lcom/google/android/gms/auth/api/credentials/Credential;", "errorSubject", "Lio/reactivex/subjects/Subject;", "Lkotlin/Pair;", "", "Lcom/google/android/gms/common/api/ResolvableApiException;", "request", "Lcom/google/android/gms/auth/api/credentials/CredentialRequest;", "kotlin.jvm.PlatformType", "getRequest", "()Lcom/google/android/gms/auth/api/credentials/CredentialRequest;", "clear", "", "credentials", "Lcom/bamtechmedia/dominguez/auth/autologin/AutoLoginCredentials;", "onAutoLoginFailed", "Lkotlin/Function0;", "credentialsMaybe", "Lio/reactivex/Maybe;", "ifAvailable", "onAvailable", "initResolution", "activity", "Landroidx/fragment/app/FragmentActivity;", "onActivityResult", "requestCode", "resultCode", "data", "Landroid/content/Intent;", "onResult", "credential", "requestIfAvailable", "store", "email", "", "password", "withAvailable", "block", "Lkotlin/Function1;", "", "Companion", "SmartLockCredentials", "storeGoogle_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.c0.a */
@@ -99,7 +99,7 @@ public final class C10544a implements C2760a {
         /* renamed from: a */
         public String mo11784a() {
             String f = this.f24991a.mo24848f();
-            C12880j.m40222a((Object) f, "credential.id");
+            Intrinsics.checkReturnedValueIsNotNull((Object) f, "credential.id");
             return f;
         }
 
@@ -115,7 +115,7 @@ public final class C10544a implements C2760a {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f24991a, (java.lang.Object) ((p163g.p201e.p203b.p405c0.C10544a.C10546b) r2).f24991a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f24991a, (java.lang.Object) ((p163g.p201e.p203b.p405c0.C10544a.C10546b) r2).f24991a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -127,7 +127,7 @@ public final class C10544a implements C2760a {
                 g.e.b.c0.a$b r2 = (p163g.p201e.p203b.p405c0.C10544a.C10546b) r2
                 com.google.android.gms.auth.api.credentials.Credential r0 = r1.f24991a
                 com.google.android.gms.auth.api.credentials.Credential r2 = r2.f24991a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -237,7 +237,7 @@ public final class C10544a implements C2760a {
             /* renamed from: a */
             public final C10546b apply(Optional<Credential> optional) {
                 Object a = optional.mo27104a();
-                C12880j.m40222a(a, "it.get()");
+                Intrinsics.checkReturnedValueIsNotNull(a, "it.get()");
                 return new C10546b((Credential) a);
             }
         }
@@ -301,7 +301,7 @@ public final class C10544a implements C2760a {
 
         /* renamed from: a */
         public final void mo27445a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -337,7 +337,7 @@ public final class C10544a implements C2760a {
             }
             Exception a = hVar.mo29258a();
             if (a != null) {
-                C14100a.m44523a((Throwable) a);
+                Timber.m44523a((Throwable) a);
             } else {
                 a = null;
             }
@@ -412,7 +412,7 @@ public final class C10544a implements C2760a {
                         if (a instanceof C9808j) {
                             this.f25005a.f25004a.f25003c.f24986a.onNext(C12907r.m40244a(Integer.valueOf(15), a));
                         } else {
-                            C14100a.m44523a((Throwable) a);
+                            Timber.m44523a((Throwable) a);
                         }
                     }
                     this.f25005a.f25004a.f25003c.f24990e.mo11791a(hVar.mo29268e());
@@ -461,7 +461,7 @@ public final class C10544a implements C2760a {
 
         /* renamed from: a */
         public final void mo27447a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -469,7 +469,7 @@ public final class C10544a implements C2760a {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -491,10 +491,10 @@ public final class C10544a implements C2760a {
         this.f24989d = single;
         this.f24990e = gVar;
         PublishSubject q = PublishSubject.m38553q();
-        C12880j.m40222a((Object) q, "PublishSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) q, "PublishSubject.create()");
         this.f24986a = q;
         C11976a<Optional<Credential>> p = C11976a.m38563p();
-        C12880j.m40222a((Object) p, "BehaviorSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) p, "BehaviorSubject.create()");
         this.f24987b = p;
     }
 
@@ -512,14 +512,14 @@ public final class C10544a implements C2760a {
             io.reactivex.r r1 = p520io.reactivex.p525e0.C11934b.m38500b()
             io.reactivex.Single r0 = r0.mo30220b(r1)
             java.lang.String r1 = "config.subscribeOn(Schedulers.io())"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             io.reactivex.Completable r1 = p520io.reactivex.Completable.m38170i()
             java.lang.String r2 = "Completable.never()"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r2)
             g.n.a.h r1 = p163g.p503n.p504a.C11793e.m37931a(r1)
             java.lang.Object r0 = r0.mo30215a(r1)
             java.lang.String r1 = "this.`as`(AutoDispose.autoDisposable(scope))"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             g.n.a.d0 r0 = (p163g.p503n.p504a.C11792d0) r0
             g.e.b.c0.a$i r1 = new g.e.b.c0.a$i
             r1.<init>(r3, r4, r5)
@@ -543,7 +543,7 @@ public final class C10544a implements C2760a {
         C9636a aVar = new C9636a();
         aVar.mo24886c();
         C9634f a = C9632d.m29918a(context, aVar.mo24884a());
-        C12880j.m40222a((Object) a, "Credentials.getClient(co…ableSaveDialog().build())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Credentials.getClient(co…ableSaveDialog().build())");
         return a;
     }
 
@@ -557,7 +557,7 @@ public final class C10544a implements C2760a {
     /* access modifiers changed from: private */
     /* renamed from: d */
     public final void m33270d() {
-        C14100a.m44529c("Requesting credentials from smart lock", new Object[0]);
+        Timber.m44529c("Requesting credentials from smart lock", new Object[0]);
         m33266b().mo24882a(m33267c()).mo29249a((C11428c<TResult>) new C10554g<TResult>(this));
     }
 
@@ -571,16 +571,16 @@ public final class C10544a implements C2760a {
     public void mo11777a(C0532d dVar) {
         C11983e<Pair<Integer, C9808j>> eVar = this.f24986a;
         C10541b a = C10541b.m33255a((C0722m) dVar, C0716a.ON_DESTROY);
-        C12880j.m40222a((Object) a, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
         Object a2 = eVar.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a((C11790c0) a));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a2).mo29915a(new C10552e(dVar), C10553f.f24998c);
     }
 
     /* renamed from: a */
     public Maybe<C2770d> mo11775a() {
         Maybe<C2770d> c = this.f24989d.mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new C10548d<Object,Object>(this));
-        C12880j.m40222a((Object) c, "config.flatMapMaybe { sm…IfAvailable() }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "config.flatMapMaybe { sm…IfAvailable() }\n        }");
         return c;
     }
 
@@ -615,7 +615,7 @@ public final class C10544a implements C2760a {
         }
         C11435h a = m33266b().mo24882a(m33267c());
         a.mo29249a((C11428c<TResult>) new C10547c<TResult>(this));
-        C12880j.m40222a((Object) a, "client.request(request).…          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "client.request(request).…          }\n            }");
     }
 
     /* access modifiers changed from: private */
@@ -624,7 +624,7 @@ public final class C10544a implements C2760a {
         StringBuilder sb = new StringBuilder();
         sb.append("Received credentials from smart lock: ");
         sb.append(credential != null ? credential.mo24848f() : null);
-        C14100a.m44529c(sb.toString(), new Object[0]);
+        Timber.m44529c(sb.toString(), new Object[0]);
         this.f24987b.onNext(Optional.m32790b(credential));
     }
 }

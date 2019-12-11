@@ -20,7 +20,7 @@ import android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction;
 import com.bamtech.sdk4.internal.configuration.ContentServiceClientExtras;
 import com.google.android.exoplayer2.p391ui.C9418p.C9419a;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Formatter;
 import java.util.Iterator;
 import java.util.Locale;
@@ -285,7 +285,7 @@ public class C9403e extends View implements C9418p {
     }
 
     private String getProgressText() {
-        return C9554k0.m29398a(this.f21765p0, this.f21766q0, this.f21741C0);
+        return Util.m29398a(this.f21765p0, this.f21766q0, this.f21741C0);
     }
 
     private long getScrubberPosition() {
@@ -354,7 +354,7 @@ public class C9403e extends View implements C9418p {
         accessibilityNodeInfo.setClassName("android.widget.SeekBar");
         accessibilityNodeInfo.setContentDescription(getProgressText());
         if (this.f21740B0 > 0) {
-            if (C9554k0.f22281a >= 21) {
+            if (Util.SDK_INT >= 21) {
                 accessibilityNodeInfo.addAction(AccessibilityAction.ACTION_SCROLL_FORWARD);
                 accessibilityNodeInfo.addAction(AccessibilityAction.ACTION_SCROLL_BACKWARD);
             } else {
@@ -686,7 +686,7 @@ public class C9403e extends View implements C9418p {
             return false;
         }
         long j2 = this.f21775z0 ? this.f21739A0 : this.f21741C0;
-        long b = C9554k0.m29431b(j2 + j, 0, this.f21740B0);
+        long b = Util.m29431b(j2 + j, 0, this.f21740B0);
         if (b == j2) {
             return false;
         }
@@ -734,7 +734,7 @@ public class C9403e extends View implements C9418p {
             boolean[] zArr2 = zArr;
             int i5 = this.f21759j0 / 2;
             for (int i6 = 0; i6 < this.f21743E0; i6++) {
-                int width = ((int) ((((long) this.f21746U.width()) * C9554k0.m29431b(jArr2[i6], 0, this.f21740B0)) / this.f21740B0)) - i5;
+                int width = ((int) ((((long) this.f21746U.width()) * Util.m29431b(jArr2[i6], 0, this.f21740B0)) / this.f21740B0)) - i5;
                 Rect rect4 = this.f21746U;
                 int min = rect4.left + Math.min(rect4.width() - this.f21759j0, Math.max(0, width));
                 canvas.drawRect((float) min, (float) centerY, (float) (min + this.f21759j0), (float) i, zArr2[i6] ? this.f21754e0 : this.f21753d0);
@@ -747,7 +747,7 @@ public class C9403e extends View implements C9418p {
         Rect rect = this.f21748W;
         int i = (int) f;
         Rect rect2 = this.f21746U;
-        rect.right = C9554k0.m29382a(i, rect2.left, rect2.right);
+        rect.right = Util.m29382a(i, rect2.left, rect2.right);
     }
 
     /* renamed from: a */
@@ -766,7 +766,7 @@ public class C9403e extends View implements C9418p {
     private void m28803a(Canvas canvas) {
         if (this.f21740B0 > 0) {
             Rect rect = this.f21748W;
-            int a = C9554k0.m29382a(rect.right, rect.left, this.f21746U.right);
+            int a = Util.m29382a(rect.right, rect.left, this.f21746U.right);
             int centerY = this.f21748W.centerY();
             Drawable drawable = this.f21756g0;
             if (drawable == null) {
@@ -783,11 +783,11 @@ public class C9403e extends View implements C9418p {
 
     /* renamed from: a */
     private boolean m28807a(Drawable drawable) {
-        return C9554k0.f22281a >= 23 && m28808a(drawable, getLayoutDirection());
+        return Util.SDK_INT >= 23 && m28808a(drawable, getLayoutDirection());
     }
 
     /* renamed from: a */
     private static boolean m28808a(Drawable drawable, int i) {
-        return C9554k0.f22281a >= 23 && drawable.setLayoutDirection(i);
+        return Util.SDK_INT >= 23 && drawable.setLayoutDirection(i);
     }
 }

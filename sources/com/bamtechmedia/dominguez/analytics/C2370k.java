@@ -12,7 +12,7 @@ import com.bamtechmedia.dominguez.core.BuildInfo.Environment;
 import com.bamtechmedia.dominguez.core.p087h.C3824a;
 import com.bamtechmedia.dominguez.core.p087h.C3824a.C3825a;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p164a.p165a.C4705m;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001:\u0001\u0016B1\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\b\b\u0001\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\u0010\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0013H\u0002J\u0010\u0010\u0014\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0013H\u0002J\u0010\u0010\u0015\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0013H\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u0016\u0010\r\u001a\n \u000f*\u0004\u0018\u00010\u000e0\u000eX\u0004¢\u0006\u0002\n\u0000¨\u0006\u0017"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/analytics/AnalyticsInitializationAction;", "Lcom/bamtechmedia/dominguez/core/app/AppInitializationAction;", "analyticsBackgroundResponder", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsBackgroundResponder;", "analyticsLifecycleResponder", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsLifecycleResponder;", "pageLoadAnalytics", "Lcom/bamtechmedia/dominguez/analytics/PageLoadAnalyticsCallbacks;", "buildInfo", "Lcom/bamtechmedia/dominguez/core/BuildInfo;", "isTelevision", "", "(Lcom/bamtechmedia/dominguez/analytics/AnalyticsBackgroundResponder;Lcom/bamtechmedia/dominguez/analytics/AnalyticsLifecycleResponder;Lcom/bamtechmedia/dominguez/analytics/PageLoadAnalyticsCallbacks;Lcom/bamtechmedia/dominguez/core/BuildInfo;Z)V", "processLifecycleOwner", "Landroidx/lifecycle/LifecycleOwner;", "kotlin.jvm.PlatformType", "initializeAdobe", "", "application", "Landroid/app/Application;", "initializeBraze", "onApplicationCreate", "BrazeEnvironment", "analytics_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -78,7 +78,7 @@ public final class C2370k implements C3824a {
     /* renamed from: b */
     private final void m8893b(Application application) {
         C0722m mVar = this.f6581a;
-        C12880j.m40222a((Object) mVar, "processLifecycleOwner");
+        Intrinsics.checkReturnedValueIsNotNull((Object) mVar, "processLifecycleOwner");
         mVar.getLifecycle().mo4134a(this.f6582b);
         C4705m.m16371a((Context) application);
         C4705m.m16374a(Boolean.valueOf(false));

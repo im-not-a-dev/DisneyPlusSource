@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.legal;
 
 import android.widget.Button;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11853e;
 import p163g.p509o.p510a.p511l.C11866a;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -43,7 +43,7 @@ public final class LegalCenterContentErrorItem extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.viewModel, (java.lang.Object) r3.viewModel) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.viewModel, (java.lang.Object) r3.viewModel) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -55,11 +55,11 @@ public final class LegalCenterContentErrorItem extends C11866a {
             com.bamtechmedia.dominguez.legal.LegalCenterContentErrorItem r3 = (com.bamtechmedia.dominguez.legal.LegalCenterContentErrorItem) r3
             java.lang.String r0 = r2.documentCode
             java.lang.String r1 = r3.documentCode
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.bamtechmedia.dominguez.legal.LegalCenterViewModel r0 = r2.viewModel
             com.bamtechmedia.dominguez.legal.LegalCenterViewModel r3 = r3.viewModel
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:
@@ -88,7 +88,7 @@ public final class LegalCenterContentErrorItem extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof LegalCenterContentErrorItem) && C12880j.m40224a((Object) ((LegalCenterContentErrorItem) eVar).documentCode, (Object) this.documentCode);
+        return (eVar instanceof LegalCenterContentErrorItem) && Intrinsics.areEqual((Object) ((LegalCenterContentErrorItem) eVar).documentCode, (Object) this.documentCode);
     }
 
     public String toString() {

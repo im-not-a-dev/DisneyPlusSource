@@ -11,7 +11,7 @@ import java.util.Set;
 import kotlin.C12907r;
 import kotlin.C13147x;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.name.FqName;
@@ -30,27 +30,27 @@ public final class BuiltinSpecialProperties {
     static {
         FqNameUnsafe fqNameUnsafe = KotlinBuiltIns.FQ_NAMES._enum;
         String str = "BUILTIN_NAMES._enum";
-        C12880j.m40222a((Object) fqNameUnsafe, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqNameUnsafe, str);
         String str2 = "name";
         FqNameUnsafe fqNameUnsafe2 = KotlinBuiltIns.FQ_NAMES._enum;
-        C12880j.m40222a((Object) fqNameUnsafe2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqNameUnsafe2, str);
         String str3 = "ordinal";
         FqName fqName = KotlinBuiltIns.FQ_NAMES.collection;
-        C12880j.m40222a((Object) fqName, "BUILTIN_NAMES.collection");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "BUILTIN_NAMES.collection");
         String str4 = "size";
         FqName fqName2 = KotlinBuiltIns.FQ_NAMES.map;
         String str5 = "BUILTIN_NAMES.map";
-        C12880j.m40222a((Object) fqName2, str5);
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName2, str5);
         FqNameUnsafe fqNameUnsafe3 = KotlinBuiltIns.FQ_NAMES.charSequence;
-        C12880j.m40222a((Object) fqNameUnsafe3, "BUILTIN_NAMES.charSequence");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqNameUnsafe3, "BUILTIN_NAMES.charSequence");
         String str6 = "length";
         FqName fqName3 = KotlinBuiltIns.FQ_NAMES.map;
-        C12880j.m40222a((Object) fqName3, str5);
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName3, str5);
         FqName fqName4 = KotlinBuiltIns.FQ_NAMES.map;
-        C12880j.m40222a((Object) fqName4, str5);
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName4, str5);
         String str7 = "values";
         FqName fqName5 = KotlinBuiltIns.FQ_NAMES.map;
-        C12880j.m40222a((Object) fqName5, str5);
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName5, str5);
         PROPERTY_FQ_NAME_TO_JVM_GETTER_NAME_MAP = C13173j0.m40356a(C12907r.m40244a(SpecialBuiltinMembers.childSafe(fqNameUnsafe, str2), Name.identifier(str2)), C12907r.m40244a(SpecialBuiltinMembers.childSafe(fqNameUnsafe2, str3), Name.identifier(str3)), C12907r.m40244a(SpecialBuiltinMembers.child(fqName, str4), Name.identifier(str4)), C12907r.m40244a(SpecialBuiltinMembers.child(fqName2, str4), Name.identifier(str4)), C12907r.m40244a(SpecialBuiltinMembers.childSafe(fqNameUnsafe3, str6), Name.identifier(str6)), C12907r.m40244a(SpecialBuiltinMembers.child(fqName3, "keys"), Name.identifier("keySet")), C12907r.m40244a(SpecialBuiltinMembers.child(fqName4, str7), Name.identifier(str7)), C12907r.m40244a(SpecialBuiltinMembers.child(fqName5, "entries"), Name.identifier("entrySet")));
         Set<Entry> entrySet = PROPERTY_FQ_NAME_TO_JVM_GETTER_NAME_MAP.entrySet();
         ArrayList<Pair> arrayList = new ArrayList<>(C13187p.m40525a((Iterable) entrySet, 10));
@@ -88,7 +88,7 @@ public final class BuiltinSpecialProperties {
             return false;
         }
         Collection overriddenDescriptors = callableMemberDescriptor.getOverriddenDescriptors();
-        C12880j.m40222a((Object) overriddenDescriptors, "overriddenDescriptors");
+        Intrinsics.checkReturnedValueIsNotNull((Object) overriddenDescriptors, "overriddenDescriptors");
         if (!(overriddenDescriptors instanceof Collection) || !overriddenDescriptors.isEmpty()) {
             Iterator it = overriddenDescriptors.iterator();
             while (true) {
@@ -97,7 +97,7 @@ public final class BuiltinSpecialProperties {
                 }
                 CallableMemberDescriptor callableMemberDescriptor2 = (CallableMemberDescriptor) it.next();
                 BuiltinSpecialProperties builtinSpecialProperties = INSTANCE;
-                C12880j.m40222a((Object) callableMemberDescriptor2, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) callableMemberDescriptor2, "it");
                 if (builtinSpecialProperties.hasBuiltinSpecialPropertyFqName(callableMemberDescriptor2)) {
                     z = true;
                     break;

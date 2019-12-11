@@ -2,7 +2,7 @@ package com.bamtech.sdk4.subscription;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @DontObfuscate
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b7\u0018\u0000 \u00042\u00020\u0001:\u0007\u0003\u0004\u0005\u0006\u0007\b\tB\u0007\b\u0002¢\u0006\u0002\u0010\u0002\u0001\u0006\n\u000b\f\r\u000e\u000f¨\u0006\u0010"}, mo31007d2 = {"Lcom/bamtech/sdk4/subscription/SubscriptionSourceType;", "", "()V", "CST", "Companion", "D2C", "EXT", "IAP", "MVPD", "OTHER", "Lcom/bamtech/sdk4/subscription/SubscriptionSourceType$D2C;", "Lcom/bamtech/sdk4/subscription/SubscriptionSourceType$MVPD;", "Lcom/bamtech/sdk4/subscription/SubscriptionSourceType$IAP;", "Lcom/bamtech/sdk4/subscription/SubscriptionSourceType$CST;", "Lcom/bamtech/sdk4/subscription/SubscriptionSourceType$EXT;", "Lcom/bamtech/sdk4/subscription/SubscriptionSourceType$OTHER;", "extension-iap"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -53,7 +53,7 @@ public abstract class SubscriptionSourceType {
 
         public final SubscriptionSourceType toType(String str) {
             String upperCase = str.toUpperCase();
-            C12880j.m40222a((Object) upperCase, "(this as java.lang.String).toUpperCase()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) upperCase, "(this as java.lang.String).toUpperCase()");
             switch (upperCase.hashCode()) {
                 case 66965:
                     if (upperCase.equals("D2C")) {
@@ -164,7 +164,7 @@ public abstract class SubscriptionSourceType {
         }
 
         public boolean equals(Object obj) {
-            return (obj instanceof OTHER) && C12880j.m40224a((Object) this.value, (Object) ((OTHER) obj).value);
+            return (obj instanceof OTHER) && Intrinsics.areEqual((Object) this.value, (Object) ((OTHER) obj).value);
         }
 
         public final String getValue() {

@@ -19,7 +19,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p210g.C5588o;
 import p163g.p201e.p203b.p210g.C5597p;
@@ -259,10 +259,10 @@ public final class C3408j implements C5641a, OnGlobalFocusChangeListener {
         C5755i.m18679a(this.f8625Y, this.f8621U, null, null, new C3413c(this), 6, null);
         Context requireContext = this.f8625Y.requireContext();
         String str = "fragment.requireContext()";
-        C12880j.m40222a((Object) requireContext, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, str);
         if (C5837i.m18836a(requireContext)) {
             Context requireContext2 = this.f8625Y.requireContext();
-            C12880j.m40222a((Object) requireContext2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext2, str);
             if (C5837i.m18843e(requireContext2)) {
                 C3503a aVar = this.f8626c;
                 if (aVar != null) {

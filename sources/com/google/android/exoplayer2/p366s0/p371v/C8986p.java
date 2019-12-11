@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0.p371v;
 
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.s0.v.p */
 /* compiled from: TrackSampleTable */
@@ -55,7 +55,7 @@ final class C8986p {
 
     /* renamed from: a */
     public int mo23393a(long j) {
-        for (int b = C9554k0.m29429b(this.f19702f, j, true, false); b >= 0; b--) {
+        for (int b = Util.m29429b(this.f19702f, j, true, false); b >= 0; b--) {
             if ((this.f19703g[b] & 1) != 0) {
                 return b;
             }
@@ -65,7 +65,7 @@ final class C8986p {
 
     /* renamed from: b */
     public int mo23394b(long j) {
-        for (int a = C9554k0.m29386a(this.f19702f, j, true, false); a < this.f19702f.length; a++) {
+        for (int a = Util.m29386a(this.f19702f, j, true, false); a < this.f19702f.length; a++) {
             if ((this.f19703g[a] & 1) != 0) {
                 return a;
             }

@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 
 import kotlin.C12898l;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.JavaClassFinder;
@@ -74,7 +74,7 @@ final class LazyJavaPackageScope$classes$1 extends C12881k implements Function1<
                 JavaClass javaClass2 = javaClass;
                 if ((javaClass2 != null ? javaClass2.getLightClassOriginKind() : null) != LightClassOriginKind.BINARY) {
                     FqName fqName = javaClass2 != null ? javaClass2.getFqName() : null;
-                    if (fqName != null && !fqName.isRoot() && !(!C12880j.m40224a((Object) fqName.parent(), (Object) this.this$0.getOwnerDescriptor().getFqName()))) {
+                    if (fqName != null && !fqName.isRoot() && !(!Intrinsics.areEqual((Object) fqName.parent(), (Object) this.this$0.getOwnerDescriptor().getFqName()))) {
                         LazyJavaClassDescriptor lazyJavaClassDescriptor = new LazyJavaClassDescriptor(this.f29561$c, this.this$0.getOwnerDescriptor(), javaClass2, null, 8, null);
                         this.f29561$c.getComponents().getJavaClassesTracker().reportClass(lazyJavaClassDescriptor);
                         classDescriptor = lazyJavaClassDescriptor;

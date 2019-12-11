@@ -16,7 +16,7 @@ import javax.inject.Provider;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Request.C14113a;
@@ -98,7 +98,7 @@ public final class C3743h {
             Map map = this.f9344V;
             String countryCode = sessionInfo.getLocation().getCountryCode();
             if (countryCode != null) {
-                C12880j.m40222a((Object) bool, "kidsMode");
+                Intrinsics.checkReturnedValueIsNotNull((Object) bool, "kidsMode");
                 String a = hVar.m12688a(list, map, countryCode, bool.booleanValue());
                 return a != null ? a : "";
             }
@@ -157,11 +157,11 @@ public final class C3743h {
         if (a != null) {
             C5855o oVar = C5855o.f13640a;
             Maybe<GraphQlResponse<T>> e = C11920c.m38475a(this.f9337b, C6673h1.m20690a(this.f9338c)).mo30233g(new C3745b(this, a, map)).mo30202a((C11952h<? super T>) C3746c.f9346c).mo30129e(new C3747d(this, type));
-            C12880j.m40222a((Object) e, "sessionInfo\n            …romNetwork<T>(type, it) }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) e, "sessionInfo\n            …romNetwork<T>(type, it) }");
             return e;
         }
         Maybe<GraphQlResponse<T>> h = Maybe.m38259h();
-        C12880j.m40222a((Object) h, "Maybe.empty()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Maybe.empty()");
         return h;
     }
 
@@ -215,10 +215,10 @@ public final class C3743h {
         if (map != null) {
             String str3 = "kidsMode";
             boolean z3 = false;
-            boolean z4 = !map.containsKey(str3) || C12880j.m40224a((Object) Boolean.valueOf(z), map.get(str3));
+            boolean z4 = !map.containsKey(str3) || Intrinsics.areEqual((Object) Boolean.valueOf(z), map.get(str3));
             if (map != null) {
                 String str4 = "country";
-                boolean z5 = !map.containsKey(str4) || C12880j.m40224a((Object) str, map.get(str4));
+                boolean z5 = !map.containsKey(str4) || Intrinsics.areEqual((Object) str, map.get(str4));
                 Object obj = map.get(GraphQlRequest.VARIABLES);
                 if (!(obj instanceof Map)) {
                     obj = null;
@@ -231,7 +231,7 @@ public final class C3743h {
                             break;
                         }
                         Entry entry = (Entry) it.next();
-                        if (!C12880j.m40224a(map2.get(entry.getKey()), entry.getValue())) {
+                        if (!Intrinsics.areEqual(map2.get(entry.getKey()), entry.getValue())) {
                             z2 = false;
                             break;
                         }
@@ -255,11 +255,11 @@ public final class C3743h {
         C14113a aVar = new C14113a();
         aVar.mo35848b(str);
         Request a = aVar.mo35846a();
-        C12880j.m40222a((Object) a, "Request.Builder().url(url).build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Request.Builder().url(url).build()");
         Object obj = this.f9339d.get();
-        C12880j.m40222a(obj, "httpClientProvider.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "httpClientProvider.get()");
         Single<GraphQlResponse<T>> g = C5879c.m18933a(a, (OkHttpClient) obj).mo30233g(new C3744a(this, type));
-        C12880j.m40222a((Object) g, "Request.Builder().url(ur…ap { parse<T>(it, type) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "Request.Builder().url(ur…ap { parse<T>(it, type) }");
         return g;
     }
 

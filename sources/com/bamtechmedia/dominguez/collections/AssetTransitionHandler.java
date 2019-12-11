@@ -18,8 +18,8 @@ import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.C11945a;
-import p686n.p687a.C14100a;
-import p686n.p687a.C14100a.C14102b;
+import p686n.p687a.Timber;
+import p686n.p687a.Timber.C14102b;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 \u001c2\u00020\u00012\u00020\u00022\u00020\u0003:\u0002\u001c\u001dB\u001d\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\u0010\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0012H\u0002J\u000e\u0010\u0013\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eJ\u0010\u0010\u0014\u001a\u00020\u00102\u0006\u0010\u0015\u001a\u00020\u0016H\u0016J\u0010\u0010\u0017\u001a\u00020\u00102\u0006\u0010\u0015\u001a\u00020\u0016H\u0016J\u0010\u0010\u0018\u001a\u00020\u00102\u0006\u0010\u0019\u001a\u00020\u001aH\u0016J\u0010\u0010\u001b\u001a\u00020\u00102\u0006\u0010\u0015\u001a\u00020\u0016H\u0002R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\fX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u000e¢\u0006\u0002\n\u0000¨\u0006\u001e"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/collections/AssetTransitionHandler;", "Lcom/bamtechmedia/dominguez/core/framework/AutoDisposeViewModel;", "Lcom/bamtechmedia/dominguez/collections/AssetFocusCallback;", "Landroidx/lifecycle/DefaultLifecycleObserver;", "videoArtHandler", "Lcom/bamtechmedia/dominguez/collections/AssetVideoArtHandler;", "staticImageHandler", "Lcom/bamtechmedia/dominguez/collections/AssetStaticImageHandler;", "profilesMemoryCache", "Lcom/bamtechmedia/dominguez/profiles/ProfilesMemoryCache;", "(Lcom/bamtechmedia/dominguez/collections/AssetVideoArtHandler;Lcom/bamtechmedia/dominguez/collections/AssetStaticImageHandler;Lcom/bamtechmedia/dominguez/profiles/ProfilesMemoryCache;)V", "videoArtDisposable", "Lio/reactivex/disposables/Disposable;", "viewProvider", "Lcom/bamtechmedia/dominguez/collections/AssetTransitionHandler$ViewProvider;", "attachVideoArt", "", "videoArt", "Lcom/bamtechmedia/dominguez/core/content/collections/VideoArt;", "attachViewProvider", "onAssetFocused", "asset", "Lcom/bamtechmedia/dominguez/core/content/assets/Asset;", "onAssetSelected", "onDestroy", "owner", "Landroidx/lifecycle/LifecycleOwner;", "scheduleVideoArtPlayback", "Companion", "ViewProvider", "collections_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: AssetTransitionHandler.kt */
@@ -72,7 +72,7 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
         }
 
         public final void invoke() {
-            C14100a.m44521a("AssetTransitionHandler").mo35673d("VideoArt playback started", new Object[0]);
+            Timber.m44521a("AssetTransitionHandler").mo35673d("VideoArt playback started", new Object[0]);
             this.f8294c.f8291W.mo12300y();
         }
     }
@@ -90,7 +90,7 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
         }
 
         public final void invoke() {
-            C14100a.m44521a("AssetTransitionHandler").mo35673d("VideoArt playback ended", new Object[0]);
+            Timber.m44521a("AssetTransitionHandler").mo35673d("VideoArt playback ended", new Object[0]);
             this.f8295c.f8291W.mo12301z();
         }
     }
@@ -155,7 +155,7 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
 
         /* renamed from: a */
         public final void mo12319a(Throwable th) {
-            C14100a.m44527b(th);
+            Timber.m44527b(th);
         }
 
         public final String getName() {
@@ -163,7 +163,7 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -217,7 +217,7 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
             r5 = 0
             java.lang.String r0 = "AssetTransitionHandler"
             if (r1 != 0) goto L_0x002d
-            n.a.a$b r0 = p686n.p687a.C14100a.m44521a(r0)
+            n.a.a$b r0 = p686n.p687a.Timber.m44521a(r0)
             java.lang.Object[] r5 = new java.lang.Object[r5]
             java.lang.String r1 = "No VideoArt playback: VideoArt is null"
             r0.mo35673d(r1, r5)
@@ -226,7 +226,7 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
             com.bamtechmedia.dominguez.profiles.c1 r2 = r4.f8292X
             boolean r2 = r2.mo19286a()
             if (r2 != 0) goto L_0x0041
-            n.a.a$b r0 = p686n.p687a.C14100a.m44521a(r0)
+            n.a.a$b r0 = p686n.p687a.Timber.m44521a(r0)
             java.lang.Object[] r5 = new java.lang.Object[r5]
             java.lang.String r1 = "No VideoArt playback: disabled by 'backgroundVideo' setting"
             r0.mo35673d(r1, r5)
@@ -239,12 +239,12 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
             io.reactivex.r r0 = p520io.reactivex.p527w.p529c.C11992a.m38600a()
             io.reactivex.Completable r5 = r5.mo30040a(r0)
             java.lang.String r0 = "Completable.timer(PLAYBA…dSchedulers.mainThread())"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r0)
             g.n.a.c0 r0 = r4.getViewModelScope()
             g.n.a.h r0 = p163g.p503n.p504a.C11793e.m37930a(r0)
             java.lang.Object r5 = r5.mo30048a(r0)
             java.lang.String r0 = "this.`as`(AutoDispose.au…isposable<Any>(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r0)
             g.n.a.v r5 = (p163g.p503n.p504a.C11839v) r5
             com.bamtechmedia.dominguez.collections.AssetTransitionHandler$f r0 = new com.bamtechmedia.dominguez.collections.AssetTransitionHandler$f
             r0.<init>(r4, r1)
@@ -279,7 +279,7 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
 
     /* renamed from: c */
     public void mo12316c(C3626b bVar) {
-        C14102b a = C14100a.m44521a("AssetTransitionHandler");
+        C14102b a = Timber.m44521a("AssetTransitionHandler");
         StringBuilder sb = new StringBuilder();
         sb.append("onAssetSelected - ");
         sb.append(bVar.getTitle());
@@ -294,7 +294,7 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
 
     /* renamed from: d */
     public void mo12317d(C3626b bVar) {
-        C14102b a = C14100a.m44521a("AssetTransitionHandler");
+        C14102b a = Timber.m44521a("AssetTransitionHandler");
         StringBuilder sb = new StringBuilder();
         sb.append("onAssetFocused - ");
         sb.append(bVar.getTitle());
@@ -314,7 +314,7 @@ public final class AssetTransitionHandler extends C5733a implements C3288c, C071
         if (bVar != null) {
             PlayerView j = bVar.mo12235j();
             if (j != null) {
-                C14100a.m44521a("AssetTransitionHandler").mo35673d("Attach VideoArt to PlayerView", new Object[0]);
+                Timber.m44521a("AssetTransitionHandler").mo35673d("Attach VideoArt to PlayerView", new Object[0]);
                 this.f8290V.mo12321a(j, nVar, false, new C3272c(this, nVar), new C3273d(this, nVar));
             }
         }

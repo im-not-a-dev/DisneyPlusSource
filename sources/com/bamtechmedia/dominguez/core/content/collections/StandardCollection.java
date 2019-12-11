@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Set;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11733i;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\u0011\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\b\b\u0018\u00002\u00020\u0001BQ\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\f\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012\u000e\b\u0002\u0010\t\u001a\b\u0012\u0004\u0012\u00020\n0\u0007\u0012\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\f0\u0007\u0012\u000e\u0010\r\u001a\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\u0007¢\u0006\u0002\u0010\u000fJ\t\u0010'\u001a\u00020\u0003HÆ\u0003J\t\u0010(\u001a\u00020\u0005HÆ\u0003J\u000f\u0010)\u001a\b\u0012\u0004\u0012\u00020\b0\u0007HÆ\u0003J\u000f\u0010*\u001a\b\u0012\u0004\u0012\u00020\n0\u0007HÆ\u0003J\u000f\u0010+\u001a\b\u0012\u0004\u0012\u00020\f0\u0007HÆ\u0003J\u0011\u0010,\u001a\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\u0007HÆ\u0003J_\u0010-\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00052\u000e\b\u0002\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\b0\u00072\u000e\b\u0002\u0010\t\u001a\b\u0012\u0004\u0012\u00020\n0\u00072\u000e\b\u0002\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\f0\u00072\u0010\b\u0002\u0010\r\u001a\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\u0007HÆ\u0001J\u0016\u0010.\u001a\u00020\u00012\f\u0010/\u001a\b\u0012\u0004\u0012\u00020100H\u0016J\u0018\u00102\u001a\u00020\u00012\u000e\u00103\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00030\u0007H\u0016J\u0010\u00104\u001a\u00020\u00012\u0006\u00105\u001a\u00020\u0003H\u0016J\u0013\u00106\u001a\u0002072\b\u00108\u001a\u0004\u0018\u000109HÖ\u0003J\t\u0010:\u001a\u00020;HÖ\u0001J\u0010\u0010<\u001a\u0002072\u0006\u00108\u001a\u00020\u001eH\u0016J\t\u0010=\u001a\u00020\u0003HÖ\u0001R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\u0011R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0013R\u0014\u0010\u0014\u001a\u00020\u00038VX\u0004¢\u0006\u0006\u001a\u0004\b\u0015\u0010\u0013R\u001a\u0010\t\u001a\b\u0012\u0004\u0012\u00020\n0\u0007X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0017R\u0014\u0010\u0018\u001a\u00020\u00038VX\u0004¢\u0006\u0006\u001a\u0004\b\u0019\u0010\u0013R\u0016\u0010\u001a\u001a\u0004\u0018\u00010\u000e8VX\u0004¢\u0006\u0006\u001a\u0004\b\u001b\u0010\u001cR\u001a\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u001e0\u00078VX\u0004¢\u0006\u0006\u001a\u0004\b\u001f\u0010\u0017R\u0014\u0010 \u001a\u00020\u00038VX\u0004¢\u0006\u0006\u001a\u0004\b!\u0010\u0013R\u001a\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\f0\u0007X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\"\u0010\u0017R\u0017\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\b0\u0007¢\u0006\b\n\u0000\u001a\u0004\b#\u0010\u0017R\u0014\u0010$\u001a\u00020\u00038VX\u0004¢\u0006\u0006\u001a\u0004\b%\u0010\u0013R\u001c\u0010\r\u001a\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\u0007X\u0004¢\u0006\b\n\u0000\u001a\u0004\b&\u0010\u0017¨\u0006>"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/content/collections/StandardCollection;", "Lcom/bamtechmedia/dominguez/core/content/collections/Collection;", "collectionId", "", "collectionGroup", "Lcom/bamtechmedia/dominguez/core/content/collections/CollectionGroup;", "texts", "", "Lcom/bamtechmedia/dominguez/core/content/assets/TextEntry;", "containers", "Lcom/bamtechmedia/dominguez/core/content/containers/Container;", "images", "Lcom/bamtechmedia/dominguez/core/content/assets/Image;", "videoArt", "Lcom/bamtechmedia/dominguez/core/content/collections/VideoArt;", "(Ljava/lang/String;Lcom/bamtechmedia/dominguez/core/content/collections/CollectionGroup;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V", "getCollectionGroup", "()Lcom/bamtechmedia/dominguez/core/content/collections/CollectionGroup;", "getCollectionId", "()Ljava/lang/String;", "collectionKey", "getCollectionKey", "getContainers", "()Ljava/util/List;", "contentClass", "getContentClass", "heroCollectionVideo", "getHeroCollectionVideo", "()Lcom/bamtechmedia/dominguez/core/content/collections/VideoArt;", "hiddenAssets", "Lcom/bamtechmedia/dominguez/core/content/assets/Asset;", "getHiddenAssets", "id", "getId", "getImages", "getTexts", "title", "getTitle", "getVideoArt", "component1", "component2", "component3", "component4", "component5", "component6", "copy", "copyWithContentSets", "contentSets", "", "Lcom/bamtechmedia/dominguez/core/content/sets/ContentSet;", "copyWithFilteredAssets", "filterableIds", "copyWithFilteredSet", "setId", "equals", "", "other", "", "hashCode", "", "isSameAs", "toString", "coreContentApi_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -131,7 +131,7 @@ public final class StandardCollection extends C3658a {
                     break;
                 }
                 obj = it.next();
-                if (C12880j.m40224a((Object) ((C3680n) obj).mo13319W(), (Object) "hero_collection")) {
+                if (Intrinsics.areEqual((Object) ((C3680n) obj).mo13319W(), (Object) "hero_collection")) {
                     break;
                 }
             }
@@ -150,7 +150,7 @@ public final class StandardCollection extends C3658a {
                 break;
             }
             Object next = it2.next();
-            if (C12880j.m40224a((Object) ((C3680n) next).mo13319W(), (Object) "full_bleed")) {
+            if (Intrinsics.areEqual((Object) ((C3680n) next).mo13319W(), (Object) "full_bleed")) {
                 obj2 = next;
                 break;
             }
@@ -212,7 +212,7 @@ public final class StandardCollection extends C3658a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:14:0x004e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) mo12839H(), (java.lang.Object) r3.mo12839H()) != false) goto L_0x0053;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) mo12839H(), (java.lang.Object) r3.mo12839H()) != false) goto L_0x0053;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -224,27 +224,27 @@ public final class StandardCollection extends C3658a {
             com.bamtechmedia.dominguez.core.content.collections.StandardCollection r3 = (com.bamtechmedia.dominguez.core.content.collections.StandardCollection) r3
             java.lang.String r0 = r2.f9192c
             java.lang.String r1 = r3.f9192c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0051
             com.bamtechmedia.dominguez.core.content.collections.CollectionGroup r0 = r2.f9187U
             com.bamtechmedia.dominguez.core.content.collections.CollectionGroup r1 = r3.f9187U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0051
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r0 = r2.f9188V
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r1 = r3.f9188V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0051
             java.util.List r0 = r2.mo13343O()
             java.util.List r1 = r3.mo13343O()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0051
             java.util.List r0 = r2.mo12847a()
             java.util.List r1 = r3.mo12847a()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0051
             java.util.List r0 = r2.mo12839H()
             java.util.List r3 = r3.mo12839H()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0051
             goto L_0x0053
         L_0x0051:
@@ -310,7 +310,7 @@ public final class StandardCollection extends C3658a {
 
     /* renamed from: a */
     public boolean mo12848a(C3626b bVar) {
-        return (bVar instanceof StandardCollection) && C12880j.m40224a((Object) ((StandardCollection) bVar).f9192c, (Object) this.f9192c);
+        return (bVar instanceof StandardCollection) && Intrinsics.areEqual((Object) ((StandardCollection) bVar).f9192c, (Object) this.f9192c);
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:11:0x0058, code lost:
@@ -401,7 +401,7 @@ public final class StandardCollection extends C3658a {
         List O = mo13343O();
         ArrayList arrayList = new ArrayList();
         for (Object next : O) {
-            if (C12880j.m40224a((Object) ((Container) next).mo13400a().mo13608e(), (Object) str)) {
+            if (Intrinsics.areEqual((Object) ((Container) next).mo13400a().mo13608e(), (Object) str)) {
                 arrayList.add(next);
             }
         }

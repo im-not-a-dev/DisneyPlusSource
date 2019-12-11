@@ -3,7 +3,7 @@ package p163g.p201e.p203b.p275a0;
 import android.content.Context;
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p275a0.C7159g.C7162c;
 import p163g.p201e.p203b.p275a0.p276k.C7172c;
 import p163g.p201e.p203b.p275a0.p276k.C7175e;
@@ -30,7 +30,7 @@ public final class C7169j implements C7166i {
         C7162c cVar2 = new C7162c();
         function1.invoke(cVar2);
         String uri = cVar.mo20013a(new C7175e(str, context, cVar2)).toString();
-        C12880j.m40222a((Object) uri, "httpRipcutUriFactory.cre…   )\n        ).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) uri, "httpRipcutUriFactory.cre…   )\n        ).toString()");
         return uri;
     }
 }

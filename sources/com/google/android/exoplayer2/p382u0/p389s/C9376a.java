@@ -10,7 +10,7 @@ import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9323c;
 import com.google.android.exoplayer2.p382u0.C9325e;
 import com.google.android.exoplayer2.p382u0.C9327g;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.nio.charset.Charset;
 import java.util.List;
@@ -20,10 +20,10 @@ import java.util.List;
 public final class C9376a extends C9323c {
 
     /* renamed from: u */
-    private static final int f21605u = C9554k0.m29428b("styl");
+    private static final int f21605u = Util.m29428b("styl");
 
     /* renamed from: v */
-    private static final int f21606v = C9554k0.m29428b("tbox");
+    private static final int f21606v = Util.m29428b("tbox");
 
     /* renamed from: n */
     private final C9572w f21607n = new C9572w();
@@ -54,7 +54,7 @@ public final class C9376a extends C9323c {
             byte[] bArr = (byte[]) list.get(0);
             this.f21609p = bArr[24];
             this.f21610q = ((bArr[26] & 255) << 24) | ((bArr[27] & 255) << 16) | ((bArr[28] & 255) << 8) | (bArr[29] & 255);
-            if ("Serif".equals(C9554k0.m29400a(bArr, 43, bArr.length - 43))) {
+            if ("Serif".equals(Util.m29400a(bArr, 43, bArr.length - 43))) {
                 str = "serif";
             }
             this.f21611r = str;
@@ -65,7 +65,7 @@ public final class C9376a extends C9323c {
             this.f21608o = z;
             if (this.f21608o) {
                 this.f21612s = ((float) ((bArr[11] & 255) | ((bArr[10] & 255) << 8))) / ((float) this.f21613t);
-                this.f21612s = C9554k0.m29379a(this.f21612s, 0.0f, 0.95f);
+                this.f21612s = Util.m29379a(this.f21612s, 0.0f, 0.95f);
                 return;
             }
             this.f21612s = 0.85f;
@@ -139,7 +139,7 @@ public final class C9376a extends C9323c {
                     z2 = false;
                 }
                 m28628a(z2);
-                f = C9554k0.m29379a(((float) this.f21607n.mo24676B()) / ((float) this.f21613t), 0.0f, 0.95f);
+                f = Util.m29379a(((float) this.f21607n.mo24676B()) / ((float) this.f21613t), 0.0f, 0.95f);
             }
             this.f21607n.mo24693e(c + i2);
         }

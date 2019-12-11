@@ -57,7 +57,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import net.danlew.android.joda.DateUtils;
 import p096e.p121h.p122j.C4025a;
@@ -73,7 +73,7 @@ import p163g.p201e.p203b.p319v.C7905u;
 import p163g.p201e.p203b.p319v.p320a0.C7822c;
 import p163g.p201e.p203b.p319v.p320a0.C7823d;
 import p512h.p513c.p514k.C11890i;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000º\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0013\u0018\u0000 t2\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0002tuB\u0005¢\u0006\u0002\u0010\u0006J\b\u0010M\u001a\u00020NH\u0002J\u0010\u0010O\u001a\u00020N2\u0006\u0010P\u001a\u00020QH\u0002J\b\u0010R\u001a\u00020NH\u0002J\b\u0010S\u001a\u00020NH\u0002J\b\u0010T\u001a\u00020UH\u0016J\u0015\u0010V\u001a\u00020N2\u0006\u0010W\u001a\u00020?H\u0001¢\u0006\u0002\bXJ\u0018\u0010Y\u001a\u00020\u001e2\u0006\u0010Z\u001a\u00020Q2\u0006\u0010[\u001a\u00020QH\u0016J\b\u0010\\\u001a\u00020\u001eH\u0016J&\u0010]\u001a\u0004\u0018\u00010\u00142\u0006\u0010^\u001a\u00020_2\b\u0010`\u001a\u0004\u0018\u00010a2\b\u0010b\u001a\u0004\u0018\u00010cH\u0016J\b\u0010d\u001a\u00020NH\u0016J\b\u0010e\u001a\u00020NH\u0016J\b\u0010f\u001a\u00020NH\u0016J\b\u0010g\u001a\u00020NH\u0016J\b\u0010h\u001a\u00020NH\u0016J\u001a\u0010i\u001a\u00020N2\u0006\u0010j\u001a\u00020\u00142\b\u0010b\u001a\u0004\u0018\u00010cH\u0016J\u0018\u0010k\u001a\u00020N2\u0006\u0010l\u001a\u00020a2\u0006\u0010m\u001a\u00020\u001eH\u0002J\u0017\u0010n\u001a\u0004\u0018\u00010N2\u0006\u0010o\u001a\u00020\u001eH\u0002¢\u0006\u0002\u0010pJ\b\u0010q\u001a\u00020NH\u0002J\u0010\u0010r\u001a\u00020\u001e2\u0006\u0010Z\u001a\u00020QH\u0002J\b\u0010s\u001a\u00020NH\u0002R\u001e\u0010\u0007\u001a\u00020\b8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\t\u0010\n\"\u0004\b\u000b\u0010\fR\u001e\u0010\r\u001a\u00020\u000e8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0015\u001a\u0004\u0018\u00010\u0016X\u000e¢\u0006\u0002\n\u0000R\u001e\u0010\u0017\u001a\u00020\u00188\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\u001cR\u0014\u0010\u001d\u001a\u00020\u001e8BX\u0004¢\u0006\u0006\u001a\u0004\b\u001d\u0010\u001fR\u001e\u0010 \u001a\u00020!8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\"\u0010#\"\u0004\b$\u0010%R\u001e\u0010&\u001a\u00020'8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b(\u0010)\"\u0004\b*\u0010+R\u001e\u0010,\u001a\u00020-8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b.\u0010/\"\u0004\b0\u00101R\u001e\u00102\u001a\u0002038\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b4\u00105\"\u0004\b6\u00107R\u001e\u00108\u001a\u0002098\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b:\u0010;\"\u0004\b<\u0010=R\u0010\u0010>\u001a\u0004\u0018\u00010?X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010@\u001a\u0004\u0018\u00010\u0014X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010A\u001a\u0004\u0018\u00010BX\u000e¢\u0006\u0002\n\u0000R\u0011\u0010C\u001a\u00020D8F¢\u0006\u0006\u001a\u0004\bE\u0010FR\u001e\u0010G\u001a\u00020H8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\bI\u0010J\"\u0004\bK\u0010L¨\u0006v"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/paywall/ui/PaywallFragment;", "Ldagger/android/support/DaggerFragment;", "Lcom/bamtechmedia/dominguez/core/utils/BackPressHandler;", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsStateProvider;", "Lcom/bamtechmedia/dominguez/error/api/ReloadListener;", "Lcom/bamtechmedia/dominguez/dialogs/AlertDialogCallback;", "()V", "analytics", "Lcom/bamtechmedia/dominguez/purchase/PaywallAnalytics;", "getAnalytics", "()Lcom/bamtechmedia/dominguez/purchase/PaywallAnalytics;", "setAnalytics", "(Lcom/bamtechmedia/dominguez/purchase/PaywallAnalytics;)V", "finishSubscribingRouter", "Lcom/bamtechmedia/dominguez/purchase/finishsubscribe/FinishSubscribingRouter;", "getFinishSubscribingRouter", "()Lcom/bamtechmedia/dominguez/purchase/finishsubscribe/FinishSubscribingRouter;", "setFinishSubscribingRouter", "(Lcom/bamtechmedia/dominguez/purchase/finishsubscribe/FinishSubscribingRouter;)V", "firstPaymentButton", "Landroid/view/View;", "focusSearchInterceptor", "Lcom/bamtechmedia/dominguez/core/design/widgets/focus/FocusSearchInterceptor;", "forceWebTransformationMethod", "Landroid/text/method/TransformationMethod;", "getForceWebTransformationMethod", "()Landroid/text/method/TransformationMethod;", "setForceWebTransformationMethod", "(Landroid/text/method/TransformationMethod;)V", "isOnline", "", "()Z", "offlineRouter", "Lcom/bamtechmedia/dominguez/error/api/OfflineRouter;", "getOfflineRouter", "()Lcom/bamtechmedia/dominguez/error/api/OfflineRouter;", "setOfflineRouter", "(Lcom/bamtechmedia/dominguez/error/api/OfflineRouter;)V", "offlineState", "Lcom/bamtechmedia/dominguez/core/OfflineState;", "getOfflineState", "()Lcom/bamtechmedia/dominguez/core/OfflineState;", "setOfflineState", "(Lcom/bamtechmedia/dominguez/core/OfflineState;)V", "paywallRouter", "Lcom/bamtechmedia/dominguez/purchase/PaywallRouter;", "getPaywallRouter", "()Lcom/bamtechmedia/dominguez/purchase/PaywallRouter;", "setPaywallRouter", "(Lcom/bamtechmedia/dominguez/purchase/PaywallRouter;)V", "paywallTransitionAnimation", "Lcom/bamtechmedia/dominguez/core/animation/TransitionAnimationHelper;", "getPaywallTransitionAnimation", "()Lcom/bamtechmedia/dominguez/core/animation/TransitionAnimationHelper;", "setPaywallTransitionAnimation", "(Lcom/bamtechmedia/dominguez/core/animation/TransitionAnimationHelper;)V", "presenter", "Lcom/bamtechmedia/dominguez/paywall/ui/PaywallPresenter;", "getPresenter", "()Lcom/bamtechmedia/dominguez/paywall/ui/PaywallPresenter;", "setPresenter", "(Lcom/bamtechmedia/dominguez/paywall/ui/PaywallPresenter;)V", "previousState", "Lcom/bamtechmedia/dominguez/purchase/PaywallState;", "secondPaymentButton", "topFragment", "Landroidx/fragment/app/Fragment;", "type", "Lcom/bamtechmedia/dominguez/paywall/ui/PaywallFragment$Type;", "getType", "()Lcom/bamtechmedia/dominguez/paywall/ui/PaywallFragment$Type;", "viewModel", "Lcom/bamtechmedia/dominguez/purchase/PaywallViewModel;", "getViewModel", "()Lcom/bamtechmedia/dominguez/purchase/PaywallViewModel;", "setViewModel", "(Lcom/bamtechmedia/dominguez/purchase/PaywallViewModel;)V", "addOnFocusInterceptor", "", "adjustMarginRestoreButton", "listSize", "", "disableAccessibilityForTopFragment", "enableAccessibilityForTopFragment", "getAnalyticsSection", "Lcom/bamtechmedia/dominguez/analytics/AnalyticsSection;", "handlePaywallState", "paywallState", "handlePaywallState$paywall_release", "onAlertDialogAction", "requestId", "which", "onBackPress", "onCreateView", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "savedInstanceState", "Landroid/os/Bundle;", "onDestroyView", "onPause", "onReloadRequested", "onResume", "onStart", "onViewCreated", "view", "setButtonStatus", "buttonContainer", "isLoading", "setNavigationBar", "shouldBeTranslucent", "(Z)Lkotlin/Unit;", "setupDisclaimerTextView", "shouldBeGrantedAccess", "showFinishSubscribingDialog", "Companion", "Type", "paywall_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.v.b0.e */
@@ -170,7 +170,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         /* renamed from: a */
         public View mo17542a(View view, int i, View view2) {
             View view3 = null;
-            if (C12880j.m40224a((Object) view, (Object) this.f16958a.f16949d0)) {
+            if (Intrinsics.areEqual((Object) view, (Object) this.f16958a.f16949d0)) {
                 if (i == 66) {
                     view3 = this.f16958a.f16950e0;
                 }
@@ -178,7 +178,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                     return this.f16958a.f16949d0;
                 }
                 return view3;
-            } else if (C12880j.m40224a((Object) view, (Object) this.f16958a.f16950e0)) {
+            } else if (Intrinsics.areEqual((Object) view, (Object) this.f16958a.f16950e0)) {
                 if (i == 17) {
                     view3 = this.f16958a.f16949d0;
                 }
@@ -186,11 +186,11 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                     return this.f16958a.f16950e0;
                 }
                 return view3;
-            } else if (!C12880j.m40224a((Object) view, (Object) (Button) this.f16958a._$_findCachedViewById(C7904t.paywallBtnRestore)) || i != 130) {
+            } else if (!Intrinsics.areEqual((Object) view, (Object) (Button) this.f16958a._$_findCachedViewById(C7904t.paywallBtnRestore)) || i != 130) {
                 return null;
             } else {
                 View _$_findCachedViewById = this.f16958a._$_findCachedViewById(C7904t.paywallBtnDeveloperSkip);
-                C12880j.m40222a((Object) _$_findCachedViewById, "paywallBtnDeveloperSkip");
+                Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "paywallBtnDeveloperSkip");
                 if (_$_findCachedViewById.getVisibility() == 8) {
                     return (Button) this.f16958a._$_findCachedViewById(C7904t.paywallBtnRestore);
                 }
@@ -218,7 +218,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         /* renamed from: a */
         public final void mo20764a(List<? extends C7823d> list, ViewGroup viewGroup) {
             C7083u b = this.f16960c.f16952g0;
-            if (!C12880j.m40224a((Object) list, (Object) b != null ? b.mo19869e() : null)) {
+            if (!Intrinsics.areEqual((Object) list, (Object) b != null ? b.mo19869e() : null)) {
                 List<View> a = this.f16960c.mo20761q().mo20776a(viewGroup, this.f16959U);
                 if (!a.isEmpty()) {
                     this.f16960c.f16949d0 = (View) a.get(0);
@@ -230,7 +230,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                     }
                     this.f16960c.m22971w();
                     Context requireContext = this.f16960c.requireContext();
-                    C12880j.m40222a((Object) requireContext, "requireContext()");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
                     if (C5837i.m18843e(requireContext)) {
                         this.f16960c.m22961b(a.size());
                         Flow flow = (Flow) this.f16960c._$_findCachedViewById(C7904t.paywallFlow);
@@ -477,7 +477,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (dVar != null) {
             return dVar.mo13695j();
         }
-        C12880j.m40227c("offlineState");
+        Intrinsics.throwUninitializedPropertyAccessException("offlineState");
         throw null;
     }
 
@@ -486,10 +486,10 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
     public final void m22971w() {
         boolean z;
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         if (C5837i.m18843e(requireContext)) {
             ConstraintLayout constraintLayout = (ConstraintLayout) _$_findCachedViewById(C7904t.paywallConstraintLayout);
-            C12880j.m40222a((Object) constraintLayout, "paywallConstraintLayout");
+            Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "paywallConstraintLayout");
             Object obj = null;
             for (Object next : C4121a0.m14117a(constraintLayout)) {
                 Object tag = ((View) next).getTag();
@@ -502,7 +502,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                     if (jVar != null) {
                         z = jVar.mo20778a((C7823d) cVar);
                     } else {
-                        C12880j.m40227c("presenter");
+                        Intrinsics.throwUninitializedPropertyAccessException("presenter");
                         throw null;
                     }
                 } else {
@@ -523,7 +523,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (sVar != null) {
             sVar.mo19863a();
         } else {
-            C12880j.m40227c("paywallRouter");
+            Intrinsics.throwUninitializedPropertyAccessException("paywallRouter");
             throw null;
         }
     }
@@ -557,7 +557,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (vVar != null) {
             vVar.mo19874B();
         } else {
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
     }
@@ -567,7 +567,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (vVar != null) {
             return vVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -583,7 +583,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (iVar != null) {
             return iVar;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
@@ -612,7 +612,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
             C5755i.m18679a(this, vVar, C0716a.ON_PAUSE, null, new C7845g(this), 4, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -622,7 +622,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (vVar != null) {
             vVar.mo19879y();
         } else {
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
     }
@@ -632,14 +632,14 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         String str = "paywallTransitionAnimation";
         if (bVar != null) {
             View findViewById = view.findViewById(C7904t.paywallScrimBackground);
-            C12880j.m40222a((Object) findViewById, "view.paywallScrimBackground");
+            Intrinsics.checkReturnedValueIsNotNull((Object) findViewById, "view.paywallScrimBackground");
             View view2 = (FrameLayout) view.findViewById(C7904t.paywallConstraintLayoutContainer);
             if (view2 == null) {
                 view2 = (ConstraintLayout) view.findViewById(C7904t.paywallConstraintLayout);
-                C12880j.m40222a((Object) view2, "view.paywallConstraintLayout");
+                Intrinsics.checkReturnedValueIsNotNull((Object) view2, "view.paywallConstraintLayout");
             }
             C0532d requireActivity = requireActivity();
-            C12880j.m40222a((Object) requireActivity, "requireActivity()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireActivity, "requireActivity()");
             bVar.mo13709a(findViewById, view2, requireActivity);
             NestedScrollView nestedScrollView = (NestedScrollView) _$_findCachedViewById(C7904t.paywallConstraintScrollLayout);
             if (nestedScrollView != null) {
@@ -653,7 +653,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                 }
             }
             View _$_findCachedViewById = _$_findCachedViewById(C7904t.paywallBtnDeveloperSkip);
-            C12880j.m40222a((Object) _$_findCachedViewById, "paywallBtnDeveloperSkip");
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "paywallBtnDeveloperSkip");
             C7084v vVar = this.f16942W;
             String str2 = "viewModel";
             if (vVar != null) {
@@ -661,10 +661,10 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                 _$_findCachedViewById(C7904t.paywallBtnDeveloperSkip).setOnClickListener(new C7847i(this));
                 TextView textView = (TextView) _$_findCachedViewById(C7904t.paywallLegalText);
                 String str3 = "paywallLegalText";
-                C12880j.m40222a((Object) textView, str3);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView, str3);
                 textView.setMovementMethod(LinkMovementMethod.getInstance());
                 TextView textView2 = (TextView) _$_findCachedViewById(C7904t.paywallLegalText);
-                C12880j.m40222a((Object) textView2, str3);
+                Intrinsics.checkReturnedValueIsNotNull((Object) textView2, str3);
                 TransformationMethod transformationMethod = this.f16946a0;
                 if (transformationMethod != null) {
                     textView2.setTransformationMethod(transformationMethod);
@@ -684,10 +684,10 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                         if (cVar != null) {
                             int i = C7904t.paywallContainer;
                             C0538i childFragmentManager = getChildFragmentManager();
-                            C12880j.m40222a((Object) childFragmentManager, "childFragmentManager");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "childFragmentManager");
                             cVar.mo20550a(i, childFragmentManager);
                         } else {
-                            C12880j.m40227c("offlineRouter");
+                            Intrinsics.throwUninitializedPropertyAccessException("offlineRouter");
                             throw null;
                         }
                     }
@@ -702,11 +702,11 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                                 if (vVar3 != null) {
                                     vVar3.mo19878d(true);
                                 } else {
-                                    C12880j.m40227c(str2);
+                                    Intrinsics.throwUninitializedPropertyAccessException(str2);
                                     throw null;
                                 }
                             } else {
-                                C12880j.m40227c(str);
+                                Intrinsics.throwUninitializedPropertyAccessException(str);
                                 throw null;
                             }
                         } else {
@@ -714,23 +714,23 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                         }
                         C5852n0.m18883a(view, false, false, (Function1<? super WindowInsets, C13145v>) new C7850l<Object,C13145v>(this));
                         Context requireContext = requireContext();
-                        C12880j.m40222a((Object) requireContext, "requireContext()");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
                         if (C5837i.m18843e(requireContext)) {
                             m22967s();
                             return;
                         }
                         return;
                     }
-                    C12880j.m40227c(str2);
+                    Intrinsics.throwUninitializedPropertyAccessException(str2);
                     throw null;
                 }
-                C12880j.m40227c("forceWebTransformationMethod");
+                Intrinsics.throwUninitializedPropertyAccessException("forceWebTransformationMethod");
                 throw null;
             }
-            C12880j.m40227c(str2);
+            Intrinsics.throwUninitializedPropertyAccessException(str2);
             throw null;
         }
-        C12880j.m40227c(str);
+        Intrinsics.throwUninitializedPropertyAccessException(str);
         throw null;
     }
 
@@ -740,7 +740,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (aVar != null) {
             return aVar;
         }
-        C12880j.m40227c("finishSubscribingRouter");
+        Intrinsics.throwUninitializedPropertyAccessException("finishSubscribingRouter");
         throw null;
     }
 
@@ -750,7 +750,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (jVar != null) {
             return jVar;
         }
-        C12880j.m40227c("presenter");
+        Intrinsics.throwUninitializedPropertyAccessException("presenter");
         throw null;
     }
 
@@ -813,12 +813,12 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         sb.append("New PaywallState observed: ");
         sb.append(uVar);
         int i = 0;
-        C14100a.m44522a(sb.toString(), new Object[0]);
+        Timber.m44522a(sb.toString(), new Object[0]);
         if (uVar.mo19865a()) {
             m22960b(false);
         }
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C7904t.progressBar);
-        C12880j.m40222a((Object) progressBar, "progressBar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "progressBar");
         if (!uVar.mo19868d()) {
             i = 8;
         }
@@ -827,15 +827,15 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (jVar != null) {
             jVar.mo20777a(uVar, getView(), mo20762r());
             Context requireContext = requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             ViewGroup viewGroup = C5837i.m18843e(requireContext) ? (ConstraintLayout) _$_findCachedViewById(C7904t.paywallConstraintLayout) : (LinearLayout) _$_findCachedViewById(C7904t.paywallButtonsLayout);
-            C12880j.m40222a((Object) viewGroup, "btnContainer");
+            Intrinsics.checkReturnedValueIsNotNull((Object) viewGroup, "btnContainer");
             m22956a(viewGroup, uVar.mo19866b());
             C5884x.m18949a(uVar.mo19869e(), viewGroup, new C7842d(this, uVar));
             this.f16952g0 = uVar;
             return;
         }
-        C12880j.m40227c("presenter");
+        Intrinsics.throwUninitializedPropertyAccessException("presenter");
         throw null;
     }
 
@@ -847,7 +847,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         if (activity == null) {
             return null;
         }
-        C12880j.m40222a((Object) activity, "activity");
+        Intrinsics.checkReturnedValueIsNotNull((Object) activity, "activity");
         Window window = activity.getWindow();
         if (window != null) {
             View decorView = window.getDecorView();
@@ -871,13 +871,13 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
     public boolean mo11887a(int i, int i2) {
         if (i == C7904t.finish_subscribing && i2 == -1) {
             View _$_findCachedViewById = _$_findCachedViewById(C7904t.paywallContainer);
-            C12880j.m40222a((Object) _$_findCachedViewById, "paywallContainer");
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "paywallContainer");
             _$_findCachedViewById.postDelayed(new C7843e(this), 200);
             C3807b bVar = this.f16945Z;
             if (bVar != null) {
                 return bVar.mo13710a(new C7844f(this));
             }
-            C12880j.m40227c("paywallTransitionAnimation");
+            Intrinsics.throwUninitializedPropertyAccessException("paywallTransitionAnimation");
             throw null;
         } else if (!m22964c(i) || i2 != -1) {
             return false;
@@ -890,7 +890,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
                 vVar.mo19875C();
                 return true;
             }
-            C12880j.m40227c("viewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             throw null;
         }
     }
@@ -900,7 +900,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
         int childCount = viewGroup.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View childAt = viewGroup.getChildAt(i);
-            C12880j.m40222a((Object) childAt, "getChildAt(index)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) childAt, "getChildAt(index)");
             if (childAt instanceof LinearLayout) {
                 m22956a((ViewGroup) childAt, z);
             } else {

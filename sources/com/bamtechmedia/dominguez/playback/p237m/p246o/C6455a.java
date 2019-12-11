@@ -16,7 +16,7 @@ import com.bamtechmedia.dominguez.profiles.C7019z;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Maybe;
@@ -25,7 +25,7 @@ import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001BO\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0012\u0012\u0006\u0010\u0013\u001a\u00020\u0014¢\u0006\u0002\u0010\u0015J\u001a\u0010\u0016\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00060\u00172\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006H\u0002J\u0018\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\u00020\u00192\b\u0010\u001a\u001a\u0004\u0018\u00010\u0002H\u0016R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000¨\u0006\u001b"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/events/EngineWasCreatedEvent;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel$Event;", "Lcom/bamtechmedia/dominguez/playback/common/PlaybackState;", "engine", "Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "initialPlayable", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "contentId", "", "playableQueryAction", "Lcom/bamtechmedia/dominguez/playback/common/query/PlayableQueryAction;", "kidsOnly", "", "sessionStarter", "Lcom/bamtechmedia/dominguez/playback/common/engine/session/SessionStarter;", "engineLanguageSetup", "Lcom/bamtechmedia/dominguez/playback/common/engine/languages/EngineLanguageSetup;", "autoPlayRules", "Lcom/bamtechmedia/dominguez/playback/common/upnext/autoplay/AutoPlayRules;", "profilesRepository", "Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;", "(Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;Lcom/bamtechmedia/dominguez/core/content/Playable;Ljava/lang/String;Lcom/bamtechmedia/dominguez/playback/common/query/PlayableQueryAction;ZLcom/bamtechmedia/dominguez/playback/common/engine/session/SessionStarter;Lcom/bamtechmedia/dominguez/playback/common/engine/languages/EngineLanguageSetup;Lcom/bamtechmedia/dominguez/playback/common/upnext/autoplay/AutoPlayRules;Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;)V", "assignOrRequestPlayable", "Lio/reactivex/Single;", "process", "Lio/reactivex/Observable;", "currentState", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.m.o.a */
@@ -121,7 +121,7 @@ public final class C6455a implements C5742a<C6336a> {
                 C6427a c = this.f14656c.f14653c.f14649f;
                 SDK4ExoPlaybackEngine b = this.f14656c.f14653c.f14644a;
                 C3693o oVar = this.f14655U;
-                C12880j.m40222a((Object) oVar, "playable");
+                Intrinsics.checkReturnedValueIsNotNull((Object) oVar, "playable");
                 return c.mo19080a(zVar, b, oVar);
             }
         }
@@ -190,7 +190,7 @@ public final class C6455a implements C5742a<C6336a> {
         public final C6336a apply(Throwable th) {
             Throwable th2 = th;
             Throwable th3 = th;
-            C14100a.m44528b(th3, "error loading content", new Object[0]);
+            Timber.m44528b(th3, "error loading content", new Object[0]);
             C6336a aVar = new C6336a(this.f14660c.f14644a, null, null, null, null, false, th2, false, 0, null, null, null, null, false, false, 32700, null);
             return aVar;
         }
@@ -210,14 +210,14 @@ public final class C6455a implements C5742a<C6336a> {
     /* renamed from: a */
     public Observable<C6336a> mo17627a(C6336a aVar) {
         Observable<C6336a> i = m20144a(this.f14645b).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6457b<Object,Object>(this)).mo30236i().mo30198i(new C6462c(this));
-        C12880j.m40222a((Object) i, "assignOrRequestPlayable(…error = it)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "assignOrRequestPlayable(…error = it)\n            }");
         return i;
     }
 
     /* renamed from: a */
     private final Single<C3693o> m20144a(C3693o oVar) {
         Single<C3693o> a = Maybe.m38257b((Callable<? extends T>) new C6456a<Object>(oVar)).mo30109a((SingleSource<? extends T>) this.f14647d.mo18894a(this.f14646c));
-        C12880j.m40222a((Object) a, "Maybe.fromCallable { ini…playableQuery(contentId))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Maybe.fromCallable { ini…playableQuery(contentId))");
         return a;
     }
 }

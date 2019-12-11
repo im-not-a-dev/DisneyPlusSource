@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.types;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 
 /* compiled from: TypeSubstitution.kt */
@@ -37,16 +37,16 @@ public abstract class TypeConstructorSubstitution extends TypeSubstitution {
         public final TypeSubstitution create(TypeConstructor typeConstructor, List<? extends TypeProjection> list) {
             List parameters = typeConstructor.getParameters();
             String str = "typeConstructor.parameters";
-            C12880j.m40222a((Object) parameters, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameters, str);
             TypeParameterDescriptor typeParameterDescriptor = (TypeParameterDescriptor) C13199w.m40595i(parameters);
             if (!(typeParameterDescriptor != null ? typeParameterDescriptor.isCapturedFromOuterDeclaration() : false)) {
                 return new IndexedParametersSubstitution(parameters, list);
             }
             List<TypeParameterDescriptor> parameters2 = typeConstructor.getParameters();
-            C12880j.m40222a((Object) parameters2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameters2, str);
             ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) parameters2, 10));
             for (TypeParameterDescriptor typeParameterDescriptor2 : parameters2) {
-                C12880j.m40222a((Object) typeParameterDescriptor2, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) typeParameterDescriptor2, "it");
                 arrayList.add(typeParameterDescriptor2.getTypeConstructor());
             }
             return createByConstructorsMap$default(this, C13173j0.m40351a((Iterable) C13199w.m40586e((Iterable) arrayList, (Iterable) list)), false, 2, null);

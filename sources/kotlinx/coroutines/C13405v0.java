@@ -3,7 +3,7 @@ package kotlinx.coroutines;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12688f;
 import kotlinx.coroutines.internal.C13271k;
 import kotlinx.coroutines.internal.C13288v;
@@ -161,7 +161,7 @@ public abstract class C13405v0 extends C13410w0 implements C13343m0 {
             if (obj != null) {
                 bVar = (C13407b) obj;
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }

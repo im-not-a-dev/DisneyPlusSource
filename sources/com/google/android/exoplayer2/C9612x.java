@@ -5,7 +5,7 @@ import android.os.Looper;
 import com.google.android.exoplayer2.analytics.C8673a.C8674a;
 import com.google.android.exoplayer2.drm.C8710l;
 import com.google.android.exoplayer2.drm.C8713o;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.trackselection.C9295d;
 import com.google.android.exoplayer2.trackselection.TrackSelector;
 import com.google.android.exoplayer2.upstream.BandwidthMeter;
@@ -19,38 +19,38 @@ public final class C9612x {
     private static BandwidthMeter f22485a;
 
     /* renamed from: a */
-    public static C8802o0 m29759a(Context context, TrackSelector trackSelector) {
+    public static SimpleExoPlayer m29759a(Context context, TrackSelector trackSelector) {
         return m29754a(context, new C9577w(context), trackSelector);
     }
 
     /* renamed from: b */
-    public static C8802o0 m29761b(Context context) {
+    public static SimpleExoPlayer m29761b(Context context) {
         return m29759a(context, new C9295d());
     }
 
     /* renamed from: a */
-    public static C8802o0 m29754a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector) {
+    public static SimpleExoPlayer m29754a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector) {
         return m29755a(context, renderersFactory, trackSelector, new C9319u());
     }
 
     /* renamed from: a */
-    public static C8802o0 m29755a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl) {
-        return m29756a(context, renderersFactory, trackSelector, loadControl, null, C9554k0.m29432b());
+    public static SimpleExoPlayer m29755a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl) {
+        return m29756a(context, renderersFactory, trackSelector, loadControl, null, Util.m29432b());
     }
 
     /* renamed from: a */
-    public static C8802o0 m29756a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, Looper looper) {
+    public static SimpleExoPlayer m29756a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, Looper looper) {
         return m29757a(context, renderersFactory, trackSelector, loadControl, lVar, new C8674a(), looper);
     }
 
     /* renamed from: a */
-    public static C8802o0 m29757a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, C8674a aVar, Looper looper) {
+    public static SimpleExoPlayer m29757a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, C8674a aVar, Looper looper) {
         return m29758a(context, renderersFactory, trackSelector, loadControl, lVar, m29760a(context), aVar, looper);
     }
 
     /* renamed from: a */
-    public static C8802o0 m29758a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, Looper looper) {
-        C8802o0 o0Var = new C8802o0(context, renderersFactory, trackSelector, loadControl, lVar, bandwidthMeter, aVar, looper);
+    public static SimpleExoPlayer m29758a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, Looper looper) {
+        SimpleExoPlayer o0Var = new SimpleExoPlayer(context, renderersFactory, trackSelector, loadControl, lVar, bandwidthMeter, aVar, looper);
         return o0Var;
     }
 

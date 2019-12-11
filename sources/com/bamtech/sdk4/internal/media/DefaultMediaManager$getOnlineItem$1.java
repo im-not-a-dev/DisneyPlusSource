@@ -11,7 +11,7 @@ import com.bamtech.sdk4.session.SessionInfoExtension.DefaultImpls;
 import com.bamtech.sdk4.session.SessionProfileInfo;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.Function;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\n\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0001H\n¢\u0006\u0002\b\u0003"}, mo31007d2 = {"<anonymous>", "Lcom/bamtech/sdk4/media/MediaItem;", "mediaItem", "apply"}, mo31008k = 3, mo31009mv = {1, 1, 15})
@@ -34,7 +34,7 @@ final class DefaultMediaManager$getOnlineItem$1<T, R> implements Function<T, R> 
         String contentId = mediaItem.getPlayhead().getContentId();
         if (contentId != null) {
             Object c = ((LocalBookmarkStore) this.this$0.localBookmarkStore.get()).fetchBookmarks(this.$transaction, C13183n.m40498a(contentId)).mo30224c();
-            C12880j.m40222a(c, "localBookmarkStore.get()…contentId)).blockingGet()");
+            Intrinsics.checkReturnedValueIsNotNull(c, "localBookmarkStore.get()…contentId)).blockingGet()");
             Bookmark bookmark = (Bookmark) C13199w.m40591g((List) c);
             Playhead fetchPlayhead = this.this$0.localPlayheadStore.fetchPlayhead(this.$transaction, contentId);
             if (fetchPlayhead != null) {

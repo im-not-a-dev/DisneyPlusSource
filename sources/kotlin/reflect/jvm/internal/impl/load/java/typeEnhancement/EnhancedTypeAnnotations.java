@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement;
 
 import java.util.Iterator;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations.DefaultImpls;
@@ -28,7 +28,7 @@ final class EnhancedTypeAnnotations implements Annotations {
     }
 
     public EnhancedTypeAnnotationDescriptor findAnnotation(FqName fqName) {
-        if (C12880j.m40224a((Object) fqName, (Object) this.fqNameToMatch)) {
+        if (Intrinsics.areEqual((Object) fqName, (Object) this.fqNameToMatch)) {
             return EnhancedTypeAnnotationDescriptor.INSTANCE;
         }
         return null;

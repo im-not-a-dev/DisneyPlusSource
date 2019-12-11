@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Cookie;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\b\u0000\u0018\u0000 \f2\u00020\u0001:\u0001\fB\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0013\u0010\u0007\u001a\u00020\b2\b\u0010\t\u001a\u0004\u0018\u00010\u0001H\u0002J\b\u0010\n\u001a\u00020\u000bH\u0016R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\r"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/networking/cookies/IdentifiableCookie;", "", "cookie", "Lokhttp3/Cookie;", "(Lokhttp3/Cookie;)V", "getCookie", "()Lokhttp3/Cookie;", "equals", "", "other", "hashCode", "", "Companion", "sdk-service"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -42,7 +42,7 @@ public final class IdentifiableCookie {
             return false;
         }
         IdentifiableCookie identifiableCookie = (IdentifiableCookie) obj;
-        if (C12880j.m40224a((Object) identifiableCookie.cookie.mo35733d(), (Object) this.cookie.mo35733d()) && C12880j.m40224a((Object) identifiableCookie.cookie.mo35728a(), (Object) this.cookie.mo35728a()) && C12880j.m40224a((Object) identifiableCookie.cookie.mo35734e(), (Object) this.cookie.mo35734e()) && identifiableCookie.cookie.mo35737g() == this.cookie.mo35737g() && identifiableCookie.cookie.mo35732c() == this.cookie.mo35732c()) {
+        if (Intrinsics.areEqual((Object) identifiableCookie.cookie.mo35733d(), (Object) this.cookie.mo35733d()) && Intrinsics.areEqual((Object) identifiableCookie.cookie.mo35728a(), (Object) this.cookie.mo35728a()) && Intrinsics.areEqual((Object) identifiableCookie.cookie.mo35734e(), (Object) this.cookie.mo35734e()) && identifiableCookie.cookie.mo35737g() == this.cookie.mo35737g() && identifiableCookie.cookie.mo35732c() == this.cookie.mo35732c()) {
             z = true;
         }
         return z;

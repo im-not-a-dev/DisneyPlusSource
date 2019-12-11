@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.core.BuildInfo;
 import com.bamtechmedia.dominguez.core.BuildInfo.C3584a;
 import com.bamtechmedia.dominguez.core.p087h.C3829e;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p277b0.C7233y;
 import p512h.p513c.p514k.C11887f;
 
@@ -61,11 +61,11 @@ public abstract class C2481a extends C11887f {
             if (yVar != null) {
                 yVar.mo20037a();
             } else {
-                C12880j.m40227c("sdkInitBlocker");
+                Intrinsics.throwUninitializedPropertyAccessException("sdkInitBlocker");
                 throw null;
             }
         } else {
-            C12880j.m40227c("appInitializationAction");
+            Intrinsics.throwUninitializedPropertyAccessException("appInitializationAction");
             throw null;
         }
     }

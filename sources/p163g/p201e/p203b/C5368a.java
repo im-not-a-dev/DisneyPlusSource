@@ -6,7 +6,7 @@ import com.appboy.p034ui.inappmessage.InAppMessageCloser;
 import com.appboy.p034ui.inappmessage.InAppMessageOperation;
 import com.appboy.p034ui.inappmessage.listeners.IInAppMessageManagerListener;
 import com.bamtechmedia.dominguez.analytics.C2447q;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: g.e.b.a */
 /* compiled from: InAppMessageManager.kt */
@@ -23,7 +23,7 @@ public final class C5368a implements IInAppMessageManagerListener {
         if (!this.f12864a.mo11575a()) {
             return InAppMessageOperation.DISPLAY_NOW;
         }
-        C14100a.m44522a("kidsmode profile enabled, in app message was dropped", new Object[0]);
+        Timber.m44522a("kidsmode profile enabled, in app message was dropped", new Object[0]);
         return InAppMessageOperation.DISCARD;
     }
 

@@ -19,7 +19,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 import p163g.p201e.p203b.p286j.C7300k;
 import p163g.p201e.p203b.p299m.C7536a;
@@ -31,7 +31,7 @@ import p163g.p201e.p203b.p312q.C7689j;
 import p163g.p201e.p203b.p312q.C7718y;
 import p163g.p201e.p203b.p312q.C7719z;
 import p512h.p513c.p514k.C11890i;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 I2\u00020\u00012\u00020\u0002:\u0001IB\u0005¢\u0006\u0002\u0010\u0003J\u001a\u0010,\u001a\u00020-2\u0006\u0010.\u001a\u00020/2\b\u00100\u001a\u0004\u0018\u000101H\u0002J\u0012\u00102\u001a\u00020-2\b\u00103\u001a\u0004\u0018\u000104H\u0002J\u0010\u00105\u001a\u00020-2\u0006\u00106\u001a\u00020/H\u0002J\"\u00107\u001a\u00020-2\u0006\u00108\u001a\u00020/2\u0006\u0010.\u001a\u00020/2\b\u00109\u001a\u0004\u0018\u00010:H\u0016J\u0018\u0010;\u001a\u00020<2\u0006\u0010=\u001a\u00020/2\u0006\u0010>\u001a\u00020/H\u0016J\u0012\u0010?\u001a\u00020-2\b\u0010@\u001a\u0004\u0018\u000101H\u0016J&\u0010A\u001a\u0004\u0018\u00010B2\u0006\u0010C\u001a\u00020D2\b\u0010E\u001a\u0004\u0018\u00010F2\b\u0010@\u001a\u0004\u0018\u000101H\u0016J\u001a\u0010G\u001a\u00020-2\u0006\u0010H\u001a\u00020B2\b\u0010@\u001a\u0004\u0018\u000101H\u0016R\u001e\u0010\u0004\u001a\u00020\u00058\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\tR\u001e\u0010\n\u001a\u00020\u000b8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR\u001e\u0010\u0010\u001a\u00020\u00118\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015R\u001e\u0010\u0016\u001a\u00020\u00178\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0018\u0010\u0019\"\u0004\b\u001a\u0010\u001bR\u0011\u0010\u001c\u001a\u00020\u001d8F¢\u0006\u0006\u001a\u0004\b\u001e\u0010\u001fR\u001e\u0010 \u001a\u00020!8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b\"\u0010#\"\u0004\b$\u0010%R\u001e\u0010&\u001a\u00020'8\u0006@\u0006X.¢\u0006\u000e\n\u0000\u001a\u0004\b(\u0010)\"\u0004\b*\u0010+¨\u0006J"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/globalnav/tab/TabFragment;", "Ldagger/android/support/DaggerFragment;", "Lcom/bamtechmedia/dominguez/dialogs/AlertDialogCallback;", "()V", "activePageOverride", "Lcom/bamtechmedia/dominguez/analytics/ActivePageOverride;", "getActivePageOverride", "()Lcom/bamtechmedia/dominguez/analytics/ActivePageOverride;", "setActivePageOverride", "(Lcom/bamtechmedia/dominguez/analytics/ActivePageOverride;)V", "contentTypeRouter", "Lcom/bamtechmedia/dominguez/core/content/ContentTypeRouter;", "getContentTypeRouter", "()Lcom/bamtechmedia/dominguez/core/content/ContentTypeRouter;", "setContentTypeRouter", "(Lcom/bamtechmedia/dominguez/core/content/ContentTypeRouter;)V", "deepLinks", "Lcom/bamtechmedia/dominguez/deeplink/DeepLinks;", "getDeepLinks", "()Lcom/bamtechmedia/dominguez/deeplink/DeepLinks;", "setDeepLinks", "(Lcom/bamtechmedia/dominguez/deeplink/DeepLinks;)V", "dialogRouter", "Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;", "getDialogRouter", "()Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;", "setDialogRouter", "(Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;)V", "globalNavTab", "Lcom/bamtechmedia/dominguez/globalnav/GlobalNavTab;", "getGlobalNavTab", "()Lcom/bamtechmedia/dominguez/globalnav/GlobalNavTab;", "router", "Lcom/bamtechmedia/dominguez/globalnav/tab/TabRouter;", "getRouter", "()Lcom/bamtechmedia/dominguez/globalnav/tab/TabRouter;", "setRouter", "(Lcom/bamtechmedia/dominguez/globalnav/tab/TabRouter;)V", "viewModel", "Lcom/bamtechmedia/dominguez/globalnav/tab/TabViewModel;", "getViewModel", "()Lcom/bamtechmedia/dominguez/globalnav/tab/TabViewModel;", "setViewModel", "(Lcom/bamtechmedia/dominguez/globalnav/tab/TabViewModel;)V", "handleBackFromUpNext", "", "resultCode", "", "extras", "Landroid/os/Bundle;", "handleBackToDetails", "playable", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "handleDeeplinkErrorResult", "code", "onActivityResult", "requestCode", "data", "Landroid/content/Intent;", "onAlertDialogAction", "", "requestId", "which", "onCreate", "savedInstanceState", "onCreateView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "onViewCreated", "view", "Companion", "globalNav_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: g.e.b.q.d0.b */
@@ -98,7 +98,7 @@ public final class C7664b extends C11890i implements C7536a {
                 if (cVar != null) {
                     cVar.mo13291a((C3692n) oVar, lVar, true);
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             } else if (oVar instanceof C3791v) {
@@ -106,7 +106,7 @@ public final class C7664b extends C11890i implements C7536a {
                 if (cVar2 != null) {
                     cVar2.mo13293a((C3791v) oVar, lVar, true);
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             } else if (oVar instanceof C3685g) {
@@ -116,12 +116,12 @@ public final class C7664b extends C11890i implements C7536a {
                     if (cVar3 != null) {
                         cVar3.mo13294a(C, lVar, true);
                     } else {
-                        C12880j.m40227c(str);
+                        Intrinsics.throwUninitializedPropertyAccessException(str);
                         throw null;
                     }
                 }
             } else {
-                C14100a.m44532e("unhandled route from playback", new Object[0]);
+                Timber.m44532e("unhandled route from playback", new Object[0]);
             }
         }
     }
@@ -139,7 +139,7 @@ public final class C7664b extends C11890i implements C7536a {
                 hVar.mo20491b(aVar.mo20465a());
                 return;
             }
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         } else if (i == 7002) {
             C7547h hVar2 = this.f16701Z;
@@ -151,7 +151,7 @@ public final class C7664b extends C11890i implements C7536a {
                 hVar2.mo20491b(aVar2.mo20465a());
                 return;
             }
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
     }
@@ -201,7 +201,7 @@ public final class C7664b extends C11890i implements C7536a {
         if (aVar != null) {
             aVar.mo11442a((Fragment) this);
         } else {
-            C12880j.m40227c("activePageOverride");
+            Intrinsics.throwUninitializedPropertyAccessException("activePageOverride");
             throw null;
         }
     }
@@ -226,7 +226,7 @@ public final class C7664b extends C11890i implements C7536a {
                 if (lVar != null) {
                     lVar.mo20594a(mo20587o(), x);
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             } else if (bundle == null) {
@@ -234,12 +234,12 @@ public final class C7664b extends C11890i implements C7536a {
                 if (lVar2 != null) {
                     lVar2.mo20593a(mo20587o());
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             }
         } else {
-            C12880j.m40227c("deepLinks");
+            Intrinsics.throwUninitializedPropertyAccessException("deepLinks");
             throw null;
         }
     }
@@ -252,7 +252,7 @@ public final class C7664b extends C11890i implements C7536a {
             if (cVar != null) {
                 C3654a.m12425a(cVar, (C3692n) oVar, (C3690l) null, false, 6, (Object) null);
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else if (oVar instanceof C3791v) {
@@ -260,7 +260,7 @@ public final class C7664b extends C11890i implements C7536a {
             if (cVar2 != null) {
                 C3654a.m12427a(cVar2, (C3791v) oVar, (C3690l) null, false, 6, (Object) null);
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else if (oVar instanceof C3685g) {
@@ -268,11 +268,11 @@ public final class C7664b extends C11890i implements C7536a {
             if (cVar3 != null) {
                 C3654a.m12428a(cVar3, ((C3685g) oVar).mo12874D(), (C3690l) null, false, 6, (Object) null);
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else {
-            C14100a.m44532e("unhandled back to details result", new Object[0]);
+            Timber.m44532e("unhandled back to details result", new Object[0]);
         }
     }
 
@@ -286,7 +286,7 @@ public final class C7664b extends C11890i implements C7536a {
             if (iVar != null) {
                 iVar.mo20591b();
             } else {
-                C12880j.m40227c("router");
+                Intrinsics.throwUninitializedPropertyAccessException("router");
                 throw null;
             }
         }

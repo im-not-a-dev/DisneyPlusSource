@@ -8,7 +8,7 @@ import android.os.Trace;
 public final class C9547i0 {
     /* renamed from: a */
     public static void m29359a(String str) {
-        if (C9554k0.f22281a >= 18) {
+        if (Util.SDK_INT >= 18) {
             m29361b(str);
         }
     }
@@ -27,7 +27,7 @@ public final class C9547i0 {
 
     /* renamed from: a */
     public static void m29358a() {
-        if (C9554k0.f22281a >= 18) {
+        if (Util.SDK_INT >= 18) {
             m29360b();
         }
     }

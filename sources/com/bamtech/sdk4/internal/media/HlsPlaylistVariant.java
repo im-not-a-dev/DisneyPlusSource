@@ -2,7 +2,7 @@ package com.bamtech.sdk4.internal.media;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 
 @DontObfuscate
@@ -88,8 +88,8 @@ public final class HlsPlaylistVariant implements Streamable {
         if (this != obj) {
             if (obj instanceof HlsPlaylistVariant) {
                 HlsPlaylistVariant hlsPlaylistVariant = (HlsPlaylistVariant) obj;
-                if ((this.bandwidth == hlsPlaylistVariant.bandwidth) && C12880j.m40224a((Object) this.resolution, (Object) hlsPlaylistVariant.resolution)) {
-                    if (!(this.videoBytes == hlsPlaylistVariant.videoBytes) || !C12880j.m40224a((Object) this.maxAudioRenditionBytes, (Object) hlsPlaylistVariant.maxAudioRenditionBytes) || !C12880j.m40224a((Object) this.maxSubtitleRenditionBytes, (Object) hlsPlaylistVariant.maxSubtitleRenditionBytes) || !C12880j.m40224a((Object) this.audioChannels, (Object) hlsPlaylistVariant.audioChannels) || !C12880j.m40224a((Object) this.videoRange, (Object) hlsPlaylistVariant.videoRange) || !C12880j.m40224a((Object) this.videoCodec, (Object) hlsPlaylistVariant.videoCodec) || !C12880j.m40224a((Object) this.audioType, (Object) hlsPlaylistVariant.audioType) || !C12880j.m40224a((Object) this.audioCodec, (Object) hlsPlaylistVariant.audioCodec)) {
+                if ((this.bandwidth == hlsPlaylistVariant.bandwidth) && Intrinsics.areEqual((Object) this.resolution, (Object) hlsPlaylistVariant.resolution)) {
+                    if (!(this.videoBytes == hlsPlaylistVariant.videoBytes) || !Intrinsics.areEqual((Object) this.maxAudioRenditionBytes, (Object) hlsPlaylistVariant.maxAudioRenditionBytes) || !Intrinsics.areEqual((Object) this.maxSubtitleRenditionBytes, (Object) hlsPlaylistVariant.maxSubtitleRenditionBytes) || !Intrinsics.areEqual((Object) this.audioChannels, (Object) hlsPlaylistVariant.audioChannels) || !Intrinsics.areEqual((Object) this.videoRange, (Object) hlsPlaylistVariant.videoRange) || !Intrinsics.areEqual((Object) this.videoCodec, (Object) hlsPlaylistVariant.videoCodec) || !Intrinsics.areEqual((Object) this.audioType, (Object) hlsPlaylistVariant.audioType) || !Intrinsics.areEqual((Object) this.audioCodec, (Object) hlsPlaylistVariant.audioCodec)) {
                         return false;
                     }
                 }

@@ -15,7 +15,7 @@ import android.text.TextPaint;
 import android.text.TextUtils;
 import com.google.android.exoplayer2.p382u0.C9321a;
 import com.google.android.exoplayer2.p382u0.C9322b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.ui.o */
 /* compiled from: SubtitlePainter */
@@ -189,7 +189,7 @@ final class C9417o {
             java.lang.String r6 = "SubtitlePainter"
             if (r5 > 0) goto L_0x0036
             java.lang.String r1 = "Skipped drawing subtitle cue (insufficient space)"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r6, r1)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r6, r1)
             return
         L_0x0036:
             java.lang.CharSequence r8 = r0.f21847h
@@ -344,7 +344,7 @@ final class C9417o {
             int r4 = r4 - r1
             if (r4 > 0) goto L_0x0148
             java.lang.String r1 = "Skipped drawing subtitle cue (invalid horizontal positioning)"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r6, r1)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r6, r1)
             return
         L_0x0148:
             float r5 = r0.f21850k
@@ -456,7 +456,7 @@ final class C9417o {
                 return;
             }
         }
-        if (m28893a(this.f21847h, bVar2.f21354c) && C9554k0.m29414a((Object) this.f21848i, (Object) bVar2.f21346U) && this.f21849j == bVar2.f21347V && this.f21850k == bVar2.f21348W && this.f21851l == bVar2.f21349X && C9554k0.m29414a((Object) Integer.valueOf(this.f21852m), (Object) Integer.valueOf(bVar2.f21350Y)) && this.f21853n == bVar2.f21351Z && C9554k0.m29414a((Object) Integer.valueOf(this.f21854o), (Object) Integer.valueOf(bVar2.f21352a0)) && this.f21855p == bVar2.f21353b0 && this.f21856q == bVar2.f21355c0 && this.f21857r == z3 && this.f21858s == z4 && this.f21859t == aVar2.f21339a && this.f21860u == aVar2.f21340b && this.f21861v == i9 && this.f21863x == aVar2.f21342d && this.f21862w == aVar2.f21343e && C9554k0.m29414a((Object) this.f21845f.getTypeface(), (Object) aVar2.f21344f) && this.f21864y == f4 && this.f21865z == f5 && this.f21830A == f6 && this.f21831B == i5 && this.f21832C == i6 && this.f21833D == i7 && this.f21834E == i8) {
+        if (m28893a(this.f21847h, bVar2.f21354c) && Util.m29414a((Object) this.f21848i, (Object) bVar2.f21346U) && this.f21849j == bVar2.f21347V && this.f21850k == bVar2.f21348W && this.f21851l == bVar2.f21349X && Util.m29414a((Object) Integer.valueOf(this.f21852m), (Object) Integer.valueOf(bVar2.f21350Y)) && this.f21853n == bVar2.f21351Z && Util.m29414a((Object) Integer.valueOf(this.f21854o), (Object) Integer.valueOf(bVar2.f21352a0)) && this.f21855p == bVar2.f21353b0 && this.f21856q == bVar2.f21355c0 && this.f21857r == z3 && this.f21858s == z4 && this.f21859t == aVar2.f21339a && this.f21860u == aVar2.f21340b && this.f21861v == i9 && this.f21863x == aVar2.f21342d && this.f21862w == aVar2.f21343e && Util.m29414a((Object) this.f21845f.getTypeface(), (Object) aVar2.f21344f) && this.f21864y == f4 && this.f21865z == f5 && this.f21830A == f6 && this.f21831B == i5 && this.f21832C == i6 && this.f21833D == i7 && this.f21834E == i8) {
             m28892a(canvas, z5);
             return;
         }

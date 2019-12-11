@@ -8,7 +8,7 @@ import com.bamtech.sdk4.location.UnavailableLocation;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 import p520io.reactivex.p525e0.C11934b;
@@ -80,14 +80,14 @@ public final class C7228v implements GeoProvider {
 
     public Single<? extends GeoLocation> getLocation(long j) {
         Single<? extends GeoLocation> a = Single.m38401c((Callable<? extends T>) new C7230b<Object>(this)).mo30220b(this.f15955b).mo30203a(j, TimeUnit.SECONDS, this.f15955b);
-        C12880j.m40222a((Object) a, "Single\n        .fromCall…nit.SECONDS, ioScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single\n        .fromCall…nit.SECONDS, ioScheduler)");
         return a;
     }
 
     public /* synthetic */ C7228v(SharedPreferences sharedPreferences, C11969r rVar, int i, DefaultConstructorMarker defaultConstructorMarker) {
         if ((i & 2) != 0) {
             rVar = C11934b.m38500b();
-            C12880j.m40222a((Object) rVar, "Schedulers.io()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) rVar, "Schedulers.io()");
         }
         this(sharedPreferences, rVar);
     }

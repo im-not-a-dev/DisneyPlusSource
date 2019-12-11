@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
 
@@ -20,10 +20,10 @@ final class KTypeParameterImpl$upperBounds$2 extends C12881k implements Function
 
     public final List<KTypeImpl> invoke() {
         List<KotlinType> upperBounds = this.this$0.getDescriptor().getUpperBounds();
-        C12880j.m40222a((Object) upperBounds, "descriptor.upperBounds");
+        Intrinsics.checkReturnedValueIsNotNull((Object) upperBounds, "descriptor.upperBounds");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) upperBounds, 10));
         for (KotlinType kotlinType : upperBounds) {
-            C12880j.m40222a((Object) kotlinType, "kotlinType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType, "kotlinType");
             arrayList.add(new KTypeImpl(kotlinType, new KTypeParameterImpl$upperBounds$2$$special$$inlined$map$lambda$1(this)));
         }
         return arrayList;

@@ -9,7 +9,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction.DefaultImpls;
 import com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants;
 import java.util.UUID;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.OkHttpClient;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
@@ -32,9 +32,9 @@ public final class DebugServiceTransaction implements ServiceTransaction, LogDis
         this.baseData = dustClientConstants;
         this.identityConverter = converterProvider.getIdentity();
         UUID randomUUID = UUID.randomUUID();
-        C12880j.m40222a((Object) randomUUID, "UUID.randomUUID()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) randomUUID, "UUID.randomUUID()");
         this.f6077id = randomUUID;
-        C12880j.m40222a((Object) DateTime.now(DateTimeZone.UTC), "DateTime.now(DateTimeZone.UTC)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) DateTime.now(DateTimeZone.UTC), "DateTime.now(DateTimeZone.UTC)");
     }
 
     /* renamed from: d */

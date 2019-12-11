@@ -8,7 +8,7 @@ import java.net.SocketTimeoutException;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.Function;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0016\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0000\u0010\u0000\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u00012\u0006\u0010\u0004\u001a\u00020\u0005H\n¢\u0006\u0002\b\u0006"}, mo31007d2 = {"<anonymous>", "Lkotlin/Pair;", "", "Lcom/bamtech/sdk4/internal/telemetry/DustEventBuffer$TelemetryProcessingRequest;", "e", "", "apply"}, mo31008k = 3, mo31009mv = {1, 1, 15})
@@ -30,7 +30,7 @@ final class DustEventBuffer$dispatchRequest$5<T, R> implements Function<Throwabl
         long j;
         DustEventBuffer dustEventBuffer = this.this$0;
         ServiceTransaction serviceTransaction = this.$transaction;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         dustEventBuffer.logError(serviceTransaction, th);
         if (!this.$request.isFastTrackRequest()) {
             boolean z = th instanceof NetworkException;

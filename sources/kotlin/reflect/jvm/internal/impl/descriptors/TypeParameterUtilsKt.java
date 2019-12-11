@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.resolve.DescriptorUtils;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
 import kotlin.reflect.jvm.internal.impl.types.ErrorUtils;
@@ -31,7 +31,7 @@ public final class TypeParameterUtilsKt {
         Object obj;
         List<TypeParameterDescriptor> declaredTypeParameters = classifierDescriptorWithTypeParameters.getDeclaredTypeParameters();
         String str = "declaredTypeParameters";
-        C12880j.m40222a((Object) declaredTypeParameters, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredTypeParameters, str);
         if (!classifierDescriptorWithTypeParameters.isInner() && !(classifierDescriptorWithTypeParameters.getContainingDeclaration() instanceof CallableDescriptor)) {
             return declaredTypeParameters;
         }
@@ -62,13 +62,13 @@ public final class TypeParameterUtilsKt {
             List<TypeParameterDescriptor> d = C13199w.m40583d((Collection) g, (Iterable) list);
             ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) d, 10));
             for (TypeParameterDescriptor typeParameterDescriptor : d) {
-                C12880j.m40222a((Object) typeParameterDescriptor, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) typeParameterDescriptor, "it");
                 arrayList.add(capturedCopyForInnerDeclaration(typeParameterDescriptor, classifierDescriptorWithTypeParameters, declaredTypeParameters.size()));
             }
             return C13199w.m40583d((Collection) declaredTypeParameters, (Iterable) arrayList);
         }
         List<TypeParameterDescriptor> declaredTypeParameters2 = classifierDescriptorWithTypeParameters.getDeclaredTypeParameters();
-        C12880j.m40222a((Object) declaredTypeParameters2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) declaredTypeParameters2, str);
         return declaredTypeParameters2;
     }
 

@@ -15,8 +15,8 @@ import com.google.android.exoplayer2.Timeline.C8670c;
 import com.google.android.exoplayer2.offline.C8808b;
 import com.google.android.exoplayer2.offline.StreamKey;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9229o;
 import com.google.android.exoplayer2.source.C9256t;
@@ -283,7 +283,7 @@ public final class DashMediaSource extends C9229o {
             if (z) {
                 num = Integer.valueOf(this.f20325d + i);
             }
-            bVar.mo22676a(obj, num, 0, this.f20329h.mo23677c(i), C8883r.m25967a(this.f20329h.mo23675a(i).f20454b - this.f20329h.mo23675a(0).f20454b) - this.f20326e);
+            bVar.mo22676a(obj, num, 0, this.f20329h.mo23677c(i), C8883r.msToUs(this.f20329h.mo23675a(i).f20454b - this.f20329h.mo23675a(0).f20454b) - this.f20326e);
             return bVar;
         }
 
@@ -566,7 +566,7 @@ public final class DashMediaSource extends C9229o {
 
         /* renamed from: a */
         public Long m27135a(Uri uri, InputStream inputStream) throws IOException {
-            return Long.valueOf(C9554k0.m29454h(new BufferedReader(new InputStreamReader(inputStream)).readLine()));
+            return Long.valueOf(Util.m29454h(new BufferedReader(new InputStreamReader(inputStream)).readLine()));
         }
     }
 
@@ -582,9 +582,9 @@ public final class DashMediaSource extends C9229o {
     /* renamed from: f */
     private long m27093f() {
         if (this.f20281A0 != 0) {
-            return C8883r.m25967a(SystemClock.elapsedRealtime() + this.f20281A0);
+            return C8883r.msToUs(SystemClock.elapsedRealtime() + this.f20281A0);
         }
-        return C8883r.m25967a(System.currentTimeMillis());
+        return C8883r.msToUs(System.currentTimeMillis());
     }
 
     /* access modifiers changed from: private */
@@ -798,7 +798,7 @@ public final class DashMediaSource extends C9229o {
             if (r5 <= r8) goto L_0x005e
             java.lang.String r5 = "DashMediaSource"
             java.lang.String r8 = "Loaded out of sync manifest"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r5, r8)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r5, r8)
         L_0x005c:
             r5 = 1
             goto L_0x0097
@@ -824,7 +824,7 @@ public final class DashMediaSource extends C9229o {
             r5.append(r8)
             java.lang.String r5 = r5.toString()
             java.lang.String r8 = "DashMediaSource"
-            com.google.android.exoplayer2.p393v0.C9563q.m29500d(r8, r5)
+            com.google.android.exoplayer2.p393v0.Log.m29500d(r8, r5)
             goto L_0x005c
         L_0x0096:
             r5 = 0
@@ -926,11 +926,11 @@ public final class DashMediaSource extends C9229o {
     /* renamed from: a */
     private void m27082a(C9135m mVar) {
         String str = mVar.f20494a;
-        if (C9554k0.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:direct:2014") || C9554k0.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:direct:2012")) {
+        if (Util.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:direct:2014") || Util.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:direct:2012")) {
             m27089b(mVar);
-        } else if (C9554k0.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:http-iso:2014") || C9554k0.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:http-iso:2012")) {
+        } else if (Util.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:http-iso:2014") || Util.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:http-iso:2012")) {
             m27083a(mVar, new C9090d());
-        } else if (C9554k0.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:http-xsdate:2014") || C9554k0.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:http-xsdate:2012")) {
+        } else if (Util.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:http-xsdate:2014") || Util.m29414a((Object) str, (Object) "urn:mpeg:dash:utc:http-xsdate:2012")) {
             m27083a(mVar, new C9095i());
         } else {
             m27085a(new IOException("Unsupported UTC timing scheme"));
@@ -944,14 +944,14 @@ public final class DashMediaSource extends C9229o {
 
     /* renamed from: a */
     private void m27085a(IOException iOException) {
-        C9563q.m29496a("DashMediaSource", "Failed to resolve UtcTiming element.", iOException);
+        Log.m29496a("DashMediaSource", "Failed to resolve UtcTiming element.", iOException);
         m27086a(true);
     }
 
     /* renamed from: b */
     private void m27089b(C9135m mVar) {
         try {
-            m27088b(C9554k0.m29454h(mVar.f20495b) - this.f20312z0);
+            m27088b(Util.m29454h(mVar.f20495b) - this.f20312z0);
         } catch (C8723g0 e) {
             m27085a((IOException) e);
         }
@@ -978,10 +978,10 @@ public final class DashMediaSource extends C9229o {
             j = j4;
             z2 = false;
         } else {
-            j5 = Math.min((m27093f() - C8883r.m25967a(this.f20309w0.f20423a)) - C8883r.m25967a(this.f20309w0.mo23675a(a).f20454b), j5);
+            j5 = Math.min((m27093f() - C8883r.msToUs(this.f20309w0.f20423a)) - C8883r.msToUs(this.f20309w0.mo23675a(a).f20454b), j5);
             long j6 = this.f20309w0.f20428f;
             if (j6 != -9223372036854775807L) {
-                long a4 = j5 - C8883r.m25967a(j6);
+                long a4 = j5 - C8883r.msToUs(j6);
                 while (a4 < 0 && a > 0) {
                     a--;
                     a4 += this.f20309w0.mo23677c(a);
@@ -1009,7 +1009,7 @@ public final class DashMediaSource extends C9229o {
                     j8 = j9;
                 }
             }
-            long a5 = j7 - C8883r.m25967a(j8);
+            long a5 = j7 - C8883r.msToUs(j8);
             if (a5 < 5000000) {
                 a5 = Math.min(5000000, j7 / 2);
             }
@@ -1018,7 +1018,7 @@ public final class DashMediaSource extends C9229o {
             j2 = 0;
         }
         C9115b bVar2 = this.f20309w0;
-        long b = bVar2.f20423a + bVar2.mo23675a(0).f20454b + C8883r.m25968b(j);
+        long b = bVar2.f20423a + bVar2.mo23675a(0).f20454b + C8883r.usToMs(j);
         C9115b bVar3 = this.f20309w0;
         C9088b bVar4 = new C9088b(bVar3.f20423a, b, this.f20284D0, j, j7, j2, bVar3, this.f20301o0);
         mo23961a((Timeline) bVar4, (Object) this.f20309w0);

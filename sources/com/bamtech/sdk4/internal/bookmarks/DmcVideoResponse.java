@@ -6,7 +6,7 @@ import com.bamtech.shadow.gson.p050r.C2246c;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -56,7 +56,7 @@ public final class DmcVideoResponse {
             if (this != obj) {
                 if (obj instanceof BookmarkRuntime) {
                     BookmarkRuntime bookmarkRuntime = (BookmarkRuntime) obj;
-                    if (C12880j.m40224a((Object) this.contentId, (Object) bookmarkRuntime.contentId)) {
+                    if (Intrinsics.areEqual((Object) this.contentId, (Object) bookmarkRuntime.contentId)) {
                         if (this.runtime == bookmarkRuntime.runtime) {
                             return true;
                         }
@@ -86,7 +86,7 @@ public final class DmcVideoResponse {
             long seconds = TimeUnit.MILLISECONDS.toSeconds(this.runtime);
             String str2 = this.contentId;
             DateTime now = DateTime.now(DateTimeZone.UTC);
-            C12880j.m40222a((Object) now, "DateTime.now(DateTimeZone.UTC)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now(DateTimeZone.UTC)");
             Bookmark bookmark = new Bookmark(str2, 0, seconds, str, now.getMillis(), (long) (((double) seconds) * 0.95d), null);
             return bookmark;
         }
@@ -135,7 +135,7 @@ public final class DmcVideoResponse {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.videos, (java.lang.Object) ((com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse.RuntimeData) r2).videos) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.videos, (java.lang.Object) ((com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse.RuntimeData) r2).videos) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -147,7 +147,7 @@ public final class DmcVideoResponse {
                 com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse$RuntimeData r2 = (com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse.RuntimeData) r2
                 java.util.List<com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse$BookmarkRuntime> r0 = r1.videos
                 java.util.List<com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse$BookmarkRuntime> r2 = r2.videos
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -201,7 +201,7 @@ public final class DmcVideoResponse {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.dmcVideos, (java.lang.Object) ((com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse) r2).dmcVideos) != false) goto L_0x0015;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.dmcVideos, (java.lang.Object) ((com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse) r2).dmcVideos) != false) goto L_0x0015;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r2) {
@@ -213,7 +213,7 @@ public final class DmcVideoResponse {
             com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse r2 = (com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse) r2
             com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse$RuntimeData r0 = r1.dmcVideos
             com.bamtech.sdk4.internal.bookmarks.DmcVideoResponse$RuntimeData r2 = r2.dmcVideos
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
             if (r2 == 0) goto L_0x0013
             goto L_0x0015
         L_0x0013:

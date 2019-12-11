@@ -5,7 +5,7 @@ import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.C8738a;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.s0.v.h */
@@ -101,7 +101,7 @@ public final class C8975h implements C8737b {
 
     private C8975h(Parcel parcel) {
         String readString = parcel.readString();
-        C9554k0.m29394a(readString);
+        Util.castNonNull(readString);
         this.f19601c = readString;
         this.f19598U = new byte[parcel.readInt()];
         parcel.readByteArray(this.f19598U);

@@ -3,7 +3,7 @@ package p163g.p201e.p203b.p316t;
 import android.widget.TextView;
 import com.bamtechmedia.dominguez.core.utils.C5880u;
 import kotlin.C12907r;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5363f;
 import p163g.p201e.p202a.C5364g;
 import p163g.p201e.p202a.C5365h;
@@ -30,7 +30,7 @@ public final class C7803t extends C11866a {
         if (this != obj) {
             if (obj instanceof C7803t) {
                 C7803t tVar = (C7803t) obj;
-                if (C12880j.m40224a((Object) this.f16897c, (Object) tVar.f16897c)) {
+                if (Intrinsics.areEqual((Object) this.f16897c, (Object) tVar.f16897c)) {
                     if (this.f16896U == tVar.f16896U) {
                         return true;
                     }
@@ -66,7 +66,7 @@ public final class C7803t extends C11866a {
 
     public void bind(C11867b bVar, int i) {
         TextView textView = (TextView) bVar.mo20994a().findViewById(C5363f.title);
-        C12880j.m40222a((Object) textView, "viewHolder.title");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "viewHolder.title");
         int i2 = C5365h.app_version_number;
         StringBuilder sb = new StringBuilder();
         sb.append(this.f16897c);

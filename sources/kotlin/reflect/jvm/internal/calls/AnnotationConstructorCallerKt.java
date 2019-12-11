@@ -9,7 +9,7 @@ import java.util.Set;
 import kotlin.C13142s;
 import kotlin.Lazy;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12888r;
 import kotlin.jvm.internal.C12889s;
 import kotlin.jvm.internal.C12895y;
@@ -60,19 +60,19 @@ public final class AnnotationConstructorCallerKt {
     public static final Void throwIllegalArgumentType(int i, String str, Class<?> cls) {
         KClass kClass;
         String str2;
-        if (C12880j.m40224a((Object) cls, (Object) Class.class)) {
+        if (Intrinsics.areEqual((Object) cls, (Object) Class.class)) {
             kClass = C12895y.m40230a(KClass.class);
-        } else if (!cls.isArray() || !C12880j.m40224a((Object) cls.getComponentType(), (Object) Class.class)) {
+        } else if (!cls.isArray() || !Intrinsics.areEqual((Object) cls.getComponentType(), (Object) Class.class)) {
             kClass = C12731a.m39867a(cls);
         } else {
             kClass = C12895y.m40230a(KClass[].class);
         }
-        if (C12880j.m40224a((Object) kClass.getQualifiedName(), (Object) C12895y.m40230a(Object[].class).getQualifiedName())) {
+        if (Intrinsics.areEqual((Object) kClass.getQualifiedName(), (Object) C12895y.m40230a(Object[].class).getQualifiedName())) {
             StringBuilder sb = new StringBuilder();
             sb.append(kClass.getQualifiedName());
             sb.append('<');
             Class componentType = C12731a.m39866a(kClass).getComponentType();
-            C12880j.m40222a((Object) componentType, "kotlinClass.java.componentType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) componentType, "kotlinClass.java.componentType");
             sb.append(C12731a.m39867a(componentType).getQualifiedName());
             sb.append('>');
             str2 = sb.toString();

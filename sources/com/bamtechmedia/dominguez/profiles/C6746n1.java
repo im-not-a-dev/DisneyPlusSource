@@ -8,7 +8,7 @@ import java.util.Map;
 import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Single;
@@ -113,7 +113,7 @@ public final class C6746n1 {
             C6746n1 n1Var = this.f15128c;
             List list = (List) pair.mo31015c();
             Object d = pair.mo31016d();
-            C12880j.m40222a(d, "it.second");
+            Intrinsics.checkReturnedValueIsNotNull(d, "it.second");
             return n1Var.m20829a(list, (DefaultUserProfile) d);
         }
     }
@@ -205,7 +205,7 @@ public final class C6746n1 {
     /* renamed from: b */
     public final Completable mo19476b(C6626c0 c0Var) {
         Completable b = this.f15122a.getUserProfile(c0Var.getProfileId()).mo30217b((Function<? super T, ? extends CompletableSource>) new C6752f<Object,Object>(this));
-        C12880j.m40222a((Object) b, "userProfileApi.getUserPr…etActiveUserProfile(it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "userProfileApi.getUserPr…etActiveUserProfile(it) }");
         return b;
     }
 
@@ -213,9 +213,9 @@ public final class C6746n1 {
     public final Single<List<C6659f0>> mo19472a() {
         Single userProfiles = this.f15122a.getUserProfiles();
         Single i = this.f15122a.getActiveUserProfile().mo30237i(C6750d.f15127c);
-        C12880j.m40222a((Object) i, "userProfileApi.getActive… DefaultUserProfile(\"\") }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "userProfileApi.getActive… DefaultUserProfile(\"\") }");
         Single<List<C6659f0>> g = C11920c.m38475a(userProfiles, i).mo30233g(new C6751e(this));
-        C12880j.m40222a((Object) g, "userProfileApi.getUserPr…st(it.first, it.second) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "userProfileApi.getUserPr…st(it.first, it.second) }");
         return g;
     }
 
@@ -224,7 +224,7 @@ public final class C6746n1 {
         if (C6758o1.m20851b(defaultUserProfile2)) {
             return m20824a(defaultUserProfile).isDefault();
         }
-        return C12880j.m40224a((Object) defaultUserProfile.getProfileId(), (Object) defaultUserProfile2.getProfileId());
+        return Intrinsics.areEqual((Object) defaultUserProfile.getProfileId(), (Object) defaultUserProfile2.getProfileId());
     }
 
     /* access modifiers changed from: private */
@@ -235,7 +235,7 @@ public final class C6746n1 {
         if (profileName != null) {
             return new C6659f0(profileId, profileName, m20824a(defaultUserProfile), z);
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -261,7 +261,7 @@ public final class C6746n1 {
             r4.<init>(r2)
             io.reactivex.Single r3 = r3.mo30233g(r4)
             java.lang.String r4 = "userProfileApi.createUse…eProfileImpl(it, false) }"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             return r3
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtechmedia.dominguez.profiles.C6746n1.mo19475a(java.lang.String, com.bamtechmedia.dominguez.profiles.e0):io.reactivex.Single");
@@ -270,14 +270,14 @@ public final class C6746n1 {
     /* renamed from: a */
     public final Single<C6626c0> mo19474a(C6626c0 c0Var, String str, C6654e0 e0Var) {
         Single<C6626c0> g = this.f15122a.getUserProfile(c0Var.getProfileId()).mo30233g(new C6753g(this, str, e0Var)).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6754h<Object,Object>(this)).mo30233g(new C6755i(this, c0Var));
-        C12880j.m40222a((Object) g, "userProfileApi.getUserPr…file.currentlySelected) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "userProfileApi.getUserPr…file.currentlySelected) }");
         return g;
     }
 
     /* renamed from: a */
     public final Single<? extends C6626c0> mo19473a(C6626c0 c0Var) {
         Single<? extends C6626c0> g = this.f15122a.getUserProfile(c0Var.getProfileId()).mo30233g(new C6749c(this, c0Var));
-        C12880j.m40222a((Object) g, "userProfileApi.getUserPr…file.currentlySelected) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "userProfileApi.getUserPr…file.currentlySelected) }");
         return g;
     }
 
@@ -491,7 +491,7 @@ public final class C6746n1 {
     /* renamed from: a */
     public final Completable mo19471a(String str) {
         Completable b = this.f15122a.getUserProfile(str).mo30217b((Function<? super T, ? extends CompletableSource>) new C6748b<Object,Object>(this));
-        C12880j.m40222a((Object) b, "userProfileApi.getUserPr…i.deleteUserProfile(it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "userProfileApi.getUserPr…i.deleteUserProfile(it) }");
         return b;
     }
 

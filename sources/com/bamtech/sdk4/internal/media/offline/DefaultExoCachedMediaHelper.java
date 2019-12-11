@@ -28,7 +28,7 @@ import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.C12860a0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import p520io.reactivex.Single;
@@ -58,7 +58,7 @@ public final class DefaultExoCachedMediaHelper implements ExoCachedMediaHelper {
             function0.invoke();
         }
         C9514q a = new C9515r(this.applicationContext, this.userAgent).mo24448a();
-        C12880j.m40222a((Object) a, "DefaultDataSourceFactory…Agent).createDataSource()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "DefaultDataSourceFactory…Agent).createDataSource()");
         List<Pair> renditions = getRenditions(serviceTransaction, exoCachedMedia, a);
         if (renditions != null) {
             Object[] array = renditions.toArray(new Pair[0]);
@@ -89,7 +89,7 @@ public final class DefaultExoCachedMediaHelper implements ExoCachedMediaHelper {
 
     public Single<CachedMedia> downloadMediaLicenseAsync(ServiceTransaction serviceTransaction, ExoCachedMedia exoCachedMedia) {
         Single<CachedMedia> c = Single.m38401c((Callable<? extends T>) new DefaultExoCachedMediaHelper$downloadMediaLicenseAsync$1<Object>(this, serviceTransaction, exoCachedMedia));
-        C12880j.m40222a((Object) c, "Single.fromCallable {\n  …ndException() }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Single.fromCallable {\n  …ndException() }\n        }");
         return c;
     }
 
@@ -101,7 +101,7 @@ public final class DefaultExoCachedMediaHelper implements ExoCachedMediaHelper {
         String str = "OfflineExoMediaHelper";
         Log.d(str, sb.toString());
         Object a = C9455c0.m28986a(dataSource, (C9456a<? extends T>) new C9185f<Object>(), Uri.parse(exoCachedMedia.getMasterPlaylist()), 4);
-        C12880j.m40222a(a, "ParsingLoadable.load<Hls…t), C.DATA_TYPE_MANIFEST)");
+        Intrinsics.checkReturnedValueIsNotNull(a, "ParsingLoadable.load<Hls…t), C.DATA_TYPE_MANIFEST)");
         HlsPlaylist hlsPlaylist = (HlsPlaylist) a;
         DownloadRequest request = exoCachedMedia.getRequest();
         List trackCandidates = VariantCandidateKt.getTrackCandidates(hlsPlaylist);

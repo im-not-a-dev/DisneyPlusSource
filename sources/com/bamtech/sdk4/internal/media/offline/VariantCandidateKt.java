@@ -18,7 +18,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13180m;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000(\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u001a\"\u0010\u0000\u001a\u00020\u0001*\b\u0012\u0004\u0012\u00020\u00010\u00022\u0006\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u0006H\u0000\u001a\f\u0010\u0007\u001a\u00020\b*\u00020\tH\u0000\u001a\u0012\u0010\n\u001a\b\u0012\u0004\u0012\u00020\u00010\u0002*\u00020\u000bH\u0000¨\u0006\f"}, mo31007d2 = {"findBestVideoVariant", "Lcom/bamtech/sdk4/internal/media/offline/VariantCandidate;", "", "transaction", "Lcom/bamtech/sdk4/internal/service/ServiceTransaction;", "variantConstraints", "Lcom/bamtech/sdk4/media/offline/VariantConstraints;", "getInferredPrimaryTrackType", "", "Lcom/google/android/exoplayer2/Format;", "getTrackCandidates", "Lcom/google/android/exoplayer2/source/hls/playlist/HlsPlaylist;", "plugin-offline-media_release"}, mo31008k = 2, mo31009mv = {1, 1, 15})
@@ -78,7 +78,7 @@ public final class VariantCandidateKt {
     public static final List<VariantCandidate> getTrackCandidates(HlsPlaylist hlsPlaylist) {
         C9182e eVar = (C9182e) hlsPlaylist;
         List<C9184b> list = eVar.f20750e;
-        C12880j.m40222a((Object) list, "variants");
+        Intrinsics.checkReturnedValueIsNotNull((Object) list, "variants");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) list, 10));
         Iterator it = list.iterator();
         int i = 0;
@@ -90,12 +90,12 @@ public final class VariantCandidateKt {
                 if (i >= 0) {
                     C9184b bVar = (C9184b) next;
                     Uri uri = bVar.f20760a;
-                    C12880j.m40222a((Object) uri, "variant.url");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) uri, "variant.url");
                     Format format = bVar.f20761b;
-                    C12880j.m40222a((Object) format, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) format, str);
                     StreamKey streamKey = new StreamKey(0, 0, i);
                     Format format2 = bVar.f20761b;
-                    C12880j.m40222a((Object) format2, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) format2, str);
                     VariantCandidate variantCandidate = new VariantCandidate(uri, format, streamKey, getInferredPrimaryTrackType(format2), bVar.f20763d);
                     arrayList.add(variantCandidate);
                     i = i2;
@@ -105,7 +105,7 @@ public final class VariantCandidateKt {
                 }
             } else {
                 List<C9183a> list2 = eVar.f20751f;
-                C12880j.m40222a((Object) list2, "audios");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list2, "audios");
                 ArrayList arrayList2 = new ArrayList(C13187p.m40525a((Iterable) list2, 10));
                 int i3 = 0;
                 for (Object next2 : list2) {
@@ -114,18 +114,18 @@ public final class VariantCandidateKt {
                         C9183a aVar = (C9183a) next2;
                         Uri uri2 = aVar.f20757a;
                         if (uri2 != null) {
-                            C12880j.m40222a((Object) uri2, "variant.url!!");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) uri2, "variant.url!!");
                             Format format3 = aVar.f20758b;
-                            C12880j.m40222a((Object) format3, str);
+                            Intrinsics.checkReturnedValueIsNotNull((Object) format3, str);
                             StreamKey streamKey2 = new StreamKey(0, 1, i3);
                             Format format4 = aVar.f20758b;
-                            C12880j.m40222a((Object) format4, str);
+                            Intrinsics.checkReturnedValueIsNotNull((Object) format4, str);
                             VariantCandidate variantCandidate2 = r11;
                             VariantCandidate variantCandidate3 = new VariantCandidate(uri2, format3, streamKey2, getInferredPrimaryTrackType(format4), null, 16, null);
                             arrayList2.add(variantCandidate2);
                             i3 = i4;
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     } else {
@@ -134,7 +134,7 @@ public final class VariantCandidateKt {
                     }
                 }
                 List<C9183a> list3 = eVar.f20752g;
-                C12880j.m40222a((Object) list3, "subtitles");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list3, "subtitles");
                 ArrayList arrayList3 = new ArrayList(C13187p.m40525a((Iterable) list3, 10));
                 int i5 = 0;
                 for (Object next3 : list3) {
@@ -143,19 +143,19 @@ public final class VariantCandidateKt {
                         C9183a aVar2 = (C9183a) next3;
                         Uri uri3 = aVar2.f20757a;
                         if (uri3 != null) {
-                            C12880j.m40222a((Object) uri3, "url.url!!");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) uri3, "url.url!!");
                             Format format5 = aVar2.f20758b;
                             String str2 = "url.format";
-                            C12880j.m40222a((Object) format5, str2);
+                            Intrinsics.checkReturnedValueIsNotNull((Object) format5, str2);
                             StreamKey streamKey3 = new StreamKey(0, 2, i5);
                             Format format6 = aVar2.f20758b;
-                            C12880j.m40222a((Object) format6, str2);
+                            Intrinsics.checkReturnedValueIsNotNull((Object) format6, str2);
                             VariantCandidate variantCandidate4 = r9;
                             VariantCandidate variantCandidate5 = new VariantCandidate(uri3, format5, streamKey3, getInferredPrimaryTrackType(format6), null, 16, null);
                             arrayList3.add(variantCandidate4);
                             i5 = i6;
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     } else {

@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants.Sdk;
 import java.util.Map;
 import java.util.UUID;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -31,9 +31,9 @@ public final class UserActivityDustEvent<T extends TelemetryClientPayload> exten
             Device device = dustClientConstants.getDevice();
             Sdk sdk = dustClientConstants.getSdk();
             DateTime withZone = DateTime.now().withZone(DateTimeZone.UTC);
-            C12880j.m40222a((Object) withZone, "DateTime.now().withZone(DateTimeZone.UTC)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) withZone, "DateTime.now().withZone(DateTimeZone.UTC)");
             String uuid2 = uuid.toString();
-            C12880j.m40222a((Object) uuid2, "transactionId.toString()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) uuid2, "transactionId.toString()");
             UserActivityData userActivityData = new UserActivityData(application, device, sdk, withZone, str, str2, uuid2, dustClientConstants.getCorrelationIds(), obj);
             return new UserActivityDustEvent<>(null, userActivityData);
         }

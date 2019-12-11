@@ -8,7 +8,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p174d.p178b.C5300m;
@@ -18,7 +18,7 @@ import p163g.p174d.p178b.p179a0.C4825c;
 import p163g.p174d.p178b.p179a0.C4829e;
 import p163g.p174d.p178b.p179a0.C4831f;
 import p163g.p174d.p178b.p185g0.C5271z3;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\t\n\u0002\b\u0002\b\u0007\u0018\u0000 -2\u00020\u0001:\u0001-B-\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0007J\u0010\u0010\u001b\u001a\u00020\u00182\u0006\u0010\u001c\u001a\u00020\u001dH\u0007J\u0010\u0010\u001e\u001a\u00020\u00182\u0006\u0010\u001f\u001a\u00020 H\u0007J\u0010\u0010!\u001a\u00020\u00182\u0006\u0010\u001f\u001a\u00020 H\u0007J\u0010\u0010\"\u001a\u00020\u00182\u0006\u0010#\u001a\u00020$H\u0007J\u0010\u0010%\u001a\u00020\u00182\u0006\u0010&\u001a\u00020'H\u0007J\u0010\u0010(\u001a\u00020\u00182\u0006\u0010)\u001a\u00020'H\u0007J\u0010\u0010*\u001a\u00020\u00182\u0006\u0010+\u001a\u00020,H\u0007R\u0011\u0010\n\u001a\u00020\u000b¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0006\u001a\u00020\u0007¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0012R\u0011\u0010\b\u001a\u00020\t¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0014R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0016¨\u0006."}, mo31007d2 = {"Lcom/bamtech/player/delegates/trickplay/TrickPlayViewDelegate;", "Lcom/bamtech/player/delegates/ControllerDelegate;", "trickPlayView", "Lcom/bamtech/player/delegates/trickplay/TrickPlayView;", "factory", "Lcom/bamtech/player/bif/BifFactory;", "manager", "Lcom/bamtech/player/bif/BifBitmapManager;", "player", "Lcom/bamtech/player/VideoPlayer;", "events", "Lcom/bamtech/player/PlayerEvents;", "(Lcom/bamtech/player/delegates/trickplay/TrickPlayView;Lcom/bamtech/player/bif/BifFactory;Lcom/bamtech/player/bif/BifBitmapManager;Lcom/bamtech/player/VideoPlayer;Lcom/bamtech/player/PlayerEvents;)V", "getEvents", "()Lcom/bamtech/player/PlayerEvents;", "getFactory", "()Lcom/bamtech/player/bif/BifFactory;", "getManager", "()Lcom/bamtech/player/bif/BifBitmapManager;", "getPlayer", "()Lcom/bamtech/player/VideoPlayer;", "getTrickPlayView", "()Lcom/bamtech/player/delegates/trickplay/TrickPlayView;", "onBifFile", "", "spec", "Lcom/bamtech/player/bif/BifSpec;", "onBitmap", "bitmap", "Landroid/graphics/Bitmap;", "onLifecycleStart", "state", "Lcom/bamtech/player/PlayerEvents$LifecycleState;", "onLifecycleStop", "onPlaybackRateChanged", "rate", "", "onTrickPlayActive", "trickPlayActive", "", "onTrickPlayAvailable", "available", "onTrickPlayTimeChanged", "time", "", "Companion", "bamplayer-core_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 @SuppressLint({"CheckResult"})
@@ -88,7 +88,7 @@ public final class C5253h implements C5271z3 {
 
         /* renamed from: a */
         public final void mo16784a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -96,7 +96,7 @@ public final class C5253h implements C5271z3 {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -508,7 +508,7 @@ public final class C5253h implements C5271z3 {
             r1 = 0
             java.lang.Object[] r1 = new java.lang.Object[r1]
             java.lang.String r2 = "TrickPlay is disabled because Views do not exist"
-            p686n.p687a.C14100a.m44529c(r2, r1)
+            p686n.p687a.Timber.m44529c(r2, r1)
         L_0x0104:
             return
         */
@@ -524,7 +524,7 @@ public final class C5253h implements C5271z3 {
 
     /* renamed from: a */
     public final void mo16778a(C4831f fVar) {
-        if (!C12880j.m40224a((Object) fVar, (Object) f12615X)) {
+        if (!Intrinsics.areEqual((Object) fVar, (Object) f12615X)) {
             if (!(fVar.mo16240b().length() == 0)) {
                 this.f12618V.mo16206a((Collection<C4825c>) this.f12617U.mo16236a(new File(fVar.mo16240b()), fVar.mo16241c(), fVar.mo16239a()));
                 return;

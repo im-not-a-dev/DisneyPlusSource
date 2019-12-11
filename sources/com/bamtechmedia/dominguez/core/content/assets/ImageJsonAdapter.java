@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -21,19 +21,19 @@ public final class ImageJsonAdapter extends C11725h<Image> {
 
     public ImageJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("masterId", "url", "aspectRatio", "locale", "purpose", "masterHeight", "masterWidth", "sourceEntity");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"m…erWidth\", \"sourceEntity\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"m…erWidth\", \"sourceEntity\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "masterId");
-        C12880j.m40222a((Object) a2, "moshi.adapter<String?>(S…s.emptySet(), \"masterId\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String?>(S…s.emptySet(), \"masterId\")");
         this.nullableStringAdapter = a2;
         C11725h<String> a3 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "url");
-        C12880j.m40222a((Object) a3, "moshi.adapter<String>(St…ctions.emptySet(), \"url\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<String>(St…ctions.emptySet(), \"url\")");
         this.stringAdapter = a3;
         C11725h<C3623a> a4 = vVar.mo29869a((Type) C3623a.class, C13188p0.m40531a(), "aspectRatio");
-        C12880j.m40222a((Object) a4, "moshi.adapter<AspectRati…mptySet(), \"aspectRatio\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<AspectRati…mptySet(), \"aspectRatio\")");
         this.nullableAspectRatioAdapter = a4;
         C11725h<Integer> a5 = vVar.mo29869a((Type) Integer.class, C13188p0.m40531a(), "masterHeight");
-        C12880j.m40222a((Object) a5, "moshi.adapter<Int?>(Int:…ptySet(), \"masterHeight\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<Int?>(Int:…ptySet(), \"masterHeight\")");
         this.nullableIntAdapter = a5;
     }
 

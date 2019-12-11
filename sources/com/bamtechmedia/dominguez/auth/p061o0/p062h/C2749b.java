@@ -1,6 +1,6 @@
 package com.bamtechmedia.dominguez.auth.p061o0.p062h;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.auth.o0.h.b */
 /* compiled from: PasswordStrength.kt */
@@ -45,7 +45,7 @@ public final class C2749b {
             if (obj instanceof C2749b) {
                 C2749b bVar = (C2749b) obj;
                 if (this.f7494a == bVar.f7494a) {
-                    if (!(this.f7495b == bVar.f7495b) || !C12880j.m40224a((Object) this.f7496c, (Object) bVar.f7496c)) {
+                    if (!(this.f7495b == bVar.f7495b) || !Intrinsics.areEqual((Object) this.f7496c, (Object) bVar.f7496c)) {
                         return false;
                     }
                 }

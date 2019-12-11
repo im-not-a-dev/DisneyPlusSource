@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.source.p379m0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p366s0.C8909d;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
@@ -55,10 +55,10 @@ public final class C9227n extends C9209a {
                 this.f20926p += (long) i;
             }
             a.mo23303a(this.f20861f, 1, (int) this.f20926p, 0, null);
-            C9554k0.m29405a((DataSource) this.f20863h);
+            Util.m29405a((DataSource) this.f20863h);
             this.f20927q = true;
         } catch (Throwable th) {
-            C9554k0.m29405a((DataSource) this.f20863h);
+            Util.m29405a((DataSource) this.f20863h);
             throw th;
         }
     }

@@ -19,7 +19,7 @@ import com.bamtechmedia.dominguez.core.content.collections.C3676k;
 import com.bamtechmedia.dominguez.core.content.collections.C3678l;
 import com.bamtechmedia.dominguez.core.utils.C5884x;
 import com.google.common.base.Optional;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p315s.C7769n;
 
 /* renamed from: com.bamtechmedia.dominguez.collections.items.d */
@@ -141,23 +141,23 @@ public final class C3346d implements C3345c {
 
     /* renamed from: b */
     private final boolean m11506b(C3433a aVar) {
-        return C12880j.m40224a((Object) aVar.mo12608a(), (Object) "tabbed");
+        return Intrinsics.areEqual((Object) aVar.mo12608a(), (Object) "tabbed");
     }
 
     /* renamed from: a */
     private final boolean m11503a(C3433a aVar) {
-        return C12880j.m40224a((Object) aVar.mo12608a(), (Object) "stacked") && C12880j.m40224a((Object) (String) aVar.mo12606a("title"), (Object) C3688j.LOGO_LAYER.mo13408a());
+        return Intrinsics.areEqual((Object) aVar.mo12608a(), (Object) "stacked") && Intrinsics.areEqual((Object) (String) aVar.mo12606a("title"), (Object) C3688j.LOGO_LAYER.mo13408a());
     }
 
     /* renamed from: a */
     private final boolean m11504a(CollectionAsset collectionAsset) {
-        return C12880j.m40224a((Object) collectionAsset.mo12842P(), (Object) "originals");
+        return Intrinsics.areEqual((Object) collectionAsset.mo12842P(), (Object) "originals");
     }
 
     /* renamed from: a */
     public final void mo12438a(String str) {
         Toast makeText = Toast.makeText(this.f8418V.getApplicationContext(), str, 0);
         makeText.show();
-        C12880j.m40222a((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
     }
 }

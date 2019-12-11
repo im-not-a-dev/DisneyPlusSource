@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.types;
 
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JavaToKotlinClassMap;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -43,14 +43,14 @@ public final class JavaTypeResolver {
             return false;
         }
         TypeConstructor typeConstructor = JavaToKotlinClassMap.INSTANCE.convertReadOnlyToMutable(classDescriptor).getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "JavaToKotlinClassMap.con…         .typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "JavaToKotlinClassMap.con…         .typeConstructor");
         List parameters = typeConstructor.getParameters();
-        C12880j.m40222a((Object) parameters, "JavaToKotlinClassMap.con…ypeConstructor.parameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "JavaToKotlinClassMap.con…ypeConstructor.parameters");
         TypeParameterDescriptor typeParameterDescriptor = (TypeParameterDescriptor) C13199w.m40595i(parameters);
         if (typeParameterDescriptor != null) {
             Variance variance = typeParameterDescriptor.getVariance();
             if (variance != null) {
-                C12880j.m40222a((Object) variance, "JavaToKotlinClassMap.con….variance ?: return false");
+                Intrinsics.checkReturnedValueIsNotNull((Object) variance, "JavaToKotlinClassMap.con….variance ?: return false");
                 if (variance != Variance.OUT_VARIANCE) {
                     z = true;
                 }
@@ -78,7 +78,7 @@ public final class JavaTypeResolver {
             boolean r3 = r3.isEmpty()
             if (r3 == 0) goto L_0x0024
             java.util.List r3 = r18.getParameters()
-            kotlin.jvm.internal.C12880j.m40222a(r3, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r0)
             boolean r3 = r3.isEmpty()
             r3 = r3 ^ r2
             if (r3 == 0) goto L_0x0024
@@ -90,7 +90,7 @@ public final class JavaTypeResolver {
             r3 = 1
         L_0x0027:
             java.util.List r4 = r18.getParameters()
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
             java.lang.String r8 = "parameter"
             r0 = 10
             if (r3 == 0) goto L_0x0086
@@ -117,7 +117,7 @@ public final class JavaTypeResolver {
             r0.<init>(r1, r2, r3, r4, r5)
             r12.<init>(r13, r14)
             kotlin.reflect.jvm.internal.impl.load.java.lazy.types.RawSubstitution r0 = kotlin.reflect.jvm.internal.impl.load.java.lazy.types.RawSubstitution.INSTANCE
-            kotlin.jvm.internal.C12880j.m40222a(r11, r8)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r11, r8)
             if (r7 == 0) goto L_0x0071
             r1 = r17
             r2 = r1
@@ -149,7 +149,7 @@ public final class JavaTypeResolver {
             kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor r2 = (kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor) r2
             kotlin.reflect.jvm.internal.impl.types.TypeProjectionImpl r3 = new kotlin.reflect.jvm.internal.impl.types.TypeProjectionImpl
             java.lang.String r4 = "p"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r4)
             kotlin.reflect.jvm.internal.impl.name.Name r2 = r2.getName()
             java.lang.String r2 = r2.asString()
             kotlin.reflect.jvm.internal.impl.types.SimpleType r2 = kotlin.reflect.jvm.internal.impl.types.ErrorUtils.createErrorType(r2)
@@ -206,7 +206,7 @@ public final class JavaTypeResolver {
             r10 = 3
             r11 = 0
             kotlin.reflect.jvm.internal.impl.load.java.lazy.types.JavaTypeAttributes r9 = kotlin.reflect.jvm.internal.impl.load.java.lazy.types.JavaTypeResolverKt.toAttributes$default(r9, r1, r11, r10, r11)
-            kotlin.jvm.internal.C12880j.m40222a(r7, r8)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r8)
             kotlin.reflect.jvm.internal.impl.types.TypeProjection r3 = r15.transformToTypeProjection(r3, r9, r7)
             r5.add(r3)
             goto L_0x00e1
@@ -240,7 +240,7 @@ public final class JavaTypeResolver {
             if (r7 == 0) goto L_0x0021
             kotlin.reflect.jvm.internal.impl.types.TypeConstructor r2 = r7.getConstructor()
         L_0x0021:
-            boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r2, r1)
+            boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r2, r1)
             if (r2 == 0) goto L_0x0035
             boolean r2 = r5.isRaw()
             if (r2 != 0) goto L_0x0035
@@ -331,9 +331,9 @@ public final class JavaTypeResolver {
 
     private final TypeConstructor createNotFoundClass(JavaClassifierType javaClassifierType) {
         ClassId classId = ClassId.topLevel(new FqName(javaClassifierType.getClassifierQualifiedName()));
-        C12880j.m40222a((Object) classId, "ClassId.topLevel(FqName(…classifierQualifiedName))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) classId, "ClassId.topLevel(FqName(…classifierQualifiedName))");
         TypeConstructor typeConstructor = this.f29565c.getComponents().getDeserializedDescriptorResolver().getComponents().getNotFoundClasses().getClass(classId, C13183n.m40498a(Integer.valueOf(0))).getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "c.components.deserialize…istOf(0)).typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "c.components.deserialize…istOf(0)).typeConstructor");
         return typeConstructor;
     }
 
@@ -360,7 +360,7 @@ public final class JavaTypeResolver {
     }
 
     private final ClassDescriptor mapKotlinClass(JavaClassifierType javaClassifierType, JavaTypeAttributes javaTypeAttributes, FqName fqName) {
-        if (javaTypeAttributes.isForAnnotationParameter() && C12880j.m40224a((Object) fqName, (Object) JavaTypeResolverKt.JAVA_LANG_CLASS_FQ_NAME)) {
+        if (javaTypeAttributes.isForAnnotationParameter() && Intrinsics.areEqual((Object) fqName, (Object) JavaTypeResolverKt.JAVA_LANG_CLASS_FQ_NAME)) {
             return this.f29565c.getComponents().getReflectionTypes().getKClass();
         }
         JavaToKotlinClassMap javaToKotlinClassMap = JavaToKotlinClassMap.INSTANCE;
@@ -450,7 +450,7 @@ public final class JavaTypeResolver {
             kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns r6 = r6.getBuiltIns()
             kotlin.reflect.jvm.internal.impl.types.SimpleType r6 = r6.getPrimitiveArrayKotlinType(r0)
             java.lang.String r8 = "c.module.builtIns.getPri…KotlinType(primitiveType)"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r8)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r8)
             boolean r7 = r7.isForAnnotationParameter()
             if (r7 == 0) goto L_0x0033
             goto L_0x003b
@@ -478,7 +478,7 @@ public final class JavaTypeResolver {
             kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns r8 = r8.getBuiltIns()
             kotlin.reflect.jvm.internal.impl.types.SimpleType r6 = r8.getArrayType(r7, r6)
             java.lang.String r7 = "c.module.builtIns.getArr…ctionKind, componentType)"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r7)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r7)
             return r6
         L_0x006c:
             kotlin.reflect.jvm.internal.impl.load.java.lazy.LazyJavaResolverContext r7 = r5.f29565c
@@ -487,7 +487,7 @@ public final class JavaTypeResolver {
             kotlin.reflect.jvm.internal.impl.types.Variance r8 = kotlin.reflect.jvm.internal.impl.types.Variance.INVARIANT
             kotlin.reflect.jvm.internal.impl.types.SimpleType r7 = r7.getArrayType(r8, r6)
             java.lang.String r8 = "c.module.builtIns.getArr…INVARIANT, componentType)"
-            kotlin.jvm.internal.C12880j.m40222a(r7, r8)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r8)
             kotlin.reflect.jvm.internal.impl.load.java.lazy.LazyJavaResolverContext r8 = r5.f29565c
             kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor r8 = r8.getModule()
             kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns r8 = r8.getBuiltIns()
@@ -509,7 +509,7 @@ public final class JavaTypeResolver {
             } else {
                 simpleType = this.f29565c.getModule().getBuiltIns().getUnitType();
             }
-            C12880j.m40222a((Object) simpleType, "if (primitiveType != nul….module.builtIns.unitType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) simpleType, "if (primitiveType != nul….module.builtIns.unitType");
             return simpleType;
         } else if (javaType instanceof JavaClassifierType) {
             return transformJavaClassifierType((JavaClassifierType) javaType, javaTypeAttributes);
@@ -527,11 +527,11 @@ public final class JavaTypeResolver {
                     }
                 }
                 SimpleType defaultBound = this.f29565c.getModule().getBuiltIns().getDefaultBound();
-                C12880j.m40222a((Object) defaultBound, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) defaultBound, str);
                 return defaultBound;
             } else if (javaType == null) {
                 SimpleType defaultBound2 = this.f29565c.getModule().getBuiltIns().getDefaultBound();
-                C12880j.m40222a((Object) defaultBound2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) defaultBound2, str);
                 return defaultBound2;
             } else {
                 StringBuilder sb = new StringBuilder();

@@ -12,7 +12,7 @@ import java.util.concurrent.Callable;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
@@ -83,7 +83,7 @@ public final class C6906a implements C6864d {
             /* renamed from: a */
             public final void mo19671a(C6714j0 j0Var) {
                 C7019z zVar = this.f15382c;
-                C12880j.m40222a((Object) zVar, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) zVar, "it");
                 j0Var.mo19435a(zVar);
             }
 
@@ -141,7 +141,7 @@ public final class C6906a implements C6864d {
     /* renamed from: a */
     public Single<? extends C6626c0> mo19633a(C6626c0 c0Var) {
         Single<? extends C6626c0> a = Single.m38401c((Callable<? extends T>) new C6907a<Object>(this, c0Var)).mo30220b(this.f15377d).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6908b<Object,Object>(this, c0Var));
-        C12880j.m40222a((Object) a, "Single.fromCallable { up…guagePreferences = it } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.fromCallable { up…guagePreferences = it } }");
         return a;
     }
 

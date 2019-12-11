@@ -34,7 +34,7 @@ import com.google.android.exoplayer2.Timeline.C8670c;
 import com.google.android.exoplayer2.p391ui.C9418p.C9419a;
 import com.google.android.exoplayer2.p393v0.C9528a0;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import java.util.Arrays;
@@ -227,7 +227,7 @@ public class C9405g extends FrameLayout {
         /* renamed from: a */
         public void mo24404a(C9418p pVar, long j) {
             if (C9405g.this.f21810h0 != null) {
-                C9405g.this.f21810h0.setText(C9554k0.m29398a(C9405g.this.f21812j0, C9405g.this.f21813k0, j));
+                C9405g.this.f21810h0.setText(Util.m29398a(C9405g.this.f21812j0, C9405g.this.f21813k0, j));
             }
         }
 
@@ -240,7 +240,7 @@ public class C9405g extends FrameLayout {
         public void mo24406b(C9418p pVar, long j) {
             C9405g.this.f21786J0 = true;
             if (C9405g.this.f21810h0 != null) {
-                C9405g.this.f21810h0.setText(C9554k0.m29398a(C9405g.this.f21812j0, C9405g.this.f21813k0, j));
+                C9405g.this.f21810h0.setText(Util.m29398a(C9405g.this.f21812j0, C9405g.this.f21813k0, j));
             }
         }
 
@@ -607,7 +607,7 @@ public class C9405g extends FrameLayout {
     }
 
     public void setTimeBarMinUpdateInterval(int i) {
-        this.f21790N0 = C9554k0.m29382a(i, 16, 1000);
+        this.f21790N0 = Util.m29382a(i, 16, 1000);
     }
 
     public void setVisibilityListener(C9409d dVar) {
@@ -800,7 +800,7 @@ public class C9405g extends FrameLayout {
             }
             TextView textView = this.f21810h0;
             if (textView != null && !this.f21786J0) {
-                textView.setText(C9554k0.m29398a(this.f21812j0, this.f21813k0, j2));
+                textView.setText(Util.m29398a(this.f21812j0, this.f21813k0, j2));
             }
             C9418p pVar = this.f21811i0;
             if (pVar != null) {
@@ -822,7 +822,7 @@ public class C9405g extends FrameLayout {
                 if (f > 0.0f) {
                     j3 = (long) (((float) min) / f);
                 }
-                postDelayed(this.f21816n0, C9554k0.m29431b(j3, (long) this.f21790N0, 1000));
+                postDelayed(this.f21816n0, Util.m29431b(j3, (long) this.f21790N0, 1000));
             } else if (playbackState != 4 && playbackState != 1) {
                 postDelayed(this.f21816n0, 1000);
             }
@@ -904,7 +904,7 @@ public class C9405g extends FrameLayout {
                         break;
                     }
                     if (i2 == currentWindowIndex) {
-                        this.f21800V0 = C8883r.m25968b(j2);
+                        this.f21800V0 = C8883r.usToMs(j2);
                     }
                     currentTimeline.mo22663a(i2, this.f21815m0);
                     C8670c cVar2 = this.f21815m0;
@@ -938,7 +938,7 @@ public class C9405g extends FrameLayout {
                                     this.f21794R0 = Arrays.copyOf(this.f21794R0, length);
                                     this.f21795S0 = Arrays.copyOf(this.f21795S0, length);
                                 }
-                                this.f21794R0[i4] = C8883r.m25968b(j2 + f);
+                                this.f21794R0[i4] = C8883r.usToMs(j2 + f);
                                 this.f21795S0[i4] = this.f21814l0.mo22686d(i5);
                                 i4++;
                             }
@@ -954,10 +954,10 @@ public class C9405g extends FrameLayout {
             } else {
                 i = 0;
             }
-            long b3 = C8883r.m25968b(j);
+            long b3 = C8883r.usToMs(j);
             TextView textView = this.f21809g0;
             if (textView != null) {
-                textView.setText(C9554k0.m29398a(this.f21812j0, this.f21813k0, b3));
+                textView.setText(Util.m29398a(this.f21812j0, this.f21813k0, b3));
             }
             C9418p pVar = this.f21811i0;
             if (pVar != null) {

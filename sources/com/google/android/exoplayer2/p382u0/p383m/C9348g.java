@@ -1,8 +1,8 @@
 package com.google.android.exoplayer2.p382u0.p383m;
 
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.u0.m.g */
@@ -10,7 +10,7 @@ import com.google.android.exoplayer2.p393v0.C9572w;
 public final class C9348g {
 
     /* renamed from: a */
-    public static final int f21469a = C9554k0.m29428b("GA94");
+    public static final int f21469a = Util.m29428b("GA94");
 
     /* renamed from: a */
     public static void m28497a(long j, C9572w wVar, C8924q[] qVarArr) {
@@ -21,7 +21,7 @@ public final class C9348g {
                 int a2 = m28496a(wVar);
                 int c = wVar.mo24688c() + a2;
                 if (a2 == -1 || a2 > wVar.mo24679a()) {
-                    C9563q.m29500d("CeaUtil", "Skipping remainder of malformed SEI NAL unit.");
+                    Log.m29500d("CeaUtil", "Skipping remainder of malformed SEI NAL unit.");
                     c = wVar.mo24690d();
                 } else if (a == 4 && a2 >= 8) {
                     int v = wVar.mo24711v();

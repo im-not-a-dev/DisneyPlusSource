@@ -8,7 +8,7 @@ import com.bamtech.sdk4.internal.token.AccessTokenProvider;
 import java.util.UUID;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.OkHttpClient.Builder;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -46,7 +46,7 @@ public final class DefaultSilkDrmProvider implements SilkDrmProvider, NetworkCon
 
     public byte[] executeKeyRequest(ServiceTransaction serviceTransaction, String str, byte[] bArr, String str2, boolean z) {
         Object c = getKey(str).mo30224c();
-        C12880j.m40222a(c, "getKey(licenseUrl).blockingGet()");
+        Intrinsics.checkReturnedValueIsNotNull(c, "getKey(licenseUrl).blockingGet()");
         return (byte[]) c;
     }
 
@@ -57,9 +57,9 @@ public final class DefaultSilkDrmProvider implements SilkDrmProvider, NetworkCon
     public Single<byte[]> getKey(String str) {
         ServiceTransaction serviceTransaction = (ServiceTransaction) getTransactionProvider().get();
         AccessTokenProvider accessTokenProvider2 = this.accessTokenProvider;
-        C12880j.m40222a((Object) serviceTransaction, "transaction");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction, "transaction");
         Single a = accessTokenProvider2.getAccessToken(serviceTransaction).mo30233g(DefaultSilkDrmProvider$getKey$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultSilkDrmProvider$getKey$2<Object,Object>(this, serviceTransaction, str));
-        C12880j.m40222a((Object) a, "accessTokenProvider.getA…p, uri)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "accessTokenProvider.getA…p, uri)\n                }");
         return DustExtensionsKt.withDust$default(a, serviceTransaction, "urn:bamtech:dust:bamsdk:api:media:encryptionKeyProvider:getEncryptionKey", (Object) null, 4, (Object) null);
     }
 

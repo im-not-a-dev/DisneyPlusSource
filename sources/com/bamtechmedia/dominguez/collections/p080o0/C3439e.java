@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.collections.p080o0;
 
 import com.bamtechmedia.dominguez.core.utils.C5859p;
 import java.util.Map;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtechmedia.dominguez.collections.o0.e */
 /* compiled from: CollectionConfigResolver.kt */
@@ -20,7 +20,7 @@ public final class C3439e {
         StringBuilder sb = new StringBuilder();
         sb.append("Resolving config for collection: ");
         sb.append(str);
-        C14100a.m44522a(sb.toString(), new Object[0]);
+        Timber.m44522a(sb.toString(), new Object[0]);
         Map map = (Map) C5859p.m18897a(this.f8670a.mo12612a(), "default", new String[0]);
         if (map != null) {
             Map map2 = (Map) C5859p.m18897a(this.f8670a.mo12612a(), str, new String[0]);

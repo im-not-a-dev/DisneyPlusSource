@@ -13,7 +13,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 import p163g.p201e.p203b.p286j.C7300k;
 import p163g.p503n.p504a.C11786a0;
@@ -95,7 +95,7 @@ public final class C7713w {
             C7687h a = this.f16772c.f16767c;
             C7713w wVar = this.f16772c;
             C7683e eVar = this.f16771U;
-            C12880j.m40222a((Object) httpUrl, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) httpUrl, "it");
             a.mo20601a(wVar.m22756b(eVar.mo20597a(httpUrl)));
         }
     }
@@ -112,7 +112,7 @@ public final class C7713w {
 
         /* renamed from: a */
         public final void mo20637a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -137,7 +137,7 @@ public final class C7713w {
             if (eVar != null) {
                 i = eVar.mo20597a(x);
             } else {
-                C12880j.m40227c("globalNavDeepLinkViewMapper");
+                Intrinsics.throwUninitializedPropertyAccessException("globalNavDeepLinkViewMapper");
                 throw null;
             }
         } else {
@@ -193,7 +193,7 @@ public final class C7713w {
     public final void mo20631a(C11790c0 c0Var, C7683e eVar) {
         this.f16766b = eVar;
         Object a = this.f16768d.mo20105o().mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(c0Var));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C7715b(this, eVar), C7716c.f16773c);
     }
 
@@ -214,7 +214,7 @@ public final class C7713w {
             String a = C5880u.m18936a(num2.intValue());
             if (a != null) {
                 String lowerCase = a.toLowerCase();
-                C12880j.m40222a((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
                 str = C12832w.m40125f(lowerCase);
             } else {
                 throw new C13142s("null cannot be cast to non-null type java.lang.String");

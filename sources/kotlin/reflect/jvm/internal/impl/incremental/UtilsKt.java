@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.incremental;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor;
 import kotlin.reflect.jvm.internal.impl.incremental.components.LocationInfo;
@@ -21,10 +21,10 @@ public final class UtilsKt {
                 Position position = lookupTracker.getRequiresPosition() ? location.getPosition() : Position.Companion.getNO_POSITION();
                 String filePath = location.getFilePath();
                 String asString = DescriptorUtils.getFqName(classDescriptor).asString();
-                C12880j.m40222a((Object) asString, "DescriptorUtils.getFqName(scopeOwner).asString()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) asString, "DescriptorUtils.getFqName(scopeOwner).asString()");
                 ScopeKind scopeKind = ScopeKind.CLASSIFIER;
                 String asString2 = name.asString();
-                C12880j.m40222a((Object) asString2, "name.asString()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) asString2, "name.asString()");
                 lookupTracker.record(filePath, position, asString, scopeKind, asString2);
             }
         }
@@ -41,9 +41,9 @@ public final class UtilsKt {
 
     public static final void record(LookupTracker lookupTracker, LookupLocation lookupLocation, PackageFragmentDescriptor packageFragmentDescriptor, Name name) {
         String asString = packageFragmentDescriptor.getFqName().asString();
-        C12880j.m40222a((Object) asString, "scopeOwner.fqName.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "scopeOwner.fqName.asString()");
         String asString2 = name.asString();
-        C12880j.m40222a((Object) asString2, "name.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString2, "name.asString()");
         recordPackageLookup(lookupTracker, lookupLocation, asString, asString2);
     }
 }

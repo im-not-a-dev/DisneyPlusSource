@@ -23,7 +23,7 @@ import java.util.HashMap;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p121h.p135s.C4187x;
 import p163g.p201e.p203b.p298l.C7531p.C7532a;
@@ -154,7 +154,7 @@ public final class C7513i extends C11885d implements C2413n {
         if (activity != null) {
             ArrayList arrayList = new ArrayList();
             C0538i supportFragmentManager = activity.getSupportFragmentManager();
-            C12880j.m40222a((Object) supportFragmentManager, "supportFragmentManager");
+            Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager, "supportFragmentManager");
             Fragment f = supportFragmentManager.mo3160f();
             while (f != null && f.isAdded()) {
                 C7819a aVar = (C7819a) (!(f instanceof C7819a) ? null : f);
@@ -162,7 +162,7 @@ public final class C7513i extends C11885d implements C2413n {
                     arrayList.add(aVar);
                 }
                 C0538i childFragmentManager = f.getChildFragmentManager();
-                C12880j.m40222a((Object) childFragmentManager, "candidate.childFragmentManager");
+                Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "candidate.childFragmentManager");
                 f = childFragmentManager.mo3160f();
             }
             C7819a aVar2 = (C7819a) C13199w.m40591g(C13199w.m40606q(arrayList));
@@ -181,7 +181,7 @@ public final class C7513i extends C11885d implements C2413n {
         if (activity != null) {
             ArrayList arrayList = new ArrayList();
             C0538i supportFragmentManager = activity.getSupportFragmentManager();
-            C12880j.m40222a((Object) supportFragmentManager, "supportFragmentManager");
+            Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager, "supportFragmentManager");
             Fragment f = supportFragmentManager.mo3160f();
             while (f != null && f.isAdded()) {
                 C7819a aVar = (C7819a) (!(f instanceof C7819a) ? null : f);
@@ -189,7 +189,7 @@ public final class C7513i extends C11885d implements C2413n {
                     arrayList.add(aVar);
                 }
                 C0538i childFragmentManager = f.getChildFragmentManager();
-                C12880j.m40222a((Object) childFragmentManager, "candidate.childFragmentManager");
+                Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "candidate.childFragmentManager");
                 f = childFragmentManager.mo3160f();
             }
             C7819a aVar2 = (C7819a) C13199w.m40591g(C13199w.m40606q(arrayList));
@@ -232,7 +232,7 @@ public final class C7513i extends C11885d implements C2413n {
         if (pVar != null) {
             return pVar;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
@@ -242,7 +242,7 @@ public final class C7513i extends C11885d implements C2413n {
         if (iVar != null) {
             return iVar;
         }
-        C12880j.m40227c("paywallAnalytics");
+        Intrinsics.throwUninitializedPropertyAccessException("paywallAnalytics");
         throw null;
     }
 
@@ -264,7 +264,7 @@ public final class C7513i extends C11885d implements C2413n {
             _$_clearFindViewByIdCache();
             return;
         }
-        C12880j.m40227c("profilesSetup");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesSetup");
         throw null;
     }
 
@@ -275,38 +275,38 @@ public final class C7513i extends C11885d implements C2413n {
             C5755i.m18679a(this, pVar, null, null, new C7515b(this), 6, null);
             return;
         }
-        C12880j.m40227c("viewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         throw null;
     }
 
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
         Button button = (Button) _$_findCachedViewById(C7904t.startWatchingButton);
-        C12880j.m40222a((Object) button, "startWatchingButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) button, "startWatchingButton");
         C7110x xVar = this.f16476W;
         String str = "purchaseAccessibility";
         if (xVar != null) {
             button.setContentDescription(xVar.mo19902b());
             Button button2 = (Button) _$_findCachedViewById(C7904t.setupProfilesButton);
-            C12880j.m40222a((Object) button2, "setupProfilesButton");
+            Intrinsics.checkReturnedValueIsNotNull((Object) button2, "setupProfilesButton");
             C7110x xVar2 = this.f16476W;
             if (xVar2 != null) {
                 button2.setContentDescription(xVar2.mo19901a());
                 ((Button) _$_findCachedViewById(C7904t.startWatchingButton)).setOnClickListener(new C7517d(this));
                 ((Button) _$_findCachedViewById(C7904t.setupProfilesButton)).setOnClickListener(new C7518e(this));
                 MotionLayout motionLayout = (MotionLayout) _$_findCachedViewById(C7904t.trialParentLayout);
-                C12880j.m40222a((Object) motionLayout, "trialParentLayout");
+                Intrinsics.checkReturnedValueIsNotNull((Object) motionLayout, "trialParentLayout");
                 if (!C4187x.m14340E(motionLayout) || motionLayout.isLayoutRequested()) {
                     motionLayout.addOnLayoutChangeListener(new C7516c(this));
                 } else {
                     m22408q();
                 }
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         }
     }

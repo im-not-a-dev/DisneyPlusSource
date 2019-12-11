@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.analytics;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -23,19 +23,19 @@ public final class AnalyticsJsonAdapter extends C11725h<Analytics> {
 
     public AnalyticsJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("rsids", "server", "ssl", "offlineEnabled", "charset", "lifecycleTimeout", "privacyDefault", "batchLimit", "timezone", "timezoneOffset", "referrerTimeout", "backdateSessionInfo", "poi");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"r…kdateSessionInfo\", \"poi\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"r…kdateSessionInfo\", \"poi\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "rsids");
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"rsids\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ions.emptySet(), \"rsids\")");
         this.stringAdapter = a2;
         C11725h<Boolean> a3 = vVar.mo29869a((Type) Boolean.TYPE, C13188p0.m40531a(), "ssl");
-        C12880j.m40222a((Object) a3, "moshi.adapter<Boolean>(B…ctions.emptySet(), \"ssl\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<Boolean>(B…ctions.emptySet(), \"ssl\")");
         this.booleanAdapter = a3;
         C11725h<Integer> a4 = vVar.mo29869a((Type) Integer.TYPE, C13188p0.m40531a(), "lifecycleTimeout");
-        C12880j.m40222a((Object) a4, "moshi.adapter<Int>(Int::…et(), \"lifecycleTimeout\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<Int>(Int::…et(), \"lifecycleTimeout\")");
         this.intAdapter = a4;
         C11725h<List<String>> a5 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, String.class), C13188p0.m40531a(), "poi");
-        C12880j.m40222a((Object) a5, "moshi.adapter<List<Strin…ctions.emptySet(), \"poi\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a5, "moshi.adapter<List<Strin…ctions.emptySet(), \"poi\")");
         this.listOfStringAdapter = a5;
     }
 

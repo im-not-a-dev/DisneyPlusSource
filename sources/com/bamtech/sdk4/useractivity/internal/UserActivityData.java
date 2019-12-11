@@ -83,7 +83,7 @@ public final class UserActivityData implements TelemetryClientPayload {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:20:0x0064, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a(r2.data, r3.data) != false) goto L_0x0069;
+        if (kotlin.jvm.internal.Intrinsics.areEqual(r2.data, r3.data) != false) goto L_0x0069;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -95,39 +95,39 @@ public final class UserActivityData implements TelemetryClientPayload {
             com.bamtech.sdk4.useractivity.internal.UserActivityData r3 = (com.bamtech.sdk4.useractivity.internal.UserActivityData) r3
             com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants$Application r0 = r2.application
             com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants$Application r1 = r3.application
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0067
             com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants$Device r0 = r2.device
             com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants$Device r1 = r3.device
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0067
             com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants$Sdk r0 = r2.sdk
             com.bamtech.sdk4.internal.telemetry.dust.DustClientConstants$Sdk r1 = r3.sdk
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0067
             org.joda.time.DateTime r0 = r2.timestamp
             org.joda.time.DateTime r1 = r3.timestamp
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0067
             java.lang.String r0 = r2.getEvent()
             java.lang.String r1 = r3.getEvent()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0067
             java.lang.String r0 = r2.category
             java.lang.String r1 = r3.category
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0067
             java.lang.String r0 = r2.eventId
             java.lang.String r1 = r3.eventId
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0067
             java.util.Map<java.lang.String, java.lang.String> r0 = r2.correlationIds
             java.util.Map<java.lang.String, java.lang.String> r1 = r3.correlationIds
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0067
             java.lang.Object r0 = r2.data
             java.lang.Object r3 = r3.data
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0067
             goto L_0x0069
         L_0x0067:

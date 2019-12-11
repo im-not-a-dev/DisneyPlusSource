@@ -20,7 +20,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f18239a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessagingEvent.C8550a) r2).f18239a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f18239a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessagingEvent.C8550a) r2).f18239a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -32,7 +32,7 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$a r2 = (com.disneystreaming.companion.messaging.MessagingEvent.C8550a) r2
                 com.disneystreaming.companion.m.l r0 = r1.f18239a
                 com.disneystreaming.companion.m.l r2 = r2.f18239a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -83,7 +83,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f18242c, (java.lang.Object) r3.f18242c) != false) goto L_0x0029;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f18242c, (java.lang.Object) r3.f18242c) != false) goto L_0x0029;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -95,15 +95,15 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$b r3 = (com.disneystreaming.companion.messaging.MessagingEvent.C8551b) r3
                 com.disneystreaming.companion.messaging.Payload r0 = r2.f18240a
                 com.disneystreaming.companion.messaging.Payload r1 = r3.f18240a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 java.lang.String r0 = r2.f18241b
                 java.lang.String r1 = r3.f18241b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 com.disneystreaming.companion.m.l r0 = r2.f18242c
                 com.disneystreaming.companion.m.l r3 = r3.f18242c
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0027
                 goto L_0x0029
             L_0x0027:
@@ -169,7 +169,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f18244b, (java.lang.Object) r3.f18244b) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f18244b, (java.lang.Object) r3.f18244b) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -181,11 +181,11 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$c r3 = (com.disneystreaming.companion.messaging.MessagingEvent.C8552c) r3
                 com.disneystreaming.companion.messaging.MessagingEventError r0 = r2.f18243a
                 com.disneystreaming.companion.messaging.MessagingEventError r1 = r3.f18243a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 com.disneystreaming.companion.m.l r0 = r2.f18244b
                 com.disneystreaming.companion.m.l r3 = r3.f18244b
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -237,7 +237,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f18246b, (java.lang.Object) r3.f18246b) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f18246b, (java.lang.Object) r3.f18246b) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -249,11 +249,11 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$d r3 = (com.disneystreaming.companion.messaging.MessagingEvent.C8553d) r3
                 java.lang.String r0 = r2.f18245a
                 java.lang.String r1 = r3.f18245a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 com.disneystreaming.companion.m.l r0 = r2.f18246b
                 com.disneystreaming.companion.m.l r3 = r3.f18246b
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -301,7 +301,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f18247a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessagingEvent.C8554e) r2).f18247a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f18247a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessagingEvent.C8554e) r2).f18247a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -313,7 +313,7 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$e r2 = (com.disneystreaming.companion.messaging.MessagingEvent.C8554e) r2
                 com.disneystreaming.companion.m.l r0 = r1.f18247a
                 com.disneystreaming.companion.m.l r2 = r2.f18247a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -374,7 +374,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f18250c, (java.lang.Object) r3.f18250c) != false) goto L_0x0029;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f18250c, (java.lang.Object) r3.f18250c) != false) goto L_0x0029;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -386,15 +386,15 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$f r3 = (com.disneystreaming.companion.messaging.MessagingEvent.C8555f) r3
                 com.disneystreaming.companion.messaging.Message r0 = r2.f18248a
                 com.disneystreaming.companion.messaging.Message r1 = r3.f18248a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 java.lang.String r0 = r2.f18249b
                 java.lang.String r1 = r3.f18249b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 com.disneystreaming.companion.m.l r0 = r2.f18250c
                 com.disneystreaming.companion.m.l r3 = r3.f18250c
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0027
                 goto L_0x0029
             L_0x0027:
@@ -454,7 +454,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f18253c, (java.lang.Object) r3.f18253c) != false) goto L_0x0029;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f18253c, (java.lang.Object) r3.f18253c) != false) goto L_0x0029;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -466,15 +466,15 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$g r3 = (com.disneystreaming.companion.messaging.MessagingEvent.C8556g) r3
                 com.disneystreaming.companion.messaging.Payload r0 = r2.f18251a
                 com.disneystreaming.companion.messaging.Payload r1 = r3.f18251a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 java.lang.String r0 = r2.f18252b
                 java.lang.String r1 = r3.f18252b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 com.disneystreaming.companion.m.l r0 = r2.f18253c
                 com.disneystreaming.companion.m.l r3 = r3.f18253c
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0027
                 goto L_0x0029
             L_0x0027:
@@ -544,7 +544,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:8:0x0024, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f18256c, (java.lang.Object) r3.f18256c) != false) goto L_0x0029;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f18256c, (java.lang.Object) r3.f18256c) != false) goto L_0x0029;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -556,15 +556,15 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$h r3 = (com.disneystreaming.companion.messaging.MessagingEvent.C8557h) r3
                 java.lang.String r0 = r2.f18254a
                 java.lang.String r1 = r3.f18254a
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 com.disneystreaming.companion.messaging.Payload r0 = r2.f18255b
                 com.disneystreaming.companion.messaging.Payload r1 = r3.f18255b
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x0027
                 com.disneystreaming.companion.m.l r0 = r2.f18256c
                 com.disneystreaming.companion.m.l r3 = r3.f18256c
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x0027
                 goto L_0x0029
             L_0x0027:
@@ -616,7 +616,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f18257a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessagingEvent.C8558i) r2).f18257a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f18257a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessagingEvent.C8558i) r2).f18257a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -628,7 +628,7 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$i r2 = (com.disneystreaming.companion.messaging.MessagingEvent.C8558i) r2
                 com.disneystreaming.companion.m.l r0 = r1.f18257a
                 com.disneystreaming.companion.m.l r2 = r2.f18257a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -671,7 +671,7 @@ public abstract class MessagingEvent {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f18258a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessagingEvent.C8559j) r2).f18258a) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f18258a, (java.lang.Object) ((com.disneystreaming.companion.messaging.MessagingEvent.C8559j) r2).f18258a) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -683,7 +683,7 @@ public abstract class MessagingEvent {
                 com.disneystreaming.companion.messaging.MessagingEvent$j r2 = (com.disneystreaming.companion.messaging.MessagingEvent.C8559j) r2
                 com.disneystreaming.companion.m.l r0 = r1.f18258a
                 com.disneystreaming.companion.m.l r2 = r2.f18258a
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:

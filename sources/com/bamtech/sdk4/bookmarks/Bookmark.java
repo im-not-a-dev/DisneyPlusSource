@@ -2,7 +2,7 @@ package com.bamtech.sdk4.bookmarks;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @DontObfuscate
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0002\b\u001b\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\b\b\u0018\u00002\u00020\u0001B?\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0003\u0012\u0006\u0010\b\u001a\u00020\u0005\u0012\u0006\u0010\t\u001a\u00020\u0005\u0012\b\u0010\n\u001a\u0004\u0018\u00010\u0005¢\u0006\u0002\u0010\u000bJ\t\u0010\u0017\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0018\u001a\u00020\u0005HÆ\u0003J\t\u0010\u0019\u001a\u00020\u0005HÆ\u0003J\t\u0010\u001a\u001a\u00020\u0003HÆ\u0003J\t\u0010\u001b\u001a\u00020\u0005HÆ\u0003J\t\u0010\u001c\u001a\u00020\u0005HÆ\u0003J\u0010\u0010\u001d\u001a\u0004\u0018\u00010\u0005HÆ\u0003¢\u0006\u0002\u0010\u000fJV\u0010\u001e\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00052\b\b\u0002\u0010\u0006\u001a\u00020\u00052\b\b\u0002\u0010\u0007\u001a\u00020\u00032\b\b\u0002\u0010\b\u001a\u00020\u00052\b\b\u0002\u0010\t\u001a\u00020\u00052\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\u0005HÆ\u0001¢\u0006\u0002\u0010\u001fJ\u0013\u0010 \u001a\u00020!2\b\u0010\"\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010#\u001a\u00020$HÖ\u0001J\u0006\u0010%\u001a\u00020!J\t\u0010&\u001a\u00020\u0003HÖ\u0001R\u0011\u0010\t\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\rR\u0015\u0010\n\u001a\u0004\u0018\u00010\u0005¢\u0006\n\n\u0002\u0010\u0010\u001a\u0004\b\u000e\u0010\u000fR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0012R\u0011\u0010\b\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\rR\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0014\u0010\rR\u0011\u0010\u0007\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0012R\u0011\u0010\u0006\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\r¨\u0006'"}, mo31007d2 = {"Lcom/bamtech/sdk4/bookmarks/Bookmark;", "", "contentId", "", "playhead", "", "runtime", "profileId", "occurredOn", "ccDefault", "ccMedia", "(Ljava/lang/String;JJLjava/lang/String;JJLjava/lang/Long;)V", "getCcDefault", "()J", "getCcMedia", "()Ljava/lang/Long;", "Ljava/lang/Long;", "getContentId", "()Ljava/lang/String;", "getOccurredOn", "getPlayhead", "getProfileId", "getRuntime", "component1", "component2", "component3", "component4", "component5", "component6", "component7", "copy", "(Ljava/lang/String;JJLjava/lang/String;JJLjava/lang/Long;)Lcom/bamtech/sdk4/bookmarks/Bookmark;", "equals", "", "other", "hashCode", "", "isMetaDataValid", "toString", "plugin-bookmarks_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -68,11 +68,11 @@ public final class Bookmark {
         if (this != obj) {
             if (obj instanceof Bookmark) {
                 Bookmark bookmark = (Bookmark) obj;
-                if (C12880j.m40224a((Object) this.contentId, (Object) bookmark.contentId)) {
+                if (Intrinsics.areEqual((Object) this.contentId, (Object) bookmark.contentId)) {
                     if (this.playhead == bookmark.playhead) {
-                        if ((this.runtime == bookmark.runtime) && C12880j.m40224a((Object) this.profileId, (Object) bookmark.profileId)) {
+                        if ((this.runtime == bookmark.runtime) && Intrinsics.areEqual((Object) this.profileId, (Object) bookmark.profileId)) {
                             if (this.occurredOn == bookmark.occurredOn) {
-                                if (!(this.ccDefault == bookmark.ccDefault) || !C12880j.m40224a((Object) this.ccMedia, (Object) bookmark.ccMedia)) {
+                                if (!(this.ccDefault == bookmark.ccDefault) || !Intrinsics.areEqual((Object) this.ccMedia, (Object) bookmark.ccMedia)) {
                                     return false;
                                 }
                             }

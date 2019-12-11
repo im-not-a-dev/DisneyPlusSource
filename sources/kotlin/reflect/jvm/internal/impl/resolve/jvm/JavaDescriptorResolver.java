@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.jvm;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.incremental.components.NoLookupLocation;
@@ -46,7 +46,7 @@ public final class JavaDescriptorResolver {
         } else {
             LazyJavaPackageFragmentProvider lazyJavaPackageFragmentProvider = this.packageFragmentProvider;
             FqName parent = fqName.parent();
-            C12880j.m40222a((Object) parent, "fqName.parent()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parent, "fqName.parent()");
             LazyJavaPackageFragment lazyJavaPackageFragment = (LazyJavaPackageFragment) C13199w.m40591g(lazyJavaPackageFragmentProvider.getPackageFragments(parent));
             if (lazyJavaPackageFragment != null) {
                 classDescriptor = lazyJavaPackageFragment.findClassifierByJavaClass$descriptors_jvm(javaClass);

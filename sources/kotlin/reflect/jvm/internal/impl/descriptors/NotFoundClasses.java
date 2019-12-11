@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p586h0.C12757d;
 import kotlin.p590y.C13162e0;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
@@ -49,7 +49,7 @@ public final class NotFoundClasses {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.typeParametersCount, (java.lang.Object) r3.typeParametersCount) != false) goto L_0x001f;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.typeParametersCount, (java.lang.Object) r3.typeParametersCount) != false) goto L_0x001f;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r3) {
@@ -61,11 +61,11 @@ public final class NotFoundClasses {
                 kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses$ClassRequest r3 = (kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses.ClassRequest) r3
                 kotlin.reflect.jvm.internal.impl.name.ClassId r0 = r2.classId
                 kotlin.reflect.jvm.internal.impl.name.ClassId r1 = r3.classId
-                boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+                boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
                 if (r0 == 0) goto L_0x001d
                 java.util.List<java.lang.Integer> r0 = r2.typeParametersCount
                 java.util.List<java.lang.Integer> r3 = r3.typeParametersCount
-                boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+                boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
                 if (r3 == 0) goto L_0x001d
                 goto L_0x001f
             L_0x001d:
@@ -159,7 +159,7 @@ public final class NotFoundClasses {
 
         public Visibility getVisibility() {
             Visibility visibility = Visibilities.PUBLIC;
-            C12880j.m40222a((Object) visibility, "Visibilities.PUBLIC");
+            Intrinsics.checkReturnedValueIsNotNull((Object) visibility, "Visibilities.PUBLIC");
             return visibility;
         }
 

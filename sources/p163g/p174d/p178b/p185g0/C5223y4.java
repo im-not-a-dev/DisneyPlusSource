@@ -6,7 +6,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p174d.p178b.C5300m;
@@ -67,7 +67,7 @@ public final class C5223y4 implements C5271z3 {
     /* renamed from: a */
     public final void mo16732a(C5291e eVar) {
         List d = eVar.mo16880d();
-        C12880j.m40222a((Object) d, "trackList.audioTracks");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "trackList.audioTracks");
         C5285a aVar = (C5285a) C13199w.m40591g(d);
         if (aVar != null) {
             this.f12573U.mo17093b(aVar.mo16860g());
@@ -78,7 +78,7 @@ public final class C5223y4 implements C5271z3 {
         }
         C5312n nVar = this.f12573U;
         List e = eVar.mo16881e();
-        C12880j.m40222a((Object) e, "trackList.subtitleTracks");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "trackList.subtitleTracks");
         C5288c cVar = (C5288c) C13199w.m40591g(e);
         nVar.mo17095c(cVar != null ? cVar.mo16862g() : null);
         this.f12573U.mo17090a(true);

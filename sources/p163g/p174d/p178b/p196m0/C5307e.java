@@ -4,7 +4,7 @@ import android.view.View;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.C5318s;
 import p163g.p174d.p178b.p200z.C5341a;
 
@@ -79,7 +79,7 @@ public final class C5307e {
     /* renamed from: a */
     public static final void m17963a(View view, long j, Function1<? super View, C13145v> function1) {
         String str = "FADE_IN";
-        if (!C12880j.m40224a(view.getTag(C5318s.tag_btmp_fade_animation), (Object) str)) {
+        if (!Intrinsics.areEqual(view.getTag(C5318s.tag_btmp_fade_animation), (Object) str)) {
             view.setTag(C5318s.tag_btmp_fade_animation, str);
             view.animate().alpha(1.0f).setDuration(j).withStartAction(new C5308a(view)).withEndAction(new C5309b(view, function1)).start();
         }
@@ -88,7 +88,7 @@ public final class C5307e {
     /* renamed from: a */
     public static final void m17962a(View view, long j) {
         String str = "FADE_OUT";
-        if (!C12880j.m40224a(view.getTag(C5318s.tag_btmp_fade_animation), (Object) str)) {
+        if (!Intrinsics.areEqual(view.getTag(C5318s.tag_btmp_fade_animation), (Object) str)) {
             view.setTag(C5318s.tag_btmp_fade_animation, str);
             view.animate().alpha(0.0f).setDuration(j).withEndAction(new C5310c(view)).start();
         }

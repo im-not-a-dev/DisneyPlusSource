@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.UUID;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Observable;
 import p520io.reactivex.ObservableSource;
 import p520io.reactivex.disposables.CompositeDisposable;
@@ -53,10 +53,10 @@ public final class DefaultStreamSampler implements StreamSampler {
         this.defaultQosPlaybackEventListener = defaultQOSPlaybackEventListener;
         this.transactionProvider = provider;
         Object obj = this.transactionProvider.get();
-        C12880j.m40222a(obj, "transactionProvider.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "transactionProvider.get()");
         this.currentServiceTransaction = (ServiceTransaction) obj;
         String uuid = UUID.randomUUID().toString();
-        C12880j.m40222a((Object) uuid, "UUID.randomUUID().toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) uuid, "UUID.randomUUID().toString()");
         this.sessionId = uuid;
     }
 
@@ -68,7 +68,7 @@ public final class DefaultStreamSampler implements StreamSampler {
         if (compositeDisposable2 != null) {
             return compositeDisposable2;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -89,7 +89,7 @@ public final class DefaultStreamSampler implements StreamSampler {
     /* access modifiers changed from: private */
     public final void scheduleNext(long j) {
         Observable d = this.configurationProvider.getServiceConfiguration(serviceTransaction$default(this, false, 1, null), DefaultStreamSampler$scheduleNext$1.INSTANCE).mo30225d((Function<? super T, ? extends ObservableSource<? extends R>>) new DefaultStreamSampler$scheduleNext$2<Object,Object>(this, j));
-        C12880j.m40222a((Object) d, "configurationProvider.ge…ECONDS)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "configurationProvider.ge…ECONDS)\n                }");
         Disposable a = C11922d.m38477a(d, null, null, new DefaultStreamSampler$scheduleNext$3(this), 3, null);
         C11917a.m38473a(a, compositeDisposable());
         this.timer = a;
@@ -102,15 +102,15 @@ public final class DefaultStreamSampler implements StreamSampler {
                 if (serviceTransaction != null) {
                     return serviceTransaction;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
         Object obj = this.transactionProvider.get();
         ServiceTransaction serviceTransaction2 = (ServiceTransaction) obj;
-        C12880j.m40222a((Object) serviceTransaction2, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) serviceTransaction2, "it");
         this.currentServiceTransaction = serviceTransaction2;
-        C12880j.m40222a(obj, "transactionProvider.get(…ServiceTransaction = it }");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "transactionProvider.get(…ServiceTransaction = it }");
         return serviceTransaction2;
     }
 
@@ -220,7 +220,7 @@ public final class DefaultStreamSampler implements StreamSampler {
             com.bamtech.sdk4.internal.media.DefaultStreamSampler$postEvent$2 r2 = com.bamtech.sdk4.internal.media.DefaultStreamSampler$postEvent$2.INSTANCE
             io.reactivex.disposables.Disposable r12 = r12.mo30077a(r1, r2)
             java.lang.String r1 = "recorder.recordPlayheadA…       .subscribe({}, {})"
-            kotlin.jvm.internal.C12880j.m40222a(r12, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r12, r1)
             io.reactivex.disposables.CompositeDisposable r1 = r11.compositeDisposable()
             p520io.reactivex.p524d0.C11917a.m38473a(r12, r1)
             com.bamtech.sdk4.media.MediaItem r12 = r11.getMediaItem()

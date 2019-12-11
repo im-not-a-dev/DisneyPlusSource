@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p366s0.p371v;
 
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.nio.ByteBuffer;
 import java.util.UUID;
@@ -52,7 +52,7 @@ public final class C8980k {
             StringBuilder sb = new StringBuilder();
             sb.append("Unsupported pssh version: ");
             sb.append(c);
-            C9563q.m29500d("PsshAtomUtil", sb.toString());
+            Log.m29500d("PsshAtomUtil", sb.toString());
             return null;
         }
         UUID uuid = new UUID(wVar.mo24707r(), wVar.mo24707r());
@@ -132,7 +132,7 @@ public final class C8980k {
         sb.append(", got: ");
         sb.append(b.f19658a);
         sb.append(".");
-        C9563q.m29500d("PsshAtomUtil", sb.toString());
+        Log.m29500d("PsshAtomUtil", sb.toString());
         return null;
     }
 }

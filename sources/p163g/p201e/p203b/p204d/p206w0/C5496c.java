@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.core.utils.C5837i;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 import p096e.p121h.p135s.C4127b0;
 import p163g.p201e.p203b.p204d.C5409m0;
@@ -72,7 +72,7 @@ public final class C5496c extends C11866a {
             return false;
         }
         C5496c cVar = (C5496c) obj;
-        return !(C12880j.m40224a((Object) this.f13036c, (Object) cVar.f13036c) ^ true) && !(C12880j.m40224a((Object) this.f13031U, (Object) cVar.f13031U) ^ true);
+        return !(Intrinsics.areEqual((Object) this.f13036c, (Object) cVar.f13036c) ^ true) && !(Intrinsics.areEqual((Object) this.f13031U, (Object) cVar.f13031U) ^ true);
     }
 
     public int getLayout() {
@@ -84,7 +84,7 @@ public final class C5496c extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof C5496c) && C12880j.m40224a((Object) ((C5496c) eVar).f13036c, (Object) this.f13036c);
+        return (eVar instanceof C5496c) && Intrinsics.areEqual((Object) ((C5496c) eVar).f13036c, (Object) this.f13036c);
     }
 
     public String toString() {
@@ -108,18 +108,18 @@ public final class C5496c extends C11866a {
     public void bind(C11867b bVar, int i) {
         TextView textView = (TextView) bVar.mo20994a().findViewById(C5411n0.accountSettingValue);
         String str = "accountSettingValue";
-        C12880j.m40222a((Object) textView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, str);
         int a = C4025a.m13788a(textView.getContext(), this.f13032V);
         TextView textView2 = (TextView) bVar.mo20994a().findViewById(C5411n0.accountSettingValue);
-        C12880j.m40222a((Object) textView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, str);
         textView2.setText(this.f13031U);
         TextView textView3 = (TextView) bVar.mo20994a().findViewById(C5411n0.accountSettingValue);
-        C12880j.m40222a((Object) textView3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView3, str);
         textView3.setContentDescription(this.f13034X);
         TextView textView4 = (TextView) bVar.mo20994a().findViewById(C5411n0.accountSettingValue);
-        C12880j.m40222a((Object) textView4, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView4, str);
         Context context = textView4.getContext();
-        C12880j.m40222a((Object) context, "accountSettingValue.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "accountSettingValue.context");
         if (!C5837i.m18843e(context)) {
             ((TextView) bVar.mo20994a().findViewById(C5411n0.accountSettingValue)).setTextColor(a);
         }

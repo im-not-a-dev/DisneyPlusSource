@@ -5,7 +5,7 @@ import com.disneystreaming.companion.messaging.MessageType.C8546b;
 import com.disneystreaming.companion.messaging.MessageType.C8547c;
 import com.disneystreaming.companion.messaging.MessageType.C8548d;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11723f;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
@@ -34,16 +34,16 @@ public final class MessageTypeJsonAdapter extends C11725h<MessageType> {
     @C11723f
     public MessageType fromJson(C11737m mVar) {
         String n = mVar.mo29779n();
-        if (C12880j.m40224a((Object) n, (Object) "pair")) {
+        if (Intrinsics.areEqual((Object) n, (Object) "pair")) {
             return C8546b.f18236a;
         }
-        if (C12880j.m40224a((Object) n, (Object) "ping")) {
+        if (Intrinsics.areEqual((Object) n, (Object) "ping")) {
             return C8547c.f18237a;
         }
-        if (C12880j.m40224a((Object) n, (Object) "pong")) {
+        if (Intrinsics.areEqual((Object) n, (Object) "pong")) {
             return C8548d.f18238a;
         }
-        C12880j.m40222a((Object) n, "value");
+        Intrinsics.checkReturnedValueIsNotNull((Object) n, "value");
         return new C8545a(n);
     }
 

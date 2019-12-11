@@ -5,7 +5,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.internal.service.TransactionResult;
 import com.bamtech.sdk4.token.AccessContext;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -46,7 +46,7 @@ final class DefaultRefreshAccessContextHelper$performRefreshAction$4<T, R> imple
         if (accessContext2 != null) {
             return Single.m38399b(new TransactionResult(serviceTransaction3, accessContext2));
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

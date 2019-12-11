@@ -21,7 +21,7 @@ import java.util.Locale;
 import kotlin.C13142s;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTime.Property;
 import p520io.reactivex.Observable;
@@ -29,7 +29,7 @@ import p520io.reactivex.ObservableSource;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.p524d0.C11918b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B+\u0012\f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\u0010\u0010\r\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\u0002H\u0002J,\u0010\u000f\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\u00022\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u00052\n\b\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u0014H\u0002J\u001a\u0010\u0015\u001a\u0004\u0018\u00010\u00142\u0006\u0010\u0012\u001a\u00020\u00052\u0006\u0010\u0013\u001a\u00020\u0014H\u0002J\u0018\u0010\u0016\u001a\b\u0012\u0004\u0012\u00020\u00020\u00172\b\u0010\u0018\u001a\u0004\u0018\u00010\u0002H\u0016J&\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u00020\u00172\u0006\u0010\u001a\u001a\u00020\u00052\u0006\u0010\u001b\u001a\u00020\u00022\u0006\u0010\u001c\u001a\u00020\u0002H\u0002J\u0018\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u00020\u00172\b\u0010\u0018\u001a\u0004\u0018\u00010\u0002H\u0002J\u001e\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\u00020\u00172\u0006\u0010\u001b\u001a\u00020\u00022\u0006\u0010\u001c\u001a\u00020\u0002H\u0002R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000¨\u0006\u001f"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/events/upnext/TriggerLoadUpNextEvent;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel$Event;", "Lcom/bamtechmedia/dominguez/playback/common/PlaybackState;", "request", "Lio/reactivex/Single;", "Lcom/bamtechmedia/dominguez/core/content/playback/queryaction/UpNextResult;", "upNextActionResolver", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextActionResolver;", "profilesRepository", "Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;", "upNextConfig", "Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextConfig;", "(Lio/reactivex/Single;Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextActionResolver;Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;Lcom/bamtechmedia/dominguez/playback/common/upnext/UpNextConfig;)V", "copyPlaybackStateWithEmptyUpNextState", "playbackState", "copyPlaybackStateWithUpNextState", "playable", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "result", "appLanguage", "", "getSunriseDayOfTheWeek", "process", "Lio/reactivex/Observable;", "currentState", "queryForNetworkOrOfflineEpisode", "upNextResult", "state", "returnStateIfEmpty", "queryUpNextContent", "updateStateWithNextOfflineContent", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.playback.m.o.f.g */
@@ -115,7 +115,7 @@ public final class C6486g implements C5742a<C6336a> {
             String X = ((C6626c0) pair.mo31015c()).mo19352P().mo19792X();
             C3714d dVar = (C3714d) pair.mo31016d();
             C6510e a = this.f14693c.f14686d;
-            C12880j.m40222a((Object) dVar, "result");
+            Intrinsics.checkReturnedValueIsNotNull((Object) dVar, "result");
             String str = "Observable.just(copyPlay…NextState(playbackState))";
             String str2 = " is not currently supported";
             String str3 = "## UPNEXT -> Up Next scenario for ";
@@ -126,7 +126,7 @@ public final class C6486g implements C5742a<C6336a> {
                         C3632f b = dVar.mo13536b();
                         if (b != null) {
                             Observable<C6336a> b2 = Observable.m38309b(C6486g.m20202a(this.f14693c, this.f14691U, (C3692n) b, dVar, null, 8, null));
-                            C12880j.m40222a((Object) b2, "Observable.just(copyPlay…ackState, movie, result))");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) b2, "Observable.just(copyPlay…ackState, movie, result))");
                             return b2;
                         }
                         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Movie");
@@ -134,7 +134,7 @@ public final class C6486g implements C5742a<C6336a> {
                         C3632f b3 = dVar.mo13536b();
                         if (b3 != null) {
                             Observable<C6336a> b4 = Observable.m38309b(this.f14693c.m20199a(this.f14691U, (C3693o) (C3686h) b3, dVar, X));
-                            C12880j.m40222a((Object) b4, "Observable.just(copyPlay…ra, result, appLanguage))");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) b4, "Observable.just(copyPlay…ra, result, appLanguage))");
                             return b4;
                         }
                         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Extra");
@@ -143,9 +143,9 @@ public final class C6486g implements C5742a<C6336a> {
                         sb.append(str3);
                         sb.append(dVar);
                         sb.append(str2);
-                        C14100a.m44532e(sb.toString(), new Object[0]);
+                        Timber.m44532e(sb.toString(), new Object[0]);
                         Observable<C6336a> b5 = Observable.m38309b(this.f14693c.m20209b(this.f14691U));
-                        C12880j.m40222a((Object) b5, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) b5, str);
                         return b5;
                     }
                 } else if (dVar.mo13539e() == C3715e.SEQUENTIAL) {
@@ -154,7 +154,7 @@ public final class C6486g implements C5742a<C6336a> {
                     C3632f b6 = dVar.mo13536b();
                     if (b6 != null) {
                         Observable<C6336a> b7 = Observable.m38309b(C6486g.m20202a(this.f14693c, this.f14691U, (C3685g) b6, dVar, null, 8, null));
-                        C12880j.m40222a((Object) b7, "Observable.just(copyPlay…kState, episode, result))");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) b7, "Observable.just(copyPlay…kState, episode, result))");
                         return b7;
                     }
                     throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Episode");
@@ -164,9 +164,9 @@ public final class C6486g implements C5742a<C6336a> {
                 sb2.append(str3);
                 sb2.append(dVar);
                 sb2.append(str2);
-                C14100a.m44532e(sb2.toString(), new Object[0]);
+                Timber.m44532e(sb2.toString(), new Object[0]);
                 Observable<C6336a> b8 = Observable.m38309b(this.f14693c.m20209b(this.f14691U));
-                C12880j.m40222a((Object) b8, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) b8, str);
                 return b8;
             }
         }
@@ -193,7 +193,7 @@ public final class C6486g implements C5742a<C6336a> {
 
         /* renamed from: a */
         public final Observable<C6336a> apply(Throwable th) {
-            C14100a.m44528b(th, "error when requesting up next from server", new Object[0]);
+            Timber.m44528b(th, "error when requesting up next from server", new Object[0]);
             return this.f14696c.m20205a(this.f14694U, this.f14695V);
         }
     }
@@ -249,7 +249,7 @@ public final class C6486g implements C5742a<C6336a> {
         C6341e eVar2 = new C6341e(null, null, null, null, 15, null);
         C6336a a = C6336a.m19906a(aVar4, null, null, null, null, null, false, null, false, 0, null, eVar, null, null, false, false, 31739, null);
         Observable<C6336a> h = C11918b.f27600a.mo30245a(this.f14685c.mo19381b(), this.f14683a).mo30225d((Function<? super T, ? extends ObservableSource<? extends R>>) new C6489c<Object,Object>(this, aVar3, a)).mo30196h(new C6490d(this, aVar3, a));
-        C12880j.m40222a((Object) h, "Singles.zip(profilesRepo…mptyUpNext)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Singles.zip(profilesRepo…mptyUpNext)\n            }");
         return h;
     }
 
@@ -264,16 +264,16 @@ public final class C6486g implements C5742a<C6336a> {
         C3693o c = aVar.mo18954c();
         if (c instanceof C3685g) {
             Observable<C6336a> f = this.f14684b.mo19169b(c).mo30131f(new C6491e(this, aVar)).mo30108a(aVar2).mo30132f();
-            C12880j.m40222a((Object) f, "upNextActionResolver.get…          .toObservable()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) f, "upNextActionResolver.get…          .toObservable()");
             return f;
         }
         StringBuilder sb = new StringBuilder();
         sb.append("UpNext offline playback for ");
         sb.append(aVar.mo18954c());
         sb.append(" is not currently handled");
-        C14100a.m44532e(sb.toString(), new Object[0]);
+        Timber.m44532e(sb.toString(), new Object[0]);
         Observable<C6336a> b = Observable.m38309b(aVar2);
-        C12880j.m40222a((Object) b, "Observable.just(returnStateIfEmpty)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Observable.just(returnStateIfEmpty)");
         return b;
     }
 
@@ -287,11 +287,11 @@ public final class C6486g implements C5742a<C6336a> {
         C3685g gVar = (C3685g) b;
         if (gVar != null) {
             Observable<C6336a> i = this.f14684b.mo19168a(gVar.mo12903f()).mo30237i(new C6487a(gVar)).mo30233g(new C6488b(this, aVar, dVar)).mo30236i();
-            C12880j.m40222a((Object) i, "upNextActionResolver.get…          .toObservable()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) i, "upNextActionResolver.get…          .toObservable()");
             return i;
         }
         Observable<C6336a> b2 = Observable.m38309b(aVar2);
-        C12880j.m40222a((Object) b2, "Observable.just(returnStateIfEmpty)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b2, "Observable.just(returnStateIfEmpty)");
         return b2;
     }
 

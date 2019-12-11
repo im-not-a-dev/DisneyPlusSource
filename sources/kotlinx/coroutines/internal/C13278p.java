@@ -7,7 +7,7 @@ import kotlin.C12903o;
 import kotlin.C12907r;
 import kotlin.C13142s;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.p575i.p576a.C12705e;
 import kotlinx.coroutines.C13292j0;
@@ -28,7 +28,7 @@ public final class C13278p {
         try {
             C12901a aVar = C12900n.f29540c;
             Class cls = Class.forName("kotlin.a0.i.a.a");
-            C12880j.m40222a((Object) cls, "Class.forName(baseContinuationImplClass)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) cls, "Class.forName(baseContinuationImplClass)");
             obj = cls.getCanonicalName();
             C12900n.m40236a(obj);
         } catch (Throwable th) {
@@ -43,7 +43,7 @@ public final class C13278p {
         try {
             C12901a aVar3 = C12900n.f29540c;
             Class cls2 = Class.forName("kotlinx.coroutines.internal.p");
-            C12880j.m40222a((Object) cls2, "Class.forName(stackTraceRecoveryClass)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) cls2, "Class.forName(stackTraceRecoveryClass)");
             obj2 = cls2.getCanonicalName();
             C12900n.m40236a(obj2);
         } catch (Throwable th2) {
@@ -80,13 +80,13 @@ public final class C13278p {
         StackTraceElement stackTraceElement;
         StackTraceElement[] stackTrace = e.getStackTrace();
         int length = stackTrace.length;
-        C12880j.m40222a((Object) stackTrace, "stackTrace");
+        Intrinsics.checkReturnedValueIsNotNull((Object) stackTrace, "stackTrace");
         String str = f29712b;
-        C12880j.m40222a((Object) str, "stackTraceRecoveryClassName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) str, "stackTraceRecoveryClassName");
         int a = m40808a(stackTrace, str);
         int i = a + 1;
         String str2 = f29711a;
-        C12880j.m40222a((Object) str2, "baseContinuationImplClassName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) str2, "baseContinuationImplClassName");
         int a2 = m40808a(stackTrace, str2);
         int i2 = (length - a) - (a2 == -1 ? 0 : length - a2);
         StackTraceElement[] stackTraceElementArr = new StackTraceElement[i2];
@@ -110,9 +110,9 @@ public final class C13278p {
         E cause = e.getCause();
         if (cause != null) {
             boolean z = true;
-            if (!(!C12880j.m40224a((Object) cause.getClass(), (Object) e.getClass()))) {
+            if (!(!Intrinsics.areEqual((Object) cause.getClass(), (Object) e.getClass()))) {
                 StackTraceElement[] stackTrace = e.getStackTrace();
-                C12880j.m40222a((Object) stackTrace, "exception.stackTrace");
+                Intrinsics.checkReturnedValueIsNotNull((Object) stackTrace, "exception.stackTrace");
                 int length = stackTrace.length;
                 int i = 0;
                 while (true) {
@@ -121,7 +121,7 @@ public final class C13278p {
                         break;
                     }
                     StackTraceElement stackTraceElement = stackTrace[i];
-                    C12880j.m40222a((Object) stackTraceElement, "it");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) stackTraceElement, "it");
                     if (m40816a(stackTraceElement)) {
                         break;
                     }
@@ -159,9 +159,9 @@ public final class C13278p {
     private static final <E extends Throwable> E m40810a(E e, E e2, ArrayDeque<StackTraceElement> arrayDeque) {
         arrayDeque.addFirst(m40809a("Coroutine boundary"));
         StackTraceElement[] stackTrace = e.getStackTrace();
-        C12880j.m40222a((Object) stackTrace, "causeTrace");
+        Intrinsics.checkReturnedValueIsNotNull((Object) stackTrace, "causeTrace");
         String str = f29711a;
-        C12880j.m40222a((Object) str, "baseContinuationImplClassName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) str, "baseContinuationImplClassName");
         int a = m40808a(stackTrace, str);
         int i = 0;
         if (a == -1) {
@@ -188,11 +188,11 @@ public final class C13278p {
     private static final <E extends Throwable> Pair<E, StackTraceElement[]> m40814a(E e) {
         boolean z;
         Throwable cause = e.getCause();
-        if (cause == null || !C12880j.m40224a((Object) cause.getClass(), (Object) e.getClass())) {
+        if (cause == null || !Intrinsics.areEqual((Object) cause.getClass(), (Object) e.getClass())) {
             return C12907r.m40244a(e, new StackTraceElement[0]);
         }
         StackTraceElement[] stackTrace = e.getStackTrace();
-        C12880j.m40222a((Object) stackTrace, "currentTrace");
+        Intrinsics.checkReturnedValueIsNotNull((Object) stackTrace, "currentTrace");
         int length = stackTrace.length;
         int i = 0;
         while (true) {
@@ -201,7 +201,7 @@ public final class C13278p {
                 break;
             }
             StackTraceElement stackTraceElement = stackTrace[i];
-            C12880j.m40222a((Object) stackTraceElement, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) stackTraceElement, "it");
             if (m40816a(stackTraceElement)) {
                 z = true;
                 break;
@@ -253,13 +253,13 @@ public final class C13278p {
     /* renamed from: a */
     public static final boolean m40816a(StackTraceElement stackTraceElement) {
         String className = stackTraceElement.getClassName();
-        C12880j.m40222a((Object) className, "className");
+        Intrinsics.checkReturnedValueIsNotNull((Object) className, "className");
         return C12832w.m40123b(className, "\b\b\b", false, 2, null);
     }
 
     /* renamed from: a */
     private static final boolean m40817a(StackTraceElement stackTraceElement, StackTraceElement stackTraceElement2) {
-        return stackTraceElement.getLineNumber() == stackTraceElement2.getLineNumber() && C12880j.m40224a((Object) stackTraceElement.getMethodName(), (Object) stackTraceElement2.getMethodName()) && C12880j.m40224a((Object) stackTraceElement.getFileName(), (Object) stackTraceElement2.getFileName()) && C12880j.m40224a((Object) stackTraceElement.getClassName(), (Object) stackTraceElement2.getClassName());
+        return stackTraceElement.getLineNumber() == stackTraceElement2.getLineNumber() && Intrinsics.areEqual((Object) stackTraceElement.getMethodName(), (Object) stackTraceElement2.getMethodName()) && Intrinsics.areEqual((Object) stackTraceElement.getFileName(), (Object) stackTraceElement2.getFileName()) && Intrinsics.areEqual((Object) stackTraceElement.getClassName(), (Object) stackTraceElement2.getClassName());
     }
 
     /* renamed from: a */
@@ -282,7 +282,7 @@ public final class C13278p {
             while (true) {
                 StackTraceElement stackTraceElement = stackTraceElementArr[length2];
                 Object last = arrayDeque.getLast();
-                C12880j.m40222a(last, "result.last");
+                Intrinsics.checkReturnedValueIsNotNull(last, "result.last");
                 if (m40817a(stackTraceElement, (StackTraceElement) last)) {
                     arrayDeque.removeLast();
                 }
@@ -300,7 +300,7 @@ public final class C13278p {
     private static final int m40808a(StackTraceElement[] stackTraceElementArr, String str) {
         int length = stackTraceElementArr.length;
         for (int i = 0; i < length; i++) {
-            if (C12880j.m40224a((Object) str, (Object) stackTraceElementArr[i].getClassName())) {
+            if (Intrinsics.areEqual((Object) str, (Object) stackTraceElementArr[i].getClassName())) {
                 return i;
             }
         }

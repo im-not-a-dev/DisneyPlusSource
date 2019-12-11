@@ -10,7 +10,7 @@ import com.bamtechmedia.dominguez.profiles.C6761p0.C6762a;
 import javax.inject.Provider;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p299m.C7543f.C7544a;
 import p163g.p201e.p203b.p299m.C7547h;
@@ -182,13 +182,13 @@ public final class C6136l {
     /* access modifiers changed from: private */
     /* renamed from: a */
     public final boolean m19556a(Fragment fragment, Fragment fragment2) {
-        return fragment == null || (C12880j.m40224a((Object) fragment.getClass(), (Object) fragment2.getClass()) ^ true);
+        return fragment == null || (Intrinsics.areEqual((Object) fragment.getClass(), (Object) fragment2.getClass()) ^ true);
     }
 
     /* renamed from: a */
     public final void mo18749a() {
         Object obj = this.f14100a.get();
-        C12880j.m40222a(obj, "dialogRouter.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "dialogRouter.get()");
         C7547h hVar = (C7547h) obj;
         C7544a aVar = new C7544a();
         aVar.mo20466a(C6203t.force_update_dialog);
@@ -202,7 +202,7 @@ public final class C6136l {
     /* renamed from: a */
     public final void mo18750a(String str) {
         Object obj = this.f14100a.get();
-        C12880j.m40222a(obj, "dialogRouter.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "dialogRouter.get()");
         C7547h hVar = (C7547h) obj;
         C7544a aVar = new C7544a();
         aVar.mo20466a(C6203t.clear_data_dialog);

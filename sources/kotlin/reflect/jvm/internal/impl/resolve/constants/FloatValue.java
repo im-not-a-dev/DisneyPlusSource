@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.SimpleType;
 
@@ -19,7 +19,7 @@ public final class FloatValue extends ConstantValue<Float> {
 
     public SimpleType getType(ModuleDescriptor moduleDescriptor) {
         SimpleType floatType = moduleDescriptor.getBuiltIns().getFloatType();
-        C12880j.m40222a((Object) floatType, "module.builtIns.floatType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) floatType, "module.builtIns.floatType");
         return floatType;
     }
 }

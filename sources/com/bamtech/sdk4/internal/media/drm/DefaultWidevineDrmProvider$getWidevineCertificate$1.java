@@ -18,7 +18,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -74,9 +74,9 @@ final class DefaultWidevineDrmProvider$getWidevineCertificate$1<T, R> implements
         String widevine_get_certificate = DrmServiceConfigurationKt.getWIDEVINE_GET_CERTIFICATE(Dust$Events.INSTANCE);
         Call a3 = C1691e.m7799a(a2);
         Single b = C1681c.m7780a(a2, a3).mo30223c((C11945a) new C1962xe193e35f(a3)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Single g = b.mo30222c((Consumer<? super Disposable>) new C1963xe193e360<Object>(serviceTransaction2, widevine_get_certificate)).mo30218b((Consumer<? super Throwable>) new C1964xe193e361<Object>(a2, serviceTransaction2, widevine_get_certificate)).mo30233g(new C1965xe193e362(serviceTransaction2, widevine_get_certificate));
-        C12880j.m40222a((Object) g, "this.asSingle()\n        …        it.body\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "this.asSingle()\n        …        it.body\n        }");
         return g.mo30237i(C19812.INSTANCE);
     }
 }

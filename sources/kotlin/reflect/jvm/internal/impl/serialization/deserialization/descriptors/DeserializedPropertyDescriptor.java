@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.serialization.deserialization.descripto
 
 import java.util.List;
 import kotlin.C13145v;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FieldDescriptor;
@@ -77,7 +77,7 @@ public final class DeserializedPropertyDescriptor extends PropertyDescriptorImpl
 
     public boolean isExternal() {
         Boolean bool = Flags.IS_EXTERNAL_PROPERTY.get(getProto().getFlags());
-        C12880j.m40222a((Object) bool, "Flags.IS_EXTERNAL_PROPERTY.get(proto.flags)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bool, "Flags.IS_EXTERNAL_PROPERTY.get(proto.flags)");
         return bool.booleanValue();
     }
 

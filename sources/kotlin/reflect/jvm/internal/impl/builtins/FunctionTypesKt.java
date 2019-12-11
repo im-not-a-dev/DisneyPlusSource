@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.builtins;
 
 import java.util.List;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.functions.BuiltInFictitiousFunctionClassFactory;
 import kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassDescriptor.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -31,15 +31,15 @@ public final class FunctionTypesKt {
             size++;
         }
         ClassDescriptor suspendFunction = z ? kotlinBuiltIns.getSuspendFunction(size) : kotlinBuiltIns.getFunction(size);
-        C12880j.m40222a((Object) suspendFunction, "if (suspendFunction) bui…tFunction(parameterCount)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) suspendFunction, "if (suspendFunction) bui…tFunction(parameterCount)");
         if (kotlinType != null) {
             FqName fqName = KotlinBuiltIns.FQ_NAMES.extensionFunctionType;
             String str = "KotlinBuiltIns.FQ_NAMES.extensionFunctionType";
-            C12880j.m40222a((Object) fqName, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) fqName, str);
             if (annotations.findAnnotation(fqName) == null) {
                 Companion companion = Annotations.Companion;
                 FqName fqName2 = KotlinBuiltIns.FQ_NAMES.extensionFunctionType;
-                C12880j.m40222a((Object) fqName2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) fqName2, str);
                 annotations = companion.create(C13199w.m40581d((Iterable) annotations, (Object) new BuiltInAnnotationDescriptor(kotlinBuiltIns, fqName2, C13173j0.m40350a())));
             }
         }
@@ -53,7 +53,7 @@ public final class FunctionTypesKt {
     public static final Name extractParameterNameFromFunctionTypeArgument(KotlinType kotlinType) {
         Annotations annotations = kotlinType.getAnnotations();
         FqName fqName = KotlinBuiltIns.FQ_NAMES.parameterName;
-        C12880j.m40222a((Object) fqName, "KotlinBuiltIns.FQ_NAMES.parameterName");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "KotlinBuiltIns.FQ_NAMES.parameterName");
         AnnotationDescriptor findAnnotation = annotations.findAnnotation(fqName);
         if (findAnnotation != null) {
             Object n = C13199w.m40603n(findAnnotation.getAllValueArguments().values());
@@ -126,13 +126,13 @@ public final class FunctionTypesKt {
             kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns$FqNames r5 = kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns.FQ_NAMES
             kotlin.reflect.jvm.internal.impl.name.FqName r5 = r5.parameterName
             java.lang.String r6 = "KotlinBuiltIns.FQ_NAMES.parameterName"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
             java.lang.String r6 = "name"
             kotlin.reflect.jvm.internal.impl.name.Name r6 = kotlin.reflect.jvm.internal.impl.name.Name.identifier(r6)
             kotlin.reflect.jvm.internal.impl.resolve.constants.StringValue r7 = new kotlin.reflect.jvm.internal.impl.resolve.constants.StringValue
             java.lang.String r2 = r2.asString()
             java.lang.String r8 = "name.asString()"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r8)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r8)
             r7.<init>(r2)
             kotlin.Pair r2 = kotlin.C12907r.m40244a(r6, r7)
             java.util.Map r2 = kotlin.p590y.C13170i0.m40332a(r2)
@@ -183,7 +183,7 @@ public final class FunctionTypesKt {
         boolean isBuiltinFunctionalType = isBuiltinFunctionalType(kotlinType);
         if (!C13147x.f29590a || isBuiltinFunctionalType) {
             KotlinType type = ((TypeProjection) C13199w.m40593h(kotlinType.getArguments())).getType();
-            C12880j.m40222a((Object) type, "arguments.last().type");
+            Intrinsics.checkReturnedValueIsNotNull((Object) type, "arguments.last().type");
             return type;
         }
         StringBuilder sb = new StringBuilder();
@@ -239,7 +239,7 @@ public final class FunctionTypesKt {
     private static final boolean isTypeAnnotatedWithExtensionFunctionType(KotlinType kotlinType) {
         Annotations annotations = kotlinType.getAnnotations();
         FqName fqName = KotlinBuiltIns.FQ_NAMES.extensionFunctionType;
-        C12880j.m40222a((Object) fqName, "KotlinBuiltIns.FQ_NAMES.extensionFunctionType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "KotlinBuiltIns.FQ_NAMES.extensionFunctionType");
         return annotations.findAnnotation(fqName) != null;
     }
 
@@ -249,9 +249,9 @@ public final class FunctionTypesKt {
         }
         BuiltInFictitiousFunctionClassFactory.Companion companion = BuiltInFictitiousFunctionClassFactory.Companion;
         String asString = fqNameUnsafe.shortName().asString();
-        C12880j.m40222a((Object) asString, "shortName().asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "shortName().asString()");
         FqName parent = fqNameUnsafe.toSafe().parent();
-        C12880j.m40222a((Object) parent, "toSafe().parent()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) parent, "toSafe().parent()");
         return companion.getFunctionalClassKind(asString, parent);
     }
 }

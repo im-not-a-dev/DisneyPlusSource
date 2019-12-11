@@ -27,7 +27,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 import p096e.p121h.p122j.p124d.C4039f;
 import p096e.p121h.p135s.C4127b0;
@@ -139,25 +139,25 @@ public final class PasswordInputLayout extends C5704a {
         textView.announceForAccessibility(getShowPasswordAccessibility());
         TextInputEditText textInputEditText = (TextInputEditText) mo2145c(C3838h.inputText);
         String str = "inputText";
-        C12880j.m40222a((Object) textInputEditText, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textInputEditText, str);
         TextView textView2 = (TextView) mo2145c(C3838h.showPassword);
-        C12880j.m40222a((Object) textView2, "showPassword");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "showPassword");
         textInputEditText.setInputType((textView2.getTag() == C5702b.HIDE ? 128 : 144) | 1);
         TextInputEditText textInputEditText2 = (TextInputEditText) mo2145c(C3838h.inputText);
-        C12880j.m40222a((Object) textInputEditText2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textInputEditText2, str);
         textInputEditText2.setTypeface(C4039f.m13847a(getContext(), C3837g.avenir55_roman));
         ((TextInputEditText) mo2145c(C3838h.inputText)).setSelection(((TextInputEditText) mo2145c(C3838h.inputText)).length());
     }
 
     private final String getShowPasswordAccessibility() {
         TextView textView = (TextView) mo2145c(C3838h.showPassword);
-        C12880j.m40222a((Object) textView, "showPassword");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "showPassword");
         return textView.getTag() == C5702b.HIDE ? this.f13403F0 : C5880u.m18936a(C3841k.a11y_pw_btn_hidepassword);
     }
 
     private final String getShowPasswordText() {
         TextView textView = (TextView) mo2145c(C3838h.showPassword);
-        C12880j.m40222a((Object) textView, "showPassword");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "showPassword");
         return textView.getTag() == C5702b.HIDE ? this.f13401D0 : this.f13402E0;
     }
 
@@ -165,10 +165,10 @@ public final class PasswordInputLayout extends C5704a {
     public void mo17564b(boolean z) {
         int i;
         ViewFlipper viewFlipper = (ViewFlipper) mo2145c(C3838h.passwordHeader);
-        C12880j.m40222a((Object) viewFlipper, "passwordHeader");
+        Intrinsics.checkReturnedValueIsNotNull((Object) viewFlipper, "passwordHeader");
         if (!z) {
             Context context = getContext();
-            C12880j.m40222a((Object) context, "context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context, "context");
             if (C5837i.m18843e(context)) {
                 i = 2;
                 viewFlipper.setDisplayedChild(i);
@@ -217,24 +217,24 @@ public final class PasswordInputLayout extends C5704a {
         this.f13406z0 = (CustomInternalTextInputLayout) mo2145c(C3838h.customInternTextInputLayout);
         TextInputEditText textInputEditText = (TextInputEditText) mo2145c(C3838h.inputText);
         String str = "inputText";
-        C12880j.m40222a((Object) textInputEditText, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textInputEditText, str);
         this.f13398A0 = textInputEditText;
         this.f13399B0 = (TextView) mo2145c(C3838h.titleText);
         TextView textView = (TextView) mo2145c(C3838h.errorTextView);
-        C12880j.m40222a((Object) textView, "errorTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "errorTextView");
         this.f13400C0 = textView;
         TypedArray obtainStyledAttributes = context.getTheme().obtainStyledAttributes(attributeSet, C3843m.PasswordInputLayout, 0, 0);
-        C12880j.m40222a((Object) obtainStyledAttributes, "typedArray");
+        Intrinsics.checkReturnedValueIsNotNull((Object) obtainStyledAttributes, "typedArray");
         this.f13401D0 = C5880u.m18939a(obtainStyledAttributes, C3843m.PasswordInputLayout_customShowText, isInEditMode());
         this.f13402E0 = C5880u.m18939a(obtainStyledAttributes, C3843m.PasswordInputLayout_customHideText, isInEditMode());
         obtainStyledAttributes.recycle();
         mo17573a(context, attributeSet);
         TextInputEditText textInputEditText2 = (TextInputEditText) mo2145c(C3838h.inputText);
-        C12880j.m40222a((Object) textInputEditText2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) textInputEditText2, str);
         textInputEditText2.setInputType(129);
         if (!isInEditMode()) {
             TextInputEditText textInputEditText3 = (TextInputEditText) mo2145c(C3838h.inputText);
-            C12880j.m40222a((Object) textInputEditText3, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) textInputEditText3, str);
             textInputEditText3.setTypeface(C4039f.m13847a(context, C3837g.avenir55_roman));
         }
         TextView textView2 = (TextView) mo2145c(C3838h.showPassword);
@@ -247,7 +247,7 @@ public final class PasswordInputLayout extends C5704a {
             C4127b0.m14130a(textView3, true);
         }
         TextView textView4 = (TextView) mo2145c(C3838h.passwordLongStrengthText);
-        C12880j.m40222a((Object) textView4, "passwordLongStrengthText");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView4, "passwordLongStrengthText");
         if (isInEditMode()) {
             charSequence = getResources().getString(C3841k.password_rating_fair);
         } else {
@@ -294,18 +294,18 @@ public final class PasswordInputLayout extends C5704a {
     /* renamed from: a */
     public final void mo17569a(Integer num, Integer num2, String str) {
         TextView textView = (TextView) mo2145c(C3838h.passwordStrengthText);
-        C12880j.m40222a((Object) textView, "passwordStrengthText");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "passwordStrengthText");
         textView.setText(str);
         ProgressBar progressBar = (ProgressBar) mo2145c(C3838h.passwordStrength);
         String str2 = "passwordStrength";
-        C12880j.m40222a((Object) progressBar, str2);
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, str2);
         boolean z = false;
         progressBar.setProgress(num2 != null ? num2.intValue() : 0);
         if (num != null) {
             int a = C4025a.m13788a(getContext(), num.intValue());
             ((TextView) mo2145c(C3838h.passwordStrengthText)).setTextColor(a);
             ProgressBar progressBar2 = (ProgressBar) mo2145c(C3838h.passwordStrength);
-            C12880j.m40222a((Object) progressBar2, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) progressBar2, str2);
             Drawable progressDrawable = progressBar2.getProgressDrawable();
             if (progressDrawable != null) {
                 ((LayerDrawable) progressDrawable).findDrawableByLayerId(16908301).setColorFilter(a, Mode.SRC_IN);

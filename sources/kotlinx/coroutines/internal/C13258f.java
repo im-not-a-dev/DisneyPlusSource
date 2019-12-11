@@ -15,7 +15,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p581d0.C12731a;
 import kotlinx.coroutines.C13412x;
@@ -182,10 +182,10 @@ public final class C13258f {
         public final int compare(T t, T t2) {
             Constructor constructor = (Constructor) t2;
             String str = "it";
-            C12880j.m40222a((Object) constructor, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) constructor, str);
             Integer valueOf = Integer.valueOf(constructor.getParameterTypes().length);
             Constructor constructor2 = (Constructor) t;
-            C12880j.m40222a((Object) constructor2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) constructor2, str);
             return C13206b.m40622a(valueOf, Integer.valueOf(constructor2.getParameterTypes().length));
         }
     }
@@ -272,10 +272,10 @@ public final class C13258f {
                 }
             } else {
                 Constructor[] constructors = e.getClass().getConstructors();
-                C12880j.m40222a((Object) constructors, "exception.javaClass.constructors");
+                Intrinsics.checkReturnedValueIsNotNull((Object) constructors, "exception.javaClass.constructors");
                 Function1 function12 = null;
                 for (Constructor constructor : C13174k.m40400c((T[]) constructors, (Comparator<? super T>) new C13263e<Object>())) {
-                    C12880j.m40222a((Object) constructor, "constructor");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) constructor, "constructor");
                     function12 = m40752a(constructor);
                     if (function12 != null) {
                         break;
@@ -339,13 +339,13 @@ public final class C13258f {
         }
         if (length == 1) {
             Class cls = parameterTypes[0];
-            if (C12880j.m40224a((Object) cls, (Object) Throwable.class)) {
+            if (Intrinsics.areEqual((Object) cls, (Object) Throwable.class)) {
                 return new C13260b(constructor);
             }
-            if (C12880j.m40224a((Object) cls, (Object) String.class)) {
+            if (Intrinsics.areEqual((Object) cls, (Object) String.class)) {
                 return new C13261c(constructor);
             }
-        } else if (length == 2 && C12880j.m40224a((Object) parameterTypes[0], (Object) String.class) && C12880j.m40224a((Object) parameterTypes[1], (Object) Throwable.class)) {
+        } else if (length == 2 && Intrinsics.areEqual((Object) parameterTypes[0], (Object) String.class) && Intrinsics.areEqual((Object) parameterTypes[1], (Object) Throwable.class)) {
             return new C13259a(constructor);
         }
         return null;
@@ -363,10 +363,10 @@ public final class C13258f {
     private static final int m40749a(Class<?> cls, int i) {
         do {
             Field[] declaredFields = cls.getDeclaredFields();
-            C12880j.m40222a((Object) declaredFields, "declaredFields");
+            Intrinsics.checkReturnedValueIsNotNull((Object) declaredFields, "declaredFields");
             int i2 = 0;
             for (Field field : declaredFields) {
-                C12880j.m40222a((Object) field, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) field, "it");
                 if (!Modifier.isStatic(field.getModifiers())) {
                     i2++;
                 }

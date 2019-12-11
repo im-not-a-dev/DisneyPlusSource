@@ -35,7 +35,7 @@ public final class C0493b {
             r0 = r6
             android.graphics.drawable.BitmapDrawable r0 = (android.graphics.drawable.BitmapDrawable) r0
             android.graphics.Bitmap r0 = r0.getBitmap()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             android.graphics.Bitmap$Config r0 = r0.getConfig()
             if (r0 != r9) goto L_0x003d
         L_0x0018:
@@ -45,14 +45,14 @@ public final class C0493b {
             int r9 = r6.getIntrinsicHeight()
             if (r8 != r9) goto L_0x002e
             android.graphics.Bitmap r6 = r6.getBitmap()
-            kotlin.jvm.internal.C12880j.m40222a(r6, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r1)
             return r6
         L_0x002e:
             android.graphics.Bitmap r6 = r6.getBitmap()
             r9 = 1
             android.graphics.Bitmap r6 = android.graphics.Bitmap.createScaledBitmap(r6, r7, r8, r9)
             java.lang.String r7 = "Bitmap.createScaledBitma…map, width, height, true)"
-            kotlin.jvm.internal.C12880j.m40222a(r6, r7)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r6, r7)
             return r6
         L_0x003d:
             android.graphics.Rect r0 = r6.getBounds()
@@ -72,7 +72,7 @@ public final class C0493b {
             r7.<init>(r9)
             r6.draw(r7)
             r6.setBounds(r2, r3, r4, r0)
-            kotlin.jvm.internal.C12880j.m40222a(r9, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r9, r1)
             return r9
         */
         throw new UnsupportedOperationException("Method not decompiled: androidx.core.graphics.drawable.C0493b.m2653a(android.graphics.drawable.Drawable, int, int, android.graphics.Bitmap$Config):android.graphics.Bitmap");

@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.core.framework.C5741g.C5742a;
 import com.bamtechmedia.dominguez.core.utils.C5884x;
 import com.bamtechmedia.dominguez.playback.p237m.C6336a;
 import com.bamtechmedia.dominguez.playback.p237m.C6337b;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Observable;
 
 /* renamed from: com.bamtechmedia.dominguez.playback.m.o.b */
@@ -29,7 +29,7 @@ public final class C6463b implements C5742a<C6336a> {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f14662b, (java.lang.Object) r3.f14662b) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f14662b, (java.lang.Object) r3.f14662b) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -41,11 +41,11 @@ public final class C6463b implements C5742a<C6336a> {
             com.bamtechmedia.dominguez.playback.m.o.b r3 = (com.bamtechmedia.dominguez.playback.p237m.p246o.C6463b) r3
             com.bamtechmedia.dominguez.core.content.o r0 = r2.f14661a
             com.bamtechmedia.dominguez.core.content.o r1 = r3.f14661a
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.bamtechmedia.dominguez.core.content.l r0 = r2.f14662b
             com.bamtechmedia.dominguez.core.content.l r3 = r3.f14662b
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:
@@ -97,7 +97,7 @@ public final class C6463b implements C5742a<C6336a> {
         C6337b bVar = r1;
         C6337b bVar2 = new C6337b(this.f14661a, this.f14662b);
         Observable<C6336a> b = Observable.m38309b(C6336a.m19906a(aVar3, null, null, null, null, null, true, null, false, 0, null, null, null, bVar, false, false, 28639, null));
-        C12880j.m40222a((Object) b, "Observable.just(\n       …)\n            )\n        )");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Observable.just(\n       …)\n            )\n        )");
         return b;
     }
 }

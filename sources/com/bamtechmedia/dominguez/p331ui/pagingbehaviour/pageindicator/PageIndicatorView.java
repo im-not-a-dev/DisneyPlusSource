@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import com.bamtechmedia.dominguez.p331ui.pagingbehaviour.C8092b.C8093a;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 import p163g.p201e.p202a.C5358a;
 import p163g.p201e.p202a.C5360c;
@@ -93,7 +93,7 @@ public final class PageIndicatorView extends LinearLayout implements C8093a {
         Context context = getContext();
         if (context != null) {
             int[] iArr = C5367j.PageIndicatorView;
-            C12880j.m40222a((Object) iArr, "R.styleable.PageIndicatorView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) iArr, "R.styleable.PageIndicatorView");
             TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, C5358a.pageIndicatorViewStyle, 0);
             setIndicatorDistance(obtainStyledAttributes);
             this.f17336c0 = obtainStyledAttributes.getInt(C5367j.PageIndicatorView_indicatorShape, 0);
@@ -106,7 +106,7 @@ public final class PageIndicatorView extends LinearLayout implements C8093a {
 
     private final void setIndicatorDistance(TypedArray typedArray) {
         Resources resources = getResources();
-        C12880j.m40222a((Object) resources, "resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "resources");
         this.f17334b0 = typedArray.getDimension(C5367j.PageIndicatorView_indicatorDistanceBetween, resources.getDisplayMetrics().density * 4.0f);
     }
 
@@ -120,7 +120,7 @@ public final class PageIndicatorView extends LinearLayout implements C8093a {
     private final void setIndicatorSize(TypedArray typedArray) {
         if (this.f17336c0 == 0) {
             Resources resources = getResources();
-            C12880j.m40222a((Object) resources, "resources");
+            Intrinsics.checkReturnedValueIsNotNull((Object) resources, "resources");
             float dimension = typedArray.getDimension(C5367j.PageIndicatorView_indicatorSize, resources.getDisplayMetrics().density * 4.0f);
             this.f17332W = dimension;
             this.f17333a0 = typedArray.getDimension(C5367j.PageIndicatorView_indicatorSelectedItemSize, dimension);
@@ -166,7 +166,7 @@ public final class PageIndicatorView extends LinearLayout implements C8093a {
         ShapeDrawable shapeDrawable = new ShapeDrawable();
         shapeDrawable.setShape(new OvalShape());
         Paint paint = shapeDrawable.getPaint();
-        C12880j.m40222a((Object) paint, "paint");
+        Intrinsics.checkReturnedValueIsNotNull((Object) paint, "paint");
         paint.setColor(i);
         return shapeDrawable;
     }
@@ -282,13 +282,13 @@ public final class PageIndicatorView extends LinearLayout implements C8093a {
         LayoutParams layoutParams = new LayoutParams(-2, -2);
         Resources resources = getResources();
         String str = "resources";
-        C12880j.m40222a((Object) resources, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, str);
         float applyDimension = TypedValue.applyDimension(1, 30.0f, resources.getDisplayMetrics());
         Resources resources2 = getResources();
-        C12880j.m40222a((Object) resources2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources2, str);
         float applyDimension2 = TypedValue.applyDimension(1, 4.0f, resources2.getDisplayMetrics());
         Resources resources3 = getResources();
-        C12880j.m40222a((Object) resources3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources3, str);
         int applyDimension3 = (int) TypedValue.applyDimension(1, 3.0f, resources3.getDisplayMetrics());
         layoutParams.setMargins(applyDimension3, applyDimension3, applyDimension3, applyDimension3);
         layoutParams.width = (int) applyDimension;

@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.core.content.assets.ProfileAvatar;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11737m.C11739b;
@@ -21,10 +21,10 @@ public final class AvatarResponseJsonAdapter extends C11725h<AvatarResponse> {
     public AvatarResponseJsonAdapter(C11760v vVar) {
         String str = "avatars";
         C11739b a = C11739b.m37729a(str);
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"avatars\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"avatars\")");
         this.options = a;
         C11725h<List<ProfileAvatar>> a2 = vVar.mo29869a((Type) C11780y.m37894a((Type) List.class, ProfileAvatar.class), C13188p0.m40531a(), str);
-        C12880j.m40222a((Object) a2, "moshi.adapter<List<Profi…ns.emptySet(), \"avatars\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<List<Profi…ns.emptySet(), \"avatars\")");
         this.nullableListOfProfileAvatarAdapter = a2;
     }
 

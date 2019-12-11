@@ -1022,7 +1022,7 @@ public class C1440a implements C1479g, C1484l {
         if (str != null && f5223x.contains(str.toLowerCase(Locale.US))) {
             String str2 = f5221v;
             StringBuilder sb = new StringBuilder();
-            sb.append("Device build model matches a known crawler. Enabling mock network request mode. Device model: ");
+            sb.append("Device buildMODEL matches a known crawler. Enabling mock network request mode. DeviceMODEL: ");
             sb.append(str);
             C1557c.m7469c(str2, sb.toString());
             m6940n();

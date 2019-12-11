@@ -188,7 +188,7 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
                 r4 = 30000(0x7530, double:1.4822E-319)
                 com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist r0 = r10.f20737W
                 long r6 = r0.f20702p
-                long r6 = com.google.android.exoplayer2.C8883r.m25968b(r6)
+                long r6 = com.google.android.exoplayer2.C8883r.usToMs(r6)
                 long r4 = java.lang.Math.max(r4, r6)
                 com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist r0 = r10.f20737W
                 boolean r6 = r0.f20698l
@@ -271,7 +271,7 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
                 if (size < hlsMediaPlaylist5.f20695i) {
                     this.f20744c0 = new C9191c(this.f20743c);
                     C9179c.this.m27600a(this.f20743c, -9223372036854775807L);
-                } else if (((double) (elapsedRealtime - this.f20739Y)) > ((double) C8883r.m25968b(hlsMediaPlaylist5.f20697k)) * C9179c.this.f20723Y) {
+                } else if (((double) (elapsedRealtime - this.f20739Y)) > ((double) C8883r.usToMs(hlsMediaPlaylist5.f20697k)) * C9179c.this.f20723Y) {
                     this.f20744c0 = new C9192d(this.f20743c);
                     long blacklistDurationMsFor = C9179c.this.f20720V.getBlacklistDurationMsFor(4, j, this.f20744c0, 1);
                     C9179c.this.m27600a(this.f20743c, blacklistDurationMsFor);
@@ -281,7 +281,7 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
                 }
             }
             HlsMediaPlaylist hlsMediaPlaylist6 = this.f20737W;
-            this.f20740Z = elapsedRealtime + C8883r.m25968b(hlsMediaPlaylist6 != hlsMediaPlaylist3 ? hlsMediaPlaylist6.f20697k : hlsMediaPlaylist6.f20697k / 2);
+            this.f20740Z = elapsedRealtime + C8883r.usToMs(hlsMediaPlaylist6 != hlsMediaPlaylist3 ? hlsMediaPlaylist6.f20697k : hlsMediaPlaylist6.f20697k / 2);
             if (this.f20743c.equals(C9179c.this.f20731f0) && !this.f20737W.f20698l) {
                 mo23891c();
             }

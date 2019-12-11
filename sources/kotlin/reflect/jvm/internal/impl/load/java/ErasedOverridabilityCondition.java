@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.load.java;
 
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p587i0.C12775h;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -40,14 +40,14 @@ public final class ErasedOverridabilityCondition implements ExternalOverridabili
         if (callableDescriptor2 instanceof JavaMethodDescriptor) {
             JavaMethodDescriptor javaMethodDescriptor = (JavaMethodDescriptor) callableDescriptor2;
             List typeParameters = javaMethodDescriptor.getTypeParameters();
-            C12880j.m40222a((Object) typeParameters, "subDescriptor.typeParameters");
+            Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters, "subDescriptor.typeParameters");
             if (!(!typeParameters.isEmpty())) {
                 OverrideCompatibilityInfo basicOverridabilityProblem = OverridingUtil.getBasicOverridabilityProblem(callableDescriptor, callableDescriptor2);
                 if ((basicOverridabilityProblem != null ? basicOverridabilityProblem.getResult() : null) != null) {
                     return ExternalOverridabilityCondition.Result.UNKNOWN;
                 }
                 List valueParameters = javaMethodDescriptor.getValueParameters();
-                C12880j.m40222a((Object) valueParameters, "subDescriptor.valueParameters");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "subDescriptor.valueParameters");
                 C12775h d = C12788p.m39994d(C13199w.m40577c((Iterable) valueParameters), ErasedOverridabilityCondition$isOverridable$signatureTypes$1.INSTANCE);
                 KotlinType returnType = javaMethodDescriptor.getReturnType();
                 if (returnType != null) {
@@ -82,19 +82,19 @@ public final class ErasedOverridabilityCondition implements ExternalOverridabili
                     if (callableDescriptor3 instanceof SimpleFunctionDescriptor) {
                         SimpleFunctionDescriptor simpleFunctionDescriptor = (SimpleFunctionDescriptor) callableDescriptor3;
                         List typeParameters2 = simpleFunctionDescriptor.getTypeParameters();
-                        C12880j.m40222a((Object) typeParameters2, "erasedSuper.typeParameters");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) typeParameters2, "erasedSuper.typeParameters");
                         if (!typeParameters2.isEmpty()) {
                             callableDescriptor3 = simpleFunctionDescriptor.newCopyBuilder().setTypeParameters(C13185o.m40513a()).build();
                             if (callableDescriptor3 == null) {
-                                C12880j.m40220a();
+                                Intrinsics.throwNpe();
                                 throw null;
                             }
                         }
                     }
                     OverrideCompatibilityInfo isOverridableByWithoutExternalConditions = OverridingUtil.DEFAULT.isOverridableByWithoutExternalConditions(callableDescriptor3, callableDescriptor2, false);
-                    C12880j.m40222a((Object) isOverridableByWithoutExternalConditions, "OverridingUtil.DEFAULT.i…er, subDescriptor, false)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) isOverridableByWithoutExternalConditions, "OverridingUtil.DEFAULT.i…er, subDescriptor, false)");
                     Result result2 = isOverridableByWithoutExternalConditions.getResult();
-                    C12880j.m40222a((Object) result2, "OverridingUtil.DEFAULT.i…Descriptor, false).result");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) result2, "OverridingUtil.DEFAULT.i…Descriptor, false).result");
                     if (WhenMappings.$EnumSwitchMapping$0[result2.ordinal()] != 1) {
                         result = ExternalOverridabilityCondition.Result.UNKNOWN;
                     } else {
@@ -102,7 +102,7 @@ public final class ErasedOverridabilityCondition implements ExternalOverridabili
                     }
                     return result;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }

@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.upstream;
 
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -58,7 +58,7 @@ public abstract class C9497h implements DataSource {
     /* renamed from: a */
     public final void mo24566a(int i) {
         DataSpec dataSpec = this.f22114d;
-        C9554k0.m29394a(dataSpec);
+        Util.castNonNull(dataSpec);
         DataSpec dataSpec2 = dataSpec;
         for (int i2 = 0; i2 < this.f22113c; i2++) {
             ((TransferListener) this.f22112b.get(i2)).onBytesTransferred(this, dataSpec2, this.f22111a, i);
@@ -69,7 +69,7 @@ public abstract class C9497h implements DataSource {
     /* renamed from: b */
     public final void mo24568b() {
         DataSpec dataSpec = this.f22114d;
-        C9554k0.m29394a(dataSpec);
+        Util.castNonNull(dataSpec);
         DataSpec dataSpec2 = dataSpec;
         for (int i = 0; i < this.f22113c; i++) {
             ((TransferListener) this.f22112b.get(i)).onTransferEnd(this, dataSpec2, this.f22111a);

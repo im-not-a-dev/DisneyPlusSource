@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.types;
 
 import java.util.Collection;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.types.model.KotlinTypeMarker;
 import kotlin.reflect.jvm.internal.impl.types.model.SimpleTypeMarker;
@@ -26,7 +26,7 @@ final class AbstractTypeChecker$checkSubtypeForIntegerLiteralType$1 extends C128
             return false;
         }
         for (KotlinTypeMarker typeConstructor : possibleIntegerTypes) {
-            if (C12880j.m40224a((Object) this.$this_checkSubtypeForIntegerLiteralType.typeConstructor(typeConstructor), (Object) this.$this_checkSubtypeForIntegerLiteralType.typeConstructor(simpleTypeMarker2))) {
+            if (Intrinsics.areEqual((Object) this.$this_checkSubtypeForIntegerLiteralType.typeConstructor(typeConstructor), (Object) this.$this_checkSubtypeForIntegerLiteralType.typeConstructor(simpleTypeMarker2))) {
                 return true;
             }
         }

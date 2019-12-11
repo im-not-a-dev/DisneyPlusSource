@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.HashMap;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p287k.C7310d;
 import p163g.p201e.p203b.p287k.C7312f;
 
@@ -53,10 +53,10 @@ public final class DetailSection extends LinearLayout {
     /* renamed from: a */
     public final void mo17929a(CharSequence charSequence, CharSequence charSequence2) {
         TextView textView = (TextView) mo17928a(C7310d.browsable_section_item_title);
-        C12880j.m40222a((Object) textView, "browsable_section_item_title");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "browsable_section_item_title");
         textView.setText(charSequence);
         TextView textView2 = (TextView) mo17928a(C7310d.browsable_section_item_description);
-        C12880j.m40222a((Object) textView2, "browsable_section_item_description");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "browsable_section_item_description");
         textView2.setText(charSequence2);
     }
 

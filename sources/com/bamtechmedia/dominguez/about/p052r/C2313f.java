@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u000f2\u00020\u0001:\u0001\u000fB\u001f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0006\u0010\t\u001a\u00020\nJ\u000e\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eR\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0010"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/about/items/LocationOverrideHelper;", "", "debugOverrides", "Lcom/bamtechmedia/dominguez/about/PersistedDebugOverrides;", "invalidator", "Lcom/bamtechmedia/dominguez/collections/CollectionInvalidator;", "fragment", "Lcom/bamtechmedia/dominguez/about/AboutFragment;", "(Lcom/bamtechmedia/dominguez/about/PersistedDebugOverrides;Lcom/bamtechmedia/dominguez/collections/CollectionInvalidator;Lcom/bamtechmedia/dominguez/about/AboutFragment;)V", "currentValue", "", "showDialog", "", "configMap", "Lcom/bamtechmedia/dominguez/config/AppConfigMap;", "Companion", "about_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.about.r.f */
@@ -62,7 +62,7 @@ public final class C2313f {
         public final void onClick(DialogInterface dialogInterface, int i) {
             C2279k a = this.f6468c.f6464a;
             Object a2 = C13174k.m40369a((Object[]) this.f6467U, i);
-            if (!(!C12880j.m40224a((Object) (String) a2, (Object) "Disabled"))) {
+            if (!(!Intrinsics.areEqual((Object) (String) a2, (Object) "Disabled"))) {
                 a2 = null;
             }
             a.mo11326a((String) a2);

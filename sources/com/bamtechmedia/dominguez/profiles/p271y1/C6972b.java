@@ -58,7 +58,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -302,7 +302,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
             C6979a aVar2 = new C6979a(this);
             C6661f1 p = this.f15512c.mo19735p();
             Context requireContext = this.f15512c.requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             if (C5837i.m18842d(requireContext)) {
                 a = null;
             } else if (this.f15512c.m21246s()) {
@@ -360,7 +360,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
             if (th instanceof BadRequestException) {
                 C2810a.m10485a(this.f15517c.mo19734o(), 0, true, 1, (Object) null);
             } else {
-                C12880j.m40222a((Object) th, "error");
+                Intrinsics.checkReturnedValueIsNotNull((Object) th, "error");
                 throw th;
             }
         }
@@ -403,13 +403,13 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
                         lVar.mo19782a((Function0<C13145v>) new C6975c<C13145v>(b, this));
                     }
                 } else {
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
             }
             return;
         }
-        C12880j.m40227c(str);
+        Intrinsics.throwUninitializedPropertyAccessException(str);
         throw null;
     }
 
@@ -426,7 +426,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         if (h0Var != null) {
             C6672a.m20688a(h0Var, false, false, null, false, null, 0, 62, null);
         } else {
-            C12880j.m40227c("profileNavRouter");
+            Intrinsics.throwUninitializedPropertyAccessException("profileNavRouter");
             throw null;
         }
     }
@@ -440,7 +440,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         if (m21246s()) {
             C6627c1 c1Var = this.f15495X;
             if (c1Var == null) {
-                C12880j.m40227c("profilesMemoryCache");
+                Intrinsics.throwUninitializedPropertyAccessException("profilesMemoryCache");
                 throw null;
             } else if (c1Var.mo19290d()) {
                 C6725m1 m1Var = this.f15494W;
@@ -458,7 +458,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
                     }
                     return;
                 }
-                C12880j.m40227c("profilesViewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("profilesViewModel");
                 throw null;
             } else {
                 C6671h0 h0Var = this.f15496Y;
@@ -468,11 +468,11 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
                     if (aVar2 != null) {
                         aVar2.mo19617b();
                     } else {
-                        C12880j.m40227c(str);
+                        Intrinsics.throwUninitializedPropertyAccessException(str);
                         throw null;
                     }
                 } else {
-                    C12880j.m40227c(str2);
+                    Intrinsics.throwUninitializedPropertyAccessException(str2);
                     throw null;
                 }
             }
@@ -480,7 +480,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
             C6969y0 y0Var = this.f15499b0;
             if (y0Var != null) {
                 C6771b y = y0Var.mo19724y();
-                boolean z = C12880j.m40224a((Object) y, (Object) C6776c.f15157c) || C12880j.m40224a((Object) y, (Object) C6778d.f15158c);
+                boolean z = Intrinsics.areEqual((Object) y, (Object) C6776c.f15157c) || Intrinsics.areEqual((Object) y, (Object) C6778d.f15158c);
                 C6671h0 h0Var2 = this.f15496Y;
                 if (h0Var2 != null) {
                     C6672a.m20687a(h0Var2, false, z, 1, null);
@@ -488,15 +488,15 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
                     if (aVar3 != null) {
                         aVar3.mo19618c();
                     } else {
-                        C12880j.m40227c(str);
+                        Intrinsics.throwUninitializedPropertyAccessException(str);
                         throw null;
                     }
                 } else {
-                    C12880j.m40227c(str2);
+                    Intrinsics.throwUninitializedPropertyAccessException(str2);
                     throw null;
                 }
             } else {
-                C12880j.m40227c("profilesHostViewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("profilesHostViewModel");
                 throw null;
             }
         }
@@ -530,7 +530,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         if (cVar != null) {
             return cVar;
         }
-        C12880j.m40227c("adapter");
+        Intrinsics.throwUninitializedPropertyAccessException("adapter");
         throw null;
     }
 
@@ -540,7 +540,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         if (jVar != null) {
             return jVar;
         }
-        C12880j.m40227c("logOutRouter");
+        Intrinsics.throwUninitializedPropertyAccessException("logOutRouter");
         throw null;
     }
 
@@ -558,7 +558,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         if (m1Var != null) {
             m1Var.mo19441A();
         } else {
-            C12880j.m40227c("profilesViewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("profilesViewModel");
             throw null;
         }
     }
@@ -572,11 +572,11 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
             if (xVar != null) {
                 xVar.mo20833a();
             } else {
-                C12880j.m40227c("subscriptionMessage");
+                Intrinsics.throwUninitializedPropertyAccessException("subscriptionMessage");
                 throw null;
             }
         } else {
-            C12880j.m40227c("profilesViewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("profilesViewModel");
             throw null;
         }
     }
@@ -593,12 +593,12 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         int i;
         int i2;
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         if (C5837i.m18842d(requireContext)) {
             C5852n0.m18884a(view, false, false, null, 7, null);
         }
         RecyclerView recyclerView = (RecyclerView) view.findViewById(C7946e.profilesRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "view.profilesRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "view.profilesRecyclerView");
         C11848c<C11863k> cVar = this.f15498a0;
         if (cVar != null) {
             RecyclerViewExtKt.m18800a(this, recyclerView, cVar);
@@ -628,7 +628,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
                     if (d0Var != null) {
                         textView3.setContentDescription(d0Var.mo19298b());
                     } else {
-                        C12880j.m40227c("profileAccessibility");
+                        Intrinsics.throwUninitializedPropertyAccessException("profileAccessibility");
                         throw null;
                     }
                 }
@@ -650,12 +650,12 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
                 C4127b0.m14131b(noConnectionView2, false);
             }
             ConstraintLayout constraintLayout = (ConstraintLayout) _$_findCachedViewById(C7946e.profilesRoot);
-            C12880j.m40222a((Object) constraintLayout, "profilesRoot");
+            Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "profilesRoot");
             constraintLayout.setVisibility(8);
             m21233a(view);
             return;
         }
-        C12880j.m40227c("adapter");
+        Intrinsics.throwUninitializedPropertyAccessException("adapter");
         throw null;
     }
 
@@ -665,7 +665,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         if (f1Var != null) {
             return f1Var;
         }
-        C12880j.m40227c("presenter");
+        Intrinsics.throwUninitializedPropertyAccessException("presenter");
         throw null;
     }
 
@@ -675,7 +675,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         if (z0Var != null) {
             return z0Var;
         }
-        C12880j.m40227c("profilesListener");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesListener");
         throw null;
     }
 
@@ -685,17 +685,17 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         C6725m1 m1Var = this.f15494W;
         if (m1Var != null) {
             Completable a = m1Var.mo19442a(c0Var).mo30040a(C11992a.m38600a());
-            C12880j.m40222a((Object) a, "profilesViewModel.select…dSchedulers.mainThread())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "profilesViewModel.select…dSchedulers.mainThread())");
             C0722m viewLifecycleOwner = getViewLifecycleOwner();
-            C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+            Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
             C10541b a2 = C10541b.m33255a(viewLifecycleOwner, C0716a.ON_DESTROY);
-            C12880j.m40222a((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
             Object a3 = a.mo30048a((C11912b<? extends R>) C11793e.m37930a((C11790c0) a2));
-            C12880j.m40222a(a3, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
+            Intrinsics.checkReturnedValueIsNotNull(a3, "this.`as`(AutoDispose.au…isposable<Any>(provider))");
             ((C11839v) a3).mo29926a(new C6981g(this, c0Var), new C6982h(this));
             return;
         }
-        C12880j.m40227c("profilesViewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesViewModel");
         throw null;
     }
 
@@ -704,12 +704,12 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         C2378m mVar = new C2378m(C2433b.PROFILE_SWITCHER, (String) null, 2, (DefaultConstructorMarker) null);
         C6969y0 y0Var = this.f15499b0;
         if (y0Var != null) {
-            if (!C12880j.m40224a((Object) y0Var.mo19724y(), (Object) C6774b.f15156c)) {
+            if (!Intrinsics.areEqual((Object) y0Var.mo19724y(), (Object) C6774b.f15156c)) {
                 mVar = C2378m.m8910a(mVar, null, "Profile", null, null, 13, null);
             }
             return m21246s() ? new C2378m(C2433b.ADD_PROFILE, (String) null, 2, (DefaultConstructorMarker) null) : mVar;
         }
-        C12880j.m40227c("profilesHostViewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("profilesHostViewModel");
         throw null;
     }
 
@@ -718,12 +718,12 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
     public final void m21235a(C6726a aVar) {
         C6978f fVar = new C6978f(this);
         ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C7946e.profilesProgressbar);
-        C12880j.m40222a((Object) progressBar, "profilesProgressbar");
+        Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "profilesProgressbar");
         progressBar.setVisibility(aVar.mo19448c() ? 0 : 8);
         String str = "profilesRoot";
         if (aVar.mo19452f()) {
             ConstraintLayout constraintLayout = (ConstraintLayout) _$_findCachedViewById(C7946e.profilesRoot);
-            C12880j.m40222a((Object) constraintLayout, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, str);
             constraintLayout.setVisibility(8);
             NoConnectionView noConnectionView = (NoConnectionView) _$_findCachedViewById(C7946e.profilesErrorView);
             if (noConnectionView != null) {
@@ -736,7 +736,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
             return;
         }
         ConstraintLayout constraintLayout2 = (ConstraintLayout) _$_findCachedViewById(C7946e.profilesRoot);
-        C12880j.m40222a((Object) constraintLayout2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout2, str);
         constraintLayout2.setVisibility(0);
         NoConnectionView noConnectionView2 = (NoConnectionView) _$_findCachedViewById(C7946e.profilesErrorView);
         if (noConnectionView2 != null) {
@@ -791,7 +791,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
             if (h0Var != null) {
                 h0Var.mo19400b(new C6780r1(c0Var, null, 2, null));
             } else {
-                C12880j.m40227c("profileNavRouter");
+                Intrinsics.throwUninitializedPropertyAccessException("profileNavRouter");
                 throw null;
             }
         } else {
@@ -801,7 +801,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
                 m21239b(c0Var);
                 return;
             }
-            C12880j.m40227c("profileAnalytics");
+            Intrinsics.throwUninitializedPropertyAccessException("profileAnalytics");
             throw null;
         }
     }
@@ -813,12 +813,12 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
         DisneyTitleToolbar disneyTitleToolbar = (DisneyTitleToolbar) view.findViewById(C7946e.disneyToolbar);
         if (disneyTitleToolbar != null) {
             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C7946e.profilesRecyclerView);
-            C12880j.m40222a((Object) recyclerView, "profilesRecyclerView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "profilesRecyclerView");
             C3848a aVar = this.f15503f0;
             if (aVar != null) {
                 DisneyTitleToolbar.m18445a(disneyTitleToolbar, recyclerView, aVar, null, null, null, 0, null, 124, null);
             } else {
-                C12880j.m40227c("backgroundHelper");
+                Intrinsics.throwUninitializedPropertyAccessException("backgroundHelper");
                 throw null;
             }
         }
@@ -851,7 +851,7 @@ public final class C6972b extends C11890i implements C7717x, C2413n, C5641a {
                 if (d0Var != null) {
                     DisneyTitleToolbar.m18446a(disneyTitleToolbar5, (CharSequence) null, (CharSequence) d0Var.mo19298b(), 1, (Object) null);
                 } else {
-                    C12880j.m40227c("profileAccessibility");
+                    Intrinsics.throwUninitializedPropertyAccessException("profileAccessibility");
                     throw null;
                 }
             }

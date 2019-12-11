@@ -1,6 +1,6 @@
 package kotlin.p590y;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlin.y.b0 */
 /* compiled from: IndexedValue.kt */
@@ -41,7 +41,7 @@ public final class C13152b0<T> {
         if (this != obj) {
             if (obj instanceof C13152b0) {
                 C13152b0 b0Var = (C13152b0) obj;
-                if (!(this.f29593a == b0Var.f29593a) || !C12880j.m40224a((Object) this.f29594b, (Object) b0Var.f29594b)) {
+                if (!(this.f29593a == b0Var.f29593a) || !Intrinsics.areEqual((Object) this.f29594b, (Object) b0Var.f29594b)) {
                     return false;
                 }
             }

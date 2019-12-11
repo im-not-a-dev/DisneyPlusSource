@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -29,7 +29,7 @@ public final class DefaultTelemetryClient implements TelemetryClient {
 
     public Single<TelemetryResponse> postEvents(ServiceTransaction serviceTransaction, Map<String, String> map, String str) {
         Single<TelemetryResponse> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultTelemetryClient$postEvents$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultTelemetryClient$postEvents$2<Object,Object>(this, map, serviceTransaction, str));
-        C12880j.m40222a((Object) a, "configurationProvider.ge….body }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge….body }\n                }");
         return a;
     }
 }

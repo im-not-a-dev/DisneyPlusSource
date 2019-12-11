@@ -6,7 +6,7 @@ import com.bamtech.sdk4.internal.networking.ConverterProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -30,7 +30,7 @@ public final class DefaultCreateAccountGrantClient implements CreateAccountGrant
 
     public Single<CreateAccountGrantResponse> createAccountGrant(ServiceTransaction serviceTransaction, CreateAccountGrantRequest createAccountGrantRequest, Map<String, String> map) {
         Single<CreateAccountGrantResponse> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultCreateAccountGrantClient$createAccountGrant$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultCreateAccountGrantClient$createAccountGrant$2<Object,Object>(this, map, serviceTransaction, createAccountGrantRequest));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…_GRANT)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…_GRANT)\n                }");
         return a;
     }
 }

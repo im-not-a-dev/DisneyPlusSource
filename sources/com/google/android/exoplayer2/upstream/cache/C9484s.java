@@ -4,8 +4,8 @@ import android.os.ConditionVariable;
 import com.google.android.exoplayer2.database.C8684a;
 import com.google.android.exoplayer2.database.DatabaseProvider;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.upstream.cache.Cache.C9457a;
 import com.google.android.exoplayer2.upstream.cache.Cache.C9458b;
 import java.io.File;
@@ -102,7 +102,7 @@ public final class C9484s implements Cache {
                 sb.append("Failed to list cache directory files: ");
                 sb.append(this.f22071a);
                 String sb2 = sb.toString();
-                C9563q.m29497b(str, sb2);
+                Log.m29497b(str, sb2);
                 this.f22081k = new C9457a(sb2);
                 return;
             }
@@ -115,7 +115,7 @@ public final class C9484s implements Cache {
                     sb3.append("Failed to create cache UID: ");
                     sb3.append(this.f22071a);
                     String sb4 = sb3.toString();
-                    C9563q.m29496a(str, sb4, e);
+                    Log.m29496a(str, sb4, e);
                     this.f22081k = new C9457a(sb4, e);
                     return;
                 }
@@ -134,14 +134,14 @@ public final class C9484s implements Cache {
                 try {
                     this.f22073c.mo24531c();
                 } catch (IOException e2) {
-                    C9563q.m29496a(str, "Storing index file failed", e2);
+                    Log.m29496a(str, "Storing index file failed", e2);
                 }
             } catch (IOException e3) {
                 StringBuilder sb5 = new StringBuilder();
                 sb5.append("Failed to initialize cache indices: ");
                 sb5.append(this.f22071a);
                 String sb6 = sb5.toString();
-                C9563q.m29496a(str, sb6, e3);
+                Log.m29496a(str, sb6, e3);
                 this.f22081k = new C9457a(sb6, e3);
             }
         } else {
@@ -149,7 +149,7 @@ public final class C9484s implements Cache {
             sb7.append("Failed to create cache directory: ");
             sb7.append(this.f22071a);
             String sb8 = sb7.toString();
-            C9563q.m29497b(str, sb8);
+            Log.m29497b(str, sb8);
             this.f22081k = new C9457a(sb8);
         }
     }
@@ -208,7 +208,7 @@ public final class C9484s implements Cache {
                         StringBuilder sb = new StringBuilder();
                         sb.append(str);
                         sb.append(a);
-                        C9563q.m29500d(str2, sb.toString());
+                        Log.m29500d(str2, sb.toString());
                     }
                     try {
                         C9475m.m29070a(databaseProvider, a);
@@ -216,11 +216,11 @@ public final class C9484s implements Cache {
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append(str);
                         sb2.append(a);
-                        C9563q.m29500d(str2, sb2.toString());
+                        Log.m29500d(str2, sb2.toString());
                     }
                 }
             }
-            C9554k0.m29407a(file);
+            Util.m29407a(file);
         }
     }
 
@@ -298,7 +298,7 @@ public final class C9484s implements Cache {
                 try {
                     this.f22074d.mo24501a(name, j2, currentTimeMillis);
                 } catch (IOException unused) {
-                    C9563q.m29500d("SimpleCache", "Failed to update index with new touch timestamp.");
+                    Log.m29500d("SimpleCache", "Failed to update index with new touch timestamp.");
                 }
             } else {
                 z = true;
@@ -322,7 +322,7 @@ public final class C9484s implements Cache {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Failed to remove file index entry for: ");
                     sb.append(name);
-                    C9563q.m29500d("SimpleCache", sb.toString());
+                    Log.m29500d("SimpleCache", sb.toString());
                 }
             }
             this.f22073c.mo24533e(b.f22041b);
@@ -340,7 +340,7 @@ public final class C9484s implements Cache {
                 m29167c(this.f22071a);
             } catch (IOException e) {
                 try {
-                    C9563q.m29496a("SimpleCache", "Storing index file failed", e);
+                    Log.m29496a("SimpleCache", "Storing index file failed", e);
                     m29167c(this.f22071a);
                 } catch (Throwable th) {
                     m29167c(this.f22071a);
@@ -573,7 +573,7 @@ public final class C9484s implements Cache {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Malformed UID file: ");
                     sb.append(file);
-                    C9563q.m29497b("SimpleCache", sb.toString());
+                    Log.m29497b("SimpleCache", sb.toString());
                     file.delete();
                 }
             } else {

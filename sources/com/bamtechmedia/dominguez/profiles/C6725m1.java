@@ -13,7 +13,7 @@ import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p299m.C7543f.C7544a;
 import p163g.p201e.p203b.p299m.C7547h;
@@ -33,7 +33,7 @@ import p520io.reactivex.functions.C11945a;
 import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000p\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0005\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001*B=\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010¢\u0006\u0002\u0010\u0011J\u0006\u0010\u0012\u001a\u00020\u0013J\u0006\u0010\u0014\u001a\u00020\u0013J\u0016\u0010\u0015\u001a\u00020\u00162\f\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u00190\u0018H\u0002J\u0006\u0010\u001a\u001a\u00020\u0013J$\u0010\u001b\u001a\u0010\u0012\f\b\u0001\u0012\b\u0012\u0004\u0012\u00020\u00190\u00180\u001c2\f\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u001e0\u0018H\u0002J\u0006\u0010\u001f\u001a\u00020\u0016J\u000e\u0010 \u001a\u00020\u00162\u0006\u0010!\u001a\u00020\u001eJ@\u0010\"\u001a\u00020\u00132\u0006\u0010!\u001a\u00020\u001e2\b\b\u0002\u0010#\u001a\u00020$2\b\b\u0002\u0010%\u001a\u00020&2\b\b\u0002\u0010'\u001a\u00020&2\b\b\u0002\u0010(\u001a\u00020$2\b\b\u0002\u0010)\u001a\u00020&R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000¨\u0006+"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/profiles/ProfilesViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/profiles/ProfilesViewModel$State;", "profilesRepository", "Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;", "avatarsRepository", "Lcom/bamtechmedia/dominguez/profiles/AvatarsRepository;", "languageSwitcher", "Lcom/bamtechmedia/dominguez/dictionaries/LanguageSwitcher;", "collectionInvalidator", "Lcom/bamtechmedia/dominguez/collections/CollectionInvalidator;", "dialogRouter", "Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;", "errorLocalization", "Lcom/bamtechmedia/dominguez/error/ErrorLocalization;", "avatarImages", "Lcom/bamtechmedia/dominguez/profiles/AvatarImages;", "(Lcom/bamtechmedia/dominguez/profiles/ProfilesRepository;Lcom/bamtechmedia/dominguez/profiles/AvatarsRepository;Lcom/bamtechmedia/dominguez/dictionaries/LanguageSwitcher;Lcom/bamtechmedia/dominguez/collections/CollectionInvalidator;Lcom/bamtechmedia/dominguez/dialogs/DialogRouter;Lcom/bamtechmedia/dominguez/error/ErrorLocalization;Lcom/bamtechmedia/dominguez/profiles/AvatarImages;)V", "clearProfileDependentCollectionsCache", "", "clearProfiles", "downloadAvatarImages", "Lio/reactivex/Completable;", "profileAvatarList", "", "Lcom/bamtechmedia/dominguez/profiles/Avatar;", "fetchProfilesState", "loadAvatars", "Lio/reactivex/Single;", "profiles", "Lcom/bamtechmedia/dominguez/profiles/Profile;", "refreshProfiles", "selectProfile", "profile", "update", "profileName", "", "kidsOnly", "", "isAutoPlay", "avatarId", "userSelected", "State", "profiles_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.profiles.m1 */
@@ -192,9 +192,9 @@ public final class C6725m1 extends C5741g<C6726a> {
             if (this != obj) {
                 if (obj instanceof C6726a) {
                     C6726a aVar = (C6726a) obj;
-                    if (C12880j.m40224a((Object) this.f15098b, (Object) aVar.f15098b) && C12880j.m40224a((Object) this.f15099c, (Object) aVar.f15099c)) {
+                    if (Intrinsics.areEqual((Object) this.f15098b, (Object) aVar.f15098b) && Intrinsics.areEqual((Object) this.f15099c, (Object) aVar.f15099c)) {
                         if (this.f15100d == aVar.f15100d) {
-                            if (!(this.f15101e == aVar.f15101e) || !C12880j.m40224a((Object) this.f15102f, (Object) aVar.f15102f)) {
+                            if (!(this.f15101e == aVar.f15101e) || !Intrinsics.areEqual((Object) this.f15102f, (Object) aVar.f15102f)) {
                                 return false;
                             }
                         }
@@ -298,7 +298,7 @@ public final class C6725m1 extends C5741g<C6726a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "error loading avatars", new Object[0]);
+            Timber.m44528b(th, "error loading avatars", new Object[0]);
         }
     }
 
@@ -417,7 +417,7 @@ public final class C6725m1 extends C5741g<C6726a> {
             public final C6726a invoke(C6726a aVar) {
                 C7614e b = this.f15112c.f15110c.f15095f;
                 Throwable th = this.f15111U;
-                C12880j.m40222a((Object) th, "error");
+                Intrinsics.checkReturnedValueIsNotNull((Object) th, "error");
                 return C6726a.m20798a(aVar, null, null, false, false, b.mo20538b(th), 11, null);
             }
         }
@@ -428,7 +428,7 @@ public final class C6725m1 extends C5741g<C6726a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44530c(th, "error loading profiles", new Object[0]);
+            Timber.m44530c(th, "error loading profiles", new Object[0]);
             this.f15110c.updateState(new C6735a(this, th));
         }
     }
@@ -483,7 +483,7 @@ public final class C6725m1 extends C5741g<C6726a> {
         /* renamed from: a */
         public final void accept(Throwable th) {
             C7614e b = this.f15114c.f15095f;
-            C12880j.m40222a((Object) th, "error");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "error");
             C7619i b2 = b.mo20538b(th);
             if (!(th instanceof BadRequestException)) {
                 String d = b2.mo20546d();
@@ -599,9 +599,9 @@ public final class C6725m1 extends C5741g<C6726a> {
     /* renamed from: A */
     public final void mo19441A() {
         Flowable a = this.f15090a.mo19378a(true).mo30094d(new C6729d(this)).mo30069a((C11952h<? super T>) C6731e.f15107c);
-        C12880j.m40222a((Object) a, "profilesRepository.profi…air.second.isNotEmpty() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "profilesRepository.profi…air.second.isNotEmpty() }");
         Object a2 = a.mo30079a((C11932e<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11842x) a2).mo29927a(new C6732f(this), new C6734g(this));
     }
 
@@ -624,14 +624,14 @@ public final class C6725m1 extends C5741g<C6726a> {
             arrayList.add(j.mo19364j());
         }
         Single<? extends List<C6653e>> a = iVar.mo19405a((List<String>) arrayList).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C6736h<Object,Object>(this));
-        C12880j.m40222a((Object) a, "avatarsRepository\n      …it).toSingleDefault(it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "avatarsRepository\n      …it).toSingleDefault(it) }");
         return a;
     }
 
     /* renamed from: a */
     public final Completable mo19442a(C6626c0 c0Var) {
         Completable c = this.f15090a.mo19375a(c0Var).mo30036a((Consumer<? super Throwable>) new C6737i<Object>(this)).mo30050b((C11945a) new C6739j(this)).mo30034a((CompletableSource) this.f15092c.mo18350a(c0Var.mo19352P().mo19792X())).mo30034a((CompletableSource) Completable.m38166c((C11945a) new C6740k(this))).mo30052c((Consumer<? super Disposable>) new C6742l<Object>(this));
-        C12880j.m40222a((Object) c, "profilesRepository.setAc…= true, error = null) } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "profilesRepository.setAc…= true, error = null) } }");
         return c;
     }
 
@@ -643,7 +643,7 @@ public final class C6725m1 extends C5741g<C6726a> {
             arrayList.add(this.f15096g.mo19348a(a));
         }
         Completable f = Completable.m38167c((Iterable<? extends CompletableSource>) arrayList).mo30036a((Consumer<? super Throwable>) C6728c.f15104c).mo30055f();
-        C12880j.m40222a((Object) f, "Completable.mergeDelayEr…       .onErrorComplete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) f, "Completable.mergeDelayEr…       .onErrorComplete()");
         return f;
     }
 }

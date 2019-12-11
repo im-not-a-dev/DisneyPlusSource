@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.KClassImpl.Data;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
@@ -32,12 +32,12 @@ final class KClassImpl$Data$supertypes$2 extends C12881k implements Function0<Li
     public final List<KTypeImpl> invoke() {
         boolean z;
         TypeConstructor typeConstructor = this.this$0.getDescriptor().getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "descriptor.typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "descriptor.typeConstructor");
         Collection<KotlinType> supertypes = typeConstructor.getSupertypes();
-        C12880j.m40222a((Object) supertypes, "descriptor.typeConstructor.supertypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "descriptor.typeConstructor.supertypes");
         ArrayList arrayList = new ArrayList(supertypes.size());
         for (KotlinType kotlinType : supertypes) {
-            C12880j.m40222a((Object) kotlinType, "kotlinType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) kotlinType, "kotlinType");
             arrayList.add(new KTypeImpl(kotlinType, new KClassImpl$Data$supertypes$2$$special$$inlined$mapTo$lambda$1(kotlinType, this)));
         }
         if (!KotlinBuiltIns.isSpecialClassWithNoSupertypes(this.this$0.getDescriptor())) {
@@ -49,9 +49,9 @@ final class KClassImpl$Data$supertypes$2 extends C12881k implements Function0<Li
                         break;
                     }
                     ClassDescriptor classDescriptorForType = DescriptorUtils.getClassDescriptorForType(((KTypeImpl) it.next()).getType());
-                    C12880j.m40222a((Object) classDescriptorForType, "DescriptorUtils.getClassDescriptorForType(it.type)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) classDescriptorForType, "DescriptorUtils.getClassDescriptorForType(it.type)");
                     ClassKind kind = classDescriptorForType.getKind();
-                    C12880j.m40222a((Object) kind, "DescriptorUtils.getClass…ptorForType(it.type).kind");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) kind, "DescriptorUtils.getClass…ptorForType(it.type).kind");
                     if (kind == ClassKind.INTERFACE || kind == ClassKind.ANNOTATION_CLASS) {
                         z = true;
                         continue;
@@ -67,7 +67,7 @@ final class KClassImpl$Data$supertypes$2 extends C12881k implements Function0<Li
             }
             if (z2) {
                 SimpleType anyType = DescriptorUtilsKt.getBuiltIns(this.this$0.getDescriptor()).getAnyType();
-                C12880j.m40222a((Object) anyType, "descriptor.builtIns.anyType");
+                Intrinsics.checkReturnedValueIsNotNull((Object) anyType, "descriptor.builtIns.anyType");
                 arrayList.add(new KTypeImpl(anyType, C129133.INSTANCE));
             }
         }

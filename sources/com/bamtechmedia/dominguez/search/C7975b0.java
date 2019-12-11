@@ -24,7 +24,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -35,7 +35,7 @@ import p163g.p503n.p504a.C11844z;
 import p520io.reactivex.C11957k;
 import p520io.reactivex.C11974s;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000¦\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\u0003\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u0000 L2\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u00032\u00020\u00042\u00020\u00052\u00020\u0006:\u0003KLMBK\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0012\u0012\u0006\u0010\u0013\u001a\u00020\u0014\u0012\f\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\u00170\u0016¢\u0006\u0002\u0010\u0018J\u0010\u0010\u001f\u001a\u00020 2\u0006\u0010!\u001a\u00020\u001aH\u0016J\u0006\u0010\"\u001a\u00020#J\u0012\u0010$\u001a\u00020#2\b\u0010%\u001a\u0004\u0018\u00010\u001aH\u0002J\b\u0010&\u001a\u00020#H\u0002J\b\u0010'\u001a\u00020 H\u0002J\u0006\u0010(\u001a\u00020#J\b\u0010)\u001a\u00020 H\u0016J\u0010\u0010*\u001a\u00020 2\u0006\u0010+\u001a\u00020,H\u0016J\u001c\u0010-\u001a\u00020 2\n\u0010.\u001a\u0006\u0012\u0002\b\u00030/2\u0006\u00100\u001a\u000201H\u0016J\u0016\u00102\u001a\u00020 2\u0006\u00103\u001a\u00020\u001a2\u0006\u00104\u001a\u00020#J\u0018\u00105\u001a\u00020 2\u0006\u00106\u001a\u0002072\u0006\u00108\u001a\u000201H\u0002J\u0018\u00109\u001a\u00020 2\u0006\u0010:\u001a\u00020;2\u0006\u00108\u001a\u000201H\u0002J\u0016\u0010<\u001a\u00020 2\f\u0010.\u001a\b\u0012\u0004\u0012\u00020,0/H\u0016J\u0018\u0010=\u001a\u00020 2\u0006\u00103\u001a\u00020\u001a2\b\b\u0002\u0010>\u001a\u00020#J\u0016\u0010?\u001a\u00020 2\u0006\u00103\u001a\u00020\u001a2\u0006\u0010@\u001a\u00020#J\u0006\u0010A\u001a\u00020 J\b\u0010B\u001a\u00020#H\u0002J\u0010\u0010C\u001a\u00020 2\u0006\u0010D\u001a\u00020EH\u0002J\u0016\u0010F\u001a\u00020 2\f\u0010G\u001a\b\u0012\u0004\u0012\u00020I0HH\u0002J\u0010\u0010J\u001a\u00020 2\u0006\u0010:\u001a\u00020;H\u0002R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0019\u001a\u00020\u001a8BX\u0004¢\u0006\u0006\u001a\u0004\b\u001b\u0010\u001cR\u0014\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\u00170\u0016X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u001d\u001a\u00020\u001a8BX\u0004¢\u0006\u0006\u001a\u0004\b\u001e\u0010\u001cR\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0004¢\u0006\u0002\n\u0000¨\u0006N"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/search/SearchViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/search/SearchViewModel$State;", "Lcom/bamtechmedia/dominguez/search/DeleteRecentSearchOnClickListener;", "Lcom/bamtechmedia/dominguez/collections/items/ShelfBindListener;", "Lcom/bamtechmedia/dominguez/core/content/paging/PagingListener;", "Lcom/bamtechmedia/dominguez/collections/SupplementalItemClickListener;", "collectionsRepository", "Lcom/bamtechmedia/dominguez/core/content/collections/CollectionsRepository;", "slugProvider", "Lcom/bamtechmedia/dominguez/core/content/collections/SlugProvider;", "searchRepository", "Lcom/bamtechmedia/dominguez/search/SearchRepository;", "recentSearchRepository", "Lcom/bamtechmedia/dominguez/search/RecentSearchRepository;", "contentSetRepository", "Lcom/bamtechmedia/dominguez/core/content/sets/ContentSetDataSource;", "searchAnalytics", "Lcom/bamtechmedia/dominguez/search/SearchAnalytics;", "transactionIdProvider", "Lcom/bamtechmedia/dominguez/analytics/TransactionIdProvider;", "keyboardStateOptional", "Lcom/google/common/base/Optional;", "Lcom/bamtechmedia/dominguez/keyboard/KeyboardStateListener;", "(Lcom/bamtechmedia/dominguez/core/content/collections/CollectionsRepository;Lcom/bamtechmedia/dominguez/core/content/collections/SlugProvider;Lcom/bamtechmedia/dominguez/search/SearchRepository;Lcom/bamtechmedia/dominguez/search/RecentSearchRepository;Lcom/bamtechmedia/dominguez/core/content/sets/ContentSetDataSource;Lcom/bamtechmedia/dominguez/search/SearchAnalytics;Lcom/bamtechmedia/dominguez/analytics/TransactionIdProvider;Lcom/google/common/base/Optional;)V", "exploreTransactionId", "", "getExploreTransactionId", "()Ljava/lang/String;", "searchTransactionId", "getSearchTransactionId", "deleteRecentSearch", "", "search", "inRecentSearchesWithKeyboard", "", "isNewSearchQuery", "newQueryText", "keyboardOpenWhenLeavingExplore", "loadExploreCollection", "onBackPressed", "onCleared", "onCollectionItemClicked", "asset", "Lcom/bamtechmedia/dominguez/core/content/assets/Asset;", "onPageItemBound", "list", "Lcom/bamtechmedia/dominguez/core/content/paging/PagedList;", "pagedListPosition", "", "onSearchBoxStatusChanged", "queryText", "hasFocus", "onSearchResultBound", "searchResults", "Lcom/bamtechmedia/dominguez/search/SearchRepository$SearchResults;", "positionInSet", "onSetItemBound", "set", "Lcom/bamtechmedia/dominguez/core/content/sets/ContentSet;", "onShelfItemBound", "performSearch", "override", "retrySearch", "searchHasFocus", "returnToExplore", "shouldReturnToExplore", "updateLastError", "throwable", "", "updateRecentSearches", "recentSearches", "", "Lcom/bamtechmedia/dominguez/search/RecentSearch;", "updateSet", "ActiveViewState", "Companion", "State", "search_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.search.b0 */
@@ -277,8 +277,8 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
             if (this != obj) {
                 if (obj instanceof C7980e) {
                     C7980e eVar = (C7980e) obj;
-                    if (C12880j.m40224a((Object) this.f17153a, (Object) eVar.f17153a) && C12880j.m40224a((Object) this.f17154b, (Object) eVar.f17154b) && C12880j.m40224a((Object) this.f17155c, (Object) eVar.f17155c) && C12880j.m40224a((Object) this.f17156d, (Object) eVar.f17156d) && C12880j.m40224a((Object) this.f17157e, (Object) eVar.f17157e)) {
-                        if (!(this.f17158f == eVar.f17158f) || !C12880j.m40224a((Object) this.f17159g, (Object) eVar.f17159g)) {
+                    if (Intrinsics.areEqual((Object) this.f17153a, (Object) eVar.f17153a) && Intrinsics.areEqual((Object) this.f17154b, (Object) eVar.f17154b) && Intrinsics.areEqual((Object) this.f17155c, (Object) eVar.f17155c) && Intrinsics.areEqual((Object) this.f17156d, (Object) eVar.f17156d) && Intrinsics.areEqual((Object) this.f17157e, (Object) eVar.f17157e)) {
+                        if (!(this.f17158f == eVar.f17158f) || !Intrinsics.areEqual((Object) this.f17159g, (Object) eVar.f17159g)) {
                             return false;
                         }
                     }
@@ -875,7 +875,7 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
         this.f17147a0 = optional;
         createState(f17140b0);
         Object a = this.f17143W.mo21028a().mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C8022d0(new C7976a(this)), new C8022d0(new C7977b(this)));
         m23240C();
     }
@@ -901,7 +901,7 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
     /* renamed from: C */
     private final void m23240C() {
         Object a = this.f17148c.mo13367a(this.f17141U.mo13388b()).mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C7981f(this), new C8022d0(new C7983g(this)));
     }
 
@@ -914,14 +914,14 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
     public final void mo20958b(String str, boolean z) {
         if (m23251b(str) || z) {
             DateTime now = DateTime.now();
-            C12880j.m40222a((Object) now, "DateTime.now()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) now, "DateTime.now()");
             long millis = now.getMillis();
             Object a = this.f17142V.mo20861a(str, m23238A()).mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-            C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+            Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
             ((C11792d0) a).mo29920a(new C7995r(this, str, millis), new C8022d0(new C7997s(this)));
             return;
         }
-        C14100a.m44532e("## SEARCH -> query text is the same as previous...ignoring search", new Object[0]);
+        Timber.m44532e("## SEARCH -> query text is the same as previous...ignoring search", new Object[0]);
     }
 
     /* renamed from: c */
@@ -965,7 +965,7 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
     /* renamed from: b */
     public void mo12599b(C3626b bVar) {
         Object a = this.f17143W.mo21029a(bVar.getTitle()).mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C8022d0(new C7984h(this)), new C8022d0(new C7985i(this)));
     }
 
@@ -988,7 +988,7 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
         if (cVar instanceof ReferenceSet) {
             ReferenceSet referenceSet = (ReferenceSet) cVar;
             Object a = C3767b.m12769a(this.f17144X, referenceSet.mo13604b(), referenceSet.mo13608e(), m23252z(), false, 8, (Object) null).mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-            C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+            Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
             ((C11792d0) a).mo29920a(new C8022d0(new C7993p(this)), new C8022d0(new C7994q(this)));
         }
     }
@@ -996,7 +996,7 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
     /* renamed from: b */
     private final boolean m23251b(String str) {
         C7980e eVar = (C7980e) getCurrentState();
-        return !C12880j.m40224a((Object) eVar != null ? eVar.mo20967d() : null, (Object) str);
+        return !Intrinsics.areEqual((Object) eVar != null ? eVar.mo20967d() : null, (Object) str);
     }
 
     /* renamed from: a */
@@ -1010,7 +1010,7 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
             sb.append("Paging on ");
             sb.append(cVar.getClass());
             sb.append(" is not supported by this ViewModel");
-            C14100a.m44526b(sb.toString(), new Object[0]);
+            Timber.m44526b(sb.toString(), new Object[0]);
         }
     }
 
@@ -1021,7 +1021,7 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
             C3658a b = eVar.mo20965b();
             if (b != null && C3659b.m12473a(b, contentSet)) {
                 Object a = C3767b.m12768a(this.f17144X, contentSet, i, m23252z(), 0, 8, (Object) null).mo30112a((C11957k<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-                C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+                Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
                 ((C11844z) a).mo29929a(new C8022d0(new C7991n(this)), new C8022d0(new C7992o(this)));
             }
         }
@@ -1040,7 +1040,7 @@ public final class C7975b0 extends C5741g<C7980e> implements C8023e, C3374o, C37
             String d = eVar.mo20967d();
             if (d != null) {
                 Object a = SearchRepository.m23172a(this.f17142V, d, bVar, i, m23238A(), 0, 16, null).mo30112a((C11957k<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-                C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+                Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
                 ((C11844z) a).mo29929a(new C7988l(this, bVar, i), new C8020c0(new C7990m(this)));
             }
         }

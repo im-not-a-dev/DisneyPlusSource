@@ -16,7 +16,7 @@ import java.util.ListIterator;
 import java.util.function.UnaryOperator;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12871f;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.p589f0.C12872a;
 import p163g.p500m.p501a.C11724g;
 import p163g.p500m.p501a.C11733i;
@@ -144,7 +144,7 @@ public final class SeriesBundleEpisodes implements Parcelable, C6044b, List<C368
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f13921U, (java.lang.Object) r3.f13921U) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f13921U, (java.lang.Object) r3.f13921U) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -156,11 +156,11 @@ public final class SeriesBundleEpisodes implements Parcelable, C6044b, List<C368
             com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes r3 = (com.bamtechmedia.dominguez.detail.series.models.SeriesBundleEpisodes) r3
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.DmcEpisode> r0 = r2.f13922c
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.DmcEpisode> r1 = r3.f13922c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             com.bamtechmedia.dominguez.core.content.paging.EpisodePagingMetaData r0 = r2.f13921U
             com.bamtechmedia.dominguez.core.content.paging.EpisodePagingMetaData r3 = r3.f13921U
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:
@@ -181,7 +181,7 @@ public final class SeriesBundleEpisodes implements Parcelable, C6044b, List<C368
 
     public C3685g get(int i) {
         Object obj = this.f13922c.get(i);
-        C12880j.m40222a(obj, "get(...)");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "get(...)");
         return (C3685g) obj;
     }
 

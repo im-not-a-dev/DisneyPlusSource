@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 import p096e.p155q.p156a.p157a.C4339d;
 import p096e.p155q.p156a.p157a.C4339d.C4340a;
@@ -55,7 +55,7 @@ public final class C3219c implements C3216a {
     public final C4339d m11178c() {
         Object obj;
         List a = this.f8192b.mo15225a();
-        C12880j.m40222a((Object) a, "previewChannelHelper.allChannels");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "previewChannelHelper.allChannels");
         Iterator it = a.iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -64,8 +64,8 @@ public final class C3219c implements C3216a {
             }
             obj = it.next();
             C4339d dVar = (C4339d) obj;
-            C12880j.m40222a((Object) dVar, "it");
-            if (C12880j.m40224a((Object) dVar.mo15200b(), (Object) "watchlist_channel")) {
+            Intrinsics.checkReturnedValueIsNotNull((Object) dVar, "it");
+            if (Intrinsics.areEqual((Object) dVar.mo15200b(), (Object) "watchlist_channel")) {
                 break;
             }
         }
@@ -86,17 +86,17 @@ public final class C3219c implements C3216a {
             aVar.mo15208a(a);
             this.f8192b.mo15221a(aVar.mo15213a());
             C4339d c2 = m11178c();
-            C12880j.m40222a((Object) c2, "channel");
+            Intrinsics.checkReturnedValueIsNotNull((Object) c2, "channel");
             return c2;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
     /* renamed from: a */
     public Single<C4339d> mo12261a() {
         Single<C4339d> c = Single.m38401c((Callable<? extends T>) new C3220a<Object>(this));
-        C12880j.m40222a((Object) c, "Single.fromCallable {\n  …createChannel()\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Single.fromCallable {\n  …createChannel()\n        }");
         return c;
     }
 }

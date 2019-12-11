@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.types.model;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 
 /* compiled from: TypeSystemContext.kt */
@@ -20,7 +20,7 @@ public interface TypeSystemContext extends TypeSystemOptimizationContext {
             }
             if (typeArgumentListMarker instanceof ArgumentList) {
                 Object obj = ((ArgumentList) typeArgumentListMarker).get(i);
-                C12880j.m40222a(obj, "get(index)");
+                Intrinsics.checkReturnedValueIsNotNull(obj, "get(index)");
                 return (TypeArgumentMarker) obj;
             }
             StringBuilder sb = new StringBuilder();
@@ -86,7 +86,7 @@ public interface TypeSystemContext extends TypeSystemOptimizationContext {
             L_0x0013:
                 return r0
             L_0x0014:
-                kotlin.jvm.internal.C12880j.m40220a()
+                kotlin.jvm.internal.Intrinsics.throwNpe()
                 r1 = 0
                 throw r1
             */
@@ -133,7 +133,7 @@ public interface TypeSystemContext extends TypeSystemOptimizationContext {
             L_0x0013:
                 return r0
             L_0x0014:
-                kotlin.jvm.internal.C12880j.m40220a()
+                kotlin.jvm.internal.Intrinsics.throwNpe()
                 r1 = 0
                 throw r1
             */

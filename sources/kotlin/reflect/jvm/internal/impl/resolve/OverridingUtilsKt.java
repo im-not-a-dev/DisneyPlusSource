@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.utils.SmartSet;
 
@@ -27,13 +27,13 @@ public final class OverridingUtilsKt {
             Object f = C13199w.m40589f((List) linkedList);
             SmartSet create2 = SmartSet.Companion.create();
             Collection extractMembersOverridableInBothWays = OverridingUtil.extractMembersOverridableInBothWays(f, linkedList, function1, new C13101x410e6287(create2));
-            C12880j.m40222a((Object) extractMembersOverridableInBothWays, "OverridingUtil.extractMe…nflictedHandles.add(it) }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) extractMembersOverridableInBothWays, "OverridingUtil.extractMe…nflictedHandles.add(it) }");
             if (extractMembersOverridableInBothWays.size() != 1 || !create2.isEmpty()) {
                 Object selectMostSpecificMember = OverridingUtil.selectMostSpecificMember(extractMembersOverridableInBothWays, function1);
-                C12880j.m40222a(selectMostSpecificMember, "OverridingUtil.selectMos…roup, descriptorByHandle)");
+                Intrinsics.checkReturnedValueIsNotNull(selectMostSpecificMember, "OverridingUtil.selectMos…roup, descriptorByHandle)");
                 CallableDescriptor callableDescriptor = (CallableDescriptor) function1.invoke(selectMostSpecificMember);
                 for (Object next : extractMembersOverridableInBothWays) {
-                    C12880j.m40222a(next, "it");
+                    Intrinsics.checkReturnedValueIsNotNull(next, "it");
                     if (!OverridingUtil.isMoreSpecific(callableDescriptor, (CallableDescriptor) function1.invoke(next))) {
                         create2.add(next);
                     }
@@ -44,7 +44,7 @@ public final class OverridingUtilsKt {
                 create.add(selectMostSpecificMember);
             } else {
                 Object m = C13199w.m40602m(extractMembersOverridableInBothWays);
-                C12880j.m40222a(m, "overridableGroup.single()");
+                Intrinsics.checkReturnedValueIsNotNull(m, "overridableGroup.single()");
                 create.add(m);
             }
         }

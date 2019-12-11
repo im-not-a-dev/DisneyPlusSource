@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.renderer;
 
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.name.FqNameUnsafe;
 import kotlin.reflect.jvm.internal.impl.name.Name;
 
@@ -12,7 +12,7 @@ public final class RenderingUtilsKt {
         if (shouldBeEscaped(name)) {
             StringBuilder sb = new StringBuilder();
             String asString = name.asString();
-            C12880j.m40222a((Object) asString, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) asString, str);
             StringBuilder sb2 = new StringBuilder();
             sb2.append(String.valueOf('`'));
             sb2.append(asString);
@@ -21,7 +21,7 @@ public final class RenderingUtilsKt {
             return sb.toString();
         }
         String asString2 = name.asString();
-        C12880j.m40222a((Object) asString2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString2, str);
         return asString2;
     }
 
@@ -34,7 +34,7 @@ public final class RenderingUtilsKt {
             sb.append(render(name));
         }
         String sb2 = sb.toString();
-        C12880j.m40222a((Object) sb2, "StringBuilder().apply(builderAction).toString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
         return sb2;
     }
 
@@ -51,7 +51,7 @@ public final class RenderingUtilsKt {
         L_0x0008:
             java.lang.String r5 = r5.asString()
             java.lang.String r0 = "asString()"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r0)
             java.util.Set<java.lang.String> r0 = kotlin.reflect.jvm.internal.impl.renderer.KeywordStringsGenerated.KEYWORDS
             boolean r0 = r0.contains(r5)
             r2 = 1
@@ -90,7 +90,7 @@ public final class RenderingUtilsKt {
 
     public static final String render(FqNameUnsafe fqNameUnsafe) {
         List pathSegments = fqNameUnsafe.pathSegments();
-        C12880j.m40222a((Object) pathSegments, "pathSegments()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) pathSegments, "pathSegments()");
         return renderFqName(pathSegments);
     }
 }

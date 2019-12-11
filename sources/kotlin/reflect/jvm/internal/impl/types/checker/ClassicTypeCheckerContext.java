@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.types.checker;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.resolve.constants.IntegerLiteralTypeConstructor;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.SupertypesPolicy.DoCustomTransform;
@@ -297,6 +297,6 @@ public class ClassicTypeCheckerContext extends AbstractTypeCheckerContext implem
         if (typeConstructor2 instanceof IntegerLiteralTypeConstructor) {
             return ((IntegerLiteralTypeConstructor) typeConstructor2).checkConstructor(typeConstructor);
         }
-        return C12880j.m40224a((Object) typeConstructor, (Object) typeConstructor2);
+        return Intrinsics.areEqual((Object) typeConstructor, (Object) typeConstructor2);
     }
 }

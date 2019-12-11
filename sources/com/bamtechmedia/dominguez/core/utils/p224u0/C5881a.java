@@ -4,7 +4,7 @@ import android.view.View;
 import androidx.recyclerview.widget.C0892p;
 import androidx.recyclerview.widget.C0895q;
 import androidx.recyclerview.widget.RecyclerView.C0808o;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.u0.a */
 /* compiled from: CenterPagerSnapHelper.kt */
@@ -22,7 +22,7 @@ public final class C5881a extends C0895q {
         if (pVar != null) {
             return pVar;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

@@ -7,8 +7,8 @@ import android.os.Message;
 import android.os.SystemClock;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9547i0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 
@@ -150,7 +150,7 @@ public final class C9442a0 implements C9452b0 {
                         try {
                             this.f21963W.mo23559a(this.f21961U, elapsedRealtime, j2);
                         } catch (RuntimeException e) {
-                            C9563q.m29496a("LoadTask", "Unexpected exception handling load completed", e);
+                            Log.m29496a("LoadTask", "Unexpected exception handling load completed", e);
                             C9442a0.this.f21958c = new C9450h(e);
                         }
                     } else if (i2 == 3) {
@@ -202,17 +202,17 @@ public final class C9442a0 implements C9452b0 {
                     sendEmptyMessage(2);
                 }
             } catch (Exception e2) {
-                C9563q.m29496a(str, "Unexpected exception loading stream", e2);
+                Log.m29496a(str, "Unexpected exception loading stream", e2);
                 if (!this.f21968b0) {
                     obtainMessage(3, new C9450h(e2)).sendToTarget();
                 }
             } catch (OutOfMemoryError e3) {
-                C9563q.m29496a(str, "OutOfMemory error loading stream", e3);
+                Log.m29496a(str, "OutOfMemory error loading stream", e3);
                 if (!this.f21968b0) {
                     obtainMessage(3, new C9450h(e3)).sendToTarget();
                 }
             } catch (Error e4) {
-                C9563q.m29496a(str, "Unexpected error loading stream", e4);
+                Log.m29496a(str, "Unexpected error loading stream", e4);
                 if (!this.f21968b0) {
                     obtainMessage(4, e4).sendToTarget();
                 }
@@ -316,7 +316,7 @@ public final class C9442a0 implements C9452b0 {
     }
 
     public C9442a0(String str) {
-        this.f21956a = C9554k0.m29449e(str);
+        this.f21956a = Util.m29449e(str);
     }
 
     /* renamed from: c */

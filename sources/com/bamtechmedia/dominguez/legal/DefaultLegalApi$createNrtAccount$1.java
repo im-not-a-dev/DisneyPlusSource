@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.legal;
 import com.bamtechmedia.dominguez.core.utils.p223t0.C5879c;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Request;
 import okhttp3.Request.C14113a;
 import p163g.p500m.p501a.C11725h;
@@ -35,12 +35,12 @@ final class DefaultLegalApi$createNrtAccount$1<T, R> implements Function<String,
         aVar.mo35840a("Cache-Control", "no-cache");
         String str2 = DefaultLegalApi.MIME_TYPE_JSON;
         aVar.mo35840a(DefaultLegalApi.ACCEPT_HEADER, str2);
-        C12880j.m40222a((Object) aVar, "Request.Builder()\n      …T_HEADER, MIME_TYPE_JSON)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "Request.Builder()\n      …T_HEADER, MIME_TYPE_JSON)");
         String json = this.$adapter.toJson(createNrtAccountInput);
-        C12880j.m40222a((Object) json, "adapter.toJson(createNrtInput)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) json, "adapter.toJson(createNrtInput)");
         C5879c.m18934a(aVar, json, str2);
         Request a = aVar.mo35846a();
-        C12880j.m40222a((Object) a, "Request.Builder()\n      …                 .build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Request.Builder()\n      …                 .build()");
         return C5879c.m18933a(a, this.this$0.okHttpClient).mo30217b((Function<? super T, ? extends CompletableSource>) C61121.INSTANCE);
     }
 }

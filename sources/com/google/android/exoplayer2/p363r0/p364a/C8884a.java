@@ -29,7 +29,7 @@ import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.Player.EventListener;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9555l;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
@@ -51,7 +51,7 @@ public final class C8884a {
     public final MediaSessionCompat f19048a;
 
     /* renamed from: b */
-    private final Looper f19049b = C9554k0.m29432b();
+    private final Looper f19049b = Util.m29432b();
 
     /* renamed from: c */
     private final C8887c f19050c = new C8887c();

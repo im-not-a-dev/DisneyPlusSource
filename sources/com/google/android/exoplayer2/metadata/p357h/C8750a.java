@@ -5,7 +5,7 @@ import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.C8738a;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.metadata.h.a */
@@ -55,17 +55,17 @@ public final class C8750a implements C8737b {
     C8750a(Parcel parcel) {
         this.f18587c = parcel.readInt();
         String readString = parcel.readString();
-        C9554k0.m29394a(readString);
+        Util.castNonNull(readString);
         this.f18580U = readString;
         String readString2 = parcel.readString();
-        C9554k0.m29394a(readString2);
+        Util.castNonNull(readString2);
         this.f18581V = readString2;
         this.f18582W = parcel.readInt();
         this.f18583X = parcel.readInt();
         this.f18584Y = parcel.readInt();
         this.f18585Z = parcel.readInt();
         byte[] createByteArray = parcel.createByteArray();
-        C9554k0.m29394a(createByteArray);
+        Util.castNonNull(createByteArray);
         this.f18586a0 = createByteArray;
     }
 

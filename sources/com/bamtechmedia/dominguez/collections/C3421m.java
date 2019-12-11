@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.collections;
 import com.bamtechmedia.dominguez.core.content.collections.C3676k;
 import com.bamtechmedia.dominguez.core.content.sets.ContentSetType;
 import kotlin.C13145v;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11907a;
 import p520io.reactivex.Flowable;
 import p520io.reactivex.subjects.C11983e;
@@ -25,13 +25,13 @@ public final class C3421m implements C3419l {
     public C3421m() {
         PublishSubject q = PublishSubject.m38553q();
         String str = "PublishSubject.create()";
-        C12880j.m40222a((Object) q, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) q, str);
         this.f8647a = q;
         PublishSubject q2 = PublishSubject.m38553q();
-        C12880j.m40222a((Object) q2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) q2, str);
         this.f8648b = q2;
         PublishSubject q3 = PublishSubject.m38553q();
-        C12880j.m40222a((Object) q3, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) q3, str);
         this.f8649c = q3;
     }
 
@@ -43,14 +43,14 @@ public final class C3421m implements C3419l {
     /* renamed from: b */
     public Flowable<C13145v> mo12596b() {
         Flowable<C13145v> a = this.f8649c.mo30135a(C11907a.LATEST);
-        C12880j.m40222a((Object) a, "evictAllSubject.toFlowable(LATEST)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "evictAllSubject.toFlowable(LATEST)");
         return a;
     }
 
     /* renamed from: c */
     public Flowable<C3676k> mo12597c() {
         Flowable<C3676k> a = this.f8647a.mo30135a(C11907a.LATEST);
-        C12880j.m40222a((Object) a, "slugSubject.toFlowable(LATEST)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "slugSubject.toFlowable(LATEST)");
         return a;
     }
 
@@ -67,7 +67,7 @@ public final class C3421m implements C3419l {
     /* renamed from: a */
     public Flowable<ContentSetType> mo12593a() {
         Flowable<ContentSetType> a = this.f8648b.mo30135a(C11907a.LATEST);
-        C12880j.m40222a((Object) a, "setTypeSubject.toFlowable(LATEST)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "setTypeSubject.toFlowable(LATEST)");
         return a;
     }
 }

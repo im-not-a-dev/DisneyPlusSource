@@ -7,7 +7,7 @@ import java.util.concurrent.Callable;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p503n.p504a.C11786a0;
 import p163g.p503n.p504a.C11790c0;
 import p163g.p503n.p504a.C11793e;
@@ -21,7 +21,7 @@ import p520io.reactivex.functions.Function;
 import p520io.reactivex.p527w.p529c.C11992a;
 import p520io.reactivex.subjects.C11983e;
 import p520io.reactivex.subjects.C11984f;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\b&\u0018\u0000*\b\b\u0000\u0010\u0001*\u00020\u00022\u00020\u0003:\u00011B\u0017\u0012\u0010\b\u0002\u0010\u0004\u001a\n\u0012\u0004\u0012\u00028\u0000\u0018\u00010\u0005¢\u0006\u0002\u0010\u0006J\u0015\u0010\u001f\u001a\u00020 2\u0006\u0010\u001b\u001a\u00028\u0000H\u0004¢\u0006\u0002\u0010\fJ8\u0010!\u001a\u00020 2\u0006\u0010\"\u001a\u00020#2\b\b\u0002\u0010$\u001a\u00020%2\n\b\u0002\u0010&\u001a\u0004\u0018\u00010'2\u0012\u0010(\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00020 0)J\b\u0010*\u001a\u00020 H\u0016J\u0016\u0010+\u001a\u00020 2\f\u0010,\u001a\b\u0012\u0004\u0012\u00028\u00000\u0005H\u0007J\u0016\u0010-\u001a\u00020 2\f\u0010,\u001a\b\u0012\u0004\u0012\u00028\u00000\u0005H\u0002J\u001a\u0010.\u001a\u00020 2\u0012\u0010/\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u00000)J\u001c\u00100\u001a\u00020 2\u0012\u0010/\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00020 0)H\u0004R*\u0010\b\u001a\u0004\u0018\u00018\u00002\b\u0010\u0007\u001a\u0004\u0018\u00018\u0000@GX\u000e¢\u0006\u0010\n\u0002\u0010\r\u001a\u0004\b\t\u0010\n\"\u0004\b\u000b\u0010\fR&\u0010\u000e\u001a\u0004\u0018\u00010\u000f8\u0000@\u0000X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\u0010\u0010\u0011\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015R(\u0010\u0016\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u00050\u00178\u0006X\u0004¢\u0006\u000e\n\u0000\u0012\u0004\b\u0018\u0010\u0011\u001a\u0004\b\u0019\u0010\u001aR\u0017\u0010\u001b\u001a\b\u0012\u0004\u0012\u00028\u00000\u001c¢\u0006\b\n\u0000\u001a\u0004\b\u001d\u0010\u001e¨\u00062"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "STATE", "", "Lcom/bamtechmedia/dominguez/core/framework/AutoDisposeViewModel;", "initialEvent", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel$Event;", "(Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel$Event;)V", "<set-?>", "currentState", "getCurrentState", "()Ljava/lang/Object;", "setCurrentState", "(Ljava/lang/Object;)V", "Ljava/lang/Object;", "disposable", "Lio/reactivex/disposables/Disposable;", "disposable$annotations", "()V", "getDisposable$core_ui_framework_release", "()Lio/reactivex/disposables/Disposable;", "setDisposable$core_ui_framework_release", "(Lio/reactivex/disposables/Disposable;)V", "events", "Lio/reactivex/subjects/Subject;", "events$annotations", "getEvents", "()Lio/reactivex/subjects/Subject;", "state", "Lio/reactivex/Observable;", "getState", "()Lio/reactivex/Observable;", "createState", "", "observeInLifecycle", "lifecycleOwner", "Landroidx/lifecycle/LifecycleOwner;", "untilEvent", "Landroidx/lifecycle/Lifecycle$Event;", "scheduler", "Lio/reactivex/Scheduler;", "consumer", "Lkotlin/Function1;", "onCleared", "submitEvent", "event", "submitEventInternal", "updateState", "block", "withState", "Event", "core-ui-framework_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.core.framework.g */
@@ -70,7 +70,7 @@ public abstract class C5741g<STATE> extends C5733a {
         /* renamed from: a */
         public Observable<STATE> mo17627a(STATE state) {
             Observable<STATE> a = Observable.m38303a((Callable<? extends T>) new C5744a<Object>(this));
-            C12880j.m40222a((Object) a, "Observable.fromCallable { state }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "Observable.fromCallable { state }");
             return a;
         }
     }
@@ -92,7 +92,7 @@ public abstract class C5741g<STATE> extends C5733a {
             sb.append("Error in ");
             sb.append(this.f13504c.getClass().getSimpleName());
             sb.append(" stream");
-            C14100a.m44528b(th, sb.toString(), new Object[0]);
+            Timber.m44528b(th, sb.toString(), new Object[0]);
         }
     }
 
@@ -120,7 +120,7 @@ public abstract class C5741g<STATE> extends C5733a {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Event failed. Not updating the state: ");
                 sb.append(this.f13506c);
-                C14100a.m44528b(th, sb.toString(), new Object[0]);
+                Timber.m44528b(th, sb.toString(), new Object[0]);
             }
         }
 
@@ -223,7 +223,7 @@ public abstract class C5741g<STATE> extends C5733a {
         /* renamed from: a */
         public Observable<STATE> mo17627a(STATE state) {
             Observable<STATE> a = Observable.m38303a((Callable<? extends T>) new C5752a<Object>(this, state));
-            C12880j.m40222a((Object) a, "Observable.fromCallable …createState\" })\n        }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "Observable.fromCallable …createState\" })\n        }");
             return a;
         }
     }
@@ -245,7 +245,7 @@ public abstract class C5741g<STATE> extends C5733a {
             if (state != null) {
                 function1.invoke(state);
                 Observable<STATE> m = Observable.m38314m();
-                C12880j.m40222a((Object) m, "Observable.empty()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) m, "Observable.empty()");
                 return m;
             }
             throw new IllegalArgumentException("Can not call withState before createState".toString());
@@ -314,11 +314,11 @@ public abstract class C5741g<STATE> extends C5733a {
             rVar = C11992a.m38600a();
         }
         Observable a = b.mo30151a(rVar);
-        C12880j.m40222a((Object) a, "state.distinctUntilChang…dSchedulers.mainThread())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "state.distinctUntilChang…dSchedulers.mainThread())");
         C10541b a2 = C10541b.m33255a(mVar, aVar);
-        C12880j.m40222a((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
         Object a3 = a.mo30161a((C11960n<T, ? extends R>) C11793e.m37930a((C11790c0) a2));
-        C12880j.m40222a(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a3).mo29915a(new C5754h(function1), new C5745c(this));
     }
 
@@ -353,10 +353,10 @@ public abstract class C5741g<STATE> extends C5733a {
 
     public C5741g(C5742a<STATE> aVar) {
         C11983e<C5742a<STATE>> n = C11984f.m38584q().mo30320n();
-        C12880j.m40222a((Object) n, "UnicastSubject.create<Ev…<STATE>>().toSerialized()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) n, "UnicastSubject.create<Ev…<STATE>>().toSerialized()");
         this.events = n;
         Observable<STATE> a = this.events.mo30143a((Function<? super T, ? extends ObservableSource<? extends R>>) new C5746d<Object,Object>(this)).mo30184d((Consumer<? super T>) new C5749e<Object>(this)).mo30160a(1).mo30682a(1, new C5750f(this));
-        C12880j.m40222a((Object) a, "events\n        .concatMa…ct(1) { disposable = it }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "events\n        .concatMa…ct(1) { disposable = it }");
         this.state = a;
         if (aVar != null) {
             submitEventInternal(aVar);

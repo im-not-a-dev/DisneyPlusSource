@@ -9,7 +9,7 @@ import com.bamtech.sdk4.subscription.Subscription;
 import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Single;
@@ -38,13 +38,13 @@ public final class DefaultSubscriptionClient implements SubscriptionClient {
 
     public Single<List<Subscription>> getSubscriptions(ServiceTransaction serviceTransaction, Map<String, String> map) {
         Single<List<Subscription>> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultSubscriptionClient$getSubscriptions$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultSubscriptionClient$getSubscriptions$2<Object,Object>(this, map, serviceTransaction));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…      }\n                }");
         return a;
     }
 
     public Completable linkSubscriptionsFromDevice(ServiceTransaction serviceTransaction, Map<String, String> map) {
         Completable b = this.configurationProvider.getServiceLink(serviceTransaction, DefaultSubscriptionClient$linkSubscriptionsFromDevice$1.INSTANCE).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultSubscriptionClient$linkSubscriptionsFromDevice$2<Object,Object>(this, map, serviceTransaction));
-        C12880j.m40222a((Object) b, "configurationProvider.ge…ement()\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "configurationProvider.ge…ement()\n                }");
         return b;
     }
 }

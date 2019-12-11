@@ -17,7 +17,7 @@ import com.bamtechmedia.dominguez.core.p088i.C3832b;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0007\u0018\u0000 )2\u00020\u0001:\u0001)B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ<\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u00072\u0006\u0010\u001e\u001a\u00020\r2\u0006\u0010\u001f\u001a\u00020 2\u0006\u0010!\u001a\u00020\r2\b\b\u0002\u0010\"\u001a\u00020#2\b\b\u0002\u0010$\u001a\u00020#H\u0002J\u0010\u0010%\u001a\u00020\u001c2\u0006\u0010\u001f\u001a\u00020 H\u0014J\u0016\u0010&\u001a\u00020\u001c2\u0006\u0010'\u001a\u00020\r2\u0006\u0010(\u001a\u00020\rR\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u001e\u0010\u000e\u001a\u00020\r2\u0006\u0010\f\u001a\u00020\r@BX\u000e¢\u0006\b\n\u0000\"\u0004\b\u000f\u0010\u0010R\u000e\u0010\u0011\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0012\u001a\u00020\r8BX\u0004¢\u0006\u0006\u001a\u0004\b\u0013\u0010\u0014R\u000e\u0010\u0015\u001a\u00020\u0016X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\rX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u001e\u0010\u0019\u001a\u00020\r2\u0006\u0010\f\u001a\u00020\r@BX\u000e¢\u0006\b\n\u0000\"\u0004\b\u001a\u0010\u0010¨\u0006*"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/design/widgets/StorageIndicator;", "Landroid/view/View;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "animator", "Landroid/animation/Animator;", "appColor", "value", "", "appPercentage", "setAppPercentage", "(F)V", "freeColor", "freePercentage", "getFreePercentage", "()F", "paint", "Landroid/graphics/Paint;", "radiusInPx", "usedColor", "usedPercentage", "setUsedPercentage", "drawPart", "", "color", "percentage", "canvas", "Landroid/graphics/Canvas;", "bottom", "roundedCornersAtStart", "", "roundedCornersAtEnd", "onDraw", "update", "newUsedPercentage", "newAppPercentage", "Companion", "lib_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* compiled from: StorageIndicator.kt */
@@ -71,7 +71,7 @@ public final class StorageIndicator extends View {
 
         public final void onAnimationUpdate(ValueAnimator valueAnimator) {
             StorageIndicator storageIndicator = this.f13292a;
-            C12880j.m40222a((Object) valueAnimator, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueAnimator, "it");
             Object animatedValue = valueAnimator.getAnimatedValue();
             if (animatedValue != null) {
                 storageIndicator.setUsedPercentage(((Float) animatedValue).floatValue());
@@ -94,7 +94,7 @@ public final class StorageIndicator extends View {
 
         public final void onAnimationUpdate(ValueAnimator valueAnimator) {
             StorageIndicator storageIndicator = this.f13293a;
-            C12880j.m40222a((Object) valueAnimator, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) valueAnimator, "it");
             Object animatedValue = valueAnimator.getAnimatedValue();
             if (animatedValue != null) {
                 storageIndicator.setAppPercentage(((Float) animatedValue).floatValue());
@@ -161,7 +161,7 @@ public final class StorageIndicator extends View {
         paint.setStyle(Style.FILL);
         this.f13289c = paint;
         Resources resources = context.getResources();
-        C12880j.m40222a((Object) resources, "resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "resources");
         this.f13284U = TypedValue.applyDimension(1, 1.0f, resources.getDisplayMetrics());
         Context context2 = context;
         this.f13285V = C5837i.m18835a(context2, C3832b.settingsStorageUsed, null, false, 6, null);

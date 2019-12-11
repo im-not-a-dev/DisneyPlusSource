@@ -9,7 +9,7 @@ import java.util.Set;
 import kotlin.C13142s;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -38,7 +38,7 @@ public final class SubstitutingScope implements MemberScope {
     public SubstitutingScope(MemberScope memberScope, TypeSubstitutor typeSubstitutor) {
         this.workerScope = memberScope;
         TypeSubstitution substitution = typeSubstitutor.getSubstitution();
-        C12880j.m40222a((Object) substitution, "givenSubstitutor.substitution");
+        Intrinsics.checkReturnedValueIsNotNull((Object) substitution, "givenSubstitutor.substitution");
         this.substitutor = CapturedTypeConstructorKt.wrapWithCapturingSubstitution$default(substitution, false, 1, null).buildSubstitutor();
     }
 
@@ -84,7 +84,7 @@ public final class SubstitutingScope implements MemberScope {
             }
             throw new C13142s("null cannot be cast to non-null type D");
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

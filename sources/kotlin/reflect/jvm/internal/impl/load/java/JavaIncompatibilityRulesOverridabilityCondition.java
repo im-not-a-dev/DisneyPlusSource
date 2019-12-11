@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.java;
 import java.util.List;
 import kotlin.C13147x;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
@@ -47,16 +47,16 @@ public final class JavaIncompatibilityRulesOverridabilityCondition implements Ex
             ClassDescriptor classDescriptor = (ClassDescriptor) containingDeclaration;
             if (classDescriptor != null) {
                 List valueParameters = functionDescriptor.getValueParameters();
-                C12880j.m40222a((Object) valueParameters, "f.valueParameters");
+                Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "f.valueParameters");
                 Object k = C13199w.m40599k(valueParameters);
-                C12880j.m40222a(k, "f.valueParameters.single()");
+                Intrinsics.checkReturnedValueIsNotNull(k, "f.valueParameters.single()");
                 ClassifierDescriptor declarationDescriptor = ((ValueParameterDescriptor) k).getType().getConstructor().getDeclarationDescriptor();
                 if (!(declarationDescriptor instanceof ClassDescriptor)) {
                     declarationDescriptor = null;
                 }
                 ClassDescriptor classDescriptor2 = (ClassDescriptor) declarationDescriptor;
                 if (classDescriptor2 != null) {
-                    if (!KotlinBuiltIns.isPrimitiveClass(classDescriptor) || !C12880j.m40224a((Object) DescriptorUtilsKt.getFqNameSafe(classDescriptor), (Object) DescriptorUtilsKt.getFqNameSafe(classDescriptor2))) {
+                    if (!KotlinBuiltIns.isPrimitiveClass(classDescriptor) || !Intrinsics.areEqual((Object) DescriptorUtilsKt.getFqNameSafe(classDescriptor), (Object) DescriptorUtilsKt.getFqNameSafe(classDescriptor2))) {
                         z = false;
                     }
                     return z;
@@ -69,11 +69,11 @@ public final class JavaIncompatibilityRulesOverridabilityCondition implements Ex
             String str = "valueParameterDescriptor.type";
             if (MethodSignatureMappingKt.forceSingleValueParameterBoxing(functionDescriptor) || isPrimitiveCompareTo(functionDescriptor)) {
                 KotlinType type = valueParameterDescriptor.getType();
-                C12880j.m40222a((Object) type, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) type, str);
                 return MethodSignatureMappingKt.mapToJvmType(TypeUtilsKt.makeNullable(type));
             }
             KotlinType type2 = valueParameterDescriptor.getType();
-            C12880j.m40222a((Object) type2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) type2, str);
             return MethodSignatureMappingKt.mapToJvmType(type2);
         }
 
@@ -84,20 +84,20 @@ public final class JavaIncompatibilityRulesOverridabilityCondition implements Ex
                 boolean z = javaMethodDescriptor.getValueParameters().size() == functionDescriptor.getValueParameters().size();
                 if (!C13147x.f29590a || z) {
                     SimpleFunctionDescriptor original = javaMethodDescriptor.getOriginal();
-                    C12880j.m40222a((Object) original, "subDescriptor.original");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) original, "subDescriptor.original");
                     List valueParameters = original.getValueParameters();
-                    C12880j.m40222a((Object) valueParameters, "subDescriptor.original.valueParameters");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters, "subDescriptor.original.valueParameters");
                     FunctionDescriptor original2 = functionDescriptor.getOriginal();
-                    C12880j.m40222a((Object) original2, "superDescriptor.original");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) original2, "superDescriptor.original");
                     List valueParameters2 = original2.getValueParameters();
-                    C12880j.m40222a((Object) valueParameters2, "superDescriptor.original.valueParameters");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) valueParameters2, "superDescriptor.original.valueParameters");
                     for (Pair pair : C13199w.m40586e((Iterable) valueParameters, (Iterable) valueParameters2)) {
                         ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) pair.mo31013a();
                         ValueParameterDescriptor valueParameterDescriptor2 = (ValueParameterDescriptor) pair.mo31014b();
                         FunctionDescriptor functionDescriptor2 = (FunctionDescriptor) callableDescriptor2;
-                        C12880j.m40222a((Object) valueParameterDescriptor, "subParameter");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor, "subParameter");
                         boolean z2 = mapValueParameterType(functionDescriptor2, valueParameterDescriptor) instanceof Primitive;
-                        C12880j.m40222a((Object) valueParameterDescriptor2, "superParameter");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) valueParameterDescriptor2, "superParameter");
                         if (z2 != (mapValueParameterType(functionDescriptor, valueParameterDescriptor2) instanceof Primitive)) {
                             return true;
                         }
@@ -120,11 +120,11 @@ public final class JavaIncompatibilityRulesOverridabilityCondition implements Ex
             FunctionDescriptor functionDescriptor = (FunctionDescriptor) callableDescriptor2;
             Name name = functionDescriptor.getName();
             String str = "subDescriptor.name";
-            C12880j.m40222a((Object) name, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) name, str);
             if (!builtinMethodsWithSpecialGenericSignature.getSameAsBuiltinMethodWithErasedValueParameters(name)) {
                 BuiltinMethodsWithDifferentJvmName builtinMethodsWithDifferentJvmName = BuiltinMethodsWithDifferentJvmName.INSTANCE;
                 Name name2 = functionDescriptor.getName();
-                C12880j.m40222a((Object) name2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) name2, str);
                 if (!builtinMethodsWithDifferentJvmName.getSameAsRenamedInJvmBuiltin(name2)) {
                     return false;
                 }
@@ -139,8 +139,8 @@ public final class JavaIncompatibilityRulesOverridabilityCondition implements Ex
                 if ((overriddenSpecialBuiltin instanceof FunctionDescriptor) && z && BuiltinMethodsWithSpecialGenericSignature.getOverriddenBuiltinFunctionWithErasedValueParametersInJava((FunctionDescriptor) overriddenSpecialBuiltin) != null) {
                     String computeJvmDescriptor$default = MethodSignatureMappingKt.computeJvmDescriptor$default(functionDescriptor, false, false, 2, null);
                     FunctionDescriptor original = ((FunctionDescriptor) callableDescriptor).getOriginal();
-                    C12880j.m40222a((Object) original, "superDescriptor.original");
-                    if (C12880j.m40224a((Object) computeJvmDescriptor$default, (Object) MethodSignatureMappingKt.computeJvmDescriptor$default(original, false, false, 2, null))) {
+                    Intrinsics.checkReturnedValueIsNotNull((Object) original, "superDescriptor.original");
+                    if (Intrinsics.areEqual((Object) computeJvmDescriptor$default, (Object) MethodSignatureMappingKt.computeJvmDescriptor$default(original, false, false, 2, null))) {
                         return false;
                     }
                 }

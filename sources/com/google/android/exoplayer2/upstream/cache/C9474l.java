@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream.cache;
 
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import java.io.File;
 import java.util.TreeSet;
 
@@ -145,7 +145,7 @@ final class C9474l {
                 sb.append(file2);
                 sb.append(" to ");
                 sb.append(file);
-                C9563q.m29500d("CachedContent", sb.toString());
+                Log.m29500d("CachedContent", sb.toString());
             }
             C9486t a = tVar.mo24555a(file, j);
             this.f22042c.add(a);

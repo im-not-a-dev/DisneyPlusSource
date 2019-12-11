@@ -19,7 +19,7 @@ import kotlin.C13142s;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -87,9 +87,9 @@ public final class C2374a {
         this.f6596b = context;
         SimpleDateFormat a = f6594d.mo11508a();
         Calendar instance = Calendar.getInstance();
-        C12880j.m40222a((Object) instance, "Calendar.getInstance()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) instance, "Calendar.getInstance()");
         String format = a.format(instance.getTime());
-        C12880j.m40222a((Object) format, "TIME_FORMAT.format(Calendar.getInstance().time)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) format, "TIME_FORMAT.format(Calendar.getInstance().time)");
         this.f6595a = format;
     }
 
@@ -137,7 +137,7 @@ public final class C2374a {
     public final List<String> mo11505a(ConnectivityManager connectivityManager) {
         ArrayList arrayList = new ArrayList();
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        C12880j.m40222a((Object) activeNetworkInfo, "activeNetworkInfo");
+        Intrinsics.checkReturnedValueIsNotNull((Object) activeNetworkInfo, "activeNetworkInfo");
         int type = activeNetworkInfo.getType();
         if (type == 0) {
             arrayList.add(m8903c(connectivityManager));
@@ -150,7 +150,7 @@ public final class C2374a {
     /* renamed from: c */
     private final String m8903c(ConnectivityManager connectivityManager) {
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        C12880j.m40222a((Object) activeNetworkInfo, "connectivityManager.activeNetworkInfo");
+        Intrinsics.checkReturnedValueIsNotNull((Object) activeNetworkInfo, "connectivityManager.activeNetworkInfo");
         switch (activeNetworkInfo.getSubtype()) {
             case 1:
             case 2:
@@ -181,7 +181,7 @@ public final class C2374a {
     /* renamed from: a */
     private final int m8900a(Context context) {
         Resources resources = context.getResources();
-        C12880j.m40222a((Object) resources, "context.resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "context.resources");
         return resources.getConfiguration().orientation;
     }
 }

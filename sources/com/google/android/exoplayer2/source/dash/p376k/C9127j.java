@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.dash.p376k;
 
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.List;
 
 /* renamed from: com.google.android.exoplayer2.source.dash.k.j */
@@ -104,7 +104,7 @@ public abstract class C9127j {
             } else {
                 j2 = (j - this.f20478d) * this.f20479e;
             }
-            return C9554k0.m29439c(j2, 1000000, this.f20476b);
+            return Util.m29439c(j2, 1000000, this.f20476b);
         }
 
         /* renamed from: b */
@@ -199,7 +199,7 @@ public abstract class C9127j {
                 return (int) ((j2 - this.f20478d) + 1);
             }
             if (j != -9223372036854775807L) {
-                return (int) C9554k0.m29388a(j, (this.f20479e * 1000000) / this.f20476b);
+                return (int) Util.m29388a(j, (this.f20479e * 1000000) / this.f20476b);
             }
             return -1;
         }
@@ -265,6 +265,6 @@ public abstract class C9127j {
 
     /* renamed from: a */
     public long mo23734a() {
-        return C9554k0.m29439c(this.f20477c, 1000000, this.f20476b);
+        return Util.m29439c(this.f20477c, 1000000, this.f20476b);
     }
 }

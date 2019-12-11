@@ -57,7 +57,7 @@ import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.p525e0.C11934b;
 import p520io.reactivex.subjects.PublishSubject;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 public class ExoPlaybackEngine implements C5280i, C0721l {
 
@@ -212,7 +212,7 @@ public class ExoPlaybackEngine implements C5280i, C0721l {
             if (this.f5919r != null) {
                 CookieHandler cookieHandler2 = CookieHandler.getDefault();
                 if (!(cookieHandler2 instanceof CookieManager)) {
-                    C14100a.m44526b("Trying to set authCookie but CookieHandler.getDefault() is not a CookieManager", new Object[0]);
+                    Timber.m44526b("Trying to set authCookie but CookieHandler.getDefault() is not a CookieManager", new Object[0]);
                     return;
                 }
                 ((CookieManager) cookieHandler2).getCookieStore();
@@ -370,7 +370,7 @@ public class ExoPlaybackEngine implements C5280i, C0721l {
                 }
                 return;
             }
-            C14100a.m44532e("ExoSurfaceView is missing from PlayerView. Video will not be displayed.", new Object[0]);
+            Timber.m44532e("ExoSurfaceView is missing from PlayerView. Video will not be displayed.", new Object[0]);
         }
 
         /* renamed from: a */
@@ -378,7 +378,7 @@ public class ExoPlaybackEngine implements C5280i, C0721l {
             if (this.f5898A) {
                 exoPlaybackEngine.mo7528a(this.f5902a, new C1704c());
             } else if (oVar.mo16826u() != null) {
-                C14100a.m44528b(new RuntimeException(), "Pip was provided but mediasession was not attached. Please set ExoPlaybackEngine.Builder.includeMediaSession = true", new Object[0]);
+                Timber.m44528b(new RuntimeException(), "Pip was provided but mediasession was not attached. Please set ExoPlaybackEngine.Builder.includeMediaSession = true", new Object[0]);
             }
         }
     }

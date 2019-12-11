@@ -22,7 +22,7 @@ import com.bamtech.shadow.dagger.Lazy;
 import javax.inject.Provider;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Observable;
 import p520io.reactivex.Single;
@@ -42,10 +42,10 @@ public abstract class BaseSession implements Session {
         Lazy<PluginRegistry> lazy = this.pluginRegistryProvider;
         if (lazy != null) {
             Object obj = lazy.get();
-            C12880j.m40222a(obj, "pluginRegistryProvider.get()");
+            Intrinsics.checkReturnedValueIsNotNull(obj, "pluginRegistryProvider.get()");
             return (PluginRegistry) obj;
         }
-        C12880j.m40227c("pluginRegistryProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("pluginRegistryProvider");
         throw null;
     }
 
@@ -58,7 +58,7 @@ public abstract class BaseSession implements Session {
         if (lazy != null) {
             return ((SessionApi) lazy.get()).authorize(grant);
         }
-        C12880j.m40227c("sessionApiProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("sessionApiProvider");
         throw null;
     }
 
@@ -67,7 +67,7 @@ public abstract class BaseSession implements Session {
         if (lazy != null) {
             return ((SessionApi) lazy.get()).getAccessState();
         }
-        C12880j.m40227c("sessionApiProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("sessionApiProvider");
         throw null;
     }
 
@@ -76,7 +76,7 @@ public abstract class BaseSession implements Session {
         if (lazy != null) {
             return ((SessionApi) lazy.get()).getCurrentSessionState();
         }
-        C12880j.m40227c("sessionApiProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("sessionApiProvider");
         throw null;
     }
 
@@ -84,10 +84,10 @@ public abstract class BaseSession implements Session {
         Lazy<MediaApi> lazy = this.mediaProvider;
         if (lazy != null) {
             Object obj = lazy.get();
-            C12880j.m40222a(obj, "mediaProvider.get()");
+            Intrinsics.checkReturnedValueIsNotNull(obj, "mediaProvider.get()");
             return (MediaApi) obj;
         }
-        C12880j.m40227c("mediaProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("mediaProvider");
         throw null;
     }
 
@@ -104,7 +104,7 @@ public abstract class BaseSession implements Session {
         if (lazy != null) {
             return ((SessionApi) lazy.get()).getSessionToken();
         }
-        C12880j.m40227c("sessionApiProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("sessionApiProvider");
         throw null;
     }
 
@@ -127,7 +127,7 @@ public abstract class BaseSession implements Session {
                 throw new PluginInitializationException("Unable to create plugin instance", th);
             }
         } else {
-            C12880j.m40227c("transactionProvider");
+            Intrinsics.throwUninitializedPropertyAccessException("transactionProvider");
             throw null;
         }
     }
@@ -141,7 +141,7 @@ public abstract class BaseSession implements Session {
         if (lazy != null) {
             return ((SessionApi) lazy.get()).reauthorize();
         }
-        C12880j.m40227c("sessionApiProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("sessionApiProvider");
         throw null;
     }
 
@@ -150,7 +150,7 @@ public abstract class BaseSession implements Session {
         if (lazy != null) {
             return ((SessionApi) lazy.get()).reset();
         }
-        C12880j.m40227c("sessionApiProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("sessionApiProvider");
         throw null;
     }
 
@@ -159,7 +159,7 @@ public abstract class BaseSession implements Session {
         if (lazy != null) {
             return ((SessionApi) lazy.get()).watchSessionState();
         }
-        C12880j.m40227c("sessionApiProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("sessionApiProvider");
         throw null;
     }
 
@@ -168,7 +168,7 @@ public abstract class BaseSession implements Session {
         if (lazy != null) {
             return ((SessionApi) lazy.get()).getSessionInfo(z);
         }
-        C12880j.m40227c("sessionApiProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("sessionApiProvider");
         throw null;
     }
 
@@ -177,7 +177,7 @@ public abstract class BaseSession implements Session {
         if (lazy != null) {
             return ((SessionApi) lazy.get()).logout(z);
         }
-        C12880j.m40227c("sessionApiProvider");
+        Intrinsics.throwUninitializedPropertyAccessException("sessionApiProvider");
         throw null;
     }
 }

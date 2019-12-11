@@ -7,7 +7,7 @@ import com.bamtech.sdk4.internal.networking.ConverterProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -40,7 +40,7 @@ public final class DefaultCreateAccountClient implements CreateAccountClient {
         Single serviceLink = this.configurationProvider.getServiceLink(serviceTransaction, DefaultCreateAccountClient$createAccount$1.INSTANCE);
         DefaultCreateAccountClient$createAccount$2 defaultCreateAccountClient$createAccount$2 = new DefaultCreateAccountClient$createAccount$2(this, map, serviceTransaction, converter2, createAccountRequest);
         Single<CreateAccountResult> a = serviceLink.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultCreateAccountClient$createAccount$2);
-        C12880j.m40222a((Object) a, "configurationProvider.ge…CCOUNT)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…CCOUNT)\n                }");
         return a;
     }
 }

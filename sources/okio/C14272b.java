@@ -1,6 +1,6 @@
 package okio;
 
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 
 /* renamed from: okio.b */
@@ -19,7 +19,7 @@ public final class C14272b {
     /* renamed from: a */
     public static final byte[] m45648a(String str) {
         byte[] bytes = str.getBytes(C12801c.f29474a);
-        C12880j.m40222a((Object) bytes, "(this as java.lang.String).getBytes(charset)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
         return bytes;
     }
 }

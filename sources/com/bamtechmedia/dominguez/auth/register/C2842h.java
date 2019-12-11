@@ -14,7 +14,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p201e.p203b.p307o.p308p.C7626a;
@@ -23,7 +23,7 @@ import p163g.p503n.p504a.C11786a0;
 import p163g.p503n.p504a.C11793e;
 import p520io.reactivex.C11960n;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0004\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001\u001bB?\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\b\u0010\r\u001a\u0004\u0018\u00010\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010¢\u0006\u0002\u0010\u0011J\u000e\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\bJ\u000e\u0010\u001a\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\bR\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0012\u001a\u00020\bX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000¨\u0006\u001c"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/register/RegisterViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/auth/register/RegisterViewModel$State;", "registerAccountAction", "Lcom/bamtechmedia/dominguez/auth/register/RegisterAccountAction;", "authListener", "Lcom/bamtechmedia/dominguez/auth/api/AuthListener;", "email", "", "passwordValidator", "Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;", "errorRouter", "Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;", "autoLogin", "Lcom/bamtechmedia/dominguez/auth/autologin/AutoLogin;", "registerAccountAnalytics", "Lcom/bamtechmedia/dominguez/auth/register/RegisterAccountAnalytics;", "(Lcom/bamtechmedia/dominguez/auth/register/RegisterAccountAction;Lcom/bamtechmedia/dominguez/auth/api/AuthListener;Ljava/lang/String;Lcom/bamtechmedia/dominguez/auth/api/helper/PasswordValidator;Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;Lcom/bamtechmedia/dominguez/auth/autologin/AutoLogin;Lcom/bamtechmedia/dominguez/auth/register/RegisterAccountAnalytics;)V", "currentPassword", "getCurrentPassword", "()Ljava/lang/String;", "setCurrentPassword", "(Ljava/lang/String;)V", "registerAccount", "", "password", "updatePasswordStrength", "State", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.register.h */
@@ -134,7 +134,7 @@ public final class C2842h extends C5741g<C2843a> {
                 if (obj instanceof C2843a) {
                     C2843a aVar = (C2843a) obj;
                     if (this.f7618a == aVar.f7618a) {
-                        if (!(this.f7619b == aVar.f7619b) || !C12880j.m40224a((Object) this.f7620c, (Object) aVar.f7620c) || !C12880j.m40224a((Object) this.f7621d, (Object) aVar.f7621d)) {
+                        if (!(this.f7619b == aVar.f7619b) || !Intrinsics.areEqual((Object) this.f7620c, (Object) aVar.f7620c) || !Intrinsics.areEqual((Object) this.f7621d, (Object) aVar.f7621d)) {
                             return false;
                         }
                     }
@@ -321,7 +321,7 @@ public final class C2842h extends C5741g<C2843a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Error registering new account.", new Object[0]);
+            Timber.m44528b(th, "Error registering new account.", new Object[0]);
             C7627a.m22614a(this.f7627c.f7615f, null, 1, null);
         }
     }
@@ -370,7 +370,7 @@ public final class C2842h extends C5741g<C2843a> {
     public final void mo11850b(String str) {
         C2844b bVar = new C2844b(this, str);
         Object a = this.f7611b.mo11815a(this.f7613d, str).mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C2850i(new C2847c(bVar)), new C2848d(this));
     }
 

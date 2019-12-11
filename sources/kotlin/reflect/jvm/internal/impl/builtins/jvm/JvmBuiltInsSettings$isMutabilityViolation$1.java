@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 
 import java.util.Collection;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.utils.DFS.Neighbors;
 
@@ -13,9 +13,9 @@ final class JvmBuiltInsSettings$isMutabilityViolation$1<N> implements Neighbors<
     }
 
     public final Collection<? extends CallableMemberDescriptor> getNeighbors(CallableMemberDescriptor callableMemberDescriptor) {
-        C12880j.m40222a((Object) callableMemberDescriptor, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) callableMemberDescriptor, "it");
         CallableMemberDescriptor original = callableMemberDescriptor.getOriginal();
-        C12880j.m40222a((Object) original, "it.original");
+        Intrinsics.checkReturnedValueIsNotNull((Object) original, "it.original");
         return original.getOverriddenDescriptors();
     }
 }

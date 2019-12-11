@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaPackage;
@@ -21,7 +21,7 @@ public final class ReflectJavaPackage extends ReflectJavaElement implements Java
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof ReflectJavaPackage) && C12880j.m40224a((Object) getFqName(), (Object) ((ReflectJavaPackage) obj).getFqName());
+        return (obj instanceof ReflectJavaPackage) && Intrinsics.areEqual((Object) getFqName(), (Object) ((ReflectJavaPackage) obj).getFqName());
     }
 
     public JavaAnnotation findAnnotation(FqName fqName2) {

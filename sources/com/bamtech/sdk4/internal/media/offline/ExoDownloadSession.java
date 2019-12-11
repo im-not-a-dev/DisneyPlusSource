@@ -7,7 +7,7 @@ import com.bamtech.sdk4.media.offline.DownloadSession;
 import com.bamtech.sdk4.plugin.ExtensionInstanceProvider;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p516i.p517a.p518a.p519a.C11902a;
 import p520io.reactivex.C11907a;
 import p520io.reactivex.Completable;
@@ -44,10 +44,10 @@ public final class ExoDownloadSession implements DownloadSession {
         this.transactionProvider = provider;
         this.scheduler = downloadScheduler;
         PublishSubject<Completable> q = PublishSubject.m38553q();
-        C12880j.m40222a((Object) q, "PublishSubject.create<Completable>()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) q, "PublishSubject.create<Completable>()");
         this.enqueueSubject = q;
         PublishProcessor<ValveState> k = PublishProcessor.m38521k();
-        C12880j.m40222a((Object) k, "PublishProcessor.create<ValveState>()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) k, "PublishProcessor.create<ValveState>()");
         this.valve = k;
         this.enqueueSubject.mo30135a(C11907a.BUFFER).mo30070a(C11902a.m38137a(this.valve.mo30097e(C20021.INSTANCE), true)).mo30081b((Function<? super T, ? extends CompletableSource>) C20032.INSTANCE, true, 1).mo30051b(C11934b.m38501c()).mo30056g();
     }
@@ -55,7 +55,7 @@ public final class ExoDownloadSession implements DownloadSession {
     public Completable renewLicense(CachedMedia cachedMedia) {
         DownloadScheduler downloadScheduler = this.scheduler;
         Object obj = this.transactionProvider.get();
-        C12880j.m40222a(obj, "transactionProvider.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "transactionProvider.get()");
         return downloadScheduler.renewLicense((ServiceTransaction) obj, cachedMedia);
     }
 }

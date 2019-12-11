@@ -13,7 +13,7 @@ import java.util.ListIterator;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -177,7 +177,7 @@ public final class ContentSet extends C3778h implements List<C3626b>, C12872a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:16:0x005c, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) mo13457f0(), (java.lang.Object) r3.mo13457f0()) != false) goto L_0x0061;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) mo13457f0(), (java.lang.Object) r3.mo13457f0()) != false) goto L_0x0061;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -189,31 +189,31 @@ public final class ContentSet extends C3778h implements List<C3626b>, C12872a {
             com.bamtechmedia.dominguez.core.content.sets.ContentSet r3 = (com.bamtechmedia.dominguez.core.content.sets.ContentSet) r3
             java.lang.String r0 = r2.mo13608e()
             java.lang.String r1 = r3.mo13608e()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x005f
             java.lang.String r0 = r2.mo13601a()
             java.lang.String r1 = r3.mo13601a()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x005f
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r0 = r2.f9359W
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.TextEntry> r1 = r3.f9359W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x005f
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.b> r0 = r2.f9360X
             java.util.List<com.bamtechmedia.dominguez.core.content.assets.b> r1 = r3.f9360X
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x005f
             java.lang.String r0 = r2.f9361Y
             java.lang.String r1 = r3.f9361Y
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x005f
             java.lang.String r0 = r2.mo13606c()
             java.lang.String r1 = r3.mo13606c()
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x005f
             com.bamtechmedia.dominguez.core.content.paging.DefaultPagingMetaData r0 = r2.m12717f0()
             com.bamtechmedia.dominguez.core.content.paging.DefaultPagingMetaData r3 = r3.m12717f0()
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x005f
             goto L_0x0061
         L_0x005f:
@@ -238,7 +238,7 @@ public final class ContentSet extends C3778h implements List<C3626b>, C12872a {
 
     public C3626b get(int i) {
         Object obj = this.f9360X.get(i);
-        C12880j.m40222a(obj, "get(...)");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "get(...)");
         return (C3626b) obj;
     }
 

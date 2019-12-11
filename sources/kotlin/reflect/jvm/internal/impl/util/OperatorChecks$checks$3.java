@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.util;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ReceiverParameterDescriptor;
@@ -28,7 +28,7 @@ final class OperatorChecks$checks$3 extends C12881k implements Function1<Functio
             KotlinType returnType = functionDescriptor.getReturnType();
             if (returnType != null) {
                 KotlinType type = dispatchReceiverParameter.getType();
-                C12880j.m40222a((Object) type, "receiver.type");
+                Intrinsics.checkReturnedValueIsNotNull((Object) type, "receiver.type");
                 z = TypeUtilsKt.isSubtypeOf(returnType, type);
             } else {
                 z = false;

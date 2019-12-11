@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassDescriptor;
@@ -20,11 +20,11 @@ final class JvmBuiltInsSettings$getJdkMethodStatus$1<N> implements Neighbors<N> 
     }
 
     public final List<LazyJavaClassDescriptor> getNeighbors(ClassDescriptor classDescriptor) {
-        C12880j.m40222a((Object) classDescriptor, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) classDescriptor, "it");
         TypeConstructor typeConstructor = classDescriptor.getTypeConstructor();
-        C12880j.m40222a((Object) typeConstructor, "it.typeConstructor");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "it.typeConstructor");
         Collection<KotlinType> supertypes = typeConstructor.getSupertypes();
-        C12880j.m40222a((Object) supertypes, "it.typeConstructor.supertypes");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supertypes, "it.typeConstructor.supertypes");
         ArrayList arrayList = new ArrayList();
         for (KotlinType constructor : supertypes) {
             ClassifierDescriptor declarationDescriptor = constructor.getConstructor().getDeclarationDescriptor();

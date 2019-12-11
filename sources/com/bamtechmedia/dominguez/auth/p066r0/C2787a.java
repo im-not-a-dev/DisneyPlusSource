@@ -10,7 +10,7 @@ import java.util.Set;
 import javax.inject.Provider;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
@@ -109,7 +109,7 @@ public final class C2787a implements C2793c {
     /* renamed from: a */
     public Completable mo11570a() {
         Completable a = this.f7544c.mo30217b((Function<? super T, ? extends CompletableSource>) C2788a.f7546c).mo30034a((CompletableSource) m10453a(C2789b.f7547c));
-        C12880j.m40222a((Object) a, "sessionOnce.flatMapCompl…edActions { onLogout() })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "sessionOnce.flatMapCompl…edActions { onLogout() })");
         return a;
     }
 
@@ -121,14 +121,14 @@ public final class C2787a implements C2793c {
     /* renamed from: c */
     public Completable mo11572c() {
         Completable a = this.f7544c.mo30217b((Function<? super T, ? extends CompletableSource>) C2790c.f7548c).mo30034a((CompletableSource) m10453a(C2791d.f7549c));
-        C12880j.m40222a((Object) a, "sessionOnce.flatMapCompl…tions { onSoftLogout() })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "sessionOnce.flatMapCompl…tions { onSoftLogout() })");
         return a;
     }
 
     /* renamed from: a */
     private final Completable m10453a(Function1<? super C2793c, ? extends Completable> function1) {
         Set<C2793c> set = (Set) this.f7543b.get();
-        C12880j.m40222a((Object) set, "delegates");
+        Intrinsics.checkReturnedValueIsNotNull((Object) set, "delegates");
         LinkedHashMap linkedHashMap = new LinkedHashMap(C12762h.m39913a(C13173j0.m40349a(C13187p.m40525a((Iterable) set, 10)), 16));
         for (Object next : set) {
             linkedHashMap.put(((C2793c) next).mo11571b(), next);
@@ -191,7 +191,7 @@ public final class C2787a implements C2793c {
             arrayList7.add(completable3);
         }
         Completable a4 = a3.mo30034a((CompletableSource) Completable.m38153a((Iterable<? extends CompletableSource>) arrayList7));
-        C12880j.m40222a((Object) a4, "concat(initialLogOutActi…og(it.logOutActionId) }))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "concat(initialLogOutActi…og(it.logOutActionId) }))");
         return a4;
     }
 }

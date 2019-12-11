@@ -4,7 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.Arrays;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p602m.p613d.p627b.C13664a;
 import p602m.p613d.p627b.C13671c;
 import p602m.p613d.p627b.C13695e;
@@ -71,13 +71,13 @@ public final class C8468d {
         byte[] bArr2 = this.f18019h;
         String str = "encodedPublicKey";
         if (bArr2 == null) {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         } else if (i3 >= bArr2.length) {
             C13688i iVar = this.f18018g;
             String str2 = "param";
             if (iVar == null) {
-                C12880j.m40227c(str2);
+                Intrinsics.throwUninitializedPropertyAccessException(str2);
                 throw null;
             } else if (iVar != null) {
                 byte[] bArr3 = new byte[(((C13689j) iVar).mo34942b() / 8)];
@@ -95,7 +95,7 @@ public final class C8468d {
                         if (bArr6 != null) {
                             eVar.mo21732a(false, (C13697f) new C13693n(mVar, bArr6));
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     } else {
@@ -112,19 +112,19 @@ public final class C8468d {
                             if (bArr9 != null) {
                                 int a = eVar3.mo21731a(bArr, length, i3 - bArr9.length, bArr8, 0);
                                 byte[] copyOfRange = Arrays.copyOfRange(bArr8, 0, a + this.f18022k.mo21730a(bArr8, a));
-                                C12880j.m40222a((Object) copyOfRange, "Arrays.copyOfRange(m, 0, len)");
+                                Intrinsics.checkReturnedValueIsNotNull((Object) copyOfRange, "Arrays.copyOfRange(m, 0, len)");
                                 return copyOfRange;
                             }
-                            C12880j.m40227c(str);
+                            Intrinsics.throwUninitializedPropertyAccessException(str);
                             throw null;
                         }
-                        C12880j.m40227c(str);
+                        Intrinsics.throwUninitializedPropertyAccessException(str);
                         throw null;
                     }
-                    C12880j.m40227c(str);
+                    Intrinsics.throwUninitializedPropertyAccessException(str);
                     throw null;
                 }
-                C12880j.m40227c(str2);
+                Intrinsics.throwUninitializedPropertyAccessException(str2);
                 throw null;
             } else {
                 throw new C13142s("null cannot be cast to non-null type org.spongycastle.crypto.params.IESWithCipherParameters");
@@ -139,7 +139,7 @@ public final class C8468d {
         C13688i iVar = this.f18018g;
         String str = "param";
         if (iVar == null) {
-            C12880j.m40227c(str);
+            Intrinsics.throwUninitializedPropertyAccessException(str);
             throw null;
         } else if (iVar != null) {
             byte[] bArr2 = new byte[(((C13689j) iVar).mo34942b() / 8)];
@@ -157,7 +157,7 @@ public final class C8468d {
                     if (bArr5 != null) {
                         eVar.mo21732a(true, (C13697f) new C13693n(mVar, bArr5));
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 } else {
@@ -171,7 +171,7 @@ public final class C8468d {
                 if (bArr7 != null) {
                     byte[] bArr8 = new byte[(bArr7.length + a2)];
                     if (bArr7 == null) {
-                        C12880j.m40227c(str2);
+                        Intrinsics.throwUninitializedPropertyAccessException(str2);
                         throw null;
                     } else if (bArr7 != null) {
                         System.arraycopy(bArr7, 0, bArr8, 0, bArr7.length);
@@ -180,18 +180,18 @@ public final class C8468d {
                             System.arraycopy(bArr6, 0, bArr8, bArr9.length, a2);
                             return bArr8;
                         }
-                        C12880j.m40227c(str2);
+                        Intrinsics.throwUninitializedPropertyAccessException(str2);
                         throw null;
                     } else {
-                        C12880j.m40227c(str2);
+                        Intrinsics.throwUninitializedPropertyAccessException(str2);
                         throw null;
                     }
                 } else {
-                    C12880j.m40227c(str2);
+                    Intrinsics.throwUninitializedPropertyAccessException(str2);
                     throw null;
                 }
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else {
@@ -258,17 +258,17 @@ public final class C8468d {
             if (cVar != null) {
                 if (cVar != null) {
                     C13710n a = cVar.mo34912a();
-                    C12880j.m40222a((Object) a, "ephKeyPair");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a, "ephKeyPair");
                     C13664a b = a.mo34976b();
-                    C12880j.m40222a((Object) b, "ephKeyPair.keyPair");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) b, "ephKeyPair.keyPair");
                     C13681b a2 = b.mo34901a();
-                    C12880j.m40222a((Object) a2, "ephKeyPair.keyPair.private");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a2, "ephKeyPair.keyPair.private");
                     this.f18016e = a2;
                     byte[] a3 = a.mo34975a();
-                    C12880j.m40222a((Object) a3, "ephKeyPair.encodedPublicKey");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a3, "ephKeyPair.encodedPublicKey");
                     this.f18019h = a3;
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }
@@ -278,11 +278,11 @@ public final class C8468d {
                 C13715s sVar = this.f18014c;
                 if (sVar != null) {
                     C13681b a4 = sVar.mo34952a(byteArrayInputStream);
-                    C12880j.m40222a((Object) a4, "keyParser!!.readKey(bIn)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a4, "keyParser!!.readKey(bIn)");
                     this.f18017f = a4;
                     this.f18019h = C13171j.m40339a(bArr, i, (i2 - byteArrayInputStream.available()) + i);
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             } catch (IOException e) {
@@ -311,17 +311,17 @@ public final class C8468d {
                         }
                         return bArr2;
                     }
-                    C12880j.m40227c("encodedPublicKey");
+                    Intrinsics.throwUninitializedPropertyAccessException("encodedPublicKey");
                     throw null;
                 } finally {
                     Arrays.fill(a5, (byte) 0);
                 }
             } else {
-                C12880j.m40227c("publicParam");
+                Intrinsics.throwUninitializedPropertyAccessException("publicParam");
                 throw null;
             }
         } else {
-            C12880j.m40227c("privateParam");
+            Intrinsics.throwUninitializedPropertyAccessException("privateParam");
             throw null;
         }
     }

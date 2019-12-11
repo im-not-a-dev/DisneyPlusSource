@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.trackselection;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9542g;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.p379m0.C9224l;
 import com.google.android.exoplayer2.source.p379m0.C9225m;
@@ -432,7 +432,7 @@ public class C9287b extends C9292c {
             return 0;
         }
         int size = list.size();
-        long b = C9554k0.m29430b(((C9224l) list.get(size - 1)).f20861f - j, this.f21184r);
+        long b = Util.m29430b(((C9224l) list.get(size - 1)).f20861f - j, this.f21184r);
         long j2 = mo24059j();
         if (b < j2) {
             return size;
@@ -441,7 +441,7 @@ public class C9287b extends C9292c {
         for (int i = 0; i < size; i++) {
             C9224l lVar = (C9224l) list.get(i);
             Format format = lVar.f20858c;
-            if (C9554k0.m29430b(lVar.f20861f - j, this.f21184r) >= j2 && format.f18345X < a2.f18345X) {
+            if (Util.m29430b(lVar.f20861f - j, this.f21184r) >= j2 && format.f18345X < a2.f18345X) {
                 int i2 = format.f18356h0;
                 if (i2 != -1 && i2 < 720) {
                     int i3 = format.f18355g0;

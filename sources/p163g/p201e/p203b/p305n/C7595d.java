@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
 import p163g.p201e.p203b.p286j.C7290d;
 import p163g.p201e.p203b.p286j.C7290d.C7291a;
@@ -45,8 +45,8 @@ public final class C7595d implements C7290d {
         String group = matcher.group(3);
         String group2 = matcher.group(4);
         C7589a aVar = C7588b.f16602o0;
-        C12880j.m40222a((Object) group, "contentClass");
-        C12880j.m40222a((Object) group2, "editorialValue");
+        Intrinsics.checkReturnedValueIsNotNull((Object) group, "contentClass");
+        Intrinsics.checkReturnedValueIsNotNull((Object) group2, "editorialValue");
         C3676k kVar = new C3676k(group, group2, false, 4, null);
         return aVar.mo20528a(kVar);
     }

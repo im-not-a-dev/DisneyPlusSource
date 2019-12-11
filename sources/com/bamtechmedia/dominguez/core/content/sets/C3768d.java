@@ -5,14 +5,14 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.functions.Function;
 import p520io.reactivex.p525e0.C11934b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010#\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\u0018\u00002\u00020\u0001B%\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\f\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\b0\u0007¢\u0006\u0002\u0010\tJ4\u0010\r\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e2\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\f2\f\u0010\u0013\u001a\b\u0018\u00010\fj\u0002`\u00142\u0006\u0010\u0015\u001a\u00020\u0016H\u0016J4\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u000f0\u00182\u0006\u0010\u0019\u001a\u00020\u000f2\u0006\u0010\u001a\u001a\u00020\u001b2\f\u0010\u0013\u001a\b\u0018\u00010\fj\u0002`\u00142\u0006\u0010\u001c\u001a\u00020\u001bH\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\n\u001a\b\u0012\u0004\u0012\u00020\f0\u000bX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\b0\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u001d"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/core/content/sets/ContentSetRepository;", "Lcom/bamtechmedia/dominguez/core/content/sets/ContentSetDataSource;", "remote", "Lcom/bamtechmedia/dominguez/core/content/sets/RemoteContentSetDataSource;", "availabilityHint", "Lcom/bamtechmedia/dominguez/core/content/sets/ContentSetAvailabilityHint;", "offlineSetCache", "Lcom/google/common/base/Optional;", "Lcom/bamtechmedia/dominguez/core/content/sets/OfflineSetCache;", "(Lcom/bamtechmedia/dominguez/core/content/sets/RemoteContentSetDataSource;Lcom/bamtechmedia/dominguez/core/content/sets/ContentSetAvailabilityHint;Lcom/google/common/base/Optional;)V", "loadingContentSets", "", "", "getContentSet", "Lio/reactivex/Single;", "Lcom/bamtechmedia/dominguez/core/content/sets/ContentSet;", "type", "Lcom/bamtechmedia/dominguez/core/content/sets/ContentSetType;", "setId", "transactionId", "Lcom/bamtechmedia/dominguez/core/content/TransactionId;", "forceRefresh", "", "loadNextPage", "Lio/reactivex/Maybe;", "set", "positionInSet", "", "offsetFromEndToStartLoading", "collections_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.core.content.sets.d */
@@ -69,7 +69,7 @@ public final class C3768d implements C3765c {
             /* renamed from: a */
             public final void accept(ContentSet contentSet) {
                 C3762a a = this.f9407c.f9406c.f9400c;
-                C12880j.m40222a((Object) contentSet, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) contentSet, "it");
                 a.mo13657a(contentSet);
                 C3780j jVar = (C3780j) this.f9407c.f9406c.f9401d.mo27107c();
                 if (jVar != null) {
@@ -170,7 +170,7 @@ public final class C3768d implements C3765c {
         public final void accept(ContentSet contentSet) {
             C3780j jVar = (C3780j) this.f9412c.f9401d.mo27107c();
             if (jVar != null) {
-                C12880j.m40222a((Object) contentSet, "it");
+                Intrinsics.checkReturnedValueIsNotNull((Object) contentSet, "it");
                 jVar.mo13688a(contentSet);
             }
         }
@@ -186,7 +186,7 @@ public final class C3768d implements C3765c {
     public Single<ContentSet> mo13659a(ContentSetType contentSetType, String str, String str2, boolean z) {
         C3769a aVar = new C3769a(this, contentSetType, str, str2, z);
         Single<ContentSet> b = Single.m38396a((Callable<? extends SingleSource<? extends T>>) aVar).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "Single.defer {\n         …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.defer {\n         …scribeOn(Schedulers.io())");
         return b;
     }
 
@@ -201,14 +201,14 @@ public final class C3768d implements C3765c {
             StringBuilder sb = new StringBuilder();
             sb.append("Starting next page load: ");
             sb.append(contentSet.mo13608e());
-            C14100a.m44529c(sb.toString(), new Object[0]);
+            Timber.m44529c(sb.toString(), new Object[0]);
             this.f9398a.add(contentSet.mo13608e());
             Maybe<ContentSet> h = this.f9399b.mo13643a(contentSet, str).mo30227d((Consumer<? super T>) new C3772b<Object>(this)).mo30218b((Consumer<? super Throwable>) new C3773c<Object>(this, contentSet)).mo30227d((Consumer<? super T>) new C3774d<Object>(this)).mo30234h();
-            C12880j.m40222a((Object) h, "remote.getNextPage(set, …               .toMaybe()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "remote.getNextPage(set, …               .toMaybe()");
             return h;
         }
         Maybe<ContentSet> h2 = Maybe.m38259h();
-        C12880j.m40222a((Object) h2, "Maybe.empty()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h2, "Maybe.empty()");
         return h2;
     }
 }

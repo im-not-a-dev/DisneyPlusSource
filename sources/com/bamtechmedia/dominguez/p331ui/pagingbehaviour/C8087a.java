@@ -13,14 +13,14 @@ import com.bamtechmedia.dominguez.collections.p080o0.C3441g;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.C11952h;
 import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.p525e0.C11934b;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\b&\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003B\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\b\b\u0002\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ#\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u00162\n\b\u0002\u0010\u0017\u001a\u0004\u0018\u00010\u0016H\u0000¢\u0006\u0004\b\u0018\u0010\u0019J\b\u0010\u001a\u001a\u00020\u0016H\u0002J$\u0010\u001b\u001a\u00020\u00162\b\u0010\u001c\u001a\u0004\u0018\u00010\u001d2\u0006\u0010\u001e\u001a\u00020\u001f2\b\u0010 \u001a\u0004\u0018\u00010!H\u0016J\u0010\u0010\"\u001a\u00020\u00142\u0006\u0010\u001c\u001a\u00020\u001dH\u0016J\u0012\u0010#\u001a\u00020\u00142\b\u0010\u001c\u001a\u0004\u0018\u00010\u001dH\u0016J\u0018\u0010$\u001a\u00020\u00142\u0006\u0010%\u001a\u00020&2\u0006\u0010'\u001a\u00020\u0016H\u0016J\b\u0010(\u001a\u00020\u0014H&J\u0012\u0010)\u001a\u00020\u00142\b\b\u0002\u0010'\u001a\u00020\u0016H\u0007J\b\u0010*\u001a\u00020\u0014H\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R&\u0010\u000b\u001a\u0004\u0018\u00010\f8\u0006@\u0006X\u000e¢\u0006\u0014\n\u0000\u0012\u0004\b\r\u0010\u000e\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000¨\u0006+"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/ui/pagingbehaviour/BaseAutoPagingBehaviour;", "Landroid/view/View$OnAttachStateChangeListener;", "Landroid/view/View$OnKeyListener;", "Lcom/bamtechmedia/dominguez/collections/autopaging/AutoPagingBehaviour;", "autoPagingSession", "Lcom/bamtechmedia/dominguez/collections/HeroAutoPagingSession;", "collectionsAppConfig", "Lcom/bamtechmedia/dominguez/collections/config/CollectionsAppConfig;", "mainThreadScheduler", "Lio/reactivex/Scheduler;", "(Lcom/bamtechmedia/dominguez/collections/HeroAutoPagingSession;Lcom/bamtechmedia/dominguez/collections/config/CollectionsAppConfig;Lio/reactivex/Scheduler;)V", "disposable", "Lio/reactivex/disposables/Disposable;", "disposable$annotations", "()V", "getDisposable", "()Lio/reactivex/disposables/Disposable;", "setDisposable", "(Lio/reactivex/disposables/Disposable;)V", "enableAutoPaging", "", "enable", "", "stoppedByUser", "enableAutoPaging$core_release", "(ZLjava/lang/Boolean;)V", "mayStartAutoPaging", "onKey", "v", "Landroid/view/View;", "keyCode", "", "event", "Landroid/view/KeyEvent;", "onViewAttachedToWindow", "onViewDetachedFromWindow", "requestStartAutoPaging", "context", "Landroid/content/Context;", "forceAutoPaging", "selectNextItem", "startAutoPagingInternal", "stopAutoPaging", "core_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.ui.pagingbehaviour.a */
@@ -86,7 +86,7 @@ public abstract class C8087a implements OnAttachStateChangeListener, OnKeyListen
 
         /* renamed from: a */
         public final void accept(Long l) {
-            C14100a.m44521a(this.f17323c.getClass().getSimpleName()).mo35673d("selectNextItem", new Object[0]);
+            Timber.m44521a(this.f17323c.getClass().getSimpleName()).mo35673d("selectNextItem", new Object[0]);
             this.f17323c.mo21083b();
         }
     }
@@ -125,7 +125,7 @@ public abstract class C8087a implements OnAttachStateChangeListener, OnKeyListen
             this.f17317U.mo12376a(true);
             if (view != null) {
                 Context context = view.getContext();
-                C12880j.m40222a((Object) context, "it.context");
+                Intrinsics.checkReturnedValueIsNotNull((Object) context, "it.context");
                 mo12601a(context, true);
             }
         }
@@ -134,7 +134,7 @@ public abstract class C8087a implements OnAttachStateChangeListener, OnKeyListen
 
     public void onViewAttachedToWindow(View view) {
         Context context = view.getContext();
-        C12880j.m40222a((Object) context, "v.context");
+        Intrinsics.checkReturnedValueIsNotNull((Object) context, "v.context");
         C3430a.m11713a(this, context, false, 2, null);
     }
 
@@ -155,7 +155,7 @@ public abstract class C8087a implements OnAttachStateChangeListener, OnKeyListen
             m23466a(this, true, null, 2, null);
         }
         if (mo21084c() || z) {
-            C14100a.m44521a(getClass().getSimpleName()).mo35673d("startAutoPagingInternal", new Object[0]);
+            Timber.m44521a(getClass().getSimpleName()).mo35673d("startAutoPagingInternal", new Object[0]);
             Disposable disposable = this.f17320c;
             if (disposable != null) {
                 disposable.dispose();
@@ -167,7 +167,7 @@ public abstract class C8087a implements OnAttachStateChangeListener, OnKeyListen
     /* renamed from: a */
     public void mo12600a() {
         if (this.f17320c != null) {
-            C14100a.m44521a(getClass().getSimpleName()).mo35673d("stopAutoPaging", new Object[0]);
+            Timber.m44521a(getClass().getSimpleName()).mo35673d("stopAutoPaging", new Object[0]);
             Disposable disposable = this.f17320c;
             if (disposable != null) {
                 disposable.dispose();

@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.config.C3558l;
 import java.net.PasswordAuthentication;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001:\u0001\bB\u000f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\t"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/autologin/DevConfigAutoLogin;", "", "devConfig", "Lcom/bamtechmedia/dominguez/config/DevConfig;", "(Lcom/bamtechmedia/dominguez/config/DevConfig;)V", "credentialsMaybe", "Lio/reactivex/Maybe;", "Lcom/bamtechmedia/dominguez/auth/autologin/AutoLoginCredentials;", "DevConfigCredentials", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -32,10 +32,10 @@ public final class C2771e {
         public C2772a(PasswordAuthentication passwordAuthentication) {
             this.f7526c = passwordAuthentication;
             String userName = this.f7526c.getUserName();
-            C12880j.m40222a((Object) userName, "passwordAuthentication.userName");
+            Intrinsics.checkReturnedValueIsNotNull((Object) userName, "passwordAuthentication.userName");
             this.f7524a = userName;
             char[] password = this.f7526c.getPassword();
-            C12880j.m40222a((Object) password, "passwordAuthentication.password");
+            Intrinsics.checkReturnedValueIsNotNull((Object) password, "passwordAuthentication.password");
             this.f7525b = new String(password);
         }
 
@@ -50,7 +50,7 @@ public final class C2771e {
         }
 
         /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-            if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7526c, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p064p0.C2771e.C2772a) r2).f7526c) != false) goto L_0x0015;
+            if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7526c, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p064p0.C2771e.C2772a) r2).f7526c) != false) goto L_0x0015;
          */
         /* Code decompiled incorrectly, please refer to instructions dump. */
         public boolean equals(java.lang.Object r2) {
@@ -62,7 +62,7 @@ public final class C2771e {
                 com.bamtechmedia.dominguez.auth.p0.e$a r2 = (com.bamtechmedia.dominguez.auth.p064p0.C2771e.C2772a) r2
                 java.net.PasswordAuthentication r0 = r1.f7526c
                 java.net.PasswordAuthentication r2 = r2.f7526c
-                boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                 if (r2 == 0) goto L_0x0013
                 goto L_0x0015
             L_0x0013:
@@ -119,7 +119,7 @@ public final class C2771e {
     /* renamed from: a */
     public final Maybe<C2770d> mo11786a() {
         Maybe<C2770d> b = Maybe.m38257b((Callable<? extends T>) new C2773b<Object>(this));
-        C12880j.m40222a((Object) b, "Maybe.fromCallable {\n   …igCredentials(it) }\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Maybe.fromCallable {\n   …igCredentials(it) }\n    }");
         return b;
     }
 }

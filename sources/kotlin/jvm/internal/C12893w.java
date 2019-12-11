@@ -16,7 +16,7 @@ public abstract class C12893w extends C12863c implements KProperty {
         }
         if (obj instanceof C12893w) {
             C12893w wVar = (C12893w) obj;
-            if (!getOwner().equals(wVar.getOwner()) || !getName().equals(wVar.getName()) || !getSignature().equals(wVar.getSignature()) || !C12880j.m40224a(getBoundReceiver(), wVar.getBoundReceiver())) {
+            if (!getOwner().equals(wVar.getOwner()) || !getName().equals(wVar.getName()) || !getSignature().equals(wVar.getSignature()) || !Intrinsics.areEqual(getBoundReceiver(), wVar.getBoundReceiver())) {
                 z = false;
             }
             return z;

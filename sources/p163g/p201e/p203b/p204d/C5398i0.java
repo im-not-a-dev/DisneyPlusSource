@@ -7,7 +7,7 @@ import com.bamtech.sdk4.session.SessionState;
 import com.bamtech.sdk4.session.SessionState.LoggedIn;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -115,7 +115,7 @@ public final class C5398i0 implements C5403j0 {
     /* renamed from: c */
     public final Single<String> m18153c() {
         Single<String> g = this.f12911b.mo30233g(C5400b.f12914c);
-        C12880j.m40222a((Object) g, "sessionInfoOnce.map {\n  …fo.location\" })\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "sessionInfoOnce.map {\n  …fo.location\" })\n        }");
         return g;
     }
 
@@ -123,14 +123,14 @@ public final class C5398i0 implements C5403j0 {
     /* renamed from: b */
     public final Single<String> m18151b() {
         Single<String> d = this.f12912c.getAccount().mo30128d(C5399a.f12913c);
-        C12880j.m40222a((Object) d, "accountApi.getAccount()\n…          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "accountApi.getAccount()\n…          }\n            }");
         return d;
     }
 
     /* renamed from: a */
     public Single<String> mo17142a() {
         Single<String> a = this.f12910a.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C5401c<Object,Object>(this));
-        C12880j.m40222a((Object) a, "sessionStateOnce\n       …          }\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "sessionStateOnce\n       …          }\n            }");
         return a;
     }
 }

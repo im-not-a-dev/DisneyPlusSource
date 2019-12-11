@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.components;
 
 import java.util.Map;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -22,7 +22,7 @@ public final class JavaDeprecatedAnnotationDescriptor extends JavaAnnotationDesc
 
     public JavaDeprecatedAnnotationDescriptor(JavaAnnotation javaAnnotation, LazyJavaResolverContext lazyJavaResolverContext) {
         FqName fqName = KotlinBuiltIns.FQ_NAMES.deprecated;
-        C12880j.m40222a((Object) fqName, "KotlinBuiltIns.FQ_NAMES.deprecated");
+        Intrinsics.checkReturnedValueIsNotNull((Object) fqName, "KotlinBuiltIns.FQ_NAMES.deprecated");
         super(lazyJavaResolverContext, javaAnnotation, fqName);
         this.allValueArguments$delegate = lazyJavaResolverContext.getStorageManager().createLazyValue(JavaDeprecatedAnnotationDescriptor$allValueArguments$2.INSTANCE);
     }

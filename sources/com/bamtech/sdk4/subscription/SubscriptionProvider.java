@@ -2,7 +2,7 @@ package com.bamtech.sdk4.subscription;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 @DontObfuscate
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b7\u0018\u0000 \u00062\u00020\u0001:\t\u0003\u0004\u0005\u0006\u0007\b\t\n\u000bB\u0007\b\u0002¢\u0006\u0002\u0010\u0002\u0001\b\f\r\u000e\u000f\u0010\u0011\u0012\u0013¨\u0006\u0014"}, mo31007d2 = {"Lcom/bamtech/sdk4/subscription/SubscriptionProvider;", "", "()V", "AMAZON", "APPLE", "BAMTECH", "Companion", "GOOGLE", "HULU", "OTHER", "ROKU", "SAMSUNG", "Lcom/bamtech/sdk4/subscription/SubscriptionProvider$BAMTECH;", "Lcom/bamtech/sdk4/subscription/SubscriptionProvider$APPLE;", "Lcom/bamtech/sdk4/subscription/SubscriptionProvider$GOOGLE;", "Lcom/bamtech/sdk4/subscription/SubscriptionProvider$AMAZON;", "Lcom/bamtech/sdk4/subscription/SubscriptionProvider$ROKU;", "Lcom/bamtech/sdk4/subscription/SubscriptionProvider$SAMSUNG;", "Lcom/bamtech/sdk4/subscription/SubscriptionProvider$HULU;", "Lcom/bamtech/sdk4/subscription/SubscriptionProvider$OTHER;", "extension-iap"}, mo31008k = 1, mo31009mv = {1, 1, 15})
@@ -79,7 +79,7 @@ public abstract class SubscriptionProvider {
 
         public final SubscriptionProvider toType(String str) {
             String upperCase = str.toUpperCase();
-            C12880j.m40222a((Object) upperCase, "(this as java.lang.String).toUpperCase()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) upperCase, "(this as java.lang.String).toUpperCase()");
             switch (upperCase.hashCode()) {
                 case -1712043046:
                     if (upperCase.equals("SAMSUNG")) {
@@ -160,7 +160,7 @@ public abstract class SubscriptionProvider {
         }
 
         public boolean equals(Object obj) {
-            return (obj instanceof OTHER) && C12880j.m40224a((Object) ((OTHER) obj).value, (Object) this.value);
+            return (obj instanceof OTHER) && Intrinsics.areEqual((Object) ((OTHER) obj).value, (Object) this.value);
         }
 
         public final String getValue() {

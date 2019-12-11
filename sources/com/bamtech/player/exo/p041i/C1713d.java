@@ -11,7 +11,7 @@ import p163g.p174d.p178b.p193j0.C5293f;
 import p163g.p174d.p178b.p196m0.C5305c;
 import p163g.p426g.p427a.p428i.C10819a;
 import p163g.p426g.p427a.p428i.C10821c.C10826e;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 /* renamed from: com.bamtech.player.exo.i.d */
 /* compiled from: ConvivaBindings */
@@ -46,7 +46,7 @@ public class C1713d extends C4918u2 {
             this.f5971a.mo7692a(C10826e.STOPPED);
             this.f5971a.mo7696c();
         } catch (Exception e) {
-            C14100a.m44523a((Throwable) e);
+            Timber.m44523a((Throwable) e);
         }
     }
 
@@ -98,7 +98,7 @@ public class C1713d extends C4918u2 {
         try {
             this.f5971a.mo7696c();
         } catch (Exception e) {
-            C14100a.m44523a((Throwable) e);
+            Timber.m44523a((Throwable) e);
         }
     }
 
@@ -140,7 +140,7 @@ public class C1713d extends C4918u2 {
             this.f5971a.mo7694a(str, true);
             this.f5971a.mo7696c();
         } catch (Exception e) {
-            C14100a.m44523a((Throwable) e);
+            Timber.m44523a((Throwable) e);
         }
     }
 }

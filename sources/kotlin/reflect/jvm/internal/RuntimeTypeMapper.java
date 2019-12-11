@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.JvmFunctionSignature.FakeJavaAnnotationConstructor;
 import kotlin.reflect.jvm.internal.JvmFunctionSignature.JavaConstructor;
 import kotlin.reflect.jvm.internal.JvmFunctionSignature.JavaMethod;
@@ -50,7 +50,7 @@ public final class RuntimeTypeMapper {
 
     static {
         ClassId classId = ClassId.topLevel(new FqName("java.lang.Void"));
-        C12880j.m40222a((Object) classId, "ClassId.topLevel(FqName(\"java.lang.Void\"))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) classId, "ClassId.topLevel(FqName(\"java.lang.Void\"))");
         JAVA_LANG_VOID = classId;
     }
 
@@ -62,7 +62,7 @@ public final class RuntimeTypeMapper {
             return null;
         }
         JvmPrimitiveType jvmPrimitiveType = JvmPrimitiveType.get(cls.getSimpleName());
-        C12880j.m40222a((Object) jvmPrimitiveType, "JvmPrimitiveType.get(simpleName)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) jvmPrimitiveType, "JvmPrimitiveType.get(simpleName)");
         return jvmPrimitiveType.getPrimitiveType();
     }
 
@@ -70,7 +70,7 @@ public final class RuntimeTypeMapper {
         if (DescriptorFactory.isEnumValueOfMethod(functionDescriptor) || DescriptorFactory.isEnumValuesMethod(functionDescriptor)) {
             return true;
         }
-        if (!C12880j.m40224a((Object) functionDescriptor.getName(), (Object) CloneableClassScope.Companion.getCLONE_NAME()) || !functionDescriptor.getValueParameters().isEmpty()) {
+        if (!Intrinsics.areEqual((Object) functionDescriptor.getName(), (Object) CloneableClassScope.Companion.getCLONE_NAME()) || !functionDescriptor.getValueParameters().isEmpty()) {
             return false;
         }
         return true;
@@ -92,7 +92,7 @@ public final class RuntimeTypeMapper {
                 asString = callableMemberDescriptor.getName().asString();
             }
             jvmMethodNameIfSpecial = asString;
-            C12880j.m40222a((Object) jvmMethodNameIfSpecial, "when (descriptor) {\n    …name.asString()\n        }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) jvmMethodNameIfSpecial, "when (descriptor) {\n    …name.asString()\n        }");
         }
         return jvmMethodNameIfSpecial;
     }
@@ -100,15 +100,15 @@ public final class RuntimeTypeMapper {
     public final ClassId mapJvmClassToKotlinClassId(Class<?> cls) {
         if (cls.isArray()) {
             Class componentType = cls.getComponentType();
-            C12880j.m40222a((Object) componentType, "klass.componentType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) componentType, "klass.componentType");
             PrimitiveType primitiveType = getPrimitiveType(componentType);
             if (primitiveType != null) {
                 return new ClassId(KotlinBuiltIns.BUILT_INS_PACKAGE_FQ_NAME, primitiveType.getArrayTypeName());
             }
             ClassId classId = ClassId.topLevel(KotlinBuiltIns.FQ_NAMES.array.toSafe());
-            C12880j.m40222a((Object) classId, "ClassId.topLevel(KotlinB….FQ_NAMES.array.toSafe())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) classId, "ClassId.topLevel(KotlinB….FQ_NAMES.array.toSafe())");
             return classId;
-        } else if (C12880j.m40224a((Object) cls, (Object) Void.TYPE)) {
+        } else if (Intrinsics.areEqual((Object) cls, (Object) Void.TYPE)) {
             return JAVA_LANG_VOID;
         } else {
             PrimitiveType primitiveType2 = getPrimitiveType(cls);
@@ -119,7 +119,7 @@ public final class RuntimeTypeMapper {
             if (!classId2.isLocal()) {
                 JavaToKotlinClassMap javaToKotlinClassMap = JavaToKotlinClassMap.INSTANCE;
                 FqName asSingleFqName = classId2.asSingleFqName();
-                C12880j.m40222a((Object) asSingleFqName, "classId.asSingleFqName()");
+                Intrinsics.checkReturnedValueIsNotNull((Object) asSingleFqName, "classId.asSingleFqName()");
                 ClassId mapJavaToKotlin = javaToKotlinClassMap.mapJavaToKotlin(asSingleFqName);
                 if (mapJavaToKotlin != null) {
                     return mapJavaToKotlin;
@@ -165,11 +165,11 @@ public final class RuntimeTypeMapper {
             r7 = this;
             kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor r8 = kotlin.reflect.jvm.internal.impl.resolve.DescriptorUtils.unwrapFakeOverride(r8)
             java.lang.String r0 = "DescriptorUtils.unwrapFa…ssiblyOverriddenProperty)"
-            kotlin.jvm.internal.C12880j.m40222a(r8, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r8, r0)
             kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor r8 = (kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor) r8
             kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor r1 = r8.getOriginal()
             java.lang.String r8 = "DescriptorUtils.unwrapFa…rriddenProperty).original"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r8)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r8)
             boolean r8 = r1 instanceof kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedPropertyDescriptor
             r0 = 0
             if (r8 == 0) goto L_0x003e
@@ -178,7 +178,7 @@ public final class RuntimeTypeMapper {
             kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Property r2 = r8.getProto()
             kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite$GeneratedExtension<kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Property, kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$JvmPropertySignature> r3 = kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.propertySignature
             java.lang.String r4 = "JvmProtoBuf.propertySignature"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             java.lang.Object r3 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.ProtoBufUtilKt.getExtensionOrNull(r2, r3)
             kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$JvmPropertySignature r3 = (kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.JvmPropertySignature) r3
             if (r3 == 0) goto L_0x00c5
@@ -275,7 +275,7 @@ public final class RuntimeTypeMapper {
             r1.<init>(r8, r0)
             return r1
         L_0x00df:
-            kotlin.jvm.internal.C12880j.m40220a()
+            kotlin.jvm.internal.Intrinsics.throwNpe()
             throw r0
         */
         throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.RuntimeTypeMapper.mapPropertySignature(kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor):kotlin.reflect.jvm.internal.JvmPropertySignature");
@@ -285,9 +285,9 @@ public final class RuntimeTypeMapper {
         JvmFunctionSignature jvmFunctionSignature;
         JvmFunctionSignature jvmFunctionSignature2;
         CallableMemberDescriptor unwrapFakeOverride = DescriptorUtils.unwrapFakeOverride(functionDescriptor);
-        C12880j.m40222a((Object) unwrapFakeOverride, "DescriptorUtils.unwrapFa…siblySubstitutedFunction)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) unwrapFakeOverride, "DescriptorUtils.unwrapFa…siblySubstitutedFunction)");
         FunctionDescriptor original = ((FunctionDescriptor) unwrapFakeOverride).getOriginal();
-        C12880j.m40222a((Object) original, "DescriptorUtils.unwrapFa…titutedFunction).original");
+        Intrinsics.checkReturnedValueIsNotNull((Object) original, "DescriptorUtils.unwrapFa…titutedFunction).original");
         if (original instanceof DeserializedCallableMemberDescriptor) {
             DeserializedCallableMemberDescriptor deserializedCallableMemberDescriptor = (DeserializedCallableMemberDescriptor) original;
             MessageLite proto = deserializedCallableMemberDescriptor.getProto();
@@ -301,7 +301,7 @@ public final class RuntimeTypeMapper {
                 Method jvmConstructorSignature = JvmProtoBufUtil.INSTANCE.getJvmConstructorSignature((Constructor) proto, deserializedCallableMemberDescriptor.getNameResolver(), deserializedCallableMemberDescriptor.getTypeTable());
                 if (jvmConstructorSignature != null) {
                     DeclarationDescriptor containingDeclaration = functionDescriptor.getContainingDeclaration();
-                    C12880j.m40222a((Object) containingDeclaration, "possiblySubstitutedFunction.containingDeclaration");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) containingDeclaration, "possiblySubstitutedFunction.containingDeclaration");
                     if (InlineClassesUtilsKt.isInlineClass(containingDeclaration)) {
                         jvmFunctionSignature2 = new KotlinFunction(jvmConstructorSignature);
                     } else {

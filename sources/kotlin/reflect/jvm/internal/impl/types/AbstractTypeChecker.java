@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 import kotlin.C12898l;
 import kotlin.C13147x;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.LowerCapturedTypePolicy;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.SeveralSupertypesWithSameConstructorPolicy;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.SupertypesPolicy;
@@ -157,7 +157,7 @@ public final class AbstractTypeChecker {
                 while (!supertypesDeque.isEmpty()) {
                     if (supertypesSet.size() <= 1000) {
                         SimpleTypeMarker simpleTypeMarker2 = (SimpleTypeMarker) supertypesDeque.pop();
-                        C12880j.m40222a((Object) simpleTypeMarker2, "current");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) simpleTypeMarker2, "current");
                         if (supertypesSet.add(simpleTypeMarker2)) {
                             SimpleTypeMarker captureFromArguments2 = abstractTypeCheckerContext.captureFromArguments(simpleTypeMarker2, CaptureStatus.FOR_SUBTYPING);
                             if (captureFromArguments2 == null) {
@@ -171,7 +171,7 @@ public final class AbstractTypeChecker {
                             } else {
                                 supertypesPolicy = abstractTypeCheckerContext.substitutionSupertypePolicy(captureFromArguments2);
                             }
-                            if (!(!C12880j.m40224a((Object) supertypesPolicy, (Object) None.INSTANCE))) {
+                            if (!(!Intrinsics.areEqual((Object) supertypesPolicy, (Object) None.INSTANCE))) {
                                 supertypesPolicy = null;
                             }
                             if (supertypesPolicy != null) {
@@ -192,10 +192,10 @@ public final class AbstractTypeChecker {
                 abstractTypeCheckerContext.clear();
                 return smartList;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -239,14 +239,14 @@ public final class AbstractTypeChecker {
                             break;
                         } else if (supertypesSet.size() <= 1000) {
                             SimpleTypeMarker simpleTypeMarker2 = (SimpleTypeMarker) supertypesDeque.pop();
-                            C12880j.m40222a((Object) simpleTypeMarker2, "current");
+                            Intrinsics.checkReturnedValueIsNotNull((Object) simpleTypeMarker2, "current");
                             if (supertypesSet.add(simpleTypeMarker2)) {
                                 if (abstractTypeCheckerContext.isClassType(simpleTypeMarker2)) {
                                     supertypesPolicy = None.INSTANCE;
                                 } else {
                                     supertypesPolicy = LowerIfFlexible.INSTANCE;
                                 }
-                                if (!(!C12880j.m40224a((Object) supertypesPolicy, (Object) None.INSTANCE))) {
+                                if (!(!Intrinsics.areEqual((Object) supertypesPolicy, (Object) None.INSTANCE))) {
                                     supertypesPolicy = null;
                                 }
                                 if (supertypesPolicy != null) {
@@ -273,11 +273,11 @@ public final class AbstractTypeChecker {
                         }
                     }
                 } else {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             } else {
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             }
         }
@@ -285,7 +285,7 @@ public final class AbstractTypeChecker {
     }
 
     private final boolean isCommonDenotableType(AbstractTypeCheckerContext abstractTypeCheckerContext, KotlinTypeMarker kotlinTypeMarker) {
-        return abstractTypeCheckerContext.isDenotable(abstractTypeCheckerContext.typeConstructor(kotlinTypeMarker)) && !abstractTypeCheckerContext.isDynamic(kotlinTypeMarker) && !abstractTypeCheckerContext.isDefinitelyNotNullType(kotlinTypeMarker) && C12880j.m40224a((Object) abstractTypeCheckerContext.typeConstructor(abstractTypeCheckerContext.lowerBoundIfFlexible(kotlinTypeMarker)), (Object) abstractTypeCheckerContext.typeConstructor(abstractTypeCheckerContext.upperBoundIfFlexible(kotlinTypeMarker)));
+        return abstractTypeCheckerContext.isDenotable(abstractTypeCheckerContext.typeConstructor(kotlinTypeMarker)) && !abstractTypeCheckerContext.isDynamic(kotlinTypeMarker) && !abstractTypeCheckerContext.isDefinitelyNotNullType(kotlinTypeMarker) && Intrinsics.areEqual((Object) abstractTypeCheckerContext.typeConstructor(abstractTypeCheckerContext.lowerBoundIfFlexible(kotlinTypeMarker)), (Object) abstractTypeCheckerContext.typeConstructor(abstractTypeCheckerContext.upperBoundIfFlexible(kotlinTypeMarker)));
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:64:0x00fa A[RETURN] */
@@ -594,7 +594,7 @@ public final class AbstractTypeChecker {
                 while (!supertypesDeque.isEmpty()) {
                     if (supertypesSet.size() <= 1000) {
                         SimpleTypeMarker simpleTypeMarker2 = (SimpleTypeMarker) supertypesDeque.pop();
-                        C12880j.m40222a((Object) simpleTypeMarker2, "current");
+                        Intrinsics.checkReturnedValueIsNotNull((Object) simpleTypeMarker2, "current");
                         if (supertypesSet.add(simpleTypeMarker2)) {
                             if (abstractTypeCheckerContext.isClassType(simpleTypeMarker2)) {
                                 smartList.add(simpleTypeMarker2);
@@ -602,7 +602,7 @@ public final class AbstractTypeChecker {
                             } else {
                                 supertypesPolicy = LowerIfFlexible.INSTANCE;
                             }
-                            if (!(!C12880j.m40224a((Object) supertypesPolicy, (Object) None.INSTANCE))) {
+                            if (!(!Intrinsics.areEqual((Object) supertypesPolicy, (Object) None.INSTANCE))) {
                                 supertypesPolicy = null;
                             }
                             if (supertypesPolicy != null) {
@@ -624,15 +624,15 @@ public final class AbstractTypeChecker {
                 ArrayList arrayList = new ArrayList();
                 for (SimpleTypeMarker simpleTypeMarker3 : smartList) {
                     AbstractTypeChecker abstractTypeChecker = INSTANCE;
-                    C12880j.m40222a((Object) simpleTypeMarker3, "it");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) simpleTypeMarker3, "it");
                     C13196t.m40545a((Collection) arrayList, (Iterable) abstractTypeChecker.collectAndFilter(abstractTypeCheckerContext, simpleTypeMarker3, typeConstructorMarker));
                 }
                 return arrayList;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 

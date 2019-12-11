@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.Maybe;
@@ -61,7 +61,7 @@ public final class DefaultOnlineMediaClient implements MediaClient, SilkDrmClien
         Single accessToken = this.tokenProvider.getAccessToken(serviceTransaction);
         DefaultOnlineMediaClient$getVerifiedMediaItem$1 defaultOnlineMediaClient$getVerifiedMediaItem$1 = new DefaultOnlineMediaClient$getVerifiedMediaItem$1(this, serviceTransaction, playbackContext, mediaDescriptor, z);
         Maybe<MediaItem> h = accessToken.mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) defaultOnlineMediaClient$getVerifiedMediaItem$1).mo30234h();
-        C12880j.m40222a((Object) h, "tokenProvider.getAccessT…               .toMaybe()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "tokenProvider.getAccessT…               .toMaybe()");
         return h;
     }
 
@@ -82,14 +82,14 @@ public final class DefaultOnlineMediaClient implements MediaClient, SilkDrmClien
 
     public Completable downloadBifThumbnail(ServiceTransaction serviceTransaction, Presentation presentation, File file, Map<String, String> map) {
         Completable b = this.configurationProvider.getServiceLink(serviceTransaction, DefaultOnlineMediaClient$downloadBifThumbnail$1.INSTANCE).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultOnlineMediaClient$downloadBifThumbnail$2<Object,Object>(presentation, map, serviceTransaction, file)).mo30051b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "configurationProvider.ge…scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "configurationProvider.ge…scribeOn(Schedulers.io())");
         return b;
     }
 
     public Maybe<List<BifThumbnailSet>> getBifThumbnails(ServiceTransaction serviceTransaction, MediaThumbnailLink mediaThumbnailLink, ThumbnailResolution thumbnailResolution, Map<String, String> map) {
         DefaultOnlineMediaClient$getBifThumbnails$1 defaultOnlineMediaClient$getBifThumbnails$1 = new DefaultOnlineMediaClient$getBifThumbnails$1(this, serviceTransaction, mediaThumbnailLink, thumbnailResolution, map);
         Maybe<List<BifThumbnailSet>> a = Maybe.m38256a((Callable<? extends MaybeSource<? extends T>>) defaultOnlineMediaClient$getBifThumbnails$1);
-        C12880j.m40222a((Object) a, "Maybe.defer {\n          …              }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Maybe.defer {\n          …              }\n        }");
         return a;
     }
 
@@ -99,13 +99,13 @@ public final class DefaultOnlineMediaClient implements MediaClient, SilkDrmClien
 
     public Maybe<MediaItem> getMediaItem(ServiceTransaction serviceTransaction, MediaDescriptor mediaDescriptor, PlaybackContext playbackContext) {
         Maybe<MediaItem> c = this.widevineVerifier.supportsV1(serviceTransaction).mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new DefaultOnlineMediaClient$getMediaItem$1<Object,Object>(this, serviceTransaction, mediaDescriptor, playbackContext));
-        C12880j.m40222a((Object) c, "widevineVerifier.support…ntext, allowL1)\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "widevineVerifier.support…ntext, allowL1)\n        }");
         return c;
     }
 
     public Single<byte[]> getMediaKey(ServiceTransaction serviceTransaction, Map<String, String> map, String str) {
         Single<byte[]> a = this.configurationProvider.getServiceLink(serviceTransaction, DefaultOnlineMediaClient$getMediaKey$1$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultOnlineMediaClient$getMediaKey$$inlined$with$lambda$1<Object,Object>(this, serviceTransaction, map, str));
-        C12880j.m40222a((Object) a, "configurationProvider.ge…EY)\n                    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "configurationProvider.ge…EY)\n                    }");
         return a;
     }
 
@@ -115,7 +115,7 @@ public final class DefaultOnlineMediaClient implements MediaClient, SilkDrmClien
 
     public Maybe<Playhead> getPlayhead(ServiceTransaction serviceTransaction, Map<String, String> map, String str) {
         Maybe<Playhead> c = this.configurationProvider.getServiceLink(serviceTransaction, DefaultOnlineMediaClient$getPlayhead$1.INSTANCE).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultOnlineMediaClient$getPlayhead$2<Object,Object>(this, map, serviceTransaction)).mo30221c((Function<? super T, ? extends MaybeSource<? extends R>>) new DefaultOnlineMediaClient$getPlayhead$3<Object,Object>(str));
-        C12880j.m40222a((Object) c, "configurationProvider.ge…      }\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "configurationProvider.ge…      }\n                }");
         return c;
     }
 }

@@ -22,8 +22,8 @@ import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
 import com.google.android.exoplayer2.p382u0.p383m.C9348g;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9545h0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9568u;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
@@ -40,7 +40,7 @@ import net.danlew.android.joda.DateUtils;
 public class C8972g implements C8912g {
 
     /* renamed from: K */
-    private static final int f19547K = C9554k0.m29428b("seig");
+    private static final int f19547K = Util.m29428b("seig");
 
     /* renamed from: L */
     private static final byte[] f19548L = {-94, 57, 79, 82, 90, -101, 79, 20, -94, 68, 108, 66, 124, 100, -115, -12};
@@ -303,7 +303,7 @@ public class C8972g implements C8912g {
 
         /* renamed from: a */
         public void mo23372a(long j) {
-            long b = C8883r.m25968b(j);
+            long b = C8883r.usToMs(j);
             int i = this.f19592e;
             while (true) {
                 C8985o oVar = this.f19589b;
@@ -409,7 +409,7 @@ public class C8972g implements C8912g {
                 }
                 int position2 = (int) (a.f19589b.f19684g[a.f19594g] - hVar.getPosition());
                 if (position2 < 0) {
-                    C9563q.m29500d("FragmentedMp4Extractor", "Ignoring negative offset to sample data.");
+                    Log.m29500d("FragmentedMp4Extractor", "Ignoring negative offset to sample data.");
                     position2 = 0;
                 }
                 hVar2.mo23298c(position2);
@@ -892,11 +892,11 @@ public class C8972g implements C8912g {
                 C9537e.m29296a(s2);
                 String str4 = s2;
                 long x = wVar.mo24713x();
-                j4 = C9554k0.m29439c(wVar.mo24713x(), 1000000, x);
+                j4 = Util.m29439c(wVar.mo24713x(), 1000000, x);
                 long j5 = this.f19585z;
                 long j6 = j5 != -9223372036854775807L ? j5 + j4 : -9223372036854775807L;
                 str2 = str3;
-                j2 = C9554k0.m29439c(wVar.mo24713x(), 1000, x);
+                j2 = Util.m29439c(wVar.mo24713x(), 1000, x);
                 str = str4;
                 j = wVar.mo24713x();
                 j3 = j6;
@@ -904,12 +904,12 @@ public class C8972g implements C8912g {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Skipping unsupported emsg version: ");
                 sb.append(c);
-                C9563q.m29500d("FragmentedMp4Extractor", sb.toString());
+                Log.m29500d("FragmentedMp4Extractor", sb.toString());
                 return;
             } else {
                 long x2 = wVar.mo24713x();
-                j3 = C9554k0.m29439c(wVar.mo24675A(), 1000000, x2);
-                long c2 = C9554k0.m29439c(wVar.mo24713x(), 1000, x2);
+                j3 = Util.m29439c(wVar.mo24675A(), 1000000, x2);
+                long c2 = Util.m29439c(wVar.mo24713x(), 1000, x2);
                 long x3 = wVar.mo24713x();
                 String s3 = wVar.mo24708s();
                 C9537e.m29296a(s3);
@@ -1200,7 +1200,7 @@ public class C8972g implements C8912g {
         long[] jArr2 = mVar.f19669h;
         long j2 = 0;
         if (jArr2 != null && jArr2.length == 1 && jArr2[0] == 0) {
-            j2 = C9554k0.m29439c(mVar.f19670i[0], 1000, mVar.f19664c);
+            j2 = Util.m29439c(mVar.f19670i[0], 1000, mVar.f19664c);
         }
         int[] iArr = oVar.f19686i;
         int[] iArr2 = oVar.f19687j;
@@ -1246,7 +1246,7 @@ public class C8972g implements C8912g {
                 z3 = z9;
                 iArr2[i9] = 0;
             }
-            jArr4[i9] = C9554k0.m29439c(j5, 1000, j4) - j3;
+            jArr4[i9] = Util.m29439c(j5, 1000, j4) - j3;
             iArr[i9] = i4;
             zArr3[i9] = ((i5 >> 16) & 1) == 0 && (!z11 || i9 == 0);
             i9++;
@@ -1367,7 +1367,7 @@ public class C8972g implements C8912g {
         }
         long j4 = j3;
         long j5 = j + j2;
-        long c2 = C9554k0.m29439c(j4, 1000000, x);
+        long c2 = Util.m29439c(j4, 1000000, x);
         wVar2.mo24695f(2);
         int B = wVar.mo24676B();
         int[] iArr = new int[B];
@@ -1390,7 +1390,7 @@ public class C8972g implements C8912g {
                 int i3 = B;
                 int[] iArr2 = iArr;
                 long[] jArr6 = jArr;
-                j7 = C9554k0.m29439c(j6, 1000000, x);
+                j7 = Util.m29439c(j6, 1000000, x);
                 jArr4[i] = j7 - jArr5[i];
                 wVar2.mo24695f(4);
                 j5 += (long) iArr2[i];
@@ -1456,7 +1456,7 @@ public class C8972g implements C8912g {
                 byte[] bArr = bVar.f19503g1.f22333a;
                 UUID c = C8980k.m26495c(bArr);
                 if (c == null) {
-                    C9563q.m29500d("FragmentedMp4Extractor", "Skipped pssh atom (failed to extract uuid)");
+                    Log.m29500d("FragmentedMp4Extractor", "Skipped pssh atom (failed to extract uuid)");
                 } else {
                     arrayList.add(new C8692b(c, "video/mp4", bArr));
                 }

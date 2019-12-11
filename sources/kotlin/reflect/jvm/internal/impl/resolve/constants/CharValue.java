@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve.constants;
 
 import java.util.Arrays;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.SimpleType;
 
@@ -36,13 +36,13 @@ public final class CharValue extends IntegerValueConstant<Character> {
     public String toString() {
         Object[] objArr = {Integer.valueOf(((Character) getValue()).charValue()), getPrintablePart(((Character) getValue()).charValue())};
         String format = String.format("\\u%04X ('%s')", Arrays.copyOf(objArr, objArr.length));
-        C12880j.m40222a((Object) format, "java.lang.String.format(this, *args)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) format, "java.lang.String.format(this, *args)");
         return format;
     }
 
     public SimpleType getType(ModuleDescriptor moduleDescriptor) {
         SimpleType charType = moduleDescriptor.getBuiltIns().getCharType();
-        C12880j.m40222a((Object) charType, "module.builtIns.charType");
+        Intrinsics.checkReturnedValueIsNotNull((Object) charType, "module.builtIns.charType");
         return charType;
     }
 }

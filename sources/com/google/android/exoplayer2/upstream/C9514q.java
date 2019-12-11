@@ -3,8 +3,8 @@ package com.google.android.exoplayer2.upstream;
 import android.content.Context;
 import android.net.Uri;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -106,7 +106,7 @@ public final class C9514q implements DataSource {
                 this.f22188g = (DataSource) Class.forName("com.google.android.exoplayer2.ext.rtmp.RtmpDataSource").getConstructor(new Class[0]).newInstance(new Object[0]);
                 m29242a(this.f22188g);
             } catch (ClassNotFoundException unused) {
-                C9563q.m29500d("DefaultDataSource", "Attempting to play RTMP stream without depending on the RTMP extension");
+                Log.m29500d("DefaultDataSource", "Attempting to play RTMP stream without depending on the RTMP extension");
             } catch (Exception e) {
                 throw new RuntimeException("Error instantiating RTMP extension", e);
             }
@@ -166,7 +166,7 @@ public final class C9514q implements DataSource {
     public long open(DataSpec dataSpec) throws IOException {
         C9537e.m29301b(this.f22192k == null);
         String scheme = dataSpec.f21938a.getScheme();
-        if (C9554k0.m29411a(dataSpec.f21938a)) {
+        if (Util.isLocalFileUri(dataSpec.f21938a)) {
             String path = dataSpec.f21938a.getPath();
             if (path == null || !path.startsWith("/android_asset/")) {
                 this.f22192k = m29247e();

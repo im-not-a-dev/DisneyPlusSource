@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p361p0;
 
 import com.google.android.exoplayer2.p361p0.C8840m.C8841a;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.nio.ByteBuffer;
 
 /* renamed from: com.google.android.exoplayer2.p0.z */
@@ -36,7 +36,7 @@ public final class C8871z extends C8854s {
     private long f18995p;
 
     public C8871z() {
-        byte[] bArr = C9554k0.f22286f;
+        byte[] bArr = Util.EMPTY_BYTE_ARRAY;
         this.f18989j = bArr;
         this.f18990k = bArr;
     }
@@ -179,7 +179,7 @@ public final class C8871z extends C8854s {
     public void mo23073k() {
         this.f18988i = false;
         this.f18993n = 0;
-        byte[] bArr = C9554k0.f22286f;
+        byte[] bArr = Util.EMPTY_BYTE_ARRAY;
         this.f18989j = bArr;
         this.f18990k = bArr;
     }

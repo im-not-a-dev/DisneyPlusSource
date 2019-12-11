@@ -7,7 +7,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayout.C10341g;
 import kotlin.C13145v;
 import kotlin.jvm.functions.C12853n;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.k0 */
 /* compiled from: TabLayoutExt.kt */
@@ -20,7 +20,7 @@ public final class C5842k0 {
             int childCount = viewGroup.getChildCount();
             for (int i = 0; i < childCount; i++) {
                 View childAt2 = viewGroup.getChildAt(i);
-                C12880j.m40222a((Object) childAt2, "tabView");
+                Intrinsics.checkReturnedValueIsNotNull((Object) childAt2, "tabView");
                 nVar.invoke(childAt2, Integer.valueOf(i), Integer.valueOf(childCount));
             }
         }
@@ -47,7 +47,7 @@ public final class C5842k0 {
         if (textView != null) {
             textView.setText(str);
         }
-        C12880j.m40222a((Object) c, "newTab().apply {\n       …View)?.text = label\n    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "newTab().apply {\n       …View)?.text = label\n    }");
         return c;
     }
 }

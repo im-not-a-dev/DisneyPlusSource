@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.C13142s;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager;
 import kotlin.reflect.jvm.internal.impl.storage.StorageManager;
@@ -29,7 +29,7 @@ public final class CapturedTypeConstructorKt {
         }
         if (typeProjection.isStarProjection()) {
             StorageManager storageManager = LockBasedStorageManager.NO_LOCKS;
-            C12880j.m40222a((Object) storageManager, "LockBasedStorageManager.NO_LOCKS");
+            Intrinsics.checkReturnedValueIsNotNull((Object) storageManager, "LockBasedStorageManager.NO_LOCKS");
             typeProjectionImpl = new TypeProjectionImpl(new LazyWrappedType(storageManager, new CapturedTypeConstructorKt$createCapturedIfNeeded$1(typeProjection)));
         } else {
             typeProjectionImpl = new TypeProjectionImpl(typeProjection.getType());

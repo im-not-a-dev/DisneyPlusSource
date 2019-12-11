@@ -22,7 +22,7 @@ import java.util.concurrent.Callable;
 import javax.inject.Provider;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Consumer;
@@ -112,12 +112,12 @@ public final class DefaultRefreshAccessContextHelper implements RefreshAccessCon
                 ServiceTransaction serviceTransaction2 = serviceTransaction;
                 DefaultImpls.logDust$default(serviceTransaction2, "urn:bamtech:dust:bamsdk:api:session:legacyTokenFound", "urn:bamtech:dust:bamsdk:event:sdk", LogLevel.INFO, false, 8, null);
                 Single<TransactionResult<AccessContext>> a = this.tokenExchangeManager.refreshToken(serviceTransaction, internalSessionState).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultRefreshAccessContextHelper$performRefreshAction$1<Object,Object>(this, serviceTransaction));
-                C12880j.m40222a((Object) a, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) a, str);
                 return a;
             case 2:
                 NotFoundException notFoundException = new NotFoundException(serviceTransaction.getId(), C13183n.m40498a(new ServiceError("missing-context", null, 2, null)), null, 4, null);
                 Single<TransactionResult<AccessContext>> a2 = Single.m38395a((Throwable) notFoundException);
-                C12880j.m40222a((Object) a2, "Single.error<Transaction…ror(\"missing-context\"))))");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a2, "Single.error<Transaction…ror(\"missing-context\"))))");
                 return a2;
             case 3:
                 UnauthorizedException invalidForceRefresh = invalidForceRefresh(serviceTransaction);
@@ -131,10 +131,10 @@ public final class DefaultRefreshAccessContextHelper implements RefreshAccessCon
                 if (accessContext != null) {
                     internalSessionStateProvider2.setInternalSessionState(new AuthenticationExpired(accessContext, invalidForceRefresh));
                     Single<TransactionResult<AccessContext>> a3 = Single.m38395a((Throwable) invalidForceRefresh);
-                    C12880j.m40222a((Object) a3, "with(invalidForceRefresh…ext>>(this)\n            }");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a3, "with(invalidForceRefresh…ext>>(this)\n            }");
                     return a3;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             case 4:
                 StringBuilder sb2 = new StringBuilder();
@@ -143,7 +143,7 @@ public final class DefaultRefreshAccessContextHelper implements RefreshAccessCon
                 ServiceTransaction serviceTransaction4 = serviceTransaction;
                 LogDispatcher.DefaultImpls.log$default(serviceTransaction4, this, "AccessContextRefreshStarted", sb2.toString(), null, false, 24, null);
                 Single<TransactionResult<AccessContext>> b = this.tokenExchangeManager.refreshToken(serviceTransaction, internalSessionState).mo30218b((Consumer<? super Throwable>) new DefaultRefreshAccessContextHelper$performRefreshAction$3<Object>(this, serviceTransaction));
-                C12880j.m40222a((Object) b, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, str);
                 return b;
             case 5:
                 StringBuilder sb3 = new StringBuilder();
@@ -152,7 +152,7 @@ public final class DefaultRefreshAccessContextHelper implements RefreshAccessCon
                 ServiceTransaction serviceTransaction5 = serviceTransaction;
                 LogDispatcher.DefaultImpls.log$default(serviceTransaction5, this, "AccessContextRefreshStarted", sb3.toString(), null, false, 24, null);
                 Single<TransactionResult<AccessContext>> h = this.tokenExchangeManager.refreshToken(serviceTransaction, internalSessionState).mo30235h(new DefaultRefreshAccessContextHelper$performRefreshAction$4(this, serviceTransaction, accessContext));
-                C12880j.m40222a((Object) h, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) h, str);
                 return h;
             case 6:
                 StringBuilder sb4 = new StringBuilder();
@@ -162,10 +162,10 @@ public final class DefaultRefreshAccessContextHelper implements RefreshAccessCon
                 LogDispatcher.DefaultImpls.log$default(serviceTransaction6, this, "HasValidAccessContext", sb4.toString(), null, false, 24, null);
                 if (accessContext != null) {
                     Single<TransactionResult<AccessContext>> b2 = Single.m38399b(new TransactionResult(serviceTransaction, accessContext));
-                    C12880j.m40222a((Object) b2, "Single.just(TransactionR…(transaction, context!!))");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) b2, "Single.just(TransactionR…(transaction, context!!))");
                     return b2;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             case 7:
                 StringBuilder sb5 = new StringBuilder();
@@ -178,10 +178,10 @@ public final class DefaultRefreshAccessContextHelper implements RefreshAccessCon
                 if (accessContext != null) {
                     internalSessionStateProvider3.setInternalSessionState(new AuthenticationExpired(accessContext, missingTokenException));
                     Single<TransactionResult<AccessContext>> a4 = Single.m38395a((Throwable) missingTokenException);
-                    C12880j.m40222a((Object) a4, "with(missingTokenExcepti…>(this)\n                }");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a4, "with(missingTokenExcepti…>(this)\n                }");
                     return a4;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             case 8:
                 StringBuilder sb6 = new StringBuilder();
@@ -194,10 +194,10 @@ public final class DefaultRefreshAccessContextHelper implements RefreshAccessCon
                 if (accessContext != null) {
                     internalSessionStateProvider4.setInternalSessionState(new AuthenticationExpired(accessContext, refreshError));
                     Single<TransactionResult<AccessContext>> a5 = Single.m38395a((Throwable) refreshError);
-                    C12880j.m40222a((Object) a5, "with(refreshError(transa…>(this)\n                }");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) a5, "with(refreshError(transa…>(this)\n                }");
                     return a5;
                 }
-                C12880j.m40220a();
+                Intrinsics.throwNpe();
                 throw null;
             default:
                 throw new C12898l();
@@ -206,7 +206,7 @@ public final class DefaultRefreshAccessContextHelper implements RefreshAccessCon
 
     public Single<TransactionResult<AccessContext>> refreshAccessContext(ServiceTransaction serviceTransaction, boolean z) {
         Single<TransactionResult<AccessContext>> a = Single.m38396a((Callable<? extends SingleSource<? extends T>>) new DefaultRefreshAccessContextHelper$refreshAccessContext$1<Object>(this, serviceTransaction, z));
-        C12880j.m40222a((Object) a, "Single.defer {\n         …             }\n\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.defer {\n         …             }\n\n        }");
         return a;
     }
 

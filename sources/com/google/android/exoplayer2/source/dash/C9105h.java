@@ -7,7 +7,7 @@ import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p366s0.C8907b;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.source.C9230p;
 import com.google.android.exoplayer2.source.dash.C9098c.C9099a;
@@ -200,7 +200,7 @@ public class C9105h implements C9098c {
             long a;
             int b = mo23655b();
             if (b == -1) {
-                a = mo23656b((j - C8883r.m25967a(bVar.f20423a)) - C8883r.m25967a(bVar.mo23675a(i).f20454b));
+                a = mo23656b((j - C8883r.msToUs(bVar.f20423a)) - C8883r.msToUs(bVar.mo23675a(i).f20454b));
             } else {
                 a = mo23650a() + ((long) b);
             }
@@ -242,7 +242,7 @@ public class C9105h implements C9098c {
             if (mo23655b() != -1 || bVar.f20428f == -9223372036854775807L) {
                 return mo23650a();
             }
-            return Math.max(mo23650a(), mo23656b(((j - C8883r.m25967a(bVar.f20423a)) - C8883r.m25967a(bVar.mo23675a(i).f20454b)) - C8883r.m25967a(bVar.f20428f)));
+            return Math.max(mo23650a(), mo23656b(((j - C8883r.msToUs(bVar.f20423a)) - C8883r.msToUs(bVar.mo23675a(i).f20454b)) - C8883r.msToUs(bVar.f20428f)));
         }
 
         /* renamed from: a */
@@ -367,7 +367,7 @@ public class C9105h implements C9098c {
             if (bVar.f20390c != null) {
                 long b = bVar.mo23656b(j);
                 long c = bVar.mo23658c(b);
-                return C9554k0.m29390a(j, seekParameters, c, (c >= j || b >= ((long) (bVar.mo23655b() + -1))) ? c : bVar.mo23658c(b + 1));
+                return Util.m29390a(j, seekParameters, c, (c >= j || b >= ((long) (bVar.mo23655b() + -1))) ? c : bVar.mo23658c(b + 1));
             }
         }
         return j;
@@ -421,7 +421,7 @@ public class C9105h implements C9098c {
         if (this.f20383l == null) {
             long j4 = j2 - j;
             long a = m27191a(j);
-            long a2 = C8883r.m25967a(this.f20381j.f20423a) + C8883r.m25967a(this.f20381j.mo23675a(this.f20382k).f20454b) + j2;
+            long a2 = C8883r.msToUs(this.f20381j.f20423a) + C8883r.msToUs(this.f20381j.mo23675a(this.f20382k).f20454b) + j2;
             C9113c cVar = this.f20378g;
             if (cVar == null || !cVar.mo23671a(a2)) {
                 long b = m27194b();
@@ -566,7 +566,7 @@ public class C9105h implements C9098c {
         if (lVar != null) {
             return lVar.mo23956f();
         }
-        return C9554k0.m29431b(bVar.mo23656b(j), j2, j3);
+        return Util.m29431b(bVar.mo23656b(j), j2, j3);
     }
 
     /* renamed from: a */

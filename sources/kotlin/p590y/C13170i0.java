@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import java.util.SortedMap;
 import java.util.TreeMap;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlin.y.i0 */
 /* compiled from: MapsJVM.kt */
@@ -15,7 +15,7 @@ class C13170i0 extends C13168h0 {
     /* renamed from: a */
     public static <K, V> Map<K, V> m40332a(Pair<? extends K, ? extends V> pair) {
         Map<K, V> singletonMap = Collections.singletonMap(pair.mo31015c(), pair.mo31016d());
-        C12880j.m40222a((Object) singletonMap, "java.util.Collections.si…(pair.first, pair.second)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) singletonMap, "java.util.Collections.si…(pair.first, pair.second)");
         return singletonMap;
     }
 
@@ -35,8 +35,8 @@ class C13170i0 extends C13168h0 {
     public static final <K, V> Map<K, V> m40331a(Map<? extends K, ? extends V> map) {
         Entry entry = (Entry) map.entrySet().iterator().next();
         Map<K, V> singletonMap = Collections.singletonMap(entry.getKey(), entry.getValue());
-        C12880j.m40222a((Object) singletonMap, "java.util.Collections.singletonMap(key, value)");
-        C12880j.m40222a((Object) singletonMap, "with(entries.iterator().…ingletonMap(key, value) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) singletonMap, "java.util.Collections.singletonMap(key, value)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) singletonMap, "with(entries.iterator().…ingletonMap(key, value) }");
         return singletonMap;
     }
 }

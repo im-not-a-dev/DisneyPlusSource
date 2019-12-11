@@ -14,7 +14,7 @@ import com.bamtechmedia.dominguez.channels.p073tv.p075h.C3217b;
 import com.bamtechmedia.dominguez.channels.p073tv.p075h.C3219c;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p155q.p156a.p157a.C4339d;
 import p096e.p155q.p156a.p157a.C4342e;
 import p520io.reactivex.Single;
@@ -66,7 +66,7 @@ public final class HideChannelsWorker extends RxWorker {
 
         /* renamed from: a */
         public ListenableWorker mo5648a(Context context, String str, WorkerParameters workerParameters) {
-            if (!C12880j.m40224a((Object) str, (Object) HideChannelsWorker.class.getCanonicalName())) {
+            if (!Intrinsics.areEqual((Object) str, (Object) HideChannelsWorker.class.getCanonicalName())) {
                 return null;
             }
             HideChannelsWorker hideChannelsWorker = new HideChannelsWorker(context, workerParameters, this.f8228b, this.f8229c, this.f8230d, this.f8231e);
@@ -111,10 +111,10 @@ public final class HideChannelsWorker extends RxWorker {
             C4339d dVar3 = dVar2;
             C4339d dVar4 = dVar;
             C3204a a = this.f8233a.f8227f;
-            C12880j.m40222a((Object) dVar4, "defaultChannel");
+            Intrinsics.checkReturnedValueIsNotNull((Object) dVar4, "defaultChannel");
             a.mo12253a(dVar4.mo15198a());
             C3204a a2 = this.f8233a.f8227f;
-            C12880j.m40222a((Object) dVar3, "watchlistChannel");
+            Intrinsics.checkReturnedValueIsNotNull((Object) dVar3, "watchlistChannel");
             a2.mo12253a(dVar3.mo15198a());
             this.f8233a.f8226e.mo15226a(dVar3.mo15198a());
             this.f8233a.f8227f.mo12255a();
@@ -134,7 +134,7 @@ public final class HideChannelsWorker extends RxWorker {
     public Single<Result> mo5623a() {
         C11918b bVar = C11918b.f27600a;
         Single<Result> a = Single.m38390a((SingleSource<? extends T1>) this.f8224c.mo12261a(), (SingleSource<? extends T2>) this.f8225d.mo12261a(), (C11947c<? super T1, ? super T2, ? extends R>) new C3239c<Object,Object,Object>(this));
-        C12880j.m40222a((Object) a, "Single.zip(s1, s2, BiFun…-> zipper.invoke(t, u) })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Single.zip(s1, s2, BiFun…-> zipper.invoke(t, u) })");
         return a;
     }
 }

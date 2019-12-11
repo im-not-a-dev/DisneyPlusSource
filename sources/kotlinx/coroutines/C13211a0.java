@@ -3,7 +3,7 @@ package kotlinx.coroutines;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12688f;
 import kotlinx.coroutines.android.AndroidExceptionPreHandler;
 
@@ -16,7 +16,7 @@ public final class C13211a0 {
 
     static {
         Iterator it = Arrays.asList(new CoroutineExceptionHandler[]{new AndroidExceptionPreHandler()}).iterator();
-        C12880j.m40222a((Object) it, "ServiceLoader.load(\n    ….classLoader\n).iterator()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) it, "ServiceLoader.load(\n    ….classLoader\n).iterator()");
         f29647a = C12788p.m39999g(C12781n.m39974a(it));
     }
 
@@ -30,12 +30,12 @@ public final class C13211a0 {
                     ((CoroutineExceptionHandler) it.next()).handleException(fVar, th);
                 } catch (Throwable th2) {
                     Thread currentThread = Thread.currentThread();
-                    C12880j.m40222a((Object) currentThread, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) currentThread, str);
                     currentThread.getUncaughtExceptionHandler().uncaughtException(currentThread, C13218b0.m40650a(th, th2));
                 }
             } else {
                 Thread currentThread2 = Thread.currentThread();
-                C12880j.m40222a((Object) currentThread2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) currentThread2, str);
                 currentThread2.getUncaughtExceptionHandler().uncaughtException(currentThread2, th);
                 return;
             }

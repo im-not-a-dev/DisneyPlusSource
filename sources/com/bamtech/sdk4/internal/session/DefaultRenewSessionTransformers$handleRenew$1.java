@@ -5,7 +5,7 @@ import com.bamtech.sdk4.session.AuthenticationExpiredCallback;
 import com.bamtech.sdk4.session.ReauthorizeMode;
 import com.bamtech.sdk4.token.AccessContext;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
@@ -26,7 +26,7 @@ final class DefaultRenewSessionTransformers$handleRenew$1<T, R> implements Funct
         if (authenticationExpiredCallback != null) {
             return authenticationExpiredCallback.newSession(this.$throwable);
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 }

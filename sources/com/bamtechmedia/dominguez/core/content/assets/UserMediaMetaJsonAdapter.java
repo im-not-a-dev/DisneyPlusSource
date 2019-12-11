@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.lang.reflect.Type;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
 import p163g.p500m.p501a.C11737m;
@@ -20,16 +20,16 @@ public final class UserMediaMetaJsonAdapter extends C11725h<UserMediaMeta> {
 
     public UserMediaMetaJsonAdapter(C11760v vVar) {
         C11739b a = C11739b.m37729a("userId", "ccMedia", "ccDefault", "occurredOn", "playhead", "runtime");
-        C12880j.m40222a((Object) a, "JsonReader.Options.of(\"u…\", \"playhead\", \"runtime\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "JsonReader.Options.of(\"u…\", \"playhead\", \"runtime\")");
         this.options = a;
         C11725h<String> a2 = vVar.mo29869a((Type) String.class, C13188p0.m40531a(), "userId");
-        C12880j.m40222a((Object) a2, "moshi.adapter<String>(St…ons.emptySet(), \"userId\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a2, "moshi.adapter<String>(St…ons.emptySet(), \"userId\")");
         this.stringAdapter = a2;
         C11725h<Long> a3 = vVar.mo29869a((Type) Long.class, C13188p0.m40531a(), "ccMedia");
-        C12880j.m40222a((Object) a3, "moshi.adapter<Long?>(Lon…ns.emptySet(), \"ccMedia\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "moshi.adapter<Long?>(Lon…ns.emptySet(), \"ccMedia\")");
         this.nullableLongAdapter = a3;
         C11725h<Long> a4 = vVar.mo29869a((Type) Long.TYPE, C13188p0.m40531a(), "ccDefault");
-        C12880j.m40222a((Object) a4, "moshi.adapter<Long>(Long….emptySet(), \"ccDefault\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a4, "moshi.adapter<Long>(Long….emptySet(), \"ccDefault\")");
         this.longAdapter = a4;
     }
 

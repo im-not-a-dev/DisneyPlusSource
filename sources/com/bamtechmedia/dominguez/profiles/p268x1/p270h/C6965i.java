@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.core.widget.C0513i;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p330z.C7946e;
 import p163g.p201e.p203b.p330z.C7948g;
 import p163g.p201e.p203b.p330z.C7950i;
@@ -63,7 +63,7 @@ public final class C6965i extends C11866a {
         public final void onFocusChange(View view, boolean z) {
             int i;
             View view2 = this.f15482c.itemView;
-            C12880j.m40222a((Object) view2, "viewHolder.itemView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) view2, "viewHolder.itemView");
             TextView textView = (TextView) view2.findViewById(C7946e.languageName);
             if (z) {
                 i = C7950i.Disney_TextAppearance_LanguageNameFocused;
@@ -87,8 +87,8 @@ public final class C6965i extends C11866a {
         if (this != obj) {
             if (obj instanceof C6965i) {
                 C6965i iVar = (C6965i) obj;
-                if (C12880j.m40224a((Object) this.f15479c, (Object) iVar.f15479c)) {
-                    if (!(this.f15477U == iVar.f15477U) || !C12880j.m40224a((Object) this.f15478V, (Object) iVar.f15478V)) {
+                if (Intrinsics.areEqual((Object) this.f15479c, (Object) iVar.f15479c)) {
+                    if (!(this.f15477U == iVar.f15477U) || !Intrinsics.areEqual((Object) this.f15478V, (Object) iVar.f15478V)) {
                         return false;
                     }
                 }
@@ -138,7 +138,7 @@ public final class C6965i extends C11866a {
     public void bind(C11867b bVar, int i, List<Object> list) {
         if (list.isEmpty()) {
             TextView textView = (TextView) bVar.mo20994a().findViewById(C7946e.languageName);
-            C12880j.m40222a((Object) textView, "holder.languageName");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "holder.languageName");
             textView.setText(this.f15479c);
             m21225a(bVar);
             if (this.f15477U) {

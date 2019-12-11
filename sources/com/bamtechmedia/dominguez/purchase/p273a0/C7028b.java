@@ -28,7 +28,7 @@ import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p163g.p201e.p203b.p299m.C7536a;
 import p163g.p201e.p203b.p299m.C7536a.C7538b;
@@ -181,7 +181,7 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
             }
             this.f15636c._$_findCachedViewById(C7904t.completePurchaseBtnLogOut).setOnClickListener(new C7032a(this));
             View _$_findCachedViewById = this.f15636c._$_findCachedViewById(C7904t.completePurchaseBtnLogOut);
-            C12880j.m40222a((Object) _$_findCachedViewById, "completePurchaseBtnLogOut");
+            Intrinsics.checkReturnedValueIsNotNull((Object) _$_findCachedViewById, "completePurchaseBtnLogOut");
             _$_findCachedViewById.setContentDescription(C3573a.m12035a(this.f15636c.mo19815p(), this.f15636c.m21340s().mo19820b(), (Map) null, 2, (Object) null));
         }
     }
@@ -238,12 +238,12 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
             if (i == 1) {
                 C7862c q = this.f15640c.mo19816q();
                 ImageView imageView = (ImageView) this.f15640c._$_findCachedViewById(C7904t.completePurchaseBackgroundImage);
-                C12880j.m40222a((Object) imageView, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) imageView, str);
                 q.mo20786c(imageView);
             } else if (i == 2) {
                 C7862c q2 = this.f15640c.mo19816q();
                 ImageView imageView2 = (ImageView) this.f15640c._$_findCachedViewById(C7904t.completePurchaseBackgroundImage);
-                C12880j.m40222a((Object) imageView2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) imageView2, str);
                 q2.mo20787d(imageView2);
             }
         }
@@ -264,17 +264,17 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
         public final void invoke() {
             C7030b a = this.f15641c.m21340s();
             TextView textView = (TextView) this.f15641c._$_findCachedViewById(C7904t.completeDescriptionMain);
-            C12880j.m40222a((Object) textView, "completeDescriptionMain");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView, "completeDescriptionMain");
             textView.setText(C3573a.m12035a(this.f15641c.mo19815p(), a.mo19822d(), (Map) null, 2, (Object) null));
             TextView textView2 = (TextView) this.f15641c._$_findCachedViewById(C7904t.completeDescriptionSub);
-            C12880j.m40222a((Object) textView2, "completeDescriptionSub");
+            Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "completeDescriptionSub");
             textView2.setText(C3573a.m12035a(this.f15641c.mo19815p(), a.mo19823e(), (Map) null, 2, (Object) null));
             Button button = (Button) this.f15641c._$_findCachedViewById(C7904t.completeBtnProceed);
             String str = "completeBtnProceed";
-            C12880j.m40222a((Object) button, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) button, str);
             button.setText(C3573a.m12035a(this.f15641c.mo19815p(), a.mo19821c(), (Map) null, 2, (Object) null));
             Button button2 = (Button) this.f15641c._$_findCachedViewById(C7904t.completeBtnProceed);
-            C12880j.m40222a((Object) button2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) button2, str);
             button2.setContentDescription(C3573a.m12035a(this.f15641c.mo19815p(), a.mo19819a(), (Map) null, 2, (Object) null));
         }
     }
@@ -305,7 +305,7 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
         if (dVar != null) {
             return dVar.mo13695j();
         }
-        C12880j.m40227c("offlineState");
+        Intrinsics.throwUninitializedPropertyAccessException("offlineState");
         throw null;
     }
 
@@ -318,7 +318,7 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
             if (eVar != null) {
                 eVar.mo19826a();
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         } else if (i == 2) {
@@ -326,7 +326,7 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
             if (eVar2 != null) {
                 eVar2.mo19827b();
             } else {
-                C12880j.m40227c(str);
+                Intrinsics.throwUninitializedPropertyAccessException(str);
                 throw null;
             }
         }
@@ -385,7 +385,7 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
             m21343v();
             return;
         }
-        C12880j.m40227c("analytics");
+        Intrinsics.throwUninitializedPropertyAccessException("analytics");
         throw null;
     }
 
@@ -406,11 +406,11 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
             if (cVar != null) {
                 int i = C7904t.completePurchaseContainer;
                 C0538i childFragmentManager = getChildFragmentManager();
-                C12880j.m40222a((Object) childFragmentManager, "childFragmentManager");
+                Intrinsics.checkReturnedValueIsNotNull((Object) childFragmentManager, "childFragmentManager");
                 cVar.mo20550a(i, childFragmentManager);
                 return;
             }
-            C12880j.m40227c("offlineRouter");
+            Intrinsics.throwUninitializedPropertyAccessException("offlineRouter");
             throw null;
         }
     }
@@ -421,7 +421,7 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
         if (r0Var != null) {
             return r0Var;
         }
-        C12880j.m40227c("appDictionary");
+        Intrinsics.throwUninitializedPropertyAccessException("appDictionary");
         throw null;
     }
 
@@ -431,7 +431,7 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
         if (cVar != null) {
             return cVar;
         }
-        C12880j.m40227c("onboardingImageLoader");
+        Intrinsics.throwUninitializedPropertyAccessException("onboardingImageLoader");
         throw null;
     }
 
@@ -444,11 +444,11 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
             if (jVar != null) {
                 C2810a.m10486a(jVar, (Integer) null, 0, 3, (Object) null);
             } else {
-                C12880j.m40227c("logOutRouter");
+                Intrinsics.throwUninitializedPropertyAccessException("logOutRouter");
                 throw null;
             }
         } else {
-            C12880j.m40227c("analytics");
+            Intrinsics.throwUninitializedPropertyAccessException("analytics");
             throw null;
         }
     }
@@ -463,7 +463,7 @@ public final class C7028b extends C11890i implements C2413n, C7536a {
             C2810a.m10485a(jVar, i, false, 2, (Object) null);
             return true;
         }
-        C12880j.m40227c("logOutRouter");
+        Intrinsics.throwUninitializedPropertyAccessException("logOutRouter");
         throw null;
     }
 }

@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import java.util.HashMap;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p512h.p513c.p514k.C11890i;
 
 /* renamed from: g.e.b.d.q0 */
@@ -27,7 +27,7 @@ public final class C5418q0 extends C11890i {
 
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         View inflate = layoutInflater.inflate(C5413o0.fragment_account_settings, viewGroup, false);
-        C12880j.m40222a((Object) inflate, "inflater.inflate(R.layou…ttings, container, false)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "inflater.inflate(R.layou…ttings, container, false)");
         return inflate;
     }
 
@@ -45,7 +45,7 @@ public final class C5418q0 extends C11890i {
                 requireFragmentManager().mo3161g();
                 return;
             }
-            C12880j.m40227c("accountSettingsRouter");
+            Intrinsics.throwUninitializedPropertyAccessException("accountSettingsRouter");
             throw null;
         }
     }

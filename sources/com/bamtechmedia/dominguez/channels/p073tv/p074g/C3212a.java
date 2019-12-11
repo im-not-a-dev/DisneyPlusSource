@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.auth.p066r0.C2793c;
 import com.bamtechmedia.dominguez.auth.p066r0.C2793c.C2794a;
 import com.bamtechmedia.dominguez.channels.p073tv.C3204a;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Completable;
 import p520io.reactivex.functions.C11945a;
@@ -58,7 +58,7 @@ public final class C3212a implements C2793c {
     /* renamed from: a */
     public Completable mo11570a() {
         Completable b = Completable.m38166c((C11945a) new C3213a(this)).mo30051b(this.f8183c);
-        C12880j.m40222a((Object) b, "Completable.fromAction {…ubscribeOn(mainScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.fromAction {…ubscribeOn(mainScheduler)");
         return b;
     }
 }

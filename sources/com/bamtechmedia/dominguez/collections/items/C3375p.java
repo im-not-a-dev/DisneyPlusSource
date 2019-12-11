@@ -10,7 +10,7 @@ import java.util.Map;
 import kotlin.C12907r;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5362e;
 import p163g.p201e.p202a.C5364g;
 import p163g.p509o.p510a.C11853e;
@@ -161,7 +161,7 @@ public final class C3375p extends C11866a {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x0038, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f8512Y, (java.lang.Object) r3.f8512Y) != false) goto L_0x003d;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f8512Y, (java.lang.Object) r3.f8512Y) != false) goto L_0x003d;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -173,23 +173,23 @@ public final class C3375p extends C11866a {
             com.bamtechmedia.dominguez.collections.items.p r3 = (com.bamtechmedia.dominguez.collections.items.C3375p) r3
             com.bamtechmedia.dominguez.collections.o0.j r0 = r2.f8508U
             com.bamtechmedia.dominguez.collections.o0.j r1 = r3.f8508U
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             com.bamtechmedia.dominguez.core.content.assets.b r0 = r2.f8509V
             com.bamtechmedia.dominguez.core.content.assets.b r1 = r3.f8509V
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             com.bamtechmedia.dominguez.collections.items.c r0 = r2.f8510W
             com.bamtechmedia.dominguez.collections.items.c r1 = r3.f8510W
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             com.bamtechmedia.dominguez.collections.f r0 = r2.f8511X
             com.bamtechmedia.dominguez.collections.f r1 = r3.f8511X
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             java.util.Map<java.lang.String, java.lang.String> r0 = r2.f8512Y
             java.util.Map<java.lang.String, java.lang.String> r3 = r3.f8512Y
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x003b
             goto L_0x003d
         L_0x003b:
@@ -205,7 +205,7 @@ public final class C3375p extends C11866a {
     public Object getChangePayload(C11853e<?> eVar) {
         if (eVar != null) {
             C3375p pVar = (C3375p) eVar;
-            return new C3377b(!C12880j.m40224a((Object) pVar.f8509V, (Object) this.f8509V), !C12880j.m40224a((Object) pVar.f8508U, (Object) this.f8508U));
+            return new C3377b(!Intrinsics.areEqual((Object) pVar.f8509V, (Object) this.f8509V), !Intrinsics.areEqual((Object) pVar.f8508U, (Object) this.f8508U));
         }
         throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ShelfCategoryItem");
     }
@@ -232,7 +232,7 @@ public final class C3375p extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof C3375p) && C12880j.m40224a((Object) ((C3375p) eVar).f8509V.getTitle(), (Object) this.f8509V.getTitle());
+        return (eVar instanceof C3375p) && Intrinsics.areEqual((Object) ((C3375p) eVar).f8509V.getTitle(), (Object) this.f8509V.getTitle());
     }
 
     public String toString() {
@@ -324,7 +324,7 @@ public final class C3375p extends C11866a {
             android.view.View r5 = r5.findViewById(r6)
             android.widget.TextView r5 = (android.widget.TextView) r5
             java.lang.String r6 = "holder.title_view"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
             com.bamtechmedia.dominguez.core.content.assets.b r6 = r3.f8509V
             java.lang.String r6 = r6.getTitle()
             r5.setText(r6)

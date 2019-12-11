@@ -58,7 +58,7 @@ public final class SubscriptionSource {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:10:0x002e, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.type, (java.lang.Object) r3.type) != false) goto L_0x0033;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.type, (java.lang.Object) r3.type) != false) goto L_0x0033;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -70,19 +70,19 @@ public final class SubscriptionSource {
             com.bamtech.sdk4.subscription.SubscriptionSource r3 = (com.bamtech.sdk4.subscription.SubscriptionSource) r3
             com.bamtech.sdk4.subscription.SubscriptionProvider r0 = r2.provider
             com.bamtech.sdk4.subscription.SubscriptionProvider r1 = r3.provider
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             java.lang.String r0 = r2.ref
             java.lang.String r1 = r3.ref
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             com.bamtech.sdk4.internal.subscription.SubscriptionSourceSubType r0 = r2.subType
             com.bamtech.sdk4.internal.subscription.SubscriptionSourceSubType r1 = r3.subType
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x0031
             com.bamtech.sdk4.subscription.SubscriptionSourceType r0 = r2.type
             com.bamtech.sdk4.subscription.SubscriptionSourceType r3 = r3.type
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x0031
             goto L_0x0033
         L_0x0031:

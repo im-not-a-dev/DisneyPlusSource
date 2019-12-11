@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.Triple;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -89,7 +89,7 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof KPackageImpl) && C12880j.m40224a((Object) getJClass(), (Object) ((KPackageImpl) obj).getJClass());
+        return (obj instanceof KPackageImpl) && Intrinsics.areEqual((Object) getJClass(), (Object) ((KPackageImpl) obj).getJClass());
     }
 
     public Collection<ConstructorDescriptor> getConstructorDescriptors() {
@@ -113,14 +113,14 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
         Package packageR = (Package) metadata.mo31021b();
         JvmMetadataVersion jvmMetadataVersion = (JvmMetadataVersion) metadata.mo31022c();
         GeneratedExtension<Package, List<Property>> generatedExtension = JvmProtoBuf.packageLocalVariable;
-        C12880j.m40222a((Object) generatedExtension, "JvmProtoBuf.packageLocalVariable");
+        Intrinsics.checkReturnedValueIsNotNull((Object) generatedExtension, "JvmProtoBuf.packageLocalVariable");
         Property property = (Property) ProtoBufUtilKt.getExtensionOrNull(packageR, generatedExtension, i);
         if (property == null) {
             return null;
         }
         Class jClass2 = getJClass();
         TypeTable typeTable = packageR.getTypeTable();
-        C12880j.m40222a((Object) typeTable, "packageProto.typeTable");
+        Intrinsics.checkReturnedValueIsNotNull((Object) typeTable, "packageProto.typeTable");
         return (PropertyDescriptor) UtilKt.deserializeToDescriptor(jClass2, property, jvmNameResolver, new kotlin.reflect.jvm.internal.impl.metadata.deserialization.TypeTable(typeTable), jvmMetadataVersion, KPackageImpl$getLocalProperty$1$1$1.INSTANCE);
     }
 
@@ -153,7 +153,7 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
         this.jClass = cls;
         this.usageModuleName = str;
         LazyVal<Data> lazy = ReflectProperties.lazy(new KPackageImpl$data$1(this));
-        C12880j.m40222a((Object) lazy, "ReflectProperties.lazy { Data() }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazy, "ReflectProperties.lazy { Data() }");
         this.data = lazy;
     }
 }

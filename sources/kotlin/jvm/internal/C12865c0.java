@@ -36,7 +36,7 @@ import kotlin.jvm.internal.p589f0.C12876e;
 public class C12865c0 {
     /* renamed from: a */
     private static <T extends Throwable> T m40198a(T t) {
-        C12880j.m40219a(t, C12865c0.class.getName());
+        Intrinsics.sanitizeStackTrace(t, C12865c0.class.getName());
         return t;
     }
 

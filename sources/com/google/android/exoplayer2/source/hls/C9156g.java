@@ -5,7 +5,7 @@ import android.os.SystemClock;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p393v0.C9537e;
 import com.google.android.exoplayer2.p393v0.C9549j0;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h;
 import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist;
@@ -556,7 +556,7 @@ class C9156g {
             j2 = jVar.f20861f;
         }
         if (hlsMediaPlaylist.f20698l || j2 < j4) {
-            a = (long) C9554k0.m29384a(hlsMediaPlaylist.f20701o, Long.valueOf(j2 - j), true, !this.f20571g.mo23883c() || jVar == null);
+            a = (long) Util.m29384a(hlsMediaPlaylist.f20701o, Long.valueOf(j2 - j), true, !this.f20571g.mo23883c() || jVar == null);
             j3 = hlsMediaPlaylist.f20695i;
         } else {
             a = hlsMediaPlaylist.f20695i;

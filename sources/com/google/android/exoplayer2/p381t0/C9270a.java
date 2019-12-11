@@ -9,8 +9,8 @@ import android.media.MediaCodecInfo.VideoCapabilities;
 import android.util.Pair;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p393v0.C9537e;
-import com.google.android.exoplayer2.p393v0.C9554k0;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9566t;
 
 /* renamed from: com.google.android.exoplayer2.t0.a */
@@ -77,9 +77,9 @@ public final class C9270a {
         sb.append(", ");
         sb.append(this.f21083b);
         sb.append(str2);
-        sb.append(C9554k0.f22285e);
+        sb.append(Util.DEVICE_DEBUG_INFO);
         sb.append("]");
-        C9563q.m29495a("MediaCodecInfo", sb.toString());
+        Log.m29495a("MediaCodecInfo", sb.toString());
     }
 
     /* renamed from: d */
@@ -90,7 +90,7 @@ public final class C9270a {
 
     /* renamed from: e */
     private static boolean m28037e(CodecCapabilities codecCapabilities) {
-        return C9554k0.f22281a >= 21 && m28038f(codecCapabilities);
+        return Util.SDK_INT >= 21 && m28038f(codecCapabilities);
     }
 
     @TargetApi(21)
@@ -114,7 +114,7 @@ public final class C9270a {
 
     /* renamed from: c */
     private static boolean m28034c(CodecCapabilities codecCapabilities) {
-        return C9554k0.f22281a >= 21 && m28036d(codecCapabilities);
+        return Util.SDK_INT >= 21 && m28036d(codecCapabilities);
     }
 
     @TargetApi(21)
@@ -159,7 +159,7 @@ public final class C9270a {
             if (r4 > 0) goto L_0x001a
             goto L_0x0052
         L_0x001a:
-            int r5 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r5 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             if (r5 < r2) goto L_0x0026
             float r7 = r7.f18357i0
             double r1 = (double) r7
@@ -189,7 +189,7 @@ public final class C9270a {
         L_0x0052:
             return r3
         L_0x0053:
-            int r0 = com.google.android.exoplayer2.p393v0.C9554k0.f22281a
+            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             if (r0 < r2) goto L_0x006c
             int r0 = r7.f18364p0
             r2 = -1
@@ -243,9 +243,9 @@ public final class C9270a {
         sb.append(", ");
         sb.append(this.f21083b);
         sb.append(str2);
-        sb.append(C9554k0.f22285e);
+        sb.append(Util.DEVICE_DEBUG_INFO);
         sb.append("]");
-        C9563q.m29495a("MediaCodecInfo", sb.toString());
+        Log.m29495a("MediaCodecInfo", sb.toString());
     }
 
     @TargetApi(19)
@@ -301,7 +301,7 @@ public final class C9270a {
     public boolean mo24011a(Format format, Format format2, boolean z) {
         boolean z2 = true;
         if (this.f21089h) {
-            if (!format.f18349b0.equals(format2.f18349b0) || format.f18358j0 != format2.f18358j0 || ((!this.f21086e && !(format.f18355g0 == format2.f18355g0 && format.f18356h0 == format2.f18356h0)) || ((z || format2.f18362n0 != null) && !C9554k0.m29414a((Object) format.f18362n0, (Object) format2.f18362n0)))) {
+            if (!format.f18349b0.equals(format2.f18349b0) || format.f18358j0 != format2.f18358j0 || ((!this.f21086e && !(format.f18355g0 == format2.f18355g0 && format.f18356h0 == format2.f18356h0)) || ((z || format2.f18362n0 != null) && !Util.m29414a((Object) format.f18362n0, (Object) format2.f18362n0)))) {
                 z2 = false;
             }
             return z2;
@@ -374,7 +374,7 @@ public final class C9270a {
         }
         int widthAlignment = videoCapabilities.getWidthAlignment();
         int heightAlignment = videoCapabilities.getHeightAlignment();
-        return new Point(C9554k0.m29381a(i, widthAlignment) * widthAlignment, C9554k0.m29381a(i2, heightAlignment) * heightAlignment);
+        return new Point(Util.m29381a(i, widthAlignment) * widthAlignment, Util.m29381a(i2, heightAlignment) * heightAlignment);
     }
 
     @TargetApi(21)
@@ -402,7 +402,7 @@ public final class C9270a {
 
     /* renamed from: a */
     private static int m28027a(String str, String str2, int i) {
-        if (i > 1 || ((C9554k0.f22281a >= 26 && i > 0) || "audio/mpeg".equals(str2) || "audio/3gpp".equals(str2) || "audio/amr-wb".equals(str2) || "audio/mp4a-latm".equals(str2) || "audio/vorbis".equals(str2) || "audio/opus".equals(str2) || "audio/raw".equals(str2) || "audio/flac".equals(str2) || "audio/g711-alaw".equals(str2) || "audio/g711-mlaw".equals(str2) || "audio/gsm".equals(str2))) {
+        if (i > 1 || ((Util.SDK_INT >= 26 && i > 0) || "audio/mpeg".equals(str2) || "audio/3gpp".equals(str2) || "audio/amr-wb".equals(str2) || "audio/mp4a-latm".equals(str2) || "audio/vorbis".equals(str2) || "audio/opus".equals(str2) || "audio/raw".equals(str2) || "audio/flac".equals(str2) || "audio/g711-alaw".equals(str2) || "audio/g711-mlaw".equals(str2) || "audio/gsm".equals(str2))) {
             return i;
         }
         int i2 = "audio/ac3".equals(str2) ? 6 : "audio/eac3".equals(str2) ? 16 : 30;
@@ -414,13 +414,13 @@ public final class C9270a {
         sb.append(" to ");
         sb.append(i2);
         sb.append("]");
-        C9563q.m29500d("MediaCodecInfo", sb.toString());
+        Log.m29500d("MediaCodecInfo", sb.toString());
         return i2;
     }
 
     /* renamed from: a */
     private static boolean m28029a(CodecCapabilities codecCapabilities) {
-        return C9554k0.f22281a >= 19 && m28032b(codecCapabilities);
+        return Util.SDK_INT >= 19 && m28032b(codecCapabilities);
     }
 
     @TargetApi(21)

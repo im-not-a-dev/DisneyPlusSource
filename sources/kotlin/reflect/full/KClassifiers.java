@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13180m;
 import kotlin.reflect.KClassifier;
 import kotlin.reflect.KType;
@@ -43,7 +43,7 @@ public final class KClassifiers {
     private static final SimpleType createKotlinType(Annotations annotations, TypeConstructor typeConstructor, List<KTypeProjection> list, boolean z) {
         Object obj;
         List parameters = typeConstructor.getParameters();
-        C12880j.m40222a((Object) parameters, "typeConstructor.parameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "typeConstructor.parameters");
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) list, 10));
         int i = 0;
         for (Object next : list) {
@@ -55,7 +55,7 @@ public final class KClassifiers {
                 KVariance variance = kTypeProjection.getVariance();
                 if (variance == null) {
                     Object obj2 = parameters.get(i);
-                    C12880j.m40222a(obj2, "parameters[index]");
+                    Intrinsics.checkReturnedValueIsNotNull(obj2, "parameters[index]");
                     obj = new StarProjectionImpl((TypeParameterDescriptor) obj2);
                 } else {
                     int i3 = WhenMappings.$EnumSwitchMapping$0[variance.ordinal()];
@@ -64,7 +64,7 @@ public final class KClassifiers {
                         if (type != null) {
                             obj = new TypeProjectionImpl(variance2, type);
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     } else if (i3 == 2) {
@@ -72,7 +72,7 @@ public final class KClassifiers {
                         if (type != null) {
                             obj = new TypeProjectionImpl(variance3, type);
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     } else if (i3 == 3) {
@@ -80,7 +80,7 @@ public final class KClassifiers {
                         if (type != null) {
                             obj = new TypeProjectionImpl(variance4, type);
                         } else {
-                            C12880j.m40220a();
+                            Intrinsics.throwNpe();
                             throw null;
                         }
                     } else {
@@ -104,9 +104,9 @@ public final class KClassifiers {
             ClassifierDescriptor descriptor = kClassifierImpl.getDescriptor();
             if (descriptor != null) {
                 TypeConstructor typeConstructor = descriptor.getTypeConstructor();
-                C12880j.m40222a((Object) typeConstructor, "descriptor.typeConstructor");
+                Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "descriptor.typeConstructor");
                 List parameters = typeConstructor.getParameters();
-                C12880j.m40222a((Object) parameters, "typeConstructor.parameters");
+                Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "typeConstructor.parameters");
                 if (parameters.size() == list.size()) {
                     if (list2.isEmpty()) {
                         annotations = Annotations.Companion.getEMPTY();
@@ -152,9 +152,9 @@ public final class KClassifiers {
             ClassifierDescriptor descriptor = kClassifierImpl.getDescriptor();
             if (descriptor != null) {
                 TypeConstructor typeConstructor = descriptor.getTypeConstructor();
-                C12880j.m40222a((Object) typeConstructor, "descriptor.typeConstructor");
+                Intrinsics.checkReturnedValueIsNotNull((Object) typeConstructor, "descriptor.typeConstructor");
                 List<TypeParameterDescriptor> parameters = typeConstructor.getParameters();
-                C12880j.m40222a((Object) parameters, "descriptor.typeConstructor.parameters");
+                Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "descriptor.typeConstructor.parameters");
                 if (parameters.isEmpty()) {
                     return createType$default(kClassifier, null, false, null, 7, null);
                 }

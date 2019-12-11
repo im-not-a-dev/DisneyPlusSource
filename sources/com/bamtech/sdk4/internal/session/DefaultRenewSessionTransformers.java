@@ -11,7 +11,7 @@ import com.bamtech.sdk4.session.RenewSessionTransformers;
 import javax.inject.Provider;
 import kotlin.C12898l;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.CompletableTransformer;
@@ -54,7 +54,7 @@ public final class DefaultRenewSessionTransformers implements RenewSessionTransf
 
     public CompletableTransformer completableRenewSession() {
         Object obj = this.serviceTransaction.get();
-        C12880j.m40222a(obj, "serviceTransaction.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "serviceTransaction.get()");
         return completableRenewSession((ServiceTransaction) obj);
     }
 
@@ -67,11 +67,11 @@ public final class DefaultRenewSessionTransformers implements RenewSessionTransf
         boolean shouldRenew = shouldRenew(th, instance);
         if (shouldRenew) {
             Completable b = this.session.reset(serviceTransaction2).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new DefaultRenewSessionTransformers$handleRenew$1<Object,Object>(instance, th)).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultRenewSessionTransformers$handleRenew$2<Object,Object>(this, serviceTransaction2, th));
-            C12880j.m40222a((Object) b, "session.reset(transactio…le)\n                    }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "session.reset(transactio…le)\n                    }");
             return b;
         } else if (!shouldRenew) {
             Completable a = Completable.m38154a(th);
-            C12880j.m40222a((Object) a, "Completable.error(throwable)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.error(throwable)");
             return a;
         } else {
             throw new C12898l();
@@ -80,13 +80,13 @@ public final class DefaultRenewSessionTransformers implements RenewSessionTransf
 
     public <T> MaybeTransformer<T, T> maybeRenewSession() {
         Object obj = this.serviceTransaction.get();
-        C12880j.m40222a(obj, "serviceTransaction.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "serviceTransaction.get()");
         return maybeRenewSession((ServiceTransaction) obj);
     }
 
     public <T> ObservableTransformer<T, T> observableRenewSession() {
         Object obj = this.serviceTransaction.get();
-        C12880j.m40222a(obj, "serviceTransaction.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "serviceTransaction.get()");
         return observableRenewSession((ServiceTransaction) obj);
     }
 
@@ -96,7 +96,7 @@ public final class DefaultRenewSessionTransformers implements RenewSessionTransf
 
     public <T> SingleTransformer<T, T> singleRenewSession() {
         Object obj = this.serviceTransaction.get();
-        C12880j.m40222a(obj, "serviceTransaction.get()");
+        Intrinsics.checkReturnedValueIsNotNull(obj, "serviceTransaction.get()");
         return singleRenewSession((ServiceTransaction) obj);
     }
 

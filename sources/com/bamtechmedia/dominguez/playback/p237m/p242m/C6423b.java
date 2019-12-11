@@ -7,7 +7,7 @@ import com.bamtechmedia.dominguez.core.utils.C5862q0;
 import com.bamtechmedia.dominguez.playback.C6266a;
 import com.bamtechmedia.dominguez.playback.p236l.C6335c;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.playback.m.m.b */
 /* compiled from: PlaybackScenarioProvider.kt */
@@ -47,7 +47,7 @@ public final class C6423b implements C6335c {
 
     /* renamed from: a */
     public boolean mo18949a() {
-        return C12880j.m40224a((Object) this.f14571b.mo18866q(), (Object) mo19076d());
+        return Intrinsics.areEqual((Object) this.f14571b.mo18866q(), (Object) mo19076d());
     }
 
     /* renamed from: b */
@@ -74,7 +74,7 @@ public final class C6423b implements C6335c {
             return p;
         }
         String q = this.f14571b.mo18866q();
-        if (!((m20080f() && m20079e()) || C12880j.m40224a((Object) mo19075c(), (Object) DrmType.PLAYREADY))) {
+        if (!((m20080f() && m20079e()) || Intrinsics.areEqual((Object) mo19075c(), (Object) DrmType.PLAYREADY))) {
             return q;
         }
         return null;

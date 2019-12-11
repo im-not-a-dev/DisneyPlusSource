@@ -12,7 +12,7 @@ import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12893w;
 import kotlin.reflect.KCallable;
 import kotlin.reflect.KVisibility;
@@ -157,7 +157,7 @@ public final class UtilKt {
         DeserializationComponents deserialization = orCreateModule.getDeserialization();
         ModuleDescriptor module = orCreateModule.getModule();
         VersionRequirementTable empty = VersionRequirementTable.Companion.getEMPTY();
-        C12880j.m40222a((Object) list, "typeParameters");
+        Intrinsics.checkReturnedValueIsNotNull((Object) list, "typeParameters");
         DeserializationContext deserializationContext = new DeserializationContext(deserialization, nameResolver, module, typeTable, empty, binaryVersion, null, null, list);
         return (CallableDescriptor) function2.invoke(new MemberDeserializer(deserializationContext), m);
     }
@@ -180,15 +180,15 @@ public final class UtilKt {
     private static final Class<?> loadClass(ClassLoader classLoader, ClassId classId, int i) {
         JavaToKotlinClassMap javaToKotlinClassMap = JavaToKotlinClassMap.INSTANCE;
         FqNameUnsafe unsafe = classId.asSingleFqName().toUnsafe();
-        C12880j.m40222a((Object) unsafe, "kotlinClassId.asSingleFqName().toUnsafe()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) unsafe, "kotlinClassId.asSingleFqName().toUnsafe()");
         ClassId mapKotlinToJava = javaToKotlinClassMap.mapKotlinToJava(unsafe);
         if (mapKotlinToJava != null) {
             classId = mapKotlinToJava;
         }
         String asString = classId.getPackageFqName().asString();
-        C12880j.m40222a((Object) asString, "javaClassId.packageFqName.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString, "javaClassId.packageFqName.asString()");
         String asString2 = classId.getRelativeClassName().asString();
-        C12880j.m40222a((Object) asString2, "javaClassId.relativeClassName.asString()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) asString2, "javaClassId.relativeClassName.asString()");
         return loadClass(classLoader, asString, asString2, i);
     }
 
@@ -214,7 +214,7 @@ public final class UtilKt {
             Name name = (Name) entry.getKey();
             ConstantValue constantValue = (ConstantValue) entry.getValue();
             ClassLoader classLoader = javaClass.getClassLoader();
-            C12880j.m40222a((Object) classLoader, "annotationClass.classLoader");
+            Intrinsics.checkReturnedValueIsNotNull((Object) classLoader, "annotationClass.classLoader");
             Object runtimeValue = toRuntimeValue(constantValue, classLoader);
             Object a = runtimeValue != null ? C12907r.m40244a(name.asString(), runtimeValue) : null;
             if (a != null) {
@@ -227,7 +227,7 @@ public final class UtilKt {
     public static final Class<?> toJavaClass(ClassDescriptor classDescriptor) {
         Class<?> cls;
         SourceElement source = classDescriptor.getSource();
-        C12880j.m40222a((Object) source, "source");
+        Intrinsics.checkReturnedValueIsNotNull((Object) source, "source");
         if (source instanceof KotlinJvmBinarySourceElement) {
             KotlinJvmBinaryClass binaryClass = ((KotlinJvmBinarySourceElement) source).getBinaryClass();
             if (binaryClass != null) {
@@ -253,16 +253,16 @@ public final class UtilKt {
     }
 
     public static final KVisibility toKVisibility(Visibility visibility) {
-        if (C12880j.m40224a((Object) visibility, (Object) Visibilities.PUBLIC)) {
+        if (Intrinsics.areEqual((Object) visibility, (Object) Visibilities.PUBLIC)) {
             return KVisibility.PUBLIC;
         }
-        if (C12880j.m40224a((Object) visibility, (Object) Visibilities.PROTECTED)) {
+        if (Intrinsics.areEqual((Object) visibility, (Object) Visibilities.PROTECTED)) {
             return KVisibility.PROTECTED;
         }
-        if (C12880j.m40224a((Object) visibility, (Object) Visibilities.INTERNAL)) {
+        if (Intrinsics.areEqual((Object) visibility, (Object) Visibilities.INTERNAL)) {
             return KVisibility.INTERNAL;
         }
-        if (!C12880j.m40224a((Object) visibility, (Object) Visibilities.PRIVATE) && !C12880j.m40224a((Object) visibility, (Object) Visibilities.PRIVATE_TO_THIS)) {
+        if (!Intrinsics.areEqual((Object) visibility, (Object) Visibilities.PRIVATE) && !Intrinsics.areEqual((Object) visibility, (Object) Visibilities.PRIVATE_TO_THIS)) {
             return null;
         }
         return KVisibility.PRIVATE;
@@ -321,7 +321,7 @@ public final class UtilKt {
     }
 
     private static final Class<?> loadClass(ClassLoader classLoader, String str, String str2, int i) {
-        if (C12880j.m40224a((Object) str, (Object) "kotlin")) {
+        if (Intrinsics.areEqual((Object) str, (Object) "kotlin")) {
             switch (str2.hashCode()) {
                 case -901856463:
                     if (str2.equals("BooleanArray")) {

@@ -5,7 +5,7 @@ import com.bamtech.sdk4.internal.networking.ConverterProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.functions.Function;
@@ -24,13 +24,13 @@ public final class DefaultPasswordClient implements PasswordClient {
 
     public Completable changeEmail(ServiceTransaction serviceTransaction, ChangeEmailRequest changeEmailRequest, Map<String, String> map) {
         Completable b = this.configurationProvider.getServiceLink(serviceTransaction, DefaultPasswordClient$changeEmail$1.INSTANCE).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultPasswordClient$changeEmail$2<Object,Object>(this, map, serviceTransaction, changeEmailRequest));
-        C12880j.m40222a((Object) b, "configurationProvider.ge…_EMAIL)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "configurationProvider.ge…_EMAIL)\n                }");
         return b;
     }
 
     public Completable changePassword(ServiceTransaction serviceTransaction, ChangePasswordRequest changePasswordRequest, Map<String, String> map) {
         Completable b = this.configurationProvider.getServiceLink(serviceTransaction, DefaultPasswordClient$changePassword$1$1.INSTANCE).mo30217b((Function<? super T, ? extends CompletableSource>) new DefaultPasswordClient$changePassword$$inlined$with$lambda$1<Object,Object>(this, serviceTransaction, map, changePasswordRequest));
-        C12880j.m40222a((Object) b, "configurationProvider.ge…RD)\n                    }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "configurationProvider.ge…RD)\n                    }");
         return b;
     }
 }

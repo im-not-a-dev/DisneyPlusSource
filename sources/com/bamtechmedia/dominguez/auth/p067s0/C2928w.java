@@ -8,13 +8,13 @@ import com.bamtech.sdk4.service.ServiceExceptionCase;
 import com.bamtech.sdk4.service.ServiceExceptionCase.AccountBlocked;
 import com.bamtech.sdk4.service.ServiceExceptionCase.InvalidPasscode;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
 import p163g.p201e.p203b.p307o.C7619i;
 import p520io.reactivex.Observable;
 import p520io.reactivex.ObservableSource;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0003\n\u0002\b\u0003\u0018\u00002\u00020\u0001:\u0001\u0018B)\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\u0014\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\r0\f2\u0006\u0010\u000e\u001a\u00020\u0007J\"\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\r0\f2\n\u0010\u0010\u001a\u00060\u0011j\u0002`\u00122\u0006\u0010\u0013\u001a\u00020\rH\u0002J\u0010\u0010\u0014\u001a\u00020\r2\u0006\u0010\u0015\u001a\u00020\u0016H\u0002J\u0014\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\r0\f2\u0006\u0010\u000e\u001a\u00020\u0007R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0019"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/otp/OtpRedeemAction;", "", "identityApi", "Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;", "accountApi", "Lcom/bamtech/sdk4/account/AccountApi;", "email", "", "errorLocalization", "Lcom/bamtechmedia/dominguez/error/ErrorLocalization;", "(Lcom/bamtech/sdk4/identity/bam/BamIdentityApi;Lcom/bamtech/sdk4/account/AccountApi;Ljava/lang/String;Lcom/bamtechmedia/dominguez/error/ErrorLocalization;)V", "authenticate", "Lio/reactivex/Observable;", "Lcom/bamtechmedia/dominguez/auth/otp/OtpRedeemAction$RedeemActionState;", "passcode", "authorizeRedeemToken", "redeemToken", "Lcom/bamtech/sdk4/identity/bam/RedeemedPasscodeToken;", "Lcom/bamtech/sdk4/identity/bam/RedeemPasscodeToken;", "successState", "mapErrorToRedeemActionState", "error", "", "redeemForPasswordReset", "RedeemActionState", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.s0.w */
@@ -84,7 +84,7 @@ public final class C2928w {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7756a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p067s0.C2928w.C2929a.C2932c) r2).f7756a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7756a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p067s0.C2928w.C2929a.C2932c) r2).f7756a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -96,7 +96,7 @@ public final class C2928w {
                     com.bamtechmedia.dominguez.auth.s0.w$a$c r2 = (com.bamtechmedia.dominguez.auth.p067s0.C2928w.C2929a.C2932c) r2
                     java.lang.String r0 = r1.f7756a
                     java.lang.String r2 = r2.f7756a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -179,7 +179,7 @@ public final class C2928w {
             }
 
             /* JADX WARNING: Code restructure failed: missing block: B:4:0x0010, code lost:
-                if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r1.f7759a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p067s0.C2928w.C2929a.C2935f) r2).f7759a) != false) goto L_0x0015;
+                if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r1.f7759a, (java.lang.Object) ((com.bamtechmedia.dominguez.auth.p067s0.C2928w.C2929a.C2935f) r2).f7759a) != false) goto L_0x0015;
              */
             /* Code decompiled incorrectly, please refer to instructions dump. */
             public boolean equals(java.lang.Object r2) {
@@ -191,7 +191,7 @@ public final class C2928w {
                     com.bamtechmedia.dominguez.auth.s0.w$a$f r2 = (com.bamtechmedia.dominguez.auth.p067s0.C2928w.C2929a.C2935f) r2
                     java.lang.String r0 = r1.f7759a
                     java.lang.String r2 = r2.f7759a
-                    boolean r2 = kotlin.jvm.internal.C12880j.m40224a(r0, r2)
+                    boolean r2 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r2)
                     if (r2 == 0) goto L_0x0013
                     goto L_0x0015
                 L_0x0013:
@@ -272,7 +272,7 @@ public final class C2928w {
 
         /* renamed from: a */
         public final C2929a apply(Throwable th) {
-            C14100a.m44528b(th, "Error authenticating via OTP passcode", new Object[0]);
+            Timber.m44528b(th, "Error authenticating via OTP passcode", new Object[0]);
             return this.f7761c.m10697a(th);
         }
     }
@@ -307,7 +307,7 @@ public final class C2928w {
 
         /* renamed from: a */
         public final C2929a apply(Throwable th) {
-            C14100a.m44528b(th, "Error redeeming passcode for password reset", new Object[0]);
+            Timber.m44528b(th, "Error redeeming passcode for password reset", new Object[0]);
             return this.f7763c.m10697a(th);
         }
     }
@@ -322,14 +322,14 @@ public final class C2928w {
     /* renamed from: b */
     public final Observable<C2929a> mo11930b(String str) {
         Observable<C2929a> i = this.f7750a.authenticateWithPasscode(this.f7752c, str).mo30225d((Function<? super T, ? extends ObservableSource<? extends R>>) new C2938d<Object,Object>(this)).mo30154a(C2934e.f7758a).mo30198i(new C2939e(this));
-        C12880j.m40222a((Object) i, "identityApi.authenticate…tate(error)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "identityApi.authenticate…tate(error)\n            }");
         return i;
     }
 
     /* renamed from: a */
     public final Observable<C2929a> mo11929a(String str) {
         Observable<C2929a> i = this.f7750a.authenticateWithPasscode(this.f7752c, str).mo30225d((Function<? super T, ? extends ObservableSource<? extends R>>) new C2936b<Object,Object>(this)).mo30154a(C2934e.f7758a).mo30198i(new C2937c(this));
-        C12880j.m40222a((Object) i, "identityApi.authenticate…tate(error)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "identityApi.authenticate…tate(error)\n            }");
         return i;
     }
 
@@ -337,7 +337,7 @@ public final class C2928w {
     /* renamed from: a */
     public final Observable<C2929a> m10698a(RedeemedPasscodeToken redeemedPasscodeToken, C2929a aVar) {
         Observable<C2929a> a = this.f7751b.authorize(redeemedPasscodeToken).mo30043a((ObservableSource<T>) Observable.m38309b(aVar));
-        C12880j.m40222a((Object) a, "accountApi.authorize(red…vable.just(successState))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "accountApi.authorize(red…vable.just(successState))");
         return a;
     }
 
@@ -346,10 +346,10 @@ public final class C2928w {
     public final C2929a m10697a(Throwable th) {
         C7619i b = this.f7753d.mo20538b(th);
         ServiceExceptionCase c = b.mo20545c();
-        if (C12880j.m40224a((Object) c, (Object) InvalidPasscode.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) c, (Object) InvalidPasscode.INSTANCE)) {
             return new C2935f(b.mo20546d());
         }
-        if (C12880j.m40224a((Object) c, (Object) AccountBlocked.INSTANCE)) {
+        if (Intrinsics.areEqual((Object) c, (Object) AccountBlocked.INSTANCE)) {
             return C2930a.f7754a;
         }
         return new C2932c(b.mo20546d());

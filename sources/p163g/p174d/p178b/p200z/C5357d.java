@@ -1,7 +1,7 @@
 package p163g.p174d.p178b.p200z;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.d.b.z.d */
 /* compiled from: SlideFadeTranslationAnimation.kt */
@@ -15,6 +15,6 @@ final class C5357d implements Runnable {
     }
 
     public final /* synthetic */ void run() {
-        C12880j.m40222a(this.f12847c.invoke(), "invoke(...)");
+        Intrinsics.checkReturnedValueIsNotNull(this.f12847c.invoke(), "invoke(...)");
     }
 }

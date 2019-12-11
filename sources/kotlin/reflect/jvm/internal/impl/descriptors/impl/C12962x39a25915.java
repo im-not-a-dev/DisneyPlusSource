@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.C13147x;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentProvider;
 
@@ -42,7 +42,7 @@ final class C12962x39a25915 extends C12881k implements Function0<CompositePackag
                     if (access$getPackageFragmentProviderForModuleContent$p2 != null) {
                         arrayList.add(access$getPackageFragmentProviderForModuleContent$p2);
                     } else {
-                        C12880j.m40220a();
+                        Intrinsics.throwNpe();
                         throw null;
                     }
                 }

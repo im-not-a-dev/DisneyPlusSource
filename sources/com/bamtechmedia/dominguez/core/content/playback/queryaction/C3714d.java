@@ -56,7 +56,7 @@ public final class C3714d {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x0038, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.f9283e, (java.lang.Object) r3.f9283e) != false) goto L_0x003d;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.f9283e, (java.lang.Object) r3.f9283e) != false) goto L_0x003d;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -68,23 +68,23 @@ public final class C3714d {
             com.bamtechmedia.dominguez.core.content.playback.queryaction.d r3 = (com.bamtechmedia.dominguez.core.content.playback.queryaction.C3714d) r3
             com.bamtechmedia.dominguez.core.content.playback.queryaction.e r0 = r2.f9279a
             com.bamtechmedia.dominguez.core.content.playback.queryaction.e r1 = r3.f9279a
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             com.bamtechmedia.dominguez.core.content.assets.f r0 = r2.f9280b
             com.bamtechmedia.dominguez.core.content.assets.f r1 = r3.f9280b
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             com.bamtechmedia.dominguez.core.content.playback.queryaction.a r0 = r2.f9281c
             com.bamtechmedia.dominguez.core.content.playback.queryaction.a r1 = r3.f9281c
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             com.bamtechmedia.dominguez.core.content.playback.queryaction.a r0 = r2.f9282d
             com.bamtechmedia.dominguez.core.content.playback.queryaction.a r1 = r3.f9282d
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x003b
             org.joda.time.DateTime r0 = r2.f9283e
             org.joda.time.DateTime r3 = r3.f9283e
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x003b
             goto L_0x003d
         L_0x003b:

@@ -7,7 +7,7 @@ import com.bamtech.sdk4.media.offline.DownloadSettings;
 import com.bamtech.sdk4.media.offline.DownloadStatus.Requested;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.CompletableSource;
 import p520io.reactivex.ObservableSource;
@@ -41,13 +41,13 @@ final class WorkManagerDownloadScheduler$rescheduleRequestedDownloads$1<V> imple
                     ServiceTransaction serviceTransaction = workManagerDownloadScheduler$rescheduleRequestedDownloads$1.$transaction;
                     DownloadSettings downloadSettings = workManagerDownloadScheduler$rescheduleRequestedDownloads$1.$settings;
                     String str = "settings";
-                    C12880j.m40222a((Object) downloadSettings, str);
+                    Intrinsics.checkReturnedValueIsNotNull((Object) downloadSettings, str);
                     if (!((Boolean) workManagerDownloadScheduler.isQueueFull(serviceTransaction, downloadSettings, true).mo30224c()).booleanValue()) {
                         WorkManagerDownloadScheduler$rescheduleRequestedDownloads$1 workManagerDownloadScheduler$rescheduleRequestedDownloads$12 = this.this$0;
                         WorkManagerDownloadScheduler workManagerDownloadScheduler2 = workManagerDownloadScheduler$rescheduleRequestedDownloads$12.this$0;
                         ServiceTransaction serviceTransaction2 = workManagerDownloadScheduler$rescheduleRequestedDownloads$12.$transaction;
                         DownloadSettings downloadSettings2 = workManagerDownloadScheduler$rescheduleRequestedDownloads$12.$settings;
-                        C12880j.m40222a((Object) downloadSettings2, str);
+                        Intrinsics.checkReturnedValueIsNotNull((Object) downloadSettings2, str);
                         return workManagerDownloadScheduler2.queueDownload(serviceTransaction2, downloadSettings2, (ExoCachedMedia) cachedMedia);
                     }
                 }

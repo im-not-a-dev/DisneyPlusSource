@@ -20,7 +20,7 @@ import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p330z.C7946e;
 import p163g.p201e.p203b.p330z.C7948g;
 import p163g.p201e.p203b.p330z.C7949h;
@@ -110,27 +110,27 @@ public final class C7008j {
             if (z2) {
                 ImageView imageView = (ImageView) this.f15574c.findViewById(C7946e.avatarImageView);
                 ImageView imageView2 = imageView;
-                C12880j.m40222a((Object) imageView, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) imageView, str);
                 C3800a.m12829a(imageView2, 0.7f, 0.0f, 0.9f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0, 0, null, null, null, null, 262138, null);
                 ImageView imageView3 = (ImageView) this.f15574c.findViewById(C7946e.avatarProfileRing);
                 ImageView imageView4 = imageView3;
-                C12880j.m40222a((Object) imageView3, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) imageView3, str2);
                 C3800a.m12829a(imageView4, 0.0f, 0.0f, 0.9f, 0.0f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0, 0, null, null, null, null, 262138, null);
             } else {
                 ImageView imageView5 = (ImageView) this.f15574c.findViewById(C7946e.avatarImageView);
                 ImageView imageView6 = imageView5;
-                C12880j.m40222a((Object) imageView5, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) imageView5, str);
                 C3800a.m12829a(imageView6, 0.0f, 0.7f, 0.0f, 0.9f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0, 0, null, null, null, null, 262133, null);
                 ImageView imageView7 = (ImageView) this.f15574c.findViewById(C7946e.avatarProfileRing);
                 ImageView imageView8 = imageView7;
-                C12880j.m40222a((Object) imageView7, str2);
+                Intrinsics.checkReturnedValueIsNotNull((Object) imageView7, str2);
                 C3800a.m12829a(imageView8, 0.0f, 0.0f, 0.0f, 0.9f, null, null, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0, 0, null, null, null, null, 262133, null);
             }
             ImageView imageView9 = (ImageView) this.f15574c.findViewById(C7946e.editButton);
-            C12880j.m40222a((Object) imageView9, "editButton");
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView9, "editButton");
             imageView9.setSelected(z2);
             ImageView imageView10 = (ImageView) this.f15574c.findViewById(C7946e.avatarProfileRing);
-            C12880j.m40222a((Object) imageView10, str2);
+            Intrinsics.checkReturnedValueIsNotNull((Object) imageView10, str2);
             imageView10.setActivated(z2);
             TextView textView = (TextView) this.f15574c.findViewById(C7946e.labelTextView);
             if (z2) {
@@ -158,11 +158,11 @@ public final class C7008j {
         if (this != obj) {
             if (obj instanceof C7008j) {
                 C7008j jVar = (C7008j) obj;
-                if (C12880j.m40224a((Object) this.f15563a, (Object) jVar.f15563a) && C12880j.m40224a((Object) this.f15564b, (Object) jVar.f15564b) && C12880j.m40224a((Object) this.f15565c, (Object) jVar.f15565c)) {
+                if (Intrinsics.areEqual((Object) this.f15563a, (Object) jVar.f15563a) && Intrinsics.areEqual((Object) this.f15564b, (Object) jVar.f15564b) && Intrinsics.areEqual((Object) this.f15565c, (Object) jVar.f15565c)) {
                     if (this.f15566d == jVar.f15566d) {
                         if (this.f15567e == jVar.f15567e) {
                             if (this.f15568f == jVar.f15568f) {
-                                if (!(this.f15569g == jVar.f15569g) || !C12880j.m40224a((Object) this.f15570h, (Object) jVar.f15570h) || !C12880j.m40224a((Object) this.f15571i, (Object) jVar.f15571i)) {
+                                if (!(this.f15569g == jVar.f15569g) || !Intrinsics.areEqual((Object) this.f15570h, (Object) jVar.f15570h) || !Intrinsics.areEqual((Object) this.f15571i, (Object) jVar.f15571i)) {
                                     return false;
                                 }
                             }
@@ -241,23 +241,23 @@ public final class C7008j {
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(m21303a(), viewGroup, false);
         m21306a(inflate, this.f15563a);
         TextView textView = (TextView) inflate.findViewById(C7946e.labelTextView);
-        C12880j.m40222a((Object) textView, "labelTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "labelTextView");
         textView.setText(this.f15564b);
         ImageView imageView = (ImageView) inflate.findViewById(C7946e.editButton);
-        C12880j.m40222a((Object) imageView, "editButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "editButton");
         if (!this.f15566d) {
             i2 = 8;
         }
         imageView.setVisibility(i2);
         ConstraintLayout constraintLayout = (ConstraintLayout) inflate.findViewById(C7946e.profileViewItemContainer);
-        C12880j.m40222a((Object) constraintLayout, "profileViewItemContainer");
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, "profileViewItemContainer");
         constraintLayout.setContentDescription(this.f15570h);
         inflate.setOnClickListener(new C7009a(this, i));
         m21305a(inflate, i);
         if (this.f15567e) {
             inflate.post(new C7010b(inflate));
         }
-        C12880j.m40222a((Object) inflate, "LayoutInflater\n        .…equestFocus() }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) inflate, "LayoutInflater\n        .…equestFocus() }\n        }");
         return inflate;
     }
 
@@ -265,10 +265,10 @@ public final class C7008j {
     private final void m21305a(View view, int i) {
         ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(C7946e.profileViewItemContainer);
         String str = "profileViewItemContainer";
-        C12880j.m40222a((Object) constraintLayout, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout, str);
         constraintLayout.setTranslationY(20.0f);
         ConstraintLayout constraintLayout2 = (ConstraintLayout) view.findViewById(C7946e.profileViewItemContainer);
-        C12880j.m40222a((Object) constraintLayout2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) constraintLayout2, str);
         constraintLayout2.setAlpha(0.0f);
         view.setOnFocusChangeListener(new C7011c(view));
         ((ConstraintLayout) view.findViewById(C7946e.profileViewItemContainer)).animate().setDuration(300).setInterpolator(new AccelerateDecelerateInterpolator()).setStartDelay(((long) i) * 50).translationY(0.0f).alpha(1.0f).start();
@@ -278,9 +278,9 @@ public final class C7008j {
     private final void m21306a(View view, C6653e eVar) {
         ImageView imageView = (ImageView) view.findViewById(C7946e.avatarImageView);
         String str = "avatarImageView";
-        C12880j.m40222a((Object) imageView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, str);
         ImageView imageView2 = (ImageView) view.findViewById(C7946e.avatarImageView);
-        C12880j.m40222a((Object) imageView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView2, str);
         LayoutParams layoutParams = imageView2.getLayoutParams();
         if (layoutParams != null) {
             MarginLayoutParams marginLayoutParams = (MarginLayoutParams) layoutParams;

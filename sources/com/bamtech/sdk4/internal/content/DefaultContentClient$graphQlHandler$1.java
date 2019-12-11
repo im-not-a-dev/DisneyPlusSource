@@ -55,14 +55,14 @@ public final class DefaultContentClient$graphQlHandler$1 implements ResponseHand
             com.bamtech.sdk4.content.BufferedGraphQlResponseConverter r4 = (com.bamtech.sdk4.content.BufferedGraphQlResponseConverter) r4     // Catch:{ all -> 0x003f }
             okio.BufferedSource r5 = r2.mo35703d()     // Catch:{ all -> 0x003f }
             java.lang.String r6 = "body.source()"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)     // Catch:{ all -> 0x003f }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)     // Catch:{ all -> 0x003f }
             java.lang.reflect.Type r6 = r14.$type     // Catch:{ all -> 0x003f }
             com.bamtech.sdk4.content.GraphQlResponse r0 = r4.deserialize(r5, r6)     // Catch:{ all -> 0x003f }
             goto L_0x003b
         L_0x002c:
             com.bamtech.sdk4.content.GraphQlResponseConverter r4 = r14.$converter     // Catch:{ all -> 0x003f }
             java.lang.String r5 = r2.mo36279e()     // Catch:{ all -> 0x003f }
-            kotlin.jvm.internal.C12880j.m40222a(r5, r1)     // Catch:{ all -> 0x003f }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r1)     // Catch:{ all -> 0x003f }
             java.lang.reflect.Type r6 = r14.$type     // Catch:{ all -> 0x003f }
             com.bamtech.sdk4.content.GraphQlResponse r0 = r4.deserialize(r5, r6)     // Catch:{ all -> 0x003f }
         L_0x003b:
@@ -91,7 +91,7 @@ public final class DefaultContentClient$graphQlHandler$1 implements ResponseHand
             r7[r9] = r8     // Catch:{ all -> 0x00ba }
             com.bamtech.sdk4.content.GraphQlError r8 = new com.bamtech.sdk4.content.GraphQlError     // Catch:{ all -> 0x00ba }
             java.lang.String r2 = r2.mo36279e()     // Catch:{ all -> 0x00ba }
-            kotlin.jvm.internal.C12880j.m40222a(r2, r1)     // Catch:{ all -> 0x00ba }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r1)     // Catch:{ all -> 0x00ba }
             r8.<init>(r2, r3, r6, r3)     // Catch:{ all -> 0x00ba }
             r1 = 1
             r7[r1] = r8     // Catch:{ all -> 0x00ba }

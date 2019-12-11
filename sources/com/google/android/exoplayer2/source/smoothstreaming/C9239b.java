@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p366s0.p371v.C8972g;
 import com.google.android.exoplayer2.p366s0.p371v.C8983m;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9230p;
 import com.google.android.exoplayer2.source.p379m0.C9210b;
 import com.google.android.exoplayer2.source.p379m0.C9212d;
@@ -112,7 +112,7 @@ public class C9239b implements C9242c {
         C9247b bVar = this.f20985f.f21007f[this.f20981b];
         int a = bVar.mo23983a(j);
         long b = bVar.mo23987b(a);
-        return C9554k0.m29390a(j, seekParameters, b, (b >= j || a >= bVar.f21023k + -1) ? b : bVar.mo23987b(a + 1));
+        return Util.m29390a(j, seekParameters, b, (b >= j || a >= bVar.f21023k + -1) ? b : bVar.mo23987b(a + 1));
     }
 
     /* renamed from: a */

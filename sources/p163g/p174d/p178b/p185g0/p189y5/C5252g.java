@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.p179a0.C4817a;
 import p163g.p174d.p178b.p196m0.C5306d;
 import p163g.p174d.p178b.p196m0.C5307e;
@@ -164,7 +164,7 @@ public final class C5252g {
             if (imageView == null) {
                 return;
             }
-            if (C12880j.m40224a((Object) bitmap, (Object) C4817a.f11967f.mo16212b()) || C12880j.m40224a((Object) bitmap, (Object) C4817a.f11967f.mo16211a()) || bitmap.getHeight() == 0) {
+            if (Intrinsics.areEqual((Object) bitmap, (Object) C4817a.f11967f.mo16212b()) || Intrinsics.areEqual((Object) bitmap, (Object) C4817a.f11967f.mo16211a()) || bitmap.getHeight() == 0) {
                 mo16773b((View) imageView);
                 return;
             }

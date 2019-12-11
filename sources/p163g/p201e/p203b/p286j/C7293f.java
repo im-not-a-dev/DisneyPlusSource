@@ -209,7 +209,7 @@ public final class C7293f implements C7292e {
             java.net.URL r0 = r19.mo35766q()
             java.lang.String r0 = r0.toString()
             java.lang.String r1 = "deepLink.url().toString()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             if (r13 != 0) goto L_0x0054
             if (r14 == 0) goto L_0x0053
             goto L_0x0054
@@ -255,7 +255,7 @@ public final class C7293f implements C7292e {
             r2.append(r3)
             java.lang.String r2 = r2.toString()
             java.lang.Object[] r3 = new java.lang.Object[r12]
-            p686n.p687a.C14100a.m44532e(r2, r3)
+            p686n.p687a.Timber.m44532e(r2, r3)
         L_0x009e:
             if (r11 != 0) goto L_0x00b7
             g.e.b.j.b r2 = r7.f16032c

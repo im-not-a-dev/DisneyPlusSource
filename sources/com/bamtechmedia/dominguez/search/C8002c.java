@@ -33,7 +33,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -52,7 +52,7 @@ import p520io.reactivex.functions.Consumer;
 import p520io.reactivex.p525e0.C11934b;
 import p520io.reactivex.p527w.p529c.C11992a;
 import p570k.p571a.p572a.C12678a;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000¬\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u000e\u0018\u0000 Q2\u00020\u00012\u00020\u0002:\u0004QRSTBI\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\b\b\u0002\u0010\u000f\u001a\u00020\u0010\u0012\b\b\u0002\u0010\u0011\u001a\u00020\u0012¢\u0006\u0002\u0010\u0013J\b\u0010+\u001a\u00020,H\u0002J\u001c\u0010-\u001a\b\u0012\u0004\u0012\u00020.0$2\f\u0010/\u001a\b\u0012\u0004\u0012\u0002000$H\u0002J\b\u00101\u001a\u00020,H\u0002J\b\u00102\u001a\u00020,H\u0002J\u0010\u00103\u001a\u00020,2\u0006\u00104\u001a\u00020 H\u0002J9\u00105\u001a\b\u0012\u0004\u0012\u00020%0$2\u0006\u00104\u001a\u00020 2!\u00106\u001a\u001d\u0012\u0013\u0012\u00110 ¢\u0006\f\b8\u0012\b\b9\u0012\u0004\b\b(:\u0012\u0004\u0012\u00020 07H\u0003J\b\u0010;\u001a\u00020<H\u0002J\u0016\u0010=\u001a\u00020,2\u0006\u0010>\u001a\u00020 2\u0006\u0010?\u001a\u00020@J\u0010\u0010A\u001a\u00020,2\u0006\u0010B\u001a\u00020 H\u0016J\u0016\u0010C\u001a\u00020,2\f\u0010/\u001a\b\u0012\u0004\u0012\u00020.0$H\u0002J\u0018\u0010D\u001a\u00020,2\u0006\u0010E\u001a\u00020%2\u0006\u0010F\u001a\u00020GH\u0002J\u0010\u0010H\u001a\u00020,2\u0006\u0010\u0005\u001a\u00020%H\u0002J\b\u0010I\u001a\u00020,H\u0002J\u0010\u0010J\u001a\u00020,2\u0006\u0010\u0005\u001a\u00020%H\u0003J\u0016\u0010K\u001a\u00020\u001d2\f\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00160\u0015H\u0002J\b\u0010L\u001a\u00020,H\u0002J\u0016\u0010M\u001a\u00020,2\f\u0010N\u001a\b\u0012\u0004\u0012\u00020%0$H\u0002J\u0010\u0010O\u001a\u00020,2\u0006\u0010P\u001a\u00020 H\u0002R\u0014\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00160\u0015X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0017\u001a\u00020\u00048VX\u0004¢\u0006\u0006\u001a\u0004\b\u0018\u0010\u0019R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001dX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u001dX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020 X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020 X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020 X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010#\u001a\b\u0012\u0004\u0012\u00020%0$X\u000e¢\u0006\u0002\n\u0000R\u0014\u0010&\u001a\b\u0012\u0004\u0012\u00020%0$X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010'\u001a\u00020 X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010(\u001a\u00020 X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010)\u001a\u00020*X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000¨\u0006U"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/search/CustomKeyboardPresenter;", "Lkotlinx/android/extensions/LayoutContainer;", "Lcom/bamtechmedia/dominguez/search/KeyboardSearchSuggestionClickListener;", "container", "Landroid/widget/LinearLayout;", "searchView", "Landroid/widget/EditText;", "searchSuggestionApi", "Lcom/bamtechmedia/dominguez/core/content/search/DmgzSearchSuggestApi;", "keysSource", "Lcom/bamtechmedia/dominguez/config/KeysSource;", "suggestionAvailabilityListener", "Lcom/bamtechmedia/dominguez/search/CustomKeyboardPresenter$KeyboardSuggestionAvailabilityListener;", "searchAccessibility", "Lcom/bamtechmedia/dominguez/search/SearchAccessibility;", "context", "Landroid/content/Context;", "inflater", "Landroid/view/LayoutInflater;", "(Landroid/widget/LinearLayout;Landroid/widget/EditText;Lcom/bamtechmedia/dominguez/core/content/search/DmgzSearchSuggestApi;Lcom/bamtechmedia/dominguez/config/KeysSource;Lcom/bamtechmedia/dominguez/search/CustomKeyboardPresenter$KeyboardSuggestionAvailabilityListener;Lcom/bamtechmedia/dominguez/search/SearchAccessibility;Landroid/content/Context;Landroid/view/LayoutInflater;)V", "adapter", "Lcom/xwray/groupie/GroupAdapter;", "Lcom/xwray/groupie/kotlinandroidextensions/ViewHolder;", "containerView", "getContainerView", "()Landroid/widget/LinearLayout;", "currentlyDisplayedState", "Lcom/bamtechmedia/dominguez/search/CustomKeyboardPresenter$KeyboardLetterStates;", "itemMargin", "", "keyboardLetterWidth", "lastSearch", "", "lowerLetters", "lowerLettersDisplay", "lowercaseViews", "", "Landroid/widget/TextView;", "numberViews", "numbers", "numbersDisplay", "searchRequestDisposable", "Lio/reactivex/disposables/CompositeDisposable;", "cancelInFlightSearches", "", "createPrioritizedSearchSuggestions", "Lcom/xwray/groupie/Group;", "suggestions", "Lcom/bamtechmedia/dominguez/core/content/search/Suggestion;", "displayLowerKeyboard", "displayNumberKeyboard", "initializeLettersSize", "buttonInputs", "initializeViews", "accessLetters", "Lkotlin/Function1;", "Lkotlin/ParameterName;", "name", "char", "isNumericKeyboardShowing", "", "onSearchTextChanged", "newText", "fragment", "Landroidx/fragment/app/Fragment;", "onSuggestionClicked", "suggestion", "processSuggestions", "setTextViewState", "textView", "state", "Lcom/bamtechmedia/dominguez/search/CustomKeyboardPresenter$TextState;", "setupDeleteButton", "setupKeyboardSelectionButton", "setupSpaceButton", "suggestionCount", "updateButtonStates", "updateKeyboardStateWithTextViews", "textViews", "updateSearchView", "newChar", "Companion", "KeyboardLetterStates", "KeyboardSuggestionAvailabilityListener", "TextState", "search_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.search.c */
@@ -288,7 +288,7 @@ public final class C8002c implements C12678a, C8032h {
         /* renamed from: a */
         public final void accept(List<? extends C11847b> list) {
             C8002c cVar = this.f17204c;
-            C12880j.m40222a((Object) list, "suggestions");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "suggestions");
             cVar.m23306b(list);
         }
     }
@@ -308,7 +308,7 @@ public final class C8002c implements C12678a, C8032h {
             StringBuilder sb = new StringBuilder();
             sb.append("Error requesting auto search suggestion: ");
             sb.append(th);
-            C14100a.m44526b(sb.toString(), new Object[0]);
+            Timber.m44526b(sb.toString(), new Object[0]);
         }
     }
 
@@ -389,7 +389,7 @@ public final class C8002c implements C12678a, C8032h {
 
         public final void onClick(View view) {
             CharSequence text = this.f17210U.getText();
-            C12880j.m40222a((Object) text, "text");
+            Intrinsics.checkReturnedValueIsNotNull((Object) text, "text");
             boolean z = true;
             if (text.length() > 0) {
                 String obj = text.subSequence(0, text.length() - 1).toString();
@@ -397,7 +397,7 @@ public final class C8002c implements C12678a, C8032h {
                 this.f17211c.m23309c(obj);
             }
             CharSequence text2 = this.f17210U.getText();
-            C12880j.m40222a((Object) text2, "searchView.text");
+            Intrinsics.checkReturnedValueIsNotNull((Object) text2, "searchView.text");
             if (text2.length() != 0) {
                 z = false;
             }
@@ -406,7 +406,7 @@ public final class C8002c implements C12678a, C8032h {
                 if (cVar.m23292a(cVar.f17179e) > 0) {
                     this.f17211c.m23300b();
                     RecyclerView recyclerView = (RecyclerView) this.f17211c.mo20995a(C8048n.keyboardResultsRecyclerView);
-                    C12880j.m40222a((Object) recyclerView, "keyboardResultsRecyclerView");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "keyboardResultsRecyclerView");
                     recyclerView.setFocusable(false);
                     this.f17211c.f17190p.mo21000a(new C8016a(this));
                 }
@@ -518,10 +518,10 @@ public final class C8002c implements C12678a, C8032h {
         m23307c();
         RecyclerView recyclerView = (RecyclerView) mo20995a(C8048n.keyboardResultsRecyclerView);
         String str = "keyboardResultsRecyclerView";
-        C12880j.m40222a((Object) recyclerView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str);
         recyclerView.setAdapter(this.f17179e);
         RecyclerView recyclerView2 = (RecyclerView) mo20995a(C8048n.keyboardResultsRecyclerView);
-        C12880j.m40222a((Object) recyclerView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
         recyclerView2.setFocusable(false);
         TextView textView = (TextView) this.f17187m.findViewById(C8048n.search_keyboard_first_letter);
         if (textView != null) {
@@ -569,15 +569,15 @@ public final class C8002c implements C12678a, C8032h {
     /* renamed from: f */
     private final void m23316f() {
         TextView textView = (TextView) mo20995a(C8048n.keyboardLowerLetterTextView);
-        C12880j.m40222a((Object) textView, "keyboardLowerLetterTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "keyboardLowerLetterTextView");
         textView.setText(this.f17176b);
         TextView textView2 = (TextView) mo20995a(C8048n.keyboardNumericTextView);
-        C12880j.m40222a((Object) textView2, "keyboardNumericTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "keyboardNumericTextView");
         textView2.setText(this.f17178d);
         String a = this.f17191q.mo21037a("letters input mode");
         String a2 = this.f17191q.mo21037a("numbers input mode");
         LinearLayout linearLayout = (LinearLayout) mo20995a(C8048n.keyboardSelectionButton);
-        C12880j.m40222a((Object) linearLayout, "keyboardSelectionButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, "keyboardSelectionButton");
         linearLayout.setContentDescription(a);
         ((LinearLayout) mo20995a(C8048n.keyboardSelectionButton)).setOnClickListener(new C8017n(this, a, a2));
         ((LinearLayout) mo20995a(C8048n.keyboardSelectionButton)).setOnFocusChangeListener(new C8018o(this));
@@ -588,16 +588,16 @@ public final class C8002c implements C12678a, C8032h {
     public final void m23318g() {
         LinearLayout linearLayout = (LinearLayout) mo20995a(C8048n.keyboardSelectionButton);
         String str = "keyboardSelectionButton";
-        C12880j.m40222a((Object) linearLayout, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout, str);
         C8008f fVar = new C8008f(linearLayout.isFocused(), m23314e());
         LinearLayout linearLayout2 = (LinearLayout) mo20995a(C8048n.keyboardSelectionButton);
-        C12880j.m40222a((Object) linearLayout2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) linearLayout2, str);
         C8008f fVar2 = new C8008f(linearLayout2.isFocused(), !m23314e());
         TextView textView = (TextView) mo20995a(C8048n.keyboardNumericTextView);
-        C12880j.m40222a((Object) textView, "keyboardNumericTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView, "keyboardNumericTextView");
         m23297a(textView, fVar);
         TextView textView2 = (TextView) mo20995a(C8048n.keyboardLowerLetterTextView);
-        C12880j.m40222a((Object) textView2, "keyboardLowerLetterTextView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) textView2, "keyboardLowerLetterTextView");
         m23297a(textView2, fVar2);
     }
 
@@ -606,7 +606,7 @@ public final class C8002c implements C12678a, C8032h {
         List a = C12833x.m40142a((CharSequence) str, new String[]{" "}, false, 0, 6, (Object) null);
         float dimension = this.f17192r.getResources().getDimension(C8046l.vader_grid_start_margin);
         Resources resources = this.f17192r.getResources();
-        C12880j.m40222a((Object) resources, "context.resources");
+        Intrinsics.checkReturnedValueIsNotNull((Object) resources, "context.resources");
         this.f17183i = (int) (((((float) resources.getDisplayMetrics().widthPixels) - (dimension * ((float) 2))) - ((float) (this.f17180f * (a.size() - 1)))) / ((float) a.size()));
     }
 
@@ -646,7 +646,7 @@ public final class C8002c implements C12678a, C8032h {
                 if (layoutParams != null) {
                     MarginLayoutParams marginLayoutParams = (MarginLayoutParams) layoutParams;
                     marginLayoutParams.width = this.f17183i;
-                    if (!C12880j.m40224a((Object) str4, (Object) str2)) {
+                    if (!Intrinsics.areEqual((Object) str4, (Object) str2)) {
                         int i = this.f17180f;
                         int marginStart = marginLayoutParams.getMarginStart();
                         int i2 = marginLayoutParams.topMargin;
@@ -660,7 +660,7 @@ public final class C8002c implements C12678a, C8032h {
                     textView.setText(str4);
                     textView.setContentDescription((CharSequence) function1.invoke(str4));
                     textView.setTag(C8048n.focusHelperHorizontalFocusSearchWithinParent, Boolean.valueOf(true));
-                    if (C12880j.m40224a((Object) str4, (Object) str3)) {
+                    if (Intrinsics.areEqual((Object) str4, (Object) str3)) {
                         textView.setId(C8048n.search_keyboard_first_letter);
                         textView.setTag(C8048n.focusHelperExpandNavOnFocusSearchLeft, Boolean.valueOf(true));
                     }
@@ -689,7 +689,7 @@ public final class C8002c implements C12678a, C8032h {
         ((ImageView) mo20995a(C8048n.keyboardSpaceButton)).setOnClickListener(new C8019p(this, textView));
         ((ImageView) mo20995a(C8048n.keyboardSpaceButton)).setTag(C8048n.focusHelperHorizontalFocusSearchWithinParent, Boolean.valueOf(true));
         ImageView imageView = (ImageView) mo20995a(C8048n.keyboardSpaceButton);
-        C12880j.m40222a((Object) imageView, "keyboardSpaceButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "keyboardSpaceButton");
         imageView.setContentDescription(this.f17191q.mo21038b());
     }
 
@@ -703,7 +703,7 @@ public final class C8002c implements C12678a, C8032h {
             this.f17190p.mo21000a(new C8014l(this, list));
         }
         RecyclerView recyclerView = (RecyclerView) mo20995a(C8048n.keyboardResultsRecyclerView);
-        C12880j.m40222a((Object) recyclerView, "keyboardResultsRecyclerView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "keyboardResultsRecyclerView");
         recyclerView.setFocusable(!list.isEmpty());
     }
 
@@ -713,14 +713,14 @@ public final class C8002c implements C12678a, C8032h {
         int i2 = i;
         if ((i2 & 64) != 0) {
             Context context3 = linearLayout.getContext();
-            C12880j.m40222a((Object) context3, "container.context");
+            Intrinsics.checkReturnedValueIsNotNull((Object) context3, "container.context");
             context2 = context3;
         } else {
             context2 = context;
         }
         if ((i2 & 128) != 0) {
             LayoutInflater from = LayoutInflater.from(context2);
-            C12880j.m40222a((Object) from, "LayoutInflater.from(context)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) from, "LayoutInflater.from(context)");
             layoutInflater2 = from;
         } else {
             layoutInflater2 = layoutInflater;
@@ -732,7 +732,7 @@ public final class C8002c implements C12678a, C8032h {
     private final void m23296a(TextView textView) {
         ((ImageView) mo20995a(C8048n.keyboardDeleteButton)).setOnClickListener(new C8015m(this, textView));
         ImageView imageView = (ImageView) mo20995a(C8048n.keyboardDeleteButton);
-        C12880j.m40222a((Object) imageView, "keyboardDeleteButton");
+        Intrinsics.checkReturnedValueIsNotNull((Object) imageView, "keyboardDeleteButton");
         imageView.setContentDescription(this.f17191q.mo21036a());
         ImageView imageView2 = (ImageView) mo20995a(C8048n.keyboardDeleteButton);
         int i = C8048n.focusHelperExpandNavOnFocusSearchLeft;
@@ -749,14 +749,14 @@ public final class C8002c implements C12678a, C8032h {
 
     /* renamed from: a */
     public final void mo20997a(String str, Fragment fragment) {
-        if (!C12880j.m40224a((Object) this.f17184j, (Object) str)) {
+        if (!Intrinsics.areEqual((Object) this.f17184j, (Object) str)) {
             CompositeDisposable compositeDisposable = this.f17185k;
             Single a = this.f17189o.mo13582a(str).mo30233g(new C8021d(new C8010h(this))).mo30220b(C11934b.m38500b()).mo30211a(C11992a.m38600a());
-            C12880j.m40222a((Object) a, "searchSuggestionApi\n    …dSchedulers.mainThread())");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "searchSuggestionApi\n    …dSchedulers.mainThread())");
             C10541b a2 = C10541b.m33255a((C0722m) fragment, C0716a.ON_STOP);
-            C12880j.m40222a((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a2, "AndroidLifecycleScopePro…om(\n    this, untilEvent)");
             Object a3 = a.mo30215a((C11974s<T, ? extends R>) C11793e.m37930a((C11790c0) a2));
-            C12880j.m40222a(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
+            Intrinsics.checkReturnedValueIsNotNull(a3, "this.`as`(AutoDispose.autoDisposable(provider))");
             compositeDisposable.mo30250b(((C11792d0) a3).mo29920a(new C8011i(this), C8012j.f17205c));
             this.f17184j = str;
         }

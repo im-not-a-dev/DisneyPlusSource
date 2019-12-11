@@ -53,7 +53,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
@@ -275,10 +275,10 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
     private final void m21050e(String str) {
         if (str != null) {
             Context requireContext = requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             Toast makeText = Toast.makeText(requireContext.getApplicationContext(), str, 0);
             makeText.show();
-            C12880j.m40222a((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
+            Intrinsics.checkReturnedValueIsNotNull((Object) makeText, "Toast.makeText(applicati…uration).apply { show() }");
         }
     }
 
@@ -297,11 +297,11 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
             if (qVar != null) {
                 qVar.mo12647a((C3333i) new C3334a(a));
             } else {
-                C12880j.m40227c("collectionViewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("collectionViewModel");
                 throw null;
             }
         } else {
-            C12880j.m40227c("profilesMemoryCache");
+            Intrinsics.throwUninitializedPropertyAccessException("profilesMemoryCache");
             throw null;
         }
     }
@@ -312,12 +312,12 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
         String str = "recyclerView";
         if (disneyTitleToolbar != null) {
             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C7946e.recyclerView);
-            C12880j.m40222a((Object) recyclerView, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str);
             C3848a aVar = this.f15319c0;
             if (aVar != null) {
                 DisneyTitleToolbar.m18445a(disneyTitleToolbar, recyclerView, aVar, null, null, null, 0, new C6871b(this), 60, null);
             } else {
-                C12880j.m40227c("backgroundHelper");
+                Intrinsics.throwUninitializedPropertyAccessException("backgroundHelper");
                 throw null;
             }
         }
@@ -355,7 +355,7 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
                 button3.setContentDescription(c);
             }
             RecyclerView recyclerView2 = (RecyclerView) _$_findCachedViewById(C7946e.recyclerView);
-            C12880j.m40222a((Object) recyclerView2, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
             C11848c<C11863k> cVar = this.f15315Y;
             if (cVar != null) {
                 RecyclerViewExtKt.m18800a(this, recyclerView2, cVar);
@@ -373,11 +373,11 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
                             if (fVar != null) {
                                 fVar.mo19349a((ImageView) _$_findCachedViewById(C7946e.profileImageView), a);
                             } else {
-                                C12880j.m40227c("avatarImages");
+                                Intrinsics.throwUninitializedPropertyAccessException("avatarImages");
                                 throw null;
                             }
                         } else {
-                            C12880j.m40227c("profilesMemoryCache");
+                            Intrinsics.throwUninitializedPropertyAccessException("profilesMemoryCache");
                             throw null;
                         }
                     }
@@ -390,10 +390,10 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
                 }
                 return;
             }
-            C12880j.m40227c("adapter");
+            Intrinsics.throwUninitializedPropertyAccessException("adapter");
             throw null;
         }
-        C12880j.m40227c("profileAccessibility");
+        Intrinsics.throwUninitializedPropertyAccessException("profileAccessibility");
         throw null;
     }
 
@@ -426,7 +426,7 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
         if (hVar != null) {
             return hVar;
         }
-        C12880j.m40227c("chooseAvatarsViewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("chooseAvatarsViewModel");
         throw null;
     }
 
@@ -451,10 +451,10 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
                 m21051r();
                 return;
             }
-            C12880j.m40227c("chooseAvatarsViewModel");
+            Intrinsics.throwUninitializedPropertyAccessException("chooseAvatarsViewModel");
             throw null;
         }
-        C12880j.m40227c("collectionViewModel");
+        Intrinsics.throwUninitializedPropertyAccessException("collectionViewModel");
         throw null;
     }
 
@@ -465,24 +465,24 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
         if (cVar != null) {
             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C7946e.recyclerView);
             String str = "recyclerView";
-            C12880j.m40222a((Object) recyclerView, str);
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str);
             ProgressBar progressBar = (ProgressBar) _$_findCachedViewById(C7946e.progress);
-            C12880j.m40222a((Object) progressBar, "progress");
+            Intrinsics.checkReturnedValueIsNotNull((Object) progressBar, "progress");
             C3503a aVar = new C3503a(cVar, recyclerView, progressBar, null, null, null, 56, null);
             this.f15322f0 = aVar;
             RecyclerViewSnapScrollHelper recyclerViewSnapScrollHelper = this.f15318b0;
             if (recyclerViewSnapScrollHelper != null) {
                 C0722m viewLifecycleOwner = getViewLifecycleOwner();
-                C12880j.m40222a((Object) viewLifecycleOwner, "viewLifecycleOwner");
+                Intrinsics.checkReturnedValueIsNotNull((Object) viewLifecycleOwner, "viewLifecycleOwner");
                 RecyclerView recyclerView2 = (RecyclerView) _$_findCachedViewById(C7946e.recyclerView);
-                C12880j.m40222a((Object) recyclerView2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
                 recyclerViewSnapScrollHelper.mo17710a(viewLifecycleOwner, recyclerView2, (C5805c) new C5808c(null, 1, null));
                 return;
             }
-            C12880j.m40227c("recyclerViewSnapScrollHelper");
+            Intrinsics.throwUninitializedPropertyAccessException("recyclerViewSnapScrollHelper");
             throw null;
         }
-        C12880j.m40227c("adapter");
+        Intrinsics.throwUninitializedPropertyAccessException("adapter");
         throw null;
     }
 
@@ -502,7 +502,7 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
         View findFocus = view != null ? view.findFocus() : null;
         boolean z = i == 20 || i == 22 || i == 21;
         Context requireContext = requireContext();
-        C12880j.m40222a((Object) requireContext, "requireContext()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
         if (!C5837i.m18843e(requireContext) || findFocus == null) {
             return false;
         }
@@ -515,26 +515,26 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
                     if (recyclerViewSnapScrollHelper != null) {
                         RecyclerViewSnapScrollHelper.m18771a(recyclerViewSnapScrollHelper, i, findFocus, null, 4, null);
                     } else {
-                        C12880j.m40227c("recyclerViewSnapScrollHelper");
+                        Intrinsics.throwUninitializedPropertyAccessException("recyclerViewSnapScrollHelper");
                         throw null;
                     }
                 }
                 return a;
             }
-            C12880j.m40227c("focusHelper");
+            Intrinsics.throwUninitializedPropertyAccessException("focusHelper");
             throw null;
         }
         C5759b bVar = this.f15320d0;
         if (bVar != null) {
             RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C7946e.recyclerView);
-            C12880j.m40222a((Object) recyclerView, "recyclerView");
+            Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, "recyclerView");
             View a2 = bVar.mo17645a(recyclerView);
             if (a2 != null) {
                 return C5852n0.m18886a(a2, 0, 1, (Object) null);
             }
             return false;
         }
-        C12880j.m40227c("focusFinder");
+        Intrinsics.throwUninitializedPropertyAccessException("focusFinder");
         throw null;
     }
 
@@ -607,7 +607,7 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
             r4.mo19647a(r1)
             android.content.Context r1 = r7.requireContext()
             java.lang.String r4 = "requireContext()"
-            kotlin.jvm.internal.C12880j.m40222a(r1, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r1, r4)
             boolean r1 = com.bamtechmedia.dominguez.core.utils.C5837i.m18843e(r1)
             if (r1 == 0) goto L_0x00be
             if (r0 == 0) goto L_0x009b
@@ -637,11 +637,11 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
         L_0x00be:
             return
         L_0x00bf:
-            kotlin.jvm.internal.C12880j.m40227c(r5)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r5)
             throw r1
         L_0x00c3:
             java.lang.String r8 = "chooseAvatarsViewModel"
-            kotlin.jvm.internal.C12880j.m40227c(r8)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r8)
             throw r1
         L_0x00c9:
             java.lang.IllegalArgumentException r8 = new java.lang.IllegalArgumentException
@@ -650,11 +650,11 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
             r8.<init>(r0)
             throw r8
         L_0x00d5:
-            kotlin.jvm.internal.C12880j.m40227c(r5)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r5)
             throw r1
         L_0x00d9:
             java.lang.String r8 = "adapter"
-            kotlin.jvm.internal.C12880j.m40227c(r8)
+            kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException(r8)
             throw r1
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtechmedia.dominguez.profiles.p266v1.C6869b.m21046a(com.bamtechmedia.dominguez.collections.q$b):void");
@@ -666,14 +666,14 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
         m21050e(aVar.mo19650a());
         if (aVar.mo19651b()) {
             Context requireContext = requireContext();
-            C12880j.m40222a((Object) requireContext, "requireContext()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) requireContext, "requireContext()");
             if (!C5837i.m18843e(requireContext)) {
                 RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(C7946e.recyclerView);
                 String str = "recyclerView";
-                C12880j.m40222a((Object) recyclerView, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView, str);
                 int childCount = recyclerView.getChildCount() - 1;
                 RecyclerView recyclerView2 = (RecyclerView) _$_findCachedViewById(C7946e.recyclerView);
-                C12880j.m40222a((Object) recyclerView2, str);
+                Intrinsics.checkReturnedValueIsNotNull((Object) recyclerView2, str);
                 C12775h a = C4121a0.m14117a(recyclerView2);
                 int i = 0;
                 Iterator it = a.iterator();
@@ -700,7 +700,7 @@ public final class C6869b extends C11890i implements C7717x, C5864r {
             if (hVar != null) {
                 hVar.mo19649z();
             } else {
-                C12880j.m40227c("chooseAvatarsViewModel");
+                Intrinsics.throwUninitializedPropertyAccessException("chooseAvatarsViewModel");
                 throw null;
             }
         }

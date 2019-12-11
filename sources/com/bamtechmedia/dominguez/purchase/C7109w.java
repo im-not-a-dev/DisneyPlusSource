@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.purchase;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.Consumer;
 
 /* renamed from: com.bamtechmedia.dominguez.purchase.w */
@@ -16,6 +16,6 @@ final class C7109w implements Consumer {
     }
 
     public final /* synthetic */ void accept(Object obj) {
-        C12880j.m40222a(this.f15738c.invoke(obj), "invoke(...)");
+        Intrinsics.checkReturnedValueIsNotNull(this.f15738c.invoke(obj), "invoke(...)");
     }
 }

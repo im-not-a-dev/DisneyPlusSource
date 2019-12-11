@@ -12,7 +12,7 @@ import android.view.Choreographer;
 import android.view.Choreographer.FrameCallback;
 import android.view.Display;
 import android.view.WindowManager;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.w0.o */
 /* compiled from: VideoFrameReleaseTimeHelper */
@@ -113,7 +113,7 @@ public final class C9598o {
 
         private C9600b() {
             this.f22454V.start();
-            this.f22453U = C9554k0.m29393a(this.f22454V.getLooper(), (Callback) this);
+            this.f22453U = Util.m29393a(this.f22454V.getLooper(), (Callback) this);
             this.f22453U.sendEmptyMessage(0);
         }
 
@@ -185,7 +185,7 @@ public final class C9598o {
             this.f22438a = null;
         }
         if (this.f22438a != null) {
-            if (C9554k0.f22281a >= 17) {
+            if (Util.SDK_INT >= 17) {
                 aVar = m29685a(context);
             }
             this.f22440c = aVar;

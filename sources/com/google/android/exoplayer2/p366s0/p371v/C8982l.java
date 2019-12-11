@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0.p371v;
 
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import java.io.IOException;
 final class C8982l {
 
     /* renamed from: a */
-    private static final int[] f19661a = {C9554k0.m29428b("isom"), C9554k0.m29428b("iso2"), C9554k0.m29428b("iso3"), C9554k0.m29428b("iso4"), C9554k0.m29428b("iso5"), C9554k0.m29428b("iso6"), C9554k0.m29428b("avc1"), C9554k0.m29428b("hvc1"), C9554k0.m29428b("hev1"), C9554k0.m29428b("av01"), C9554k0.m29428b("mp41"), C9554k0.m29428b("mp42"), C9554k0.m29428b("3g2a"), C9554k0.m29428b("3g2b"), C9554k0.m29428b("3gr6"), C9554k0.m29428b("3gs6"), C9554k0.m29428b("3ge6"), C9554k0.m29428b("3gg6"), C9554k0.m29428b("M4V "), C9554k0.m29428b("M4A "), C9554k0.m29428b("f4v "), C9554k0.m29428b("kddi"), C9554k0.m29428b("M4VP"), C9554k0.m29428b("qt  "), C9554k0.m29428b("MSNV"), C9554k0.m29428b("dby1")};
+    private static final int[] f19661a = {Util.m29428b("isom"), Util.m29428b("iso2"), Util.m29428b("iso3"), Util.m29428b("iso4"), Util.m29428b("iso5"), Util.m29428b("iso6"), Util.m29428b("avc1"), Util.m29428b("hvc1"), Util.m29428b("hev1"), Util.m29428b("av01"), Util.m29428b("mp41"), Util.m29428b("mp42"), Util.m29428b("3g2a"), Util.m29428b("3g2b"), Util.m29428b("3gr6"), Util.m29428b("3gs6"), Util.m29428b("3ge6"), Util.m29428b("3gg6"), Util.m29428b("M4V "), Util.m29428b("M4A "), Util.m29428b("f4v "), Util.m29428b("kddi"), Util.m29428b("M4VP"), Util.m29428b("qt  "), Util.m29428b("MSNV"), Util.m29428b("dby1")};
 
     /* renamed from: a */
     public static boolean m26501a(C8913h hVar) throws IOException, InterruptedException {
@@ -131,7 +131,7 @@ final class C8982l {
 
     /* renamed from: a */
     private static boolean m26500a(int i) {
-        if ((i >>> 8) == C9554k0.m29428b("3gp")) {
+        if ((i >>> 8) == Util.m29428b("3gp")) {
             return true;
         }
         for (int i2 : f19661a) {

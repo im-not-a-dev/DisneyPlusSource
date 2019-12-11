@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.source.dash.p376k;
 
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.source.dash.k.g */
 /* compiled from: ProgramInformation */
@@ -38,7 +38,7 @@ public class C9121g {
             return false;
         }
         C9121g gVar = (C9121g) obj;
-        if (!C9554k0.m29414a((Object) this.f20457a, (Object) gVar.f20457a) || !C9554k0.m29414a((Object) this.f20458b, (Object) gVar.f20458b) || !C9554k0.m29414a((Object) this.f20459c, (Object) gVar.f20459c) || !C9554k0.m29414a((Object) this.f20460d, (Object) gVar.f20460d) || !C9554k0.m29414a((Object) this.f20461e, (Object) gVar.f20461e)) {
+        if (!Util.m29414a((Object) this.f20457a, (Object) gVar.f20457a) || !Util.m29414a((Object) this.f20458b, (Object) gVar.f20458b) || !Util.m29414a((Object) this.f20459c, (Object) gVar.f20459c) || !Util.m29414a((Object) this.f20460d, (Object) gVar.f20460d) || !Util.m29414a((Object) this.f20461e, (Object) gVar.f20461e)) {
             z = false;
         }
         return z;

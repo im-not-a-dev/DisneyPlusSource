@@ -6,7 +6,7 @@ import com.bamtechmedia.dominguez.main.p235x.C6234e;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p512h.C11868a;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Completable;
@@ -104,7 +104,7 @@ public final class C6181d implements C6187g {
     /* renamed from: d */
     private final Completable m19651d() {
         Completable b = Completable.m38162b((Callable<? extends CompletableSource>) new C6184c<Object>(this)).mo30051b(this.f14187f);
-        C12880j.m40222a((Object) b, "Completable.defer { lazy…eOn(computationScheduler)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.defer { lazy…eOn(computationScheduler)");
         return b;
     }
 
@@ -117,12 +117,12 @@ public final class C6181d implements C6187g {
     public Completable mo18785a() {
         if (this.f14186e.mo18830b()) {
             Completable h = Completable.m38169h();
-            C12880j.m40222a((Object) h, "Completable.complete()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
             return h;
         }
         this.f14186e.mo18829a(new C6223d(null, false, 3, null));
         Completable a = m19651d().mo30034a((CompletableSource) Completable.m38162b((Callable<? extends CompletableSource>) new C6182a<Object>(this))).mo30037a((Function<? super Throwable, ? extends CompletableSource>) new C6183b<Object,Object>(this));
-        C12880j.m40222a((Object) a, "initializeAppConfig()\n  …{ initializeOffline(it) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "initializeAppConfig()\n  …{ initializeOffline(it) }");
         return a;
     }
 
@@ -135,7 +135,7 @@ public final class C6181d implements C6187g {
         } else {
             completable = ((C6188h) this.f14184c.get()).mo18790a();
         }
-        C12880j.m40222a((Object) completable, "if (it.isIllegalAppState…gLog(\"initializeOffline\")");
+        Intrinsics.checkReturnedValueIsNotNull((Object) completable, "if (it.isIllegalAppState…gLog(\"initializeOffline\")");
         return completable;
     }
 }

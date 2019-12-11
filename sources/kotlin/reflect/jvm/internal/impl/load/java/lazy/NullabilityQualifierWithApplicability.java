@@ -23,7 +23,7 @@ public final class NullabilityQualifierWithApplicability {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:6:0x001a, code lost:
-        if (kotlin.jvm.internal.C12880j.m40224a((java.lang.Object) r2.qualifierApplicabilityTypes, (java.lang.Object) r3.qualifierApplicabilityTypes) != false) goto L_0x001f;
+        if (kotlin.jvm.internal.Intrinsics.areEqual((java.lang.Object) r2.qualifierApplicabilityTypes, (java.lang.Object) r3.qualifierApplicabilityTypes) != false) goto L_0x001f;
      */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     public boolean equals(java.lang.Object r3) {
@@ -35,11 +35,11 @@ public final class NullabilityQualifierWithApplicability {
             kotlin.reflect.jvm.internal.impl.load.java.lazy.NullabilityQualifierWithApplicability r3 = (kotlin.reflect.jvm.internal.impl.load.java.lazy.NullabilityQualifierWithApplicability) r3
             kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.NullabilityQualifierWithMigrationStatus r0 = r2.nullabilityQualifier
             kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.NullabilityQualifierWithMigrationStatus r1 = r3.nullabilityQualifier
-            boolean r0 = kotlin.jvm.internal.C12880j.m40224a(r0, r1)
+            boolean r0 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r1)
             if (r0 == 0) goto L_0x001d
             java.util.Collection<kotlin.reflect.jvm.internal.impl.load.java.AnnotationTypeQualifierResolver$QualifierApplicabilityType> r0 = r2.qualifierApplicabilityTypes
             java.util.Collection<kotlin.reflect.jvm.internal.impl.load.java.AnnotationTypeQualifierResolver$QualifierApplicabilityType> r3 = r3.qualifierApplicabilityTypes
-            boolean r3 = kotlin.jvm.internal.C12880j.m40224a(r0, r3)
+            boolean r3 = kotlin.jvm.internal.Intrinsics.areEqual(r0, r3)
             if (r3 == 0) goto L_0x001d
             goto L_0x001f
         L_0x001d:

@@ -45,7 +45,7 @@ public final class DefaultContentClient$graphQlErrorHandler$1 implements Respons
             com.bamtech.sdk4.content.BufferedGraphQlResponseConverter r2 = (com.bamtech.sdk4.content.BufferedGraphQlResponseConverter) r2     // Catch:{ all -> 0x0035 }
             okio.BufferedSource r3 = r0.mo35703d()     // Catch:{ all -> 0x0035 }
             java.lang.String r4 = "body.source()"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)     // Catch:{ all -> 0x0035 }
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)     // Catch:{ all -> 0x0035 }
             java.lang.Class<java.lang.Void> r4 = java.lang.Void.class
             com.bamtech.sdk4.content.GraphQlResponse r0 = r2.deserialize(r3, r4)     // Catch:{ all -> 0x0035 }
             goto L_0x0062

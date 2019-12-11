@@ -23,7 +23,7 @@ import kotlin.C12907r;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import p096e.p155q.p156a.p157a.C4339d;
 import p096e.p155q.p156a.p157a.C4342e;
@@ -34,7 +34,7 @@ import p520io.reactivex.MaybeSource;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 import p520io.reactivex.functions.Function;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 \u001c2\u00020\u0001:\u0003\u001c\u001d\u001eB5\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\u000b\u0012\u0006\u0010\f\u001a\u00020\r¢\u0006\u0002\u0010\u000eJ\u0018\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u0014H\u0002J\u001e\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0011\u001a\u00020\u00122\f\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u00140\u0018H\u0002J\u000e\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u001b0\u001aH\u0016R\u000e\u0010\f\u001a\u00020\rX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0004¢\u0006\u0002\n\u0000¨\u0006\u001f"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/channels/tv/worker/SyncChannelWorker;", "Landroidx/work/RxWorker;", "context", "Landroid/content/Context;", "parameters", "Landroidx/work/WorkerParameters;", "channelProvider", "Lcom/bamtechmedia/dominguez/channels/tv/channel/ChannelProvider;", "programCandidateProvider", "Lcom/bamtechmedia/dominguez/channels/tv/programs/ProgramCandidateProvider;", "previewChannelHelper", "Landroidx/tvprovider/media/tv/PreviewChannelHelper;", "channelManager", "Lcom/bamtechmedia/dominguez/channels/tv/ChannelManager;", "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lcom/bamtechmedia/dominguez/channels/tv/channel/ChannelProvider;Lcom/bamtechmedia/dominguez/channels/tv/programs/ProgramCandidateProvider;Landroidx/tvprovider/media/tv/PreviewChannelHelper;Lcom/bamtechmedia/dominguez/channels/tv/ChannelManager;)V", "buildProgram", "Landroidx/tvprovider/media/tv/PreviewProgram;", "channelId", "", "program", "Lcom/bamtechmedia/dominguez/channels/tv/db/ProgramCandidate;", "createPrograms", "", "programs", "", "createWork", "Lio/reactivex/Single;", "Landroidx/work/ListenableWorker$Result;", "Companion", "Factory", "Helper", "channels_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.channels.tv.worker.SyncChannelWorker */
@@ -121,7 +121,7 @@ public final class SyncChannelWorker extends RxWorker {
 
         /* renamed from: a */
         public ListenableWorker mo5648a(Context context, String str, WorkerParameters workerParameters) {
-            if (!C12880j.m40224a((Object) str, (Object) SyncChannelWorker.class.getCanonicalName())) {
+            if (!Intrinsics.areEqual((Object) str, (Object) SyncChannelWorker.class.getCanonicalName())) {
                 return null;
             }
             String a = workerParameters.mo5652c().mo5584a("channelId");
@@ -155,7 +155,7 @@ public final class SyncChannelWorker extends RxWorker {
                 aVar2.mo5591a((String) pair.mo31015c(), pair.mo31016d());
             }
             Data a2 = aVar2.mo5594a();
-            C12880j.m40222a((Object) a2, "dataBuilder.build()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a2, "dataBuilder.build()");
             a.mo5636a(((C1015a) aVar.mo5954a(a2)).mo5958a());
         }
     }
@@ -189,7 +189,7 @@ public final class SyncChannelWorker extends RxWorker {
                 SyncChannelWorker syncChannelWorker = this.f8248c.f8246c;
                 long a = dVar.mo15198a();
                 List list = this.f8247U;
-                C12880j.m40222a((Object) list, "programs");
+                Intrinsics.checkReturnedValueIsNotNull((Object) list, "programs");
                 syncChannelWorker.m11225a(a, list);
                 return Maybe.m38258c(Result.m5470c());
             }
@@ -223,7 +223,7 @@ public final class SyncChannelWorker extends RxWorker {
     /* renamed from: a */
     public Single<Result> mo5623a() {
         Single<Result> a = this.f8235d.mo12288a().mo30103a((Function<? super T, ? extends MaybeSource<? extends R>>) new C3244d<Object,Object>(this)).mo30109a((SingleSource<? extends T>) Single.m38399b(Result.m5470c()));
-        C12880j.m40222a((Object) a, "programCandidateProvider…e.just(Result.success()))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "programCandidateProvider…e.just(Result.success()))");
         return a;
     }
 
@@ -235,7 +235,7 @@ public final class SyncChannelWorker extends RxWorker {
             StringBuilder sb = new StringBuilder();
             sb.append("Inserted new program: ");
             sb.append(a2);
-            C14100a.m44522a(sb.toString(), new Object[0]);
+            Timber.m44522a(sb.toString(), new Object[0]);
         }
     }
 
@@ -260,7 +260,7 @@ public final class SyncChannelWorker extends RxWorker {
         aVar7.mo15183b(parse);
         aVar7.mo15143c(parse2);
         C4343f a = aVar.mo15231a();
-        C12880j.m40222a((Object) a, "builder.build()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "builder.build()");
         return a;
     }
 }

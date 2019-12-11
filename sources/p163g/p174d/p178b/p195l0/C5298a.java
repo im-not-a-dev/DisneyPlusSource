@@ -1,7 +1,7 @@
 package p163g.p174d.p178b.p195l0;
 
 import java.util.concurrent.TimeUnit;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.d.b.l0.a */
 /* compiled from: Schedule.kt */
@@ -61,9 +61,9 @@ public final class C5298a {
         if (this != obj) {
             if (obj instanceof C5298a) {
                 C5298a aVar = (C5298a) obj;
-                if ((this.f12696b == aVar.f12696b) && C12880j.m40224a((Object) this.f12697c, (Object) aVar.f12697c)) {
-                    if ((this.f12698d == aVar.f12698d) && C12880j.m40224a((Object) this.f12699e, (Object) aVar.f12699e)) {
-                        if (!(this.f12700f == aVar.f12700f) || !C12880j.m40224a((Object) this.f12701g, (Object) aVar.f12701g)) {
+                if ((this.f12696b == aVar.f12696b) && Intrinsics.areEqual((Object) this.f12697c, (Object) aVar.f12697c)) {
+                    if ((this.f12698d == aVar.f12698d) && Intrinsics.areEqual((Object) this.f12699e, (Object) aVar.f12699e)) {
+                        if (!(this.f12700f == aVar.f12700f) || !Intrinsics.areEqual((Object) this.f12701g, (Object) aVar.f12701g)) {
                             return false;
                         }
                     }

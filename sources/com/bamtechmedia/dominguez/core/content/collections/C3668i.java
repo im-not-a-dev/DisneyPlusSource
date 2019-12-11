@@ -17,7 +17,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 import kotlin.C13145v;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -87,7 +87,7 @@ public final class C3668i implements C3667h {
                 if (this.f9208c.f9206U.mo13374X()) {
                     C3330h a = this.f9208c.f9207c.f9203c;
                     C3676k kVar = this.f9208c.f9206U;
-                    C12880j.m40222a((Object) aVar, "it");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) aVar, "it");
                     a.mo12342a(kVar, aVar);
                 }
             }
@@ -185,11 +185,11 @@ public final class C3668i implements C3667h {
     public Completable mo13368b(C3676k kVar) {
         if (!this.f9205e.mo13364e(kVar)) {
             Completable h = Completable.m38169h();
-            C12880j.m40222a((Object) h, "Completable.complete()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
             return h;
         }
         Completable f = mo13367a(kVar).mo30236i().mo30194g().mo30683c(0).mo30186d().mo30228e().mo30033a(3, TimeUnit.SECONDS, C11934b.m38500b()).mo30055f();
-        C12880j.m40222a((Object) f, "getCollectionBySlug(slug…       .onErrorComplete()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) f, "getCollectionBySlug(slug…       .onErrorComplete()");
         return f;
     }
 
@@ -200,7 +200,7 @@ public final class C3668i implements C3667h {
             return e;
         }
         Single d = this.f9203c.mo12344b(kVar).mo30109a((SingleSource<? extends T>) Single.m38396a((Callable<? extends SingleSource<? extends T>>) new C3670b<Object>(this, kVar))).mo30208a((Function<? super T, ? extends SingleSource<? extends R>>) new C3672c<Object,Object>(this, kVar)).mo30227d((Consumer<? super T>) new C3673d<Object>(kVar));
-        C12880j.m40222a((Object) d, "cache.get(collectionSlug… with resolved sets'\" } }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) d, "cache.get(collectionSlug… with resolved sets'\" } }");
         return this.f9203c.mo12341a(kVar, d);
     }
 
@@ -227,18 +227,18 @@ public final class C3668i implements C3667h {
         }
         if (arrayList3.isEmpty()) {
             Single<C3658a> b = Single.m38399b(aVar);
-            C12880j.m40222a((Object) b, "Single.just(collection)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(collection)");
             return b;
         }
         C5855o oVar = C5855o.f13640a;
         ArrayList arrayList4 = new ArrayList(C13187p.m40525a((Iterable) arrayList3, 10));
         for (ReferenceSet referenceSet2 : arrayList3) {
             Single a2 = C3767b.m12769a(this.f9202b, referenceSet2.mo13604b(), referenceSet2.mo13608e(), str, false, 8, (Object) null).mo30212a(C3778h.class);
-            C12880j.m40222a((Object) a2, "cast(R::class.java)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a2, "cast(R::class.java)");
             arrayList4.add(a2.mo30213a(referenceSet2));
         }
         Single<C3658a> a3 = Single.m38394a((Iterable<? extends SingleSource<? extends T>>) arrayList4, (Function<? super Object[], ? extends R>) new C3674e<Object,Object>(this, aVar));
-        C12880j.m40222a((Object) a3, "Single.zip<DmcSet, Colle…)\n            }\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a3, "Single.zip<DmcSet, Colle…)\n            }\n        }");
         return a3;
     }
 }

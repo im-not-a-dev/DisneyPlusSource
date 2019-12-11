@@ -20,7 +20,7 @@ import kotlin.C12907r;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Function;
@@ -177,7 +177,7 @@ public final class C7391d implements C5906a {
     /* renamed from: a */
     private final void m22128a(String str, String str2, Map<String, String> map) {
         Single g = this.f16243f.mo18834a(str).mo30220b(this.f16242e).mo30233g(new C7393b(this, str2, map));
-        C12880j.m40222a((Object) g, "contentLocationProvider.…mpseExtras)\n            }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "contentLocationProvider.…mpseExtras)\n            }");
         C5826e0.m18824a(g);
     }
 }

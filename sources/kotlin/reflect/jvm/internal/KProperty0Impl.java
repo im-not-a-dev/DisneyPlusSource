@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal;
 import kotlin.C12897k;
 import kotlin.Lazy;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KProperty0;
 import kotlin.reflect.jvm.internal.ReflectProperties.LazyVal;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
@@ -35,7 +35,7 @@ public class KProperty0Impl<R> extends KPropertyImpl<R> implements KProperty0<R>
     public KProperty0Impl(KDeclarationContainerImpl kDeclarationContainerImpl, PropertyDescriptor propertyDescriptor) {
         super(kDeclarationContainerImpl, propertyDescriptor);
         LazyVal<Getter<R>> lazy = ReflectProperties.lazy(new KProperty0Impl$_getter$1(this));
-        C12880j.m40222a((Object) lazy, "ReflectProperties.lazy { Getter(this) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazy, "ReflectProperties.lazy { Getter(this) }");
         this._getter = lazy;
     }
 
@@ -54,13 +54,13 @@ public class KProperty0Impl<R> extends KPropertyImpl<R> implements KProperty0<R>
     public KProperty0Impl(KDeclarationContainerImpl kDeclarationContainerImpl, String str, String str2, Object obj) {
         super(kDeclarationContainerImpl, str, str2, obj);
         LazyVal<Getter<R>> lazy = ReflectProperties.lazy(new KProperty0Impl$_getter$1(this));
-        C12880j.m40222a((Object) lazy, "ReflectProperties.lazy { Getter(this) }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) lazy, "ReflectProperties.lazy { Getter(this) }");
         this._getter = lazy;
     }
 
     public Getter<R> getGetter() {
         Object invoke = this._getter.invoke();
-        C12880j.m40222a(invoke, "_getter()");
+        Intrinsics.checkReturnedValueIsNotNull(invoke, "_getter()");
         return (Getter) invoke;
     }
 }

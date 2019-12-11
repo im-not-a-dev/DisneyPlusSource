@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.types.checker;
 
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.SupertypesPolicy.DoCustomTransform;
 import kotlin.reflect.jvm.internal.impl.types.KotlinType;
@@ -27,12 +27,12 @@ public final class C13122x9ae7c99c extends DoCustomTransform {
         SimpleTypeMarker lowerBoundIfFlexible = classicTypeSystemContext.lowerBoundIfFlexible(kotlinTypeMarker);
         if (lowerBoundIfFlexible != null) {
             KotlinType safeSubstitute = typeSubstitutor.safeSubstitute((KotlinType) lowerBoundIfFlexible, Variance.INVARIANT);
-            C12880j.m40222a((Object) safeSubstitute, "substitutor.safeSubstitu…ANT\n                    )");
+            Intrinsics.checkReturnedValueIsNotNull((Object) safeSubstitute, "substitutor.safeSubstitu…ANT\n                    )");
             SimpleTypeMarker asSimpleType = classicTypeSystemContext.asSimpleType(safeSubstitute);
             if (asSimpleType != null) {
                 return asSimpleType;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
         throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.types.KotlinType");

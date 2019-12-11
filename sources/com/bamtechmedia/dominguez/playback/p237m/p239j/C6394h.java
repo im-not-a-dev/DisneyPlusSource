@@ -7,12 +7,12 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p163g.p174d.p178b.p182d0.C4946g;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0007\u0018\u00002\u00020\u0001B\u000f\b\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u000e\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bJ\u0010\u0010\t\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0002J\u000e\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\fJ\u0010\u0010\r\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0002J\u0006\u0010\u000e\u001a\u00020\u0006J\u0010\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0002J\u0010\u0010\u0010\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0002J\u0010\u0010\u0011\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0012"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/playback/common/analytics/PlayerAnalytics;", "", "analytics", "Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;", "(Lcom/bamtechmedia/dominguez/playback/common/analytics/PlaybackAnalytics;)V", "initAnalytics", "", "engine", "Lcom/bamtech/player/exo/sdk4/SDK4ExoPlaybackEngine;", "trackClicks", "trackContentViewingStatusAndStartVideo", "playable", "Lcom/bamtechmedia/dominguez/core/content/Playable;", "trackJumpForward", "trackPageLoad", "trackRebuffering", "trackScrubberClickDirections", "trackVideoTime", "playback_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 @SuppressLint({"CheckResult", "RxLeakedSubscription"})
@@ -38,7 +38,7 @@ public final class C6394h {
         /* renamed from: a */
         public final void accept(Boolean bool) {
             C6391e a = this.f14521c.f14520a;
-            C12880j.m40222a((Object) bool, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) bool, "it");
             a.mo19039a(bool.booleanValue());
         }
     }
@@ -56,7 +56,7 @@ public final class C6394h {
 
         /* renamed from: a */
         public final void mo19048a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -64,7 +64,7 @@ public final class C6394h {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -106,7 +106,7 @@ public final class C6394h {
 
         /* renamed from: a */
         public final void mo19049a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -114,7 +114,7 @@ public final class C6394h {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -156,7 +156,7 @@ public final class C6394h {
 
         /* renamed from: a */
         public final void mo19050a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -164,7 +164,7 @@ public final class C6394h {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -207,7 +207,7 @@ public final class C6394h {
 
         /* renamed from: a */
         public final void mo19052a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -215,7 +215,7 @@ public final class C6394h {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -257,7 +257,7 @@ public final class C6394h {
 
         /* renamed from: a */
         public final void mo19053a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -265,7 +265,7 @@ public final class C6394h {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -307,7 +307,7 @@ public final class C6394h {
 
         /* renamed from: a */
         public final void mo19054a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -315,7 +315,7 @@ public final class C6394h {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -342,7 +342,7 @@ public final class C6394h {
         /* renamed from: a */
         public final void accept(Integer num) {
             C6391e a = this.f14533c.f14520a;
-            C12880j.m40222a((Object) num, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) num, "it");
             a.mo19035a(num.intValue());
         }
     }
@@ -360,7 +360,7 @@ public final class C6394h {
 
         /* renamed from: a */
         public final void mo19056a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -368,7 +368,7 @@ public final class C6394h {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {

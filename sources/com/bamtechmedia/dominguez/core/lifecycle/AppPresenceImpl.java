@@ -12,7 +12,7 @@ import com.bamtechmedia.dominguez.core.lifecycle.C5765a.C5766a.C5769c;
 import com.jakewharton.rxrelay2.C10531b;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p164a.p165a.C4705m;
 import p520io.reactivex.Observable;
 
@@ -50,7 +50,7 @@ public final class AppPresenceImpl implements C5765a {
     public AppPresenceImpl(C3585a aVar) {
         this.f13523W = aVar;
         C10531b<C5766a> n = C10531b.m33228n();
-        C12880j.m40222a((Object) n, "PublishRelay.create<AppPresenceResponse>()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) n, "PublishRelay.create<AppPresenceResponse>()");
         this.f13521U = n;
     }
 
@@ -143,7 +143,7 @@ public final class AppPresenceImpl implements C5765a {
     /* renamed from: a */
     public Observable<C5766a> mo17649a() {
         Observable<C5766a> i = this.f13521U.mo30197i();
-        C12880j.m40222a((Object) i, "appPresenceRelay.share()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) i, "appPresenceRelay.share()");
         return i;
     }
 }

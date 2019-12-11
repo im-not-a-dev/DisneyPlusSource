@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractLazyTypeParameterDescriptor;
@@ -41,9 +41,9 @@ public final class LazyJavaTypeParameterDescriptor extends AbstractLazyTypeParam
         Collection<JavaClassifierType> upperBounds = this.javaTypeParameter.getUpperBounds();
         if (upperBounds.isEmpty()) {
             SimpleType anyType = this.f29564c.getModule().getBuiltIns().getAnyType();
-            C12880j.m40222a((Object) anyType, "c.module.builtIns.anyType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) anyType, "c.module.builtIns.anyType");
             SimpleType nullableAnyType = this.f29564c.getModule().getBuiltIns().getNullableAnyType();
-            C12880j.m40222a((Object) nullableAnyType, "c.module.builtIns.nullableAnyType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) nullableAnyType, "c.module.builtIns.nullableAnyType");
             return C13183n.m40498a(KotlinTypeFactory.flexibleType(anyType, nullableAnyType));
         }
         ArrayList arrayList = new ArrayList(C13187p.m40525a((Iterable) upperBounds, 10));

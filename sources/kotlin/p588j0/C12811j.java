@@ -7,7 +7,7 @@ import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.p586h0.C12757d;
 import kotlin.p588j0.C12808i.C12809a;
@@ -143,7 +143,7 @@ final class C12811j implements C12808i {
                 return null;
             }
             String group = this.f29492c.m40024c().group(i);
-            C12880j.m40222a((Object) group, "matchResult.group(index)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) group, "matchResult.group(index)");
             return new C12805f(group, a);
         }
 
@@ -177,7 +177,7 @@ final class C12811j implements C12808i {
         if (list != null) {
             return list;
         }
-        C12880j.m40220a();
+        Intrinsics.throwNpe();
         throw null;
     }
 
@@ -187,7 +187,7 @@ final class C12811j implements C12808i {
             return null;
         }
         Matcher matcher = this.f29489b.pattern().matcher(this.f29490c);
-        C12880j.m40222a((Object) matcher, "matcher.pattern().matcher(input)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) matcher, "matcher.pattern().matcher(input)");
         return C12819l.m40048b(matcher, end, this.f29490c);
     }
 

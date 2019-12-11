@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.collections.items;
 
 import com.bamtechmedia.dominguez.core.content.sets.C3788m;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5363f;
 import p163g.p201e.p202a.C5364g;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -36,7 +36,7 @@ public final class C3379q extends C3384s {
         if (this != obj) {
             if (obj instanceof C3379q) {
                 C3379q qVar = (C3379q) obj;
-                if (C12880j.m40224a((Object) this.f8520Y, (Object) qVar.f8520Y)) {
+                if (Intrinsics.areEqual((Object) this.f8520Y, (Object) qVar.f8520Y)) {
                     if (this.f8521Z == qVar.f8521Z) {
                         return true;
                     }

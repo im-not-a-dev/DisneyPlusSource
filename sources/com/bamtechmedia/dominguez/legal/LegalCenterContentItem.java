@@ -5,7 +5,7 @@ import android.view.View;
 import com.bamtechmedia.dominguez.core.design.widgets.vadergrid.VaderTextView;
 import com.bamtechmedia.dominguez.legal.api.LegalDocument;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
 import p163g.p509o.p510a.C11853e;
 import p163g.p509o.p510a.p511l.C11866a;
@@ -27,20 +27,20 @@ public final class LegalCenterContentItem extends C11866a {
     }
 
     public boolean isSameAs(C11853e<?> eVar) {
-        return (eVar instanceof LegalCenterContentItem) && C12880j.m40224a((Object) ((LegalCenterContentItem) eVar).document.getDocumentCode(), (Object) this.document.getDocumentCode());
+        return (eVar instanceof LegalCenterContentItem) && Intrinsics.areEqual((Object) ((LegalCenterContentItem) eVar).document.getDocumentCode(), (Object) this.document.getDocumentCode());
     }
 
     public void bind(C11867b bVar, int i) {
         VaderTextView vaderTextView = (VaderTextView) bVar.mo20994a().findViewById(C6117R.C6119id.legal_content);
         String str = "viewHolder.legal_content";
-        C12880j.m40222a((Object) vaderTextView, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) vaderTextView, str);
         vaderTextView.setText(this.content);
         VaderTextView vaderTextView2 = (VaderTextView) bVar.mo20994a().findViewById(C6117R.C6119id.legal_content);
-        C12880j.m40222a((Object) vaderTextView2, str);
+        Intrinsics.checkReturnedValueIsNotNull((Object) vaderTextView2, str);
         vaderTextView2.setMovementMethod(LinkMovementMethod.getInstance());
         VaderTextView vaderTextView3 = (VaderTextView) bVar.mo20994a().findViewById(C6117R.C6119id.legal_content);
         View view = bVar.itemView;
-        C12880j.m40222a((Object) view, "viewHolder.itemView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) view, "viewHolder.itemView");
         vaderTextView3.setLinkTextColor(C4025a.m13788a(view.getContext(), C6117R.color.vader_secondary));
     }
 }

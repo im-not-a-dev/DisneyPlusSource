@@ -5,7 +5,7 @@ import com.bamtech.sdk4.session.SessionInfo;
 import com.bamtech.sdk4.session.SessionInfoStorage;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.Single;
 import p520io.reactivex.functions.Consumer;
@@ -26,17 +26,17 @@ public final class DefaultSessionInfoUpdater implements SessionInfoUpdater {
         SessionInfo load = this.sessionStorage.load();
         if (load != null) {
             Maybe<SessionInfo> c = Maybe.m38258c(load);
-            C12880j.m40222a((Object) c, "Maybe.just(localInfo)");
+            Intrinsics.checkReturnedValueIsNotNull((Object) c, "Maybe.just(localInfo)");
             return c;
         }
         Maybe<SessionInfo> h = Maybe.m38259h();
-        C12880j.m40222a((Object) h, "Maybe.empty()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) h, "Maybe.empty()");
         return h;
     }
 
     public Single<SessionInfo> updateLocalSessionInfo(ServiceTransaction serviceTransaction, String str) {
         Single<SessionInfo> b = this.sessionClient.getSessionInfo(serviceTransaction, C13170i0.m40332a(C12907r.m40244a("{accessToken}", str))).mo30233g(new DefaultSessionInfoUpdater$updateLocalSessionInfo$1(this)).mo30218b((Consumer<? super Throwable>) new DefaultSessionInfoUpdater$updateLocalSessionInfo$2<Object>(this, serviceTransaction));
-        C12880j.m40222a((Object) b, "sessionClient.getSession…clear()\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "sessionClient.getSession…clear()\n                }");
         return b;
     }
 }

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.types.typesApproximation;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.resolve.calls.inference.CapturedTypeConstructorKt;
 import kotlin.reflect.jvm.internal.impl.types.UnwrappedType;
@@ -20,7 +20,7 @@ final class C13129x21acc51c extends C12881k implements Function1<UnwrappedType, 
     }
 
     public final boolean invoke(UnwrappedType unwrappedType) {
-        C12880j.m40222a((Object) unwrappedType, "it");
+        Intrinsics.checkReturnedValueIsNotNull((Object) unwrappedType, "it");
         return CapturedTypeConstructorKt.isCaptured(unwrappedType);
     }
 }

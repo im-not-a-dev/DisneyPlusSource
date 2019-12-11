@@ -3,7 +3,7 @@ package com.bamtech.sdk4.media;
 import com.bamtech.core.annotations.android.DontObfuscate;
 import com.bamtech.sdk4.bookmarks.Bookmark;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -30,7 +30,7 @@ public final class Playhead {
                     String contentId = mediaPlayhead.getContentId();
                     long position = (long) mediaPlayhead.getPosition();
                     DateTime dateTime = mediaPlayhead.getLastUpdated().toDateTime(DateTimeZone.UTC);
-                    C12880j.m40222a((Object) dateTime, "mediaPlayhead.lastUpdate…ateTime(DateTimeZone.UTC)");
+                    Intrinsics.checkReturnedValueIsNotNull((Object) dateTime, "mediaPlayhead.lastUpdate…ateTime(DateTimeZone.UTC)");
                     Playhead playhead = new Playhead(contentId, position, dateTime.getMillis(), str);
                     return playhead;
                 }
@@ -100,9 +100,9 @@ public final class Playhead {
         if (this != obj) {
             if (obj instanceof Playhead) {
                 Playhead playhead2 = (Playhead) obj;
-                if (C12880j.m40224a((Object) this.contentId, (Object) playhead2.contentId)) {
+                if (Intrinsics.areEqual((Object) this.contentId, (Object) playhead2.contentId)) {
                     if (this.playhead == playhead2.playhead) {
-                        if (!(this.lastUpdated == playhead2.lastUpdated) || !C12880j.m40224a((Object) this.profileId, (Object) playhead2.profileId)) {
+                        if (!(this.lastUpdated == playhead2.lastUpdated) || !Intrinsics.areEqual((Object) this.profileId, (Object) playhead2.profileId)) {
                             return false;
                         }
                     }

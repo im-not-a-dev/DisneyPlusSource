@@ -6,7 +6,7 @@ import com.bamtech.sdk4.service.InvalidStateException;
 import com.bamtech.sdk4.service.InvalidStateException.Companion;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
 
@@ -34,7 +34,7 @@ final class DefaultAuthenticationManager$authenticate$1<V> implements Callable<S
                 this.this$0.authenticateProcess = this.this$0.releaseLockOnTerminate(this.this$0.authenticateTask(this.$transaction, new AuthenticationRequest(this.$email, this.$password)));
                 single = this.this$0.authenticateProcess;
                 if (single == null) {
-                    C12880j.m40220a();
+                    Intrinsics.throwNpe();
                     throw null;
                 }
             }

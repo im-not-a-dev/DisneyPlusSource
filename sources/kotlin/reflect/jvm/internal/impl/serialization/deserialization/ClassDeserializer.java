@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
 import java.util.Set;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.name.ClassId;
@@ -26,7 +26,7 @@ public final class ClassDeserializer {
         }
 
         public boolean equals(Object obj) {
-            return (obj instanceof ClassKey) && C12880j.m40224a((Object) this.classId, (Object) ((ClassKey) obj).classId);
+            return (obj instanceof ClassKey) && Intrinsics.areEqual((Object) this.classId, (Object) ((ClassKey) obj).classId);
         }
 
         public final ClassData getClassData() {
@@ -110,7 +110,7 @@ public final class ClassDeserializer {
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedClassDescriptor r3 = (kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedClassDescriptor) r3
             if (r3 == 0) goto L_0x0079
             kotlin.reflect.jvm.internal.impl.name.Name r0 = r0.getShortClassName()
-            kotlin.jvm.internal.C12880j.m40222a(r0, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r4)
             boolean r0 = r3.hasNestedClass$deserialization(r0)
             if (r0 != 0) goto L_0x0072
             return r2
@@ -126,7 +126,7 @@ public final class ClassDeserializer {
             kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentProvider r3 = r3.getPackageFragmentProvider()
             kotlin.reflect.jvm.internal.impl.name.FqName r5 = r0.getPackageFqName()
             java.lang.String r6 = "classId.packageFqName"
-            kotlin.jvm.internal.C12880j.m40222a(r5, r6)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r5, r6)
             java.util.List r3 = r3.getPackageFragments(r5)
             java.util.Iterator r3 = r3.iterator()
         L_0x0091:
@@ -139,7 +139,7 @@ public final class ClassDeserializer {
             if (r7 == 0) goto L_0x00b4
             kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializedPackageFragment r6 = (kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializedPackageFragment) r6
             kotlin.reflect.jvm.internal.impl.name.Name r7 = r0.getShortClassName()
-            kotlin.jvm.internal.C12880j.m40222a(r7, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r7, r4)
             boolean r6 = r6.hasTopLevelClass(r7)
             if (r6 == 0) goto L_0x00b2
             goto L_0x00b4
@@ -161,12 +161,12 @@ public final class ClassDeserializer {
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.TypeTable r6 = new kotlin.reflect.jvm.internal.impl.metadata.deserialization.TypeTable
             kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$TypeTable r0 = r10.getTypeTable()
             java.lang.String r2 = "classProto.typeTable"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r2)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r2)
             r6.<init>(r0)
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.VersionRequirementTable$Companion r0 = kotlin.reflect.jvm.internal.impl.metadata.deserialization.VersionRequirementTable.Companion
             kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$VersionRequirementTable r2 = r10.getVersionRequirementTable()
             java.lang.String r5 = "classProto.versionRequirementTable"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r5)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r5)
             kotlin.reflect.jvm.internal.impl.metadata.deserialization.VersionRequirementTable r7 = r0.create(r2)
             r9 = 0
             r5 = r1

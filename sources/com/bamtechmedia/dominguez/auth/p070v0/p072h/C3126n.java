@@ -28,7 +28,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
@@ -40,7 +40,7 @@ import p163g.p503n.p504a.C11793e;
 import p163g.p509o.p510a.C11847b;
 import p520io.reactivex.C11960n;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u00011BU\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\u0006\u0010\r\u001a\u00020\u000e\u0012\u0006\u0010\u000f\u001a\u00020\u0010\u0012\u0006\u0010\u0011\u001a\u00020\u0012\u0012\u0006\u0010\u0013\u001a\u00020\u0014\u0012\u0006\u0010\u0015\u001a\u00020\u0016¢\u0006\u0002\u0010\u0017J\u0006\u0010\u001e\u001a\u00020\u001fJ\u0010\u0010 \u001a\u00020\u001f2\u0006\u0010!\u001a\u00020\"H\u0002J\u0010\u0010#\u001a\u00020\u001f2\u0006\u0010!\u001a\u00020$H\u0002J\u0010\u0010%\u001a\u00020\u001f2\u0006\u0010!\u001a\u00020&H\u0002J\u0010\u0010'\u001a\u00020\u001f2\u0006\u0010!\u001a\u00020(H\u0002J\u0010\u0010)\u001a\u00020\u001f2\u0006\u0010!\u001a\u00020*H\u0002J\u0010\u0010+\u001a\u00020\u001f2\b\u0010,\u001a\u0004\u0018\u00010\u0019J\u001e\u0010-\u001a\u00020\u001f2\b\u0010,\u001a\u0004\u0018\u00010\u00192\f\u0010.\u001a\b\u0012\u0004\u0012\u0002000/R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u001c\u0010\u0018\u001a\u0004\u0018\u00010\u0019X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\u001b\"\u0004\b\u001c\u0010\u001dR\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0014X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0004¢\u0006\u0002\n\u0000¨\u00062"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/auth/validation/signup/SignupEmailViewModel;", "Lcom/bamtechmedia/dominguez/core/framework/ReactiveViewModel;", "Lcom/bamtechmedia/dominguez/auth/validation/signup/SignupEmailViewModel$ViewState;", "signupEmailAction", "Lcom/bamtechmedia/dominguez/auth/validation/signup/SignupEmailAction;", "marketingAndLegalAction", "Lcom/bamtechmedia/dominguez/auth/validation/signup/MarketingAndLegalAction;", "router", "Lcom/bamtechmedia/dominguez/auth/api/router/AccountValidationRouter;", "errorRouter", "Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;", "otpRouter", "Lcom/bamtechmedia/dominguez/auth/api/router/OtpRouter;", "authHostViewModel", "Lcom/bamtechmedia/dominguez/auth/AuthHostViewModel;", "legalItemFactory", "Lcom/bamtechmedia/dominguez/auth/validation/LegalItemFactory;", "marketingItemFactory", "Lcom/bamtechmedia/dominguez/auth/validation/MarketingViewItemFactory;", "signUpEmailAnalytics", "Lcom/bamtechmedia/dominguez/auth/validation/signup/SignUpEmailAnalytics;", "webRouter", "Lcom/bamtechmedia/dominguez/web/WebRouter;", "(Lcom/bamtechmedia/dominguez/auth/validation/signup/SignupEmailAction;Lcom/bamtechmedia/dominguez/auth/validation/signup/MarketingAndLegalAction;Lcom/bamtechmedia/dominguez/auth/api/router/AccountValidationRouter;Lcom/bamtechmedia/dominguez/error/api/ErrorRouter;Lcom/bamtechmedia/dominguez/auth/api/router/OtpRouter;Lcom/bamtechmedia/dominguez/auth/AuthHostViewModel;Lcom/bamtechmedia/dominguez/auth/validation/LegalItemFactory;Lcom/bamtechmedia/dominguez/auth/validation/MarketingViewItemFactory;Lcom/bamtechmedia/dominguez/auth/validation/signup/SignUpEmailAnalytics;Lcom/bamtechmedia/dominguez/web/WebRouter;)V", "email", "", "getEmail", "()Ljava/lang/String;", "setEmail", "(Ljava/lang/String;)V", "fetchMarketingAndLegalItems", "", "handleAcceptedState", "actionState", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction$ActionState$Accepted;", "handleAccountRecoveryState", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction$ActionState$AccountRecovery;", "handleMarketingLegalCompleted", "Lcom/bamtechmedia/dominguez/auth/validation/signup/MarketingAndLegalAction$ActionState$Completed;", "handleNotFoundState", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction$ActionState$NotFound;", "mapSignupEmailActionState", "Lcom/bamtechmedia/dominguez/auth/validation/login/LoginEmailAction$ActionState;", "routeToLogin", "input", "signup", "marketingOptIns", "", "Lcom/bamtechmedia/dominguez/legal/api/MarketingInput;", "ViewState", "auth_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.auth.v0.h.n */
@@ -200,7 +200,7 @@ public final class C3126n extends C5741g<C3127a> {
                     C3127a aVar = (C3127a) obj;
                     if (this.f8042a == aVar.f8042a) {
                         if (this.f8043b == aVar.f8043b) {
-                            if (!(this.f8044c == aVar.f8044c) || !C12880j.m40224a((Object) this.f8045d, (Object) aVar.f8045d) || !C12880j.m40224a((Object) this.f8046e, (Object) aVar.f8046e) || !C12880j.m40224a((Object) this.f8047f, (Object) aVar.f8047f)) {
+                            if (!(this.f8044c == aVar.f8044c) || !Intrinsics.areEqual((Object) this.f8045d, (Object) aVar.f8045d) || !Intrinsics.areEqual((Object) this.f8046e, (Object) aVar.f8046e) || !Intrinsics.areEqual((Object) this.f8047f, (Object) aVar.f8047f)) {
                                 return false;
                             }
                         }
@@ -376,7 +376,7 @@ public final class C3126n extends C5741g<C3127a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Unhandled Exception: during MarketingAndLegalAction", new Object[0]);
+            Timber.m44528b(th, "Unhandled Exception: during MarketingAndLegalAction", new Object[0]);
             C7627a.m22614a(this.f8051c.f8035e, null, 1, null);
         }
     }
@@ -516,7 +516,7 @@ public final class C3126n extends C5741g<C3127a> {
 
         /* renamed from: a */
         public final void accept(Throwable th) {
-            C14100a.m44528b(th, "Unhandled Exception: during SignupEmailAction", new Object[0]);
+            Timber.m44528b(th, "Unhandled Exception: during SignupEmailAction", new Object[0]);
         }
     }
 
@@ -547,7 +547,7 @@ public final class C3126n extends C5741g<C3127a> {
     public final void mo12157y() {
         C3128b bVar = new C3128b(this);
         Object a = this.f8033c.mo12126a().mo30161a((C11960n<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11786a0) a).mo29915a(new C3139o(new C3130c(bVar)), new C3131d(this));
     }
 
@@ -588,7 +588,7 @@ public final class C3126n extends C5741g<C3127a> {
             g.n.a.h r4 = p163g.p503n.p504a.C11793e.m37930a(r4)
             java.lang.Object r3 = r3.mo30161a(r4)
             java.lang.String r4 = "this.`as`(AutoDispose.autoDisposable(provider))"
-            kotlin.jvm.internal.C12880j.m40222a(r3, r4)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r3, r4)
             g.n.a.a0 r3 = (p163g.p503n.p504a.C11786a0) r3
             com.bamtechmedia.dominguez.auth.v0.h.n$j r4 = new com.bamtechmedia.dominguez.auth.v0.h.n$j
             r4.<init>(r2)

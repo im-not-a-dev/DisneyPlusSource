@@ -10,7 +10,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p503n.p504a.C11792d0;
 import p163g.p503n.p504a.C11793e;
 import p520io.reactivex.C11974s;
@@ -128,7 +128,7 @@ public final class C2351f extends C5733a implements C2348e {
         public final void accept(Map<String, String> map) {
             C2360g a = this.f6569c.f6559U;
             String str = this.f6568U;
-            C12880j.m40222a((Object) map, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) map, "it");
             a.mo11487a(str, map);
         }
     }
@@ -145,7 +145,7 @@ public final class C2351f extends C5733a implements C2348e {
 
         /* renamed from: a */
         public final void mo11483a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -174,7 +174,7 @@ public final class C2351f extends C5733a implements C2348e {
         public final void accept(Map<String, String> map) {
             C2360g a = this.f6572c.f6559U;
             String str = this.f6571U;
-            C12880j.m40222a((Object) map, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) map, "it");
             a.mo11488b(str, map);
         }
     }
@@ -191,7 +191,7 @@ public final class C2351f extends C5733a implements C2348e {
 
         /* renamed from: a */
         public final void mo11485a(Throwable th) {
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             throw th;
         }
 
@@ -215,7 +215,7 @@ public final class C2351f extends C5733a implements C2348e {
             str = this.f6561W.mo11445a();
         }
         Object a = m8867a(map, false).mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-        C12880j.m40222a(a, "this.`as`(AutoDispose.autoDisposable(provider))");
+        Intrinsics.checkReturnedValueIsNotNull(a, "this.`as`(AutoDispose.autoDisposable(provider))");
         ((C11792d0) a).mo29920a(new C2357f(this, str), C2358g.f6573c);
     }
 
@@ -224,7 +224,7 @@ public final class C2351f extends C5733a implements C2348e {
         String a = this.f6561W.mo11446a(str);
         if (!this.f6562X.mo11490a("adobe", a)) {
             Object a2 = m8867a(map, z).mo30215a((C11974s<T, ? extends R>) C11793e.m37930a(getViewModelScope()));
-            C12880j.m40222a(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
+            Intrinsics.checkReturnedValueIsNotNull(a2, "this.`as`(AutoDispose.autoDisposable(provider))");
             ((C11792d0) a2).mo29920a(new C2355d(this, a), C2356e.f6570c);
         }
     }
@@ -245,7 +245,7 @@ public final class C2351f extends C5733a implements C2348e {
             arrayList.add(a.mo11521a());
         }
         Single<Map<String, String>> g = Single.m38394a((Iterable<? extends SingleSource<? extends T>>) arrayList, (Function<? super Object[], ? extends R>) C2353b.f6564c).mo30233g(new C2354c(this, b, map));
-        C12880j.m40222a((Object) g, "Single.zip(globalStateCo…ormattedExtras)\n        }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "Single.zip(globalStateCo…ormattedExtras)\n        }");
         return g;
     }
 }

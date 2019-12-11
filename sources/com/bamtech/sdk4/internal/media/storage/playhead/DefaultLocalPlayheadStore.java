@@ -11,7 +11,7 @@ import com.bamtech.sdk4.session.SessionInfoExtension;
 import com.bamtech.sdk4.session.SessionInfoExtension.DefaultImpls;
 import com.bamtech.sdk4.session.SessionProfileInfo;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Observable;
 import p520io.reactivex.ObservableSource;
@@ -73,7 +73,7 @@ public final class DefaultLocalPlayheadStore implements LocalPlayheadStore {
 
     public final Completable purgeOnProfileChangeOrLogoutInternal$extension_media_release() {
         Completable f = Observable.m38308b((ObservableSource<? extends T>) this.logoutNotifier, (ObservableSource<? extends T>) this.profileEventNotifier).mo30184d((Consumer<? super T>) new DefaultLocalPlayheadStore$purgeOnProfileChangeOrLogoutInternal$1<Object>(this)).mo30190f();
-        C12880j.m40222a((Object) f, "Observable.merge(logoutN…        .ignoreElements()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) f, "Observable.merge(logoutN…        .ignoreElements()");
         return f;
     }
 

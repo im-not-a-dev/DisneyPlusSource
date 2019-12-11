@@ -7,7 +7,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.token.Grant;
 import kotlin.C12907r;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Completable;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -31,7 +31,7 @@ public final class DefaultDeviceManager implements DeviceManager {
 
     private final Single<? extends Grant> registerDevice(ServiceTransaction serviceTransaction) {
         Single<? extends Grant> b = this.client.register(serviceTransaction, this.bootstrapConfiguration.getDevice(), C13170i0.m40332a(C12907r.m40244a("{apiKey}", this.bootstrapConfiguration.getApiKey()))).mo30222c((Consumer<? super Disposable>) new DefaultDeviceManager$registerDevice$1<Object>(serviceTransaction)).mo30223c((C11945a) new DefaultDeviceManager$registerDevice$2(this, serviceTransaction)).mo30227d((Consumer<? super T>) new DefaultDeviceManager$registerDevice$3<Object>(this)).mo30218b((Consumer<? super Throwable>) new DefaultDeviceManager$registerDevice$4<Object>(serviceTransaction));
-        C12880j.m40222a((Object) b, "client.register(transact….ERROR)\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "client.register(transact….ERROR)\n                }");
         return b;
     }
 
@@ -42,13 +42,13 @@ public final class DefaultDeviceManager implements DeviceManager {
         }
         DefaultImpls.d$default(serviceTransaction, this, "SavedDeviceGrantFound", false, 4, null);
         Single<? extends Grant> b = Single.m38399b(existingDeviceGrant);
-        C12880j.m40222a((Object) b, "Single.just(deviceGrant)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Single.just(deviceGrant)");
         return b;
     }
 
     public Single<? extends Grant> resetDeviceGrant(ServiceTransaction serviceTransaction) {
         Single<? extends Grant> b = Completable.m38166c((C11945a) new DefaultDeviceManager$resetDeviceGrant$1(this)).mo30044a((SingleSource<T>) getDeviceGrant(serviceTransaction)).mo30222c((Consumer<? super Disposable>) new DefaultDeviceManager$resetDeviceGrant$2<Object>(serviceTransaction)).mo30218b((Consumer<? super Throwable>) new DefaultDeviceManager$resetDeviceGrant$3<Object>(serviceTransaction));
-        C12880j.m40222a((Object) b, "Completable.fromAction {…      )\n                }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "Completable.fromAction {…      )\n                }");
         return b;
     }
 }

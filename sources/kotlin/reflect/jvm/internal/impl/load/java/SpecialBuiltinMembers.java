@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java;
 
 import kotlin.C13142s;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
@@ -25,14 +25,14 @@ public final class SpecialBuiltinMembers {
     /* access modifiers changed from: private */
     public static final FqName child(FqName fqName, String str) {
         FqName child = fqName.child(Name.identifier(str));
-        C12880j.m40222a((Object) child, "child(Name.identifier(name))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) child, "child(Name.identifier(name))");
         return child;
     }
 
     /* access modifiers changed from: private */
     public static final FqName childSafe(FqNameUnsafe fqNameUnsafe, String str) {
         FqName safe = fqNameUnsafe.child(Name.identifier(str)).toSafe();
-        C12880j.m40222a((Object) safe, "child(Name.identifier(name)).toSafe()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) safe, "child(Name.identifier(name)).toSafe()");
         return safe;
     }
 
@@ -89,7 +89,7 @@ public final class SpecialBuiltinMembers {
         }
         BuiltinMethodsWithSpecialGenericSignature builtinMethodsWithSpecialGenericSignature = BuiltinMethodsWithSpecialGenericSignature.INSTANCE;
         Name name = t.getName();
-        C12880j.m40222a((Object) name, "name");
+        Intrinsics.checkReturnedValueIsNotNull((Object) name, "name");
         if (!builtinMethodsWithSpecialGenericSignature.getSameAsBuiltinMethodWithErasedValueParameters(name)) {
             return null;
         }
@@ -100,7 +100,7 @@ public final class SpecialBuiltinMembers {
         DeclarationDescriptor containingDeclaration = callableDescriptor.getContainingDeclaration();
         if (containingDeclaration != null) {
             SimpleType defaultType = ((ClassDescriptor) containingDeclaration).getDefaultType();
-            C12880j.m40222a((Object) defaultType, "(specialCallableDescript…ssDescriptor).defaultType");
+            Intrinsics.checkReturnedValueIsNotNull((Object) defaultType, "(specialCallableDescript…ssDescriptor).defaultType");
             ClassDescriptor superClassDescriptor = DescriptorUtils.getSuperClassDescriptor(classDescriptor);
             while (true) {
                 boolean z = false;
@@ -133,7 +133,7 @@ public final class SpecialBuiltinMembers {
     /* access modifiers changed from: private */
     public static final NameAndSignature method(String str, String str2, String str3, String str4) {
         Name identifier = Name.identifier(str2);
-        C12880j.m40222a((Object) identifier, "Name.identifier(name)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier(name)");
         SignatureBuildingComponents signatureBuildingComponents = SignatureBuildingComponents.INSTANCE;
         StringBuilder sb = new StringBuilder();
         sb.append(str2);

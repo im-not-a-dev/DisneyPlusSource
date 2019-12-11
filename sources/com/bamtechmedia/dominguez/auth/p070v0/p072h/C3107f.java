@@ -5,7 +5,7 @@ import com.bamtechmedia.dominguez.auth.p070v0.p071g.C3048b.C3049a;
 import com.bamtechmedia.dominguez.legal.api.LegalApi;
 import com.bamtechmedia.dominguez.legal.api.MarketingInput;
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Observable;
 import p520io.reactivex.ObservableSource;
 
@@ -27,7 +27,7 @@ public final class C3107f {
     /* renamed from: a */
     public final Observable<C3049a> mo12144a(String str, List<String> list, List<MarketingInput> list2) {
         Observable<C3049a> a = this.f8013b.createNrtAccount(str, list, list2).mo30055f().mo30043a((ObservableSource<T>) this.f8012a.mo12063a(str));
-        C12880j.m40222a((Object) a, "legalApi.createNrtAccoun…EmailAction.login(input))");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "legalApi.createNrtAccoun…EmailAction.login(input))");
         return a;
     }
 }

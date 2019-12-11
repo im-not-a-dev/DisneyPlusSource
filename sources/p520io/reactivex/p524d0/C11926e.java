@@ -1,7 +1,7 @@
 package p520io.reactivex.p524d0;
 
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.functions.C11945a;
 
 /* renamed from: io.reactivex.d0.e */
@@ -16,6 +16,6 @@ final class C11926e implements C11945a {
     }
 
     public final /* synthetic */ void run() {
-        C12880j.m40222a(this.f27609a.invoke(), "invoke(...)");
+        Intrinsics.checkReturnedValueIsNotNull(this.f27609a.invoke(), "invoke(...)");
     }
 }

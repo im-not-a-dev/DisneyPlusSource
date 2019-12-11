@@ -5,7 +5,7 @@ import android.util.Log;
 
 /* renamed from: com.google.android.exoplayer2.v0.q */
 /* compiled from: Log */
-public final class C9563q {
+public final class Log {
 
     /* renamed from: a */
     private static int f22301a = 0;

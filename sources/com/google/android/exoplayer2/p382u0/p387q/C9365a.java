@@ -5,7 +5,7 @@ import android.text.Spanned;
 import android.text.TextUtils;
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9323c;
-import com.google.android.exoplayer2.p393v0.C9563q;
+import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9564r;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.ArrayList;
@@ -62,7 +62,7 @@ public final class C9365a extends C9323c {
                     Integer.parseInt(k);
                     String k2 = wVar.mo24700k();
                     if (k2 == null) {
-                        C9563q.m29500d(str, "Unexpected end");
+                        Log.m29500d(str, "Unexpected end");
                         break;
                     }
                     Matcher matcher = f21544p.matcher(k2);
@@ -104,13 +104,13 @@ public final class C9365a extends C9323c {
                         StringBuilder sb = new StringBuilder();
                         sb.append("Skipping invalid timing: ");
                         sb.append(k2);
-                        C9563q.m29500d(str, sb.toString());
+                        Log.m29500d(str, sb.toString());
                     }
                 } catch (NumberFormatException unused) {
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append("Skipping invalid index: ");
                     sb2.append(k);
-                    C9563q.m29500d(str, sb2.toString());
+                    Log.m29500d(str, sb2.toString());
                 }
             }
         }

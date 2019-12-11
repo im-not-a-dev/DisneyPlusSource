@@ -4,7 +4,7 @@ import com.bamtechmedia.dominguez.core.utils.C5826e0;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -54,7 +54,7 @@ public final class C8052r {
         /* renamed from: a */
         public final void accept(RecentSearchList recentSearchList) {
             C8052r rVar = this.f17250c;
-            C12880j.m40222a((Object) recentSearchList, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) recentSearchList, "it");
             rVar.m23363a(recentSearchList);
         }
     }
@@ -136,21 +136,21 @@ public final class C8052r {
     /* renamed from: b */
     private final Single<RecentSearchList> m23365b() {
         Single<RecentSearchList> a = Maybe.m38257b((Callable<? extends T>) new C8056d<Object>(this)).mo30109a((SingleSource<? extends T>) m23367c());
-        C12880j.m40222a((Object) a, "Maybe\n        .fromCalla…pty(loadFromPersistent())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) a, "Maybe\n        .fromCalla…pty(loadFromPersistent())");
         return a;
     }
 
     /* renamed from: a */
     public final Single<List<RecentSearch>> mo21028a() {
         Single<List<RecentSearch>> g = m23365b().mo30233g(C8057e.f17253c);
-        C12880j.m40222a((Object) g, "getRecentSearchList().map { it.recentSearches }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "getRecentSearchList().map { it.recentSearches }");
         return g;
     }
 
     /* renamed from: a */
     public final Single<List<RecentSearch>> mo21029a(String str) {
         Single<List<RecentSearch>> g = m23365b().mo30233g(new C8053a(str)).mo30227d((Consumer<? super T>) new C8054b<Object>(this)).mo30233g(C8055c.f17251c);
-        C12880j.m40222a((Object) g, "getRecentSearchList()\n  …map { it.recentSearches }");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g, "getRecentSearchList()\n  …map { it.recentSearches }");
         return g;
     }
 

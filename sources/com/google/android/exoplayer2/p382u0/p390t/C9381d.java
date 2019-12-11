@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p382u0.p390t;
 
 import android.text.Layout.Alignment;
-import com.google.android.exoplayer2.p393v0.C9554k0;
+import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -200,7 +200,7 @@ public final class C9381d {
 
     /* renamed from: a */
     public C9381d mo24225a(String str) {
-        this.f21629e = C9554k0.m29457k(str);
+        this.f21629e = Util.m29457k(str);
         return this;
     }
 

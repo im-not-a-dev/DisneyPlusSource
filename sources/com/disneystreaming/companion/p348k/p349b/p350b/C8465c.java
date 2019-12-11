@@ -17,7 +17,7 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.ShortBufferException;
 import kotlin.C13142s;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p602m.p613d.p627b.C13697f;
 import p602m.p613d.p627b.C13712p;
 import p602m.p613d.p627b.C13713q;
@@ -155,7 +155,7 @@ public final class C8465c extends CipherSpi {
                                     if (bVar2 != null) {
                                         dVar.mo21753a(false, eVar, bVar2, jVar);
                                         C8468d dVar2 = this.f18009i;
-                                        C12880j.m40222a((Object) byteArray, str2);
+                                        Intrinsics.checkReturnedValueIsNotNull((Object) byteArray, str2);
                                         return dVar2.mo21754a(byteArray, 0, byteArray.length);
                                     }
                                     throw new C13142s(str3);
@@ -170,7 +170,7 @@ public final class C8465c extends CipherSpi {
                             if (bVar5 != null) {
                                 dVar3.mo21753a(true, bVar4, (C13684e) bVar5, jVar);
                                 C8468d dVar22 = this.f18009i;
-                                C12880j.m40222a((Object) byteArray, str2);
+                                Intrinsics.checkReturnedValueIsNotNull((Object) byteArray, str2);
                                 return dVar22.mo21754a(byteArray, 0, byteArray.length);
                             }
                             throw new C13142s(str);
@@ -191,7 +191,7 @@ public final class C8465c extends CipherSpi {
                             if (bVar7 != null) {
                                 dVar4.mo21751a((C13681b) (C13684e) bVar7, jVar, cVar);
                                 C8468d dVar5 = this.f18009i;
-                                C12880j.m40222a((Object) byteArray, str2);
+                                Intrinsics.checkReturnedValueIsNotNull((Object) byteArray, str2);
                                 return dVar5.mo21754a(byteArray, 0, byteArray.length);
                             }
                             throw new C13142s(str);
@@ -206,7 +206,7 @@ public final class C8465c extends CipherSpi {
                             if (bVar8 != null) {
                                 dVar6.mo21752a((C13681b) (C13684e) bVar8, jVar, (C13715s) new C13696a(b));
                                 C8468d dVar7 = this.f18009i;
-                                C12880j.m40222a((Object) byteArray, str2);
+                                Intrinsics.checkReturnedValueIsNotNull((Object) byteArray, str2);
                                 return dVar7.mo21754a(byteArray, 0, byteArray.length);
                             }
                             throw new C13142s(str);
@@ -236,9 +236,9 @@ public final class C8465c extends CipherSpi {
     public int engineGetKeySize(Key key) {
         if (key instanceof C13787a) {
             C13799e parameters = ((C13787a) key).getParameters();
-            C12880j.m40222a((Object) parameters, "(key as ECKey).parameters");
+            Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "(key as ECKey).parameters");
             C13806d a = parameters.mo35043a();
-            C12880j.m40222a((Object) a, "(key as ECKey).parameters.curve");
+            Intrinsics.checkReturnedValueIsNotNull((Object) a, "(key as ECKey).parameters.curve");
             return a.mo35090j();
         }
         throw new IllegalArgumentException("not an EC key");
@@ -255,9 +255,9 @@ public final class C8465c extends CipherSpi {
                 i2 = 0;
             } else if (bVar != null) {
                 C13682c b = ((C13684e) bVar).mo34938b();
-                C12880j.m40222a((Object) b, "(key as ECKeyParameters).parameters");
+                Intrinsics.checkReturnedValueIsNotNull((Object) b, "(key as ECKeyParameters).parameters");
                 C13806d a = b.mo34930a();
-                C12880j.m40222a((Object) a, "(key as ECKeyParameters).parameters.curve");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a, "(key as ECKeyParameters).parameters.curve");
                 i2 = (((a.mo35090j() + 7) * 2) / 8) + 1;
             } else {
                 throw new C13142s("null cannot be cast to non-null type org.spongycastle.crypto.params.ECKeyParameters");

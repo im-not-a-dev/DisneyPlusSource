@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.function.UnaryOperator;
 import kotlin.jvm.internal.C12871f;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.p589f0.C12872a;
 
 /* renamed from: com.bamtechmedia.dominguez.core.content.sets.h */
@@ -78,7 +78,7 @@ public abstract class C3778h implements List<C3626b>, C3700c<C3626b>, C12872a {
 
     /* renamed from: h */
     public final boolean mo13674h() {
-        return C12880j.m40224a((Object) mo13606c(), (Object) "hidden");
+        return Intrinsics.areEqual((Object) mo13606c(), (Object) "hidden");
     }
 
     public final /* bridge */ int indexOf(Object obj) {

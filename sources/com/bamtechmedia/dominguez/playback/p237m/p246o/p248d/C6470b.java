@@ -62,7 +62,7 @@ public final class C6470b implements C5742a<C6336a> {
         L_0x0018:
             io.reactivex.Observable r2 = p520io.reactivex.Observable.m38314m()
             java.lang.String r0 = "Observable.empty()"
-            kotlin.jvm.internal.C12880j.m40222a(r2, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r2, r0)
             return r2
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtechmedia.dominguez.playback.p237m.p246o.p248d.C6470b.mo17627a(com.bamtechmedia.dominguez.playback.m.a):io.reactivex.Observable");

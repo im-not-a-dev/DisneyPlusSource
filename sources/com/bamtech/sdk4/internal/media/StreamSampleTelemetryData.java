@@ -4,7 +4,7 @@ import com.bamtech.core.annotations.android.DontObfuscate;
 import com.bamtech.sdk4.internal.telemetry.TelemetryClientPayload;
 import com.bamtech.shadow.gson.p050r.C2246c;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -43,7 +43,7 @@ public final class StreamSampleTelemetryData implements TelemetryClientPayload {
         this.playHead = j;
         this.bitrate = l;
         DateTime withZone = DateTime.now().withZone(DateTimeZone.UTC);
-        C12880j.m40222a((Object) withZone, "DateTime.now().withZone(DateTimeZone.UTC)");
+        Intrinsics.checkReturnedValueIsNotNull((Object) withZone, "DateTime.now().withZone(DateTimeZone.UTC)");
         this.timestamp = withZone.getMillis();
         this.event = z ? "urn:bamtech:api:local-stream-sample" : "urn:bamtech:api:stream-sample";
     }

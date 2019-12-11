@@ -15,7 +15,7 @@ import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12879i;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KDeclarationContainer;
 import p520io.reactivex.C11969r;
@@ -25,7 +25,7 @@ import p520io.reactivex.Single;
 import p520io.reactivex.disposables.CompositeDisposable;
 import p520io.reactivex.disposables.Disposable;
 import p520io.reactivex.functions.Consumer;
-import p686n.p687a.C14100a;
+import p686n.p687a.Timber;
 
 @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010%\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\b\u0005\n\u0002\u0010$\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\b\u0001\u0018\u0000 )2\u00020\u0001:\u0001)B?\b\u0007\u0012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\b\b\u0001\u0010\r\u001a\u00020\u000e¢\u0006\u0002\u0010\u000fJ\u0018\u0010\u0018\u001a\u00020\u00132\u0006\u0010\u0019\u001a\u00020\u00122\u0006\u0010\u001a\u001a\u00020\u0012H\u0002J&\u0010\u001b\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u0019\u001a\u00020\u00122\u0012\u0010\u001c\u001a\u000e\u0012\u0004\u0012\u00020\u0012\u0012\u0004\u0012\u00020\u00120\u001dH\u0002J\b\u0010\u001e\u001a\u00020\u0012H\u0002J\u000e\u0010\u001f\u001a\u00020\u00132\u0006\u0010\u0019\u001a\u00020\u0012J\u0006\u0010 \u001a\u00020!J(\u0010\"\u001a\n #*\u0004\u0018\u00010!0!2\u0006\u0010\u001f\u001a\u00020\u00132\u0006\u0010$\u001a\u00020\u00122\u0006\u0010\u001a\u001a\u00020\u0012H\u0002J\u0010\u0010%\u001a\u00020!2\u0006\u0010\u001a\u001a\u00020\u0012H\u0002J\u0012\u0010&\u001a\u00020!2\b\u0010'\u001a\u0004\u0018\u00010\u0012H\u0016J\b\u0010(\u001a\u00020\u0012H\u0002R\u001a\u0010\u0010\u001a\u000e\u0012\u0004\u0012\u00020\u0012\u0012\u0004\u0012\u00020\u00130\u0011X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0016\u001a\b\u0012\u0004\u0012\u00020\u00120\u0017X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0004¢\u0006\u0002\n\u0000¨\u0006*"}, mo31007d2 = {"Lcom/bamtechmedia/dominguez/dictionaries/DictionaryManager;", "Lcom/bamtechmedia/dominguez/dictionaries/LanguageSwitcher;", "sessionStateOnce", "Lio/reactivex/Single;", "Lcom/bamtech/sdk4/session/SessionState;", "dictionaryFactory", "Lcom/bamtechmedia/dominguez/dictionaries/KeyValueDictionary$Factory;", "entriesDataSource", "Lcom/bamtechmedia/dominguez/dictionaries/DictionaryEntriesDataSource;", "languageProvider", "Lcom/bamtechmedia/dominguez/config/DefaultLanguageProvider;", "uiLanguageCodeRepo", "Lcom/bamtechmedia/dominguez/core/content/search/UiLanguageCodeRepo;", "scheduler", "Lio/reactivex/Scheduler;", "(Lio/reactivex/Single;Lcom/bamtechmedia/dominguez/dictionaries/KeyValueDictionary$Factory;Lcom/bamtechmedia/dominguez/dictionaries/DictionaryEntriesDataSource;Lcom/bamtechmedia/dominguez/config/DefaultLanguageProvider;Lcom/bamtechmedia/dominguez/core/content/search/UiLanguageCodeRepo;Lio/reactivex/Scheduler;)V", "dictionaries", "", "", "Lcom/bamtechmedia/dominguez/dictionaries/KeyValueDictionary;", "dictionaryRequestSubscriptions", "Lio/reactivex/disposables/CompositeDisposable;", "requiredDictionaries", "", "create", "resourceKey", "language", "createDictionary", "entries", "", "deviceDefaultLanguage", "dictionary", "initialize", "Lio/reactivex/Completable;", "loadRemote", "kotlin.jvm.PlatformType", "key", "loadUILanguageDictionaries", "setActiveLanguage", "newLanguage", "uiLanguage", "Companion", "config_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
 /* renamed from: com.bamtechmedia.dominguez.dictionaries.g */
@@ -141,7 +141,7 @@ public final class C6072g implements C6090n {
 
         /* renamed from: a */
         public final void mo18353a(Throwable th) {
-            C14100a.m44523a(th);
+            Timber.m44523a(th);
         }
 
         public final String getName() {
@@ -149,7 +149,7 @@ public final class C6072g implements C6090n {
         }
 
         public final KDeclarationContainer getOwner() {
-            return C12895y.m40230a(C14100a.class);
+            return C12895y.m40230a(Timber.class);
         }
 
         public final String getSignature() {
@@ -192,7 +192,7 @@ public final class C6072g implements C6090n {
 
         /* renamed from: a */
         public final void accept(List<Dictionary> list) {
-            C12880j.m40222a((Object) list, "dictionaries");
+            Intrinsics.checkReturnedValueIsNotNull((Object) list, "dictionaries");
             for (Dictionary a : list) {
                 this.f13992c.mo18361a(a.mo18326a());
             }
@@ -230,7 +230,7 @@ public final class C6072g implements C6090n {
             arrayList.add(m19452a((C6087l) entry.getValue(), (String) entry.getKey(), str));
         }
         Completable c = Completable.m38167c((Iterable<? extends CompletableSource>) arrayList);
-        C12880j.m40222a((Object) c, "Completable.mergeDelayEr…lue, it.key, language) })");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "Completable.mergeDelayEr…lue, it.key, language) })");
         return c;
     }
 
@@ -243,7 +243,7 @@ public final class C6072g implements C6090n {
             synchronized (this) {
                 a = m19450a(str, m19457c());
                 Completable a2 = m19452a(a, str, m19457c());
-                C12880j.m40222a((Object) a2, "loadRemote(it, resourceKey, uiLanguage())");
+                Intrinsics.checkReturnedValueIsNotNull((Object) a2, "loadRemote(it, resourceKey, uiLanguage())");
                 C5826e0.m18823a(a2, null, null, 3, null);
             }
             map.put(str, a);
@@ -281,7 +281,7 @@ public final class C6072g implements C6090n {
             com.bamtech.sdk4.session.SessionState r1 = (com.bamtech.sdk4.session.SessionState) r1
             com.bamtech.sdk4.session.SessionState$LoggedIn r2 = new com.bamtech.sdk4.session.SessionState$LoggedIn
             r2.<init>()
-            boolean r1 = kotlin.jvm.internal.C12880j.m40224a(r1, r2)
+            boolean r1 = kotlin.jvm.internal.Intrinsics.areEqual(r1, r2)
             if (r1 == 0) goto L_0x002d
             r1 = 3
             goto L_0x002f
@@ -307,7 +307,7 @@ public final class C6072g implements C6090n {
             io.reactivex.Completable r0 = r0.mo30036a(r1)
             io.reactivex.Completable r0 = r0.mo30055f()
             java.lang.String r1 = "entriesDataSource.initia…       .onErrorComplete()"
-            kotlin.jvm.internal.C12880j.m40222a(r0, r1)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r0, r1)
             return r0
         */
         throw new UnsupportedOperationException("Method not decompiled: com.bamtechmedia.dominguez.dictionaries.C6072g.mo18349a():io.reactivex.Completable");
@@ -330,9 +330,9 @@ public final class C6072g implements C6090n {
             Completable a = mo18350a(m19455b());
             this.f13983g.mo13598b(null);
             return a;
-        } else if (C12880j.m40224a((Object) str, (Object) this.f13983g.getCode())) {
+        } else if (Intrinsics.areEqual((Object) str, (Object) this.f13983g.getCode())) {
             Completable h = Completable.m38169h();
-            C12880j.m40222a((Object) h, "Completable.complete()");
+            Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");
             return h;
         } else {
             this.f13978b.mo30247a();

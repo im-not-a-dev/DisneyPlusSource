@@ -24,7 +24,7 @@ import com.bamtechmedia.dominguez.playback.p236l.C6333a;
 import com.google.common.base.Optional;
 import javax.inject.Provider;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5359b;
 import p163g.p201e.p202a.C5363f;
 import p163g.p201e.p202a.C5364g;
@@ -92,7 +92,7 @@ public final class MainActivity extends C5735b implements C6205v, C7536a {
 
     public MainActivity() {
         C11976a<C5772a> p = C11976a.m38563p();
-        C12880j.m40222a((Object) p, "BehaviorSubject.create()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) p, "BehaviorSubject.create()");
         this.f14075h0 = p;
     }
 
@@ -110,12 +110,12 @@ public final class MainActivity extends C5735b implements C6205v, C7536a {
                 if (aVar != null) {
                     ((C3828d) aVar.get()).mo13751b();
                 } else {
-                    C12880j.m40227c("lazyApplicationRestartListener");
+                    Intrinsics.throwUninitializedPropertyAccessException("lazyApplicationRestartListener");
                     throw null;
                 }
             }
         } else {
-            C12880j.m40227c("backgroundResponder");
+            Intrinsics.throwUninitializedPropertyAccessException("backgroundResponder");
             throw null;
         }
     }
@@ -129,7 +129,7 @@ public final class MainActivity extends C5735b implements C6205v, C7536a {
                 finish();
                 return true;
             }
-            C12880j.m40227c("appConfig");
+            Intrinsics.throwUninitializedPropertyAccessException("appConfig");
             throw null;
         } else if (i != C5363f.clear_data_dialog) {
             return false;
@@ -138,7 +138,7 @@ public final class MainActivity extends C5735b implements C6205v, C7536a {
             if (aVar != null) {
                 return aVar.mo11887a(i, i2);
             }
-            C12880j.m40227c("clearDataRequest");
+            Intrinsics.throwUninitializedPropertyAccessException("clearDataRequest");
             throw null;
         }
     }
@@ -162,18 +162,18 @@ public final class MainActivity extends C5735b implements C6205v, C7536a {
             if (provider != null) {
                 ((C7900q) provider.get()).mo20740a(i, i2, intent);
             } else {
-                C12880j.m40227c("paywallServicesInteractor");
+                Intrinsics.throwUninitializedPropertyAccessException("paywallServicesInteractor");
                 throw null;
             }
         } else {
-            C12880j.m40227c("autoLoginOptional");
+            Intrinsics.throwUninitializedPropertyAccessException("autoLoginOptional");
             throw null;
         }
     }
 
     public void onBackPressed() {
         C0538i supportFragmentManager = getSupportFragmentManager();
-        C12880j.m40222a((Object) supportFragmentManager, "supportFragmentManager");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager, "supportFragmentManager");
         if (!C5820c.m18813a(supportFragmentManager)) {
             super.onBackPressed();
         }
@@ -187,23 +187,23 @@ public final class MainActivity extends C5735b implements C6205v, C7536a {
         }
         if (bundle == null) {
             Intent intent = getIntent();
-            C12880j.m40222a((Object) intent, "intent");
+            Intrinsics.checkReturnedValueIsNotNull((Object) intent, "intent");
             m19535c(intent);
         }
         setContentView(C5364g.activity_main);
         Window window = getWindow();
-        C12880j.m40222a((Object) window, "window");
+        Intrinsics.checkReturnedValueIsNotNull((Object) window, "window");
         View decorView = window.getDecorView();
-        C12880j.m40222a((Object) decorView, "window.decorView");
+        Intrinsics.checkReturnedValueIsNotNull((Object) decorView, "window.decorView");
         decorView.setSystemUiVisibility(1280);
         C6127c cVar = this.f14068a0;
         if (cVar != null) {
             C0715i lifecycle = getLifecycle();
-            C12880j.m40222a((Object) lifecycle, "lifecycle");
+            Intrinsics.checkReturnedValueIsNotNull((Object) lifecycle, "lifecycle");
             cVar.mo18748a(lifecycle);
             Optional<C2760a> optional = this.f14072e0;
             if (optional == null) {
-                C12880j.m40227c("autoLoginOptional");
+                Intrinsics.throwUninitializedPropertyAccessException("autoLoginOptional");
                 throw null;
             } else if (optional != null) {
                 C2760a aVar = (C2760a) optional.mo27107c();
@@ -212,14 +212,14 @@ public final class MainActivity extends C5735b implements C6205v, C7536a {
                 }
             }
         } else {
-            C12880j.m40227c("dispatchingLifecycleObserver");
+            Intrinsics.throwUninitializedPropertyAccessException("dispatchingLifecycleObserver");
             throw null;
         }
     }
 
     public boolean onKeyDown(int i, KeyEvent keyEvent) {
         C0538i supportFragmentManager = getSupportFragmentManager();
-        C12880j.m40222a((Object) supportFragmentManager, "supportFragmentManager");
+        Intrinsics.checkReturnedValueIsNotNull((Object) supportFragmentManager, "supportFragmentManager");
         if (C5866s.m18914a(supportFragmentManager, i)) {
             return true;
         }
@@ -239,7 +239,7 @@ public final class MainActivity extends C5735b implements C6205v, C7536a {
             if (hVar != null) {
                 hVar.mo12350e();
             } else {
-                C12880j.m40227c("collectionCache");
+                Intrinsics.throwUninitializedPropertyAccessException("collectionCache");
                 throw null;
             }
         }

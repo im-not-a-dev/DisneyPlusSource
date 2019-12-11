@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 
 import java.util.List;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
 import kotlin.jvm.internal.C12891u;
 import kotlin.jvm.internal.C12895y;
@@ -43,7 +43,7 @@ public final class LazyPackageViewDescriptorImpl extends DeclarationDescriptorIm
             obj = null;
         }
         PackageViewDescriptor packageViewDescriptor = (PackageViewDescriptor) obj;
-        if (packageViewDescriptor == null || !C12880j.m40224a((Object) getFqName(), (Object) packageViewDescriptor.getFqName()) || !C12880j.m40224a((Object) getModule(), (Object) packageViewDescriptor.getModule())) {
+        if (packageViewDescriptor == null || !Intrinsics.areEqual((Object) getFqName(), (Object) packageViewDescriptor.getFqName()) || !Intrinsics.areEqual((Object) getModule(), (Object) packageViewDescriptor.getModule())) {
             return false;
         }
         return true;
@@ -75,7 +75,7 @@ public final class LazyPackageViewDescriptorImpl extends DeclarationDescriptorIm
         }
         ModuleDescriptorImpl module2 = getModule();
         FqName parent = getFqName().parent();
-        C12880j.m40222a((Object) parent, "fqName.parent()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) parent, "fqName.parent()");
         return module2.getPackage(parent);
     }
 

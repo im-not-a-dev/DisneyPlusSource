@@ -43,7 +43,7 @@ public class JavaAnnotationDescriptor implements AnnotationDescriptor, PossiblyE
         L_0x0016:
             kotlin.reflect.jvm.internal.impl.descriptors.SourceElement r4 = kotlin.reflect.jvm.internal.impl.descriptors.SourceElement.NO_SOURCE
             java.lang.String r0 = "SourceElement.NO_SOURCE"
-            kotlin.jvm.internal.C12880j.m40222a(r4, r0)
+            kotlin.jvm.internal.Intrinsics.checkReturnedValueIsNotNull(r4, r0)
         L_0x001d:
             r1.source = r4
             kotlin.reflect.jvm.internal.impl.storage.StorageManager r4 = r2.getStorageManager()

@@ -13,7 +13,7 @@ import java.util.List;
 import kotlin.C13142s;
 import kotlin.C13145v;
 import kotlin.Metadata;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14264y;
 import okhttp3.Call;
 import okhttp3.HttpUrl;
@@ -89,7 +89,7 @@ public final class C1169c {
         public final void accept(Throwable th) {
             ServiceTransaction serviceTransaction = this.f4409U;
             String str = this.f4410V;
-            C12880j.m40222a((Object) th, "it");
+            Intrinsics.checkReturnedValueIsNotNull((Object) th, "it");
             C1169c.m6004a(serviceTransaction, str, th, (DustConfigSettings) this.f4411c.mo7480c());
         }
     }
@@ -141,7 +141,7 @@ public final class C1169c {
     /* renamed from: a */
     public static final void m6004a(ServiceTransaction serviceTransaction, String str, Throwable th, DustConfigSettings dustConfigSettings) {
         StackTraceElement[] stackTrace = th.getStackTrace();
-        C12880j.m40222a((Object) stackTrace, "stackTrace");
+        Intrinsics.checkReturnedValueIsNotNull((Object) stackTrace, "stackTrace");
         List b = C13174k.m40390b((Object[]) stackTrace, dustConfigSettings != null ? dustConfigSettings.getStackFrameLimit() : 0);
         if (b != null) {
             Object[] array = b.toArray(new StackTraceElement[0]);
@@ -158,7 +158,7 @@ public final class C1169c {
     /* renamed from: a */
     public static final DustServerPayload m6000a(Throwable th) {
         Throwable[] suppressed = th.getSuppressed();
-        C12880j.m40222a((Object) suppressed, "suppressed");
+        Intrinsics.checkReturnedValueIsNotNull((Object) suppressed, "suppressed");
         ArrayList arrayList = new ArrayList();
         for (Throwable th2 : suppressed) {
             if (th2 instanceof DustServerPlayloadException) {
@@ -180,11 +180,11 @@ public final class C1169c {
     public static final DustServerPayload m6001a(okhttp3.Response response) {
         HttpUrl g = response.mo35870m().mo35837g();
         String g2 = g.mo35755g();
-        C12880j.m40222a((Object) g2, "url.host()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) g2, "url.host()");
         String c = g.mo35750c();
-        C12880j.m40222a((Object) c, "url.encodedPath()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) c, "url.encodedPath()");
         String e = response.mo35870m().mo35835e();
-        C12880j.m40222a((Object) e, "request().method()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "request().method()");
         DustServerPayload dustServerPayload = new DustServerPayload(g2, c, e, Integer.valueOf(response.mo35858c()), response.mo35861e("x-request-id"), Long.valueOf(response.mo35869l() - response.mo35871n()));
         return dustServerPayload;
     }
@@ -193,9 +193,9 @@ public final class C1169c {
     public static final Completable m6002a(Request<C13145v, DustConfigSettings> request, ServiceTransaction serviceTransaction, String str) {
         Call a = C1691e.m7799a(request);
         Single b = C1681c.m7780a(request, a).mo30223c((C11945a) new C1170a(a)).mo30220b(C11934b.m38500b());
-        C12880j.m40222a((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
+        Intrinsics.checkReturnedValueIsNotNull((Object) b, "call(this, call)\n       …scribeOn(Schedulers.io())");
         Completable e = b.mo30222c((Consumer<? super Disposable>) new C1171b<Object>(serviceTransaction, str)).mo30218b((Consumer<? super Throwable>) new C1172c<Object>(request, serviceTransaction, str)).mo30227d((Consumer<? super T>) new C1173d<Object>(serviceTransaction, str)).mo30228e();
-        C12880j.m40222a((Object) e, "this.asSingle()\n        …\n        .ignoreElement()");
+        Intrinsics.checkReturnedValueIsNotNull((Object) e, "this.asSingle()\n        …\n        .ignoreElement()");
         return e;
     }
 }

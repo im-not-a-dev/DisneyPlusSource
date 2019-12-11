@@ -6,7 +6,7 @@ import kotlin.C12900n.C12901a;
 import kotlin.C12903o;
 import kotlin.C13142s;
 import kotlin.C13145v;
-import kotlin.jvm.internal.C12880j;
+import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
 import kotlin.p573a0.C12688f;
 import kotlinx.coroutines.internal.C13278p;
@@ -136,7 +136,7 @@ public abstract class C13387q0<T> extends C13356i {
                 C13218b0.m40651a(mo34393c().mo31038b(), (Throwable) new C13250i0(sb2, th));
                 return;
             }
-            C12880j.m40220a();
+            Intrinsics.throwNpe();
             throw null;
         }
     }
