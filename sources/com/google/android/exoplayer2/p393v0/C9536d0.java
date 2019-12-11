@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p393v0;
 
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.PlaybackParameters;
 
 /* renamed from: com.google.android.exoplayer2.v0.d0 */
@@ -64,7 +64,7 @@ public final class C9536d0 implements C9565s {
         long a = this.f22251c.mo24605a() - this.f22249W;
         PlaybackParameters playbackParameters = this.f22250X;
         if (playbackParameters.f18372a == 1.0f) {
-            j = C8883r.msToUs(a);
+            j = C.msToUs(a);
         } else {
             j = playbackParameters.mo22615a(a);
         }

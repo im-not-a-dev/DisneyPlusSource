@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal;
 
 import java.lang.reflect.Field;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.C12881k;
@@ -35,6 +35,6 @@ final class KClassImpl$Data$objectInstance$2 extends C12881k implements Function
         if (t != null) {
             return t;
         }
-        throw new C13142s("null cannot be cast to non-null type T");
+        throw new TypeCastException("null cannot be cast to non-null type T");
     }
 }

@@ -21,7 +21,7 @@ import java.util.Map.Entry;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
@@ -691,7 +691,7 @@ public final class LocalBookmarksRegistry implements C3165c<C3693o> {
             if (obj != null) {
                 return (BookmarkData) d.fromJson((String) obj);
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.String");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.String");
         } catch (Exception unused) {
             return null;
         }

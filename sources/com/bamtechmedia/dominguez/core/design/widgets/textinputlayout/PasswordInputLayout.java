@@ -23,7 +23,7 @@ import com.bamtechmedia.dominguez.core.utils.C5880u;
 import com.google.android.material.textfield.TextInputEditText;
 import java.util.HashMap;
 import java.util.Iterator;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -310,7 +310,7 @@ public final class PasswordInputLayout extends C5704a {
             if (progressDrawable != null) {
                 ((LayerDrawable) progressDrawable).findDrawableByLayerId(16908301).setColorFilter(a, Mode.SRC_IN);
             } else {
-                throw new C13142s("null cannot be cast to non-null type android.graphics.drawable.LayerDrawable");
+                throw new TypeCastException("null cannot be cast to non-null type android.graphics.drawable.LayerDrawable");
             }
         }
         Group group = (Group) mo2145c(C3838h.groupPasswordStrength);

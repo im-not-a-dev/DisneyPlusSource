@@ -1,6 +1,6 @@
 package kotlinx.coroutines;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlinx.coroutines.C13324k1;
 
 /* renamed from: kotlinx.coroutines.q1 */
@@ -30,6 +30,6 @@ public abstract class C13388q1<J extends C13324k1> extends C13404v implements C1
             ((C13391r1) j).mo34586a(this);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.JobSupport");
+        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.JobSupport");
     }
 }

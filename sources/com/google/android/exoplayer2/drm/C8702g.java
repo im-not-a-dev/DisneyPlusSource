@@ -14,6 +14,6 @@ public final /* synthetic */ class C8702g implements C9558a {
 
     /* renamed from: a */
     public final void mo22792a(Object obj) {
-        ((C8709k) obj).onDrmKeysLoaded();
+        ((DefaultDrmSessionEventListener) obj).onDrmKeysLoaded();
     }
 }

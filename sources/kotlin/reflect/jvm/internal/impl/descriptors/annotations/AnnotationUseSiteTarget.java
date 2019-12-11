@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.annotations;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: AnnotationUseSiteTarget.kt */
@@ -24,7 +24,7 @@ public enum AnnotationUseSiteTarget {
                 str = name.toLowerCase();
                 Intrinsics.checkReturnedValueIsNotNull((Object) str, "(this as java.lang.String).toLowerCase()");
             } else {
-                throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             }
         }
         this.renderName = str;

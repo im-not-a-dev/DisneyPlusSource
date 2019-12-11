@@ -13,7 +13,7 @@ import com.google.android.exoplayer2.p366s0.C8911f;
 import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9566t;
@@ -338,7 +338,7 @@ final class C9167m implements C9444b<C9212d>, C9448f, C9143g0, C8914i, C9139b {
         if (this.f20679y0 == null) {
             z = true;
         }
-        C9537e.m29301b(z);
+        Assertions.checkState(z);
         this.f20679y0 = TrackGroupArray.f20167W;
     }
 
@@ -431,7 +431,7 @@ final class C9167m implements C9444b<C9212d>, C9448f, C9143g0, C8914i, C9139b {
     /* renamed from: c */
     public void mo23842c(int i) {
         int i2 = this.f20680z0[i];
-        C9537e.m29301b(this.f20638C0[i2]);
+        Assertions.checkState(this.f20638C0[i2]);
         this.f20638C0[i2] = false;
     }
 
@@ -582,7 +582,7 @@ final class C9167m implements C9444b<C9212d>, C9448f, C9143g0, C8914i, C9139b {
             r2 = r22
             r12 = r24
             boolean r3 = r0.f20673s0
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r3)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r3)
             int r3 = r0.f20674t0
             r14 = 0
             r4 = 0
@@ -955,7 +955,7 @@ final class C9167m implements C9444b<C9212d>, C9448f, C9143g0, C8914i, C9139b {
                 if (((C9164j) arrayList.remove(arrayList.size() - 1)) == dVar2) {
                     z = true;
                 }
-                C9537e.m29301b(z);
+                Assertions.checkState(z);
                 if (this.f20657c0.isEmpty()) {
                     this.f20641F0 = this.f20640E0;
                 }

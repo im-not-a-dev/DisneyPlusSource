@@ -1,7 +1,7 @@
 package com.bamtech.sdk4.internal.media.offline.p047db;
 
 import java.util.Arrays;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
@@ -44,7 +44,7 @@ public final class OldMediaLicenseEntry {
             }
             return z;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.internal.media.offline.db.OldMediaLicenseEntry");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.internal.media.offline.db.OldMediaLicenseEntry");
     }
 
     public final byte[] getAudioLicense() {

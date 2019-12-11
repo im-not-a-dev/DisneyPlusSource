@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import javax.inject.Provider;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
@@ -165,9 +165,9 @@ public final class C3718r implements C3716q {
                 Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase2, str2);
                 return new Pair<>(lowerCase, lowerCase2);
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
-        throw new C13142s(str);
+        throw new TypeCastException(str);
     }
 
     /* renamed from: c */
@@ -208,12 +208,12 @@ public final class C3718r implements C3716q {
                         arrayList.add(a);
                     }
                 } else {
-                    throw new C13142s(str);
+                    throw new TypeCastException(str);
                 }
             }
             return arrayList;
         }
-        throw new C13142s(str);
+        throw new TypeCastException(str);
     }
 
     /* renamed from: b */
@@ -270,7 +270,7 @@ public final class C3718r implements C3716q {
                 Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
                 arrayList.add(m12634a(lowerCase, a, str, str2));
             } else {
-                throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             }
         }
         List<String> d = C13174k.m40404d((Object[]) strArr);

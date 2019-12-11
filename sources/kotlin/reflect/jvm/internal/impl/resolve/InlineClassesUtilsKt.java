@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve;
 
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
@@ -52,7 +52,7 @@ public final class InlineClassesUtilsKt {
             ValueParameterDescriptor underlyingRepresentation = underlyingRepresentation((ClassDescriptor) containingDeclaration);
             return Intrinsics.areEqual((Object) underlyingRepresentation != null ? underlyingRepresentation.getName() : null, (Object) variableDescriptor.getName());
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
     }
 
     public static final KotlinType substitutedUnderlyingType(KotlinType kotlinType) {

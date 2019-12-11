@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
 
@@ -50,6 +50,6 @@ public abstract class WrappedType extends KotlinType {
         if (delegate != null) {
             return (UnwrappedType) delegate;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.types.UnwrappedType");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.types.UnwrappedType");
     }
 }

@@ -57,7 +57,7 @@ public final class C9557m<T> {
 
     /* renamed from: a */
     public void mo24647a(Handler handler, T t) {
-        C9537e.m29299a((handler == null || t == null) ? false : true);
+        Assertions.m29299a((handler == null || t == null) ? false : true);
         mo24649a(t);
         this.f22293a.add(new C9559b(handler, t));
     }

@@ -2,7 +2,7 @@ package p163g.p201e.p203b.p312q;
 
 import com.bamtechmedia.dominguez.core.utils.C5880u;
 import java.util.Map;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.e.b.q.b */
@@ -19,7 +19,7 @@ public final class C7654b {
                 Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, str2);
                 return C12832w.m40125f(lowerCase);
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         } else if (num == null) {
             return "";
         } else {
@@ -29,7 +29,7 @@ public final class C7654b {
                 Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase2, str2);
                 return C12832w.m40125f(lowerCase2);
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
     }
 }

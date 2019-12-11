@@ -207,7 +207,7 @@ public final class C9546i {
     private static int m29356a(String str, boolean z) {
         int i;
         int i2;
-        C9537e.m29299a(!TextUtils.isEmpty(str));
+        Assertions.m29299a(!TextUtils.isEmpty(str));
         String replace = str.replace(" ", "");
         if (replace.charAt(0) == '#') {
             int parseLong = (int) Long.parseLong(replace.substring(1), 16);

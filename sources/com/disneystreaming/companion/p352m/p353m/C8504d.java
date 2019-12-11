@@ -37,7 +37,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import kotlin.C12903o;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -815,7 +815,7 @@ public final class C8504d extends C8491b implements C8484g {
             this.f18086n = (ScheduledThreadPoolExecutor) newScheduledThreadPool;
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type java.util.concurrent.ScheduledThreadPoolExecutor");
+        throw new TypeCastException("null cannot be cast to non-null type java.util.concurrent.ScheduledThreadPoolExecutor");
     }
 
     /* renamed from: e */
@@ -961,6 +961,6 @@ public final class C8504d extends C8491b implements C8484g {
             datagramSocket.close();
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 }

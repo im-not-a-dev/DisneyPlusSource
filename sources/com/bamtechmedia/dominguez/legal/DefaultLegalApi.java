@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.legal.api.MarketingInput;
 import java.util.List;
 import java.util.Locale;
 import javax.inject.Provider;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import okhttp3.HttpUrl;
@@ -119,7 +119,7 @@ public final class DefaultLegalApi implements LegalApi {
                 sb.append(upperCase);
                 return sb.toString();
             }
-            throw new C13142s("null cannot be cast to non-null type java.lang.String");
+            throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
         }
         Intrinsics.checkReturnedValueIsNotNull((Object) languageTag, "defaultLangCode");
         return languageTag;

@@ -13,7 +13,7 @@ import com.bamtech.sdk4.media.offline.OfflineMediaPlugin;
 import com.bamtech.sdk4.service.ServiceException;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
@@ -74,7 +74,7 @@ public final class ReleaseLicenseWorker extends Worker {
                                     Intrinsics.checkReturnedValueIsNotNull((Object) bytes2, str2);
                                     widevineLicenseManager2.release(bytes2, true);
                                 } else {
-                                    throw new C13142s(str);
+                                    throw new TypeCastException(str);
                                 }
                             } else {
                                 Intrinsics.throwUninitializedPropertyAccessException(str4);
@@ -85,7 +85,7 @@ public final class ReleaseLicenseWorker extends Worker {
                         Intrinsics.checkReturnedValueIsNotNull((Object) c, "Result.success()");
                         return c;
                     }
-                    throw new C13142s(str);
+                    throw new TypeCastException(str);
                 }
                 Intrinsics.throwUninitializedPropertyAccessException(str4);
                 throw null;
@@ -108,10 +108,10 @@ public final class ReleaseLicenseWorker extends Worker {
                                     OldMediaLicenseEntry oldMediaLicenseEntry = new OldMediaLicenseEntry(a3, bytes3, bytes4, 0, null, true, 24, null);
                                     oldMediaLicenseDao.store(oldMediaLicenseEntry);
                                 } else {
-                                    throw new C13142s(str);
+                                    throw new TypeCastException(str);
                                 }
                             } else {
-                                throw new C13142s(str);
+                                throw new TypeCastException(str);
                             }
                         } else {
                             Intrinsics.throwUninitializedPropertyAccessException("database");

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
@@ -81,7 +81,7 @@ public abstract class KCallableImpl<R> implements KCallable<R> {
                 if (array != null) {
                     return defaultCaller.call(array);
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
             } catch (IllegalAccessException e) {
                 throw new IllegalCallableAccessException(e);
             }
@@ -214,7 +214,7 @@ public abstract class KCallableImpl<R> implements KCallable<R> {
             if (array != null) {
                 return call(Arrays.copyOf(array, array.length));
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
         arrayList2.add(Integer.valueOf(i2));
         Caller defaultCaller = getDefaultCaller();
@@ -226,7 +226,7 @@ public abstract class KCallableImpl<R> implements KCallable<R> {
                 if (array2 != null) {
                     return defaultCaller.call(array2);
                 }
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             } catch (IllegalAccessException e) {
                 throw new IllegalCallableAccessException(e);
             }

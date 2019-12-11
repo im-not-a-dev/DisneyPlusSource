@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.hls;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.upstream.C9508n;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
@@ -84,7 +84,7 @@ class C9153d implements DataSource {
     }
 
     public final int read(byte[] bArr, int i, int i2) throws IOException {
-        C9537e.m29296a(this.f20561d);
+        Assertions.checkNotNull(this.f20561d);
         int read = this.f20561d.read(bArr, i, i2);
         if (read < 0) {
             return -1;

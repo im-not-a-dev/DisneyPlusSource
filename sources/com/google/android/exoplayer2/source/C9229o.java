@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.source;
 import android.os.Handler;
 import android.os.Looper;
 import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.source.MediaSource.C9067a;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.source.MediaSourceEventListener.C9068a;
@@ -58,7 +58,7 @@ public abstract class C9229o implements MediaSource {
     /* access modifiers changed from: protected */
     /* renamed from: a */
     public final C9068a mo23960a(MediaPeriodId mediaPeriodId, long j) {
-        C9537e.m29299a(mediaPeriodId != null);
+        Assertions.m29299a(mediaPeriodId != null);
         return this.f20928U.mo23498a(0, mediaPeriodId, j);
     }
 
@@ -82,7 +82,7 @@ public abstract class C9229o implements MediaSource {
     public final void mo23490a(C9067a aVar, TransferListener transferListener) {
         Looper myLooper = Looper.myLooper();
         Looper looper = this.f20929V;
-        C9537e.m29299a(looper == null || looper == myLooper);
+        Assertions.m29299a(looper == null || looper == myLooper);
         this.f20932c.add(aVar);
         if (this.f20929V == null) {
             this.f20929V = myLooper;

@@ -115,7 +115,7 @@ public final class C9572w {
 
     /* renamed from: e */
     public void mo24693e(int i) {
-        C9537e.m29299a(i >= 0 && i <= this.f22335c);
+        Assertions.m29299a(i >= 0 && i <= this.f22335c);
         this.f22334b = i;
     }
 
@@ -449,7 +449,7 @@ public final class C9572w {
 
     /* renamed from: d */
     public void mo24691d(int i) {
-        C9537e.m29299a(i >= 0 && i <= this.f22333a.length);
+        Assertions.m29299a(i >= 0 && i <= this.f22333a.length);
         this.f22335c = i;
     }
 

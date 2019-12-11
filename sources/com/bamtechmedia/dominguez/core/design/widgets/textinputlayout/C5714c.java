@@ -14,7 +14,7 @@ import com.bamtechmedia.dominguez.core.p088i.C3834d;
 import com.bamtechmedia.dominguez.core.p088i.C3835e;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
 import com.bamtechmedia.dominguez.core.utils.C5852n0;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -103,7 +103,7 @@ public final class C5714c {
                 C5852n0.m18878a((View) textView, ((Float) animatedValue).floatValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
         }
 
         public /* bridge */ /* synthetic */ Object invoke(Object obj) {
@@ -132,7 +132,7 @@ public final class C5714c {
                 C5852n0.m18878a((View) textView, ((Float) animatedValue).floatValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
         }
 
         public /* bridge */ /* synthetic */ Object invoke(Object obj) {
@@ -161,7 +161,7 @@ public final class C5714c {
                 cVar.mo17591a(((Float) animatedValue).floatValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
         }
 
         public /* bridge */ /* synthetic */ Object invoke(Object obj) {
@@ -236,7 +236,7 @@ public final class C5714c {
                 cVar.mo17591a(((Float) animatedValue).floatValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
         }
 
         public /* bridge */ /* synthetic */ Object invoke(Object obj) {

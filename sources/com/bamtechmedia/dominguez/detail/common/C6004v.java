@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
@@ -73,7 +73,7 @@ public final class C6004v implements C5983k {
                     if (hVar != null) {
                         arrayList.add((DmcExtra) hVar);
                     } else {
-                        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.assets.DmcExtra");
+                        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.assets.DmcExtra");
                     }
                 }
                 return DmcExtraContent.m19159a(a, arrayList, null, 2, null);

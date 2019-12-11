@@ -12,7 +12,7 @@ import com.bamtechmedia.dominguez.core.utils.C5837i;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -117,7 +117,7 @@ public final class C10612e implements C10611d {
         if (array != null) {
             return createChooser.putExtra("android.intent.extra.INITIAL_INTENTS", (Parcelable[]) array);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
     /* renamed from: a */

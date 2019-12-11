@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -125,7 +125,7 @@ class C12788p extends C12787o {
         if (b != null) {
             return b;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.sequences.Sequence<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.sequences.Sequence<T>");
     }
 
     /* renamed from: f */

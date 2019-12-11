@@ -10,8 +10,8 @@ import com.google.android.exoplayer2.C8872q;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.PlaybackParameters;
-import com.google.android.exoplayer2.drm.C8710l;
-import com.google.android.exoplayer2.drm.C8713o;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
+import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.p361p0.C8842n.C8843a;
 import com.google.android.exoplayer2.p361p0.C8844o.C8845a;
@@ -116,7 +116,7 @@ public class C8867x extends C9271b implements C9565s {
         }
     }
 
-    public C8867x(Context context, C9273c cVar, C8710l<C8713o> lVar, boolean z, boolean z2, Handler handler, C8842n nVar, C8844o oVar) {
+    public C8867x(Context context, C9273c cVar, DrmSessionManager<FrameworkMediaCrypto> lVar, boolean z, boolean z2, Handler handler, C8842n nVar, C8844o oVar) {
         super(1, cVar, lVar, z, z2, 44100.0f);
         this.f18968i1 = context.getApplicationContext();
         this.f18970k1 = oVar;
@@ -273,7 +273,7 @@ public class C8867x extends C9271b implements C9565s {
 
     /* access modifiers changed from: protected */
     /* renamed from: a */
-    public int mo23177a(C9273c cVar, C8710l<C8713o> lVar, Format format) throws C9278c {
+    public int mo23177a(C9273c cVar, DrmSessionManager<FrameworkMediaCrypto> lVar, Format format) throws C9278c {
         boolean z;
         String str = format.f18349b0;
         if (!C9566t.m29517j(str)) {

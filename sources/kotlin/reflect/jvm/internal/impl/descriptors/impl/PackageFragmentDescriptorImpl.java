@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptorVisitor;
@@ -45,6 +45,6 @@ public abstract class PackageFragmentDescriptorImpl extends DeclarationDescripto
         if (containingDeclaration != null) {
             return (ModuleDescriptor) containingDeclaration;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ModuleDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ModuleDescriptor");
     }
 }

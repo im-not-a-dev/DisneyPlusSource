@@ -8,7 +8,7 @@ import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.io.IOException;
 import net.danlew.android.joda.DateUtils;
 
@@ -82,7 +82,7 @@ public final class C9063b implements C8912g {
             hVar2.mo23298c(this.f20134c.mo23481f());
         }
         long b = this.f20134c.mo23479b();
-        C9537e.m29301b(b != -1);
+        Assertions.checkState(b != -1);
         long position = b - hVar.getPosition();
         int i = -1;
         if (position <= 0) {

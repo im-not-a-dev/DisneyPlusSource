@@ -13,7 +13,7 @@ import com.bamtech.player.exo.sdk4.SDK4ExoPlaybackEngine.C1749a;
 import com.bamtechmedia.dominguez.playback.C6266a;
 import com.bamtechmedia.dominguez.playback.C6327f;
 import com.bamtechmedia.dominguez.playback.C6330i;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.trackselection.C9295d.C9301e;
 import com.google.android.exoplayer2.upstream.C9510p;
 import com.google.android.exoplayer2.upstream.C9510p.C9512b;
@@ -126,7 +126,7 @@ public abstract class C6421a {
         if (this.f14567e.mo18863n()) {
             Timber.m44522a("## Playback -> starting playback with tunneling enabled", new Object[0]);
             C9301e z = eVar.mo7645z();
-            z.mo24112c(C8883r.generateAudioSessionIdV21(context));
+            z.mo24112c(C.generateAudioSessionIdV21(context));
             eVar.mo7604a(z);
         }
     }

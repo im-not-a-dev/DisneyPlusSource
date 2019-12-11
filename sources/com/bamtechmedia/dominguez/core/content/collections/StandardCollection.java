@@ -16,7 +16,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11733i;
@@ -174,7 +174,7 @@ public final class StandardCollection extends C3658a {
             if (a2 != null) {
                 C13196t.m40545a((Collection) arrayList2, (Iterable) ((ContentSet) a2).mo13614i());
             } else {
-                throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.sets.ContentSet");
+                throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.sets.ContentSet");
             }
         }
         return arrayList2;

@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.auth.p067s0;
 
 import com.bamtech.sdk4.identity.bam.BamIdentityApi;
 import com.bamtech.sdk4.identity.bam.OneTimePasscodeRequestReason;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
@@ -167,7 +167,7 @@ public final class C2940x {
             Intrinsics.checkReturnedValueIsNotNull((Object) i, "identityApi.requestOneTi…tate(error)\n            }");
             return i;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.auth.otp.OtpRequestAction.RequestActionState");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.auth.otp.OtpRequestAction.RequestActionState");
     }
 
     /* access modifiers changed from: private */

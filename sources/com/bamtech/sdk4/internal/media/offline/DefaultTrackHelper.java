@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;
@@ -274,7 +274,7 @@ public final class DefaultTrackHelper implements TrackHelper {
                     arrayList2.add(bVar2);
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type com.google.android.exoplayer2.source.hls.HlsTrackMetadataEntry");
+                throw new TypeCastException("null cannot be cast to non-null type com.google.android.exoplayer2.source.hls.HlsTrackMetadataEntry");
             }
         }
         return arrayList2;

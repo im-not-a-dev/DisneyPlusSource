@@ -1,7 +1,7 @@
 package com.bamtech.sdk4.configuration;
 
 import com.bamtech.core.annotations.android.DontObfuscate;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -20,6 +20,6 @@ public enum DeviceType {
             Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase()");
             return lowerCase;
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 }

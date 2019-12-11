@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.source.hls;
 import android.net.Uri;
 import android.os.SystemClock;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9549j0;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9199j0;
@@ -116,7 +116,7 @@ class C9156g {
 
         /* renamed from: a */
         public byte[] put(Uri uri, byte[] bArr) {
-            C9537e.m29296a(bArr);
+            Assertions.checkNotNull(bArr);
             return (byte[]) super.put(uri, bArr);
         }
 

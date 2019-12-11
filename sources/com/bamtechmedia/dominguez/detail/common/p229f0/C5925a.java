@@ -12,7 +12,7 @@ import com.google.android.material.tabs.TabLayout.C10341g;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -168,7 +168,7 @@ public final class C5925a extends C11866a {
             }
             return new C5926a(z);
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.detail.common.mobile.TabsItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.detail.common.mobile.TabsItem");
     }
 
     public int getLayout() {

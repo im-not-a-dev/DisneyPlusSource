@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class C9496g0 implements DataSource {
     private Map<String, List<String>> f22110d = Collections.emptyMap();
 
     public C9496g0(DataSource dataSource) {
-        C9537e.m29296a(dataSource);
+        Assertions.checkNotNull(dataSource);
         this.f22107a = dataSource;
     }
 
@@ -70,7 +70,7 @@ public final class C9496g0 implements DataSource {
         this.f22110d = Collections.emptyMap();
         long open = this.f22107a.open(dataSpec);
         Uri uri = getUri();
-        C9537e.m29296a(uri);
+        Assertions.checkNotNull(uri);
         this.f22109c = uri;
         this.f22110d = mo9243a();
         return open;

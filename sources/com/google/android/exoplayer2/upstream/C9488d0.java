@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9575z;
 import java.io.IOException;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class C9488d0 implements DataSource {
     private final int f22090c;
 
     public C9488d0(DataSource dataSource, C9575z zVar, int i) {
-        C9537e.m29296a(dataSource);
+        Assertions.checkNotNull(dataSource);
         this.f22088a = dataSource;
-        C9537e.m29296a(zVar);
+        Assertions.checkNotNull(zVar);
         this.f22089b = zVar;
         this.f22090c = i;
     }

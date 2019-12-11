@@ -5,7 +5,7 @@ import android.media.AudioFocusRequest;
 import android.media.AudioFocusRequest.Builder;
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 
@@ -156,7 +156,7 @@ public final class C8835k {
         AudioManager audioManager = this.f18837a;
         C8837b bVar = this.f18838b;
         C8831i iVar = this.f18840d;
-        C9537e.m29296a(iVar);
+        Assertions.checkNotNull(iVar);
         return audioManager.requestAudioFocus(bVar, Util.m29438c(iVar.f18828c), this.f18842f);
     }
 
@@ -167,7 +167,7 @@ public final class C8835k {
             Builder builder = audioFocusRequest == null ? new Builder(this.f18842f) : new Builder(audioFocusRequest);
             boolean i = m25633i();
             C8831i iVar = this.f18840d;
-            C9537e.m29296a(iVar);
+            Assertions.checkNotNull(iVar);
             this.f18844h = builder.setAudioAttributes(iVar.mo23079a()).setWillPauseWhenDucked(i).setOnAudioFocusChangeListener(this.f18838b).build();
             this.f18845i = false;
         }

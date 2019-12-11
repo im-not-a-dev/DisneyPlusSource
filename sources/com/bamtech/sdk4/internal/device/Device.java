@@ -4,7 +4,7 @@ import com.bamtech.core.annotations.android.DontObfuscate;
 import com.bamtech.sdk4.configuration.DeviceType;
 import java.util.Map;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -119,11 +119,11 @@ public final class Device {
                     this.sdkPlatform = sb3.toString();
                     return;
                 }
-                throw new C13142s(str9);
+                throw new TypeCastException(str9);
             }
-            throw new C13142s(str9);
+            throw new TypeCastException(str9);
         }
-        throw new C13142s(str9);
+        throw new TypeCastException(str9);
     }
 
     public static /* synthetic */ Device copy$default(Device device, String str, String str2, String str3, String str4, String str5, DeviceType deviceType2, int i, Object obj) {

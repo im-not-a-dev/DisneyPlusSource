@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import android.util.Base64;
 import com.bamtech.sdk4.internal.configuration.ContentServiceClientExtras;
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
 import com.google.android.exoplayer2.p366s0.p371v.C8980k;
@@ -593,7 +593,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
         L_0x01f3:
             r14 = 0
         L_0x01f4:
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r14)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r14)
             com.google.android.exoplayer2.source.hls.n r14 = new com.google.android.exoplayer2.source.hls.n
             android.net.Uri r15 = r10.f20760a
             java.lang.Object r15 = r0.get(r15)
@@ -1030,7 +1030,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
                                 i5++;
                             } else if (b.startsWith("#EXT-X-PROGRAM-DATE-TIME")) {
                                 if (j6 == 0) {
-                                    j6 = C8883r.msToUs(Util.m29454h(b.substring(b.indexOf(58) + i))) - j11;
+                                    j6 = C.msToUs(Util.m29454h(b.substring(b.indexOf(58) + i))) - j11;
                                 }
                             } else if (b.equals("#EXT-X-GAP")) {
                                 c = 0;
@@ -1117,14 +1117,14 @@ public final class C9185f implements C9456a<HlsPlaylist> {
         String str4 = "video/mp4";
         if ("urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed".equals(str2)) {
             String b = m27675b(str, f20799x, map);
-            return new C8692b(C8883r.WIDEVINE_UUID, str4, Base64.decode(b.substring(b.indexOf(44)), 0));
+            return new C8692b(C.WIDEVINE_UUID, str4, Base64.decode(b.substring(b.indexOf(44)), 0));
         } else if ("com.widevine".equals(str2)) {
-            return new C8692b(C8883r.WIDEVINE_UUID, "hls", Util.m29447d(str));
+            return new C8692b(C.WIDEVINE_UUID, "hls", Util.m29447d(str));
         } else if (!"com.microsoft.playready".equals(str2) || !str3.equals(a)) {
             return null;
         } else {
             String b2 = m27675b(str, f20799x, map);
-            return new C8692b(C8883r.PLAYREADY_UUID, str4, C8980k.m26491a(C8883r.PLAYREADY_UUID, Base64.decode(b2.substring(b2.indexOf(44)), 0)));
+            return new C8692b(C.PLAYREADY_UUID, str4, C8980k.m26491a(C.PLAYREADY_UUID, Base64.decode(b2.substring(b2.indexOf(44)), 0)));
         }
     }
 

@@ -31,7 +31,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import kotlin.C12903o;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -957,7 +957,7 @@ public class C8491b extends C8542f implements C8485h, C8487j {
             }
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type java.net.InetSocketAddress");
+        throw new TypeCastException("null cannot be cast to non-null type java.net.InetSocketAddress");
     }
 
     /* renamed from: a */

@@ -33,7 +33,7 @@ import com.bamtechmedia.dominguez.core.utils.C5843l;
 import com.bamtechmedia.dominguez.core.utils.C5880u;
 import java.util.HashMap;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -264,7 +264,7 @@ public final class C5449c extends C11890i implements C2413n, C7717x {
                     fieldInputLayout.setTitle(C12832w.m40125f(lowerCase));
                     return;
                 }
-                throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             }
         }
     }

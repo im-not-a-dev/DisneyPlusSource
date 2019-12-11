@@ -1,9 +1,9 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.drm.C8710l;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9565s;
 import com.google.android.exoplayer2.source.C9141f0;
 import java.io.IOException;
@@ -88,7 +88,7 @@ public abstract class C8872q implements C8733l0, C8735m0 {
         if (this.f18998W != 1) {
             z = false;
         }
-        C9537e.m29301b(z);
+        Assertions.checkState(z);
         this.f18998W = 0;
         this.f18999X = null;
         this.f19000Y = null;
@@ -165,7 +165,7 @@ public abstract class C8872q implements C8733l0, C8735m0 {
     }
 
     public final void reset() {
-        C9537e.m29301b(this.f18998W == 0);
+        Assertions.checkState(this.f18998W == 0);
         mo23196u();
     }
 
@@ -180,13 +180,13 @@ public abstract class C8872q implements C8733l0, C8735m0 {
         if (this.f18998W != 1) {
             z = false;
         }
-        C9537e.m29301b(z);
+        Assertions.checkState(z);
         this.f18998W = 2;
         mo23197v();
     }
 
     public final void stop() throws ExoPlaybackException {
-        C9537e.m29301b(this.f18998W == 2);
+        Assertions.checkState(this.f18998W == 2);
         this.f18998W = 1;
         mo23198w();
     }
@@ -212,7 +212,7 @@ public abstract class C8872q implements C8733l0, C8735m0 {
 
     /* renamed from: a */
     public final void mo22841a(C8800n0 n0Var, Format[] formatArr, C9141f0 f0Var, long j, boolean z, long j2) throws ExoPlaybackException {
-        C9537e.m29301b(this.f18998W == 0);
+        Assertions.checkState(this.f18998W == 0);
         this.f18996U = n0Var;
         this.f18998W = 1;
         mo23187a(z);
@@ -222,7 +222,7 @@ public abstract class C8872q implements C8733l0, C8735m0 {
 
     /* renamed from: a */
     public final void mo22842a(Format[] formatArr, C9141f0 f0Var, long j) throws ExoPlaybackException {
-        C9537e.m29301b(!this.f19003b0);
+        Assertions.checkState(!this.f19003b0);
         this.f18999X = f0Var;
         this.f19002a0 = j;
         this.f19000Y = formatArr;
@@ -263,7 +263,7 @@ public abstract class C8872q implements C8733l0, C8735m0 {
     }
 
     /* renamed from: a */
-    protected static boolean m25888a(C8710l<?> lVar, DrmInitData drmInitData) {
+    protected static boolean m25888a(DrmSessionManager<?> lVar, DrmInitData drmInitData) {
         if (drmInitData == null) {
             return true;
         }

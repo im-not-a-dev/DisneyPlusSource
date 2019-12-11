@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2;
 
 import android.os.Handler;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 
 public final class PlayerMessage {
 
@@ -65,7 +65,7 @@ public final class PlayerMessage {
 
     /* renamed from: a */
     public PlayerMessage mo22634a(int i) {
-        C9537e.m29301b(!this.f18385j);
+        Assertions.checkState(!this.f18385j);
         this.f18379d = i;
         return this;
     }
@@ -117,9 +117,9 @@ public final class PlayerMessage {
 
     /* renamed from: k */
     public PlayerMessage mo22647k() {
-        C9537e.m29301b(!this.f18385j);
+        Assertions.checkState(!this.f18385j);
         if (this.f18383h == -9223372036854775807L) {
-            C9537e.m29299a(this.f18384i);
+            Assertions.m29299a(this.f18384i);
         }
         this.f18385j = true;
         this.f18377b.mo22649a(this);
@@ -128,15 +128,15 @@ public final class PlayerMessage {
 
     /* renamed from: a */
     public PlayerMessage mo22635a(Object obj) {
-        C9537e.m29301b(!this.f18385j);
+        Assertions.checkState(!this.f18385j);
         this.f18380e = obj;
         return this;
     }
 
     /* renamed from: a */
     public synchronized boolean mo22637a() throws InterruptedException {
-        C9537e.m29301b(this.f18385j);
-        C9537e.m29301b(this.f18381f.getLooper().getThread() != Thread.currentThread());
+        Assertions.checkState(this.f18385j);
+        Assertions.checkState(this.f18381f.getLooper().getThread() != Thread.currentThread());
         while (!this.f18387l) {
             wait();
         }

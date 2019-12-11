@@ -3,8 +3,8 @@ package com.google.android.exoplayer2.drm;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.C8883r;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -89,7 +89,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
 
         /* renamed from: a */
         public boolean mo22763a(UUID uuid) {
-            return C8883r.UUID_NIL.equals(this.f18463U) || uuid.equals(this.f18463U);
+            return C.UUID_NIL.equals(this.f18463U) || uuid.equals(this.f18463U);
         }
 
         public int describeContents() {
@@ -139,10 +139,10 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         }
 
         public C8692b(UUID uuid, String str, String str2, byte[] bArr, boolean z) {
-            C9537e.m29296a(uuid);
+            Assertions.checkNotNull(uuid);
             this.f18463U = uuid;
             this.f18464V = str;
-            C9537e.m29296a(str2);
+            Assertions.checkNotNull(str2);
             this.f18465W = str2;
             this.f18466X = bArr;
             this.f18467Y = z;
@@ -296,7 +296,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         L_0x0011:
             r0 = 1
         L_0x0012:
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r0)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r0)
             java.lang.String r0 = r2.f18460V
             if (r0 == 0) goto L_0x001a
             goto L_0x001c
@@ -316,8 +316,8 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
 
     /* renamed from: a */
     public int compare(C8692b bVar, C8692b bVar2) {
-        if (C8883r.UUID_NIL.equals(bVar.f18463U)) {
-            return C8883r.UUID_NIL.equals(bVar2.f18463U) ? 0 : 1;
+        if (C.UUID_NIL.equals(bVar.f18463U)) {
+            return C.UUID_NIL.equals(bVar2.f18463U) ? 0 : 1;
         }
         return bVar.f18463U.compareTo(bVar2.f18463U);
     }

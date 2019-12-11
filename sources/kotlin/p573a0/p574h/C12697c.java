@@ -1,7 +1,7 @@
 package kotlin.p573a0.p574h;
 
 import kotlin.C12903o;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
@@ -50,7 +50,7 @@ class C12697c {
                     C12865c0.m40197a((Object) function2, 2);
                     return function2.invoke(this.f29388W, this);
                 }
-                throw new C13142s("null cannot be cast to non-null type (R, kotlin.coroutines.Continuation<T>) -> kotlin.Any?");
+                throw new TypeCastException("null cannot be cast to non-null type (R, kotlin.coroutines.Continuation<T>) -> kotlin.Any?");
             } else if (i == 1) {
                 this.f29386U = 2;
                 C12903o.m40241a(obj);
@@ -92,7 +92,7 @@ class C12697c {
                     C12865c0.m40197a((Object) function2, 2);
                     return function2.invoke(this.f29391Y, this);
                 }
-                throw new C13142s("null cannot be cast to non-null type (R, kotlin.coroutines.Continuation<T>) -> kotlin.Any?");
+                throw new TypeCastException("null cannot be cast to non-null type (R, kotlin.coroutines.Continuation<T>) -> kotlin.Any?");
             } else if (i == 1) {
                 this.f29389W = 2;
                 C12903o.m40241a(obj);
@@ -115,12 +115,12 @@ class C12697c {
             if (cVar != null) {
                 return new C12698a(cVar, cVar, function2, r);
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         } else if (cVar != null) {
             C12699b bVar = new C12699b(cVar, b, cVar, b, function2, r);
             return bVar;
         } else {
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
     }
 

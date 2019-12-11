@@ -4,11 +4,11 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.SystemClock;
 import com.google.android.exoplayer2.C8672a0;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.offline.C8808b;
 import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9197i0;
 import com.google.android.exoplayer2.source.C9229o;
@@ -138,19 +138,19 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
             if (list != null) {
                 this.f20972c = new C8808b(this.f20972c, list);
             }
-            C9537e.m29296a(uri);
+            Assertions.checkNotNull(uri);
             SsMediaSource ssMediaSource = new SsMediaSource(null, uri, this.f20971b, this.f20972c, this.f20970a, this.f20974e, this.f20975f, this.f20976g, this.f20978i);
             return ssMediaSource;
         }
 
         public Factory setStreamKeys(List<StreamKey> list) {
-            C9537e.m29301b(!this.f20977h);
+            Assertions.checkState(!this.f20977h);
             this.f20973d = list;
             return this;
         }
 
         public Factory(C9243a aVar, C9435a aVar2) {
-            C9537e.m29296a(aVar);
+            Assertions.checkNotNull(aVar);
             this.f20970a = aVar;
             this.f20971b = aVar2;
             this.f20975f = new C9518u();
@@ -190,7 +190,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
                 }
                 long j4 = j2;
                 long j5 = j - j4;
-                long a = j5 - C8883r.msToUs(this.f20958e0);
+                long a = j5 - C.msToUs(this.f20958e0);
                 if (a < 5000000) {
                     a = Math.min(5000000, j5 / 2);
                 }
@@ -240,7 +240,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
     private SsMediaSource(C9245a aVar, Uri uri, C9435a aVar2, C9456a<? extends C9245a> aVar3, C9243a aVar4, C9256t tVar, C9524z zVar, long j, Object obj) {
         Uri uri2;
         boolean z = false;
-        C9537e.m29301b(aVar == null || !aVar.f21005d);
+        Assertions.checkState(aVar == null || !aVar.f21005d);
         this.f20968o0 = aVar;
         if (uri == null) {
             uri2 = null;

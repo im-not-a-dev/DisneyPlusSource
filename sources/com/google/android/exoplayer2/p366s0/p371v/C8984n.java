@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0.p371v;
 
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Log;
 
 /* renamed from: com.google.android.exoplayer2.s0.v.n */
@@ -29,7 +29,7 @@ public final class C8984n {
         if (bArr2 != null) {
             z2 = false;
         }
-        C9537e.m29299a(z2 ^ z3);
+        Assertions.m29299a(z2 ^ z3);
         this.f19673a = z;
         this.f19674b = str;
         this.f19676d = i;

@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13147x;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
@@ -267,7 +267,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
                     if (javaType != null) {
                         arrayList3.add(((JavaClassifierType) javaType).getPresentableText());
                     } else {
-                        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.load.java.structure.JavaClassifierType");
+                        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.load.java.structure.JavaClassifierType");
                     }
                 }
                 errorReporter.reportIncompleteHierarchy(declarationDescriptor, arrayList3);

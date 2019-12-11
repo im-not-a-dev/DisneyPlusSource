@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.trackselection;
 
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9542g;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9199j0;
@@ -123,7 +123,7 @@ public class C9287b extends C9292c {
         /* access modifiers changed from: 0000 */
         /* renamed from: a */
         public void mo24062a(long[][] jArr) {
-            C9537e.m29299a(jArr.length >= 2);
+            Assertions.m29299a(jArr.length >= 2);
             this.f21191d = jArr;
         }
     }

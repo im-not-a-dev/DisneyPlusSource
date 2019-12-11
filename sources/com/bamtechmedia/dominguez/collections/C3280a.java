@@ -22,7 +22,7 @@ import com.bamtechmedia.dominguez.core.recycler.RecyclerViewSnapScrollHelper;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
 import com.bamtechmedia.dominguez.core.utils.C5864r;
 import com.google.common.base.Optional;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -198,7 +198,7 @@ public abstract class C3280a extends C11890i implements C5864r, C2359f0 {
             Intrinsics.checkReturnedValueIsNotNull((Object) g, "(viewModel as Collection….pageName))\n            }");
             return g;
         } else {
-            throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.CollectionViewModelImpl");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.CollectionViewModelImpl");
         }
     }
 

@@ -44,7 +44,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -138,7 +138,7 @@ public final class C7745e extends C3280a implements C7700r, OnGlobalFocusChangeL
                 viewModel.mo20666a((C7649a) d);
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.filter.Filter");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.filter.Filter");
         }
 
         public /* bridge */ /* synthetic */ Object invoke(Object obj) {

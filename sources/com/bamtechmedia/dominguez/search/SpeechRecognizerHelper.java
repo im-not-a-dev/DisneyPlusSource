@@ -20,7 +20,7 @@ import com.bamtechmedia.dominguez.core.p084g.C3800a;
 import com.bamtechmedia.dominguez.core.utils.C5852n0;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -330,7 +330,7 @@ public final class SpeechRecognizerHelper implements C0710d, RecognitionListener
                 this.f17114W.mo1302a(str);
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.String");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.String");
         }
     }
 

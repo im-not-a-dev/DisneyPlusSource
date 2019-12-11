@@ -50,7 +50,7 @@ import com.google.android.exoplayer2.p391ui.PlayerView;
 import com.google.common.base.Optional;
 import java.util.HashMap;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -472,7 +472,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
         if (_$_findCachedViewById != null) {
             return (ImageView) _$_findCachedViewById;
         }
-        throw new C13142s("null cannot be cast to non-null type android.widget.ImageView");
+        throw new TypeCastException("null cannot be cast to non-null type android.widget.ImageView");
     }
 
     /* renamed from: j */
@@ -819,7 +819,7 @@ public final class C3176e extends C3280a implements C3254b, C3271b, C5818b {
             C5763b.m18702a(imageView, a, a2, null, null, C5837i.m18843e(requireContext), false, false, 108, null);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type android.widget.ImageView");
+        throw new TypeCastException("null cannot be cast to non-null type android.widget.ImageView");
     }
 
     /* renamed from: a */

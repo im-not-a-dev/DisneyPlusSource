@@ -2,7 +2,7 @@ package kotlin.p587i0;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -75,7 +75,7 @@ final class C12773g<T> implements C12775h<T> {
                     this.f29447U = -1;
                     return t;
                 }
-                throw new C13142s("null cannot be cast to non-null type T");
+                throw new TypeCastException("null cannot be cast to non-null type T");
             }
             throw new NoSuchElementException();
         }

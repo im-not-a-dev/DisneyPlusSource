@@ -1,6 +1,6 @@
 package kotlinx.coroutines;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlinx.coroutines.internal.C13266g;
 import kotlinx.coroutines.internal.C13268i;
@@ -33,7 +33,7 @@ public final class C13408v1 extends C13266g implements C13238f1 {
             Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "StringBuilder().apply(builderAction).toString()");
             return sb2;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
     }
 
     /* renamed from: a */

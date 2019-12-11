@@ -4,7 +4,7 @@ import com.bamtech.core.networking.handlers.C1698a;
 import com.bamtech.core.networking.handlers.ResponseTransformer;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import okhttp3.C14256t;
 import okhttp3.C14258u;
@@ -133,7 +133,7 @@ public final class C1691e {
                     Request request = new Request(okHttpClient, aVar, responseTransformer, link.getTimeout(), TimeUnit.SECONDS, extra);
                     return request;
                 }
-                throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             }
         }
         throw new C1690d(null, new IllegalArgumentException("Unable to parse URL"), 1, null);

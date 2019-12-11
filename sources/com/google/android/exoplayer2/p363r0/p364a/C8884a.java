@@ -28,7 +28,7 @@ import com.google.android.exoplayer2.PlaybackParameters;
 import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.Player.EventListener;
 import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9555l;
 import com.google.android.exoplayer2.source.TrackGroupArray;
@@ -172,7 +172,7 @@ public final class C8884a {
                 }
                 C8898s m = C8884a.this.f19053f;
                 Player i = C8884a.this.f19057j;
-                C9537e.m29296a(i);
+                Assertions.checkNotNull(i);
                 m.mo23267c(i, true);
             }
         }
@@ -781,7 +781,7 @@ public final class C8884a {
 
     /* renamed from: a */
     public void mo23237a(Player player) {
-        C9537e.m29299a(player == null || player.getApplicationLooper() == this.f19049b);
+        Assertions.m29299a(player == null || player.getApplicationLooper() == this.f19049b);
         Player player2 = this.f19057j;
         if (player2 != null) {
             player2.removeListener(this.f19050c);

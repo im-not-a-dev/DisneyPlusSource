@@ -3,7 +3,7 @@ package kotlin.p590y;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.RandomAccess;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -157,7 +157,7 @@ final class C13181m0<T> extends C13155d<T> implements RandomAccess {
         if (tArr != null) {
             return tArr;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
     /* renamed from: b */

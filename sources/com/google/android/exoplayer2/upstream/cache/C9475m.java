@@ -11,7 +11,7 @@ import com.google.android.exoplayer2.database.C8684a;
 import com.google.android.exoplayer2.database.C8686c;
 import com.google.android.exoplayer2.database.DatabaseProvider;
 import com.google.android.exoplayer2.p393v0.C9530b0;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9539f;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.io.ByteArrayOutputStream;
@@ -164,7 +164,7 @@ class C9475m {
             L_0x000c:
                 r0 = 0
             L_0x000d:
-                com.google.android.exoplayer2.p393v0.C9537e.m29301b(r0)
+                com.google.android.exoplayer2.p393v0.Assertions.checkState(r0)
                 com.google.android.exoplayer2.database.DatabaseProvider r0 = r7.f22052a     // Catch:{ SQLiteException -> 0x0081 }
                 android.database.sqlite.SQLiteDatabase r0 = r0.getReadableDatabase()     // Catch:{ SQLiteException -> 0x0081 }
                 java.lang.String r3 = r7.f22054c     // Catch:{ SQLiteException -> 0x0081 }
@@ -362,7 +362,7 @@ class C9475m {
             Cipher cipher;
             Random random = null;
             if (bArr != null) {
-                C9537e.m29299a(bArr.length == 16);
+                Assertions.m29299a(bArr.length == 16);
                 try {
                     cipher = C9475m.m29075e();
                     secretKeySpec = new SecretKeySpec(bArr, "AES");
@@ -370,7 +370,7 @@ class C9475m {
                     throw new IllegalStateException(e);
                 }
             } else {
-                C9537e.m29299a(!z);
+                Assertions.m29299a(!z);
                 cipher = null;
                 secretKeySpec = null;
             }
@@ -450,7 +450,7 @@ class C9475m {
 
         /* renamed from: a */
         public void mo24538a(HashMap<String, C9474l> hashMap, SparseArray<String> sparseArray) {
-            C9537e.m29301b(!this.f22061f);
+            Assertions.checkState(!this.f22061f);
             if (!m29108b(hashMap, sparseArray)) {
                 hashMap.clear();
                 sparseArray.clear();
@@ -669,7 +669,7 @@ class C9475m {
     }
 
     public C9475m(DatabaseProvider databaseProvider, File file, byte[] bArr, boolean z, boolean z2) {
-        C9537e.m29301b((databaseProvider == null && file == null) ? false : true);
+        Assertions.checkState((databaseProvider == null && file == null) ? false : true);
         this.f22045a = new HashMap<>();
         this.f22046b = new SparseArray<>();
         this.f22047c = new SparseBooleanArray();

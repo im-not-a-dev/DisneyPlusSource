@@ -14,7 +14,7 @@ import com.bumptech.glide.load.C8106b;
 import com.bumptech.glide.load.p341p.p344e.C8402c;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -237,7 +237,7 @@ public final class C7136f implements C7159g {
         String scheme = a.getScheme();
         if (scheme != null) {
             if (scheme == null) {
-                throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             } else if (scheme.contentEquals("file")) {
                 Completable h = Completable.m38169h();
                 Intrinsics.checkReturnedValueIsNotNull((Object) h, "Completable.complete()");

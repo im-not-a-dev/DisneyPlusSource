@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.upstream.cache;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.io.File;
 import java.util.regex.Matcher;
@@ -117,7 +117,7 @@ final class C9486t extends C9470j {
 
     /* renamed from: a */
     public C9486t mo24555a(File file, long j) {
-        C9537e.m29301b(this.f22032W);
+        Assertions.checkState(this.f22032W);
         C9486t tVar = new C9486t(this.f22035c, this.f22030U, this.f22031V, j, file);
         return tVar;
     }

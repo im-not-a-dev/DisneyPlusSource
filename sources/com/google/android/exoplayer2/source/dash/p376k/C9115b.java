@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.dash.p376k;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.offline.C8807a;
 import com.google.android.exoplayer2.offline.StreamKey;
 import java.util.ArrayList;
@@ -78,7 +78,7 @@ public class C9115b implements C8807a<C9115b> {
 
     /* renamed from: c */
     public final long mo23677c(int i) {
-        return C8883r.msToUs(mo23676b(i));
+        return C.msToUs(mo23676b(i));
     }
 
     /* renamed from: a */

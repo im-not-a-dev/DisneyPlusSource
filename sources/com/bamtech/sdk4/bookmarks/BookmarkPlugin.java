@@ -7,7 +7,7 @@ import com.bamtech.sdk4.plugin.Plugin.DefaultImpls;
 import com.bamtech.sdk4.plugin.PluginExtra;
 import com.bamtech.sdk4.plugin.PluginInitializationException;
 import com.bamtech.sdk4.plugin.PluginRegistry;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -47,7 +47,7 @@ public final class BookmarkPlugin implements Plugin {
         } else if (bookmarksApi != null) {
             ((DefaultBookmarkApi) bookmarksApi).purgeOnProfileChangeOrLogout$plugin_bookmarks_release();
         } else {
-            throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.bookmarks.DefaultBookmarkApi");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.bookmarks.DefaultBookmarkApi");
         }
     }
 }

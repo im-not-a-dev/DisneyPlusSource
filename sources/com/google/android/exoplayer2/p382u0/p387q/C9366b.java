@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p382u0.p387q;
 
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9325e;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Collections;
 import java.util.List;
@@ -51,11 +51,11 @@ final class C9366b implements C9325e {
     /* renamed from: a */
     public long mo24146a(int i) {
         boolean z = true;
-        C9537e.m29299a(i >= 0);
+        Assertions.m29299a(i >= 0);
         if (i >= this.f21548U.length) {
             z = false;
         }
-        C9537e.m29299a(z);
+        Assertions.m29299a(z);
         return this.f21548U[i];
     }
 }

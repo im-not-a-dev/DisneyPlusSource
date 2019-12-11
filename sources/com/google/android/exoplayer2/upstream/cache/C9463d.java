@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream.cache;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.upstream.C9498h0;
 import com.google.android.exoplayer2.upstream.C9504k;
 import com.google.android.exoplayer2.upstream.C9507m;
@@ -359,7 +359,7 @@ public final class C9463d implements DataSource {
         }
         this.f22017w = (this.f22015u || dataSource != this.f21998d) ? Long.MAX_VALUE : this.f22011q + 102400;
         if (z) {
-            C9537e.m29301b(m29017c());
+            Assertions.checkState(m29017c());
             if (dataSource != this.f21998d) {
                 try {
                     m29016b();

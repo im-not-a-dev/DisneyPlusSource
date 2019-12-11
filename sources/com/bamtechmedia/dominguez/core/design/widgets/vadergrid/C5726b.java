@@ -12,7 +12,7 @@ import com.bamtechmedia.dominguez.core.p088i.C3835e;
 import com.bamtechmedia.dominguez.core.p088i.C3839i;
 import com.bamtechmedia.dominguez.core.p088i.C3843m;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p135s.C4146h;
@@ -129,7 +129,7 @@ public final class C5726b {
             view.requestLayout();
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
+        throw new TypeCastException("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
     }
 
     /* renamed from: b */

@@ -7,7 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;
@@ -121,7 +121,7 @@ public final class DefaultTelemetryStorage implements TelemetryStorage {
             C13171j.m40344b(list);
             return C13174k.m40390b((Object[]) list, getBatchLimit());
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
     }
 
     public final List<File> getStorageFilesFromNames(List<String> list) {

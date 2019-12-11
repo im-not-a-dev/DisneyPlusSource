@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.renderer;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.C12881k;
 
@@ -18,6 +18,6 @@ final class DescriptorRendererImpl$functionTypeAnnotationsRenderer$2 extends C12
         if (withOptions != null) {
             return (DescriptorRendererImpl) withOptions;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.renderer.DescriptorRendererImpl");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.renderer.DescriptorRendererImpl");
     }
 }

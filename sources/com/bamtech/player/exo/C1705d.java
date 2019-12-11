@@ -4,7 +4,7 @@ import com.bamtech.player.exo.p040h.C1709a;
 import com.bamtech.player.exo.p045m.C1735c;
 import com.google.android.exoplayer2.C8729j0;
 import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.PlaybackParameters;
 import com.google.android.exoplayer2.Player.EventListener;
@@ -184,7 +184,7 @@ public final class C1705d implements EventListener, C8743e {
                 for (String f : list) {
                     C4956a f2 = this.f5948X.mo16436f(f);
                     if (f2 != null) {
-                        f2.f12168U = C8883r.usToMs(iVar.f20588a.f20692f);
+                        f2.f12168U = C.usToMs(iVar.f20588a.f20692f);
                         arrayList.add(f2);
                     }
                 }
@@ -206,7 +206,7 @@ public final class C1705d implements EventListener, C8743e {
 
     /* renamed from: a */
     private final long m7861a(C9163i iVar) {
-        return C8883r.usToMs(iVar.f20588a.f20692f);
+        return C.usToMs(iVar.f20588a.f20692f);
     }
 
     /* renamed from: a */

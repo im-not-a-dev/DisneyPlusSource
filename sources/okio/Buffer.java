@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.ByteChannel;
 import java.nio.charset.Charset;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
@@ -1837,7 +1837,7 @@ public final class Buffer implements BufferedSource, C14280f, Cloneable, ByteCha
                         Intrinsics.checkReturnedValueIsNotNull((Object) bytes, "(this as java.lang.String).getBytes(charset)");
                         return write(bytes, 0, bytes.length);
                     }
-                    throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                    throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
                 }
             } else {
                 StringBuilder sb2 = new StringBuilder();

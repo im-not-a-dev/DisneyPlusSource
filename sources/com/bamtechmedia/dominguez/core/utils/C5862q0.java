@@ -5,7 +5,7 @@ import android.media.MediaDrm;
 import android.media.UnsupportedSchemeException;
 import android.os.Build.VERSION;
 import android.util.Base64;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -47,7 +47,7 @@ public final class C5862q0 {
             String str3 = "securityLevel";
             String str4 = "maxHdcpLevel";
             try {
-                MediaDrm mediaDrm = new MediaDrm(C8883r.WIDEVINE_UUID);
+                MediaDrm mediaDrm = new MediaDrm(C.WIDEVINE_UUID);
                 String propertyString = mediaDrm.getPropertyString(str4);
                 String propertyString2 = mediaDrm.getPropertyString(str3);
                 String propertyString3 = mediaDrm.getPropertyString(str2);

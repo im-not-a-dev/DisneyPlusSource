@@ -20,7 +20,7 @@ import com.bamtechmedia.dominguez.core.p084g.p086d.C3822a;
 import com.bamtechmedia.dominguez.core.utils.C5880u;
 import java.util.concurrent.TimeUnit;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -520,7 +520,7 @@ public final class C3355h extends C11866a {
             C3358c cVar = new C3358c(hVar.f8456a0 != this.f8456a0, !Intrinsics.areEqual((Object) hVar.f8458c, (Object) this.f8458c), !Intrinsics.areEqual((Object) hVar.f8452W, (Object) this.f8452W), (Intrinsics.areEqual((Object) hVar.f8453X, (Object) this.f8453X) ^ true) || (Intrinsics.areEqual((Object) hVar.f8454Y, (Object) this.f8454Y) ^ true), !Intrinsics.areEqual((Object) hVar.f8455Z, (Object) this.f8455Z));
             return cVar;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ContinueWatchingItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ContinueWatchingItem");
     }
 
     public int getLayout() {

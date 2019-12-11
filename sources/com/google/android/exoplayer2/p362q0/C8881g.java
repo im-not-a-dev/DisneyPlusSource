@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p362q0;
 
 import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p362q0.C8880f;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.lang.Exception;
 import java.util.ArrayDeque;
 
@@ -289,7 +289,7 @@ public abstract class C8881g<I extends C8879e, O extends C8880f, E extends Excep
         I i2;
         synchronized (this.f19029b) {
             m25951i();
-            C9537e.m29301b(this.f19036i == null);
+            Assertions.checkState(this.f19036i == null);
             if (this.f19034g == 0) {
                 i = null;
             } else {
@@ -307,7 +307,7 @@ public abstract class C8881g<I extends C8879e, O extends C8880f, E extends Excep
     /* access modifiers changed from: protected */
     /* renamed from: a */
     public final void mo23230a(int i) {
-        C9537e.m29301b(this.f19034g == this.f19032e.length);
+        Assertions.checkState(this.f19034g == this.f19032e.length);
         for (I f : this.f19032e) {
             f.mo23224f(i);
         }
@@ -317,7 +317,7 @@ public abstract class C8881g<I extends C8879e, O extends C8880f, E extends Excep
     public final void mo23218a(I i) throws Exception {
         synchronized (this.f19029b) {
             m25951i();
-            C9537e.m29299a(i == this.f19036i);
+            Assertions.m29299a(i == this.f19036i);
             this.f19030c.addLast(i);
             m25950h();
             this.f19036i = null;

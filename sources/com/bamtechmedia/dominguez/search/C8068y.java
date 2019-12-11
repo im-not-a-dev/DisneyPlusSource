@@ -45,7 +45,7 @@ import com.bamtechmedia.dominguez.search.C7975b0.C7980e;
 import com.bamtechmedia.dominguez.search.C8002c.C8007e;
 import com.bamtechmedia.dominguez.search.C8063v.C8064a;
 import java.util.HashMap;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -282,7 +282,7 @@ public class C8068y extends C11890i implements C0184m, C5864r, C5641a, C7700r, C
         if (layoutParams != null) {
             return ((C0415c) layoutParams).topMargin == getResources().getDimensionPixelSize(C8046l.search_layout_margin_top);
         }
-        throw new C13142s("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout.LayoutParams");
+        throw new TypeCastException("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout.LayoutParams");
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:11:0x0029  */

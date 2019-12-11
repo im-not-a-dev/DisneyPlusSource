@@ -6,7 +6,7 @@ import com.bamtech.sdk4.service.ServiceExceptionCase.UnexpectedError;
 import com.bamtechmedia.dominguez.config.C3572r0;
 import com.bamtechmedia.dominguez.config.C3572r0.C3573a;
 import com.bamtechmedia.dominguez.playback.C6330i;
-import com.google.android.exoplayer2.drm.C8716r;
+import com.google.android.exoplayer2.drm.UnsupportedDrmException;
 import java.util.Map;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
@@ -39,7 +39,7 @@ public final class C6453d {
         if (th instanceof ServiceException) {
             return m20139a((ServiceException) th);
         }
-        if (th instanceof C8716r) {
+        if (th instanceof UnsupportedDrmException) {
             return m20140b(th);
         }
         if (th instanceof CryptoException) {

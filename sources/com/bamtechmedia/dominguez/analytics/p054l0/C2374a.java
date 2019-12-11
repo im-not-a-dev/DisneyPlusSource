@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -107,7 +107,7 @@ public final class C2374a {
             }
             return C13199w.m40559a(list, ", ", null, null, 0, null, null, 62, null);
         }
-        throw new C13142s("null cannot be cast to non-null type android.net.ConnectivityManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.net.ConnectivityManager");
     }
 
     /* renamed from: d */

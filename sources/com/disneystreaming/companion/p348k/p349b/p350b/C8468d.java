@@ -3,7 +3,7 @@ package com.disneystreaming.companion.p348k.p349b.p350b;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.Arrays;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import p602m.p613d.p627b.C13664a;
 import p602m.p613d.p627b.C13671c;
@@ -127,7 +127,7 @@ public final class C8468d {
                 Intrinsics.throwUninitializedPropertyAccessException(str2);
                 throw null;
             } else {
-                throw new C13142s("null cannot be cast to non-null type org.spongycastle.crypto.params.IESWithCipherParameters");
+                throw new TypeCastException("null cannot be cast to non-null type org.spongycastle.crypto.params.IESWithCipherParameters");
             }
         } else {
             throw new C13712p("Length of input must be greater than the MAC and encodedPublicKey combined");
@@ -195,7 +195,7 @@ public final class C8468d {
                 throw null;
             }
         } else {
-            throw new C13142s("null cannot be cast to non-null type org.spongycastle.crypto.params.IESWithCipherParameters");
+            throw new TypeCastException("null cannot be cast to non-null type org.spongycastle.crypto.params.IESWithCipherParameters");
         }
     }
 
@@ -240,14 +240,14 @@ public final class C8468d {
                 this.f18018g = (C13688i) b;
                 return;
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
         this.f18015d = null;
         if (fVar != null) {
             this.f18018g = (C13688i) fVar;
             return;
         }
-        throw new C13142s(str);
+        throw new TypeCastException(str);
     }
 
     /* renamed from: a */

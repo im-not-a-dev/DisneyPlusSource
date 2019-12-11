@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9141f0;
@@ -121,7 +121,7 @@ final class C8683d0 {
 
     /* renamed from: b */
     public void mo22726b(long j) {
-        C9537e.m29301b(m25121l());
+        Assertions.checkState(m25121l());
         if (this.f18433d) {
             this.f18430a.mo23545c(mo22730d(j));
         }
@@ -145,14 +145,14 @@ final class C8683d0 {
     /* renamed from: f */
     public TrackGroupArray mo22733f() {
         TrackGroupArray trackGroupArray = this.f18441l;
-        C9537e.m29296a(trackGroupArray);
+        Assertions.checkNotNull(trackGroupArray);
         return trackGroupArray;
     }
 
     /* renamed from: g */
     public C9318m mo22734g() {
         C9318m mVar = this.f18442m;
-        C9537e.m29296a(mVar);
+        Assertions.checkNotNull(mVar);
         return mVar;
     }
 
@@ -206,7 +206,7 @@ final class C8683d0 {
         this.f18433d = true;
         this.f18441l = this.f18430a.mo23548f();
         C9318m b = mo22725b(f, timeline);
-        C9537e.m29296a(b);
+        Assertions.checkNotNull(b);
         long a = mo22719a(b, this.f18435f.f18511b, false);
         long j = this.f18443n;
         C8719e0 e0Var = this.f18435f;
@@ -237,7 +237,7 @@ final class C8683d0 {
 
     /* renamed from: a */
     public void mo22722a(long j) {
-        C9537e.m29301b(m25121l());
+        Assertions.checkState(m25121l());
         this.f18430a.mo23543b(mo22730d(j));
     }
 
@@ -277,12 +277,12 @@ final class C8683d0 {
                 return a;
             }
             if (f0VarArr[i2] != null) {
-                C9537e.m29301b(mVar.mo24134a(i2));
+                Assertions.checkState(mVar.mo24134a(i2));
                 if (this.f18437h[i2].mo22860f() != 6) {
                     this.f18434e = true;
                 }
             } else {
-                C9537e.m29301b(trackSelectionArray.mo24040a(i2) == null);
+                Assertions.checkState(trackSelectionArray.mo24040a(i2) == null);
             }
             i2++;
         }
@@ -300,7 +300,7 @@ final class C8683d0 {
     /* renamed from: a */
     private void m25117a(C9141f0[] f0VarArr) {
         C9318m mVar = this.f18442m;
-        C9537e.m29296a(mVar);
+        Assertions.checkNotNull(mVar);
         C9318m mVar2 = mVar;
         int i = 0;
         while (true) {

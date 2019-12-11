@@ -15,7 +15,7 @@ import javax.crypto.CipherSpi;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.ShortBufferException;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p602m.p613d.p627b.C13697f;
@@ -113,7 +113,7 @@ public final class C8465c extends CipherSpi {
             if (bVar != null) {
                 return ((C13687h) bVar).mo34940c().mo35136a(this.f18011a);
             }
-            throw new C13142s("null cannot be cast to non-null type org.spongycastle.crypto.params.ECPublicKeyParameters");
+            throw new TypeCastException("null cannot be cast to non-null type org.spongycastle.crypto.params.ECPublicKeyParameters");
         }
     }
 
@@ -158,9 +158,9 @@ public final class C8465c extends CipherSpi {
                                         Intrinsics.checkReturnedValueIsNotNull((Object) byteArray, str2);
                                         return dVar2.mo21754a(byteArray, 0, byteArray.length);
                                     }
-                                    throw new C13142s(str3);
+                                    throw new TypeCastException(str3);
                                 }
-                                throw new C13142s(str);
+                                throw new TypeCastException(str);
                             }
                         }
                         C8468d dVar3 = this.f18009i;
@@ -173,9 +173,9 @@ public final class C8465c extends CipherSpi {
                                 Intrinsics.checkReturnedValueIsNotNull((Object) byteArray, str2);
                                 return dVar22.mo21754a(byteArray, 0, byteArray.length);
                             }
-                            throw new C13142s(str);
+                            throw new TypeCastException(str);
                         }
-                        throw new C13142s(str3);
+                        throw new TypeCastException(str3);
                     } catch (Exception e) {
                         throw new BadPaddingException(e.getMessage());
                     }
@@ -194,7 +194,7 @@ public final class C8465c extends CipherSpi {
                                 Intrinsics.checkReturnedValueIsNotNull((Object) byteArray, str2);
                                 return dVar5.mo21754a(byteArray, 0, byteArray.length);
                             }
-                            throw new C13142s(str);
+                            throw new TypeCastException(str);
                         } catch (Exception e2) {
                             e2.printStackTrace();
                             throw new BadPaddingException(e2.getMessage());
@@ -209,7 +209,7 @@ public final class C8465c extends CipherSpi {
                                 Intrinsics.checkReturnedValueIsNotNull((Object) byteArray, str2);
                                 return dVar7.mo21754a(byteArray, 0, byteArray.length);
                             }
-                            throw new C13142s(str);
+                            throw new TypeCastException(str);
                         } catch (C13712p e3) {
                             throw new BadPaddingException(e3.getMessage());
                         }
@@ -218,7 +218,7 @@ public final class C8465c extends CipherSpi {
                     }
                 }
             } else {
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
         } else {
             throw new IllegalStateException("Engine Spec not set");
@@ -260,7 +260,7 @@ public final class C8465c extends CipherSpi {
                 Intrinsics.checkReturnedValueIsNotNull((Object) a, "(key as ECKeyParameters).parameters.curve");
                 i2 = (((a.mo35090j() + 7) * 2) / 8) + 1;
             } else {
-                throw new C13142s("null cannot be cast to non-null type org.spongycastle.crypto.params.ECKeyParameters");
+                throw new TypeCastException("null cannot be cast to non-null type org.spongycastle.crypto.params.ECKeyParameters");
             }
             int i5 = this.f18002b;
             if (i5 == 1 || i5 == 3) {

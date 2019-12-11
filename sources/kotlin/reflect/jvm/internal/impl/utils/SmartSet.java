@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.NoSuchElementException;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.C12861b;
 import kotlin.jvm.internal.C12865c0;
 import kotlin.jvm.internal.Intrinsics;
@@ -122,12 +122,12 @@ public final class SmartSet<T> extends AbstractSet<T> {
                 }
                 this.data = obj;
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
             }
         } else {
             Object obj3 = this.data;
             if (obj3 == null) {
-                throw new C13142s("null cannot be cast to non-null type kotlin.collections.MutableSet<T>");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.MutableSet<T>");
             } else if (!C12865c0.m40204c(obj3).add(t)) {
                 return false;
             }
@@ -153,13 +153,13 @@ public final class SmartSet<T> extends AbstractSet<T> {
             if (obj2 != null) {
                 return C13174k.m40393b((Object[]) obj2, obj);
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         }
         Object obj3 = this.data;
         if (obj3 != null) {
             return ((Set) obj3).contains(obj);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.collections.Set<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.Set<T>");
     }
 
     public int getSize() {
@@ -178,13 +178,13 @@ public final class SmartSet<T> extends AbstractSet<T> {
             if (obj != null) {
                 return new ArrayIterator((Object[]) obj);
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         }
         Object obj2 = this.data;
         if (obj2 != null) {
             return C12865c0.m40204c(obj2).iterator();
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.collections.MutableSet<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.MutableSet<T>");
     }
 
     public void setSize(int i) {

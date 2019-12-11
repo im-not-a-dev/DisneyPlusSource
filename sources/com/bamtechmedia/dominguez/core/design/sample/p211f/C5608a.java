@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.core.design.sample.p212g.C5610a.C5611a;
 import com.bamtechmedia.dominguez.core.design.sample.p212g.C5612b;
 import com.bamtechmedia.dominguez.core.design.sample.p212g.C5613c;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 
 /* renamed from: com.bamtechmedia.dominguez.core.design.sample.f.a */
 /* compiled from: FragmentAdapter.kt */
@@ -40,6 +40,6 @@ public final class C5608a extends C0561m {
         if (obj != null) {
             return ((C5609b) obj).getTitle();
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.design.sample.adapter.TitleProvider");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.design.sample.adapter.TitleProvider");
     }
 }

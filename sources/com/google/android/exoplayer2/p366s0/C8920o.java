@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p366s0;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.s0.o */
 /* compiled from: SeekMap */
@@ -58,9 +58,9 @@ public interface C8920o {
         }
 
         public C8921a(C8923p pVar, C8923p pVar2) {
-            C9537e.m29296a(pVar);
+            Assertions.checkNotNull(pVar);
             this.f19164a = pVar;
-            C9537e.m29296a(pVar2);
+            Assertions.checkNotNull(pVar2);
             this.f19165b = pVar2;
         }
     }

@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java;
 
 import java.util.Map;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12881k;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
@@ -28,6 +28,6 @@ final class C12963x6ce919c0 extends C12881k implements Function1<CallableMemberD
         if (access$getSIGNATURE_TO_JVM_REPRESENTATION_NAME$p != null) {
             return access$getSIGNATURE_TO_JVM_REPRESENTATION_NAME$p.containsKey(computeJvmSignature);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.collections.Map<K, *>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.Map<K, *>");
     }
 }

@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.builtins.jvm;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12881k;
@@ -28,7 +28,7 @@ final class JvmBuiltInsSettings$isMutabilityViolation$2 extends C12881k implemen
             JavaToKotlinClassMap access$getJ2kClassMap$p = this.this$0.j2kClassMap;
             DeclarationDescriptor containingDeclaration = callableMemberDescriptor.getContainingDeclaration();
             if (containingDeclaration == null) {
-                throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+                throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
             } else if (access$getJ2kClassMap$p.isMutable((ClassDescriptor) containingDeclaration)) {
                 return true;
             }

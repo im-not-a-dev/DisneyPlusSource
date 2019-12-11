@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p391ui;
 import android.content.res.Resources;
 import android.text.TextUtils;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import java.util.Locale;
@@ -16,7 +16,7 @@ public class C9404f implements C9420q {
     private final Resources f21776a;
 
     public C9404f(Resources resources) {
-        C9537e.m29296a(resources);
+        Assertions.checkNotNull(resources);
         this.f21776a = resources;
     }
 

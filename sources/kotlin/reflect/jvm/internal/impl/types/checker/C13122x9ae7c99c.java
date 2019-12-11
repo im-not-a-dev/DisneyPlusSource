@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.types.checker;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.SupertypesPolicy.DoCustomTransform;
@@ -35,6 +35,6 @@ public final class C13122x9ae7c99c extends DoCustomTransform {
             Intrinsics.throwNpe();
             throw null;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.types.KotlinType");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.types.KotlinType");
     }
 }

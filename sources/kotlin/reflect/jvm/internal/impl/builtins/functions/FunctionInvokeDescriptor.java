@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13147x;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13152b0;
@@ -83,7 +83,7 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
                 ValueParameterDescriptorImpl valueParameterDescriptorImpl22 = new ValueParameterDescriptorImpl(functionInvokeDescriptor, null, i, empty22, identifier22, defaultType22, false, false, false, null, sourceElement22);
                 return valueParameterDescriptorImpl22;
             }
-            throw new C13142s("null cannot be cast to non-null type java.lang.String");
+            throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
         }
 
         public final FunctionInvokeDescriptor create(FunctionClassDescriptor functionClassDescriptor, boolean z) {

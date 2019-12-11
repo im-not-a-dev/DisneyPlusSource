@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.resolve.calls.inference;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -61,7 +61,7 @@ public final class CapturedTypeConstructorKt {
         if (array != null) {
             return new IndexedParametersSubstitution(parameters, (TypeProjection[]) array, z);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
     public static /* synthetic */ TypeSubstitution wrapWithCapturingSubstitution$default(TypeSubstitution typeSubstitution, boolean z, int i, Object obj) {

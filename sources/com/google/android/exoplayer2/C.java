@@ -7,7 +7,7 @@ import java.util.UUID;
 
 /* renamed from: com.google.android.exoplayer2.r */
 /* compiled from: C */
-public final class C8883r {
+public final class C {
 
     /* renamed from: a */
     public static final UUID UUID_NIL = new UUID(0, 0);

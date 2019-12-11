@@ -20,7 +20,7 @@ import com.bamtech.player.exo.p046n.C1739a;
 import com.google.android.exoplayer2.C9319u.C9320a;
 import com.google.android.exoplayer2.C9577w;
 import com.google.android.exoplayer2.RenderersFactory;
-import com.google.android.exoplayer2.drm.C8710l;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
 import com.google.android.exoplayer2.p361p0.C8842n;
 import com.google.android.exoplayer2.p394w0.C9603r;
 import com.google.android.exoplayer2.source.MediaSource;
@@ -173,7 +173,7 @@ public class ExoPlaybackEngine implements C5280i, C0721l {
         private C9299d f5926y;
 
         /* renamed from: z */
-        protected C8710l f5927z;
+        protected DrmSessionManager f5927z;
 
         public C1700a(String str, Context context, C4952a aVar, C5313o oVar) {
             this.f5902a = context;
@@ -321,7 +321,7 @@ public class ExoPlaybackEngine implements C5280i, C0721l {
         }
 
         /* renamed from: a */
-        public C1700a mo7548a(C8710l lVar) {
+        public C1700a mo7548a(DrmSessionManager lVar) {
             this.f5927z = lVar;
             return this;
         }

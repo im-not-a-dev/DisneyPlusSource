@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.p379m0;
 
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 
@@ -14,7 +14,7 @@ public abstract class C9224l extends C9212d {
 
     public C9224l(DataSource dataSource, DataSpec dataSpec, Format format, int i, Object obj, long j, long j2, long j3) {
         super(dataSource, dataSpec, 1, format, i, obj, j, j2);
-        C9537e.m29296a(format);
+        Assertions.checkNotNull(format);
         this.f20922i = j3;
     }
 

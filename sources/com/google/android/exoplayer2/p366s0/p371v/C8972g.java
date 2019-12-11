@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p366s0.p371v;
 import android.util.Pair;
 import android.util.SparseArray;
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
@@ -20,7 +20,7 @@ import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
 import com.google.android.exoplayer2.p382u0.p383m.C9348g;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9545h0;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
@@ -252,9 +252,9 @@ public class C8972g implements C8912g {
 
         /* renamed from: a */
         public void mo23374a(C8983m mVar, C8968e eVar) {
-            C9537e.m29296a(mVar);
+            Assertions.checkNotNull(mVar);
             this.f19590c = mVar;
-            C9537e.m29296a(eVar);
+            Assertions.checkNotNull(eVar);
             this.f19591d = eVar;
             this.f19588a.mo23304a(mVar.f19667f);
             mo23377c();
@@ -303,7 +303,7 @@ public class C8972g implements C8912g {
 
         /* renamed from: a */
         public void mo23372a(long j) {
-            long b = C8883r.usToMs(j);
+            long b = C.usToMs(j);
             int i = this.f19592e;
             while (true) {
                 C8985o oVar = this.f19589b;
@@ -701,7 +701,7 @@ public class C8972g implements C8912g {
         C8959a aVar2 = aVar;
         boolean z = true;
         int i3 = 0;
-        C9537e.m29302b(this.f19561b == null, "Unexpected moov box.");
+        Assertions.m29302b(this.f19561b == null, "Unexpected moov box.");
         DrmInitData drmInitData = this.f19563d;
         if (drmInitData == null) {
             drmInitData = m26403a(aVar2.f19501h1);
@@ -757,7 +757,7 @@ public class C8972g implements C8912g {
         if (this.f19564e.size() != size3) {
             z = false;
         }
-        C9537e.m29301b(z);
+        Assertions.checkState(z);
         while (i3 < size3) {
             C8983m mVar2 = (C8983m) sparseArray2.valueAt(i3);
             ((C8974b) this.f19564e.get(mVar2.f19662a)).mo23374a(mVar2, m26404a(sparseArray, mVar2.f19662a));
@@ -866,7 +866,7 @@ public class C8972g implements C8912g {
             return (C8968e) sparseArray.valueAt(0);
         }
         Object obj = sparseArray.get(i);
-        C9537e.m29296a(obj);
+        Assertions.checkNotNull(obj);
         return (C8968e) obj;
     }
 
@@ -886,10 +886,10 @@ public class C8972g implements C8912g {
             int c = C8958c.m26357c(wVar.mo24698i());
             if (c == 0) {
                 String s = wVar.mo24708s();
-                C9537e.m29296a(s);
+                Assertions.checkNotNull(s);
                 String str3 = s;
                 String s2 = wVar.mo24708s();
-                C9537e.m29296a(s2);
+                Assertions.checkNotNull(s2);
                 String str4 = s2;
                 long x = wVar.mo24713x();
                 j4 = Util.m29439c(wVar.mo24713x(), 1000000, x);
@@ -912,10 +912,10 @@ public class C8972g implements C8912g {
                 long c2 = Util.m29439c(wVar.mo24713x(), 1000, x2);
                 long x3 = wVar.mo24713x();
                 String s3 = wVar.mo24708s();
-                C9537e.m29296a(s3);
+                Assertions.checkNotNull(s3);
                 String str5 = s3;
                 String s4 = wVar.mo24708s();
-                C9537e.m29296a(s4);
+                Assertions.checkNotNull(s4);
                 str2 = str5;
                 j2 = c2;
                 j = x3;

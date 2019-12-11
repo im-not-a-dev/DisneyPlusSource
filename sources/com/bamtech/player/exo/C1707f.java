@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.TextView;
 import com.bamtech.player.exo.p042j.C1722c;
 import com.google.android.exoplayer2.p391ui.C9402d;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.C5280i;
 import p163g.p174d.p178b.C5284j;
@@ -46,7 +46,7 @@ public final class C1707f implements C5284j {
                 }
             }
         } else {
-            throw new C13142s("null cannot be cast to non-null type com.bamtech.player.exo.ExoVideoPlayer");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtech.player.exo.ExoVideoPlayer");
         }
     }
 }

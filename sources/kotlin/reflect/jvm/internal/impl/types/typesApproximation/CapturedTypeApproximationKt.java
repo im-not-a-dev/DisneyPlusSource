@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.C12898l;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13147x;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;
@@ -80,7 +80,7 @@ public final class CapturedTypeApproximationKt {
                 }
                 return approximationBounds;
             }
-            throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.resolve.calls.inference.CapturedTypeConstructor");
+            throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.resolve.calls.inference.CapturedTypeConstructor");
         } else if (kotlinType.getArguments().isEmpty() || kotlinType.getArguments().size() != constructor.getParameters().size()) {
             return new ApproximationBounds<>(kotlinType, kotlinType);
         } else {

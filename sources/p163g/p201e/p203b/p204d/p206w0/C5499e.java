@@ -3,7 +3,7 @@ package p163g.p201e.p203b.p204d.p206w0;
 import com.bamtech.sdk4.subscription.Subscription;
 import com.bamtech.sdk4.subscription.SubscriptionProvider;
 import java.util.Locale;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: g.e.b.d.w0.e */
@@ -44,6 +44,6 @@ public final class C5499e {
             sb2.append("_bundle");
             return sb2.toString();
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 }

@@ -11,7 +11,7 @@ import com.bamtech.sdk4.service.NetworkException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import kotlin.C12898l;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -70,7 +70,7 @@ public final class QOSNetworkHelper implements Extension {
                 }
                 throw new C12898l();
             }
-            throw new C13142s("null cannot be cast to non-null type android.net.ConnectivityManager");
+            throw new TypeCastException("null cannot be cast to non-null type android.net.ConnectivityManager");
         } catch (Throwable unused) {
             return ConnectionStatus.unknown;
         }
@@ -94,7 +94,7 @@ public final class QOSNetworkHelper implements Extension {
                     return networkType;
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type android.net.ConnectivityManager");
+                throw new TypeCastException("null cannot be cast to non-null type android.net.ConnectivityManager");
             }
         }
         return NetworkType.unknown;

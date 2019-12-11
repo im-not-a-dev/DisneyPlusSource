@@ -1,6 +1,6 @@
 package kotlin.p573a0;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
@@ -66,7 +66,7 @@ public interface C12688f {
                 if (bVar != null) {
                     return bVar;
                 }
-                throw new C13142s("null cannot be cast to non-null type E");
+                throw new TypeCastException("null cannot be cast to non-null type E");
             }
 
             /* renamed from: a */

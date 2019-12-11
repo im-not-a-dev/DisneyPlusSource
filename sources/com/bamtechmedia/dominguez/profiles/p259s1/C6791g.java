@@ -44,7 +44,7 @@ import com.bamtechmedia.dominguez.profiles.p259s1.C6808i.C6809a;
 import com.bamtechmedia.dominguez.profiles.p268x1.C6913e;
 import java.util.HashMap;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -611,7 +611,7 @@ public final class C6791g extends C11890i implements C7717x, C2413n, C7536a {
                         throw null;
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.profiles.TempProfile");
+                    throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.profiles.TempProfile");
                 }
             }
         }

@@ -1,6 +1,6 @@
 package kotlinx.coroutines.p592j2;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlinx.coroutines.internal.C13266g;
 import kotlinx.coroutines.internal.C13268i;
 import kotlinx.coroutines.p592j2.C13301c.C13302a;
@@ -21,7 +21,7 @@ public class C13315k<E> extends C13294a<E> {
                     return (C13319o) iVar;
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
             }
         } while (!iVar.mo34421a((C13268i) aVar, (C13268i) d));
         m40921a(aVar);

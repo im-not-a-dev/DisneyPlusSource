@@ -7,7 +7,7 @@ import com.bamtech.sdk4.service.ServiceExceptionCase;
 import com.bamtech.sdk4.service.ServiceExceptionCase.InvalidCredentials;
 import com.bamtech.sdk4.service.ServiceExceptionCase.InvalidPassword;
 import com.bamtechmedia.dominguez.auth.p061o0.p062h.C2750c;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
@@ -398,7 +398,7 @@ public final class C5503a {
             Intrinsics.checkReturnedValueIsNotNull((Object) i, "authenticateIfNecessary(…(error)\n                }");
             return i;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.account.password.ChangePasswordAction.ActionState");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.account.password.ChangePasswordAction.ActionState");
     }
 
     /* renamed from: a */

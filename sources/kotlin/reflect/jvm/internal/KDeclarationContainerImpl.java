@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12866d;
 import kotlin.jvm.internal.Intrinsics;
@@ -195,7 +195,7 @@ public abstract class KDeclarationContainerImpl implements C12866d {
                 Intrinsics.checkReturnedValueIsNotNull((Object) loadClass, "jClass.safeClassLoader.l…d - 1).replace('/', '.'))");
                 return loadClass;
             }
-            throw new C13142s("null cannot be cast to non-null type java.lang.String");
+            throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
         } else if (charAt == 'S') {
             return Short.TYPE;
         } else {
@@ -239,7 +239,7 @@ public abstract class KDeclarationContainerImpl implements C12866d {
                 Class[] clsArr = (Class[]) array;
                 return cls.getDeclaredConstructor((Class[]) Arrays.copyOf(clsArr, clsArr.length));
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         } catch (NoSuchMethodException unused) {
             return null;
         }
@@ -551,11 +551,11 @@ public abstract class KDeclarationContainerImpl implements C12866d {
                         return lookupMethod2;
                     }
                 } else {
-                    throw new C13142s(str2);
+                    throw new TypeCastException(str2);
                 }
             }
             return null;
         }
-        throw new C13142s(str2);
+        throw new TypeCastException(str2);
     }
 }

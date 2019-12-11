@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.detail.common.p230g0;
 import com.bamtechmedia.dominguez.detail.common.C5904a0;
 import com.bamtechmedia.dominguez.detail.common.p229f0.C5925a;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import p163g.p509o.p510a.C11847b;
 import p163g.p509o.p510a.p511l.C11866a;
 import p163g.p509o.p510a.p511l.C11867b;
@@ -78,7 +78,7 @@ public final class C5956g {
             } else if (bVar != null) {
                 m19108a((C11866a) bVar);
             } else {
-                throw new C13142s("null cannot be cast to non-null type com.xwray.groupie.kotlinandroidextensions.Item");
+                throw new TypeCastException("null cannot be cast to non-null type com.xwray.groupie.kotlinandroidextensions.Item");
             }
         }
     }

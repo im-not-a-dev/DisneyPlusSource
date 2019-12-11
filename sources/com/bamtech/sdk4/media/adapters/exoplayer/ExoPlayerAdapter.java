@@ -23,7 +23,7 @@ import com.bamtech.sdk4.media.drm.PlayReadyDrmProvider;
 import com.bamtech.sdk4.media.drm.SilkDrmProvider;
 import com.bamtech.sdk4.media.drm.WidevineDrmProvider;
 import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.Format;
@@ -53,7 +53,7 @@ import com.google.android.exoplayer2.upstream.TransferListener;
 import com.google.android.exoplayer2.upstream.cache.C9465e;
 import java.util.Iterator;
 import java.util.UUID;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import okhttp3.CacheControl;
@@ -312,8 +312,8 @@ public final class ExoPlayerAdapter extends AbstractPlayerAdapter implements Exo
         PlayReadyDrmProvider playReadyDrmProvider = (PlayReadyDrmProvider) obj2;
         boolean z2 = true;
         boolean z3 = widevineDrmProvider == null && playReadyDrmProvider == null;
-        boolean z4 = Intrinsics.areEqual((Object) C8883r.PLAYREADY_UUID, (Object) uuid2) && playReadyDrmProvider != null && bArr == null;
-        if ((!Intrinsics.areEqual((Object) C8883r.WIDEVINE_UUID, (Object) uuid2) && uuid2 != null) || widevineDrmProvider == null) {
+        boolean z4 = Intrinsics.areEqual((Object) C.PLAYREADY_UUID, (Object) uuid2) && playReadyDrmProvider != null && bArr == null;
+        if ((!Intrinsics.areEqual((Object) C.WIDEVINE_UUID, (Object) uuid2) && uuid2 != null) || widevineDrmProvider == null) {
             z2 = false;
         }
         if (!z3) {
@@ -326,7 +326,7 @@ public final class ExoPlayerAdapter extends AbstractPlayerAdapter implements Exo
                     drmSessionManager.create(playReadyDrmProvider, getPlaybackEventBroadcaster(), getQosEventBroadcaster(), null, bArr2, this.options.isDrmMultiSession(), str, z);
                     return;
                 }
-                throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.media.drm.DrmProvider");
+                throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.media.drm.DrmProvider");
             } else if (z2) {
                 WidevineDrmSessionManager drmSessionManager2 = this.options.getDrmSessionManager();
                 if (drmSessionManager2 == null) {
@@ -348,7 +348,7 @@ public final class ExoPlayerAdapter extends AbstractPlayerAdapter implements Exo
 
     private final MediaSource getCachedMediaSource(CachedMediaItemPlaylist cachedMediaItemPlaylist) {
         C9517t tVar = new C9517t("ExoPlayerAdapter", null);
-        configureDrm(C8883r.WIDEVINE_UUID, cachedMediaItemPlaylist.getLicense(), cachedMediaItemPlaylist.getAudioLicense(), null, true);
+        configureDrm(C.WIDEVINE_UUID, cachedMediaItemPlaylist.getLicense(), cachedMediaItemPlaylist.getAudioLicense(), null, true);
         HlsMediaSource.Factory streamKeys = new HlsMediaSource.Factory((C9435a) new C9465e(cachedMediaItemPlaylist.getCache(), tVar, 2)).mo23785a((C9187g) new C9178b()).setStreamKeys(cachedMediaItemPlaylist.getRenditionKeys());
         streamKeys.mo23787a(this.options.getAllowChunklessPreparation());
         HlsExtractorFactory hlsExtractorFactory = this.options.getHlsExtractorFactory();
@@ -397,7 +397,7 @@ public final class ExoPlayerAdapter extends AbstractPlayerAdapter implements Exo
             Intrinsics.throwUninitializedPropertyAccessException("sourceEventListener");
             throw null;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.media.drm.SilkDrmProvider");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.media.drm.SilkDrmProvider");
     }
 
     private final Factory prepareManifestDataSourceFactory(NetworkConfigurationProvider networkConfigurationProvider) {

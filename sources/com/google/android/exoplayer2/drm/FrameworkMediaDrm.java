@@ -9,13 +9,13 @@ import android.media.MediaDrmException;
 import android.media.NotProvisionedException;
 import android.media.UnsupportedSchemeException;
 import android.text.TextUtils;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.OnKeyStatusChangeListener;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.KeyRequest;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.ProvisionRequest;
 import com.google.android.exoplayer2.p366s0.p371v.C8980k;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
@@ -28,7 +28,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @TargetApi(23)
-public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
+public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto> {
 
     /* renamed from: a */
     private final UUID f18473a;
@@ -37,11 +37,11 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
     private final MediaDrm f18474b;
 
     private FrameworkMediaDrm(UUID uuid) throws UnsupportedSchemeException {
-        C9537e.m29296a(uuid);
-        C9537e.m29300a(!C8883r.COMMON_PSSH_UUID.equals(uuid), (Object) "Use C.CLEARKEY_UUID instead");
+        Assertions.checkNotNull(uuid);
+        Assertions.m29300a(!C.COMMON_PSSH_UUID.equals(uuid), (Object) "Use C.CLEARKEY_UUID instead");
         this.f18473a = uuid;
         this.f18474b = new MediaDrm(m25191a(uuid));
-        if (C8883r.WIDEVINE_UUID.equals(uuid) && m25196c()) {
+        if (C.WIDEVINE_UUID.equals(uuid) && m25196c()) {
             m25192a(this.f18474b);
         }
     }
@@ -83,7 +83,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
     }
 
     /* renamed from: a */
-    public void mo22778a(OnKeyStatusChangeListener<? super C8713o> aVar) {
+    public void mo22778a(OnKeyStatusChangeListener<? super FrameworkMediaCrypto> aVar) {
         this.f18474b.setOnEventListener(aVar == null ? null : new C8699d(this, aVar));
     }
 
@@ -98,13 +98,13 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
     }
 
     /* renamed from: b */
-    public static FrameworkMediaDrm m25194b(UUID uuid) throws C8716r {
+    public static FrameworkMediaDrm m25194b(UUID uuid) throws UnsupportedDrmException {
         try {
             return new FrameworkMediaDrm(uuid);
         } catch (UnsupportedSchemeException e) {
-            throw new C8716r(1, e);
+            throw new UnsupportedDrmException(1, e);
         } catch (Exception e2) {
-            throw new C8716r(2, e2);
+            throw new UnsupportedDrmException(2, e2);
         }
     }
 
@@ -127,7 +127,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
             bVar = m25189a(this.f18473a, list);
             UUID uuid = this.f18473a;
             byte[] bArr3 = bVar.f18466X;
-            C9537e.m29296a(bArr3);
+            Assertions.checkNotNull(bArr3);
             bArr2 = m25195b(uuid, bArr3);
             str = m25190a(this.f18473a, bVar.f18465W);
         } else {
@@ -153,23 +153,23 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
 
     /* renamed from: b */
     public byte[] mo22783b(byte[] bArr, byte[] bArr2) throws NotProvisionedException, DeniedByServerException {
-        if (C8883r.CLEARKEY_UUID.equals(this.f18473a)) {
-            bArr2 = C8703h.m25221b(bArr2);
+        if (C.CLEARKEY_UUID.equals(this.f18473a)) {
+            bArr2 = ClearKeyUtil.m25221b(bArr2);
         }
         return this.f18474b.provideKeyResponse(bArr, bArr2);
     }
 
     /* renamed from: b */
-    public C8713o m25207b(byte[] bArr) throws MediaCryptoException {
+    public FrameworkMediaCrypto m25207b(byte[] bArr) throws MediaCryptoException {
         boolean z;
-        if (Util.SDK_INT < 21 && C8883r.WIDEVINE_UUID.equals(this.f18473a)) {
+        if (Util.SDK_INT < 21 && C.WIDEVINE_UUID.equals(this.f18473a)) {
             if ("L3".equals(mo22790a("securityLevel"))) {
                 z = true;
-                return new C8713o(m25191a(this.f18473a), bArr, z);
+                return new FrameworkMediaCrypto(m25191a(this.f18473a), bArr, z);
             }
         }
         z = false;
-        return new C8713o(m25191a(this.f18473a), bArr, z);
+        return new FrameworkMediaCrypto(m25191a(this.f18473a), bArr, z);
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:19:0x0056, code lost:
@@ -179,7 +179,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private static byte[] m25195b(java.util.UUID r2, byte[] r3) {
         /*
-            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
+            java.util.UUID r0 = com.google.android.exoplayer2.C.PLAYREADY_UUID
             boolean r0 = r0.equals(r2)
             if (r0 == 0) goto L_0x001a
             byte[] r0 = com.google.android.exoplayer2.p366s0.p371v.C8980k.m26493a(r3, r2)
@@ -188,18 +188,18 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
         L_0x000f:
             r3 = r0
         L_0x0010:
-            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
+            java.util.UUID r0 = com.google.android.exoplayer2.C.PLAYREADY_UUID
             byte[] r3 = m25197e(r3)
             byte[] r3 = com.google.android.exoplayer2.p366s0.p371v.C8980k.m26491a(r0, r3)
         L_0x001a:
             int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
             r1 = 21
             if (r0 >= r1) goto L_0x0028
-            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.WIDEVINE_UUID
+            java.util.UUID r0 = com.google.android.exoplayer2.C.WIDEVINE_UUID
             boolean r0 = r0.equals(r2)
             if (r0 != 0) goto L_0x0058
         L_0x0028:
-            java.util.UUID r0 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
+            java.util.UUID r0 = com.google.android.exoplayer2.C.PLAYREADY_UUID
             boolean r0 = r0.equals(r2)
             if (r0 == 0) goto L_0x005f
             java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
@@ -257,7 +257,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
     /* renamed from: a */
     private static C8692b m25189a(UUID uuid, List<C8692b> list) {
         boolean z;
-        if (!C8883r.WIDEVINE_UUID.equals(uuid)) {
+        if (!C.WIDEVINE_UUID.equals(uuid)) {
             return (C8692b) list.get(0);
         }
         if (Util.SDK_INT >= 28 && list.size() > 1) {
@@ -312,17 +312,17 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<C8713o> {
 
     /* renamed from: a */
     private static UUID m25191a(UUID uuid) {
-        return (Util.SDK_INT >= 27 || !C8883r.CLEARKEY_UUID.equals(uuid)) ? uuid : C8883r.COMMON_PSSH_UUID;
+        return (Util.SDK_INT >= 27 || !C.CLEARKEY_UUID.equals(uuid)) ? uuid : C.COMMON_PSSH_UUID;
     }
 
     /* renamed from: a */
     private static String m25190a(UUID uuid, String str) {
-        return (Util.SDK_INT >= 26 || !C8883r.CLEARKEY_UUID.equals(uuid) || (!"video/mp4".equals(str) && !"audio/mp4".equals(str))) ? str : "cenc";
+        return (Util.SDK_INT >= 26 || !C.CLEARKEY_UUID.equals(uuid) || (!"video/mp4".equals(str) && !"audio/mp4".equals(str))) ? str : "cenc";
     }
 
     /* renamed from: a */
     private static byte[] m25193a(UUID uuid, byte[] bArr) {
-        return C8883r.CLEARKEY_UUID.equals(uuid) ? C8703h.m25219a(bArr) : bArr;
+        return C.CLEARKEY_UUID.equals(uuid) ? ClearKeyUtil.m25219a(bArr) : bArr;
     }
 
     @SuppressLint({"WrongConstant"})

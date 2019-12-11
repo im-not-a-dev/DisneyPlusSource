@@ -21,7 +21,7 @@ import com.bamtechmedia.dominguez.detail.common.C5897a.C5898a.C5901c;
 import com.bamtechmedia.dominguez.detail.common.C5897a.C5898a.C5902d;
 import com.bamtechmedia.dominguez.detail.common.C5897a.C5898a.C5903e;
 import java.util.HashMap;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
@@ -115,7 +115,7 @@ public final class DefaultBookmarkButton extends C5897a {
             if (buttonState2 != null) {
                 i = ((C5900b) buttonState2).mo17799a();
             } else {
-                throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.detail.common.BookmarkButton.State.PlayPromo");
+                throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.detail.common.BookmarkButton.State.PlayPromo");
             }
         } else if (buttonState instanceof C5901c) {
             i = C7313g.btn_details_restart;
@@ -170,9 +170,9 @@ public final class DefaultBookmarkButton extends C5897a {
                     progressBar4.setProgress(((C5902d) buttonState).mo17804a());
                     return;
                 }
-                throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.detail.common.BookmarkButton.State.Resume");
+                throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.detail.common.BookmarkButton.State.Resume");
             }
-            throw new C13142s("null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams");
+            throw new TypeCastException("null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams");
         }
     }
 

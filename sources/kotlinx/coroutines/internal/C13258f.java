@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 import kotlin.C12900n;
 import kotlin.C12900n.C12901a;
 import kotlin.C12903o;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -59,7 +59,7 @@ public final class C13258f {
                     }
                     return (Throwable) obj;
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Throwable");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Throwable");
             } catch (Throwable th2) {
                 C12901a aVar2 = C12900n.f29540c;
                 obj = C12903o.m40240a(th2);
@@ -93,7 +93,7 @@ public final class C13258f {
                     }
                     return (Throwable) obj;
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Throwable");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Throwable");
             } catch (Throwable th2) {
                 C12901a aVar2 = C12900n.f29540c;
                 obj = C12903o.m40240a(th2);
@@ -129,7 +129,7 @@ public final class C13258f {
                     }
                     return (Throwable) obj;
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Throwable");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Throwable");
             } catch (Throwable th3) {
                 C12901a aVar2 = C12900n.f29540c;
                 Object obj2 = C12903o.m40240a(th3);
@@ -166,7 +166,7 @@ public final class C13258f {
                     }
                     return (Throwable) obj;
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Throwable");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Throwable");
             } catch (Throwable th3) {
                 C12901a aVar2 = C12900n.f29540c;
                 Object obj2 = C12903o.m40240a(th3);

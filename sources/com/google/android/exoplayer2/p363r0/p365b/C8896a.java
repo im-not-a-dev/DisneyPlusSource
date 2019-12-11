@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p363r0.p365b;
 
 import android.net.Uri;
 import com.google.android.exoplayer2.C8672a0;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9574y;
 import com.google.android.exoplayer2.upstream.C9497h;
@@ -86,7 +86,7 @@ public class C8896a extends C9497h implements HttpDataSource {
 
     public C8896a(C14111a aVar, String str, C9574y<String> yVar, CacheControl cacheControl, C9440e eVar) {
         super(true);
-        C9537e.m29296a(aVar);
+        Assertions.checkNotNull(aVar);
         this.f19075e = aVar;
         this.f19077g = str;
         this.f19078h = yVar;
@@ -210,7 +210,7 @@ public class C8896a extends C9497h implements HttpDataSource {
             this.f19082l = this.f19075e.mo35727a(m26058c(dataSpec)).mo35726n0();
             Response response = this.f19082l;
             C14264y a = response.mo35855a();
-            C9537e.m29296a(a);
+            Assertions.checkNotNull(a);
             C14264y yVar = a;
             this.f19083m = yVar.mo36277a();
             int c = response.mo35858c();
@@ -265,7 +265,7 @@ public class C8896a extends C9497h implements HttpDataSource {
             return m26057a(bArr, i, i2);
         } catch (IOException e) {
             DataSpec dataSpec = this.f19081k;
-            C9537e.m29296a(dataSpec);
+            Assertions.checkNotNull(dataSpec);
             throw new C9437b(e, dataSpec, 2);
         }
     }
@@ -302,7 +302,7 @@ public class C8896a extends C9497h implements HttpDataSource {
         Response response = this.f19082l;
         if (response != null) {
             C14264y a = response.mo35855a();
-            C9537e.m29296a(a);
+            Assertions.checkNotNull(a);
             a.close();
             this.f19082l = null;
         }

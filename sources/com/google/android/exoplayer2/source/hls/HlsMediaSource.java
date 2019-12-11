@@ -2,10 +2,10 @@ package com.google.android.exoplayer2.source.hls;
 
 import android.net.Uri;
 import com.google.android.exoplayer2.C8672a0;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9197i0;
 import com.google.android.exoplayer2.source.C9229o;
@@ -103,8 +103,8 @@ public final class HlsMediaSource extends C9229o implements C9193e {
 
         /* renamed from: a */
         public Factory mo23784a(HlsExtractorFactory hlsExtractorFactory) {
-            C9537e.m29301b(!this.f20553j);
-            C9537e.m29296a(hlsExtractorFactory);
+            Assertions.checkState(!this.f20553j);
+            Assertions.checkNotNull(hlsExtractorFactory);
             this.f20545b = hlsExtractorFactory;
             return this;
         }
@@ -130,13 +130,13 @@ public final class HlsMediaSource extends C9229o implements C9193e {
         }
 
         public Factory setStreamKeys(List<StreamKey> list) {
-            C9537e.m29301b(!this.f20553j);
+            Assertions.checkState(!this.f20553j);
             this.f20547d = list;
             return this;
         }
 
         public Factory(C9162h hVar) {
-            C9537e.m29296a(hVar);
+            Assertions.checkNotNull(hVar);
             this.f20544a = hVar;
             this.f20546c = new C9178b();
             this.f20548e = C9179c.f20718j0;
@@ -147,22 +147,22 @@ public final class HlsMediaSource extends C9229o implements C9193e {
 
         /* renamed from: a */
         public Factory mo23786a(C9524z zVar) {
-            C9537e.m29301b(!this.f20553j);
+            Assertions.checkState(!this.f20553j);
             this.f20550g = zVar;
             return this;
         }
 
         /* renamed from: a */
         public Factory mo23785a(C9187g gVar) {
-            C9537e.m29301b(!this.f20553j);
-            C9537e.m29296a(gVar);
+            Assertions.checkState(!this.f20553j);
+            Assertions.checkNotNull(gVar);
             this.f20546c = gVar;
             return this;
         }
 
         /* renamed from: a */
         public Factory mo23787a(boolean z) {
-            C9537e.m29301b(!this.f20553j);
+            Assertions.checkState(!this.f20553j);
             this.f20551h = z;
             return this;
         }
@@ -217,7 +217,7 @@ public final class HlsMediaSource extends C9229o implements C9193e {
         long j;
         long j2;
         HlsMediaPlaylist hlsMediaPlaylist2 = hlsMediaPlaylist;
-        long b = hlsMediaPlaylist2.f20699m ? C8883r.usToMs(hlsMediaPlaylist2.f20692f) : -9223372036854775807L;
+        long b = hlsMediaPlaylist2.f20699m ? C.usToMs(hlsMediaPlaylist2.f20692f) : -9223372036854775807L;
         int i = hlsMediaPlaylist2.f20690d;
         long j3 = (i == 2 || i == 1) ? b : -9223372036854775807L;
         long j4 = hlsMediaPlaylist2.f20691e;

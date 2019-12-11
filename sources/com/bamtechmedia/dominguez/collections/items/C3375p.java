@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.collections.p080o0.C3444j;
 import com.bamtechmedia.dominguez.core.content.assets.C3626b;
 import java.util.Map;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p202a.C5362e;
@@ -207,7 +207,7 @@ public final class C3375p extends C11866a {
             C3375p pVar = (C3375p) eVar;
             return new C3377b(!Intrinsics.areEqual((Object) pVar.f8509V, (Object) this.f8509V), !Intrinsics.areEqual((Object) pVar.f8508U, (Object) this.f8508U));
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ShelfCategoryItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ShelfCategoryItem");
     }
 
     public int getLayout() {

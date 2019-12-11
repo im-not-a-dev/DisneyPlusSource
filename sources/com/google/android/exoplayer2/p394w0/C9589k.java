@@ -8,7 +8,7 @@ import android.os.Handler.Callback;
 import android.os.HandlerThread;
 import android.os.Message;
 import android.view.Surface;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9550k;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
@@ -55,7 +55,7 @@ public final class C9589k extends Surface {
 
         /* renamed from: b */
         private void m29622b(int i) {
-            C9537e.m29296a(this.f22390c);
+            Assertions.checkNotNull(this.f22390c);
             this.f22390c.mo24641a(i);
             this.f22389X = new C9589k(this, this.f22390c.mo24640a(), i != 0);
         }
@@ -85,7 +85,7 @@ public final class C9589k extends Surface {
                 Error error = this.f22387V;
                 if (error == null) {
                     C9589k kVar = this.f22389X;
-                    C9537e.m29296a(kVar);
+                    Assertions.checkNotNull(kVar);
                     return kVar;
                 }
                 throw error;
@@ -138,13 +138,13 @@ public final class C9589k extends Surface {
 
         /* renamed from: b */
         private void m29621b() {
-            C9537e.m29296a(this.f22390c);
+            Assertions.checkNotNull(this.f22390c);
             this.f22390c.mo24642b();
         }
 
         /* renamed from: a */
         public void mo24752a() {
-            C9537e.m29296a(this.f22386U);
+            Assertions.checkNotNull(this.f22386U);
             this.f22386U.sendEmptyMessage(2);
         }
     }
@@ -160,7 +160,7 @@ public final class C9589k extends Surface {
     public static C9589k m29619a(Context context, boolean z) {
         m29617X();
         int i = 0;
-        C9537e.m29301b(!z || m29620b(context));
+        Assertions.checkState(!z || m29620b(context));
         C9591b bVar = new C9591b();
         if (z) {
             i = f22382V;

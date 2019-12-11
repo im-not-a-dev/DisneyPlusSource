@@ -13,7 +13,7 @@ import com.bamtech.sdk4.media.adapters.exoplayer.DrmSessionManagerModule;
 import com.bamtech.sdk4.media.adapters.exoplayer.ExoPlayerAdapter;
 import com.bamtech.sdk4.media.adapters.exoplayer.ExoPlayerAdapter.Builder;
 import com.bamtech.sdk4.media.adapters.exoplayer.WidevineDrmSessionManager;
-import com.google.android.exoplayer2.drm.C8710l;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.upstream.C9510p;
 import com.google.android.exoplayer2.upstream.DataSource.C9435a;
@@ -61,7 +61,7 @@ public class SDK4ExoPlaybackEngine extends ExoPlaybackEngine {
             if (aVar instanceof Factory) {
                 bandwidthMeter.dataSourceFactory((Factory) aVar);
             }
-            C8710l lVar = this.f5927z;
+            DrmSessionManager lVar = this.f5927z;
             if (lVar != null) {
                 bandwidthMeter.drmSessionManager((WidevineDrmSessionManager) lVar);
             }
@@ -104,7 +104,7 @@ public class SDK4ExoPlaybackEngine extends ExoPlaybackEngine {
         /* renamed from: e */
         public C1749a mo7818e() {
             m8104g();
-            mo7548a((C8710l) DrmSessionManagerModule.playbackDrmSessionManager());
+            mo7548a((DrmSessionManager) DrmSessionManagerModule.playbackDrmSessionManager());
             return this;
         }
 
@@ -121,7 +121,7 @@ public class SDK4ExoPlaybackEngine extends ExoPlaybackEngine {
         }
 
         /* renamed from: a */
-        public C1749a mo7548a(C8710l lVar) {
+        public C1749a mo7548a(DrmSessionManager lVar) {
             super.mo7548a(lVar);
             return this;
         }

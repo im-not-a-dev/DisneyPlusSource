@@ -8,7 +8,7 @@ import org.json.JSONObject;
 
 /* renamed from: com.google.android.exoplayer2.drm.h */
 /* compiled from: ClearKeyUtil */
-final class C8703h {
+final class ClearKeyUtil {
     /* renamed from: a */
     public static byte[] m25219a(byte[] bArr) {
         if (Util.SDK_INT >= 27) {

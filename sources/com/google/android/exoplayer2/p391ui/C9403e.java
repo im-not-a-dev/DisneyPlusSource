@@ -19,7 +19,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction;
 import com.bamtech.sdk4.internal.configuration.ContentServiceClientExtras;
 import com.google.android.exoplayer2.p391ui.C9418p.C9419a;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.util.Formatter;
 import java.util.Iterator;
@@ -582,13 +582,13 @@ public class C9403e extends View implements C9418p {
     }
 
     public void setKeyCountIncrement(int i) {
-        C9537e.m29299a(i > 0);
+        Assertions.m29299a(i > 0);
         this.f21772w0 = i;
         this.f21773x0 = -9223372036854775807L;
     }
 
     public void setKeyTimeIncrement(long j) {
-        C9537e.m29299a(j > 0);
+        Assertions.m29299a(j > 0);
         this.f21772w0 = -1;
         this.f21773x0 = j;
     }
@@ -626,7 +626,7 @@ public class C9403e extends View implements C9418p {
 
     /* renamed from: a */
     public void mo24350a(long[] jArr, boolean[] zArr, int i) {
-        C9537e.m29299a(i == 0 || !(jArr == null || zArr == null));
+        Assertions.m29299a(i == 0 || !(jArr == null || zArr == null));
         this.f21743E0 = i;
         this.f21744F0 = jArr;
         this.f21745G0 = zArr;
@@ -727,10 +727,10 @@ public class C9403e extends View implements C9418p {
         }
         if (this.f21743E0 != 0) {
             long[] jArr = this.f21744F0;
-            C9537e.m29296a(jArr);
+            Assertions.checkNotNull(jArr);
             long[] jArr2 = jArr;
             boolean[] zArr = this.f21745G0;
-            C9537e.m29296a(zArr);
+            Assertions.checkNotNull(zArr);
             boolean[] zArr2 = zArr;
             int i5 = this.f21759j0 / 2;
             for (int i6 = 0; i6 < this.f21743E0; i6++) {

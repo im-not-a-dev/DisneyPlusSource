@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.types;
 
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -52,11 +52,11 @@ public final class JavaTypeResolverKt {
                 }
                 declarationDescriptor = kotlinType2.getConstructor().getDeclarationDescriptor();
                 if (declarationDescriptor == null) {
-                    throw new C13142s(str);
+                    throw new TypeCastException(str);
                 }
             }
         } else {
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
     }
 

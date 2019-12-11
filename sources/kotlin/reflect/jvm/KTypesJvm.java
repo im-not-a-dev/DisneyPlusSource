@@ -2,7 +2,7 @@ package kotlin.reflect.jvm;
 
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12895y;
 import kotlin.reflect.KClass;
@@ -69,7 +69,7 @@ public final class KTypesJvm {
                         break;
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlin.reflect.jvm.internal.KTypeImpl");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlin.reflect.jvm.internal.KTypeImpl");
                 }
             }
             KType kType2 = (KType) obj;

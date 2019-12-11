@@ -7,7 +7,7 @@ import com.bamtech.player.exo.p044l.C1732d;
 import com.bamtech.player.exo.p045m.C1735c;
 import com.bamtech.player.exo.p045m.C1736d;
 import com.bamtech.player.exo.p046n.C1739a;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.PlaybackParameters;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.Timeline.C8670c;
@@ -228,7 +228,7 @@ public class C1706e implements C5326w {
         C8670c cVar = new C8670c();
         Timeline currentTimeline = this.f5951a.getCurrentTimeline();
         if (currentTimeline.mo22667b() > 0) {
-            return C8883r.usToMs(currentTimeline.mo22663a(this.f5951a.getCurrentWindowIndex(), cVar).f18403e);
+            return C.usToMs(currentTimeline.mo22663a(this.f5951a.getCurrentWindowIndex(), cVar).f18403e);
         }
         return 0;
     }

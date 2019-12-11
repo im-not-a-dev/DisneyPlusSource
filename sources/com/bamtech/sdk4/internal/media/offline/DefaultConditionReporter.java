@@ -19,7 +19,7 @@ import com.bamtech.sdk4.internal.media.offline.BatteryNotLowStatus.BatteryNotLow
 import com.bamtech.sdk4.internal.media.offline.BatteryNotLowStatus.NotOnBattery;
 import com.bamtech.sdk4.internal.media.offline.StorageStatus.SpaceLow;
 import com.bamtech.sdk4.internal.media.offline.StorageStatus.SpaceOk;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p129n.C4063a;
@@ -129,7 +129,7 @@ public final class DefaultConditionReporter implements ConditionReporter {
                 Intrinsics.checkReturnedValueIsNotNull((Object) activeNetworkInfo, "info");
                 return new NetworkStatus(activeNetworkInfo.isConnected(), isActiveNetworkValidated(), C4063a.m13968a(connectivityManager), !activeNetworkInfo.isRoaming());
             }
-            throw new C13142s("null cannot be cast to non-null type android.net.ConnectivityManager");
+            throw new TypeCastException("null cannot be cast to non-null type android.net.ConnectivityManager");
         } catch (Throwable unused) {
             return null;
         }

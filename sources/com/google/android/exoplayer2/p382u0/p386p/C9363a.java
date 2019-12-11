@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p382u0.p386p;
 
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9323c;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9564r;
@@ -42,7 +42,7 @@ public final class C9363a extends C9323c {
         }
         this.f21537n = true;
         String a = Util.m29399a((byte[]) list.get(0));
-        C9537e.m29299a(a.startsWith("Format: "));
+        Assertions.m29299a(a.startsWith("Format: "));
         m28542a(a);
         m28540a(new C9572w((byte[]) list.get(1)));
     }

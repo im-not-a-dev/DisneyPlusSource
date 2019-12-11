@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.about.C2285p;
 import com.bamtechmedia.dominguez.about.p052r.p053i.C2323a;
 import com.bamtechmedia.dominguez.about.p052r.p053i.C2323a.C2324a;
 import com.bamtechmedia.dominguez.core.utils.C5862q0;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -160,7 +160,7 @@ public final class C2297c {
             sb.append(f);
             return sb.toString();
         }
-        throw new C13142s("null cannot be cast to non-null type android.view.WindowManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.view.WindowManager");
     }
 
     /* access modifiers changed from: private */
@@ -170,7 +170,7 @@ public final class C2297c {
         if (systemService != null) {
             return (TelephonyManager) systemService;
         }
-        throw new C13142s("null cannot be cast to non-null type android.telephony.TelephonyManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.telephony.TelephonyManager");
     }
 
     /* renamed from: a */

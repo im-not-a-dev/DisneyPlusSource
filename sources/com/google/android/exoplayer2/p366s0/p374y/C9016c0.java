@@ -6,7 +6,7 @@ import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
 import com.google.android.exoplayer2.p382u0.p383m.C9348g;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.util.List;
 
@@ -36,7 +36,7 @@ final class C9016c0 {
             StringBuilder sb = new StringBuilder();
             sb.append("Invalid closed caption mime type provided: ");
             sb.append(str);
-            C9537e.m29300a(z, (Object) sb.toString());
+            Assertions.m29300a(z, (Object) sb.toString());
             String str2 = format.f18350c;
             if (str2 == null) {
                 str2 = dVar.mo23442b();

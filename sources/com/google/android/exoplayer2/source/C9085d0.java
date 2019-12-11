@@ -4,7 +4,7 @@ import com.google.android.exoplayer2.C8679b0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.source.d0 */
@@ -296,7 +296,7 @@ final class C9085d0 {
     public long mo23586a(int i) {
         int i2 = mo23601i() - i;
         boolean z = false;
-        C9537e.m29299a(i2 >= 0 && i2 <= this.f20267i - this.f20270l);
+        Assertions.m29299a(i2 >= 0 && i2 <= this.f20267i - this.f20270l);
         this.f20267i -= i2;
         this.f20272n = Math.max(this.f20271m, m27056e(this.f20267i));
         if (i2 == 0 && this.f20273o) {
@@ -453,7 +453,7 @@ final class C9085d0 {
         L_0x0015:
             r0 = 0
         L_0x0016:
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r0)     // Catch:{ all -> 0x00e1 }
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r0)     // Catch:{ all -> 0x00e1 }
             r0 = 536870912(0x20000000, float:1.0842022E-19)
             r0 = r0 & r8
             if (r0 == 0) goto L_0x0020

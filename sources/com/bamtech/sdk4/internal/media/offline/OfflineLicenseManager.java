@@ -8,10 +8,10 @@ import com.bamtech.sdk4.internal.media.offline.error.PlaybackInProgressError;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.media.adapters.exoplayer.WidevineDrmSessionManager;
 import com.bamtech.sdk4.media.drm.WidevineDrmProvider;
-import com.google.android.exoplayer2.C8883r;
-import com.google.android.exoplayer2.drm.C8709k;
-import com.google.android.exoplayer2.drm.C8713o;
-import com.google.android.exoplayer2.drm.C8715q;
+import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.drm.DefaultDrmSessionEventListener;
+import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
+import com.google.android.exoplayer2.drm.MediaDrmCallback;
 import com.google.android.exoplayer2.drm.DefaultDrmSessionManager;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.drm.DrmSession;
@@ -33,7 +33,7 @@ public final class OfflineLicenseManager implements WidevineLicenseManager {
 
     @Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0002\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u001c\u0010\u0007\u001a\u00020\b2\b\u0010\t\u001a\u0004\u0018\u00010\n2\b\u0010\u000b\u001a\u0004\u0018\u00010\fH\u0016J\u001c\u0010\r\u001a\u00020\b2\b\u0010\t\u001a\u0004\u0018\u00010\n2\b\u0010\u000b\u001a\u0004\u0018\u00010\u000eH\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u000f"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/media/offline/OfflineLicenseManager$WidevineDrmCallback;", "Lcom/google/android/exoplayer2/drm/MediaDrmCallback;", "provider", "Lcom/bamtech/sdk4/media/drm/WidevineDrmProvider;", "requestMode", "Lcom/bamtech/sdk4/internal/media/offline/DRMKeyMode;", "(Lcom/bamtech/sdk4/media/drm/WidevineDrmProvider;Lcom/bamtech/sdk4/internal/media/offline/DRMKeyMode;)V", "executeKeyRequest", "", "uuid", "Ljava/util/UUID;", "request", "Lcom/google/android/exoplayer2/drm/ExoMediaDrm$KeyRequest;", "executeProvisionRequest", "Lcom/google/android/exoplayer2/drm/ExoMediaDrm$ProvisionRequest;", "plugin-offline-media_release"}, mo31008k = 1, mo31009mv = {1, 1, 15})
     /* compiled from: OfflineLicenseManager.kt */
-    private static final class WidevineDrmCallback implements C8715q {
+    private static final class WidevineDrmCallback implements MediaDrmCallback {
         private final WidevineDrmProvider provider;
         private final DRMKeyMode requestMode;
 
@@ -54,7 +54,7 @@ public final class OfflineLicenseManager implements WidevineLicenseManager {
 
         public byte[] executeKeyRequest(UUID uuid, KeyRequest keyRequest) {
             Single single;
-            if (!(!Intrinsics.areEqual((Object) uuid, (Object) C8883r.WIDEVINE_UUID))) {
+            if (!(!Intrinsics.areEqual((Object) uuid, (Object) C.WIDEVINE_UUID))) {
                 if ((keyRequest != null ? keyRequest.getData() : null) != null) {
                     ServiceTransaction serviceTransaction = (ServiceTransaction) this.provider.getTransactionProvider().get();
                     byte[] a = keyRequest.getData();
@@ -86,7 +86,7 @@ public final class OfflineLicenseManager implements WidevineLicenseManager {
         }
 
         public byte[] executeProvisionRequest(UUID uuid, ProvisionRequest provisionRequest) {
-            if (Intrinsics.areEqual((Object) uuid, (Object) C8883r.WIDEVINE_UUID)) {
+            if (Intrinsics.areEqual((Object) uuid, (Object) C.WIDEVINE_UUID)) {
                 if ((provisionRequest != null ? provisionRequest.getData() : null) != null) {
                     WidevineDrmProvider widevineDrmProvider = this.provider;
                     Object obj = widevineDrmProvider.getTransactionProvider().get();
@@ -140,8 +140,8 @@ public final class OfflineLicenseManager implements WidevineLicenseManager {
         return (byte[]) withDrmSession;
     }
 
-    public final DefaultDrmSessionManager<C8713o> getDrmSessionManager(DRMKeyMode dRMKeyMode) {
-        DefaultDrmSessionManager<C8713o> a = DefaultDrmSessionManager.m25147a((C8715q) new WidevineDrmCallback(this.drmProvider, dRMKeyMode), new HashMap<>());
+    public final DefaultDrmSessionManager<FrameworkMediaCrypto> getDrmSessionManager(DRMKeyMode dRMKeyMode) {
+        DefaultDrmSessionManager<FrameworkMediaCrypto> a = DefaultDrmSessionManager.newWidevineInstance((MediaDrmCallback) new WidevineDrmCallback(this.drmProvider, dRMKeyMode), new HashMap<>());
         Intrinsics.checkReturnedValueIsNotNull((Object) a, "DefaultDrmSessionManager…ring, String>()\n        )");
         return a;
     }
@@ -152,7 +152,7 @@ public final class OfflineLicenseManager implements WidevineLicenseManager {
 
     public byte[] release(byte[] bArr, boolean z) {
         verifyNotPlaying(bArr);
-        FrameworkMediaDrm b = FrameworkMediaDrm.m25194b(C8883r.WIDEVINE_UUID);
+        FrameworkMediaDrm b = FrameworkMediaDrm.m25194b(C.WIDEVINE_UUID);
         KeyRequest a = b.mo22775a(bArr, null, 3, null);
         WidevineDrmProvider widevineDrmProvider = this.drmProvider;
         Object obj = widevineDrmProvider.getTransactionProvider().get();
@@ -166,14 +166,14 @@ public final class OfflineLicenseManager implements WidevineLicenseManager {
         return (byte[]) c;
     }
 
-    public final <T> T withDrmSession(DRMKeyMode dRMKeyMode, byte[] bArr, DrmInitData drmInitData, Function1<? super DrmSession<C8713o>, ? extends T> function1) {
+    public final <T> T withDrmSession(DRMKeyMode dRMKeyMode, byte[] bArr, DrmInitData drmInitData, Function1<? super DrmSession<FrameworkMediaCrypto>, ? extends T> function1) {
         ConditionVariable conditionVariable = new ConditionVariable();
         DefaultDrmSessionManager drmSessionManager = getDrmSessionManager(dRMKeyMode);
         HandlerThread handlerThread = new HandlerThread("OfflineLicenseManager");
         handlerThread.start();
-        drmSessionManager.mo22744a(new Handler(handlerThread.getLooper()), (C8709k) new OfflineLicenseManager$withDrmSession$eventListener$1(conditionVariable));
+        drmSessionManager.mo22744a(new Handler(handlerThread.getLooper()), (DefaultDrmSessionEventListener) new OfflineLicenseManager$withDrmSession$eventListener$1(conditionVariable));
         try {
-            drmSessionManager.mo22743a(dRMKeyMode.toDrmSessionMode(), bArr);
+            drmSessionManager.setMode(dRMKeyMode.toDrmSessionMode(), bArr);
             Looper looper = handlerThread.getLooper();
             conditionVariable.close();
             DrmSession acquireSession = drmSessionManager.acquireSession(looper, drmInitData);

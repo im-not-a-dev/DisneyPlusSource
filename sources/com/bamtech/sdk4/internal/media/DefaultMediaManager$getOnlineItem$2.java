@@ -2,7 +2,7 @@ package com.bamtech.sdk4.internal.media;
 
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import com.bamtech.sdk4.media.MediaItem;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import p520io.reactivex.functions.Consumer;
 
@@ -22,6 +22,6 @@ final class DefaultMediaManager$getOnlineItem$2<T> implements Consumer<MediaItem
             this.this$0.setAdEngineToken(this.$transaction, (OnlineMediaItem) mediaItem);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.internal.media.OnlineMediaItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.internal.media.OnlineMediaItem");
     }
 }

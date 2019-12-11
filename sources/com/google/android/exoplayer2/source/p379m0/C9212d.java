@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.source.p379m0;
 
 import android.net.Uri;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.upstream.C9442a0.C9447e;
 import com.google.android.exoplayer2.upstream.C9496g0;
 import com.google.android.exoplayer2.upstream.DataSource;
@@ -40,7 +40,7 @@ public abstract class C9212d implements C9447e {
 
     public C9212d(DataSource dataSource, DataSpec dataSpec, int i, Format format, int i2, Object obj, long j, long j2) {
         this.f20863h = new C9496g0(dataSource);
-        C9537e.m29296a(dataSpec);
+        Assertions.checkNotNull(dataSpec);
         this.f20856a = dataSpec;
         this.f20857b = i;
         this.f20858c = format;

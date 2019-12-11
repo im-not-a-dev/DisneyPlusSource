@@ -18,7 +18,7 @@ import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9548j;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
@@ -230,7 +230,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
                         this.f20226k += j;
                     }
                     Uri uri = this.f20217b.getUri();
-                    C9537e.m29296a(uri);
+                    Assertions.checkNotNull(uri);
                     Uri uri2 = uri;
                     C9075b0.this.f20199j0 = C8753b.m25387a(this.f20217b.mo9243a());
                     DataSource dataSource = this.f20217b;
@@ -295,7 +295,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
             long j2 = j;
             int a = wVar.mo24679a();
             C8924q qVar = this.f20227l;
-            C9537e.m29296a(qVar);
+            Assertions.checkNotNull(qVar);
             C8924q qVar2 = qVar;
             qVar2.mo23305a(wVar, a);
             qVar2.mo23303a(j2, 1, a, 0, null);
@@ -534,7 +534,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
     /* renamed from: o */
     private C9079d m26995o() {
         C9079d dVar = this.f20204o0;
-        C9537e.m29296a(dVar);
+        Assertions.checkNotNull(dVar);
         return dVar;
     }
 
@@ -596,7 +596,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
             this.f20203n0 = true;
             this.f20186X.mo23572a(this.f20211v0, oVar.mo23279c());
             C9073a aVar = this.f20197h0;
-            C9537e.m29296a(aVar);
+            Assertions.checkNotNull(aVar);
             aVar.mo23550a(this);
         }
     }
@@ -606,7 +606,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
         C9076a aVar = new C9076a(this.f20191c, this.f20183U, this.f20192c0, this, this.f20193d0);
         if (this.f20203n0) {
             C8920o oVar = m26995o().f20232a;
-            C9537e.m29301b(m26996p());
+            Assertions.checkState(m26996p());
             long j = this.f20211v0;
             if (j == -9223372036854775807L || this.f20214y0 <= j) {
                 aVar.m27032a(oVar.mo23277b(this.f20214y0).f19164a.f19170b, this.f20214y0);
@@ -672,7 +672,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
     public /* synthetic */ void mo23564i() {
         if (!this.f20182C0) {
             C9073a aVar = this.f20197h0;
-            C9537e.m29296a(aVar);
+            Assertions.checkNotNull(aVar);
             aVar.mo23631a(this);
         }
     }
@@ -757,7 +757,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
                 m.mo23768m();
             }
             C9073a aVar = this.f20197h0;
-            C9537e.m29296a(aVar);
+            Assertions.checkNotNull(aVar);
             aVar.mo23631a(this);
         }
     }
@@ -790,7 +790,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
         for (int i3 = 0; i3 < jVarArr.length; i3++) {
             if (f0VarArr[i3] != null && (jVarArr[i3] == null || !zArr[i3])) {
                 int a = f0VarArr[i3].f20238c;
-                C9537e.m29301b(zArr3[a]);
+                Assertions.checkState(zArr3[a]);
                 this.f20210u0--;
                 zArr3[a] = false;
                 f0VarArr[i3] = null;
@@ -800,10 +800,10 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
         for (int i4 = 0; i4 < jVarArr.length; i4++) {
             if (f0VarArr[i4] == null && jVarArr[i4] != null) {
                 C9311j jVar = jVarArr[i4];
-                C9537e.m29301b(jVar.length() == 1);
-                C9537e.m29301b(jVar.mo24070b(0) == 0);
+                Assertions.checkState(jVar.length() == 1);
+                Assertions.checkState(jVar.mo24070b(0) == 0);
                 int a2 = trackGroupArray.mo23530a(jVar.mo24067a());
-                C9537e.m29301b(!zArr3[a2]);
+                Assertions.checkState(!zArr3[a2]);
                 this.f20210u0++;
                 zArr3[a2] = true;
                 f0VarArr[i4] = new C9080e(a2);
@@ -963,7 +963,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
         m26981a(aVar);
         this.f20181B0 = true;
         C9073a aVar2 = this.f20197h0;
-        C9537e.m29296a(aVar2);
+        Assertions.checkNotNull(aVar2);
         aVar2.mo23631a(this);
     }
 
@@ -977,7 +977,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
             }
             if (this.f20210u0 > 0) {
                 C9073a aVar2 = this.f20197h0;
-                C9537e.m29296a(aVar2);
+                Assertions.checkNotNull(aVar2);
                 aVar2.mo23631a(this);
             }
         }

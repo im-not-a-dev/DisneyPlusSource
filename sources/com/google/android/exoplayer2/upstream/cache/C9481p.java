@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream.cache;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -77,8 +77,8 @@ public class C9481p {
     /* renamed from: a */
     private C9481p m29132a(String str, Object obj) {
         Map<String, Object> map = this.f22063a;
-        C9537e.m29296a(str);
-        C9537e.m29296a(obj);
+        Assertions.checkNotNull(str);
+        Assertions.checkNotNull(obj);
         map.put(str, obj);
         this.f22064b.remove(str);
         return this;

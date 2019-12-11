@@ -5,7 +5,7 @@ import com.bamtechmedia.dominguez.profiles.C7019z;
 import com.bamtechmedia.dominguez.profiles.p263u1.p264d.C6862b;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.profiles.x1.g.a */
@@ -82,7 +82,7 @@ public abstract class C6917a {
                         break;
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                    throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
                 }
             }
             language = (Language) obj;

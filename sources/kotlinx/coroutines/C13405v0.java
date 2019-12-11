@@ -1,7 +1,7 @@
 package kotlinx.coroutines;
 
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12688f;
@@ -188,7 +188,7 @@ public abstract class C13405v0 extends C13410w0 implements C13343m0 {
                             return;
                         }
                     } else {
-                        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.Runnable /* = java.lang.Runnable */");
+                        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.Runnable /* = java.lang.Runnable */");
                     }
                 } else {
                     return;
@@ -215,7 +215,7 @@ public abstract class C13405v0 extends C13410w0 implements C13343m0 {
                     }
                     f29904W.compareAndSet(this, obj, kVar.mo34439d());
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.Queue<kotlinx.coroutines.Runnable /* = java.lang.Runnable */> /* = kotlinx.coroutines.internal.LockFreeTaskQueueCore<kotlinx.coroutines.Runnable /* = java.lang.Runnable */> */");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.Queue<kotlinx.coroutines.Runnable /* = java.lang.Runnable */> /* = kotlinx.coroutines.internal.LockFreeTaskQueueCore<kotlinx.coroutines.Runnable /* = java.lang.Runnable */> */");
                 }
             } else if (obj == C13416y0.f29913b) {
                 return null;
@@ -224,7 +224,7 @@ public abstract class C13405v0 extends C13410w0 implements C13343m0 {
                     if (obj != null) {
                         return (Runnable) obj;
                     }
-                    throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.Runnable /* = java.lang.Runnable */");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.Runnable /* = java.lang.Runnable */");
                 }
             }
         }
@@ -454,7 +454,7 @@ public abstract class C13405v0 extends C13410w0 implements C13343m0 {
                         return false;
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.Queue<kotlinx.coroutines.Runnable /* = java.lang.Runnable */> /* = kotlinx.coroutines.internal.LockFreeTaskQueueCore<kotlinx.coroutines.Runnable /* = java.lang.Runnable */> */");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.Queue<kotlinx.coroutines.Runnable /* = java.lang.Runnable */> /* = kotlinx.coroutines.internal.LockFreeTaskQueueCore<kotlinx.coroutines.Runnable /* = java.lang.Runnable */> */");
                 }
             } else if (obj == C13416y0.f29913b) {
                 return false;
@@ -467,7 +467,7 @@ public abstract class C13405v0 extends C13410w0 implements C13343m0 {
                         return true;
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.Runnable /* = java.lang.Runnable */");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.Runnable /* = java.lang.Runnable */");
                 }
             }
         }

@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.legal;
 
 import com.bamtechmedia.dominguez.legal.api.LegalDocument;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11853e;
@@ -162,7 +162,7 @@ public final class LegalDocumentTitleItem extends C11866a {
             }
             return new Payload(z2, z);
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.legal.LegalDocumentTitleItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.legal.LegalDocumentTitleItem");
     }
 
     public int getLayout() {

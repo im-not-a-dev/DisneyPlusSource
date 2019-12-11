@@ -16,6 +16,6 @@ public final /* synthetic */ class C8698c implements C9558a {
 
     /* renamed from: a */
     public final void mo22792a(Object obj) {
-        ((C8709k) obj).onDrmSessionManagerError(this.f18477a);
+        ((DefaultDrmSessionEventListener) obj).onDrmSessionManagerError(this.f18477a);
     }
 }

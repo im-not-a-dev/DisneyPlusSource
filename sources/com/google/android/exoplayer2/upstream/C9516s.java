@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9574y;
@@ -86,7 +86,7 @@ public class C9516s extends C9497h implements HttpDataSource {
 
     public C9516s(String str, C9574y<String> yVar, int i, int i2, boolean z, C9440e eVar) {
         super(true);
-        C9537e.m29298a(str);
+        Assertions.m29298a(str);
         this.f22201h = str;
         this.f22202i = yVar;
         this.f22199f = i;

@@ -1,6 +1,6 @@
 package kotlinx.coroutines.internal;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
@@ -173,7 +173,7 @@ public final class C13283u {
         if (obj != null) {
             return ((C13225c2) obj).mo34356a(fVar);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.ThreadContextElement<kotlin.Any?>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.ThreadContextElement<kotlin.Any?>");
     }
 
     /* renamed from: a */
@@ -187,7 +187,7 @@ public final class C13283u {
                 if (fold != null) {
                     ((C13225c2) fold).mo34357a(fVar, obj);
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.ThreadContextElement<kotlin.Any?>");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.ThreadContextElement<kotlin.Any?>");
                 }
             }
         }

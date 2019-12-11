@@ -82,7 +82,7 @@ public final class C9544h {
         if (i == -1) {
             z2 = false;
         }
-        C9537e.m29299a(z2);
+        Assertions.m29299a(z2);
         return Pair.create(Integer.valueOf(b), Integer.valueOf(i));
     }
 
@@ -170,7 +170,7 @@ public final class C9544h {
         if (a == 15) {
             return vVar.mo24660a(24);
         }
-        C9537e.m29299a(a < 13);
+        Assertions.m29299a(a < 13);
         return f22263b[a];
     }
 

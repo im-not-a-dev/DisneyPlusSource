@@ -4,7 +4,7 @@ import com.google.android.exoplayer2.C8679b0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.source.C9137e0;
@@ -144,7 +144,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
 
         /* renamed from: c */
         public void mo23954c() {
-            C9537e.m29301b(C9217g.this.f20884W[this.f20905V]);
+            Assertions.checkState(C9217g.this.f20884W[this.f20905V]);
             C9217g.this.f20884W[this.f20905V] = false;
         }
 
@@ -439,7 +439,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
     public C9218a mo23944a(long j, int i) {
         for (int i2 = 0; i2 < this.f20895g0.length; i2++) {
             if (this.f20882U[i2] == i) {
-                C9537e.m29301b(!this.f20884W[i2]);
+                Assertions.checkState(!this.f20884W[i2]);
                 this.f20884W[i2] = true;
                 this.f20895g0[i2].mo23769n();
                 this.f20895g0[i2].mo23748a(j, true, true);
@@ -611,7 +611,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
             if (z) {
                 cVar = C9442a0.f21954d;
                 if (a) {
-                    C9537e.m29301b(m27777b(size) == dVar2);
+                    Assertions.checkState(m27777b(size) == dVar2);
                     if (this.f20892d0.isEmpty()) {
                         this.f20899k0 = this.f20900l0;
                     }

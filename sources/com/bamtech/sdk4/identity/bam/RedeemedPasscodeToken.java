@@ -3,7 +3,7 @@ package com.bamtech.sdk4.identity.bam;
 import com.bamtech.sdk4.identity.IdentityToken;
 import com.bamtech.sdk4.identity.IdentityToken.DefaultImpls;
 import com.bamtech.sdk4.identity.SecurityAction;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
@@ -36,7 +36,7 @@ public final class RedeemedPasscodeToken implements IdentityToken {
             RedeemedPasscodeToken redeemedPasscodeToken = (RedeemedPasscodeToken) obj;
             return !(Intrinsics.areEqual((Object) getToken(), (Object) redeemedPasscodeToken.getToken()) ^ true) && getExpiresIn() == redeemedPasscodeToken.getExpiresIn() && !(Intrinsics.areEqual((Object) getIssuedAt(), (Object) redeemedPasscodeToken.getIssuedAt()) ^ true) && !(Intrinsics.areEqual((Object) getSecurityAction(), (Object) redeemedPasscodeToken.getSecurityAction()) ^ true) && this.reason == redeemedPasscodeToken.reason;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.identity.bam.RedeemedPasscodeToken");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.identity.bam.RedeemedPasscodeToken");
     }
 
     public DateTime getExpiration() {

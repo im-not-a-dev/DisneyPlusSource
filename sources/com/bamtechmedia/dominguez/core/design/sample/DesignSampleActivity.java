@@ -10,7 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager.widget.ViewPager.C1002j;
 import com.bamtechmedia.dominguez.core.design.sample.p211f.C5608a;
 import java.util.HashMap;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -40,7 +40,7 @@ public final class DesignSampleActivity extends C0083d implements C1002j {
                 g.mo392a((CharSequence) ((C5608a) adapter).mo17351e(i));
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.design.sample.adapter.FragmentAdapter");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.design.sample.adapter.FragmentAdapter");
         }
     }
 

@@ -3,8 +3,8 @@ package com.google.android.exoplayer2;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
-import com.google.android.exoplayer2.drm.C8710l;
-import com.google.android.exoplayer2.drm.C8713o;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
+import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.metadata.C8743e;
 import com.google.android.exoplayer2.metadata.C8744f;
 import com.google.android.exoplayer2.p361p0.C8840m;
@@ -26,7 +26,7 @@ public class C9577w implements RenderersFactory {
     private final Context f22343a;
 
     /* renamed from: b */
-    private C8710l<C8713o> f22344b;
+    private DrmSessionManager<FrameworkMediaCrypto> f22344b;
 
     /* renamed from: c */
     private int f22345c = 0;
@@ -53,10 +53,10 @@ public class C9577w implements RenderersFactory {
     }
 
     /* renamed from: a */
-    public C8733l0[] mo22650a(Handler handler, C9603r rVar, C8842n nVar, C9332k kVar, C8743e eVar, C8710l<C8713o> lVar) {
-        C8710l<C8713o> lVar2 = lVar == null ? this.f22344b : lVar;
+    public C8733l0[] mo22650a(Handler handler, C9603r rVar, C8842n nVar, C9332k kVar, C8743e eVar, DrmSessionManager<FrameworkMediaCrypto> lVar) {
+        DrmSessionManager<FrameworkMediaCrypto> lVar2 = lVar == null ? this.f22344b : lVar;
         ArrayList arrayList = new ArrayList();
-        C8710l<C8713o> lVar3 = lVar2;
+        DrmSessionManager<FrameworkMediaCrypto> lVar3 = lVar2;
         mo24729a(this.f22343a, this.f22345c, this.f22349g, lVar3, this.f22347e, this.f22348f, handler, rVar, this.f22346d, arrayList);
         mo24730a(this.f22343a, this.f22345c, this.f22349g, lVar3, this.f22347e, this.f22348f, mo24735a(), handler, nVar, arrayList);
         ArrayList arrayList2 = arrayList;
@@ -75,7 +75,7 @@ public class C9577w implements RenderersFactory {
 
     /* access modifiers changed from: protected */
     /* renamed from: a */
-    public void mo24729a(Context context, int i, C9273c cVar, C8710l<C8713o> lVar, boolean z, boolean z2, Handler handler, C9603r rVar, long j, ArrayList<C8733l0> arrayList) {
+    public void mo24729a(Context context, int i, C9273c cVar, DrmSessionManager<FrameworkMediaCrypto> lVar, boolean z, boolean z2, Handler handler, C9603r rVar, long j, ArrayList<C8733l0> arrayList) {
         int i2 = i;
         ArrayList<C8733l0> arrayList2 = arrayList;
         C9593m mVar = new C9593m(context, cVar, j, lVar, z, z2, handler, rVar, 50);
@@ -113,7 +113,7 @@ public class C9577w implements RenderersFactory {
     /* JADX WARNING: Removed duplicated region for block: B:24:0x009f A[ExcHandler: Exception (r0v10 'e' java.lang.Exception A[CUSTOM_DECLARE]), Splitter:B:19:0x0074] */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public void mo24730a(android.content.Context r17, int r18, com.google.android.exoplayer2.p381t0.C9273c r19, com.google.android.exoplayer2.drm.C8710l<com.google.android.exoplayer2.drm.C8713o> r20, boolean r21, boolean r22, com.google.android.exoplayer2.p361p0.C8840m[] r23, android.os.Handler r24, com.google.android.exoplayer2.p361p0.C8842n r25, java.util.ArrayList<com.google.android.exoplayer2.C8733l0> r26) {
+    public void mo24730a(android.content.Context r17, int r18, com.google.android.exoplayer2.p381t0.C9273c r19, com.google.android.exoplayer2.drm.DrmSessionManager<com.google.android.exoplayer2.drm.FrameworkMediaCrypto> r20, boolean r21, boolean r22, com.google.android.exoplayer2.p361p0.C8840m[] r23, android.os.Handler r24, com.google.android.exoplayer2.p361p0.C8842n r25, java.util.ArrayList<com.google.android.exoplayer2.C8733l0> r26) {
         /*
             r16 = this;
             r0 = r18

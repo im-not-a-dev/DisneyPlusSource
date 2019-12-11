@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Pair;
 
 /* renamed from: kotlin.y.j0 */
@@ -16,7 +16,7 @@ class C13173j0 extends C13170i0 {
         if (zVar != null) {
             return zVar;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.collections.Map<K, V>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.Map<K, V>");
     }
 
     /* renamed from: b */

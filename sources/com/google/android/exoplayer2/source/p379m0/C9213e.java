@@ -9,7 +9,7 @@ import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
 
@@ -168,7 +168,7 @@ public final class C9213e implements C8914i {
     public C8924q mo23311a(int i, int i2) {
         C9214a aVar = (C9214a) this.f20866W.get(i);
         if (aVar == null) {
-            C9537e.m29301b(this.f20871b0 == null);
+            Assertions.checkState(this.f20871b0 == null);
             aVar = new C9214a(i, i2, i2 == this.f20864U ? this.f20865V : null);
             aVar.mo23941a(this.f20868Y, this.f20869Z);
             this.f20866W.put(i, aVar);

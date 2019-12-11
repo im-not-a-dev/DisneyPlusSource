@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.source.j0 */
@@ -37,7 +37,7 @@ public final class C9199j0 implements Parcelable {
     }
 
     public C9199j0(Format... formatArr) {
-        C9537e.m29301b(formatArr.length > 0);
+        Assertions.checkState(formatArr.length > 0);
         this.f20831U = formatArr;
         this.f20833c = formatArr.length;
     }

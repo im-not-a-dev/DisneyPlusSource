@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView.C0808o;
 import com.bamtechmedia.dominguez.collections.p080o0.C3441g;
 import com.bamtechmedia.dominguez.core.p215k.C5758a;
 import com.bamtechmedia.dominguez.core.utils.C5852n0;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import p686n.p687a.Timber;
 
 /* renamed from: com.bamtechmedia.dominguez.collections.o */
@@ -135,7 +135,7 @@ public final class C3432o {
                     sb2.append(" }");
                     str = sb2.toString();
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type androidx.recyclerview.widget.RecyclerView");
+                    throw new TypeCastException("null cannot be cast to non-null type androidx.recyclerview.widget.RecyclerView");
                 }
             } else if (c) {
                 this.f8657b = C3453p.m11775c() + this.f8660e.mo12617c();

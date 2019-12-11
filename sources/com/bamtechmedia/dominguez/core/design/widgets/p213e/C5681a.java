@@ -20,7 +20,7 @@ import com.google.android.material.tabs.TabLayout.C10335c;
 import com.google.android.material.tabs.TabLayout.C10336d;
 import com.google.android.material.tabs.TabLayout.C10341g;
 import java.util.Iterator;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.C12853n;
@@ -457,7 +457,7 @@ public final class C5681a {
                     marginLayoutParams.bottomMargin = i10;
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
+                throw new TypeCastException("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
             }
         }
     }

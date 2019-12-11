@@ -15,7 +15,7 @@ import com.bamtechmedia.dominguez.sdk.vpn.C7141a.C7142a.C7143a;
 import com.bamtechmedia.dominguez.sdk.vpn.C7141a.C7142a.C7144b;
 import com.uber.autodispose.android.lifecycle.C10541b;
 import kotlin.C12898l;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p277b0.C7231w;
@@ -162,7 +162,7 @@ public final class VpnDialogLifecycleObserver implements C0710d {
                 ((ViewGroup) parent).removeView(d);
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type android.view.ViewGroup");
+            throw new TypeCastException("null cannot be cast to non-null type android.view.ViewGroup");
         }
     }
 }

@@ -47,7 +47,7 @@ import java.util.Map;
 import java.util.function.UnaryOperator;
 import kotlin.C12898l;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
@@ -2146,7 +2146,7 @@ public final class C7454a extends C5967h<C7468g> implements C5917a, C7381a, C370
             ((C11792d0) a).mo29920a(new C7486s(this), new C7487t(this));
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
     /* renamed from: a */

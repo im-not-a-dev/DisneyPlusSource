@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.p361p0;
 
 import android.media.AudioTrack;
 import android.os.SystemClock;
-import com.google.android.exoplayer2.C8883r;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.lang.reflect.Method;
 
@@ -103,7 +103,7 @@ final class C8851q {
     }
 
     public C8851q(C8852a aVar) {
-        C9537e.m29296a(aVar);
+        Assertions.checkNotNull(aVar);
         this.f18861a = aVar;
         if (Util.SDK_INT >= 18) {
             try {
@@ -126,7 +126,7 @@ final class C8851q {
             if (method != null && j - this.f18876p >= 500000) {
                 try {
                     AudioTrack audioTrack = this.f18863c;
-                    C9537e.m29296a(audioTrack);
+                    Assertions.checkNotNull(audioTrack);
                     Integer num = (Integer) method.invoke(audioTrack, new Object[0]);
                     Util.castNonNull(num);
                     this.f18873m = (((long) num.intValue()) * 1000) - this.f18869i;
@@ -218,14 +218,14 @@ final class C8851q {
     /* renamed from: d */
     public void mo23147d() {
         C8849p pVar = this.f18866f;
-        C9537e.m29296a(pVar);
+        Assertions.checkNotNull(pVar);
         pVar.mo23135g();
     }
 
     /* renamed from: e */
     public boolean mo23149e(long j) {
         AudioTrack audioTrack = this.f18863c;
-        C9537e.m29296a(audioTrack);
+        Assertions.checkNotNull(audioTrack);
         int playState = audioTrack.getPlayState();
         if (this.f18868h) {
             if (playState == 2) {
@@ -240,7 +240,7 @@ final class C8851q {
         if (z && !this.f18874n && playState != 1) {
             C8852a aVar = this.f18861a;
             if (aVar != null) {
-                aVar.mo23150a(this.f18865e, C8883r.usToMs(this.f18869i));
+                aVar.mo23150a(this.f18865e, C.usToMs(this.f18869i));
             }
         }
         return true;
@@ -249,7 +249,7 @@ final class C8851q {
     /* renamed from: f */
     private long m25704f() {
         AudioTrack audioTrack = this.f18863c;
-        C9537e.m29296a(audioTrack);
+        Assertions.checkNotNull(audioTrack);
         AudioTrack audioTrack2 = audioTrack;
         if (this.f18882v != -9223372036854775807L) {
             return Math.min(this.f18885y, this.f18884x + ((((SystemClock.elapsedRealtime() * 1000) - this.f18882v) * ((long) this.f18867g)) / 1000000));
@@ -300,7 +300,7 @@ final class C8851q {
             return false;
         }
         C8849p pVar = this.f18866f;
-        C9537e.m29296a(pVar);
+        Assertions.checkNotNull(pVar);
         pVar.mo23135g();
         return true;
     }
@@ -309,7 +309,7 @@ final class C8851q {
     private boolean m25703e() {
         if (this.f18868h) {
             AudioTrack audioTrack = this.f18863c;
-            C9537e.m29296a(audioTrack);
+            Assertions.checkNotNull(audioTrack);
             if (audioTrack.getPlayState() == 2 && m25704f() == 0) {
                 return true;
             }
@@ -326,13 +326,13 @@ final class C8851q {
     public long mo23140a(boolean z) {
         long j;
         AudioTrack audioTrack = this.f18863c;
-        C9537e.m29296a(audioTrack);
+        Assertions.checkNotNull(audioTrack);
         if (audioTrack.getPlayState() == 3) {
             m25708h();
         }
         long nanoTime = System.nanoTime() / 1000;
         C8849p pVar = this.f18866f;
-        C9537e.m29296a(pVar);
+        Assertions.checkNotNull(pVar);
         C8849p pVar2 = pVar;
         if (pVar2.mo23132d()) {
             long f = m25705f(pVar2.mo23130b());
@@ -355,7 +355,7 @@ final class C8851q {
     /* renamed from: a */
     public boolean mo23142a() {
         AudioTrack audioTrack = this.f18863c;
-        C9537e.m29296a(audioTrack);
+        Assertions.checkNotNull(audioTrack);
         return audioTrack.getPlayState() == 3;
     }
 
@@ -367,7 +367,7 @@ final class C8851q {
     /* renamed from: a */
     private void m25701a(long j, long j2) {
         C8849p pVar = this.f18866f;
-        C9537e.m29296a(pVar);
+        Assertions.checkNotNull(pVar);
         C8849p pVar2 = pVar;
         if (pVar2.mo23129a(j)) {
             long c = pVar2.mo23131c();

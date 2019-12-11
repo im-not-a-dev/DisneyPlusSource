@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9547i0;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
@@ -197,7 +197,7 @@ public final class C9442a0 implements C9452b0 {
                     obtainMessage(3, e).sendToTarget();
                 }
             } catch (InterruptedException unused) {
-                C9537e.m29301b(this.f21967a0);
+                Assertions.checkState(this.f21967a0);
                 if (!this.f21968b0) {
                     sendEmptyMessage(2);
                 }
@@ -225,7 +225,7 @@ public final class C9442a0 implements C9452b0 {
 
         /* renamed from: a */
         public void mo24465a(long j) {
-            C9537e.m29301b(C9442a0.this.f21957b == null);
+            Assertions.checkState(C9442a0.this.f21957b == null);
             C9442a0.this.f21957b = this;
             if (j > 0) {
                 sendEmptyMessageDelayed(0, j);
@@ -352,7 +352,7 @@ public final class C9442a0 implements C9452b0 {
     /* renamed from: a */
     public <T extends C9447e> long mo24455a(T t, C9444b<T> bVar, int i) {
         Looper myLooper = Looper.myLooper();
-        C9537e.m29301b(myLooper != null);
+        Assertions.checkState(myLooper != null);
         this.f21958c = null;
         long elapsedRealtime = SystemClock.elapsedRealtime();
         C9446d dVar = new C9446d(myLooper, t, bVar, i, elapsedRealtime);

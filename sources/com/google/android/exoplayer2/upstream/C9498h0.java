@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -23,9 +23,9 @@ public final class C9498h0 implements DataSource {
     private long f22118d;
 
     public C9498h0(DataSource dataSource, C9504k kVar) {
-        C9537e.m29296a(dataSource);
+        Assertions.checkNotNull(dataSource);
         this.f22115a = dataSource;
-        C9537e.m29296a(kVar);
+        Assertions.checkNotNull(kVar);
         this.f22116b = kVar;
     }
 

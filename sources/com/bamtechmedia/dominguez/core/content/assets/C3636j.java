@@ -3,7 +3,7 @@ package com.bamtechmedia.dominguez.core.content.assets;
 import com.bamtechmedia.dominguez.core.content.collections.C3680n;
 import com.bamtechmedia.dominguez.core.content.collections.DmcVideoArt;
 import java.util.Map;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11737m;
 import p163g.p500m.p501a.C11747s;
@@ -34,6 +34,6 @@ public final class C3636j extends C11725h<C3680n> {
         if (p != null) {
             return (C3680n) this.f9146a.mo29866a(DmcVideoArt.class).fromJsonValue((Map) p);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.collections.Map<*, *>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.Map<*, *>");
     }
 }

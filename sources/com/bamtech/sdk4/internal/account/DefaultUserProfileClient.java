@@ -8,7 +8,7 @@ import com.bamtech.sdk4.internal.configuration.ConfigurationProvider;
 import com.bamtech.sdk4.internal.networking.ConverterProvider;
 import com.bamtech.sdk4.internal.service.ServiceTransaction;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.Maybe;
@@ -67,7 +67,7 @@ public final class DefaultUserProfileClient implements UserProfileClient {
         if (a != null) {
             return a;
         }
-        throw new C13142s("null cannot be cast to non-null type io.reactivex.Single<T>");
+        throw new TypeCastException("null cannot be cast to non-null type io.reactivex.Single<T>");
     }
 
     public Maybe<CreateAccountGrantResponse> deleteUserProfile(ServiceTransaction serviceTransaction, String str, String str2) {
@@ -81,7 +81,7 @@ public final class DefaultUserProfileClient implements UserProfileClient {
         if (a != null) {
             return a;
         }
-        throw new C13142s("null cannot be cast to non-null type io.reactivex.Single<out T>");
+        throw new TypeCastException("null cannot be cast to non-null type io.reactivex.Single<out T>");
     }
 
     public <T extends UserProfile> Single<T> getUserProfile(ServiceTransaction serviceTransaction, String str, String str2, Class<T> cls) {
@@ -91,7 +91,7 @@ public final class DefaultUserProfileClient implements UserProfileClient {
         if (a != null) {
             return a;
         }
-        throw new C13142s("null cannot be cast to non-null type io.reactivex.Single<T>");
+        throw new TypeCastException("null cannot be cast to non-null type io.reactivex.Single<T>");
     }
 
     public <T extends UserProfile> Single<? extends List<T>> getUserProfiles(ServiceTransaction serviceTransaction, String str, Class<? extends List<? extends T>> cls) {

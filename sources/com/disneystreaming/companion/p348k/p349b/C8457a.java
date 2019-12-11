@@ -17,7 +17,7 @@ import java.security.SecureRandom;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.HashMap;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -188,7 +188,7 @@ public final class C8457a implements C8456a {
         if (privateKey != null) {
             return (C13789c) privateKey;
         }
-        throw new C13142s("null cannot be cast to non-null type org.spongycastle.jce.interfaces.ECPrivateKey");
+        throw new TypeCastException("null cannot be cast to non-null type org.spongycastle.jce.interfaces.ECPrivateKey");
     }
 
     /* renamed from: i */
@@ -198,7 +198,7 @@ public final class C8457a implements C8456a {
         if (publicKey != null) {
             return (C13790d) publicKey;
         }
-        throw new C13142s("null cannot be cast to non-null type org.spongycastle.jce.interfaces.ECPublicKey");
+        throw new TypeCastException("null cannot be cast to non-null type org.spongycastle.jce.interfaces.ECPublicKey");
     }
 
     /* renamed from: j */
@@ -221,7 +221,7 @@ public final class C8457a implements C8456a {
                 Intrinsics.checkReturnedValueIsNotNull((Object) b, "Base64.toBase64String(publicKey.encoded)");
                 return b;
             }
-            throw new C13142s("null cannot be cast to non-null type org.spongycastle.jce.interfaces.ECPublicKey");
+            throw new TypeCastException("null cannot be cast to non-null type org.spongycastle.jce.interfaces.ECPublicKey");
         }
         throw new SecurityException("No local public key present for exporting");
     }
@@ -250,7 +250,7 @@ public final class C8457a implements C8456a {
             hashMap.put(str, (C13790d) a);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type org.spongycastle.jce.interfaces.ECPublicKey");
+        throw new TypeCastException("null cannot be cast to non-null type org.spongycastle.jce.interfaces.ECPublicKey");
     }
 
     /* renamed from: a */
@@ -273,7 +273,7 @@ public final class C8457a implements C8456a {
                 EncryptedMessage encryptedMessage = new EncryptedMessage(0, mo21726a(payload), m24578a(bytes, b), 1, null);
                 return encryptedMessage;
             }
-            throw new C13142s("null cannot be cast to non-null type java.lang.String");
+            throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
         }
         throw new SecurityException("No public key present for encryption");
     }
@@ -305,7 +305,7 @@ public final class C8457a implements C8456a {
                 Intrinsics.checkReturnedValueIsNotNull((Object) b, "Base64.toBase64String(sig)");
                 return b;
             }
-            throw new C13142s("null cannot be cast to non-null type java.lang.String");
+            throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
         }
         throw new SecurityException("No local private key for signing");
     }
@@ -340,7 +340,7 @@ public final class C8457a implements C8456a {
                 }
                 throw new SecurityException("Unable to deserialize Payload");
             }
-            throw new C13142s("null cannot be cast to non-null type java.lang.String");
+            throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
         }
         throw new SecurityException("No local PrivateKey available");
     }
@@ -370,7 +370,7 @@ public final class C8457a implements C8456a {
                     m24585j().mo34954a(bytes, 0, bytes.length);
                     return m24585j().mo34955a(C14092a.m44491a(signature));
                 }
-                throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             }
             throw new SecurityException("No signature present for verification");
         }

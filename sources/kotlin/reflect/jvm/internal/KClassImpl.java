@@ -5,7 +5,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12865c0;
 import kotlin.jvm.internal.Intrinsics;
@@ -341,7 +341,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
                 if (a != null) {
                     return ((KClassImpl) a).getLocalProperty(i);
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.reflect.jvm.internal.KClassImpl<*>");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.reflect.jvm.internal.KClassImpl<*>");
             }
         }
         ClassDescriptor descriptor = getDescriptor();

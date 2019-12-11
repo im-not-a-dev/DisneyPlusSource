@@ -1,7 +1,7 @@
 package okio.p698z;
 
 import java.util.Arrays;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import okio.ByteString;
 import okio.C14271a;
@@ -142,7 +142,7 @@ public final class C14306a {
             }
             return str;
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 
     /* renamed from: i */

@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.upstream.cache;
 import android.os.ConditionVariable;
 import com.google.android.exoplayer2.database.C8684a;
 import com.google.android.exoplayer2.database.DatabaseProvider;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.upstream.cache.Cache.C9457a;
@@ -226,7 +226,7 @@ public final class C9484s implements Cache {
 
     /* renamed from: b */
     public synchronized long mo24482b() {
-        C9537e.m29301b(!this.f22080j);
+        Assertions.checkState(!this.f22080j);
         return this.f22079i;
     }
 
@@ -276,7 +276,7 @@ public final class C9484s implements Cache {
     /* renamed from: b */
     public synchronized C9486t m29181b(String str, long j) throws C9457a {
         boolean z = false;
-        C9537e.m29301b(!this.f22080j);
+        Assertions.checkState(!this.f22080j);
         mo24553c();
         C9486t c = m29165c(str, j);
         if (!c.f22032W) {
@@ -290,7 +290,7 @@ public final class C9484s implements Cache {
             return c;
         } else {
             File file = c.f22033X;
-            C9537e.m29296a(file);
+            Assertions.checkNotNull(file);
             String name = file.getName();
             long j2 = c.f22031V;
             long currentTimeMillis = System.currentTimeMillis();
@@ -366,7 +366,7 @@ public final class C9484s implements Cache {
     /* renamed from: a */
     public synchronized C9486t m29172a(String str, long j) throws InterruptedException, C9457a {
         C9486t b;
-        C9537e.m29301b(!this.f22080j);
+        Assertions.checkState(!this.f22080j);
         mo24553c();
         while (true) {
             b = mo24484b(str, j);
@@ -380,7 +380,7 @@ public final class C9484s implements Cache {
     /* renamed from: b */
     public synchronized long mo24483b(String str, long j, long j2) {
         C9474l b;
-        C9537e.m29301b(!this.f22080j);
+        Assertions.checkState(!this.f22080j);
         b = this.f22073c.mo24528b(str);
         return b != null ? b.mo24510a(j, j2) : -j2;
     }
@@ -400,11 +400,11 @@ public final class C9484s implements Cache {
     public synchronized File mo24477a(String str, long j, long j2) throws C9457a {
         C9474l b;
         File file;
-        C9537e.m29301b(!this.f22080j);
+        Assertions.checkState(!this.f22080j);
         mo24553c();
         b = this.f22073c.mo24528b(str);
-        C9537e.m29296a(b);
-        C9537e.m29301b(b.mo24520d());
+        Assertions.checkNotNull(b);
+        Assertions.checkState(b.mo24520d());
         if (!this.f22071a.exists()) {
             this.f22071a.mkdirs();
             m29169e();
@@ -447,25 +447,25 @@ public final class C9484s implements Cache {
     /* renamed from: a */
     public synchronized void mo24480a(File file, long j) throws C9457a {
         boolean z = true;
-        C9537e.m29301b(!this.f22080j);
+        Assertions.checkState(!this.f22080j);
         if (file.exists()) {
             if (j == 0) {
                 file.delete();
                 return;
             }
             C9486t a = C9486t.m29184a(file, j, this.f22073c);
-            C9537e.m29296a(a);
+            Assertions.checkNotNull(a);
             C9486t tVar = a;
             C9474l b = this.f22073c.mo24528b(tVar.f22035c);
-            C9537e.m29296a(b);
+            Assertions.checkNotNull(b);
             C9474l lVar = b;
-            C9537e.m29301b(lVar.mo24520d());
+            Assertions.checkState(lVar.mo24520d());
             long a2 = C9479n.m29126a(lVar.mo24511a());
             if (a2 != -1) {
                 if (tVar.f22030U + tVar.f22031V > a2) {
                     z = false;
                 }
-                C9537e.m29301b(z);
+                Assertions.checkState(z);
             }
             if (this.f22074d != null) {
                 try {
@@ -484,10 +484,10 @@ public final class C9484s implements Cache {
 
     /* renamed from: a */
     public synchronized void mo24479a(C9470j jVar) {
-        C9537e.m29301b(!this.f22080j);
+        Assertions.checkState(!this.f22080j);
         C9474l b = this.f22073c.mo24528b(jVar.f22035c);
-        C9537e.m29296a(b);
-        C9537e.m29301b(b.mo24520d());
+        Assertions.checkNotNull(b);
+        Assertions.checkState(b.mo24520d());
         b.mo24515a(false);
         this.f22073c.mo24533e(b.f22041b);
         notifyAll();
@@ -495,7 +495,7 @@ public final class C9484s implements Cache {
 
     /* renamed from: a */
     public synchronized void mo24481a(String str, C9481p pVar) throws C9457a {
-        C9537e.m29301b(!this.f22080j);
+        Assertions.checkState(!this.f22080j);
         mo24553c();
         this.f22073c.mo24527a(str, pVar);
         try {
@@ -507,7 +507,7 @@ public final class C9484s implements Cache {
 
     /* renamed from: a */
     public synchronized C9480o mo24476a(String str) {
-        C9537e.m29301b(!this.f22080j);
+        Assertions.checkState(!this.f22080j);
         return this.f22073c.mo24530c(str);
     }
 

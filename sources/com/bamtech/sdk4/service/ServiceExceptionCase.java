@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -230,7 +230,7 @@ public abstract class ServiceExceptionCase {
                 if (objectInstance2 != null) {
                     arrayList2.add((ServiceExceptionCase) objectInstance2);
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.service.ServiceExceptionCase");
+                    throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.service.ServiceExceptionCase");
                 }
             }
             ArrayList arrayList3 = new ArrayList();

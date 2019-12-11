@@ -51,7 +51,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -444,7 +444,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
             focusSearchInterceptFrameLayout.setFocusSearchInterceptor(this.f16951f0);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.design.widgets.focus.FocusSearchInterceptFrameLayout");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.design.widgets.focus.FocusSearchInterceptFrameLayout");
     }
 
     /* renamed from: t */
@@ -804,7 +804,7 @@ public final class C7838e extends C11890i implements C5818b, C2413n, C7630d, C75
             }
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout.LayoutParams");
+        throw new TypeCastException("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout.LayoutParams");
     }
 
     /* renamed from: a */

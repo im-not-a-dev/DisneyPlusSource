@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
@@ -158,7 +158,7 @@ public class ValueParameterDescriptorImpl extends VariableDescriptorImpl impleme
                     return true;
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.CallableMemberDescriptor");
+                throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.CallableMemberDescriptor");
             }
         }
         return false;
@@ -214,7 +214,7 @@ public class ValueParameterDescriptorImpl extends VariableDescriptorImpl impleme
         if (containingDeclaration != null) {
             return (CallableDescriptor) containingDeclaration;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.CallableDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.CallableDescriptor");
     }
 
     public ValueParameterDescriptor substitute(TypeSubstitutor typeSubstitutor) {

@@ -17,7 +17,7 @@ import com.bamtechmedia.dominguez.core.utils.C5855o;
 import java.util.HashSet;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -467,7 +467,7 @@ public final class C5570l extends C0702a implements C3796d {
             this.f13143f0.mo17323a(z);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type android.net.ConnectivityManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.net.ConnectivityManager");
     }
 
     /* JADX WARNING: type inference failed for: r2v0, types: [g.e.b.g.l$e, kotlin.jvm.functions.Function1] */

@@ -2,7 +2,7 @@ package kotlin.p588j0;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function2;
@@ -170,7 +170,7 @@ final class C12802d implements C12775h<C12757d> {
                     this.f29484c = -1;
                     return dVar;
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.ranges.IntRange");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.ranges.IntRange");
             }
             throw new NoSuchElementException();
         }

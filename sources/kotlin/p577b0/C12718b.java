@@ -1,6 +1,6 @@
 package kotlin.p577b0;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import net.danlew.android.joda.DateUtils;
 
@@ -30,7 +30,7 @@ public final class C12718b {
                     aVar = (C12716a) newInstance2;
                     f29405a = aVar;
                 }
-                throw new C13142s(str4);
+                throw new TypeCastException(str4);
             } catch (ClassCastException e) {
                 ClassLoader classLoader = newInstance2.getClass().getClassLoader();
                 ClassLoader classLoader2 = cls.getClassLoader();
@@ -62,7 +62,7 @@ public final class C12718b {
                             throw initCause2;
                         }
                     } else {
-                        throw new C13142s(str4);
+                        throw new TypeCastException(str4);
                     }
                 } catch (ClassNotFoundException unused2) {
                 }
@@ -76,7 +76,7 @@ public final class C12718b {
                     aVar = (C12716a) newInstance;
                     f29405a = aVar;
                 }
-                throw new C13142s(str4);
+                throw new TypeCastException(str4);
             } catch (ClassCastException e3) {
                 ClassLoader classLoader5 = newInstance.getClass().getClassLoader();
                 ClassLoader classLoader6 = cls.getClassLoader();
@@ -108,7 +108,7 @@ public final class C12718b {
                             throw initCause4;
                         }
                     } else {
-                        throw new C13142s(str4);
+                        throw new TypeCastException(str4);
                     }
                 } catch (ClassNotFoundException unused4) {
                 }
@@ -152,8 +152,8 @@ public final class C12718b {
                 }
                 return i;
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
-        throw new C13142s(str);
+        throw new TypeCastException(str);
     }
 }

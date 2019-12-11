@@ -20,9 +20,9 @@ import com.google.android.exoplayer2.PlayerMessage.Target;
 import com.google.android.exoplayer2.analytics.AnalyticsListener;
 import com.google.android.exoplayer2.analytics.C8673a;
 import com.google.android.exoplayer2.analytics.C8673a.C8674a;
-import com.google.android.exoplayer2.drm.C8709k;
-import com.google.android.exoplayer2.drm.C8710l;
-import com.google.android.exoplayer2.drm.C8713o;
+import com.google.android.exoplayer2.drm.DefaultDrmSessionEventListener;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
+import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.drm.DefaultDrmSessionManager;
 import com.google.android.exoplayer2.metadata.C8743e;
 import com.google.android.exoplayer2.metadata.Metadata;
@@ -34,7 +34,7 @@ import com.google.android.exoplayer2.p361p0.C8842n;
 import com.google.android.exoplayer2.p362q0.C8878d;
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9332k;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9542g;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
@@ -426,7 +426,7 @@ public class SimpleExoPlayer extends BasePlayer implements ExoPlayer, AudioCompo
         }
     }
 
-    protected SimpleExoPlayer(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, BandwidthMeter bandwidthMeter, C8710l<C8713o> lVar, Looper looper) {
+    protected SimpleExoPlayer(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, BandwidthMeter bandwidthMeter, DrmSessionManager<FrameworkMediaCrypto> lVar, Looper looper) {
         this(context, renderersFactory, trackSelector, loadControl, lVar, bandwidthMeter, new C8674a(), looper);
     }
 
@@ -633,7 +633,7 @@ public class SimpleExoPlayer extends BasePlayer implements ExoPlayer, AudioCompo
         this.f18685B = Collections.emptyList();
     }
 
-    protected SimpleExoPlayer(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, Looper looper) {
+    protected SimpleExoPlayer(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, DrmSessionManager<FrameworkMediaCrypto> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, Looper looper) {
         this(context, renderersFactory, trackSelector, loadControl, lVar, bandwidthMeter, aVar, C9542g.f22257a, looper);
     }
 
@@ -682,7 +682,7 @@ public class SimpleExoPlayer extends BasePlayer implements ExoPlayer, AudioCompo
         }
         if (this.f18690G) {
             C9575z zVar = this.f18689F;
-            C9537e.m29296a(zVar);
+            Assertions.checkNotNull(zVar);
             zVar.mo24728d(0);
             this.f18690G = false;
         }
@@ -690,8 +690,8 @@ public class SimpleExoPlayer extends BasePlayer implements ExoPlayer, AudioCompo
         this.f18685B = Collections.emptyList();
     }
 
-    protected SimpleExoPlayer(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, C9542g gVar, Looper looper) {
-        C8710l<C8713o> lVar2 = lVar;
+    protected SimpleExoPlayer(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, DrmSessionManager<FrameworkMediaCrypto> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, C9542g gVar, Looper looper) {
+        DrmSessionManager<FrameworkMediaCrypto> lVar2 = lVar;
         BandwidthMeter bandwidthMeter2 = bandwidthMeter;
         this.f18701l = bandwidthMeter2;
         this.f18694e = new C8804b();
@@ -721,7 +721,7 @@ public class SimpleExoPlayer extends BasePlayer implements ExoPlayer, AudioCompo
         mo22997a((C8743e) this.f18702m);
         bandwidthMeter2.mo24445a(this.f18693d, this.f18702m);
         if (lVar2 instanceof DefaultDrmSessionManager) {
-            ((DefaultDrmSessionManager) lVar2).mo22744a(this.f18693d, (C8709k) this.f18702m);
+            ((DefaultDrmSessionManager) lVar2).mo22744a(this.f18693d, (DefaultDrmSessionEventListener) this.f18702m);
         }
         Context context2 = context;
         this.f18703n = new C8835k(context, this.f18694e);

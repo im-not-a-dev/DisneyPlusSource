@@ -454,14 +454,14 @@ public final class Util {
 
     /* renamed from: a */
     public static <T> T[] m29420a(T[] tArr, int i) {
-        C9537e.m29299a(i <= tArr.length);
+        Assertions.m29299a(i <= tArr.length);
         return Arrays.copyOf(tArr, i);
     }
 
     /* renamed from: b */
     public static int m29428b(String str) {
         int length = str.length();
-        C9537e.m29299a(length <= 4);
+        Assertions.m29299a(length <= 4);
         char c = 0;
         for (int i = 0; i < length; i++) {
             c = (c << 8) | str.charAt(i);

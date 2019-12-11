@@ -21,7 +21,7 @@ import com.facebook.stetho.server.http.HttpStatus;
 import com.google.android.exoplayer2.C8672a0;
 import com.google.android.exoplayer2.C8727i0;
 import com.google.android.exoplayer2.C8729j0;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.C8898s;
 import com.google.android.exoplayer2.C9269t;
 import com.google.android.exoplayer2.ExoPlaybackException;
@@ -33,7 +33,7 @@ import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.Timeline.C8670c;
 import com.google.android.exoplayer2.p391ui.C9418p.C9419a;
 import com.google.android.exoplayer2.p393v0.C9528a0;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
@@ -539,11 +539,11 @@ public class C9405g extends FrameLayout {
 
     public void setPlayer(Player player) {
         boolean z = true;
-        C9537e.m29301b(Looper.myLooper() == Looper.getMainLooper());
+        Assertions.checkState(Looper.myLooper() == Looper.getMainLooper());
         if (!(player == null || player.getApplicationLooper() == Looper.getMainLooper())) {
             z = false;
         }
-        C9537e.m29299a(z);
+        Assertions.m29299a(z);
         Player player2 = this.f21778B0;
         if (player2 != player) {
             if (player2 != null) {
@@ -904,12 +904,12 @@ public class C9405g extends FrameLayout {
                         break;
                     }
                     if (i2 == currentWindowIndex) {
-                        this.f21800V0 = C8883r.usToMs(j2);
+                        this.f21800V0 = C.usToMs(j2);
                     }
                     currentTimeline.mo22663a(i2, this.f21815m0);
                     C8670c cVar2 = this.f21815m0;
                     if (cVar2.f18404f == -9223372036854775807L) {
-                        C9537e.m29301b(this.f21785I0 ^ z);
+                        Assertions.checkState(this.f21785I0 ^ z);
                         break;
                     }
                     int i3 = cVar2.f18401c;
@@ -938,7 +938,7 @@ public class C9405g extends FrameLayout {
                                     this.f21794R0 = Arrays.copyOf(this.f21794R0, length);
                                     this.f21795S0 = Arrays.copyOf(this.f21795S0, length);
                                 }
-                                this.f21794R0[i4] = C8883r.usToMs(j2 + f);
+                                this.f21794R0[i4] = C.usToMs(j2 + f);
                                 this.f21795S0[i4] = this.f21814l0.mo22686d(i5);
                                 i4++;
                             }
@@ -954,7 +954,7 @@ public class C9405g extends FrameLayout {
             } else {
                 i = 0;
             }
-            long b3 = C8883r.usToMs(j);
+            long b3 = C.usToMs(j);
             TextView textView = this.f21809g0;
             if (textView != null) {
                 textView.setText(Util.m29398a(this.f21812j0, this.f21813k0, b3));

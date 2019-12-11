@@ -4,7 +4,7 @@ import java.util.concurrent.CancellationException;
 import kotlin.C12900n;
 import kotlin.C12900n.C12901a;
 import kotlin.C12903o;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
@@ -101,7 +101,7 @@ public abstract class C13387q0<T> extends C13356i {
                 mo34579a((Throwable) null, C12900n.m40237b(obj2));
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.DispatchedContinuation<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.DispatchedContinuation<T>");
         } catch (Throwable th2) {
             try {
                 C12901a aVar6 = C12900n.f29540c;

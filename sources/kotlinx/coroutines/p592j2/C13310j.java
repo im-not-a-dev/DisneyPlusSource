@@ -2,7 +2,7 @@ package kotlinx.coroutines.p592j2;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlinx.coroutines.internal.C13279q;
 
@@ -113,7 +113,7 @@ public final class C13310j<E> implements C13303d<E> {
                 obj2 = cVar.f29758a;
                 if (obj != null) {
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.channels.ConflatedBroadcastChannel.State<E>");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.channels.ConflatedBroadcastChannel.State<E>");
                 }
             } else {
                 StringBuilder sb = new StringBuilder();
@@ -165,7 +165,7 @@ public final class C13310j<E> implements C13303d<E> {
                     throw new IllegalStateException(sb.toString().toString());
                 } else if (obj != null) {
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.channels.ConflatedBroadcastChannel.State<E>");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.channels.ConflatedBroadcastChannel.State<E>");
                 }
             } finally {
                 this._updating = 0;

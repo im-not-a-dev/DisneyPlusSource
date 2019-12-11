@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -82,7 +82,7 @@ public final class SubstitutingScope implements MemberScope {
             if (d3 != null) {
                 return d3;
             }
-            throw new C13142s("null cannot be cast to non-null type D");
+            throw new TypeCastException("null cannot be cast to non-null type D");
         }
         Intrinsics.throwNpe();
         throw null;

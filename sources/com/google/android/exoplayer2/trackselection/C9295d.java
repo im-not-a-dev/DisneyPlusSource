@@ -12,7 +12,7 @@ import android.util.SparseBooleanArray;
 import com.google.android.exoplayer2.C8800n0;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.TrackGroupArray;
@@ -1006,7 +1006,7 @@ public class C9295d extends C9306f {
 
     /* renamed from: a */
     public void mo24084a(C9299d dVar) {
-        C9537e.m29296a(dVar);
+        Assertions.checkNotNull(dVar);
         if (!((C9299d) this.f21210e.getAndSet(dVar)).equals(dVar)) {
             mo24048b();
         }
@@ -1490,7 +1490,7 @@ public class C9295d extends C9306f {
         if (aVar == null) {
             aVar = new C9312a(a2, i4);
         }
-        C9537e.m29296a(cVar);
+        Assertions.checkNotNull(cVar);
         return Pair.create(aVar, cVar);
     }
 
@@ -1514,7 +1514,7 @@ public class C9295d extends C9306f {
         if (i2 <= 1) {
             return f21208g;
         }
-        C9537e.m29296a(bVar);
+        Assertions.checkNotNull(bVar);
         int[] iArr2 = new int[i2];
         int i4 = 0;
         for (int i5 = 0; i5 < j0Var2.f20833c; i5++) {
@@ -1604,7 +1604,7 @@ public class C9295d extends C9306f {
             return null;
         }
         C9312a aVar = new C9312a(j0Var, i2);
-        C9537e.m29296a(gVar);
+        Assertions.checkNotNull(gVar);
         return Pair.create(aVar, gVar);
     }
 

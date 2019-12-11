@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.upstream.cache;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Log;
 import java.io.File;
 import java.util.TreeSet;
@@ -135,7 +135,7 @@ final class C9474l {
     /* renamed from: a */
     public C9486t mo24513a(C9486t tVar, long j, boolean z) {
         File file;
-        C9537e.m29301b(this.f22042c.remove(tVar));
+        Assertions.checkState(this.f22042c.remove(tVar));
         File file2 = tVar.f22033X;
         if (z) {
             file = C9486t.m29187a(file2.getParentFile(), this.f22040a, tVar.f22030U, j);

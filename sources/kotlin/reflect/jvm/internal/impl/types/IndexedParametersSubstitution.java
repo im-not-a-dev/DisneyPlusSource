@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13147x;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -77,8 +77,8 @@ public final class IndexedParametersSubstitution extends TypeSubstitution {
                 this(typeParameterDescriptorArr, (TypeProjection[]) array2, false, 4, null);
                 return;
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
-        throw new C13142s(str);
+        throw new TypeCastException(str);
     }
 }

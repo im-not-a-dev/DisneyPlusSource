@@ -13,16 +13,16 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import com.google.android.exoplayer2.C8679b0;
 import com.google.android.exoplayer2.C8872q;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.drm.C8710l;
-import com.google.android.exoplayer2.drm.C8713o;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
+import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.drm.DrmSession;
 import com.google.android.exoplayer2.p362q0.C8878d;
 import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p381t0.C9275d.C9278c;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9543g0;
 import com.google.android.exoplayer2.p393v0.C9547i0;
 import com.google.android.exoplayer2.p393v0.Util;
@@ -131,7 +131,7 @@ public abstract class C9271b extends C8872q {
     private boolean f21120c1;
 
     /* renamed from: d0 */
-    private final C8710l<C8713o> f21121d0;
+    private final DrmSessionManager<FrameworkMediaCrypto> f21121d0;
 
     /* renamed from: d1 */
     private boolean f21122d1;
@@ -179,10 +179,10 @@ public abstract class C9271b extends C8872q {
     private Format f21136o0;
 
     /* renamed from: p0 */
-    private DrmSession<C8713o> f21137p0;
+    private DrmSession<FrameworkMediaCrypto> f21137p0;
 
     /* renamed from: q0 */
-    private DrmSession<C8713o> f21138q0;
+    private DrmSession<FrameworkMediaCrypto> f21138q0;
 
     /* renamed from: r0 */
     private MediaCrypto f21139r0;
@@ -280,9 +280,9 @@ public abstract class C9271b extends C8872q {
         }
     }
 
-    public C9271b(int i, C9273c cVar, C8710l<C8713o> lVar, boolean z, boolean z2, float f) {
+    public C9271b(int i, C9273c cVar, DrmSessionManager<FrameworkMediaCrypto> lVar, boolean z, boolean z2, float f) {
         super(i);
-        C9537e.m29296a(cVar);
+        Assertions.checkNotNull(cVar);
         this.f21119c0 = cVar;
         this.f21121d0 = lVar;
         this.f21123e0 = z;
@@ -569,10 +569,10 @@ public abstract class C9271b extends C8872q {
     @TargetApi(23)
     /* renamed from: U */
     private void m28062U() throws ExoPlaybackException {
-        C8713o oVar = (C8713o) this.f21138q0.mo22771b();
+        FrameworkMediaCrypto oVar = (FrameworkMediaCrypto) this.f21138q0.mo22771b();
         if (oVar == null) {
             m28057P();
-        } else if (C8883r.PLAYREADY_UUID.equals(oVar.f18506a)) {
+        } else if (C.PLAYREADY_UUID.equals(oVar.f18506a)) {
             m28057P();
         } else if (!mo24024x()) {
             try {
@@ -660,10 +660,10 @@ public abstract class C9271b extends C8872q {
         if (this.f21143v0 == null && this.f21135n0 != null) {
             m28072b(this.f21138q0);
             String str = this.f21135n0.f18349b0;
-            DrmSession<C8713o> drmSession = this.f21137p0;
+            DrmSession<FrameworkMediaCrypto> drmSession = this.f21137p0;
             if (drmSession != null) {
                 if (this.f21139r0 == null) {
-                    C8713o oVar = (C8713o) drmSession.mo22771b();
+                    FrameworkMediaCrypto oVar = (FrameworkMediaCrypto) drmSession.mo22771b();
                     if (oVar != null) {
                         try {
                             this.f21139r0 = new MediaCrypto(oVar.f18506a, oVar.f18507b);
@@ -761,7 +761,7 @@ public abstract class C9271b extends C8872q {
 
     /* access modifiers changed from: protected */
     /* renamed from: a */
-    public abstract int mo23177a(C9273c cVar, C8710l<C8713o> lVar, Format format) throws C9278c;
+    public abstract int mo23177a(C9273c cVar, DrmSessionManager<FrameworkMediaCrypto> lVar, Format format) throws C9278c;
 
     /* access modifiers changed from: protected */
     /* renamed from: a */
@@ -957,15 +957,15 @@ public abstract class C9271b extends C8872q {
     }
 
     /* renamed from: c */
-    private void m28078c(DrmSession<C8713o> drmSession) {
-        DrmSession<C8713o> drmSession2 = this.f21138q0;
+    private void m28078c(DrmSession<FrameworkMediaCrypto> drmSession) {
+        DrmSession<FrameworkMediaCrypto> drmSession2 = this.f21138q0;
         this.f21138q0 = drmSession;
         m28067a(drmSession2);
     }
 
     /* renamed from: b */
-    private void m28072b(DrmSession<C8713o> drmSession) {
-        DrmSession<C8713o> drmSession2 = this.f21137p0;
+    private void m28072b(DrmSession<FrameworkMediaCrypto> drmSession) {
+        DrmSession<FrameworkMediaCrypto> drmSession2 = this.f21137p0;
         this.f21137p0 = drmSession;
         m28067a(drmSession2);
     }
@@ -1582,7 +1582,7 @@ public abstract class C9271b extends C8872q {
     }
 
     /* renamed from: a */
-    private void m28067a(DrmSession<C8713o> drmSession) {
+    private void m28067a(DrmSession<FrameworkMediaCrypto> drmSession) {
         if (drmSession != null && drmSession != this.f21138q0 && drmSession != this.f21137p0) {
             this.f21121d0.releaseSession(drmSession);
         }

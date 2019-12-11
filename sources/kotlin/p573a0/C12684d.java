@@ -1,6 +1,6 @@
 package kotlin.p573a0;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.p573a0.C12688f.C12691b;
 import kotlin.p573a0.C12688f.C12693c;
@@ -24,7 +24,7 @@ public interface C12684d extends C12691b {
             if (dVar != null) {
                 return dVar;
             }
-            throw new C13142s("null cannot be cast to non-null type E");
+            throw new TypeCastException("null cannot be cast to non-null type E");
         }
 
         /* renamed from: a */

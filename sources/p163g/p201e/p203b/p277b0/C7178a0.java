@@ -9,7 +9,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.reactivestreams.C14313b;
@@ -132,7 +132,7 @@ public final class C7178a0 implements C7234z {
                 if (a != null) {
                     return (Completable) a;
                 }
-                throw new C13142s("null cannot be cast to non-null type io.reactivex.Completable");
+                throw new TypeCastException("null cannot be cast to non-null type io.reactivex.Completable");
             }
         }
 
@@ -190,7 +190,7 @@ public final class C7178a0 implements C7234z {
                 if (a != null) {
                     return (Single) a;
                 }
-                throw new C13142s("null cannot be cast to non-null type io.reactivex.Single<*>");
+                throw new TypeCastException("null cannot be cast to non-null type io.reactivex.Single<*>");
             }
         }
 
@@ -248,7 +248,7 @@ public final class C7178a0 implements C7234z {
                 if (a != null) {
                     return (Observable) a;
                 }
-                throw new C13142s("null cannot be cast to non-null type io.reactivex.Observable<*>");
+                throw new TypeCastException("null cannot be cast to non-null type io.reactivex.Observable<*>");
             }
         }
 
@@ -308,7 +308,7 @@ public final class C7178a0 implements C7234z {
                 if (a != null) {
                     return (Maybe) a;
                 }
-                throw new C13142s("null cannot be cast to non-null type io.reactivex.Maybe<*>");
+                throw new TypeCastException("null cannot be cast to non-null type io.reactivex.Maybe<*>");
             }
         }
 
@@ -366,7 +366,7 @@ public final class C7178a0 implements C7234z {
                 if (a != null) {
                     return (Flowable) a;
                 }
-                throw new C13142s("null cannot be cast to non-null type io.reactivex.Flowable<*>");
+                throw new TypeCastException("null cannot be cast to non-null type io.reactivex.Flowable<*>");
             }
         }
 
@@ -426,7 +426,7 @@ public final class C7178a0 implements C7234z {
         if (newProxyInstance != null) {
             return (PluginApi) newProxyInstance;
         }
-        throw new C13142s("null cannot be cast to non-null type T");
+        throw new TypeCastException("null cannot be cast to non-null type T");
     }
 
     /* access modifiers changed from: private */

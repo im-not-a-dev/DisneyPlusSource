@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.source;
 
 import android.os.Handler;
 import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.MediaSource.C9067a;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
@@ -200,12 +200,12 @@ public abstract class C9233r<T> extends C9229o {
     /* access modifiers changed from: protected */
     /* renamed from: a */
     public final void mo23968a(T t, MediaSource mediaSource) {
-        C9537e.m29299a(!this.f20942Y.containsKey(t));
+        Assertions.m29299a(!this.f20942Y.containsKey(t));
         C9071a aVar = new C9071a(this, t);
         C9234a aVar2 = new C9234a(t);
         this.f20942Y.put(t, new C9235b(mediaSource, aVar, aVar2));
         Handler handler = this.f20943Z;
-        C9537e.m29296a(handler);
+        Assertions.checkNotNull(handler);
         mediaSource.mo23488a(handler, (MediaSourceEventListener) aVar2);
         mediaSource.mo23490a((C9067a) aVar, this.f20944a0);
     }

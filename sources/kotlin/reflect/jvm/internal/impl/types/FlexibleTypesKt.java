@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
 import kotlin.C12898l;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 
 /* compiled from: flexibleTypes.kt */
 public final class FlexibleTypesKt {
@@ -10,7 +10,7 @@ public final class FlexibleTypesKt {
         if (unwrap != null) {
             return (FlexibleType) unwrap;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.types.FlexibleType");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.types.FlexibleType");
     }
 
     public static final boolean isFlexible(KotlinType kotlinType) {

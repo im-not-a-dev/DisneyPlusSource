@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.upstream;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.upstream.HttpDataSource.C9436a;
 import com.google.android.exoplayer2.upstream.HttpDataSource.C9440e;
 
@@ -28,7 +28,7 @@ public final class C9517t extends C9436a {
     }
 
     public C9517t(String str, TransferListener transferListener, int i, int i2, boolean z) {
-        C9537e.m29298a(str);
+        Assertions.m29298a(str);
         this.f22214b = str;
         this.f22215c = transferListener;
         this.f22216d = i;

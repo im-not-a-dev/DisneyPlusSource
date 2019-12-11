@@ -8,7 +8,7 @@ import android.os.Parcelable;
 import android.util.Size;
 import android.util.SizeF;
 import java.io.Serializable;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -69,19 +69,19 @@ public final class C4064a {
                         if (b != null) {
                             bundle.putParcelableArray(str, (Parcelable[]) b);
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.Array<android.os.Parcelable>");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<android.os.Parcelable>");
                         }
                     } else if (String.class.isAssignableFrom(componentType)) {
                         if (b != null) {
                             bundle.putStringArray(str, (String[]) b);
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.Array<kotlin.String>");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<kotlin.String>");
                         }
                     } else if (CharSequence.class.isAssignableFrom(componentType)) {
                         if (b != null) {
                             bundle.putCharSequenceArray(str, (CharSequence[]) b);
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.Array<kotlin.CharSequence>");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<kotlin.CharSequence>");
                         }
                     } else if (Serializable.class.isAssignableFrom(componentType)) {
                         bundle.putSerializable(str, (Serializable) b);

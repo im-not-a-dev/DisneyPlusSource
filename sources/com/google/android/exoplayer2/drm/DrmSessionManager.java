@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.drm.ExoMediaCrypto;
 
 /* renamed from: com.google.android.exoplayer2.drm.l */
 /* compiled from: DrmSessionManager */
-public interface C8710l<T extends ExoMediaCrypto> {
+public interface DrmSessionManager<T extends ExoMediaCrypto> {
     DrmSession<T> acquireSession(Looper looper, DrmInitData drmInitData);
 
     boolean canAcquireSession(DrmInitData drmInitData);

@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.resolve.scopes;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
@@ -67,7 +67,7 @@ public final class TypeIntersectionScope extends AbstractScopeAdapter {
         if (list != null) {
             return C13199w.m40583d(OverridingUtilsKt.selectMostSpecificInEachOverridableGroup(list, TypeIntersectionScope$getContributedDescriptors$2.INSTANCE), (Iterable) list2);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.collections.Collection<org.jetbrains.kotlin.descriptors.CallableDescriptor>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.Collection<org.jetbrains.kotlin.descriptors.CallableDescriptor>");
     }
 
     public Collection<SimpleFunctionDescriptor> getContributedFunctions(Name name, LookupLocation lookupLocation) {

@@ -4,7 +4,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p581d0.C12731a;
@@ -232,7 +232,7 @@ final class ReflectClassStructure {
             if (obj != null) {
                 annotationArgumentVisitor.visitClassLiteral(name, classLiteralValue((Class) obj));
             } else {
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
         } else if (ReflectKotlinClassKt.TYPES_ELIGIBLE_FOR_SIMPLE_VISIT.contains(cls)) {
             annotationArgumentVisitor.visit(name, obj);
@@ -249,7 +249,7 @@ final class ReflectClassStructure {
                     Intrinsics.checkReturnedValueIsNotNull((Object) identifier, "Name.identifier((value as Enum<*>).name)");
                     annotationArgumentVisitor.visitEnum(name, classId, identifier);
                 } else {
-                    throw new C13142s(str2);
+                    throw new TypeCastException(str2);
                 }
             } else if (Annotation.class.isAssignableFrom(cls)) {
                 Class[] interfaces = cls.getInterfaces();
@@ -263,7 +263,7 @@ final class ReflectClassStructure {
                 if (obj != null) {
                     processAnnotationArguments(visitAnnotation, (Annotation) obj, cls2);
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlin.Annotation");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlin.Annotation");
                 }
             } else if (cls.isArray()) {
                 AnnotationArrayArgumentVisitor visitArray = annotationArgumentVisitor.visitArray(name);
@@ -285,11 +285,11 @@ final class ReflectClassStructure {
                                     visitArray.visitEnum(classId2, identifier2);
                                     i++;
                                 } else {
-                                    throw new C13142s(str2);
+                                    throw new TypeCastException(str2);
                                 }
                             }
                         } else {
-                            throw new C13142s(str3);
+                            throw new TypeCastException(str3);
                         }
                     } else if (Intrinsics.areEqual((Object) componentType, (Object) Class.class)) {
                         if (obj != null) {
@@ -301,11 +301,11 @@ final class ReflectClassStructure {
                                     visitArray.visitClassLiteral(classLiteralValue((Class) obj3));
                                     i++;
                                 } else {
-                                    throw new C13142s(str);
+                                    throw new TypeCastException(str);
                                 }
                             }
                         } else {
-                            throw new C13142s(str3);
+                            throw new TypeCastException(str3);
                         }
                     } else if (obj != null) {
                         Object[] objArr3 = (Object[]) obj;
@@ -315,7 +315,7 @@ final class ReflectClassStructure {
                             i++;
                         }
                     } else {
-                        throw new C13142s(str3);
+                        throw new TypeCastException(str3);
                     }
                     visitArray.visitEnd();
                 }

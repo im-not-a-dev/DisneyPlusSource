@@ -2,7 +2,7 @@ package com.bamtech.sdk4.media;
 
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
@@ -32,6 +32,6 @@ public final class CacheIdGeneratorKt {
             Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "result.toString()");
             return sb2;
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 }

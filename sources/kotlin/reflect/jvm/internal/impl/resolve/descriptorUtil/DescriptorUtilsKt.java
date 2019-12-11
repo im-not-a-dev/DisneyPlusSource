@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil;
 
 import java.util.Collection;
 import java.util.LinkedHashSet;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13147x;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -169,7 +169,7 @@ public final class DescriptorUtilsKt {
                     if (declarationDescriptor != null) {
                         return (ClassDescriptor) declarationDescriptor;
                     }
-                    throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+                    throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
                 }
             }
         }

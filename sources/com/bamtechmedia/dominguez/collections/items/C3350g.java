@@ -14,7 +14,7 @@ import com.bamtechmedia.dominguez.core.content.paging.C3702e;
 import com.bamtechmedia.dominguez.core.utils.C5821c0;
 import java.util.List;
 import java.util.Map;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p171c.p172a.p173a.C4793a;
@@ -230,7 +230,7 @@ public final class C3350g extends C11866a {
         if (eVar != null) {
             return new C3351a(!Intrinsics.areEqual((Object) bVar, (Object) ((C3350g) eVar).f8429V));
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.CollectionListItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.CollectionListItem");
     }
 
     public int getLayout() {

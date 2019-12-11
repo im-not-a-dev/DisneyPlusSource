@@ -3,7 +3,7 @@ package kotlinx.coroutines.p597o2;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import kotlin.C12900n;
 import kotlin.C12900n.C12901a;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.p573a0.C12683c;
@@ -126,7 +126,7 @@ public final class C13374c implements C13372b, C13367b<Object, C13372b> {
                 }
                 return null;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.sync.MutexImpl");
+            throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.sync.MutexImpl");
         }
     }
 
@@ -206,7 +206,7 @@ public final class C13374c implements C13372b, C13367b<Object, C13372b> {
                                 break;
                             }
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
                         }
                     }
                     if (z) {

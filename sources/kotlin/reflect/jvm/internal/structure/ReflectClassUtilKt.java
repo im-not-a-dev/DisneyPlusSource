@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.C12730d;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.C12840a;
 import kotlin.jvm.functions.C12841b;
@@ -130,7 +130,7 @@ public final class ReflectClassUtilKt {
             Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.String).substring(startIndex)");
             return C12832w.m40115a(substring, '.', '/', false, 4, (Object) null);
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 
     public static final Integer getFunctionClassArity(Class<?> cls) {

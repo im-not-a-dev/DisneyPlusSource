@@ -11,7 +11,7 @@ import com.bamtechmedia.dominguez.core.p084g.C3800a;
 import com.bamtechmedia.dominguez.profiles.C6629d0;
 import com.bamtechmedia.dominguez.profiles.C6653e;
 import com.bamtechmedia.dominguez.profiles.C6657f;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -159,7 +159,7 @@ public final class C7006i implements C7005h {
             if (findViewById != null) {
                 fVar.mo19349a((ImageView) findViewById, this.f15554a);
             } else {
-                throw new C13142s("null cannot be cast to non-null type android.widget.ImageView");
+                throw new TypeCastException("null cannot be cast to non-null type android.widget.ImageView");
             }
         }
         TextView textView = (TextView) inflate.findViewById(C7946e.profileNameTextView);

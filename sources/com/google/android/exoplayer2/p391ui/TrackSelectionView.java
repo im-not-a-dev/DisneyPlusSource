@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CheckedTextView;
 import android.widget.LinearLayout;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.C9295d.C9302f;
@@ -200,7 +200,7 @@ public class TrackSelectionView extends LinearLayout {
     }
 
     public void setTrackNameProvider(C9420q qVar) {
-        C9537e.m29296a(qVar);
+        Assertions.checkNotNull(qVar);
         this.f21725e0 = qVar;
         m28788e();
     }
@@ -263,7 +263,7 @@ public class TrackSelectionView extends LinearLayout {
         int intValue = ((Integer) pair.first).intValue();
         int intValue2 = ((Integer) pair.second).intValue();
         C9302f fVar = (C9302f) this.f21721b0.get(intValue);
-        C9537e.m29296a(this.f21727g0);
+        Assertions.checkNotNull(this.f21727g0);
         if (fVar == null) {
             if (!this.f21724d0 && this.f21721b0.size() > 0) {
                 this.f21721b0.clear();

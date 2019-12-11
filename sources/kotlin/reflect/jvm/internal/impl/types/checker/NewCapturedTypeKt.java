@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
@@ -82,7 +82,7 @@ public final class NewCapturedTypeKt {
                     newCapturedType.getConstructor().initializeSupertypes(arrayList2);
                     function2.invoke(Integer.valueOf(i), newCapturedType);
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.types.checker.NewCapturedType");
+                    throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.types.checker.NewCapturedType");
                 }
             }
         }

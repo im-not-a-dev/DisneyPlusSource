@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.UnsignedTypes;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
@@ -138,7 +138,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
                 return 1;
             }
         } else {
-            throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.serialization.deserialization.ProtoContainer.Class");
+            throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.serialization.deserialization.ProtoContainer.Class");
         }
         return 0;
     }
@@ -309,7 +309,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
             }
             return knownJvmBinaryClass;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.load.kotlin.JvmPackagePartSource");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.load.kotlin.JvmPackagePartSource");
     }
 
     /* access modifiers changed from: private */

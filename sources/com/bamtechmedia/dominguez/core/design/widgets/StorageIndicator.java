@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import com.bamtechmedia.dominguez.core.p088i.C3832b;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -77,7 +77,7 @@ public final class StorageIndicator extends View {
                 storageIndicator.setUsedPercentage(((Float) animatedValue).floatValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
         }
     }
 
@@ -100,7 +100,7 @@ public final class StorageIndicator extends View {
                 storageIndicator.setAppPercentage(((Float) animatedValue).floatValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
         }
     }
 

@@ -15,7 +15,7 @@ import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9030a;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9031b;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9032c;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9545h0;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9571v;
@@ -389,7 +389,7 @@ public final class C9025g0 implements C8912g {
     }
 
     public C9025g0(int i, C9545h0 h0Var, C9032c cVar) {
-        C9537e.m29296a(cVar);
+        Assertions.checkNotNull(cVar);
         this.f19842e = cVar;
         this.f19838a = i;
         if (i == 1 || i == 2) {
@@ -463,7 +463,7 @@ public final class C9025g0 implements C8912g {
 
     /* renamed from: a */
     public void mo23308a(long j, long j2) {
-        C9537e.m29301b(this.f19838a != 2);
+        Assertions.checkState(this.f19838a != 2);
         int size = this.f19839b.size();
         for (int i = 0; i < size; i++) {
             C9545h0 h0Var = (C9545h0) this.f19839b.get(i);

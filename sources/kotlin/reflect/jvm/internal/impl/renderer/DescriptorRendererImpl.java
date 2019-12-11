@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import kotlin.C12898l;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.C13147x;
 import kotlin.Lazy;
@@ -1095,7 +1095,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                 sb.append(lowerCase);
                 sb.append("*/ ");
             } else {
-                throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             }
         }
     }
@@ -1120,7 +1120,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                 renderModifier(sb, contains, lowerCase);
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type java.lang.String");
+            throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
         }
     }
 
@@ -1367,7 +1367,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                     Intrinsics.checkReturnedValueIsNotNull((Object) name, "(type.constructor as Uni…escriptor.name.toString()");
                     sb.append(renderError(name));
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.types.ErrorUtils.UninferredParameterTypeConstructor");
+                    throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.types.ErrorUtils.UninferredParameterTypeConstructor");
                 }
             } else {
                 sb.append(str);
@@ -1715,10 +1715,10 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                         return sb3.toString();
                     }
                 } else {
-                    throw new C13142s(str6);
+                    throw new TypeCastException(str6);
                 }
             } else {
-                throw new C13142s(str6);
+                throw new TypeCastException(str6);
             }
         }
         return null;

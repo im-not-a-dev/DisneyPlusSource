@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
@@ -88,7 +88,7 @@ final class KFunctionImpl$defaultCaller$2 extends C12881k implements Function0<C
             if (this.this$0.getDescriptor().getAnnotations().findAnnotation(UtilKt.getJVM_STATIC()) != null) {
                 DeclarationDescriptor containingDeclaration = this.this$0.getDescriptor().getContainingDeclaration();
                 if (containingDeclaration == null) {
-                    throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+                    throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
                 } else if (!((ClassDescriptor) containingDeclaration).isCompanionObject()) {
                     caller = this.this$0.createJvmStaticInObjectCaller((Method) obj);
                 }

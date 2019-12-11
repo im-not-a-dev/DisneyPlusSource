@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import javax.inject.Provider;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;
@@ -204,7 +204,7 @@ public final class C3743h {
             }
             return str3;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.String");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.String");
     }
 
     /* renamed from: a */
@@ -244,9 +244,9 @@ public final class C3743h {
                 C5855o oVar2 = C5855o.f13640a;
                 return z3;
             }
-            throw new C13142s(str2);
+            throw new TypeCastException(str2);
         }
-        throw new C13142s(str2);
+        throw new TypeCastException(str2);
     }
 
     /* access modifiers changed from: private */

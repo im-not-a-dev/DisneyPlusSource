@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p361p0;
 
 import com.google.android.exoplayer2.p361p0.C8840m.C8841a;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -196,7 +196,7 @@ public final class C8818b0 implements C8840m {
     /* renamed from: a */
     public void mo23058a(ByteBuffer byteBuffer) {
         C8816a0 a0Var = this.f18779i;
-        C9537e.m29296a(a0Var);
+        Assertions.checkNotNull(a0Var);
         C8816a0 a0Var2 = a0Var;
         if (byteBuffer.hasRemaining()) {
             ShortBuffer asShortBuffer = byteBuffer.asShortBuffer();

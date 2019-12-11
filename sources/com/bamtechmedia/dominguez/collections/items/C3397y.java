@@ -32,7 +32,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
@@ -288,7 +288,7 @@ public final class C3397y extends C11866a {
             C3397y yVar = (C3397y) eVar;
             return new C3399b(!Intrinsics.areEqual((Object) yVar.f8578V, (Object) this.f8578V), !Intrinsics.areEqual((Object) this.f8585c, (Object) yVar.f8585c));
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ShelfListItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ShelfListItem");
     }
 
     public int getLayout() {
@@ -477,7 +477,7 @@ public final class C3397y extends C11866a {
         if (bVar != null) {
             return ((C3651b) bVar).mo13268i();
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Browsable");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Browsable");
     }
 
     public void bind(C11867b bVar, int i) {

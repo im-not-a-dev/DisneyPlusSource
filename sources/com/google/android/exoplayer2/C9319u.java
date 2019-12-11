@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
@@ -90,14 +90,14 @@ public class C9319u implements LoadControl {
 
         /* renamed from: a */
         public C9320a mo24138a(int i) {
-            C9537e.m29301b(!this.f21337k);
+            Assertions.checkState(!this.f21337k);
             this.f21333g = i;
             return this;
         }
 
         /* renamed from: a */
         public C9319u mo24139a() {
-            C9537e.m29301b(!this.f21337k);
+            Assertions.checkState(!this.f21337k);
             this.f21337k = true;
             if (this.f21327a == null) {
                 this.f21327a = new C9509o(true, DateUtils.FORMAT_ABBREV_MONTH);
@@ -190,14 +190,14 @@ public class C9319u implements LoadControl {
         m28329a(i10, i9, str6, str5);
         m28329a(i13, 0, "backBufferDurationMs", str);
         this.f21314a = oVar;
-        this.f21315b = C8883r.msToUs((long) i8);
-        this.f21316c = C8883r.msToUs((long) i9);
-        this.f21317d = C8883r.msToUs((long) i10);
-        this.f21318e = C8883r.msToUs((long) i11);
-        this.f21319f = C8883r.msToUs((long) i12);
+        this.f21315b = C.msToUs((long) i8);
+        this.f21316c = C.msToUs((long) i9);
+        this.f21317d = C.msToUs((long) i10);
+        this.f21318e = C.msToUs((long) i11);
+        this.f21319f = C.msToUs((long) i12);
         this.f21320g = i6;
         this.f21321h = z;
-        this.f21322i = C8883r.msToUs((long) i13);
+        this.f21322i = C.msToUs((long) i13);
         this.f21323j = z2;
     }
 
@@ -275,6 +275,6 @@ public class C9319u implements LoadControl {
         sb.append(str);
         sb.append(" cannot be less than ");
         sb.append(str2);
-        C9537e.m29300a(z, (Object) sb.toString());
+        Assertions.m29300a(z, (Object) sb.toString());
     }
 }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -58,7 +58,7 @@ public final class LegalLinkSpanHelper {
                     sb.append(')');
                     i = legalLink.getStart() + legalLink.getLabel().length();
                 } else {
-                    throw new C13142s(str);
+                    throw new TypeCastException(str);
                 }
             } else {
                 String text2 = legalDocContent.getText();
@@ -70,7 +70,7 @@ public final class LegalLinkSpanHelper {
                     Intrinsics.checkReturnedValueIsNotNull((Object) sb2, "builder.toString()");
                     return sb2;
                 }
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
         }
     }

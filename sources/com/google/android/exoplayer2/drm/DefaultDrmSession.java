@@ -8,13 +8,13 @@ import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Pair;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.drm.ExoMediaCrypto;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
 import com.google.android.exoplayer2.drm.DrmSession.C8694a;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.KeyRequest;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.ProvisionRequest;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9557m;
 import com.google.android.exoplayer2.p393v0.C9557m.C9558a;
@@ -47,14 +47,14 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
     private final HashMap<String, String> f18487e;
 
     /* renamed from: f */
-    private final C9557m<C8709k> f18488f;
+    private final C9557m<DefaultDrmSessionEventListener> f18488f;
     /* access modifiers changed from: private */
 
     /* renamed from: g */
     public final int f18489g;
 
     /* renamed from: h */
-    final C8715q f18490h;
+    final MediaDrmCallback f18490h;
 
     /* renamed from: i */
     final UUID f18491i;
@@ -181,9 +181,9 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
         void mo22746a(Exception exc);
     }
 
-    public DefaultDrmSession(UUID uuid, ExoMediaDrm<T> exoMediaDrm, C8707c<T> cVar, List<C8692b> list, int i, byte[] bArr, HashMap<String, String> hashMap, C8715q qVar, Looper looper, C9557m<C8709k> mVar, int i2) {
+    public DefaultDrmSession(UUID uuid, ExoMediaDrm<T> exoMediaDrm, C8707c<T> cVar, List<C8692b> list, int i, byte[] bArr, HashMap<String, String> hashMap, MediaDrmCallback qVar, Looper looper, C9557m<DefaultDrmSessionEventListener> mVar, int i2) {
         if (i == 1 || i == 3) {
-            C9537e.m29296a(bArr);
+            Assertions.checkNotNull(bArr);
         }
         this.f18491i = uuid;
         this.f18485c = cVar;
@@ -193,7 +193,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
             this.f18500r = bArr;
             this.f18483a = null;
         } else {
-            C9537e.m29296a(list);
+            Assertions.checkNotNull(list);
             this.f18483a = Collections.unmodifiableList(list);
         }
         this.f18487e = hashMap;
@@ -209,11 +209,11 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
 
     /* renamed from: i */
     private long m25233i() {
-        if (!C8883r.WIDEVINE_UUID.equals(this.f18491i)) {
+        if (!C.WIDEVINE_UUID.equals(this.f18491i)) {
             return Long.MAX_VALUE;
         }
         Pair a = C8717s.m25263a(this);
-        C9537e.m29296a(a);
+        Assertions.checkNotNull(a);
         Pair pair = a;
         return Math.min(((Long) pair.first).longValue(), ((Long) pair.second).longValue());
     }
@@ -397,7 +397,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
             }
         } else if (i != 2) {
             if (i == 3) {
-                C9537e.m29296a(this.f18500r);
+                Assertions.checkNotNull(this.f18500r);
                 if (restoreKeys()) {
                     m25227a(this.f18500r, 3, z);
                 }

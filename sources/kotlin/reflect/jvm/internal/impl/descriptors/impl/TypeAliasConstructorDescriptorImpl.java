@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13147x;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12890t;
@@ -165,7 +165,7 @@ public final class TypeAliasConstructorDescriptorImpl extends FunctionDescriptor
         if (build != null) {
             return (TypeAliasConstructorDescriptor) build;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.impl.TypeAliasConstructorDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.impl.TypeAliasConstructorDescriptor");
     }
 
     public TypeAliasDescriptor getContainingDeclaration() {
@@ -185,7 +185,7 @@ public final class TypeAliasConstructorDescriptorImpl extends FunctionDescriptor
             typeAliasConstructorDescriptorImpl.underlyingConstructorDescriptor = substitute2;
             return typeAliasConstructorDescriptorImpl;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.impl.TypeAliasConstructorDescriptorImpl");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.impl.TypeAliasConstructorDescriptorImpl");
     }
 
     public TypeAliasConstructorDescriptor getOriginal() {
@@ -193,6 +193,6 @@ public final class TypeAliasConstructorDescriptorImpl extends FunctionDescriptor
         if (original != null) {
             return (TypeAliasConstructorDescriptor) original;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.impl.TypeAliasConstructorDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.impl.TypeAliasConstructorDescriptor");
     }
 }

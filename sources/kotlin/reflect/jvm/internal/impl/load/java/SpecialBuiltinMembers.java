@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.KotlinBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
@@ -118,7 +118,7 @@ public final class SpecialBuiltinMembers {
                 superClassDescriptor = DescriptorUtils.getSuperClassDescriptor(superClassDescriptor);
             }
         } else {
-            throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+            throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
         }
     }
 

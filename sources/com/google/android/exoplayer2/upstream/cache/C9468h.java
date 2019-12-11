@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.google.android.exoplayer2.database.C8684a;
 import com.google.android.exoplayer2.database.C8686c;
 import com.google.android.exoplayer2.database.DatabaseProvider;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.util.Set;
 
 /* renamed from: com.google.android.exoplayer2.upstream.cache.h */
@@ -49,7 +49,7 @@ final class C9468h {
 
     /* renamed from: b */
     private Cursor m29033b() {
-        C9537e.m29296a(this.f22029b);
+        Assertions.checkNotNull(this.f22029b);
         return this.f22028a.getReadableDatabase().query(this.f22029b, f22027c, null, null, null, null, null);
     }
 
@@ -152,7 +152,7 @@ final class C9468h {
 
     /* renamed from: a */
     public void mo24501a(String str, long j, long j2) throws C8684a {
-        C9537e.m29296a(this.f22029b);
+        Assertions.checkNotNull(this.f22029b);
         try {
             SQLiteDatabase writableDatabase = this.f22028a.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
@@ -167,7 +167,7 @@ final class C9468h {
 
     /* renamed from: a */
     public void mo24500a(String str) throws C8684a {
-        C9537e.m29296a(this.f22029b);
+        Assertions.checkNotNull(this.f22029b);
         try {
             this.f22028a.getWritableDatabase().delete(this.f22029b, "0 = ?", new String[]{str});
         } catch (SQLException e) {
@@ -178,7 +178,7 @@ final class C9468h {
     /* renamed from: a */
     public void mo24502a(Set<String> set) throws C8684a {
         SQLiteDatabase writableDatabase;
-        C9537e.m29296a(this.f22029b);
+        Assertions.checkNotNull(this.f22029b);
         try {
             writableDatabase = this.f22028a.getWritableDatabase();
             writableDatabase.beginTransaction();

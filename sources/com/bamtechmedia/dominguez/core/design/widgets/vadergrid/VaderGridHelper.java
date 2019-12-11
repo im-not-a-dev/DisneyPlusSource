@@ -12,7 +12,7 @@ import androidx.fragment.app.C0530c;
 import androidx.lifecycle.C0708c;
 import androidx.lifecycle.C0710d;
 import androidx.lifecycle.C0722m;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -167,7 +167,7 @@ public final class VaderGridHelper {
                 viewGroup.removeView(findViewById);
             }
         } else {
-            throw new C13142s("null cannot be cast to non-null type android.view.ViewGroup");
+            throw new TypeCastException("null cannot be cast to non-null type android.view.ViewGroup");
         }
     }
 }

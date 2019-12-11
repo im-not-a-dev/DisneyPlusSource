@@ -5,7 +5,7 @@ import com.bamtechmedia.dominguez.core.content.PromoLabel;
 import java.util.List;
 import java.util.Locale;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.joda.time.DateTime;
@@ -81,7 +81,7 @@ public final class C5998r {
             Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase(locale)");
             return lowerCase;
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 
     /* renamed from: e */
@@ -97,7 +97,7 @@ public final class C5998r {
             Intrinsics.checkReturnedValueIsNotNull((Object) lowerCase, "(this as java.lang.String).toLowerCase(locale)");
             return lowerCase;
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 
     /* renamed from: f */

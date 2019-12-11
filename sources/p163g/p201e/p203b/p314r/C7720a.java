@@ -13,7 +13,7 @@ import android.view.WindowManager;
 import androidx.fragment.app.C0532d;
 import com.bamtechmedia.dominguez.core.p088i.p091p.C3848a;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -87,7 +87,7 @@ public final class C7720a implements C3848a {
                 view.setLayoutParams(layoutParams);
                 return a;
             }
-            throw new C13142s("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
+            throw new TypeCastException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
         }
     }
 
@@ -164,7 +164,7 @@ public final class C7720a implements C3848a {
                 C7720a aVar = this.f16787c;
                 return aVar.m22765a(drawable, aVar.f16776a.widthPixels, drawable.getIntrinsicHeight(), new C7725a(this));
             }
-            throw new C13142s("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
+            throw new TypeCastException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
         }
     }
 
@@ -199,7 +199,7 @@ public final class C7720a implements C3848a {
                 this.f16779d.mo20644a(view, this.f16778c, new C7723c(this, i));
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
+            throw new TypeCastException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
         }
     }
 

@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.jvm.functions.C12853n;
 import kotlin.jvm.internal.Intrinsics;
@@ -292,7 +292,7 @@ public final class TypeSignatureMappingKt {
                     }
                     return createObjectType;
                 }
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
             boolean z2 = declarationDescriptor instanceof ClassDescriptor;
             if (!z2 || !KotlinBuiltIns.isArray(kotlinType)) {
@@ -314,7 +314,7 @@ public final class TypeSignatureMappingKt {
                                 if (containingDeclaration != null) {
                                     classDescriptor = (ClassDescriptor) containingDeclaration;
                                 } else {
-                                    throw new C13142s(str);
+                                    throw new TypeCastException(str);
                                 }
                             }
                             ClassDescriptor original2 = classDescriptor.getOriginal();

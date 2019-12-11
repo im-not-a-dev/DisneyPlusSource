@@ -25,7 +25,7 @@ import com.bamtechmedia.dominguez.core.utils.C5825e;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
 import com.bamtechmedia.dominguez.core.utils.RecyclerViewExtKt;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
@@ -212,7 +212,7 @@ public abstract class C3384s extends C11866a {
                         this.f8541b.m11581a(H, iArr);
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
+                    throw new TypeCastException("null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
                 }
             }
         }
@@ -310,7 +310,7 @@ public abstract class C3384s extends C11866a {
             C3384s sVar = (C3384s) eVar;
             return new C3385a(!Intrinsics.areEqual((Object) mo12519m(), (Object) sVar.mo12519m()), !Intrinsics.areEqual((Object) d, (Object) sVar.mo12511d()), !Intrinsics.areEqual((Object) mo12514g(), (Object) sVar.mo12514g()));
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ShelfItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.collections.items.ShelfItem");
     }
 
     /* renamed from: h */
@@ -368,7 +368,7 @@ public abstract class C3384s extends C11866a {
             int H = ((LinearLayoutManager) layoutManager).mo4318H();
             return H < 0 ? mo12499h() : H;
         }
-        throw new C13142s("null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
+        throw new TypeCastException("null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
     }
 
     public C11867b createViewHolder(View view) {
@@ -707,7 +707,7 @@ public abstract class C3384s extends C11866a {
                         linearLayoutManager.mo4342f(bVar.mo12589b(), bVar.mo12588a().intValue());
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
+                    throw new TypeCastException("null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
                 }
             }
         }

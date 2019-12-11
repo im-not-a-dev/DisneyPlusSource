@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p361p0;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.nio.ShortBuffer;
 import java.util.Arrays;
 
@@ -399,7 +399,7 @@ final class C8816a0 {
                         if (i3 != i5) {
                             z = false;
                         }
-                        C9537e.m29301b(z);
+                        Assertions.checkState(z);
                         this.f18762q = 0;
                     }
                     i6++;

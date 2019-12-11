@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p361p0;
 import android.os.Handler;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p362q0.C8878d;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.p0.n */
 /* compiled from: AudioRendererEventListener */
@@ -22,7 +22,7 @@ public interface C8842n {
         public C8843a(Handler handler, C8842n nVar) {
             Handler handler2;
             if (nVar != null) {
-                C9537e.m29296a(handler);
+                Assertions.checkNotNull(handler);
                 handler2 = handler;
             } else {
                 handler2 = null;

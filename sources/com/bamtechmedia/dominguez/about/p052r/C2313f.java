@@ -12,7 +12,7 @@ import com.bamtechmedia.dominguez.core.content.search.C3724a;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -97,7 +97,7 @@ public final class C2313f {
             aVar.mo426a().show();
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
     /* renamed from: a */

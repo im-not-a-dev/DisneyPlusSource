@@ -16,7 +16,7 @@ import androidx.lifecycle.C0722m;
 import com.bamtech.player.exo.sdk4.SDK4ExoPlaybackEngine;
 import com.bamtechmedia.dominguez.playback.C6270c;
 import com.bamtechmedia.dominguez.playback.C6325d;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -137,9 +137,9 @@ public final class ControlsMotionSpecImpl implements C0710d {
                     controlsMotionSpecImpl.m20274a(context, bVar, ((Float) animatedValue).floatValue(), this.f14737a.m20271a(this.f14742f, this.f14743g, valueAnimator.getAnimatedFraction()));
                     return;
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
             }
-            throw new C13142s("null cannot be cast to non-null type android.graphics.drawable.GradientDrawable");
+            throw new TypeCastException("null cannot be cast to non-null type android.graphics.drawable.GradientDrawable");
         }
     }
 
@@ -281,7 +281,7 @@ public final class ControlsMotionSpecImpl implements C0710d {
                     ((LayerDrawable) thumb).setLevel(1);
                     return;
                 }
-                throw new C13142s("null cannot be cast to non-null type android.graphics.drawable.LayerDrawable");
+                throw new TypeCastException("null cannot be cast to non-null type android.graphics.drawable.LayerDrawable");
             }
         }
     }
@@ -373,13 +373,13 @@ public final class ControlsMotionSpecImpl implements C0710d {
                         }
                         return;
                     }
-                    throw new C13142s("null cannot be cast to non-null type android.graphics.drawable.ClipDrawable");
+                    throw new TypeCastException("null cannot be cast to non-null type android.graphics.drawable.ClipDrawable");
                 }
-                throw new C13142s("null cannot be cast to non-null type android.graphics.drawable.GradientDrawable");
+                throw new TypeCastException("null cannot be cast to non-null type android.graphics.drawable.GradientDrawable");
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
-        throw new C13142s(str);
+        throw new TypeCastException(str);
     }
 
     /* access modifiers changed from: private */

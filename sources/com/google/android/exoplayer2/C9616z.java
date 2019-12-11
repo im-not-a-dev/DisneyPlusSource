@@ -11,7 +11,7 @@ import com.google.android.exoplayer2.C9525v.C9526a;
 import com.google.android.exoplayer2.PlayerMessage.C8667a;
 import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.Timeline.C8670c;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9542g;
 import com.google.android.exoplayer2.p393v0.C9547i0;
 import com.google.android.exoplayer2.p393v0.Util;
@@ -251,7 +251,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
             if (i != 4) {
                 z = false;
             }
-            C9537e.m29299a(z);
+            Assertions.m29299a(z);
         }
     }
 
@@ -1184,10 +1184,10 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
         L_0x008c:
             r4 = r12
         L_0x008d:
-            long r6 = com.google.android.exoplayer2.C8883r.usToMs(r4)     // Catch:{ all -> 0x00de }
+            long r6 = com.google.android.exoplayer2.C.usToMs(r4)     // Catch:{ all -> 0x00de }
             com.google.android.exoplayer2.h0 r0 = r1.f22541m0     // Catch:{ all -> 0x00de }
             long r10 = r0.f18545m     // Catch:{ all -> 0x00de }
-            long r10 = com.google.android.exoplayer2.C8883r.usToMs(r10)     // Catch:{ all -> 0x00de }
+            long r10 = com.google.android.exoplayer2.C.usToMs(r10)     // Catch:{ all -> 0x00de }
             int r0 = (r6 > r10 ? 1 : (r6 == r10 ? 0 : -1))
             if (r0 != 0) goto L_0x00b8
             com.google.android.exoplayer2.h0 r0 = r1.f22541m0     // Catch:{ all -> 0x00de }
@@ -1635,7 +1635,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
     private boolean m29810a(C9619c cVar) {
         Object obj = cVar.f22559W;
         if (obj == null) {
-            Pair a = m29795a(new C9621e(cVar.f22560c.mo22643g(), cVar.f22560c.mo22645i(), C8883r.msToUs(cVar.f22560c.mo22641e())), false);
+            Pair a = m29795a(new C9621e(cVar.f22560c.mo22643g(), cVar.f22560c.mo22645i(), C.msToUs(cVar.f22560c.mo22641e())), false);
             if (a == null) {
                 return false;
             }

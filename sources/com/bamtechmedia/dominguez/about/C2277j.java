@@ -16,7 +16,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;
@@ -52,7 +52,7 @@ public final class C2277j extends C0108i {
                 jVar.setArguments(C5833g.m18829a((Pair[]) Arrays.copyOf(pairArr, pairArr.length)));
                 return jVar;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         }
 
         public /* synthetic */ C2278a(DefaultConstructorMarker defaultConstructorMarker) {

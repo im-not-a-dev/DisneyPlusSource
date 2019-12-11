@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import okhttp3.Cookie;
@@ -41,7 +41,7 @@ public final class PreferencesCookiePersistor implements CookiePersistor {
                     arrayList.add(decode);
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlin.String");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.String");
             }
         }
         return arrayList;

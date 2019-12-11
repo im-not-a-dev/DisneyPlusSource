@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.offline.C8807a;
 import com.google.android.exoplayer2.offline.StreamKey;
 import com.google.android.exoplayer2.p366s0.p371v.C8984n;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9549j0;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.util.ArrayList;
@@ -168,12 +168,12 @@ public class C9245a implements C8807a<C9245a> {
         /* renamed from: a */
         public Uri mo23985a(int i, int i2) {
             boolean z = true;
-            C9537e.m29301b(this.f21022j != null);
-            C9537e.m29301b(this.f21026n != null);
+            Assertions.checkState(this.f21022j != null);
+            Assertions.checkState(this.f21026n != null);
             if (i2 >= this.f21026n.size()) {
                 z = false;
             }
-            C9537e.m29301b(z);
+            Assertions.checkState(z);
             String num = Integer.toString(this.f21022j[i].f18345X);
             String l = ((Long) this.f21026n.get(i2)).toString();
             return C9549j0.m29368b(this.f21024l, this.f21025m.replace("{bitrate}", num).replace("{Bitrate}", num).replace("{start time}", l).replace("{start_time}", l));

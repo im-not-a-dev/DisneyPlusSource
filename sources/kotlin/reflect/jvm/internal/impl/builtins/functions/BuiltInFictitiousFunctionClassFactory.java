@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.builtins.functions;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.BuiltInsPackageFragment;
 import kotlin.reflect.jvm.internal.impl.builtins.FunctionInterfacePackageFragment;
@@ -45,7 +45,7 @@ public final class BuiltInFictitiousFunctionClassFactory implements ClassDescrip
                 }
                 return kindWithArity;
             }
-            throw new C13142s("null cannot be cast to non-null type java.lang.String");
+            throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
         }
 
         private final Integer toInt(String str) {

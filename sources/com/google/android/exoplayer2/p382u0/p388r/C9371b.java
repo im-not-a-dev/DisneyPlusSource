@@ -6,7 +6,7 @@ import android.text.SpannableStringBuilder;
 import android.util.Base64;
 import android.util.Pair;
 import com.google.android.exoplayer2.p382u0.C9322b;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -65,7 +65,7 @@ final class C9371b {
         this.f21567c = str2 != null;
         this.f21568d = j;
         this.f21569e = j2;
-        C9537e.m29296a(str3);
+        Assertions.checkNotNull(str3);
         this.f21572h = str3;
         this.f21574j = new HashMap<>();
         this.f21575k = new HashMap<>();

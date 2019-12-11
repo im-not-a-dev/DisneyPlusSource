@@ -18,7 +18,7 @@ import com.bamtechmedia.dominguez.playback.p237m.p252q.C6510e;
 import com.bamtechmedia.dominguez.profiles.C6626c0;
 import com.bamtechmedia.dominguez.profiles.C6667g1;
 import java.util.Locale;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;
@@ -129,7 +129,7 @@ public final class C6486g implements C5742a<C6336a> {
                             Intrinsics.checkReturnedValueIsNotNull((Object) b2, "Observable.just(copyPlay…ackState, movie, result))");
                             return b2;
                         }
-                        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Movie");
+                        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Movie");
                     } else if (i == 3 || i == 4) {
                         C3632f b3 = dVar.mo13536b();
                         if (b3 != null) {
@@ -137,7 +137,7 @@ public final class C6486g implements C5742a<C6336a> {
                             Intrinsics.checkReturnedValueIsNotNull((Object) b4, "Observable.just(copyPlay…ra, result, appLanguage))");
                             return b4;
                         }
-                        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Extra");
+                        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Extra");
                     } else {
                         StringBuilder sb = new StringBuilder();
                         sb.append(str3);
@@ -157,7 +157,7 @@ public final class C6486g implements C5742a<C6336a> {
                         Intrinsics.checkReturnedValueIsNotNull((Object) b7, "Observable.just(copyPlay…kState, episode, result))");
                         return b7;
                     }
-                    throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Episode");
+                    throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.Episode");
                 }
             } else {
                 StringBuilder sb2 = new StringBuilder();

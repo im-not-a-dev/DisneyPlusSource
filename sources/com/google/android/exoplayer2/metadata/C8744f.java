@@ -10,7 +10,7 @@ import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -114,7 +114,7 @@ public final class C8744f extends C8872q implements Callback {
     public C8744f(C8743e eVar, Looper looper, C8740c cVar) {
         Handler handler;
         super(4);
-        C9537e.m29296a(eVar);
+        Assertions.checkNotNull(eVar);
         this.f18559d0 = eVar;
         if (looper == null) {
             handler = null;
@@ -122,7 +122,7 @@ public final class C8744f extends C8872q implements Callback {
             handler = Util.m29393a(looper, (Callback) this);
         }
         this.f18560e0 = handler;
-        C9537e.m29296a(cVar);
+        Assertions.checkNotNull(cVar);
         this.f18558c0 = cVar;
         this.f18561f0 = new C8679b0();
         this.f18562g0 = new C8742d();
@@ -197,7 +197,7 @@ public final class C8744f extends C8872q implements Callback {
             } else {
                 C8739b b = this.f18558c0.mo22877b(H);
                 byte[] K = metadata.mo22863a(i).mo22874K();
-                C9537e.m29296a(K);
+                Assertions.checkNotNull(K);
                 byte[] bArr = K;
                 this.f18562g0.mo23207b();
                 this.f18562g0.mo23224f(bArr.length);

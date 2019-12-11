@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import kotlin.C12898l;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function2;
@@ -170,7 +170,7 @@ public final class UtilKt {
         if (containingDeclaration != null) {
             return ((ClassDescriptor) containingDeclaration).getThisAsReceiverParameter();
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
     }
 
     public static final FqName getJVM_STATIC() {
@@ -233,14 +233,14 @@ public final class UtilKt {
             if (binaryClass != null) {
                 cls = ((ReflectKotlinClass) binaryClass).getKlass();
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlin.reflect.jvm.internal.components.ReflectKotlinClass");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.reflect.jvm.internal.components.ReflectKotlinClass");
             }
         } else if (source instanceof RuntimeSourceElement) {
             ReflectJavaElement javaElement = ((RuntimeSourceElement) source).getJavaElement();
             if (javaElement != null) {
                 cls = ((ReflectJavaClass) javaElement).getElement();
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlin.reflect.jvm.internal.structure.ReflectJavaClass");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.reflect.jvm.internal.structure.ReflectJavaClass");
             }
         } else {
             ClassId classId = DescriptorUtilsKt.getClassId(classDescriptor);
@@ -282,7 +282,7 @@ public final class UtilKt {
             if (array != null) {
                 return array;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         } else if (constantValue instanceof EnumValue) {
             Pair pair = (Pair) ((EnumValue) constantValue).getValue();
             ClassId classId = (ClassId) pair.mo31013a();
@@ -294,7 +294,7 @@ public final class UtilKt {
             if (loadClass$default != null) {
                 return Util.getEnumConstantByName(loadClass$default, name.asString());
             }
-            throw new C13142s("null cannot be cast to non-null type java.lang.Class<out kotlin.Enum<*>>");
+            throw new TypeCastException("null cannot be cast to non-null type java.lang.Class<out kotlin.Enum<*>>");
         } else if (constantValue instanceof KClassValue) {
             Value value = (Value) ((KClassValue) constantValue).getValue();
             if (value instanceof NormalClass) {

@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.name;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: FqNamesUtil.kt */
@@ -74,7 +74,7 @@ public final class FqNamesUtilKt {
             Intrinsics.checkReturnedValueIsNotNull((Object) substring, "(this as java.lang.String).substring(startIndex)");
             return new FqName(substring);
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 
     private static final boolean isSubpackageOf(String str, String str2) {

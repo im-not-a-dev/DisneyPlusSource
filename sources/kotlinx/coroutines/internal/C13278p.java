@@ -5,7 +5,7 @@ import kotlin.C12900n;
 import kotlin.C12900n.C12901a;
 import kotlin.C12903o;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p573a0.C12683c;
@@ -170,7 +170,7 @@ public final class C13278p {
                 e2.setStackTrace((StackTraceElement[]) array);
                 return e2;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         }
         StackTraceElement[] stackTraceElementArr = new StackTraceElement[(arrayDeque.size() + a)];
         for (int i2 = 0; i2 < a; i2++) {

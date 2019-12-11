@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 
@@ -21,6 +21,6 @@ public final class StarProjectionImplKt$starProjectionType$1 extends TypeConstru
         if (declarationDescriptor != null) {
             return TypeUtils.makeStarProjection((TypeParameterDescriptor) declarationDescriptor);
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.TypeParameterDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.TypeParameterDescriptor");
     }
 }

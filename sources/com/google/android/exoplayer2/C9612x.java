@@ -3,8 +3,8 @@ package com.google.android.exoplayer2;
 import android.content.Context;
 import android.os.Looper;
 import com.google.android.exoplayer2.analytics.C8673a.C8674a;
-import com.google.android.exoplayer2.drm.C8710l;
-import com.google.android.exoplayer2.drm.C8713o;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
+import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.trackselection.C9295d;
 import com.google.android.exoplayer2.trackselection.TrackSelector;
@@ -39,17 +39,17 @@ public final class C9612x {
     }
 
     /* renamed from: a */
-    public static SimpleExoPlayer m29756a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, Looper looper) {
+    public static SimpleExoPlayer m29756a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, DrmSessionManager<FrameworkMediaCrypto> lVar, Looper looper) {
         return m29757a(context, renderersFactory, trackSelector, loadControl, lVar, new C8674a(), looper);
     }
 
     /* renamed from: a */
-    public static SimpleExoPlayer m29757a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, C8674a aVar, Looper looper) {
+    public static SimpleExoPlayer m29757a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, DrmSessionManager<FrameworkMediaCrypto> lVar, C8674a aVar, Looper looper) {
         return m29758a(context, renderersFactory, trackSelector, loadControl, lVar, m29760a(context), aVar, looper);
     }
 
     /* renamed from: a */
-    public static SimpleExoPlayer m29758a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, C8710l<C8713o> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, Looper looper) {
+    public static SimpleExoPlayer m29758a(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, DrmSessionManager<FrameworkMediaCrypto> lVar, BandwidthMeter bandwidthMeter, C8674a aVar, Looper looper) {
         SimpleExoPlayer o0Var = new SimpleExoPlayer(context, renderersFactory, trackSelector, loadControl, lVar, bandwidthMeter, aVar, looper);
         return o0Var;
     }

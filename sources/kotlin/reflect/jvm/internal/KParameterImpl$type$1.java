@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal;
 
 import java.lang.reflect.Type;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
@@ -38,6 +38,6 @@ final class KParameterImpl$type$1 extends C12881k implements Function0<Type> {
             sb.append(access$getDescriptor$p);
             throw new KotlinReflectionInternalError(sb.toString());
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
     }
 }

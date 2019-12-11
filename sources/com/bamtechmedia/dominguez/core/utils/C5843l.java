@@ -2,7 +2,7 @@ package com.bamtechmedia.dominguez.core.utils;
 
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.l */
 /* compiled from: KeyboardUtils.kt */
@@ -21,7 +21,7 @@ public final class C5843l {
             ((InputMethodManager) systemService).hideSoftInputFromWindow(view.getWindowToken(), 0);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type android.view.inputmethod.InputMethodManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.view.inputmethod.InputMethodManager");
     }
 
     /* renamed from: b */
@@ -31,6 +31,6 @@ public final class C5843l {
             ((InputMethodManager) systemService).showSoftInput(view, 1);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type android.view.inputmethod.InputMethodManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.view.inputmethod.InputMethodManager");
     }
 }

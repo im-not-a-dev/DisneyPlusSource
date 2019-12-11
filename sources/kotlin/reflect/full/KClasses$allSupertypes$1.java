@@ -2,7 +2,7 @@ package kotlin.reflect.full;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KClass;
@@ -54,12 +54,12 @@ final class KClasses$allSupertypes$1<N> implements Neighbors<KType> {
                             throw new KotlinReflectionInternalError(sb.toString());
                         }
                     } else {
-                        throw new C13142s(str);
+                        throw new TypeCastException(str);
                     }
                 }
                 return arrayList;
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
         StringBuilder sb2 = new StringBuilder();
         sb2.append("Supertype not a class: ");

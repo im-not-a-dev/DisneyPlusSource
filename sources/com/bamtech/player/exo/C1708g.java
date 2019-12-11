@@ -5,8 +5,8 @@ import android.os.Looper;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.LoadControl;
 import com.google.android.exoplayer2.RenderersFactory;
-import com.google.android.exoplayer2.drm.C8710l;
-import com.google.android.exoplayer2.drm.C8713o;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
+import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.trackselection.TrackSelector;
 import com.google.android.exoplayer2.upstream.BandwidthMeter;
@@ -26,7 +26,7 @@ public class C1708g extends SimpleExoPlayer implements C5322c {
     /* renamed from: J */
     boolean f5966J = false;
 
-    protected C1708g(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, BandwidthMeter bandwidthMeter, C8710l<C8713o> lVar, Looper looper) {
+    protected C1708g(Context context, RenderersFactory renderersFactory, TrackSelector trackSelector, LoadControl loadControl, BandwidthMeter bandwidthMeter, DrmSessionManager<FrameworkMediaCrypto> lVar, Looper looper) {
         super(context, renderersFactory, trackSelector, loadControl, bandwidthMeter, lVar, looper);
     }
 

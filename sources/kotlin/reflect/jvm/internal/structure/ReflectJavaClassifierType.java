@@ -6,7 +6,7 @@ import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
@@ -35,7 +35,7 @@ public final class ReflectJavaClassifierType extends ReflectJavaType implements 
             if (rawType != null) {
                 javaClassifier = new ReflectJavaClass((Class) rawType);
             } else {
-                throw new C13142s("null cannot be cast to non-null type java.lang.Class<*>");
+                throw new TypeCastException("null cannot be cast to non-null type java.lang.Class<*>");
             }
         } else {
             StringBuilder sb = new StringBuilder();

@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.upstream;
 
 import android.content.Context;
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import java.io.IOException;
@@ -50,7 +50,7 @@ public final class C9514q implements DataSource {
 
     public C9514q(Context context, DataSource dataSource) {
         this.f22182a = context.getApplicationContext();
-        C9537e.m29296a(dataSource);
+        Assertions.checkNotNull(dataSource);
         this.f22184c = dataSource;
     }
 
@@ -164,7 +164,7 @@ public final class C9514q implements DataSource {
     }
 
     public long open(DataSpec dataSpec) throws IOException {
-        C9537e.m29301b(this.f22192k == null);
+        Assertions.checkState(this.f22192k == null);
         String scheme = dataSpec.f21938a.getScheme();
         if (Util.isLocalFileUri(dataSpec.f21938a)) {
             String path = dataSpec.f21938a.getPath();
@@ -193,7 +193,7 @@ public final class C9514q implements DataSource {
 
     public int read(byte[] bArr, int i, int i2) throws IOException {
         DataSource dataSource = this.f22192k;
-        C9537e.m29296a(dataSource);
+        Assertions.checkNotNull(dataSource);
         return dataSource.read(bArr, i, i2);
     }
 

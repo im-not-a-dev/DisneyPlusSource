@@ -45,7 +45,7 @@ import com.google.android.exoplayer2.p391ui.AspectRatioFrameLayout.C9392b;
 import com.google.android.exoplayer2.p391ui.C9405g.C9409d;
 import com.google.android.exoplayer2.p391ui.p392r.C9429g;
 import com.google.android.exoplayer2.p391ui.p392r.C9430h;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9555l;
 import com.google.android.exoplayer2.p394w0.C9601p;
@@ -319,7 +319,7 @@ public class PlayerView extends FrameLayout implements C9206b {
 
     public ViewGroup getAdViewGroup() {
         FrameLayout frameLayout = this.f21692f0;
-        C9537e.m29297a(frameLayout, (Object) "exo_ad_overlay must be present for ad playback");
+        Assertions.m29297a(frameLayout, (Object) "exo_ad_overlay must be present for ad playback");
         return frameLayout;
     }
 
@@ -348,7 +348,7 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public int getResizeMode() {
-        C9537e.m29301b(this.f21688c != null);
+        Assertions.checkState(this.f21688c != null);
         return this.f21688c.getResizeMode();
     }
 
@@ -399,12 +399,12 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public void setAspectRatioListener(C9392b bVar) {
-        C9537e.m29301b(this.f21688c != null);
+        Assertions.checkState(this.f21688c != null);
         this.f21688c.setAspectRatioListener(bVar);
     }
 
     public void setControlDispatcher(C8898s sVar) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21690d0.setControlDispatcher(sVar);
     }
 
@@ -417,12 +417,12 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public void setControllerHideOnTouch(boolean z) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21705s0 = z;
     }
 
     public void setControllerShowTimeoutMs(int i) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21702p0 = i;
         if (this.f21690d0.mo24379b()) {
             mo24274d();
@@ -430,12 +430,12 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public void setControllerVisibilityListener(C9409d dVar) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21690d0.setVisibilityListener(dVar);
     }
 
     public void setCustomErrorMessage(CharSequence charSequence) {
-        C9537e.m29301b(this.f21689c0 != null);
+        Assertions.checkState(this.f21689c0 != null);
         this.f21701o0 = charSequence;
         m28758k();
     }
@@ -459,7 +459,7 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public void setFastForwardIncrementMs(int i) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21690d0.setFastForwardIncrementMs(i);
     }
 
@@ -471,13 +471,13 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public void setPlaybackPreparer(C8727i0 i0Var) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21690d0.setPlaybackPreparer(i0Var);
     }
 
     public void setPlayer(Player player) {
-        C9537e.m29301b(Looper.myLooper() == Looper.getMainLooper());
-        C9537e.m29299a(player == null || player.getApplicationLooper() == Looper.getMainLooper());
+        Assertions.checkState(Looper.myLooper() == Looper.getMainLooper());
+        Assertions.m29299a(player == null || player.getApplicationLooper() == Looper.getMainLooper());
         Player player2 = this.f21694h0;
         if (player2 != player) {
             if (player2 != null) {
@@ -536,17 +536,17 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public void setRepeatToggleModes(int i) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21690d0.setRepeatToggleModes(i);
     }
 
     public void setResizeMode(int i) {
-        C9537e.m29301b(this.f21688c != null);
+        Assertions.checkState(this.f21688c != null);
         this.f21688c.setResizeMode(i);
     }
 
     public void setRewindIncrementMs(int i) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21690d0.setRewindIncrementMs(i);
     }
 
@@ -556,12 +556,12 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public void setShowMultiWindowTimeBar(boolean z) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21690d0.setShowMultiWindowTimeBar(z);
     }
 
     public void setShowShuffleButton(boolean z) {
-        C9537e.m29301b(this.f21690d0 != null);
+        Assertions.checkState(this.f21690d0 != null);
         this.f21690d0.setShowShuffleButton(z);
     }
 
@@ -573,7 +573,7 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public void setUseArtwork(boolean z) {
-        C9537e.m29301b(!z || this.f21685W != null);
+        Assertions.checkState(!z || this.f21685W != null);
         if (this.f21696j0 != z) {
             this.f21696j0 = z;
             m28743c(false);
@@ -581,7 +581,7 @@ public class PlayerView extends FrameLayout implements C9206b {
     }
 
     public void setUseController(boolean z) {
-        C9537e.m29301b(!z || this.f21690d0 != null);
+        Assertions.checkState(!z || this.f21690d0 != null);
         if (this.f21695i0 != z) {
             this.f21695i0 = z;
             if (z) {

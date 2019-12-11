@@ -28,11 +28,11 @@ public final class C9571v {
             int i2 = this.f22332d;
             if (i < i2 || (i == i2 && this.f22331c == 0)) {
                 z = true;
-                C9537e.m29301b(z);
+                Assertions.checkState(z);
             }
         }
         z = false;
-        C9537e.m29301b(z);
+        Assertions.checkState(z);
     }
 
     /* renamed from: a */
@@ -49,7 +49,7 @@ public final class C9571v {
 
     /* renamed from: c */
     public int mo24669c() {
-        C9537e.m29301b(this.f22331c == 0);
+        Assertions.checkState(this.f22331c == 0);
         return this.f22330b;
     }
 
@@ -84,7 +84,7 @@ public final class C9571v {
 
     /* renamed from: d */
     public void mo24672d(int i) {
-        C9537e.m29301b(this.f22331c == 0);
+        Assertions.checkState(this.f22331c == 0);
         this.f22330b += i;
         m29531g();
     }
@@ -135,7 +135,7 @@ public final class C9571v {
 
     /* renamed from: b */
     public void mo24668b(byte[] bArr, int i, int i2) {
-        C9537e.m29301b(this.f22331c == 0);
+        Assertions.checkState(this.f22331c == 0);
         System.arraycopy(this.f22329a, this.f22330b, bArr, i, i2);
         this.f22330b += i2;
         m29531g();

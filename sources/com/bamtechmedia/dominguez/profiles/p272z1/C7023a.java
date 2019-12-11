@@ -5,7 +5,7 @@ import android.view.accessibility.CaptioningManager;
 import com.bamtechmedia.dominguez.profiles.p263u1.p265e.C6865a;
 import java.util.List;
 import java.util.Locale;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p130o.C4065b;
 
@@ -30,7 +30,7 @@ public final class C7023a implements C6865a {
             }
             return null;
         }
-        throw new C13142s("null cannot be cast to non-null type android.view.accessibility.CaptioningManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.view.accessibility.CaptioningManager");
     }
 
     /* renamed from: b */
@@ -39,7 +39,7 @@ public final class C7023a implements C6865a {
         if (systemService != null) {
             return ((CaptioningManager) systemService).isEnabled();
         }
-        throw new C13142s("null cannot be cast to non-null type android.view.accessibility.CaptioningManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.view.accessibility.CaptioningManager");
     }
 
     /* renamed from: c */

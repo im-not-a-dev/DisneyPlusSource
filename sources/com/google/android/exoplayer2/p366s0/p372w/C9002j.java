@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p366s0.p372w;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.s0.w.j */
 /* compiled from: VorbisBitArray */
@@ -31,11 +31,11 @@ final class C9002j {
             int i2 = this.f19762b;
             if (i < i2 || (i == i2 && this.f19764d == 0)) {
                 z = true;
-                C9537e.m29301b(z);
+                Assertions.checkState(z);
             }
         }
         z = false;
-        C9537e.m29301b(z);
+        Assertions.checkState(z);
     }
 
     /* renamed from: a */

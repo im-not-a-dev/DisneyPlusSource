@@ -17,7 +17,7 @@ public final class C9530b0 extends BufferedOutputStream {
 
     /* renamed from: a */
     public void mo24595a(OutputStream outputStream) {
-        C9537e.m29301b(this.f22232c);
+        Assertions.checkState(this.f22232c);
         this.out = outputStream;
         this.count = 0;
         this.f22232c = false;

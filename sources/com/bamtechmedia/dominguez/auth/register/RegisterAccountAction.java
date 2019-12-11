@@ -12,7 +12,7 @@ import com.bamtechmedia.dominguez.legal.api.LegalApi;
 import com.bamtechmedia.dominguez.legal.api.LegalDisclosure;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
@@ -468,7 +468,7 @@ public final class RegisterAccountAction {
             Intrinsics.checkReturnedValueIsNotNull((Object) a, "accountApi.createAccount…tCreated as ActionState))");
             return a;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.ActionState");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.auth.register.RegisterAccountAction.ActionState");
     }
 
     /* access modifiers changed from: private */

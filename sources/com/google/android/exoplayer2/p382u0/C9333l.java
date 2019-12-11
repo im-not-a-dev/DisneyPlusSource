@@ -9,7 +9,7 @@ import com.google.android.exoplayer2.C8872q;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import java.util.Collections;
@@ -159,7 +159,7 @@ public final class C9333l extends C8872q implements Callback {
     public C9333l(C9332k kVar, Looper looper, C9328h hVar) {
         Handler handler;
         super(3);
-        C9537e.m29296a(kVar);
+        Assertions.checkNotNull(kVar);
         this.f21366d0 = kVar;
         if (looper == null) {
             handler = null;

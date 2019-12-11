@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.Callable;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
@@ -135,7 +135,7 @@ public final class C6434a {
         if (systemService != null) {
             return (DisplayManager) systemService;
         }
-        throw new C13142s("null cannot be cast to non-null type android.hardware.display.DisplayManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.hardware.display.DisplayManager");
     }
 
     /* JADX WARNING: type inference failed for: r1v2, types: [com.bamtechmedia.dominguez.playback.m.m.f.a$c, kotlin.jvm.functions.Function1] */

@@ -1,6 +1,6 @@
 package kotlin.p588j0;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlin.j0.w */
@@ -53,7 +53,7 @@ class C12832w extends C12831v {
             sb.append(substring2);
             return sb.toString();
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 
     /* renamed from: g */
@@ -73,7 +73,7 @@ class C12832w extends C12831v {
             sb.append(substring2);
             return sb.toString();
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 
     /* renamed from: a */

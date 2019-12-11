@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
 import java.util.RandomAccess;
 import java.util.Set;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.functions.Function0;
@@ -306,16 +306,16 @@ class C13199w extends C13198v {
             Object[] array = collection.toArray(new Comparable[0]);
             String str = "null cannot be cast to non-null type kotlin.Array<T>";
             if (array == null) {
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             } else if (array != null) {
                 Comparable[] comparableArr = (Comparable[]) array;
                 if (comparableArr != null) {
                     C13171j.m40344b(comparableArr);
                     return C13171j.m40336a((T[]) comparableArr);
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
             } else {
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
         } else {
             List<T> r = m40607r(iterable);
@@ -525,12 +525,12 @@ class C13199w extends C13198v {
             Object[] array = collection.toArray(new Object[0]);
             String str = "null cannot be cast to non-null type kotlin.Array<T>";
             if (array == null) {
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             } else if (array != null) {
                 C13171j.m40338a((T[]) array, comparator);
                 return C13171j.m40336a((T[]) array);
             } else {
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
         } else {
             List<T> r = m40607r(iterable);

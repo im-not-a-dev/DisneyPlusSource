@@ -6,7 +6,7 @@ import com.bamtech.sdk4.identity.bam.BamIdentityApi;
 import com.bamtech.sdk4.service.ServiceExceptionCase;
 import com.bamtech.sdk4.service.ServiceExceptionCase.AccountBlocked;
 import com.bamtech.sdk4.service.ServiceExceptionCase.InvalidCredentials;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p307o.C7614e;
@@ -290,7 +290,7 @@ public final class C2977j {
             Intrinsics.checkReturnedValueIsNotNull((Object) a, "accountApi.authorize(ide…nSuccess as ActionState))");
             return a;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.auth.password.PasswordLoginAction.ActionState");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.auth.password.PasswordLoginAction.ActionState");
     }
 
     /* access modifiers changed from: private */

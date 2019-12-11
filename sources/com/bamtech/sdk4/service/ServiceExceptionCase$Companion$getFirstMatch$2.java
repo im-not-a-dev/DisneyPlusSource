@@ -1,6 +1,6 @@
 package com.bamtech.sdk4.service;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12881k;
@@ -20,6 +20,6 @@ final class ServiceExceptionCase$Companion$getFirstMatch$2 extends C12881k imple
         if (objectInstance != null) {
             return (ServiceExceptionCase) objectInstance;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.service.ServiceExceptionCase");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.service.ServiceExceptionCase");
     }
 }

@@ -9,7 +9,7 @@ import com.bamtechmedia.dominguez.core.BuildInfo;
 import com.bamtechmedia.dominguez.main.p235x.C6219d.C6220a;
 import com.bamtechmedia.dominguez.main.p235x.C6219d.C6228i;
 import com.bamtechmedia.dominguez.main.p235x.C6234e;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p208e.C5554a;
@@ -128,7 +128,7 @@ public final class C6199m implements C7536a {
         if (systemService != null) {
             return (ActivityManager) systemService;
         }
-        throw new C13142s("null cannot be cast to non-null type android.app.ActivityManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.app.ActivityManager");
     }
 
     /* renamed from: b */

@@ -4,10 +4,10 @@ package com.google.android.exoplayer2.drm;
 /* compiled from: DefaultDrmSessionEventListener */
 public final /* synthetic */ class C8708j {
     /* renamed from: a */
-    public static void m25254a(C8709k kVar) {
+    public static void m25254a(DefaultDrmSessionEventListener kVar) {
     }
 
     /* renamed from: b */
-    public static void m25255b(C8709k kVar) {
+    public static void m25255b(DefaultDrmSessionEventListener kVar) {
     }
 }

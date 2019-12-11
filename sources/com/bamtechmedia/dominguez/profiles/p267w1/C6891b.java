@@ -33,7 +33,7 @@ import com.bamtechmedia.dominguez.profiles.p271y1.C7016l;
 import java.util.Collection;
 import java.util.HashMap;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -366,7 +366,7 @@ public final class C6891b extends C11890i implements C2413n, C7717x {
                                 return;
                             }
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.profiles.picker.ProfilesViewItem");
+                            throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.profiles.picker.ProfilesViewItem");
                         }
                     } else {
                         Intrinsics.throwUninitializedPropertyAccessException(str);

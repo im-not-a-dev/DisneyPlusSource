@@ -3,7 +3,7 @@ package p163g.p201e.p203b.p307o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.p530x.C11998a;
 
@@ -17,7 +17,7 @@ public final class C7625o {
             if (th != null) {
                 return C13183n.m40498a(th);
             }
-            throw new C13142s("null cannot be cast to non-null type T");
+            throw new TypeCastException("null cannot be cast to non-null type T");
         } else if (th instanceof C11998a) {
             List<Throwable> a = ((C11998a) th).mo30334a();
             Intrinsics.checkReturnedValueIsNotNull((Object) a, "this.exceptions");

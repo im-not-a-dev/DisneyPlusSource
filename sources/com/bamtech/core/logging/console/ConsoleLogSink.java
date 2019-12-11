@@ -3,7 +3,7 @@ package com.bamtech.core.logging.console;
 import com.bamtech.core.logging.LogEvent;
 import com.bamtech.core.logging.LogLevel;
 import com.bamtech.core.logging.LogSink;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -118,14 +118,14 @@ public class ConsoleLogSink extends LogSink {
                                 i2 = min;
                             }
                         } else {
-                            throw new C13142s(str2);
+                            throw new TypeCastException(str2);
                         }
                     }
                 }
             }
             return;
         }
-        throw new C13142s(str2);
+        throw new TypeCastException(str2);
     }
 
     public void onError(Throwable th) {

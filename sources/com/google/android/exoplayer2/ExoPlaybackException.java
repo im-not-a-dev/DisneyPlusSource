@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.io.IOException;
 
 public final class ExoPlaybackException extends Exception {
@@ -24,17 +24,17 @@ public final class ExoPlaybackException extends Exception {
 
     /* renamed from: b */
     public IOException mo22595b() {
-        C9537e.m29301b(this.f18341c == 0);
+        Assertions.checkState(this.f18341c == 0);
         Throwable th = this.f18340U;
-        C9537e.m29296a(th);
+        Assertions.checkNotNull(th);
         return (IOException) th;
     }
 
     /* renamed from: c */
     public RuntimeException mo22596c() {
-        C9537e.m29301b(this.f18341c == 2);
+        Assertions.checkState(this.f18341c == 2);
         Throwable th = this.f18340U;
-        C9537e.m29296a(th);
+        Assertions.checkNotNull(th);
         return (RuntimeException) th;
     }
 
@@ -59,9 +59,9 @@ public final class ExoPlaybackException extends Exception {
         if (this.f18341c != 1) {
             z = false;
         }
-        C9537e.m29301b(z);
+        Assertions.checkState(z);
         Throwable th = this.f18340U;
-        C9537e.m29296a(th);
+        Assertions.checkNotNull(th);
         return (Exception) th;
     }
 }

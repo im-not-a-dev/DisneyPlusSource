@@ -7,7 +7,7 @@ import com.bamtech.core.annotations.android.DontObfuscate;
 import com.bamtech.sdk4.purchase.bamnet.BamnetClaim;
 import com.bamtech.sdk4.purchase.bamnet.BamnetClaimException;
 import java.nio.charset.Charset;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
@@ -129,7 +129,7 @@ public abstract class BamnetReceiptItem {
                         GoogleReceipt googleReceipt = new GoogleReceipt(safeGetString2, safeGetString3, safeGetString, safeGetString4, encodeToString);
                         return googleReceipt;
                     }
-                    throw new C13142s("null cannot be cast to non-null type java.lang.String");
+                    throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
                 } else if (i == 3) {
                     String e = bamnetIAPPurchase.mo7210e();
                     Intrinsics.checkReturnedValueIsNotNull((Object) e, "receipt.sku");

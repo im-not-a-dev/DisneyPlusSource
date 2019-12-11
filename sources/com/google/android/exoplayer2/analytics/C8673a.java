@@ -11,13 +11,13 @@ import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.Timeline.C8670c;
 import com.google.android.exoplayer2.analytics.AnalyticsListener.EventTime;
-import com.google.android.exoplayer2.drm.C8709k;
+import com.google.android.exoplayer2.drm.DefaultDrmSessionEventListener;
 import com.google.android.exoplayer2.metadata.C8743e;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.p361p0.C8839l;
 import com.google.android.exoplayer2.p361p0.C8842n;
 import com.google.android.exoplayer2.p362q0.C8878d;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9542g;
 import com.google.android.exoplayer2.p394w0.C9602q;
 import com.google.android.exoplayer2.p394w0.C9603r;
@@ -36,7 +36,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 /* renamed from: com.google.android.exoplayer2.analytics.a */
 /* compiled from: AnalyticsCollector */
-public class C8673a implements EventListener, C8743e, C8842n, C9603r, MediaSourceEventListener, C9434a, C8709k, C9602q, C8839l {
+public class C8673a implements EventListener, C8743e, C8842n, C9603r, MediaSourceEventListener, C9434a, DefaultDrmSessionEventListener, C9602q, C8839l {
 
     /* renamed from: U */
     private final C9542g f18410U;
@@ -242,7 +242,7 @@ public class C8673a implements EventListener, C8743e, C8842n, C9603r, MediaSourc
         if (player != null) {
             this.f18413X = player;
         }
-        C9537e.m29296a(gVar);
+        Assertions.checkNotNull(gVar);
         this.f18410U = gVar;
         this.f18414c = new CopyOnWriteArraySet<>();
         this.f18412W = new C8676c();
@@ -697,7 +697,7 @@ public class C8673a implements EventListener, C8743e, C8842n, C9603r, MediaSourc
 
     /* renamed from: a */
     private EventTime m25028a(C8675b bVar) {
-        C9537e.m29296a(this.f18413X);
+        Assertions.checkNotNull(this.f18413X);
         if (bVar == null) {
             int currentWindowIndex = this.f18413X.getCurrentWindowIndex();
             C8675b b = this.f18412W.mo22709b(currentWindowIndex);
@@ -716,7 +716,7 @@ public class C8673a implements EventListener, C8743e, C8842n, C9603r, MediaSourc
     /* renamed from: a */
     private EventTime m25027a(int i, MediaPeriodId mediaPeriodId) {
         EventTime eventTime;
-        C9537e.m29296a(this.f18413X);
+        Assertions.checkNotNull(this.f18413X);
         if (mediaPeriodId != null) {
             C8675b a = this.f18412W.mo22704a(mediaPeriodId);
             if (a != null) {

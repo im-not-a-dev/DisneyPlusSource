@@ -2,8 +2,8 @@ package kotlin;
 
 /* renamed from: kotlin.s */
 /* compiled from: TypeCastException.kt */
-public class C13142s extends ClassCastException {
-    public C13142s(String str) {
+public class TypeCastException extends ClassCastException {
+    public TypeCastException(String str) {
         super(str);
     }
 }

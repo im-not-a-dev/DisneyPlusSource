@@ -8,7 +8,7 @@ import com.bamtech.sdk4.internal.media.offline.WidevineLicenseManager;
 import com.bamtech.sdk4.internal.media.offline.p047db.OfflineDatabase;
 import com.bamtech.sdk4.media.offline.OfflineMediaPlugin;
 import java.nio.charset.Charset;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
@@ -72,7 +72,7 @@ public final class ReleaseAllLicensesWorker extends Worker {
                                 i2++;
                                 i = i3;
                             } else {
-                                throw new C13142s(str3);
+                                throw new TypeCastException(str3);
                             }
                         } else {
                             Intrinsics.throwUninitializedPropertyAccessException("licenseManager");

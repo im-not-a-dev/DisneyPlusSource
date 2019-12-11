@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.trackselection;
 
 import android.os.SystemClock;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.p379m0.C9224l;
@@ -47,8 +47,8 @@ public abstract class C9292c implements C9311j {
 
     public C9292c(C9199j0 j0Var, int... iArr) {
         int i = 0;
-        C9537e.m29301b(iArr.length > 0);
-        C9537e.m29296a(j0Var);
+        Assertions.checkState(iArr.length > 0);
+        Assertions.checkNotNull(j0Var);
         this.f21202a = j0Var;
         this.f21203b = iArr.length;
         this.f21205d = new Format[this.f21203b];

@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.C12898l;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.C12853n;
@@ -227,7 +227,7 @@ public final class C7856j {
                         jVar.m23011a(viewGroup2, loadingButton, dVar, i);
                         obj = loadingButton;
                     } else {
-                        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.design.widgets.LoadingButton");
+                        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.design.widgets.LoadingButton");
                     }
                 } else {
                     View inflate2 = from.inflate(C7905u.paywall_button, viewGroup2, z);
@@ -243,7 +243,7 @@ public final class C7856j {
                         C5884x.m18948a(c, e2, textView, (C12853n<? super T1, ? super T2, ? super T3, ? extends R>) bVar);
                         obj = inflate2;
                     } else {
-                        throw new C13142s("null cannot be cast to non-null type android.view.View");
+                        throw new TypeCastException("null cannot be cast to non-null type android.view.View");
                     }
                 }
                 arrayList.add(obj);

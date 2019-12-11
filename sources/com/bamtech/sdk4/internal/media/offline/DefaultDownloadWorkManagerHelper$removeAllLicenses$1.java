@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.media.offline.workers.ReleaseAllLicensesWorker;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Triple;
@@ -60,10 +60,10 @@ final class DefaultDownloadWorkManagerHelper$removeAllLicenses$1 implements C119
                     this.this$0.workManager.mo5641a("releaseAllLicenses", C1032f.KEEP, (OneTimeWorkRequest) a2).mo5759a();
                     return;
                 }
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
-        throw new C13142s(str);
+        throw new TypeCastException(str);
     }
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.KCallable;
@@ -41,11 +41,11 @@ public final class KClasses {
             StringBuilder sb = new StringBuilder();
             sb.append("Value cannot be cast to ");
             sb.append(kClass.getQualifiedName());
-            throw new C13142s(sb.toString());
+            throw new TypeCastException(sb.toString());
         } else if (obj != null) {
             return obj;
         } else {
-            throw new C13142s("null cannot be cast to non-null type T");
+            throw new TypeCastException("null cannot be cast to non-null type T");
         }
     }
 
@@ -215,7 +215,7 @@ public final class KClasses {
                     break;
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlin.reflect.jvm.internal.KClassImpl<*>");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.reflect.jvm.internal.KClassImpl<*>");
             }
         }
         return (KClass) obj;
@@ -374,10 +374,10 @@ public final class KClasses {
                         break;
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ConstructorDescriptor");
+                    throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ConstructorDescriptor");
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlin.reflect.jvm.internal.KFunctionImpl");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.reflect.jvm.internal.KFunctionImpl");
             }
         }
         return (KFunction) obj;
@@ -494,7 +494,7 @@ public final class KClasses {
         if (obj != null) {
             return obj;
         }
-        throw new C13142s("null cannot be cast to non-null type T");
+        throw new TypeCastException("null cannot be cast to non-null type T");
     }
 
     public static /* synthetic */ void staticFunctions$annotations(KClass kClass) {

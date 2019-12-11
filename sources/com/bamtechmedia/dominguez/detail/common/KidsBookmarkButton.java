@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.bamtechmedia.dominguez.detail.common.C5897a.C5898a;
 import com.bamtechmedia.dominguez.detail.common.C5897a.C5898a.C5902d;
 import com.bamtechmedia.dominguez.detail.common.C5897a.C5898a.C5903e;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p135s.C4127b0;
@@ -99,9 +99,9 @@ public final class KidsBookmarkButton extends C5897a {
                 setState(getButtonState());
                 return;
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
-        throw new C13142s(str);
+        throw new TypeCastException(str);
     }
 
     public KidsBookmarkButton(Context context, AttributeSet attributeSet, int i) {

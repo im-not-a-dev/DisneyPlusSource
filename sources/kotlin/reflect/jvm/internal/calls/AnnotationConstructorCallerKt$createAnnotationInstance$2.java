@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -57,7 +57,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             z2 = Arrays.equals(zArr, (boolean[]) invoke);
                             continue;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.BooleanArray");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.BooleanArray");
                         }
                     } else if (obj2 instanceof char[]) {
                         char[] cArr = (char[]) obj2;
@@ -65,7 +65,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             z2 = Arrays.equals(cArr, (char[]) invoke);
                             continue;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.CharArray");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.CharArray");
                         }
                     } else if (obj2 instanceof byte[]) {
                         byte[] bArr = (byte[]) obj2;
@@ -73,7 +73,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             z2 = Arrays.equals(bArr, (byte[]) invoke);
                             continue;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.ByteArray");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.ByteArray");
                         }
                     } else if (obj2 instanceof short[]) {
                         short[] sArr = (short[]) obj2;
@@ -81,7 +81,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             z2 = Arrays.equals(sArr, (short[]) invoke);
                             continue;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.ShortArray");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.ShortArray");
                         }
                     } else if (obj2 instanceof int[]) {
                         int[] iArr = (int[]) obj2;
@@ -89,7 +89,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             z2 = Arrays.equals(iArr, (int[]) invoke);
                             continue;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.IntArray");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.IntArray");
                         }
                     } else if (obj2 instanceof float[]) {
                         float[] fArr = (float[]) obj2;
@@ -97,7 +97,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             z2 = Arrays.equals(fArr, (float[]) invoke);
                             continue;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.FloatArray");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.FloatArray");
                         }
                     } else if (obj2 instanceof long[]) {
                         long[] jArr = (long[]) obj2;
@@ -105,7 +105,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             z2 = Arrays.equals(jArr, (long[]) invoke);
                             continue;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.LongArray");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.LongArray");
                         }
                     } else if (obj2 instanceof double[]) {
                         double[] dArr = (double[]) obj2;
@@ -113,7 +113,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             z2 = Arrays.equals(dArr, (double[]) invoke);
                             continue;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.DoubleArray");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.DoubleArray");
                         }
                     } else if (obj2 instanceof Object[]) {
                         Object[] objArr = (Object[]) obj2;
@@ -121,7 +121,7 @@ final class AnnotationConstructorCallerKt$createAnnotationInstance$2 extends C12
                             z2 = Arrays.equals(objArr, (Object[]) invoke);
                             continue;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.Array<*>");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<*>");
                         }
                     } else {
                         z2 = Intrinsics.areEqual(obj2, invoke);

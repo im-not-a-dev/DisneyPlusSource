@@ -22,7 +22,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Callable;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
@@ -82,9 +82,9 @@ public final class DefaultExoCachedMediaHelper implements ExoCachedMediaHelper {
                 Log.d(str, sb2.toString());
                 return exoCachedMedia;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         }
-        throw new C13142s("null cannot be cast to non-null type java.util.Collection<T>");
+        throw new TypeCastException("null cannot be cast to non-null type java.util.Collection<T>");
     }
 
     public Single<CachedMedia> downloadMediaLicenseAsync(ServiceTransaction serviceTransaction, ExoCachedMedia exoCachedMedia) {
@@ -157,13 +157,13 @@ public final class DefaultExoCachedMediaHelper implements ExoCachedMediaHelper {
                         a0Var.mo31157b(array2);
                         return C13185o.m40520c((Pair[]) a0Var.mo31156a((Object[]) new Pair[a0Var.mo31154a()]));
                     }
-                    throw new C13142s(str3);
+                    throw new TypeCastException(str3);
                 }
-                throw new C13142s(str2);
+                throw new TypeCastException(str2);
             }
-            throw new C13142s(str3);
+            throw new TypeCastException(str3);
         }
-        throw new C13142s(str2);
+        throw new TypeCastException(str2);
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x0029, code lost:

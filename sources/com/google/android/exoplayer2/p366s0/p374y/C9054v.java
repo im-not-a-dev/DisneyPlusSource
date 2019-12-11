@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p366s0.p374y;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.s0.y.v */
@@ -57,7 +57,7 @@ final class C9054v {
     /* renamed from: b */
     public void mo23469b(int i) {
         boolean z = true;
-        C9537e.m29301b(!this.f20086b);
+        Assertions.checkState(!this.f20086b);
         if (i != this.f20085a) {
             z = false;
         }

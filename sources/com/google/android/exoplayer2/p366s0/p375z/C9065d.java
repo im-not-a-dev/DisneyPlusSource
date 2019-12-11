@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p366s0.p375z;
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.p361p0.C8822d0;
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
@@ -37,7 +37,7 @@ final class C9065d {
 
     /* renamed from: a */
     public static C9064c m26915a(C8913h hVar) throws IOException, InterruptedException {
-        C9537e.m29296a(hVar);
+        Assertions.checkNotNull(hVar);
         C9572w wVar = new C9572w(16);
         if (C9066a.m26917a(hVar, wVar).f20145a != C8822d0.f18799a) {
             return null;
@@ -58,7 +58,7 @@ final class C9065d {
             hVar.mo23288a((int) a.f20146b);
             a = C9066a.m26917a(hVar, wVar);
         }
-        C9537e.m29301b(a.f20146b >= 16);
+        Assertions.checkState(a.f20146b >= 16);
         hVar.mo23294b(wVar.f22333a, 0, 16);
         wVar.mo24693e(0);
         int q = wVar.mo24706q();
@@ -93,8 +93,8 @@ final class C9065d {
 
     /* renamed from: a */
     public static void m26916a(C8913h hVar, C9064c cVar) throws IOException, InterruptedException {
-        C9537e.m29296a(hVar);
-        C9537e.m29296a(cVar);
+        Assertions.checkNotNull(hVar);
+        Assertions.checkNotNull(cVar);
         hVar.mo23297c();
         C9572w wVar = new C9572w(8);
         C9066a a = C9066a.m26917a(hVar, wVar);

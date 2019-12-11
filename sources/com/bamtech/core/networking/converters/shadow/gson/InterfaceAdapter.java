@@ -9,7 +9,7 @@ import com.bamtech.shadow.gson.JsonElement;
 import com.bamtech.shadow.gson.JsonObject;
 import com.bamtech.shadow.gson.JsonSerializationContext;
 import java.lang.reflect.Type;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -60,7 +60,7 @@ public final class InterfaceAdapter<T> implements C2236m<T>, C2132h<T> {
                     }
                     return t;
                 }
-                throw new C13142s("null cannot be cast to non-null type com.bamtech.shadow.gson.JsonPrimitive");
+                throw new TypeCastException("null cannot be cast to non-null type com.bamtech.shadow.gson.JsonPrimitive");
             }
         }
         return null;

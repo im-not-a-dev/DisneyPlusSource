@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.Callable;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
@@ -152,9 +152,9 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
                     Intrinsics.checkReturnedValueIsNotNull((Object) a, "Completable.mergeArray(*…\")\n                    })");
                     return a;
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
             }
-            throw new C13142s("null cannot be cast to non-null type java.util.Collection<T>");
+            throw new TypeCastException("null cannot be cast to non-null type java.util.Collection<T>");
         }
     }
 
@@ -225,7 +225,7 @@ public final class C1630e extends C0702a implements C1431q, C1413f {
                     CompletableSource[] completableSourceArr = (CompletableSource[]) array;
                     return Completable.m38157a((CompletableSource[]) Arrays.copyOf(completableSourceArr, completableSourceArr.length)).mo30046a((Callable<? extends T>) new C1637a<Object>(map));
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
             }
         }
 

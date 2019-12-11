@@ -4,7 +4,7 @@ import com.bamtech.core.networking.converters.C1684a;
 import com.bamtech.core.networking.converters.Converter;
 import com.bamtech.shadow.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -27,7 +27,7 @@ public final class GraphQlConverterProvider$defaultConverter$1 implements GraphQ
             Intrinsics.checkReturnedValueIsNotNull((Object) type2, "parameterizedType");
             return (GraphQlResponse) aVar.deserialize(str, type2);
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtech.core.networking.converters.JsonTypeConverter");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtech.core.networking.converters.JsonTypeConverter");
     }
 
     public <T> String serialize(T t) {

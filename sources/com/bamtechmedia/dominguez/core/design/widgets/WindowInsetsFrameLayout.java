@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.WindowInsets;
 import android.widget.FrameLayout;
 import java.util.Iterator;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13162e0;
@@ -63,7 +63,7 @@ public final class WindowInsetsFrameLayout extends FrameLayout {
                     }
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type android.view.WindowInsets");
+                throw new TypeCastException("null cannot be cast to non-null type android.view.WindowInsets");
             }
         }
         super.onMeasure(i, i2);

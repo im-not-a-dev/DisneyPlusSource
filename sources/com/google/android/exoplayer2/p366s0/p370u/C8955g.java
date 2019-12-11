@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p366s0.p370u;
 import com.google.android.exoplayer2.p366s0.C8918m;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9572w;
@@ -87,7 +87,7 @@ final class C8955g implements C8953a {
             } else {
                 int i = (int) d2;
                 long[] jArr = this.f19387f;
-                C9537e.m29296a(jArr);
+                Assertions.checkNotNull(jArr);
                 long[] jArr2 = jArr;
                 double d4 = (double) jArr2[i];
                 if (i == 99) {
@@ -132,7 +132,7 @@ final class C8955g implements C8953a {
             return 0;
         }
         long[] jArr = this.f19387f;
-        C9537e.m29296a(jArr);
+        Assertions.checkNotNull(jArr);
         long[] jArr2 = jArr;
         double d = (((double) j3) * 256.0d) / ((double) this.f19385d);
         int b = Util.m29429b(jArr2, (long) d, true, true);

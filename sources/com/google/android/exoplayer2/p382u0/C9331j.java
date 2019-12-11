@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p382u0;
 
 import com.google.android.exoplayer2.p362q0.C8880f;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.util.List;
 
 /* renamed from: com.google.android.exoplayer2.u0.j */
@@ -27,7 +27,7 @@ public abstract class C9331j extends C8880f implements C9325e {
     /* renamed from: b */
     public List<C9322b> mo24147b(long j) {
         C9325e eVar = this.f21363W;
-        C9537e.m29296a(eVar);
+        Assertions.checkNotNull(eVar);
         return eVar.mo24147b(j - this.f21364X);
     }
 
@@ -40,21 +40,21 @@ public abstract class C9331j extends C8880f implements C9325e {
     /* renamed from: a */
     public int mo24144a() {
         C9325e eVar = this.f21363W;
-        C9537e.m29296a(eVar);
+        Assertions.checkNotNull(eVar);
         return eVar.mo24144a();
     }
 
     /* renamed from: a */
     public long mo24146a(int i) {
         C9325e eVar = this.f21363W;
-        C9537e.m29296a(eVar);
+        Assertions.checkNotNull(eVar);
         return eVar.mo24146a(i) + this.f21364X;
     }
 
     /* renamed from: a */
     public int mo24145a(long j) {
         C9325e eVar = this.f21363W;
-        C9537e.m29296a(eVar);
+        Assertions.checkNotNull(eVar);
         return eVar.mo24145a(j - this.f21364X);
     }
 }

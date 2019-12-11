@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -668,10 +668,10 @@ public final class C8002c implements C12678a, C8032h {
                     textView.setOnClickListener(gVar);
                     arrayList.add(textView);
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
+                    throw new TypeCastException("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type android.widget.TextView");
+                throw new TypeCastException("null cannot be cast to non-null type android.widget.TextView");
             }
         }
         return arrayList;

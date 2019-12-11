@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.drm;
 
 /* renamed from: com.google.android.exoplayer2.drm.k */
 /* compiled from: DefaultDrmSessionEventListener */
-public interface C8709k {
+public interface DefaultDrmSessionEventListener {
     /* renamed from: b */
     void mo9515b();
 

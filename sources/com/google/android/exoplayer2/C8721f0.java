@@ -3,7 +3,7 @@ package com.google.android.exoplayer2;
 import android.util.Pair;
 import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.Timeline.C8670c;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 
@@ -132,7 +132,7 @@ final class C8721f0 {
     /* renamed from: b */
     public C8683d0 mo22820b() {
         C8683d0 d0Var = this.f18525h;
-        C9537e.m29301b((d0Var == null || d0Var.mo22724b() == null) ? false : true);
+        Assertions.checkState((d0Var == null || d0Var.mo22724b() == null) ? false : true);
         this.f18525h = this.f18525h.mo22724b();
         return this.f18525h;
     }
@@ -213,7 +213,7 @@ final class C8721f0 {
             com.google.android.exoplayer2.d0 r11 = r10.f18526i
             if (r11 == 0) goto L_0x0045
             boolean r11 = r10.mo22826g()
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r11)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r11)
             com.google.android.exoplayer2.d0 r11 = r10.f18526i
             r11.mo22723a(r0)
         L_0x0045:
@@ -256,7 +256,7 @@ final class C8721f0 {
     /* renamed from: a */
     public boolean mo22818a(C8683d0 d0Var) {
         boolean z = false;
-        C9537e.m29301b(d0Var != null);
+        Assertions.checkState(d0Var != null);
         this.f18526i = d0Var;
         while (d0Var.mo22724b() != null) {
             d0Var = d0Var.mo22724b();

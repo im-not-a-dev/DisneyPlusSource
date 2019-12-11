@@ -34,7 +34,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import kotlin.C12903o;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -1473,9 +1473,9 @@ public final class C8517e extends C8491b implements C8486i {
                 this.f18138s = new LinkedHashMap();
                 return;
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
-        throw new C13142s(str);
+        throw new TypeCastException(str);
     }
 
     /* access modifiers changed from: private */
@@ -1836,7 +1836,7 @@ public final class C8517e extends C8491b implements C8486i {
                         mo21776a(message, hostAddress);
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlin.CharSequence");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlin.CharSequence");
                 }
             }
         }

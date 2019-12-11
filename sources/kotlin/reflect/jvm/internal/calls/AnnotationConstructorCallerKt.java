@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
@@ -41,7 +41,7 @@ public final class AnnotationConstructorCallerKt {
         if (newProxyInstance != null) {
             return newProxyInstance;
         }
-        throw new C13142s("null cannot be cast to non-null type T");
+        throw new TypeCastException("null cannot be cast to non-null type T");
     }
 
     public static /* synthetic */ Object createAnnotationInstance$default(Class cls, Map map, List list, int i, Object obj) {
@@ -111,10 +111,10 @@ public final class AnnotationConstructorCallerKt {
                 }
                 obj = arrayList.toArray(new Class[0]);
                 if (obj == null) {
-                    throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlin.Array<kotlin.reflect.KClass<*>>");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<kotlin.reflect.KClass<*>>");
             }
         }
         if (!cls.isInstance(obj)) {

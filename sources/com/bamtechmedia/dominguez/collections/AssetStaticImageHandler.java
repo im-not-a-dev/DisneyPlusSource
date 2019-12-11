@@ -23,7 +23,7 @@ import com.bamtechmedia.dominguez.core.p084g.p086d.C3822a;
 import com.bamtechmedia.dominguez.core.p088i.p091p.C3848a;
 import com.bamtechmedia.dominguez.core.utils.C5884x;
 import java.util.concurrent.TimeUnit;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -189,9 +189,9 @@ public final class AssetStaticImageHandler extends C5733a implements C0710d {
                     imageView2.setTranslationX(((Float) animatedValue2).floatValue());
                     return;
                 }
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
     }
 
@@ -238,7 +238,7 @@ public final class AssetStaticImageHandler extends C5733a implements C0710d {
                     view.setAlpha(((Float) animatedValue).floatValue());
                     i++;
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
                 }
             }
         }
@@ -267,7 +267,7 @@ public final class AssetStaticImageHandler extends C5733a implements C0710d {
                     view.setAlpha(((Float) animatedValue).floatValue());
                     i++;
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
                 }
             }
         }

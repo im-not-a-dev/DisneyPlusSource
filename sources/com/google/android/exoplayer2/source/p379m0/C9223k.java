@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.p366s0.C8909d;
 import com.google.android.exoplayer2.p366s0.C8912g;
 import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8919n;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
@@ -54,7 +54,7 @@ public final class C9223k extends C9212d {
             if (i == 1) {
                 z = false;
             }
-            C9537e.m29301b(z);
+            Assertions.checkState(z);
             this.f20920j = dVar.getPosition() - this.f20856a.f21941d;
             Util.m29405a((DataSource) this.f20863h);
         } catch (Throwable th) {

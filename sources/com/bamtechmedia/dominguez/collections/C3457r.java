@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import javax.inject.Provider;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -949,7 +949,7 @@ public final class C3457r extends C5741g<C3456b> implements C3454q {
             C12788p.m39998f(C12788p.m39989a(a, (Function1) C3474n.f8752c), new C3475o(this));
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.sequences.Sequence<R>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.sequences.Sequence<R>");
     }
 
     /* JADX WARNING: type inference failed for: r0v5, types: [kotlin.jvm.functions.Function1, com.bamtechmedia.dominguez.collections.r$r] */

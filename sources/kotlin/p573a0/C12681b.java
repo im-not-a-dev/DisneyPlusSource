@@ -1,7 +1,7 @@
 package kotlin.p573a0;
 
 import java.io.Serializable;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
@@ -160,7 +160,7 @@ public final class C12681b implements C12688f, Serializable {
             } else if (fVar != null) {
                 return m39796a((C12691b) fVar);
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlin.coroutines.CoroutineContext.Element");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.coroutines.CoroutineContext.Element");
             }
         }
         return false;

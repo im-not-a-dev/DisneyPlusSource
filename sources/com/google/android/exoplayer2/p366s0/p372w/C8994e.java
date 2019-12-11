@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0.p372w;
 
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9572w;
 import java.io.IOException;
 import java.util.Arrays;
@@ -31,7 +31,7 @@ final class C8994e {
     /* renamed from: a */
     public boolean mo23406a(C8913h hVar) throws IOException, InterruptedException {
         int i;
-        C9537e.m29301b(hVar != null);
+        Assertions.checkState(hVar != null);
         if (this.f19733e) {
             this.f19733e = false;
             this.f19730b.mo24678D();

@@ -8,7 +8,7 @@ import android.media.MediaCodecInfo.CodecProfileLevel;
 import android.media.MediaCodecInfo.VideoCapabilities;
 import android.util.Pair;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9566t;
@@ -42,7 +42,7 @@ public final class C9270a {
     private final boolean f21089h;
 
     private C9270a(String str, String str2, String str3, CodecCapabilities codecCapabilities, boolean z, boolean z2, boolean z3) {
-        C9537e.m29296a(str);
+        Assertions.checkNotNull(str);
         this.f21082a = str;
         this.f21083b = str2;
         this.f21084c = str3;

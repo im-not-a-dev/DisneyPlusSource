@@ -20,7 +20,7 @@ import com.bamtechmedia.dominguez.playback.C6331j;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.p193j0.C5285a;
@@ -176,7 +176,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
             if (obj != null) {
                 this.f14403U = ((C6318a) obj).mo18941b();
             } else {
-                throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.playback.common.tracks.SelectablePlaybackTrackItem.ChangePayload");
+                throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.playback.common.tracks.SelectablePlaybackTrackItem.ChangePayload");
             }
         } else {
             View view2 = kVar.itemView;
@@ -213,7 +213,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
             }
             return new C6318a(dVar, z2, z);
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.playback.common.tracks.SelectablePlaybackTrackItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.playback.common.tracks.SelectablePlaybackTrackItem");
     }
 
     public int getLayout() {
@@ -224,7 +224,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
         if (eVar != null) {
             return Intrinsics.areEqual((Object) ((C6317e) eVar).f14403U.mo16867a(), (Object) this.f14403U.mo16867a());
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.playback.common.tracks.SelectablePlaybackTrackItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.playback.common.tracks.SelectablePlaybackTrackItem");
     }
 
     public void onClick(View view) {
@@ -309,7 +309,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
                         break;
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.playback.common.tracks.SelectablePlaybackTrackItem.ChangePayload");
+                    throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.playback.common.tracks.SelectablePlaybackTrackItem.ChangePayload");
                 }
             }
         }
@@ -335,7 +335,7 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
                         m19889a(constraintLayout2, context.getResources().getDimensionPixelSize(C6325d.checkmark_visible_left_margin));
                         return;
                     }
-                    throw new C13142s(str);
+                    throw new TypeCastException(str);
                 }
             } else if (view != null) {
                 ConstraintLayout constraintLayout3 = (ConstraintLayout) view;
@@ -343,10 +343,10 @@ public final class C6317e extends C11853e<C11863k> implements OnClickListener {
                 Intrinsics.checkReturnedValueIsNotNull((Object) context2, str2);
                 m19889a(constraintLayout3, context2.getResources().getDimensionPixelSize(C6325d.checkmark_invisible_left_margin));
             } else {
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
         } else {
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
     }
 }

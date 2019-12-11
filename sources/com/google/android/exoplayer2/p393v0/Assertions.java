@@ -4,7 +4,7 @@ import android.text.TextUtils;
 
 /* renamed from: com.google.android.exoplayer2.v0.e */
 /* compiled from: Assertions */
-public final class C9537e {
+public final class Assertions {
     /* renamed from: a */
     public static void m29299a(boolean z) {
         if (!z) {
@@ -13,7 +13,7 @@ public final class C9537e {
     }
 
     /* renamed from: b */
-    public static void m29301b(boolean z) {
+    public static void checkState(boolean z) {
         if (!z) {
             throw new IllegalStateException();
         }
@@ -42,7 +42,7 @@ public final class C9537e {
     }
 
     /* renamed from: a */
-    public static <T> T m29296a(T t) {
+    public static <T> T checkNotNull(T t) {
         if (t != null) {
             return t;
         }

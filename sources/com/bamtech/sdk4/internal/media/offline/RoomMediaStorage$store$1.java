@@ -3,7 +3,7 @@ package com.bamtech.sdk4.internal.media.offline;
 import com.bamtech.sdk4.internal.media.ExoCachedMedia;
 import com.bamtech.sdk4.internal.media.offline.p047db.CachedMediaEntryKt;
 import com.bamtech.sdk4.media.offline.CachedMedia;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import p520io.reactivex.functions.C11945a;
 
@@ -24,6 +24,6 @@ final class RoomMediaStorage$store$1 implements C11945a {
             this.this$0.f6074db.cachedMediaDao().store(CachedMediaEntryKt.toCachedMediaEntry((ExoCachedMedia) cachedMedia));
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.internal.media.ExoCachedMedia");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.internal.media.ExoCachedMedia");
     }
 }

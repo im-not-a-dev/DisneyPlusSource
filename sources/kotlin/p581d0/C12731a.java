@@ -1,7 +1,7 @@
 package kotlin.p581d0;
 
 import java.lang.annotation.Annotation;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.C12866d;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
@@ -16,7 +16,7 @@ public final class C12731a {
         if (jClass != null) {
             return jClass;
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.Class<T>");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.Class<T>");
     }
 
     /* renamed from: b */
@@ -86,11 +86,11 @@ public final class C12731a {
             if (jClass != null) {
                 return jClass;
             }
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         } else if (jClass != null) {
             return jClass;
         } else {
-            throw new C13142s(str);
+            throw new TypeCastException(str);
         }
     }
 
@@ -204,6 +204,6 @@ public final class C12731a {
         if (a != null) {
             return a;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.reflect.KClass<out T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.reflect.KClass<out T>");
     }
 }

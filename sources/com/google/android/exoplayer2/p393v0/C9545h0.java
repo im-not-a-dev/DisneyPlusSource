@@ -36,7 +36,7 @@ public final class C9545h0 {
 
     /* renamed from: c */
     public synchronized void mo24634c(long j) {
-        C9537e.m29301b(this.f22267c == -9223372036854775807L);
+        Assertions.checkState(this.f22267c == -9223372036854775807L);
         this.f22265a = j;
     }
 

@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.concurrent.Callable;
 import javax.inject.Provider;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p520io.reactivex.C11969r;
@@ -112,9 +112,9 @@ public final class C2386e implements C2434c {
                 sb.append(str2);
                 return sb.toString();
             }
-            throw new C13142s(str3);
+            throw new TypeCastException(str3);
         }
-        throw new C13142s(str3);
+        throw new TypeCastException(str3);
     }
 
     /* access modifiers changed from: private */

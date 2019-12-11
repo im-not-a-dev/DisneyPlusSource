@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.source.hls;
 
 import com.google.android.exoplayer2.C8679b0;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.source.C9141f0;
 import java.io.IOException;
 
@@ -46,7 +46,7 @@ final class C9166l implements C9141f0 {
 
     /* renamed from: c */
     public void mo23825c() {
-        C9537e.m29299a(this.f20634V == -1);
+        Assertions.m29299a(this.f20634V == -1);
         this.f20634V = this.f20633U.mo23827a(this.f20635c);
     }
 

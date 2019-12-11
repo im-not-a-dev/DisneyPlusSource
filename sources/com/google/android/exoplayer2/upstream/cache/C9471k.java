@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.upstream.cache;
 
 import android.net.Uri;
 import android.util.Pair;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9575z;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
@@ -110,8 +110,8 @@ public final class C9471k {
         long j2;
         DataSpec dataSpec2 = dataSpec;
         C9472a aVar2 = aVar;
-        C9537e.m29296a(dVar);
-        C9537e.m29296a(bArr);
+        Assertions.checkNotNull(dVar);
+        Assertions.checkNotNull(bArr);
         String a = m29049a(dataSpec2, iVar);
         if (aVar2 != null) {
             bVar = new C9473b(aVar2);

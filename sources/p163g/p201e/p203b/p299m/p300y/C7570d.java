@@ -18,7 +18,7 @@ import com.bamtechmedia.dominguez.core.utils.C5880u;
 import java.io.Serializable;
 import java.util.HashMap;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -271,7 +271,7 @@ public final class C7570d extends Fragment implements C7566x {
                 throw null;
             }
         } else {
-            throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.dialogs.tier0.Tier0MessageIcon");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.dialogs.tier0.Tier0MessageIcon");
         }
     }
 }

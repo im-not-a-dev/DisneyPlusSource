@@ -14,7 +14,7 @@ import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9568u;
 import com.google.android.exoplayer2.p393v0.C9572w;
@@ -161,8 +161,8 @@ public final class C8978j implements C8912g, C8920o {
                     m26479e();
                 }
             } else if (m26473b(this.f19640h)) {
-                C9537e.m29301b(this.f19642j == 8);
-                C9537e.m29301b(this.f19641i <= 2147483647L);
+                Assertions.checkState(this.f19642j == 8);
+                Assertions.checkState(this.f19641i <= 2147483647L);
                 this.f19643k = new C9572w((int) this.f19641i);
                 System.arraycopy(this.f19637e.f22333a, 0, this.f19643k.f22333a, 0, 8);
                 this.f19639g = 1;

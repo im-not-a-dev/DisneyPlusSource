@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.util.TypedValue;
 import android.view.accessibility.AccessibilityManager;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: com.bamtechmedia.dominguez.core.utils.i */
@@ -78,7 +78,7 @@ public final class C5837i {
             AccessibilityManager accessibilityManager = (AccessibilityManager) systemService;
             return accessibilityManager.isEnabled() && accessibilityManager.isTouchExplorationEnabled();
         }
-        throw new C13142s("null cannot be cast to non-null type android.view.accessibility.AccessibilityManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.view.accessibility.AccessibilityManager");
     }
 
     /* renamed from: b */

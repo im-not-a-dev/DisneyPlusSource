@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import p163g.p174d.p178b.C5300m;
 import p163g.p413f.p414a.C10652e;
@@ -146,7 +146,7 @@ public final class C5004f5 implements C5271z3 {
                 a.mo27564a((ImageView) view2);
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type android.widget.ImageView");
+            throw new TypeCastException("null cannot be cast to non-null type android.widget.ImageView");
         }
     }
 }

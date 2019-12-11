@@ -1,7 +1,7 @@
 package kotlin.p590y;
 
 import java.util.Collection;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.C12871f;
@@ -106,6 +106,6 @@ public abstract class C13148a<E> implements Collection<E>, C12872a {
         if (a != null) {
             return a;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 }

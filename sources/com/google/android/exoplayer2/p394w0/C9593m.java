@@ -15,8 +15,8 @@ import android.view.Surface;
 import com.google.android.exoplayer2.C8872q;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.drm.C8710l;
-import com.google.android.exoplayer2.drm.C8713o;
+import com.google.android.exoplayer2.drm.DrmSessionManager;
+import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.p362q0.C8878d;
 import com.google.android.exoplayer2.p362q0.C8879e;
@@ -26,7 +26,7 @@ import com.google.android.exoplayer2.p381t0.C9273c;
 import com.google.android.exoplayer2.p381t0.C9275d;
 import com.google.android.exoplayer2.p381t0.C9275d.C9278c;
 import com.google.android.exoplayer2.p381t0.C9284e;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9547i0;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
@@ -200,7 +200,7 @@ public class C9593m extends C9271b {
         }
     }
 
-    public C9593m(Context context, C9273c cVar, long j, C8710l<C8713o> lVar, boolean z, boolean z2, Handler handler, C9603r rVar, int i) {
+    public C9593m(Context context, C9273c cVar, long j, DrmSessionManager<FrameworkMediaCrypto> lVar, boolean z, boolean z2, Handler handler, C9603r rVar, int i) {
         super(2, cVar, lVar, z, z2, 30.0f);
         this.f22419l1 = j;
         this.f22420m1 = i;
@@ -323,7 +323,7 @@ public class C9593m extends C9271b {
 
     /* access modifiers changed from: protected */
     /* renamed from: a */
-    public int mo23177a(C9273c cVar, C8710l<C8713o> lVar, Format format) throws C9278c {
+    public int mo23177a(C9273c cVar, DrmSessionManager<FrameworkMediaCrypto> lVar, Format format) throws C9278c {
         boolean z;
         int i = 0;
         if (!C9566t.m29519l(format.f18349b0)) {
@@ -727,7 +727,7 @@ public class C9593m extends C9271b {
         this.f22424q1 = mo24755a(aVar, format, mo23205r());
         MediaFormat a = mo24754a(format, str, this.f22424q1, f, this.f22421n1, this.f22410O1);
         if (this.f22426s1 == null) {
-            C9537e.m29301b(m29642b(aVar));
+            Assertions.checkState(m29642b(aVar));
             if (this.f22427t1 == null) {
                 this.f22427t1 = C9589k.m29619a(this.f22416i1, aVar.f21087f);
             }

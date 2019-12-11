@@ -5,7 +5,7 @@ import com.bamtech.sdk4.Presentation;
 import com.bamtech.sdk4.internal.media.ExoCachedMedia;
 import com.bamtech.sdk4.media.offline.CachedMedia;
 import java.util.concurrent.Callable;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import p520io.reactivex.Single;
 import p520io.reactivex.SingleSource;
@@ -37,7 +37,7 @@ final class DefaultOfflineMediaClient$getLocalBifThumbnail$1<T, R> implements Fu
                     DefaultOfflineMediaClient$getLocalBifThumbnail$1 defaultOfflineMediaClient$getLocalBifThumbnail$1 = this.this$0;
                     return exoCachedMedia.getLocalBifFile(defaultOfflineMediaClient$getLocalBifThumbnail$1.$context, defaultOfflineMediaClient$getLocalBifThumbnail$1.$presentation);
                 }
-                throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.internal.media.ExoCachedMedia");
+                throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.internal.media.ExoCachedMedia");
             }
         });
     }

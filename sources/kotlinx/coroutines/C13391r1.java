@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -269,7 +269,7 @@ public class C13391r1 implements C13324k1, C13368o, C13417y1, C13366a {
         if (obj != null) {
             return ((C13417y1) obj).mo34591d();
         }
-        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.ParentJob");
+        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.ParentJob");
     }
 
     /* renamed from: g */
@@ -791,7 +791,7 @@ public class C13391r1 implements C13324k1, C13368o, C13417y1, C13366a {
                     if (obj != null) {
                         ((C13389r) obj).mo34582b();
                     } else {
-                        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.CompletedExceptionally");
+                        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.CompletedExceptionally");
                     }
                 }
             }
@@ -975,7 +975,7 @@ public class C13391r1 implements C13324k1, C13368o, C13417y1, C13366a {
             }
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
     }
 
     /* renamed from: b */
@@ -1108,7 +1108,7 @@ public class C13391r1 implements C13324k1, C13368o, C13417y1, C13366a {
             m41174h(th);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
     }
 
     /* renamed from: a */
@@ -1299,7 +1299,7 @@ public class C13391r1 implements C13324k1, C13368o, C13417y1, C13366a {
         if (a != null) {
             return (C13342m) a;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.ChildHandle");
+        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.ChildHandle");
     }
 
     /* JADX WARNING: type inference failed for: r1v0 */
@@ -1484,7 +1484,7 @@ public class C13391r1 implements C13324k1, C13368o, C13417y1, C13366a {
                     return true;
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
             }
         } while (a != 2);
         return false;

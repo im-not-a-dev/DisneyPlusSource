@@ -28,11 +28,11 @@ public final class C9573x {
             int i2 = this.f22337b;
             if (i < i2 || (i == i2 && this.f22339d == 0)) {
                 z = true;
-                C9537e.m29301b(z);
+                Assertions.checkState(z);
             }
         }
         z = false;
-        C9537e.m29301b(z);
+        Assertions.checkState(z);
     }
 
     /* renamed from: g */

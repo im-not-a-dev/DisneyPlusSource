@@ -152,7 +152,7 @@ public final class C9550k implements OnFrameAvailableListener, Runnable {
     /* renamed from: a */
     public SurfaceTexture mo24640a() {
         SurfaceTexture surfaceTexture = this.f22279Z;
-        C9537e.m29296a(surfaceTexture);
+        Assertions.checkNotNull(surfaceTexture);
         return surfaceTexture;
     }
 

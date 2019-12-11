@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream.cache;
 
 import com.google.android.exoplayer2.p393v0.C9530b0;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.upstream.C9504k;
@@ -59,12 +59,12 @@ public final class C9460b implements C9504k {
     }
 
     public C9460b(Cache cache, long j, int i) {
-        C9537e.m29302b(j > 0 || j == -1, "fragmentSize must be positive or C.LENGTH_UNSET.");
+        Assertions.m29302b(j > 0 || j == -1, "fragmentSize must be positive or C.LENGTH_UNSET.");
         int i2 = (j > -1 ? 1 : (j == -1 ? 0 : -1));
         if (i2 != 0 && j < 2097152) {
             Log.m29500d("CacheDataSink", "fragmentSize is below the minimum recommended value of 2097152. This may cause poor cache performance.");
         }
-        C9537e.m29296a(cache);
+        Assertions.checkNotNull(cache);
         this.f21981a = cache;
         if (i2 == 0) {
             j = Long.MAX_VALUE;

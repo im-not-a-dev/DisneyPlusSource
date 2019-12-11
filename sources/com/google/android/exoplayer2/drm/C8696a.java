@@ -14,6 +14,6 @@ public final /* synthetic */ class C8696a implements C9558a {
 
     /* renamed from: a */
     public final void mo22792a(Object obj) {
-        ((C8709k) obj).mo9515b();
+        ((DefaultDrmSessionEventListener) obj).mo9515b();
     }
 }

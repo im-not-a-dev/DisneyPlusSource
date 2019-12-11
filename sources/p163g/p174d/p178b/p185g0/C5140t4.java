@@ -16,7 +16,7 @@ import android.os.Process;
 import android.util.Rational;
 import android.view.View;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -187,7 +187,7 @@ public final class C5140t4 extends C5170v3 {
             }
             return z;
         }
-        throw new C13142s("null cannot be cast to non-null type android.app.AppOpsManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.app.AppOpsManager");
     }
 
     /* renamed from: a */

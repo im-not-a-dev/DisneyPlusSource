@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.trackselection;
 import com.google.android.exoplayer2.C8735m0;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.upstream.BandwidthMeter;
@@ -47,7 +47,7 @@ public abstract class TrackSelector {
     /* renamed from: a */
     public final BandwidthMeter mo24045a() {
         BandwidthMeter bandwidthMeter = this.f21171b;
-        C9537e.m29296a(bandwidthMeter);
+        Assertions.checkNotNull(bandwidthMeter);
         return bandwidthMeter;
     }
 }

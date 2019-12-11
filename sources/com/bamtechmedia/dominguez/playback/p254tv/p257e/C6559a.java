@@ -15,7 +15,7 @@ import com.bamtechmedia.dominguez.playback.C6325d;
 import com.bamtechmedia.dominguez.playback.C6327f;
 import com.bamtechmedia.dominguez.playback.C6328g;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p096e.p154p.C4267c;
@@ -63,7 +63,7 @@ public final class C6559a extends C0845e {
             m20417a((ConstraintLayout) view, !a && a2);
             return a != a2;
         }
-        throw new C13142s("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout");
+        throw new TypeCastException("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout");
     }
 
     /* renamed from: a */

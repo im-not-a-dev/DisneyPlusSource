@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.view.Surface;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p362q0.C8878d;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.w0.r */
 /* compiled from: VideoRendererEventListener */
@@ -23,7 +23,7 @@ public interface C9603r {
         public C9604a(Handler handler, C9603r rVar) {
             Handler handler2;
             if (rVar != null) {
-                C9537e.m29296a(handler);
+                Assertions.checkNotNull(handler);
                 handler2 = handler;
             } else {
                 handler2 = null;

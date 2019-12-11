@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView.C0794d0;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12865c0;
 import kotlin.jvm.internal.Intrinsics;
@@ -335,7 +335,7 @@ public abstract class C3808a extends C0900t {
                 this.f9484a.m12853l();
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.collections.MutableCollection<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.MutableCollection<T>");
         }
 
         /* renamed from: c */
@@ -381,7 +381,7 @@ public abstract class C3808a extends C0900t {
                 this.f9487a.m12853l();
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.collections.MutableCollection<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.MutableCollection<T>");
         }
 
         /* renamed from: c */

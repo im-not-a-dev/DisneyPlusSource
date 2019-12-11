@@ -17,7 +17,7 @@ import com.bamtechmedia.dominguez.collections.C3432o;
 import com.bamtechmedia.dominguez.playback.C6331j;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p509o.p510a.C11847b;
@@ -89,7 +89,7 @@ public abstract class C6312a extends C11885d implements C6324g {
                 Intrinsics.throwNpe();
                 throw null;
             }
-            throw new C13142s("null cannot be cast to non-null type android.view.WindowManager");
+            throw new TypeCastException("null cannot be cast to non-null type android.view.WindowManager");
         }
     }
 

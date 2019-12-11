@@ -6,7 +6,7 @@ import com.disneystreaming.companion.p351l.C8476c;
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.charset.Charset;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 import okio.BufferedSource;
@@ -76,6 +76,6 @@ public final class C8544a {
             this.f18233b.flush();
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 }

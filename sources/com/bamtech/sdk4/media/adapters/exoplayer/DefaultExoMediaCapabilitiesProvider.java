@@ -13,7 +13,7 @@ import com.bamtech.sdk4.internal.configuration.WidevineSecurityLevel;
 import com.bamtech.sdk4.media.HdrType;
 import com.bamtech.sdk4.media.MediaCapabilitiesProvider;
 import com.bamtech.sdk4.media.SupportedCodec;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.p381t0.C9270a;
 import com.google.android.exoplayer2.p381t0.C9275d;
 import java.util.ArrayList;
@@ -110,7 +110,7 @@ public final class DefaultExoMediaCapabilitiesProvider implements MediaCapabilit
         WidevineSecurityLevel widevineSecurityLevel;
         if (VERSION.SDK_INT >= 18) {
             try {
-                MediaDrm mediaDrm = new MediaDrm(C8883r.WIDEVINE_UUID);
+                MediaDrm mediaDrm = new MediaDrm(C.WIDEVINE_UUID);
                 String propertyString = mediaDrm.getPropertyString("securityLevel");
                 mediaDrm.release();
                 if ("L1".equals(propertyString)) {

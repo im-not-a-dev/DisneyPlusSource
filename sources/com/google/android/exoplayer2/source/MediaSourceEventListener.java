@@ -3,9 +3,9 @@ package com.google.android.exoplayer2.source;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
@@ -108,7 +108,7 @@ public interface MediaSourceEventListener {
         /* renamed from: b */
         public void mo23518b() {
             MediaPeriodId mediaPeriodId = this.f20162b;
-            C9537e.m29296a(mediaPeriodId);
+            Assertions.checkNotNull(mediaPeriodId);
             MediaPeriodId mediaPeriodId2 = mediaPeriodId;
             Iterator it = this.f20163c.iterator();
             while (it.hasNext()) {
@@ -135,7 +135,7 @@ public interface MediaSourceEventListener {
 
         /* renamed from: a */
         public void mo23502a(Handler handler, MediaSourceEventListener mediaSourceEventListener) {
-            C9537e.m29299a((handler == null || mediaSourceEventListener == null) ? false : true);
+            Assertions.m29299a((handler == null || mediaSourceEventListener == null) ? false : true);
             this.f20163c.add(new C9069a(handler, mediaSourceEventListener));
         }
 
@@ -163,7 +163,7 @@ public interface MediaSourceEventListener {
         /* renamed from: c */
         public void mo23525c() {
             MediaPeriodId mediaPeriodId = this.f20162b;
-            C9537e.m29296a(mediaPeriodId);
+            Assertions.checkNotNull(mediaPeriodId);
             MediaPeriodId mediaPeriodId2 = mediaPeriodId;
             Iterator it = this.f20163c.iterator();
             while (it.hasNext()) {
@@ -180,7 +180,7 @@ public interface MediaSourceEventListener {
         /* renamed from: a */
         public void mo23499a() {
             MediaPeriodId mediaPeriodId = this.f20162b;
-            C9537e.m29296a(mediaPeriodId);
+            Assertions.checkNotNull(mediaPeriodId);
             MediaPeriodId mediaPeriodId2 = mediaPeriodId;
             Iterator it = this.f20163c.iterator();
             while (it.hasNext()) {
@@ -236,7 +236,7 @@ public interface MediaSourceEventListener {
         /* renamed from: b */
         public void mo23520b(MediaLoadData mediaLoadData) {
             MediaPeriodId mediaPeriodId = this.f20162b;
-            C9537e.m29296a(mediaPeriodId);
+            Assertions.checkNotNull(mediaPeriodId);
             MediaPeriodId mediaPeriodId2 = mediaPeriodId;
             Iterator it = this.f20163c.iterator();
             while (it.hasNext()) {
@@ -334,7 +334,7 @@ public interface MediaSourceEventListener {
 
         /* renamed from: a */
         private long m26928a(long j) {
-            long b = C8883r.usToMs(j);
+            long b = C.usToMs(j);
             if (b == -9223372036854775807L) {
                 return -9223372036854775807L;
             }

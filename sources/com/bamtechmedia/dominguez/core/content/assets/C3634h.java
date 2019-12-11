@@ -1,7 +1,7 @@
 package com.bamtechmedia.dominguez.core.content.assets;
 
 import java.util.Map;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11725h;
 import p163g.p500m.p501a.C11734j;
@@ -72,7 +72,7 @@ public final class C3634h extends C11725h<C3626b> {
             sb.append(str);
             throw new C11734j(sb.toString());
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.collections.Map<*, *>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.Map<*, *>");
     }
 
     /* renamed from: a */

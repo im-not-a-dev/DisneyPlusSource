@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
@@ -33,7 +33,7 @@ final class KClassImpl$Data$sealedSubclasses$2 extends C12881k implements Functi
                     arrayList.add(kClassImpl);
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+                throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
             }
         }
         return arrayList;

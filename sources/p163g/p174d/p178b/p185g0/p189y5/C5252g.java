@@ -7,7 +7,7 @@ import android.view.ViewParent;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p174d.p178b.p179a0.C4817a;
 import p163g.p174d.p178b.p196m0.C5306d;
@@ -126,7 +126,7 @@ public final class C5252g {
         if (parent != null) {
             return m17612a(this.f12602b, (float) i, ((View) parent).getWidth());
         }
-        throw new C13142s("null cannot be cast to non-null type android.view.View");
+        throw new TypeCastException("null cannot be cast to non-null type android.view.View");
     }
 
     /* renamed from: b */

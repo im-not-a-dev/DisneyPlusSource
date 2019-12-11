@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 
 /* compiled from: TypeWithEnhancement.kt */
@@ -31,7 +31,7 @@ public final class SimpleTypeWithEnhancement extends DelegatingSimpleType implem
         if (wrapEnhancement != null) {
             return (SimpleType) wrapEnhancement;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.types.SimpleType");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.types.SimpleType");
     }
 
     public SimpleType replaceAnnotations(Annotations annotations) {
@@ -39,6 +39,6 @@ public final class SimpleTypeWithEnhancement extends DelegatingSimpleType implem
         if (wrapEnhancement != null) {
             return (SimpleType) wrapEnhancement;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.types.SimpleType");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.types.SimpleType");
     }
 }

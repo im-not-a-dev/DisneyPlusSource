@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 
 /* compiled from: methodSignatureBuilding.kt */
@@ -39,7 +39,7 @@ public final class SignatureBuildingComponents {
         if (array != null) {
             return (String[]) array;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
     public final LinkedHashSet<String> inClass(String str, String... strArr) {

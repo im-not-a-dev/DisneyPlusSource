@@ -5,7 +5,7 @@ import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.view.View;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -33,7 +33,7 @@ public final class C5846m0 {
                 view.setAlpha(((Float) animatedValue).floatValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
         }
     }
 
@@ -56,7 +56,7 @@ public final class C5846m0 {
                 view.setAlpha(((Float) animatedValue).floatValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
         }
     }
 
@@ -79,7 +79,7 @@ public final class C5846m0 {
                 view.setTranslationY(((Float) animatedValue).floatValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
         }
     }
 

@@ -5,13 +5,13 @@ import android.annotation.TargetApi;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.drm.DefaultDrmSession.C8707c;
 import com.google.android.exoplayer2.drm.ExoMediaCrypto;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
 import com.google.android.exoplayer2.drm.DrmSession.C8694a;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.OnKeyStatusChangeListener;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9557m;
 import com.google.android.exoplayer2.p393v0.C9557m.C9558a;
@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.UUID;
 
 @TargetApi(18)
-public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710l<T>, C8707c<T> {
+public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements DrmSessionManager<T>, C8707c<T> {
 
     /* renamed from: a */
     private final UUID uuid;
@@ -32,13 +32,13 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
     private final ExoMediaDrm<T> exoMediaDrm;
 
     /* renamed from: c */
-    private final C8715q qVar;
+    private final MediaDrmCallback qVar;
 
     /* renamed from: d */
     private final HashMap<String, String> hashMap;
 
     /* renamed from: e */
-    private final C9557m<C8709k> f18448e = new C9557m<>();
+    private final C9557m<DefaultDrmSessionEventListener> f18448e = new C9557m<>();
 
     /* renamed from: f */
     private final boolean z;
@@ -57,7 +57,7 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
     private Looper f18453j;
 
     /* renamed from: k */
-    private int f18454k;
+    private int mode;
 
     /* renamed from: l */
     private byte[] f18455l;
@@ -73,7 +73,7 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
         /* renamed from: a */
         public void onKeyStatusChange(ExoMediaDrm<? extends T> exoMediaDrm, byte[] bArr, int i, int i2, byte[] bArr2) {
             C8689c cVar = DefaultDrmSessionManager.this.f18456m;
-            C9537e.m29296a(cVar);
+            Assertions.checkNotNull(cVar);
             cVar.obtainMessage(i, bArr).sendToTarget();
         }
     }
@@ -113,20 +113,20 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
         }
     }
 
-    public DefaultDrmSessionManager(UUID uuid, ExoMediaDrm<T> exoMediaDrm, C8715q qVar, HashMap<String, String> hashMap, boolean z, int i) {
-        C9537e.m29296a(uuid);
-        C9537e.m29296a(exoMediaDrm);
-        C9537e.m29300a(!C8883r.COMMON_PSSH_UUID.equals(uuid), (Object) "Use C.CLEARKEY_UUID instead");
+    public DefaultDrmSessionManager(UUID uuid, ExoMediaDrm<T> exoMediaDrm, MediaDrmCallback qVar, HashMap<String, String> hashMap, boolean z, int i) {
+        Assertions.checkNotNull(uuid);
+        Assertions.checkNotNull(exoMediaDrm);
+        Assertions.m29300a(!C.COMMON_PSSH_UUID.equals(uuid), (Object) "Use C.CLEARKEY_UUID instead");
         this.uuid = uuid;
         this.exoMediaDrm = exoMediaDrm;
         this.qVar = qVar;
         this.hashMap = hashMap;
         this.z = z;
         this.i = i;
-        this.f18454k = 0;
+        this.mode = 0;
         this.f18451h = new ArrayList();
         this.f18452i = new ArrayList();
-        if (z && C8883r.WIDEVINE_UUID.equals(uuid) && Util.SDK_INT >= 19) {
+        if (z && C.WIDEVINE_UUID.equals(uuid) && Util.SDK_INT >= 19) {
             exoMediaDrm.mo22779a("sessionSharing", "enable");
         }
         exoMediaDrm.mo22778a((OnKeyStatusChangeListener<? super T>) new C8688b<Object>());
@@ -136,7 +136,7 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
         List list;
         DefaultDrmSession iVar;
         Looper looper2 = this.f18453j;
-        C9537e.m29301b(looper2 == null || looper2 == looper);
+        Assertions.checkState(looper2 == null || looper2 == looper);
         if (this.f18451h.isEmpty()) {
             this.f18453j = looper;
             if (this.f18456m == null) {
@@ -144,7 +144,7 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
             }
         }
         DefaultDrmSession iVar2 = null;
-        if (this.f18455l == null) {
+        if (this.offlineLicenseKeySetId == null) {
             List a = m25150a(drmInitData, this.uuid, false);
             if (a.isEmpty()) {
                 C8690d dVar = new C8690d(this.uuid);
@@ -171,7 +171,7 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
             iVar2 = (DefaultDrmSession) this.f18451h.get(0);
         }
         if (iVar2 == null) {
-            iVar = new DefaultDrmSession(this.uuid, this.exoMediaDrm, this, list, this.f18454k, this.f18455l, this.hashMap, this.qVar, looper, this.f18448e, this.i);
+            iVar = new DefaultDrmSession(this.uuid, this.exoMediaDrm, this, list, this.mode, this.offlineLicenseKeySetId, this.hashMap, this.qVar, looper, this.f18448e, this.i);
             this.f18451h.add(iVar);
         } else {
             iVar = iVar2;
@@ -182,11 +182,11 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
 
     public boolean canAcquireSession(DrmInitData drmInitData) {
         boolean z = true;
-        if (this.f18455l != null) {
+        if (this.offlineLicenseKeySetId != null) {
             return true;
         }
         if (m25150a(drmInitData, this.uuid, true).isEmpty()) {
-            if (drmInitData.f18461W != 1 || !drmInitData.mo22750a(0).mo22763a(C8883r.COMMON_PSSH_UUID)) {
+            if (drmInitData.f18461W != 1 || !drmInitData.mo22750a(0).mo22763a(C.COMMON_PSSH_UUID)) {
                 return false;
             }
             StringBuilder sb = new StringBuilder();
@@ -220,29 +220,29 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
     }
 
     /* renamed from: a */
-    public static DefaultDrmSessionManager<C8713o> m25147a(C8715q qVar, HashMap<String, String> hashMap) throws C8716r {
-        return m25148a(C8883r.WIDEVINE_UUID, qVar, hashMap);
+    public static DefaultDrmSessionManager<FrameworkMediaCrypto> newWidevineInstance(MediaDrmCallback qVar, HashMap<String, String> hashMap) throws UnsupportedDrmException {
+        return newFrameworkInstance(C.WIDEVINE_UUID, qVar, hashMap);
     }
 
     /* renamed from: a */
-    public static DefaultDrmSessionManager<C8713o> m25148a(UUID uuid, C8715q qVar, HashMap<String, String> hashMap) throws C8716r {
+    public static DefaultDrmSessionManager<FrameworkMediaCrypto> newFrameworkInstance(UUID uuid, MediaDrmCallback qVar, HashMap<String, String> hashMap) throws UnsupportedDrmException {
         DefaultDrmSessionManager defaultDrmSessionManager = new DefaultDrmSessionManager(uuid, FrameworkMediaDrm.m25194b(uuid), qVar, hashMap, false, 3);
         return defaultDrmSessionManager;
     }
 
     /* renamed from: a */
-    public final void mo22744a(Handler handler, C8709k kVar) {
+    public final void mo22744a(Handler handler, DefaultDrmSessionEventListener kVar) {
         this.f18448e.mo24647a(handler, kVar);
     }
 
     /* renamed from: a */
-    public void mo22743a(int i, byte[] bArr) {
-        C9537e.m29301b(this.f18451h.isEmpty());
-        if (i == 1 || i == 3) {
-            C9537e.m29296a(bArr);
+    public void setMode(int i, byte[] bArr) {
+        Assertions.checkState(this.f18451h.isEmpty());
+        if (i == 1 || i == 3) { // if (mode == MODE_QUERY || mode == MODE_RELEASE) {
+            Assertions.checkNotNull(bArr);
         }
-        this.f18454k = i;
-        this.f18455l = bArr;
+        this.mode = i; // this.mode = mode;
+        this.offlineLicenseKeySetId = bArr; // this.offlineLicenseKeySetId = offlineLicenseKeySetId;
     }
 
     /* renamed from: a */
@@ -276,7 +276,7 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements C8710
         ArrayList arrayList = new ArrayList(drmInitData.f18461W);
         for (int i = 0; i < drmInitData.f18461W; i++) {
             C8692b a = drmInitData.mo22750a(i);
-            if ((a.mo22763a(uuid) || (C8883r.CLEARKEY_UUID.equals(uuid) && a.mo22763a(C8883r.COMMON_PSSH_UUID))) && (a.f18466X != null || z)) {
+            if ((a.mo22763a(uuid) || (C.CLEARKEY_UUID.equals(uuid) && a.mo22763a(C.COMMON_PSSH_UUID))) && (a.f18466X != null || z)) {
                 arrayList.add(a);
             }
         }

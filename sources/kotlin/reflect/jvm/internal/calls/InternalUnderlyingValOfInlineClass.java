@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.calls.Caller.DefaultImpls;
@@ -50,7 +50,7 @@ public abstract class InternalUnderlyingValOfInlineClass implements Caller<Metho
             } else {
                 objArr2 = C13171j.m40340a(objArr, 1, objArr.length);
                 if (objArr2 == null) {
-                    throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
                 }
             }
             return callMethod(obj, objArr2);

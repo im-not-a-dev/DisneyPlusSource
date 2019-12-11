@@ -17,7 +17,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p686n.p687a.Timber;
@@ -198,7 +198,7 @@ public final class C7191b implements MediaCapabilitiesProvider {
             Intrinsics.checkReturnedValueIsNotNull((Object) parameters, "manager.getParameters(AMAZON_HDMI_ENCODINGS)");
             return C12833x.m40154a((CharSequence) parameters, (CharSequence) "atmos", false, 2, (Object) null);
         }
-        throw new C13142s("null cannot be cast to non-null type android.media.AudioManager");
+        throw new TypeCastException("null cannot be cast to non-null type android.media.AudioManager");
     }
 
     public List<SupportedCodec> getSupportedCodecs() {

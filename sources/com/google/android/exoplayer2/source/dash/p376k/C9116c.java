@@ -11,7 +11,7 @@ import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.metadata.p356g.C8746a;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9549j0;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9556l0;
@@ -329,10 +329,10 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             if (r5 == r8) goto L_0x004b
             goto L_0x0098
         L_0x004b:
-            java.util.UUID r2 = com.google.android.exoplayer2.C8883r.WIDEVINE_UUID
+            java.util.UUID r2 = com.google.android.exoplayer2.C.WIDEVINE_UUID
             goto L_0x0050
         L_0x004e:
-            java.util.UUID r2 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
+            java.util.UUID r2 = com.google.android.exoplayer2.C.PLAYREADY_UUID
         L_0x0050:
             r5 = r1
             goto L_0x009a
@@ -360,9 +360,9 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             int r7 = r7 + 1
             goto L_0x0076
         L_0x0084:
-            java.util.UUID r5 = com.google.android.exoplayer2.C8883r.COMMON_PSSH_UUID
+            java.util.UUID r5 = com.google.android.exoplayer2.C.COMMON_PSSH_UUID
             byte[] r5 = com.google.android.exoplayer2.p366s0.p371v.C8980k.m26492a(r5, r6, r1)
-            java.util.UUID r6 = com.google.android.exoplayer2.C8883r.COMMON_PSSH_UUID
+            java.util.UUID r6 = com.google.android.exoplayer2.C.COMMON_PSSH_UUID
             r7 = r1
             r8 = 0
             r15 = r6
@@ -436,7 +436,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x00b0
         L_0x00fb:
             if (r5 != 0) goto L_0x0122
-            java.util.UUID r10 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
+            java.util.UUID r10 = com.google.android.exoplayer2.C.PLAYREADY_UUID
             boolean r10 = r10.equals(r2)
             if (r10 == 0) goto L_0x0122
             java.lang.String r10 = "mspr:pro"
@@ -444,7 +444,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             if (r10 == 0) goto L_0x0122
             int r10 = r17.next()
             if (r10 != r9) goto L_0x0122
-            java.util.UUID r5 = com.google.android.exoplayer2.C8883r.PLAYREADY_UUID
+            java.util.UUID r5 = com.google.android.exoplayer2.C.PLAYREADY_UUID
             java.lang.String r9 = r17.getText()
             byte[] r9 = android.util.Base64.decode(r9, r4)
             byte[] r5 = com.google.android.exoplayer2.p366s0.p371v.C8980k.m26491a(r5, r9)
@@ -925,7 +925,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         if (str2 == null) {
             return str;
         }
-        C9537e.m29301b(str.equals(str2));
+        Assertions.checkState(str.equals(str2));
         return str;
     }
 
@@ -2156,7 +2156,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         if (i2 == -1) {
             return i;
         }
-        C9537e.m29301b(i == i2);
+        Assertions.checkState(i == i2);
         return i;
     }
 

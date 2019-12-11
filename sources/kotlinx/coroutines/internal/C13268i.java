@@ -1,7 +1,7 @@
 package kotlinx.coroutines.internal;
 
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlinx.coroutines.C13292j0;
@@ -96,7 +96,7 @@ public class C13268i {
             } else if (obj != null) {
                 iVar = (C13268i) obj;
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
             }
         } while (!f29694U.compareAndSet(this, obj, iVar.mo34500o()));
         return (C13268i) obj;
@@ -156,7 +156,7 @@ public class C13268i {
                 }
                 m40758a(iVar, (C13274l) null);
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
             }
         }
     }
@@ -198,7 +198,7 @@ public class C13268i {
                                     return;
                                 }
                             } else {
-                                throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                                throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
                             }
                         } else if (f29696c.compareAndSet(n, this, iVar)) {
                             return;
@@ -210,7 +210,7 @@ public class C13268i {
                 n = iVar2;
             }
         } else {
-            throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Removed");
+            throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Removed");
         }
     }
 
@@ -245,7 +245,7 @@ public class C13268i {
             if (d != null) {
                 iVar = (C13268i) d;
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
             }
         } while (!f29696c.compareAndSet(this, d, iVar.mo34500o()));
         m40761c(iVar);
@@ -266,7 +266,7 @@ public class C13268i {
                 }
                 iVar.mo34426h();
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
             }
         }
     }
@@ -296,7 +296,7 @@ public class C13268i {
             iVar.m40758a((C13268i) obj, (C13274l) null);
             return;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
     }
 
     /* renamed from: a */
@@ -343,7 +343,7 @@ public class C13268i {
                             iVar2 = iVar;
                             iVar = (C13268i) obj;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
                         }
                     } else if (obj2 == iVar) {
                         return null;

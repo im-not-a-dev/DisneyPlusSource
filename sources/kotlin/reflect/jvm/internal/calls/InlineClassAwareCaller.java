@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p586h0.C12757d;
@@ -271,7 +271,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller<M>
             Object invoke = component3.invoke(null, new Object[]{call});
             return invoke != null ? invoke : call;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
     }
 
     public M getMember() {

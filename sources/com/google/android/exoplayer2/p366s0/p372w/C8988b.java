@@ -4,7 +4,7 @@ import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.io.EOFException;
 import java.io.IOException;
@@ -77,7 +77,7 @@ final class C8988b implements C8996g {
     }
 
     public C8988b(C8998i iVar, long j, long j2, long j3, long j4, boolean z) {
-        C9537e.m29299a(j >= 0 && j2 > j);
+        Assertions.m29299a(j >= 0 && j2 > j);
         this.f19709d = iVar;
         this.f19707b = j;
         this.f19708c = j2;

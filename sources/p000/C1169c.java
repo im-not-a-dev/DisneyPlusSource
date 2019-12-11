@@ -10,7 +10,7 @@ import com.bamtech.sdk4.internal.service.ServiceTransaction.DefaultImpls;
 import com.bamtech.sdk4.internal.telemetry.dust.DustConfigSettings;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
@@ -150,9 +150,9 @@ public final class C1169c {
                 DefaultImpls.logDust$default(serviceTransaction, str, "urn:bamtech:dust:bamsdk:error:service", th, m6000a(th), LogLevel.ERROR, false, 32, null);
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         }
-        throw new C13142s("null cannot be cast to non-null type java.util.Collection<T>");
+        throw new TypeCastException("null cannot be cast to non-null type java.util.Collection<T>");
     }
 
     /* renamed from: a */

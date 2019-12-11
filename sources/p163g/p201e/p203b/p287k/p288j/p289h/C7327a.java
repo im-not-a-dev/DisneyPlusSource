@@ -36,7 +36,7 @@ import com.google.common.base.Optional;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p201e.p203b.p287k.C7310d;
@@ -479,7 +479,7 @@ public final class C7327a extends C11866a {
             C7328a aVar2 = new C7328a(!Intrinsics.areEqual((Object) aVar.m21968a(), (Object) m21968a()), aVar.f16095c != (this.f16087U.mo20123d() != null), !Intrinsics.areEqual((Object) aVar.f16087U.mo20127g(), (Object) this.f16087U.mo20127g()), !Intrinsics.areEqual((Object) aVar.f16089W, (Object) this.f16089W), aVar.f16087U.mo20128h() != this.f16087U.mo20128h(), !Intrinsics.areEqual((Object) aVar.f16087U.mo20126f(), (Object) this.f16087U.mo20126f()), !Intrinsics.areEqual((Object) aVar.f16087U.mo20124e(), (Object) this.f16087U.mo20124e()), !Intrinsics.areEqual((Object) m21967a((C3693o) aVar.f16087U.mo20122c()), (Object) m21967a((C3693o) this.f16087U.mo20122c())));
             return aVar2;
         }
-        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.detail.movie.mobile.MovieDetailHeaderItem");
+        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.detail.movie.mobile.MovieDetailHeaderItem");
     }
 
     public int getLayout() {

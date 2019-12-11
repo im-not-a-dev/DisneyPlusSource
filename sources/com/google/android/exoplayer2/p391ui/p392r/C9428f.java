@@ -4,7 +4,7 @@ import android.graphics.SurfaceTexture;
 import android.opengl.GLES20;
 import android.opengl.Matrix;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9543g0;
 import com.google.android.exoplayer2.p393v0.C9561o;
 import com.google.android.exoplayer2.p394w0.C9597n;
@@ -87,7 +87,7 @@ public final class C9428f implements C9597n, C9605a {
         C9561o.m29483a();
         if (this.f21897a.compareAndSet(true, false)) {
             SurfaceTexture surfaceTexture = this.f21906j;
-            C9537e.m29296a(surfaceTexture);
+            Assertions.checkNotNull(surfaceTexture);
             surfaceTexture.updateTexImage();
             C9561o.m29483a();
             if (this.f21898b.compareAndSet(true, false)) {

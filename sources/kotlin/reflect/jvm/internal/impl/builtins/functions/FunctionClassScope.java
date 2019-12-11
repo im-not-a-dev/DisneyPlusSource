@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.builtins.functions;
 
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassDescriptor.Kind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
@@ -37,6 +37,6 @@ public final class FunctionClassScope extends GivenFunctionsMemberScope {
             }
             return C13183n.m40498a(FunctionInvokeDescriptor.Factory.create((FunctionClassDescriptor) getContainingClass(), true));
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.builtins.functions.FunctionClassDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.builtins.functions.FunctionClassDescriptor");
     }
 }

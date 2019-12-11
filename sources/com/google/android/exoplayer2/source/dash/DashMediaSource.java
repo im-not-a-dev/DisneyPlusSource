@@ -8,13 +8,13 @@ import android.util.SparseArray;
 import com.facebook.stetho.common.Utf8Charset;
 import com.google.android.exoplayer2.C8672a0;
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.Timeline.C8670c;
 import com.google.android.exoplayer2.offline.C8808b;
 import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.source.C9072a0;
@@ -206,19 +206,19 @@ public final class DashMediaSource extends C9229o {
             if (list != null) {
                 this.f20315c = new C8808b(this.f20315c, list);
             }
-            C9537e.m29296a(uri);
+            Assertions.checkNotNull(uri);
             DashMediaSource dashMediaSource = new DashMediaSource(null, uri, this.f20314b, this.f20315c, this.f20313a, this.f20317e, this.f20318f, this.f20319g, this.f20320h, this.f20322j);
             return dashMediaSource;
         }
 
         public Factory setStreamKeys(List<StreamKey> list) {
-            C9537e.m29301b(!this.f20321i);
+            Assertions.checkState(!this.f20321i);
             this.f20316d = list;
             return this;
         }
 
         public Factory(C9099a aVar, C9435a aVar2) {
-            C9537e.m29296a(aVar);
+            Assertions.checkNotNull(aVar);
             this.f20313a = aVar;
             this.f20314b = aVar2;
             this.f20318f = new C9518u();
@@ -277,19 +277,19 @@ public final class DashMediaSource extends C9229o {
 
         /* renamed from: a */
         public C8669b mo22661a(int i, C8669b bVar, boolean z) {
-            C9537e.m29295a(i, 0, mo22653a());
+            Assertions.m29295a(i, 0, mo22653a());
             Integer num = null;
             Object obj = z ? this.f20329h.mo23675a(i).f20453a : null;
             if (z) {
                 num = Integer.valueOf(this.f20325d + i);
             }
-            bVar.mo22676a(obj, num, 0, this.f20329h.mo23677c(i), C8883r.msToUs(this.f20329h.mo23675a(i).f20454b - this.f20329h.mo23675a(0).f20454b) - this.f20326e);
+            bVar.mo22676a(obj, num, 0, this.f20329h.mo23677c(i), C.msToUs(this.f20329h.mo23675a(i).f20454b - this.f20329h.mo23675a(0).f20454b) - this.f20326e);
             return bVar;
         }
 
         /* renamed from: a */
         public C8670c mo22665a(int i, C8670c cVar, boolean z, long j) {
-            C9537e.m29295a(i, 0, 1);
+            Assertions.m29295a(i, 0, 1);
             long a = m27108a(j);
             Object obj = z ? this.f20330i : null;
             C9115b bVar = this.f20329h;
@@ -344,7 +344,7 @@ public final class DashMediaSource extends C9229o {
 
         /* renamed from: a */
         public Object mo22666a(int i) {
-            C9537e.m29295a(i, 0, mo22653a());
+            Assertions.m29295a(i, 0, mo22653a());
             return Integer.valueOf(this.f20325d + i);
         }
     }
@@ -582,9 +582,9 @@ public final class DashMediaSource extends C9229o {
     /* renamed from: f */
     private long m27093f() {
         if (this.f20281A0 != 0) {
-            return C8883r.msToUs(SystemClock.elapsedRealtime() + this.f20281A0);
+            return C.msToUs(SystemClock.elapsedRealtime() + this.f20281A0);
         }
-        return C8883r.msToUs(System.currentTimeMillis());
+        return C.msToUs(System.currentTimeMillis());
     }
 
     /* access modifiers changed from: private */
@@ -636,7 +636,7 @@ public final class DashMediaSource extends C9229o {
         this.f20299m0 = new C9089c();
         this.f20283C0 = -9223372036854775807L;
         if (this.f20285Y) {
-            C9537e.m29301b(!bVar.f20426d);
+            Assertions.checkState(!bVar.f20426d);
             this.f20294h0 = null;
             this.f20297k0 = null;
             this.f20298l0 = null;
@@ -978,10 +978,10 @@ public final class DashMediaSource extends C9229o {
             j = j4;
             z2 = false;
         } else {
-            j5 = Math.min((m27093f() - C8883r.msToUs(this.f20309w0.f20423a)) - C8883r.msToUs(this.f20309w0.mo23675a(a).f20454b), j5);
+            j5 = Math.min((m27093f() - C.msToUs(this.f20309w0.f20423a)) - C.msToUs(this.f20309w0.mo23675a(a).f20454b), j5);
             long j6 = this.f20309w0.f20428f;
             if (j6 != -9223372036854775807L) {
-                long a4 = j5 - C8883r.msToUs(j6);
+                long a4 = j5 - C.msToUs(j6);
                 while (a4 < 0 && a > 0) {
                     a--;
                     a4 += this.f20309w0.mo23677c(a);
@@ -1009,7 +1009,7 @@ public final class DashMediaSource extends C9229o {
                     j8 = j9;
                 }
             }
-            long a5 = j7 - C8883r.msToUs(j8);
+            long a5 = j7 - C.msToUs(j8);
             if (a5 < 5000000) {
                 a5 = Math.min(5000000, j7 / 2);
             }
@@ -1018,7 +1018,7 @@ public final class DashMediaSource extends C9229o {
             j2 = 0;
         }
         C9115b bVar2 = this.f20309w0;
-        long b = bVar2.f20423a + bVar2.mo23675a(0).f20454b + C8883r.usToMs(j);
+        long b = bVar2.f20423a + bVar2.mo23675a(0).f20454b + C.usToMs(j);
         C9115b bVar3 = this.f20309w0;
         C9088b bVar4 = new C9088b(bVar3.f20423a, b, this.f20284D0, j, j7, j2, bVar3, this.f20301o0);
         mo23961a((Timeline) bVar4, (Object) this.f20309w0);

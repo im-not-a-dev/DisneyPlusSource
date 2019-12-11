@@ -11,7 +11,7 @@ import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.p366s0.p371v.C8980k;
 import com.google.android.exoplayer2.p366s0.p371v.C8984n;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9544h;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a.C9246a;
@@ -485,7 +485,7 @@ public class C9248b implements C9456a<C9245a> {
             if (obj instanceof C9247b) {
                 this.f21038e.add((C9247b) obj);
             } else if (obj instanceof C9246a) {
-                C9537e.m29301b(this.f21046m == null);
+                Assertions.checkState(this.f21046m == null);
                 this.f21046m = (C9246a) obj;
             }
         }

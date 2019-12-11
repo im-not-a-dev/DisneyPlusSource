@@ -4,7 +4,7 @@ import android.util.Pair;
 import android.util.SparseArray;
 import com.facebook.stetho.server.http.HttpStatus;
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
 import com.google.android.exoplayer2.p361p0.C8825g;
@@ -1913,7 +1913,7 @@ public class C8941e implements C8912g {
                 if (cVar3.f19321f) {
                     C8925a aVar = cVar3.f19323h;
                     if (aVar != null) {
-                        cVar3.f19325j = new DrmInitData(new C8692b(C8883r.UUID_NIL, "video/webm", aVar.f19172b));
+                        cVar3.f19325j = new DrmInitData(new C8692b(C.UUID_NIL, "video/webm", aVar.f19172b));
                     } else {
                         throw new C8723g0("Encrypted Track found but ContentEncKeyID was not found");
                     }
@@ -2959,7 +2959,7 @@ public class C8941e implements C8912g {
         L_0x0197:
             r4 = 0
         L_0x0198:
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r4)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r4)
             com.google.android.exoplayer2.s0.t.e$d r1 = r12.f19310Q
             int r3 = r10.f19254M
             r1.mo23353a(r11, r3, r13)

@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p590y.C13152b0;
 import kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver;
@@ -110,7 +110,7 @@ public final class JvmNameResolver implements NameResolver {
                         str = str.substring(intValue2, intValue3);
                         Intrinsics.checkReturnedValueIsNotNull((Object) str, str3);
                     } else {
-                        throw new C13142s(str2);
+                        throw new TypeCastException(str2);
                     }
                 }
             }
@@ -141,7 +141,7 @@ public final class JvmNameResolver implements NameResolver {
                         str6 = str6.substring(1, length);
                         Intrinsics.checkReturnedValueIsNotNull((Object) str6, str3);
                     } else {
-                        throw new C13142s(str2);
+                        throw new TypeCastException(str2);
                     }
                 }
                 String str7 = str6;

@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 
 /* renamed from: kotlin.jvm.internal.f */
 /* compiled from: CollectionToArray.kt */
@@ -66,7 +66,7 @@ public final class C12871f {
                         if (newInstance != null) {
                             objArr2 = (Object[]) newInstance;
                         } else {
-                            throw new C13142s("null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
+                            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
                         }
                     }
                     while (true) {

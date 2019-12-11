@@ -6,7 +6,7 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.source.C9072a0;
@@ -183,7 +183,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
     private void m27499d(long j) {
         Map map;
         C9182e b = this.f20614U.mo23879b();
-        C9537e.m29296a(b);
+        Assertions.checkNotNull(b);
         C9182e eVar = b;
         if (this.f20625e0) {
             map = m27496a(eVar.f20756k);
@@ -348,7 +348,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
         L_0x00b0:
             r10 = 0
         L_0x00b1:
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r10)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r10)
             r10 = r7[r9]
             r6[r9] = r10
             java.util.IdentityHashMap<com.google.android.exoplayer2.source.f0, java.lang.Integer> r10 = r0.f20620a0
@@ -366,7 +366,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
         L_0x00ce:
             r12 = 0
         L_0x00cf:
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r12)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r12)
         L_0x00d2:
             int r9 = r9 + 1
             goto L_0x00a2

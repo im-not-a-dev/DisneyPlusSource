@@ -8,7 +8,7 @@ import android.text.style.URLSpan;
 import android.view.View;
 import android.widget.TextView;
 import com.bamtechmedia.dominguez.auth.C2711f0;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
 import p096e.p121h.p122j.C4025a;
@@ -49,7 +49,7 @@ public final class C3038d<T extends URLSpan> implements TransformationMethod {
                         spannable.setSpan(new ForegroundColorSpan(C4025a.m13788a(textView.getContext(), this.f7902U)), spanStart, spanEnd, 33);
                     }
                 } else {
-                    throw new C13142s("null cannot be cast to non-null type android.text.Spannable");
+                    throw new TypeCastException("null cannot be cast to non-null type android.text.Spannable");
                 }
             }
         }

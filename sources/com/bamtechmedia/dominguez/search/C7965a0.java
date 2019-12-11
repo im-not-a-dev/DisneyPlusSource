@@ -22,7 +22,7 @@ import androidx.recyclerview.widget.RecyclerView.C0794d0;
 import com.bamtechmedia.dominguez.collections.items.ShelfItemLayout;
 import com.bamtechmedia.dominguez.core.utils.C5837i;
 import com.bamtechmedia.dominguez.core.utils.C5846m0;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -263,7 +263,7 @@ public final class C7965a0 {
                     recyclerView.setTranslationY(((Float) animatedValue).floatValue());
                     return;
                 }
-                throw new C13142s("null cannot be cast to non-null type kotlin.Float");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Float");
             }
         }
     }
@@ -289,7 +289,7 @@ public final class C7965a0 {
                 if (animatedValue != null) {
                     linearLayout.setTranslationY(((Float) animatedValue).floatValue());
                 } else {
-                    throw new C13142s(str);
+                    throw new TypeCastException(str);
                 }
             }
             ImageView imageView = (ImageView) this.f17138a.f17129b._$_findCachedViewById(C8048n.microphoneImageView);
@@ -300,7 +300,7 @@ public final class C7965a0 {
                     imageView.setTranslationY(((Float) animatedValue2).floatValue());
                     return;
                 }
-                throw new C13142s(str);
+                throw new TypeCastException(str);
             }
         }
     }
@@ -316,7 +316,7 @@ public final class C7965a0 {
             return;
         }
         if (bVar == null) {
-            throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.search.SearchTvTransitionHelper.TransitionState.Default");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.search.SearchTvTransitionHelper.TransitionState.Default");
         } else if (((C7968a) bVar).mo20942a() != z) {
             m23226a(this, new C7968a(z), z2, null, false, 12, null);
         }

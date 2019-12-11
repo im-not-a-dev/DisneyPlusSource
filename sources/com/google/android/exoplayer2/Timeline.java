@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2;
 
 import android.util.Pair;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.source.p378l0.C9204a;
 import com.google.android.exoplayer2.source.p378l0.C9204a.C9205a;
 
@@ -77,7 +77,7 @@ public abstract class Timeline {
 
         /* renamed from: c */
         public long mo22683c() {
-            return C8883r.usToMs(this.f18396c);
+            return C.usToMs(this.f18396c);
         }
 
         /* renamed from: d */
@@ -87,7 +87,7 @@ public abstract class Timeline {
 
         /* renamed from: e */
         public long mo22687e() {
-            return C8883r.usToMs(this.f18397d);
+            return C.usToMs(this.f18397d);
         }
 
         /* renamed from: f */
@@ -204,7 +204,7 @@ public abstract class Timeline {
 
         /* renamed from: c */
         public long mo22692c() {
-            return C8883r.usToMs(this.f18404f);
+            return C.usToMs(this.f18404f);
         }
 
         /* renamed from: d */
@@ -214,7 +214,7 @@ public abstract class Timeline {
 
         /* renamed from: a */
         public long mo22689a() {
-            return C8883r.usToMs(this.f18403e);
+            return C.usToMs(this.f18403e);
         }
     }
 
@@ -313,13 +313,13 @@ public abstract class Timeline {
     /* renamed from: a */
     public final Pair<Object, Long> mo22658a(C8670c cVar, C8669b bVar, int i, long j) {
         Pair<Object, Long> a = mo22659a(cVar, bVar, i, j, 0);
-        C9537e.m29296a(a);
+        Assertions.checkNotNull(a);
         return a;
     }
 
     /* renamed from: a */
     public final Pair<Object, Long> mo22659a(C8670c cVar, C8669b bVar, int i, long j, long j2) {
-        C9537e.m29295a(i, 0, mo22667b());
+        Assertions.m29295a(i, 0, mo22667b());
         mo22665a(i, cVar, false, j2);
         if (j == -9223372036854775807L) {
             j = cVar.mo22691b();
@@ -336,7 +336,7 @@ public abstract class Timeline {
             d2 = mo22661a(i2, bVar, true).mo22685d();
         }
         Object obj = bVar.f18394a;
-        C9537e.m29296a(obj);
+        Assertions.checkNotNull(obj);
         return Pair.create(obj, Long.valueOf(d));
     }
 

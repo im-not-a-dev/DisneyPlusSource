@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.bamtechmedia.dominguez.core.design.widgets.textinputlayout.C5714c.C5715a;
 import com.bamtechmedia.dominguez.core.p088i.C3834d;
 import com.google.android.material.textfield.C10349c;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -45,7 +45,7 @@ public final class CustomInternalTextInputLayout extends C10349c {
                 customInternalTextInputLayout.setBoxBackgroundColor(((Integer) animatedValue).intValue());
                 return;
             }
-            throw new C13142s("null cannot be cast to non-null type kotlin.Int");
+            throw new TypeCastException("null cannot be cast to non-null type kotlin.Int");
         }
 
         public /* bridge */ /* synthetic */ Object invoke(Object obj) {

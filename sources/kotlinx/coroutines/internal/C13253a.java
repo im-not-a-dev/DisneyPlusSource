@@ -1,6 +1,6 @@
 package kotlinx.coroutines.internal;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 
 /* renamed from: kotlinx.coroutines.internal.a */
 /* compiled from: ArrayQueue.kt */
@@ -49,7 +49,7 @@ public class C13253a<T> {
         if (t != null) {
             return t;
         }
-        throw new C13142s("null cannot be cast to non-null type T");
+        throw new TypeCastException("null cannot be cast to non-null type T");
     }
 
     /* renamed from: a */

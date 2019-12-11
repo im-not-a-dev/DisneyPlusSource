@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0;
 
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import java.io.IOException;
 
@@ -292,11 +292,11 @@ public abstract class C8899a {
     /* renamed from: a */
     public int mo23269a(C8913h hVar, C8919n nVar, C8902c cVar) throws InterruptedException, IOException {
         C8906g gVar = this.f19094b;
-        C9537e.m29296a(gVar);
+        Assertions.checkNotNull(gVar);
         C8906g gVar2 = gVar;
         while (true) {
             C8903d dVar = this.f19095c;
-            C9537e.m29296a(dVar);
+            Assertions.checkNotNull(dVar);
             C8903d dVar2 = dVar;
             long b = dVar2.m26093b();
             long c = dVar2.m26088a();

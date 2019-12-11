@@ -19,7 +19,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.Pair;
@@ -66,7 +66,7 @@ public final class DefaultContentClient implements ContentClient {
             }
             return C1691e.m7796a((Link) pair.mo31013a(), serviceTransaction.getClient(), responseTransformer, (String) pair.mo31014b(), dustConfigSettings);
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 
     public final Link handleSearchOverrides(Link link, List<OptionalHeaderTemplate> list, Map<String, String> map) {

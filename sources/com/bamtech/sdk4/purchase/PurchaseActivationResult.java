@@ -3,7 +3,7 @@ package com.bamtech.sdk4.purchase;
 import com.bamtech.core.annotations.android.DontObfuscate;
 import com.bamtech.sdk4.internal.service.ServiceError;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
@@ -41,7 +41,7 @@ public abstract class PurchaseActivationResult {
                 PurchaseFailureActivationResult purchaseFailureActivationResult = (PurchaseFailureActivationResult) obj;
                 return getNeedsRefresh() == purchaseFailureActivationResult.getNeedsRefresh() && this.temporaryAccessGranted == purchaseFailureActivationResult.temporaryAccessGranted && !(Intrinsics.areEqual((Object) this.errors, (Object) purchaseFailureActivationResult.errors) ^ true);
             }
-            throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.purchase.PurchaseActivationResult.PurchaseFailureActivationResult");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.purchase.PurchaseActivationResult.PurchaseFailureActivationResult");
         }
 
         public final List<ServiceError> getErrors() {
@@ -96,7 +96,7 @@ public abstract class PurchaseActivationResult {
                 PurchaseSuccessActivationResult purchaseSuccessActivationResult = (PurchaseSuccessActivationResult) obj;
                 return getNeedsRefresh() == purchaseSuccessActivationResult.getNeedsRefresh() && !(Intrinsics.areEqual((Object) this.invalid, (Object) purchaseSuccessActivationResult.invalid) ^ true) && !(Intrinsics.areEqual((Object) this.purchases, (Object) purchaseSuccessActivationResult.purchases) ^ true);
             }
-            throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.purchase.PurchaseActivationResult.PurchaseSuccessActivationResult");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.purchase.PurchaseActivationResult.PurchaseSuccessActivationResult");
         }
 
         public final List<ServiceError> getInvalid() {

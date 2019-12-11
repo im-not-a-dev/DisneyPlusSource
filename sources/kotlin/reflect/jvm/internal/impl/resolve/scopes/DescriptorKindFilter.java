@@ -5,7 +5,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 
 /* compiled from: MemberScope.kt */
@@ -210,7 +210,7 @@ public final class DescriptorKindFilter {
                     arrayList5.add(obj);
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type kotlin.Int");
+                throw new TypeCastException("null cannot be cast to non-null type kotlin.Int");
             }
         }
         DEBUG_MASK_BIT_NAMES = C13199w.m40606q(arrayList5);

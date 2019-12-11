@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import kotlin.C12907r;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import p163g.p500m.p501a.C11724g;
@@ -566,7 +566,7 @@ public final class RemoteSeriesDetailDataSource implements C6037a {
                     if (gVar != null) {
                         arrayList.add((DmcEpisode) gVar);
                     } else {
-                        throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.assets.DmcEpisode");
+                        throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.core.content.assets.DmcEpisode");
                     }
                 }
                 return SeriesBundleEpisodes.m19341a(a, arrayList, null, 2, null);

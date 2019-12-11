@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p382u0.p388r;
 
 import android.text.Layout.Alignment;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.u0.r.e */
 /* compiled from: TtmlStyle */
@@ -51,28 +51,28 @@ final class C9374e {
 
     /* renamed from: a */
     public C9374e mo24203a(boolean z) {
-        C9537e.m29301b(this.f21598m == null);
+        Assertions.checkState(this.f21598m == null);
         this.f21593h = z ? 1 : 0;
         return this;
     }
 
     /* renamed from: b */
     public C9374e mo24207b(boolean z) {
-        C9537e.m29301b(this.f21598m == null);
+        Assertions.checkState(this.f21598m == null);
         this.f21594i = z ? 1 : 0;
         return this;
     }
 
     /* renamed from: c */
     public C9374e mo24209c(boolean z) {
-        C9537e.m29301b(this.f21598m == null);
+        Assertions.checkState(this.f21598m == null);
         this.f21591f = z ? 1 : 0;
         return this;
     }
 
     /* renamed from: d */
     public C9374e mo24212d(boolean z) {
-        C9537e.m29301b(this.f21598m == null);
+        Assertions.checkState(this.f21598m == null);
         this.f21592g = z ? 1 : 0;
         return this;
     }
@@ -127,7 +127,7 @@ final class C9374e {
 
     /* renamed from: a */
     public C9374e mo24202a(String str) {
-        C9537e.m29301b(this.f21598m == null);
+        Assertions.checkState(this.f21598m == null);
         this.f21586a = str;
         return this;
     }
@@ -166,7 +166,7 @@ final class C9374e {
 
     /* renamed from: b */
     public C9374e mo24205b(int i) {
-        C9537e.m29301b(this.f21598m == null);
+        Assertions.checkState(this.f21598m == null);
         this.f21587b = i;
         this.f21588c = true;
         return this;

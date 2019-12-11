@@ -14,7 +14,7 @@ import com.google.android.exoplayer2.p361p0.C8844o.C8846b;
 import com.google.android.exoplayer2.p361p0.C8844o.C8847c;
 import com.google.android.exoplayer2.p361p0.C8844o.C8848d;
 import com.google.android.exoplayer2.p361p0.C8851q.C8852a;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
 import java.nio.ByteBuffer;
@@ -336,7 +336,7 @@ public final class C8856u implements C8844o {
         private int m25794a() {
             if (this.f18946a) {
                 int minBufferSize = AudioTrack.getMinBufferSize(this.f18950e, this.f18951f, this.f18952g);
-                C9537e.m29301b(minBufferSize != -2);
+                Assertions.checkState(minBufferSize != -2);
                 return Util.m29382a(minBufferSize * 4, ((int) mo23167a(250000)) * this.f18949d, (int) Math.max((long) minBufferSize, mo23167a(750000) * ((long) this.f18949d)));
             }
             int b = C8856u.m25757c(this.f18952g);
@@ -733,7 +733,7 @@ public final class C8856u implements C8844o {
     private void m25759c(long j) throws C8846b {
         this.f18924h.block();
         C8860d dVar = this.f18930n;
-        C9537e.m29296a(dVar);
+        Assertions.checkNotNull(dVar);
         this.f18931o = dVar.mo23168a(this.f18915Q, this.f18932p, this.f18913O);
         int audioSessionId = this.f18931o.getAudioSessionId();
         if (f18897S && Util.SDK_INT < 21) {
@@ -814,7 +814,7 @@ public final class C8856u implements C8844o {
 
     public C8856u(C8834j jVar, C8859c cVar, boolean z) {
         this.f18917a = jVar;
-        C9537e.m29296a(cVar);
+        Assertions.checkNotNull(cVar);
         this.f18918b = cVar;
         this.f18919c = z;
         this.f18924h = new ConditionVariable(true);
@@ -845,7 +845,7 @@ public final class C8856u implements C8844o {
             boolean z = true;
             int i = 0;
             if (byteBuffer2 != null) {
-                C9537e.m29299a(byteBuffer2 == byteBuffer);
+                Assertions.m29299a(byteBuffer2 == byteBuffer);
             } else {
                 this.f18906H = byteBuffer;
                 if (Util.SDK_INT < 21) {
@@ -874,7 +874,7 @@ public final class C8856u implements C8844o {
                 if (j == -9223372036854775807L) {
                     z = false;
                 }
-                C9537e.m29301b(z);
+                Assertions.checkState(z);
                 i = m25747a(this.f18931o, byteBuffer, remaining2, j);
             } else {
                 i = m25746a(this.f18931o, byteBuffer, remaining2);
@@ -1073,7 +1073,7 @@ public final class C8856u implements C8844o {
         ByteBuffer byteBuffer2 = byteBuffer;
         long j2 = j;
         ByteBuffer byteBuffer3 = this.f18905G;
-        C9537e.m29299a(byteBuffer3 == null || byteBuffer2 == byteBuffer3);
+        Assertions.m29299a(byteBuffer3 == null || byteBuffer2 == byteBuffer3);
         if (this.f18929m != null) {
             if (!m25764g()) {
                 return false;
@@ -1233,7 +1233,7 @@ public final class C8856u implements C8844o {
 
     /* renamed from: a */
     public void mo23110a(int i) {
-        C9537e.m29301b(Util.SDK_INT >= 21);
+        Assertions.checkState(Util.SDK_INT >= 21);
         if (!this.f18915Q || this.f18913O != i) {
             this.f18915Q = true;
             this.f18913O = i;

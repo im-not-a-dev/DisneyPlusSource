@@ -8,7 +8,7 @@ import java.lang.reflect.Constructor;
 import kotlin.C12900n;
 import kotlin.C12900n.C12901a;
 import kotlin.C12903o;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 
 /* renamed from: kotlinx.coroutines.android.c */
@@ -43,7 +43,7 @@ public final class C13216c {
                     if (invoke != null) {
                         return (Handler) invoke;
                     }
-                    throw new C13142s("null cannot be cast to non-null type android.os.Handler");
+                    throw new TypeCastException("null cannot be cast to non-null type android.os.Handler");
                 }
                 try {
                     Constructor declaredConstructor = Handler.class.getDeclaredConstructor(new Class[]{Looper.class, Callback.class, Boolean.TYPE});

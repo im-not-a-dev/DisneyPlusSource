@@ -9,7 +9,7 @@ import com.bamtech.sdk4.internal.session.InternalSessionState.Failed;
 import com.bamtech.sdk4.internal.session.InternalSessionState.Initializing;
 import com.bamtech.sdk4.internal.session.InternalSessionState.LoggedIn;
 import com.bamtech.sdk4.internal.session.InternalSessionState.LoggedOut;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
@@ -29,13 +29,13 @@ public final class SessionStateExtensionsKt {
                 if (obj != null) {
                     return (InternalSessionState) obj;
                 }
-                throw new C13142s(str3);
+                throw new TypeCastException(str3);
             } else if (Intrinsics.areEqual((Object) str2, (Object) cls2.getSimpleName())) {
                 Object obj2 = DefaultImpls.get$default(storage, "SESSION_STATE", C12895y.m40230a((Class) cls2), null, 4, null);
                 if (obj2 != null) {
                     return (InternalSessionState) obj2;
                 }
-                throw new C13142s(str3);
+                throw new TypeCastException(str3);
             } else if (!Intrinsics.areEqual((Object) str2, (Object) AuthenticationExpired.class.getSimpleName())) {
                 return new Initializing();
             } else {
@@ -43,7 +43,7 @@ public final class SessionStateExtensionsKt {
                 if (obj3 != null) {
                     return (InternalSessionState) obj3;
                 }
-                throw new C13142s(str3);
+                throw new TypeCastException(str3);
             }
         } catch (Throwable unused) {
             LogDispatcher.DefaultImpls.d$default(serviceTransaction, storage, "get session state failed", false, 4, null);

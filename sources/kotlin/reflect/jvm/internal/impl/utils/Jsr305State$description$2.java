@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.utils;
 
 import java.util.ArrayList;
 import java.util.Map.Entry;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.C12881k;
 
@@ -37,6 +37,6 @@ final class Jsr305State$description$2 extends C12881k implements Function0<Strin
         if (array != null) {
             return (String[]) array;
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 }

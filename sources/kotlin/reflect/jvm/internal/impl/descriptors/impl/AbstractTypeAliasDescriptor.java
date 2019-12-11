@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -140,6 +140,6 @@ public abstract class AbstractTypeAliasDescriptor extends DeclarationDescriptorN
         if (original != null) {
             return (TypeAliasDescriptor) original;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.TypeAliasDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.TypeAliasDescriptor");
     }
 }

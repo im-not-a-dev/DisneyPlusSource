@@ -8,7 +8,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.SparseArray;
 import com.google.android.exoplayer2.p393v0.C9532c0;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9542g;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9557m;
@@ -560,7 +560,7 @@ public final class C9510p implements BandwidthMeter, TransferListener {
 
     public synchronized void onTransferEnd(DataSource dataSource, DataSpec dataSpec, boolean z) {
         if (z) {
-            C9537e.m29301b(this.f22164f > 0);
+            Assertions.checkState(this.f22164f > 0);
             long a = this.f22163e.mo24605a();
             int i = (int) (a - this.f22165g);
             long j = (long) i;

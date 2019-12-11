@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.upstream.C9442a0.C9447e;
 import java.io.Closeable;
@@ -45,7 +45,7 @@ public final class C9455c0<T> implements C9447e {
         C9455c0 c0Var = new C9455c0(dataSource, uri, i, aVar);
         c0Var.load();
         T d = c0Var.mo24473d();
-        C9537e.m29296a(d);
+        Assertions.checkNotNull(d);
         return d;
     }
 
@@ -79,7 +79,7 @@ public final class C9455c0<T> implements C9447e {
         try {
             nVar.mo24570a();
             Uri uri = this.f21977c.getUri();
-            C9537e.m29296a(uri);
+            Assertions.checkNotNull(uri);
             this.f21979e = this.f21978d.mo23036a(uri, nVar);
         } finally {
             Util.m29406a((Closeable) nVar);
@@ -98,7 +98,7 @@ public final class C9455c0<T> implements C9447e {
         C9455c0 c0Var = new C9455c0(dataSource, dataSpec, i, aVar);
         c0Var.load();
         T d = c0Var.mo24473d();
-        C9537e.m29296a(d);
+        Assertions.checkNotNull(d);
         return d;
     }
 }

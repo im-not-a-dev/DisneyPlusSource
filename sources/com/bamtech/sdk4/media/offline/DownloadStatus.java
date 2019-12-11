@@ -1,6 +1,6 @@
 package com.bamtech.sdk4.media.offline;
 
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.C12895y;
@@ -830,7 +830,7 @@ public abstract class DownloadStatus {
                     z = false;
                 }
             } else {
-                throw new C13142s("null cannot be cast to non-null type com.bamtech.sdk4.media.offline.DownloadProgress");
+                throw new TypeCastException("null cannot be cast to non-null type com.bamtech.sdk4.media.offline.DownloadProgress");
             }
         }
         return z;

@@ -9,7 +9,7 @@ import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import com.google.android.exoplayer2.p393v0.C9572w;
@@ -280,7 +280,7 @@ public final class C9036j implements C8912g {
             boolean z3 = z && this.f19902j > 0;
             if (!z3 || this.f19894b.mo23446c() != -9223372036854775807L || z2) {
                 C8914i iVar = this.f19899g;
-                C9537e.m29296a(iVar);
+                Assertions.checkNotNull(iVar);
                 C8914i iVar2 = iVar;
                 if (!z3 || this.f19894b.mo23446c() == -9223372036854775807L) {
                     iVar2.mo23313a(new C8922b(-9223372036854775807L));

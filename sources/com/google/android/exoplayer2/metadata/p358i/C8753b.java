@@ -5,7 +5,7 @@ import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.C8738a;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 
 /* renamed from: com.google.android.exoplayer2.metadata.i.b */
@@ -47,7 +47,7 @@ public final class C8753b implements C8737b {
     }
 
     public C8753b(int i, String str, String str2, String str3, boolean z, int i2) {
-        C9537e.m29299a(i2 == -1 || i2 > 0);
+        Assertions.m29299a(i2 == -1 || i2 > 0);
         this.f18594c = i;
         this.f18589U = str;
         this.f18590V = str2;

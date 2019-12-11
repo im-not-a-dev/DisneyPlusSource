@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p366s0.p369t;
 
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.io.IOException;
 import java.util.ArrayDeque;
 
@@ -92,7 +92,7 @@ final class C8936b implements C8940d {
 
     /* renamed from: a */
     public boolean mo23331a(C8913h hVar) throws IOException, InterruptedException {
-        C9537e.m29296a(this.f19230d);
+        Assertions.checkNotNull(this.f19230d);
         while (true) {
             if (this.f19228b.isEmpty() || hVar.getPosition() < ((C8938b) this.f19228b.peek()).f19235b) {
                 if (this.f19231e == 0) {

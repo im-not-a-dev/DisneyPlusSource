@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.p366s0.C8909d;
 import com.google.android.exoplayer2.p366s0.C8912g;
 import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8919n;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.source.p379m0.C9213e.C9215b;
 import com.google.android.exoplayer2.upstream.DataSource;
@@ -86,7 +86,7 @@ public class C9221i extends C9209a {
             if (i != 1) {
                 z = true;
             }
-            C9537e.m29301b(z);
+            Assertions.checkState(z);
             this.f20913q = dVar.getPosition() - this.f20856a.f21941d;
             Util.m29405a((DataSource) this.f20863h);
             this.f20915s = true;

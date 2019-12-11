@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.upstream;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -64,7 +64,7 @@ public final class C9508n extends InputStream {
     }
 
     public int read(byte[] bArr, int i, int i2) throws IOException {
-        C9537e.m29301b(!this.f22143X);
+        Assertions.checkState(!this.f22143X);
         m29213b();
         int read = this.f22145c.read(bArr, i, i2);
         if (read == -1) {

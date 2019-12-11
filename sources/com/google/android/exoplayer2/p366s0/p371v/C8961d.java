@@ -8,7 +8,7 @@ import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
 import com.google.android.exoplayer2.p361p0.C8825g;
 import com.google.android.exoplayer2.p361p0.C8828h;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.C9544h;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.Log;
@@ -97,7 +97,7 @@ final class C8961d {
             if (wVar.mo24698i() != 1) {
                 z2 = false;
             }
-            C9537e.m29302b(z2, "first_chunk must be 1");
+            Assertions.m29302b(z2, "first_chunk must be 1");
             this.f19514b = -1;
         }
 
@@ -489,7 +489,7 @@ final class C8961d {
         while (c - i < i2) {
             wVar.mo24693e(c);
             int i3 = wVar.mo24698i();
-            C9537e.m29300a(i3 > 0, (Object) "childAtomSize should be positive");
+            Assertions.m29300a(i3 > 0, (Object) "childAtomSize should be positive");
             if (wVar.mo24698i() == C8958c.f19466j0) {
                 Pair<Integer, C8984n> b = m26377b(wVar, c, i3);
                 if (b != null) {
@@ -1263,13 +1263,13 @@ final class C8961d {
             return null;
         }
         boolean z = true;
-        C9537e.m29300a(obj != null, (Object) "frma atom is mandatory");
-        C9537e.m29300a(i4 != -1, (Object) "schi atom is mandatory");
+        Assertions.m29300a(obj != null, (Object) "frma atom is mandatory");
+        Assertions.m29300a(i4 != -1, (Object) "schi atom is mandatory");
         C8984n a = m26370a(wVar, i4, i5, str);
         if (a == null) {
             z = false;
         }
-        C9537e.m29300a(z, (Object) "tenc atom is mandatory");
+        Assertions.m29300a(z, (Object) "tenc atom is mandatory");
         return Pair.create(obj, a);
     }
 
@@ -1315,7 +1315,7 @@ final class C8961d {
         for (int i4 = 0; i4 < i3; i4++) {
             int c = wVar.mo24688c();
             int i5 = wVar.mo24698i();
-            C9537e.m29300a(i5 > 0, (Object) "childAtomSize should be positive");
+            Assertions.m29300a(i5 > 0, (Object) "childAtomSize should be positive");
             int i6 = wVar.mo24698i();
             if (i6 == C8958c.f19447c || i6 == C8958c.f19450d || i6 == C8958c.f19474n0 || i6 == C8958c.f19496y0 || i6 == C8958c.f19456f || i6 == C8958c.f19459g || i6 == C8958c.f19485t || i6 == C8958c.f19463i || i6 == C8958c.f19465j || i6 == C8958c.f19469l || i6 == C8958c.f19473n || i6 == C8958c.f19475o || i6 == C8958c.f19477p || i6 == C8958c.f19479q) {
                 m26372a(wVar, i6, c, i5, i, i2, drmInitData, cVar, i4);
@@ -1403,10 +1403,10 @@ final class C8961d {
             if (i11 == 0 && wVar.mo24688c() - i7 == i8) {
                 break;
             }
-            C9537e.m29300a(i11 > 0, (Object) "childAtomSize should be positive");
+            Assertions.m29300a(i11 > 0, (Object) "childAtomSize should be positive");
             int i12 = wVar.mo24698i();
             if (i12 == C8958c.f19453e) {
-                C9537e.m29301b(str == null);
+                Assertions.checkState(str == null);
                 wVar2.mo24693e(c2 + 8);
                 C9585h b = C9585h.m29615b(wVar);
                 list = b.f22370a;
@@ -1416,7 +1416,7 @@ final class C8961d {
                 }
                 str = "video/avc";
             } else if (i12 == C8958c.f19461h) {
-                C9537e.m29301b(str == null);
+                Assertions.checkState(str == null);
                 wVar2.mo24693e(c2 + 8);
                 C9592l a = C9592l.m29625a(wVar);
                 list = a.f22391a;
@@ -1429,16 +1429,16 @@ final class C8961d {
                     str = "video/dolby-vision";
                 }
             } else if (i12 == C8958c.f19467k) {
-                C9537e.m29301b(str == null);
+                Assertions.checkState(str == null);
                 str = i9 == C8958c.f19463i ? "video/x-vnd.on2.vp8" : "video/x-vnd.on2.vp9";
             } else if (i12 == C8958c.f19471m) {
-                C9537e.m29301b(str == null);
+                Assertions.checkState(str == null);
                 str = "video/av01";
             } else if (i12 == C8958c.f19487u) {
-                C9537e.m29301b(str == null);
+                Assertions.checkState(str == null);
                 str = "video/3gpp";
             } else if (i12 == C8958c.f19436X) {
-                C9537e.m29301b(str == null);
+                Assertions.checkState(str == null);
                 Pair a3 = m26366a(wVar2, c2);
                 str = (String) a3.first;
                 list = Collections.singletonList(a3.second);
@@ -1570,7 +1570,7 @@ final class C8961d {
         while (i16 - i12 < i13) {
             wVar2.mo24693e(i16);
             int i18 = wVar.mo24698i();
-            C9537e.m29300a(i18 > 0, (Object) "childAtomSize should be positive");
+            Assertions.m29300a(i18 > 0, (Object) "childAtomSize should be positive");
             int i19 = wVar.mo24698i();
             if (i19 == C8958c.f19436X || (z && i19 == C8958c.f19495y)) {
                 i10 = i18;
@@ -1688,7 +1688,7 @@ final class C8961d {
         while (c - i < i2) {
             wVar.mo24693e(c);
             int i3 = wVar.mo24698i();
-            C9537e.m29300a(i3 > 0, (Object) "childAtomSize should be positive");
+            Assertions.m29300a(i3 > 0, (Object) "childAtomSize should be positive");
             if (wVar.mo24698i() == C8958c.f19436X) {
                 return c;
             }

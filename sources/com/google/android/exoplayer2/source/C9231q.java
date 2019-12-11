@@ -4,7 +4,7 @@ import com.google.android.exoplayer2.C8679b0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Util;
 import com.google.android.exoplayer2.p393v0.C9566t;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
@@ -141,12 +141,12 @@ public final class C9231q implements C9072a0, C9073a {
             return -9223372036854775807L;
         }
         boolean z = true;
-        C9537e.m29301b(e2 >= this.f20936X);
+        Assertions.checkState(e2 >= this.f20936X);
         long j2 = this.f20937Y;
         if (j2 != Long.MIN_VALUE && e2 > j2) {
             z = false;
         }
-        C9537e.m29301b(z);
+        Assertions.checkState(z);
         return e2;
     }
 
@@ -277,7 +277,7 @@ public final class C9231q implements C9072a0, C9073a {
         L_0x0067:
             r4 = 1
         L_0x0068:
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r4)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r4)
         L_0x006b:
             int r4 = r1.length
             if (r10 >= r4) goto L_0x0099
@@ -356,7 +356,7 @@ public final class C9231q implements C9072a0, C9073a {
         L_0x0034:
             r2 = 1
         L_0x0035:
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r2)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r2)
             return r0
         */
         throw new UnsupportedOperationException("Method not decompiled: com.google.android.exoplayer2.source.C9231q.mo23538a(long):long");

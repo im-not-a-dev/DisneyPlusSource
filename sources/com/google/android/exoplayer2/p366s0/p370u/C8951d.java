@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0.p370u;
 
 import android.util.Pair;
-import com.google.android.exoplayer2.C8883r;
+import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.metadata.p359j.C8776k;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
@@ -23,7 +23,7 @@ final class C8951d implements C8953a {
     private C8951d(long[] jArr, long[] jArr2) {
         this.f19356a = jArr;
         this.f19357b = jArr2;
-        this.f19358c = C8883r.msToUs(jArr2[jArr2.length - 1]);
+        this.f19358c = C.msToUs(jArr2[jArr2.length - 1]);
     }
 
     /* renamed from: a */
@@ -52,8 +52,8 @@ final class C8951d implements C8953a {
 
     /* renamed from: b */
     public C8921a mo23277b(long j) {
-        Pair a = m26316a(C8883r.usToMs(Util.m29431b(j, 0, this.f19358c)), this.f19357b, this.f19356a);
-        return new C8921a(new C8923p(C8883r.msToUs(((Long) a.first).longValue()), ((Long) a.second).longValue()));
+        Pair a = m26316a(C.usToMs(Util.m29431b(j, 0, this.f19358c)), this.f19357b, this.f19356a);
+        return new C8921a(new C8923p(C.msToUs(((Long) a.first).longValue()), ((Long) a.second).longValue()));
     }
 
     /* renamed from: c */
@@ -68,7 +68,7 @@ final class C8951d implements C8953a {
 
     /* renamed from: a */
     public long mo23360a(long j) {
-        return C8883r.msToUs(((Long) m26316a(j, this.f19356a, this.f19357b).second).longValue());
+        return C.msToUs(((Long) m26316a(j, this.f19356a, this.f19357b).second).longValue());
     }
 
     /* renamed from: a */

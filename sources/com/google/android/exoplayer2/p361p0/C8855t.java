@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p361p0;
 
 import com.google.android.exoplayer2.p361p0.C8840m.C8841a;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
@@ -76,7 +76,7 @@ final class C8855t extends C8854s {
     /* renamed from: a */
     public void mo23058a(ByteBuffer byteBuffer) {
         int[] iArr = this.f18896j;
-        C9537e.m29296a(iArr);
+        Assertions.checkNotNull(iArr);
         int[] iArr2 = iArr;
         int position = byteBuffer.position();
         int limit = byteBuffer.limit();

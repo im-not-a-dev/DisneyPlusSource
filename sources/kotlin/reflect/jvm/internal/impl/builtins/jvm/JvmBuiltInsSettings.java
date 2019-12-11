@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -342,7 +342,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             Intrinsics.checkReturnedValueIsNotNull(dfs, "DFS.dfs<ClassDescriptor,…CONSIDERED\n            })");
             return (JDKMemberStatus) dfs;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
     }
 
     private final Annotations getNotConsideredDeprecation() {
@@ -372,7 +372,7 @@ public class JvmBuiltInsSettings implements AdditionalClassPartsProvider, Platfo
             Intrinsics.checkReturnedValueIsNotNull((Object) ifAny, "DFS.ifAny<CallableMember…lassDescriptor)\n        }");
             return ifAny.booleanValue();
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
     }
 
     private final boolean isTrivialCopyConstructorFor(ConstructorDescriptor constructorDescriptor, ClassDescriptor classDescriptor) {

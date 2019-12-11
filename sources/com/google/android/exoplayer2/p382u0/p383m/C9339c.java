@@ -9,7 +9,7 @@ import android.text.style.UnderlineSpan;
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9325e;
 import com.google.android.exoplayer2.p382u0.C9330i;
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 import com.google.android.exoplayer2.p393v0.Log;
 import com.google.android.exoplayer2.p393v0.C9571v;
 import com.google.android.exoplayer2.p393v0.C9572w;
@@ -526,10 +526,10 @@ public final class C9339c extends C9343e {
             /*
                 r0 = 4
                 r1 = 0
-                com.google.android.exoplayer2.p393v0.C9537e.m29295a(r4, r1, r0)
-                com.google.android.exoplayer2.p393v0.C9537e.m29295a(r5, r1, r0)
-                com.google.android.exoplayer2.p393v0.C9537e.m29295a(r6, r1, r0)
-                com.google.android.exoplayer2.p393v0.C9537e.m29295a(r7, r1, r0)
+                com.google.android.exoplayer2.p393v0.Assertions.m29295a(r4, r1, r0)
+                com.google.android.exoplayer2.p393v0.Assertions.m29295a(r5, r1, r0)
+                com.google.android.exoplayer2.p393v0.Assertions.m29295a(r6, r1, r0)
+                com.google.android.exoplayer2.p393v0.Assertions.m29295a(r7, r1, r0)
                 r0 = 1
                 r2 = 255(0xff, float:3.57E-43)
                 if (r7 == 0) goto L_0x001b
@@ -1175,7 +1175,7 @@ public final class C9339c extends C9343e {
                     if (i == 2) {
                         z = true;
                     }
-                    C9537e.m29299a(z);
+                    Assertions.m29299a(z);
                     C9341b bVar2 = this.f21421n;
                     if (bVar2 == null) {
                         Log.m29497b("Cea708Decoder", "Encountered DTVCC_PACKET_DATA before DTVCC_PACKET_START");

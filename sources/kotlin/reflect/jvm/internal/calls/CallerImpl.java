@@ -6,7 +6,7 @@ import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.internal.C12860a0;
@@ -38,7 +38,7 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
             } else {
                 obj2 = C13171j.m40340a((Object[]) genericParameterTypes, 1, genericParameterTypes.length - 1);
                 if (obj2 == null) {
-                    throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
                 }
             }
             super(constructor, declaringClass, null, (Type[]) obj2, null);
@@ -70,7 +70,7 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
             } else {
                 obj = C13171j.m40340a((Object[]) genericParameterTypes, 0, genericParameterTypes.length - 1);
                 if (obj == null) {
-                    throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                    throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
                 }
             }
             super(constructor, declaringClass, null, (Type[]) obj, null);
@@ -357,7 +357,7 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
                 } else {
                     obj2 = C13171j.m40340a((Object[]) genericParameterTypes, 1, genericParameterTypes.length);
                     if (obj2 == null) {
-                        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
                     }
                 }
                 super(method, false, (Type[]) obj2, null);
@@ -389,7 +389,7 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
                 } else {
                     objArr2 = C13171j.m40340a(objArr, 1, objArr.length);
                     if (objArr2 == null) {
-                        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
                     }
                 }
                 return callMethod(obj, objArr2);
@@ -412,7 +412,7 @@ public abstract class CallerImpl<M extends Member> implements Caller<M> {
                 } else {
                     objArr2 = C13171j.m40340a(objArr, 1, objArr.length);
                     if (objArr2 == null) {
-                        throw new C13142s("null cannot be cast to non-null type kotlin.Array<T>");
+                        throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
                     }
                 }
                 return callMethod(null, objArr2);

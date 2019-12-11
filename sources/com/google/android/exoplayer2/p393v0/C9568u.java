@@ -217,7 +217,7 @@ public final class C9568u {
         L_0x0008:
             r3 = 0
         L_0x0009:
-            com.google.android.exoplayer2.p393v0.C9537e.m29301b(r3)
+            com.google.android.exoplayer2.p393v0.Assertions.checkState(r3)
             if (r0 != 0) goto L_0x000f
             return r9
         L_0x000f:

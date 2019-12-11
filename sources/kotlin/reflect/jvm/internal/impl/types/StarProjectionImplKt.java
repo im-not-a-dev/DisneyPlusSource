@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.types;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptorWithTypeParameters;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -34,6 +34,6 @@ public final class StarProjectionImplKt {
             Intrinsics.checkReturnedValueIsNotNull((Object) defaultBound, "builtIns.defaultBound");
             return defaultBound;
         }
-        throw new C13142s("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassifierDescriptorWithTypeParameters");
+        throw new TypeCastException("null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassifierDescriptorWithTypeParameters");
     }
 }

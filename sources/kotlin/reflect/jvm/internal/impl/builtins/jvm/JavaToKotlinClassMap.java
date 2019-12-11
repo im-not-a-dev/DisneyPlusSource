@@ -9,7 +9,7 @@ import java.util.ListIterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13147x;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.reflect.jvm.internal.impl.builtins.CompanionObjectMapping;
@@ -443,7 +443,7 @@ public final class JavaToKotlinClassMap {
         if (hashMap != null) {
             return hashMap.containsKey(fqNameUnsafe);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.collections.Map<K, *>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.Map<K, *>");
     }
 
     public final boolean isReadOnly(FqNameUnsafe fqNameUnsafe) {
@@ -451,7 +451,7 @@ public final class JavaToKotlinClassMap {
         if (hashMap != null) {
             return hashMap.containsKey(fqNameUnsafe);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.collections.Map<K, *>");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.collections.Map<K, *>");
     }
 
     public final ClassId mapJavaToKotlin(FqName fqName) {

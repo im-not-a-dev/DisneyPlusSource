@@ -8,7 +8,7 @@ import com.bamtechmedia.dominguez.profiles.p258db.C6639c;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.C13145v;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -109,7 +109,7 @@ public final class C6677i1 implements C6667g1 {
             if (eVar != null) {
                 return this.f15039c.f15032b.mo19302a((C6669h) eVar).mo30045a(f0Var);
             }
-            throw new C13142s("null cannot be cast to non-null type com.bamtechmedia.dominguez.profiles.AvatarImpl");
+            throw new TypeCastException("null cannot be cast to non-null type com.bamtechmedia.dominguez.profiles.AvatarImpl");
         }
     }
 

@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.p393v0.C9537e;
+import com.google.android.exoplayer2.p393v0.Assertions;
 
 public final class PlaybackParameters {
 
@@ -53,11 +53,11 @@ public final class PlaybackParameters {
 
     public PlaybackParameters(float f, float f2, boolean z) {
         boolean z2 = true;
-        C9537e.m29299a(f > 0.0f);
+        Assertions.m29299a(f > 0.0f);
         if (f2 <= 0.0f) {
             z2 = false;
         }
-        C9537e.m29299a(z2);
+        Assertions.m29299a(z2);
         this.f18372a = f;
         this.f18373b = f2;
         this.f18374c = z;

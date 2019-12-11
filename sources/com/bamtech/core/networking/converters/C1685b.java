@@ -1,7 +1,7 @@
 package com.bamtech.core.networking.converters;
 
 import java.nio.charset.Charset;
-import kotlin.C13142s;
+import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.p588j0.C12801c;
 import okhttp3.C14258u;
@@ -25,14 +25,14 @@ public final class C1685b implements Converter {
             Intrinsics.checkReturnedValueIsNotNull(bytes, "(this as java.lang.String).getBytes(charset)");
             return bytes;
         }
-        throw new C13142s("null cannot be cast to non-null type java.lang.String");
+        throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
     }
 
     public <T> String serialize(T t) {
         if (t != null) {
             return new String((byte[]) t, C12801c.f29474a);
         }
-        throw new C13142s("null cannot be cast to non-null type kotlin.ByteArray");
+        throw new TypeCastException("null cannot be cast to non-null type kotlin.ByteArray");
     }
 
     /* renamed from: a */
