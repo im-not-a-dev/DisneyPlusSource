@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="28sp" android:textStyle="bold" android:textColor="@color/vader_white" android:gravity="center" android:id="@+id/options_title" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

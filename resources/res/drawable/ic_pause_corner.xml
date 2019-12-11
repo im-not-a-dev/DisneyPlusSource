@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="48dp" android:width="48dp" android:viewportWidth="48" android:viewportHeight="48">
+    <group android:name="pause_focused_group" android:pivotX="24" android:pivotY="24">
+        <path android:name="pause_focused" android:fillColor="#fff" android:pathData="M 15 6 C 12.239 6 10 8.238 10 11.006 L 10 36.994 C 10 38.32 10.527 39.593 11.464 40.532 C 12.401 41.47 13.674 41.998 15 42 C 17.761 42 20 39.762 20 36.994 L 20 11.006 C 20 9.68 19.473 8.407 18.536 7.468 C 17.599 6.53 16.326 6.002 15 6 Z M 33 6 C 30.239 6 28 8.238 28 11.006 L 28 36.994 C 28 38.32 28.527 39.593 29.464 40.532 C 30.401 41.47 31.674 41.998 33 42 C 35.761 42 38 39.762 38 36.994 L 38 11.006 C 38 9.68 37.473 8.407 36.536 7.468 C 35.599 6.53 34.326 6.002 33 6 Z" android:strokeAlpha="0" android:fillAlpha="1" android:fillType="1"/>
+    </group>
+    <group android:name="play_focused_group" android:pivotX="24" android:pivotY="24">
+        <path android:name="play_focused" android:fillColor="#fff" android:pathData="M 37.97 25.74 L 14.985 38.745 C 14.578 38.976 14.102 39.056 13.641 38.972 C 13.181 38.888 12.764 38.645 12.464 38.285 C 12.164 37.926 12 37.472 12 37.004 L 12 10.995 C 12 10.527 12.165 10.073 12.464 9.714 C 12.764 9.355 13.181 9.112 13.642 9.028 C 14.102 8.944 14.578 9.024 14.985 9.255 L 37.97 22.258 C 38.383 22.491 38.699 22.864 38.863 23.309 C 39.027 23.754 39.027 24.244 38.863 24.689 C 38.699 25.134 38.383 25.507 37.97 25.74 Z" android:strokeAlpha="0" android:fillAlpha="0"/>
+    </group>
+</vector>

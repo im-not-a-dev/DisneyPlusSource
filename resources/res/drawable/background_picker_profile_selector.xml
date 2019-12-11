@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_enabled="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/vader_primary"/>
+            <stroke android:width="3dp" android:color="@color/vader_white"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/vader_primary"/>
+        </shape>
+    </item>
+</selector>

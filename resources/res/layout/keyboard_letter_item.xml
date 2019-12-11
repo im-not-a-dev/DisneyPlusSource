@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:textAppearance="@style/Disney.TextAppearance.Keyboard" android:textColor="@drawable/keyboard_letter_text_selector" android:gravity="center" android:background="@drawable/keyboard_letter_bg_selector" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="40dp"/>

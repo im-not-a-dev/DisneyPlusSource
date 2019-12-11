@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/$avd_toggle_unselected_unselected_focus_watchlist__0">
+    <target android:name="group" android:animation="@drawable/$avd_toggle_unselected_unselected_focus_watchlist__1"/>
+    <target android:name="content" android:animation="@drawable/$avd_toggle_unselected_unselected_focus_watchlist__2"/>
+    <target android:name="icon" android:animation="@drawable/$avd_toggle_unselected_unselected_focus_watchlist__3"/>
+</animated-vector>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_grey8" android:gravity="center" android:background="@drawable/bg_downloads_hint" android:layout_width="301dp" android:layout_height="48dp" android:text="@string/downloads_hint" android:lineSpacingExtra="4sp"/>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/downloadsHintCaret" android:layout_width="16dp" android:layout_height="8dp" android:src="@drawable/bg_downloads_hint_caret" android:rotation="180"/>
+</merge>

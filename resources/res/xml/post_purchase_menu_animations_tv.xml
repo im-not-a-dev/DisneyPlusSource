@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <Transition android:id="@+id/transition_enter" app:constraintSetEnd="@+id/freeTrialEnd" app:constraintSetStart="@+id/freeTrialStart" app:duration="@integer/duration4">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0" app:framePosition="0" app:motionTarget="@+id/freeTrialBackground" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="1" app:framePosition="75" app:motionTarget="@+id/freeTrialBackground" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="25" app:motionTarget="@+id/textSuccessTitle" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="100" app:motionTarget="@+id/textSuccessTitle" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="25" app:motionTarget="@+id/textSuccessCopy" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="100" app:motionTarget="@+id/textSuccessCopy" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="25" app:motionTarget="@+id/textProfileCopy" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="100" app:motionTarget="@+id/textProfileCopy" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="25" app:motionTarget="@+id/startWatchingButton" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="100" app:motionTarget="@+id/startWatchingButton" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="25" app:motionTarget="@+id/setupProfilesButton" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="100" app:motionTarget="@+id/setupProfilesButton" app:transitionEasing="2"/>
+        </KeyFrameSet>
+    </Transition>
+    <Transition android:id="@+id/transition_exit" app:constraintSetEnd="@+id/freeTrialStart" app:constraintSetStart="@+id/freeTrialEnd" app:duration="@integer/duration3">
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1" app:framePosition="0" app:motionTarget="@+id/freeTrialBackground" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="0" app:framePosition="100" app:motionTarget="@+id/freeTrialBackground" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="0" app:motionTarget="@+id/textSuccessTitle" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="66" app:motionTarget="@+id/textSuccessTitle" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="0" app:motionTarget="@+id/textSuccessCopy" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="66" app:motionTarget="@+id/textSuccessCopy" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="0" app:motionTarget="@+id/textProfileCopy" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="66" app:motionTarget="@+id/textProfileCopy" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="0" app:motionTarget="@+id/startWatchingButton" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="66" app:motionTarget="@+id/startWatchingButton" app:transitionEasing="2"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1" android:translationY="-10dp" app:framePosition="0" app:motionTarget="@+id/setupProfilesButton" app:transitionEasing="2"/>
+            <KeyAttribute android:alpha="0" android:translationY="0dp" app:framePosition="66" app:motionTarget="@+id/setupProfilesButton" app:transitionEasing="2"/>
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@+id/freeTrialStart">
+        <Constraint android:id="@+id/freeTrialBackground" android:background="@drawable/postpurchase_overlay_tv" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0"/>
+        <Constraint android:textAppearance="@style/Disney.TextAppearance.H2" android:gravity="center_horizontal" android:id="@+id/textSuccessTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/success_title" android:alpha="0" android:translationY="0dp" app:layout_constraintBottom_toTopOf="@+id/textSuccessCopy" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+        <Constraint android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_white" android:gravity="center_horizontal" android:id="@+id/textSuccessCopy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/success_copy" android:alpha="0" android:translationY="0dp" app:layout_constraintBottom_toTopOf="@+id/textProfileCopy" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+        <Constraint android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_grey8" android:gravity="center_horizontal" android:id="@+id/textProfileCopy" android:layout_width="400dp" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/profile_copy" android:alpha="0" android:translationY="0dp" app:layout_constraintBottom_toTopOf="@+id/startWatchingButton" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+        <Constraint android:id="@+id/startWatchingButton" android:layout_width="316dp" android:layout_height="33dp" android:layout_marginBottom="@dimen/padding_small" android:text="@string/btn_start_watching" android:contentDescription="@string/a11y_purchasesuccess_startwatching" android:alpha="0" android:translationY="0dp" app:layout_constraintBottom_toTopOf="@+id/setupProfilesButton" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="@style/Disney.Button.Primary.Large"/>
+        <Constraint android:id="@+id/setupProfilesButton" android:layout_width="316dp" android:layout_height="33dp" android:layout_marginBottom="50dp" android:text="@string/btn_profiles" android:contentDescription="@string/a11y_purchasesuccess_setupprofiles" android:alpha="0" android:translationY="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="@style/Disney.Button.Secondary.Large"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/freeTrialEnd">
+        <Constraint android:id="@+id/freeTrialBackground" android:background="@drawable/postpurchase_overlay_tv" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="1"/>
+        <Constraint android:textAppearance="@style/Disney.TextAppearance.H2" android:gravity="center_horizontal" android:id="@+id/textSuccessTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/success_title" android:alpha="1" android:translationY="-10dp" app:layout_constraintBottom_toTopOf="@+id/textSuccessCopy" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+        <Constraint android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_white" android:gravity="center_horizontal" android:id="@+id/textSuccessCopy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/success_copy" android:alpha="1" android:translationY="-10dp" app:layout_constraintBottom_toTopOf="@+id/textProfileCopy" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+        <Constraint android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_grey8" android:gravity="center_horizontal" android:id="@+id/textProfileCopy" android:layout_width="400dp" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/profile_copy" android:alpha="1" android:translationY="-10dp" app:layout_constraintBottom_toTopOf="@+id/startWatchingButton" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+        <Constraint android:id="@+id/startWatchingButton" android:layout_width="316dp" android:layout_height="33dp" android:layout_marginBottom="@dimen/padding_small" android:text="@string/btn_start_watching" android:contentDescription="@string/a11y_purchasesuccess_startwatching" android:alpha="1" android:translationY="-10dp" app:layout_constraintBottom_toTopOf="@+id/setupProfilesButton" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="@style/Disney.Button.Primary.Large"/>
+        <Constraint android:id="@+id/setupProfilesButton" android:layout_width="316dp" android:layout_height="33dp" android:layout_marginBottom="50dp" android:text="@string/btn_profiles" android:contentDescription="@string/a11y_purchasesuccess_setupprofiles" android:alpha="0" android:translationY="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="@style/Disney.Button.Secondary.Large"/>
+    </ConstraintSet>
+</MotionScene>

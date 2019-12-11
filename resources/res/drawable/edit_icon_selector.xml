@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_selected="false" android:id="@+id/unselectedFocused" android:drawable="@drawable/ic_edit_vector"/>
+    <item android:state_selected="true" android:id="@+id/selectedFocused" android:drawable="@drawable/ic_edit_vector_selected"/>
+    <transition android:drawable="@drawable/edit_icon_animator" android:toId="@+id/selectedFocused" android:fromId="@+id/unselectedFocused" android:reversible="true"/>
+</animated-selector>

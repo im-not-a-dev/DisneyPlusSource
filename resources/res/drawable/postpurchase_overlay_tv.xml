@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="1080dp" android:width="1920dp" android:viewportWidth="1920" android:viewportHeight="1080">
+    <path android:fillColor="@drawable/$postpurchase_overlay_tv__0" android:pathData="M0,0h1920v1080H0z" android:fillType="1"/>
+</vector>

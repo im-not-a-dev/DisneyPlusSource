@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:paddingBottom="@dimen/padding_extra_large" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="@style/Disney.TextAppearance.H2" android:id="@+id/titleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/choose_profile_title" android:lineSpacingExtra="3sp"/>
+    <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:gravity="center" android:id="@+id/descriptionTextView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/set_up_profiles_copy" android:lineSpacingExtra="4sp" android:layout_marginStart="@dimen/padding_large" android:layout_marginEnd="@dimen/padding_large"/>
+</LinearLayout>

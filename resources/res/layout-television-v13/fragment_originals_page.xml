@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@+id/logoGuideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="128dp"/>
+    <FrameLayout android:id="@+id/originalsLogoImageViewLayout" android:layout_width="@dimen/match_constraints" android:layout_height="@dimen/match_constraints" app:layout_constraintBottom_toBottomOf="@+id/logoGuideline" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <include layout="@layout/include_originals_logo"/>
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/originalsRecyclerView" android:paddingBottom="@dimen/overscan_safe_vertical_screen_edge_margin" android:fadingEdge="horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0dp" android:layout_height="0dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/logoGuideline"/>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/originalsProgressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/CircularProgressbar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

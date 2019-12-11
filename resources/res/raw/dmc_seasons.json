@@ -1,0 +1,226 @@
+{
+    "DmcSeasons": [
+      {
+        "type": "DmcSeason",
+        "textExperienceId": "3102a5d03-9628-46d9-8ff8-c8103f1548971",
+        "seasonId": "3102a5d03-9628-46d9-8ff8-c8103f1548971",
+        "partnerSeasonId": "104d92f6-94c6-41034-8ba1-10580fc49e0101",
+        "seriesId": "cf10fbf106-1dbf-4ced-b3c8-7ea386e55208",
+        "contentId": "3102a5d03-9628-46d9-8ff8-c8103f1548971",
+        "contentSource": "dmgz",
+        "seasonNumber": 1,
+        "seasonSequenceNumber": 1,
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948011/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "policies": [],
+        "texts": [
+          {
+            "field": "title",
+            "type": "title",
+            "language": "en",
+            "content": "Big Buck Bunny Saga - S1",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          }
+        ]
+      },
+      {
+        "type": "DmcSeason",
+        "textExperienceId": "a3c8919d-e807-4c3a-95d6-b1710f8c100cc1",
+        "seasonId": "a3c8919d-e807-4c3a-95d6-b1710f8c100cc1",
+        "partnerSeasonId": "05e2a8ea-c10fd-4b10a-a4c4-58fda1036a3ea",
+        "seriesId": "cf10fbf106-1dbf-4ced-b3c8-7ea386e55208",
+        "contentId": "a3c8919d-e807-4c3a-95d6-b1710f8c100cc1",
+        "contentSource": "dmgz",
+        "seasonNumber": 2,
+        "seasonSequenceNumber": 2,
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948011/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "policies": [],
+        "texts": [
+          {
+            "field": "title",
+            "type": "title",
+            "language": "en",
+            "content": "Big Buck Bunny Saga - S2",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          }
+        ]
+      },
+      {
+        "type": "DmcSeason",
+        "textExperienceId": "9098075c-7f28-4564-b14c-12565fc40b47",
+        "seasonId": "9098075c-7f28-4564-b14c-12565fc40b47",
+        "partnerSeasonId": "a56f4f4f-aff4-4dbb-85a0-f13f27e90f7c",
+        "seriesId": "77f2d938-aada-479c-bdd1-da9e7e575d47",
+        "contentId": "9098075c-7f28-4564-b14c-12565fc40b47",
+        "contentSource": "dmgz",
+        "seasonNumber": 1,
+        "seasonSequenceNumber": 1,
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948114/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "mls_blk_123",
+            "duration": 3600,
+            "global": false
+          }
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "title",
+            "language": "en",
+            "content": "Caminandes : Llamigos",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          },
+          {
+            "field": "titles",
+            "type": "titleSort",
+            "language": "en",
+            "content": "Caminandes : Llamigos (title sort)",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          },
+          {
+            "field": "titles",
+            "type": "descriptionLong",
+            "language": "en",
+            "content": "Caminandes : Llamigos (descriptionLong)",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          },
+          {
+            "field": "titles",
+            "type": "descriptionShort",
+            "language": "en",
+            "content": "Caminandes : Llamigos (descriptionBrief)",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          }
+        ]
+      },
+      {
+        "type": "DmcSeason",
+        "textExperienceId": "361b85c0-ae77-45b2-8029-219ad4819554",
+        "seasonId": "361b85c0-ae77-45b2-8029-219ad4819554",
+        "partnerSeasonId": "9d5078ff-b3ac-441e-b6af-15b2469c7be8",
+        "seriesId": "77f2d938-aada-479c-bdd1-da9e7e575d47",
+        "contentId": "361b85c0-ae77-45b2-8029-219ad4819554",
+        "contentSource": "dmgz",
+        "seasonNumber": 2,
+        "seasonSequenceNumber": 2,
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948111/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "policies": [],
+        "texts": [
+          {
+            "field": "title",
+            "type": "title",
+            "language": "en",
+            "content": "Caminandes - S2",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          }
+        ]
+      },
+      {
+        "type": "DmcSeason",
+        "textExperienceId": "5c8c7e11-6b4a-4bac-96f4-0a6a58d57cd0",
+        "seasonId": "927d2716-3be0-4935-9478-2c99dc026cd0",
+        "partnerSeasonId": "2a9d1a8d-9431-4326-bc3e-506636206cb51",
+        "seriesId": "f0f385ea-28af-41b1-a92b-0e1fc1c1c1f1",
+        "contentId": "0444656a-0155-4506-b8fb-f30ec1cff937",
+        "contentSource": "dmgz",
+        "seasonNumber": 2,
+        "seasonSequenceNumber": 1,
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948011/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "mls_blk_123",
+            "duration": 3600,
+            "global": false
+          }
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "title",
+            "language": "en",
+            "content": "Disney Jake and The Never Land Pirates",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          },
+          {
+            "field": "titles",
+            "type": "titleSort",
+            "language": "en",
+            "content": "Disney Jake and The Never Land Pirates",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          },
+          {
+            "field": "titles",
+            "type": "descriptionLong",
+            "language": "en",
+            "content": "Follow Jake, Izzy, Cubby and their parrot Skully as they board their ship Bucky and sail from their hideout on Pirate Island on a treasure hunt adventure against Captain Hook and Smee. Be it a skateboard, a guitar or a prized seashell, Captain Hook will do anything to get his hands on the treasure. Jake, though, invites viewers to use teamwork, problem-solving and physical activity to reclaim their treasure, earning gold doubloons for the team treasure chest along the way.",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          },
+          {
+            "field": "titles",
+            "type": "descriptionShort",
+            "language": "en",
+            "content": "Jake, Izzy, Cubby and their parrot Skully sail from Pirate Island for treasure hunt adventures against Captain Hook.",
+            "sourceEntity": "season",
+            "targetEntity": "season"
+          }
+        ]
+      }
+    ]
+}

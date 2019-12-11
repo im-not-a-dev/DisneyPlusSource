@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingTop="@dimen/padding_medium" android:paddingBottom="@dimen/serie_detail_picker_padding_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/details_content_padding" android:layout_marginEnd="@dimen/details_content_padding">
+    <com.bamtechmedia.dominguez.core.design.widgets.SeasonPickerView android:layout_gravity="center_vertical" android:id="@+id/seasonSelectorButton" android:background="@drawable/btn_rounded_corners_opaque_selector" android:layout_width="wrap_content" android:layout_height="32dp"/>
+    <LinearLayout android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:orientation="horizontal" android:id="@+id/seasonDownloadButton" android:background="?attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_white" android:id="@+id/seasonDownloadText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="4sp" android:layout_marginStart="@dimen/padding_extra_small" android:layout_marginEnd="@dimen/padding_extra_small"/>
+        <ImageView android:layout_gravity="center" android:layout_width="16dp" android:layout_height="match_parent" android:src="@drawable/ic_download" android:layout_marginEnd="2dp"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:drawable="@drawable/ic_file_dl_download" android:maxLevel="0"/>
+    <item android:drawable="@drawable/ic_file_dl_inprogress" android:maxLevel="1"/>
+    <item android:drawable="@drawable/ic_file_dl_paused" android:maxLevel="2"/>
+    <item android:drawable="@drawable/ic_file_dl_queued" android:maxLevel="3"/>
+    <item android:drawable="@drawable/ic_file_dl_error" android:maxLevel="4"/>
+    <item android:drawable="@drawable/ic_file_dl_internal" android:maxLevel="5"/>
+    <item android:drawable="@drawable/ic_file_dl_external" android:maxLevel="6"/>
+</level-list>

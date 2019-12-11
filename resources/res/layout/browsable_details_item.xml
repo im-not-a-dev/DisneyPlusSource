@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_medium" android:layout_marginBottom="@dimen/details_content_padding" android:layout_marginStart="@dimen/details_content_padding" android:layout_marginEnd="@dimen/details_content_padding">
+    <TextView android:textAppearance="@style/Disney.TextAppearance.H3" android:id="@+id/browsable_details_item_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingExtra="4sp"/>
+    <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:id="@+id/browsable_details_item_description" android:paddingTop="@dimen/padding_small" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="36dp" android:lineSpacingExtra="4sp"/>
+    <com.bamtechmedia.dominguez.detail.common.item.DetailSection android:id="@+id/browsable_details_section_duration" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.bamtechmedia.dominguez.detail.common.item.DetailSection android:id="@+id/browsable_details_section_release_date" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.bamtechmedia.dominguez.detail.common.item.DetailSection android:id="@+id/browsable_details_section_genre" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.bamtechmedia.dominguez.detail.common.item.DetailSection android:id="@+id/browsable_details_section_rating" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.bamtechmedia.dominguez.detail.common.item.DetailSection android:id="@+id/browsable_details_section_formats" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.bamtechmedia.dominguez.detail.common.item.DetailSection android:id="@+id/browsable_details_section_director" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.bamtechmedia.dominguez.detail.common.item.DetailSection android:id="@+id/browsable_details_section_creators" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.bamtechmedia.dominguez.detail.common.item.DetailSection android:id="@+id/browsable_details_section_cast" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="collection_total_span_count">30</integer>
+    <integer name="details_related_grid_span">5</integer>
+    <integer name="end_cap_scale_duration">80</integer>
+    <integer name="fade_out_start">2450</integer>
+    <integer name="initial_icon_rotation">0</integer>
+    <integer name="max_permitted_text_length">410</integer>
+    <integer name="min_text_size">13</integer>
+    <integer name="nav_bar_weight_anakin">0</integer>
+    <integer name="profile_picker_column">1</integer>
+    <integer name="profile_selection_duration_millis">200</integer>
+    <integer name="series_detail_season_count">3</integer>
+    <integer name="upnext_visibility_duration_millis">10000</integer>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <corners android:radius="?attr/buttonBaseCornerRadius"/>
+    <gradient android:startColor="@color/anakin_button_norm_grad1" android:endColor="@color/anakin_button_norm_grad3" android:angle="270" android:centerY="0.35" android:centerColor="@color/anakin_button_norm_grad2"/>
+</shape>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bamtechmedia.dominguez.collections.items.ShelfItemLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/shelfItemLayout" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" app:foreground="@drawable/selected_item_border">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/shelf_list_item_background" android:contentDescription="@null"/>
+    <com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView android:id="@+id/poster" android:background="?attr/assetPlaceholder" android:layout_width="match_parent" android:layout_height="0dp" android:scaleType="centerCrop"/>
+    <TextView android:textColor="@color/vader_white" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/title" android:visibility="gone" android:layout_width="match_parent" android:layout_height="36dp" android:lines="1" android:paddingStart="@dimen/padding_small" android:paddingEnd="@dimen/padding_small" app:layout_constraintTop_toBottomOf="@+id/poster" style="@style/Disney.TextView.Title"/>
+</com.bamtechmedia.dominguez.collections.items.ShelfItemLayout>

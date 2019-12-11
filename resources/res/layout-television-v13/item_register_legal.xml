@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:textAppearance="@style/Disney.TextAppearance.Metadata" android:id="@+id/legalese_tv" android:paddingTop="16dp" android:paddingBottom="12dp" android:layout_width="484dp" android:layout_height="wrap_content" android:lineSpacingExtra="5sp" android:textAlignment="center"/>

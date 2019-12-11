@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bamtechmedia.dominguez.collections.items.ShelfItemLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/shelfItemLayout" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="5dp" app:foreground="@drawable/selected_item_border">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/brand_tile_bg" android:contentDescription="@null"/>
+    <com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView android:id="@+id/poster" android:layout_width="match_parent" android:layout_height="@dimen/match_constraints" android:layout_margin="@dimen/padding_extra_small" android:scaleType="center"/>
+</com.bamtechmedia.dominguez.collections.items.ShelfItemLayout>

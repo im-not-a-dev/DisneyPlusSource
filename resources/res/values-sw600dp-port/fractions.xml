@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="editorial_guide_hero_image_ratio">1.78</fraction>
+    <fraction name="guide_bottom_background">0.5</fraction>
+    <fraction name="guide_bottom_logo">0.38</fraction>
+    <fraction name="guide_ratio_background">1.78</fraction>
+    <fraction name="guide_top_title">0.33</fraction>
+    <fraction name="left_guide_percentage">0.1</fraction>
+    <fraction name="legal_center_guideline_end">0.9</fraction>
+    <fraction name="legal_center_guideline_start">0.1</fraction>
+    <fraction name="onboarding_padding_top">0.1875</fraction>
+    <fraction name="onboarding_width">0.5</fraction>
+    <fraction name="passcode_bias">0.3</fraction>
+    <fraction name="paywall_bias">0</fraction>
+    <fraction name="paywall_width">0.78</fraction>
+    <fraction name="profiles_guideline_end">0.72</fraction>
+    <fraction name="profiles_guideline_start">0.28</fraction>
+    <fraction name="right_guide_percentage">0.9</fraction>
+</resources>

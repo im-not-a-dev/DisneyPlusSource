@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:drawable="@drawable/checkbox_on_blue"/>
+    <item>
+        <shape>
+            <corners android:radius="3dp"/>
+            <size android:height="20dp" android:width="20dp"/>
+            <stroke android:width="1.5dp" android:color="@color/vader_white"/>
+        </shape>
+    </item>
+</layer-list>

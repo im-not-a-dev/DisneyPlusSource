@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Disney.Layout.Guided">
+        <item name="android:layout_gravity">center_vertical|clip_horizontal</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+</resources>

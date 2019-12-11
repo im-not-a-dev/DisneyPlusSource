@@ -1,0 +1,19 @@
+package p163g.p174d.p178b.p180b0;
+
+import p520io.reactivex.functions.Consumer;
+
+/* renamed from: g.d.b.b0.f0 */
+/* compiled from: lambda */
+public final /* synthetic */ class C4856f0 implements Consumer {
+
+    /* renamed from: c */
+    private final /* synthetic */ C4922v2 f12018c;
+
+    public /* synthetic */ C4856f0(C4922v2 v2Var) {
+        this.f12018c = v2Var;
+    }
+
+    public final void accept(Object obj) {
+        this.f12018c.mo16305h(((Long) obj).longValue());
+    }
+}

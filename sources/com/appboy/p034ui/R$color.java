@@ -1,0 +1,50 @@
+package com.appboy.p034ui;
+
+/* renamed from: com.appboy.ui.R$color */
+public final class R$color {
+    public static final int com_appboy_button = 2131099754;
+    public static final int com_appboy_button_disabled = 2131099755;
+    public static final int com_appboy_button_enabled = 2131099756;
+    public static final int com_appboy_card_background = 2131099757;
+    public static final int com_appboy_card_background_border = 2131099758;
+    public static final int com_appboy_card_background_shadow = 2131099759;
+    public static final int com_appboy_card_title_container = 2131099760;
+    public static final int com_appboy_content_cards_action_hint_text_color = 2131099761;
+    public static final int com_appboy_content_cards_description = 2131099762;
+    public static final int com_appboy_content_cards_display_background_color = 2131099763;
+    public static final int com_appboy_content_cards_swipe_refresh_color_1 = 2131099764;
+    public static final int com_appboy_content_cards_swipe_refresh_color_2 = 2131099765;
+    public static final int com_appboy_content_cards_swipe_refresh_color_3 = 2131099766;
+    public static final int com_appboy_content_cards_swipe_refresh_color_4 = 2131099767;
+    public static final int com_appboy_content_cards_title = 2131099768;
+    public static final int com_appboy_content_cards_unread_bar_color = 2131099769;
+    public static final int com_appboy_custom_notification_content = 2131099770;
+    public static final int com_appboy_custom_notification_time = 2131099771;
+    public static final int com_appboy_custom_notification_title = 2131099772;
+    public static final int com_appboy_description = 2131099773;
+    public static final int com_appboy_domain = 2131099774;
+    public static final int com_appboy_feedback_form_background = 2131099775;
+    public static final int com_appboy_feedback_form_is_bug = 2131099776;
+    public static final int com_appboy_feedback_form_navigation_bar_background = 2131099777;
+    public static final int com_appboy_inappmessage_background_light = 2131099778;
+    public static final int com_appboy_inappmessage_background_slideup = 2131099779;
+    public static final int com_appboy_inappmessage_button_bg_light = 2131099780;
+    public static final int com_appboy_inappmessage_button_ripple = 2131099781;
+    public static final int com_appboy_inappmessage_button_text_light = 2131099782;
+    public static final int com_appboy_inappmessage_chevron = 2131099783;
+    public static final int com_appboy_inappmessage_frame_light = 2131099784;
+    public static final int com_appboy_inappmessage_header_text = 2131099785;
+    public static final int com_appboy_inappmessage_icon = 2131099786;
+    public static final int com_appboy_inappmessage_icon_background = 2131099787;
+    public static final int com_appboy_inappmessage_text = 2131099788;
+    public static final int com_appboy_inappmessage_text_slideup = 2131099789;
+    public static final int com_appboy_newsfeed_swipe_refresh_color_1 = 2131099790;
+    public static final int com_appboy_newsfeed_swipe_refresh_color_2 = 2131099791;
+    public static final int com_appboy_newsfeed_swipe_refresh_color_3 = 2131099792;
+    public static final int com_appboy_newsfeed_swipe_refresh_color_4 = 2131099793;
+    public static final int com_appboy_title = 2131099794;
+    public static final int notification_action_color_filter = 2131099950;
+    public static final int notification_icon_bg_color = 2131099951;
+    public static final int ripple_material_light = 2131099972;
+    public static final int secondary_text_default_material_light = 2131099976;
+}

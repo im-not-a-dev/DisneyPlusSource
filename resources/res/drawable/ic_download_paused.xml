@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="24dp" android:width="24dp" android:viewportWidth="36" android:viewportHeight="36">
+    <path android:name="path" android:fillColor="?attr/circleButtonContentColor" android:pathData="M 19.9 23.7 C 18.9 24.7 17.3 24.7 16.2 23.7 L 12.4 20.1 C 11.9 19.6 11.8 18.7 12.3 18.2 C 12.8 17.7 13.7 17.6 14.2 18.1 L 15.5 19.4 C 15.9 19.8 16.6 19.5 16.6 18.9 L 16.6 11.8 C 16.6 11.1 17.2 10.5 17.9 10.5 C 18.6 10.5 19.2 11.1 19.2 11.8 L 19.2 19 C 19.2 19.6 19.9 19.9 20.3 19.5 L 21.6 18.2 C 22.1 17.7 23 17.7 23.5 18.3 C 24 18.8 24 19.7 23.4 20.2 L 19.9 23.7 Z" android:strokeColor="#00000000" android:strokeWidth="1"/>
+</vector>

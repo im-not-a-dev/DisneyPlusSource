@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_focused="true" android:state_selected="true" android:id="@+id/selectedFocused" android:drawable="@drawable/ic_watchlist_added_focused"/>
+    <item android:state_focused="true" android:id="@+id/unselectedFocused" android:drawable="@drawable/ic_watchlist_add_focused"/>
+    <item android:state_selected="true" android:id="@+id/selected" android:drawable="@drawable/ic_watchlist_added_inactive"/>
+    <item android:id="@+id/unselected" android:drawable="@drawable/ic_watchlist_add_inactive"/>
+    <transition android:drawable="@drawable/avd_toggle_selected_selected_focus_watchlist" android:toId="@+id/selectedFocused" android:fromId="@+id/selected"/>
+    <transition android:drawable="@drawable/avd_toggle_focus_selected_selected_watchlist" android:toId="@+id/selected" android:fromId="@+id/selectedFocused"/>
+    <transition android:drawable="@drawable/avd_toggle_unselected_unselected_focus_watchlist" android:toId="@+id/unselectedFocused" android:fromId="@+id/unselected"/>
+    <transition android:drawable="@drawable/avd_toggle_focus_unselected_unselected_watchlist" android:toId="@+id/unselected" android:fromId="@+id/unselectedFocused"/>
+    <transition android:drawable="@drawable/avd_toggle_unselected_selected_watchlist" android:toId="@+id/selected" android:fromId="@+id/unselected"/>
+    <transition android:drawable="@drawable/avd_toggle_selected_unselected_watchlist" android:toId="@+id/unselected" android:fromId="@+id/selected"/>
+    <transition android:drawable="@drawable/avd_toggle_unselected_selected_focus_watchlist" android:toId="@+id/selectedFocused" android:fromId="@+id/unselectedFocused"/>
+    <transition android:drawable="@drawable/avd_toggle_selected_unselected_focus_watchlist" android:toId="@+id/unselectedFocused" android:fromId="@+id/selectedFocused"/>
+</animated-selector>

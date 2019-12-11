@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.appboy.p034ui.inappmessage.views.AppboyInAppMessageFullView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:padding="0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/com_appboy_inappmessage_full_frame" style="@style/Appboy.InAppMessage.Frame.Full"/>
+    <RelativeLayout android:id="@+id/com_appboy_inappmessage_full" style="@style/Appboy.InAppMessage.Full">
+        <LinearLayout android:orientation="vertical" android:padding="0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2">
+            <com.appboy.p034ui.inappmessage.AppboyInAppMessageImageView android:id="@+id/com_appboy_inappmessage_full_imageview" style="@style/Appboy.InAppMessage.Image.Full"/>
+            <ScrollView android:id="@+id/com_appboy_inappmessage_full_scrollview" style="@style/Appboy.InAppMessage.ScrollView.Full">
+                <LinearLayout android:id="@+id/com_appboy_inappmessage_full_text_layout" android:layout_height="wrap_content" style="@style/Appboy.InAppMessage.Full.TextArea">
+                    <TextView android:id="@+id/com_appboy_inappmessage_full_header_text" style="@style/Appboy.InAppMessage.Header.Full"/>
+                    <TextView android:id="@+id/com_appboy_inappmessage_full_message" style="@style/Appboy.InAppMessage.Message.Full"/>
+                </LinearLayout>
+            </ScrollView>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/com_appboy_inappmessage_full_button_layout_single" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Appboy.InAppMessage.Layout.Button.Full">
+                <Button android:id="@+id/com_appboy_inappmessage_full_button_single_one" style="@style/Appboy.InAppMessage.Button.Full.Single"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/com_appboy_inappmessage_full_button_layout_dual" android:visibility="gone" style="@style/Appboy.InAppMessage.Layout.Button.Full">
+                <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <Button android:id="@+id/com_appboy_inappmessage_full_button_dual_one" style="@style/Appboy.InAppMessage.Button.Full.Dual.One"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <Button android:id="@+id/com_appboy_inappmessage_full_button_dual_two" style="@style/Appboy.InAppMessage.Button.Full.Dual.Two"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageButton android:id="@+id/com_appboy_inappmessage_full_close_button" style="@style/Appboy.InAppMessage.CloseButton.Full"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</com.appboy.p034ui.inappmessage.views.AppboyInAppMessageFullView>

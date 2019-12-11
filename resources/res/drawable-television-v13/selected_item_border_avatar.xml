@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/drawable_border_layer">
+        <shape android:shape="oval">
+            <corners android:radius="?attr/assetCornerRadius"/>
+            <stroke android:width="@dimen/shelf_list_item_stroke" android:color="?attr/themeColorWhite"/>
+        </shape>
+    </item>
+</layer-list>

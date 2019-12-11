@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_medium" android:layout_marginBottom="@dimen/padding_medium">
+    <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopyHeadline" android:textColor="@color/text_color_vader_white" android:id="@+id/subscriptionPeriodText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_extra_small" android:lineSpacingExtra="4sp" android:layout_marginStart="19dp" android:layout_marginEnd="19dp"/>
+    <TextView android:textAppearance="@style/Disney.TextAppearance.Metadata" android:textColor="@color/vader_grey8" android:id="@+id/subscriptionSubCopyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingExtra="3sp" android:layout_marginStart="19dp" android:layout_marginEnd="19dp"/>
+</LinearLayout>

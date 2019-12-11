@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="content_detail_top_gradient_end">@color/transparent</color>
+    <color name="content_detail_top_gradient_start">@color/transparent</color>
+    <color name="detail_scrim">@color/vader_black_90</color>
+    <color name="detail_scrim_kids">#e6051434</color>
+</resources>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.appboy.p034ui.inappmessage.views.AppboyInAppMessageHtmlFullView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/com_appboy_inappmessage_html_full" style="@style/Appboy.InAppMessage.Html">
+    <com.appboy.p034ui.inappmessage.views.AppboyInAppMessageWebView android:id="@+id/com_appboy_inappmessage_html_full_webview" style="@style/Appboy.InAppMessage.Html.Webview"/>
+</com.appboy.p034ui.inappmessage.views.AppboyInAppMessageHtmlFullView>

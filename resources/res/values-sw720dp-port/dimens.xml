@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vader_grid_item_margin">12dp</dimen>
+    <dimen name="vader_grid_start_margin">22dp</dimen>
+</resources>

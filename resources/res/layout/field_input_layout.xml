@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.bamtechmedia.dominguez.core.design.widgets.textinputlayout.CustomInternalTextInputLayout android:id="@+id/customInternTextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0" style="@style/Disney.TextInputLayout.FilledBox">
+        <com.google.android.material.textfield.TextInputEditText android:gravity="bottom" android:id="@+id/inputText" android:saveEnabled="false" android:layout_width="match_parent" android:layout_marginBottom="-8dp" android:imeOptions="actionGo" style="@style/Disney.TextInputLayout.EditText"/>
+    </com.bamtechmedia.dominguez.core.design.widgets.textinputlayout.CustomInternalTextInputLayout>
+    <TextView android:textAppearance="@style/Disney.TextAppearance.TextView.Error" android:id="@+id/errorTextView" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_extra_small" android:lineSpacingExtra="3sp" android:paddingStart="@dimen/padding_extra_small" android:paddingEnd="@dimen/padding_extra_small" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/customInternTextInputLayout"/>
+</merge>

@@ -1,0 +1,170 @@
+{
+    "DmcSeries": [
+      {
+        "type": "DmcSeries",
+        "textExperienceId": "cf10fbf106-1dbf-4ced-b3c8-7ea386e55208",
+        "seriesId": "cf10fbf106-1dbf-4ced-b3c8-7ea386e55208",
+        "encodedSeriesId": "cf10fbf106-1dbf-4ced-b3c8-7ea386e55208",
+        "contentId": "cf10fbf106-1dbf-4ced-b3c8-7ea386e55208",
+        "partnerSeriesId": "ace2420a-d360-48c9-9312-39103a2ad510df",
+        "contentSource": "dmgz",
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948011/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10",
+            "purpose": "poster"
+          },
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948011/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10",
+            "purpose": "backdrop"
+          }
+        ],
+        "policies": [],
+        "texts": [
+          {
+            "field": "title",
+            "type": "full",
+            "language": "en",
+            "content": "Big Buck Bunny Saga",
+            "sourceEntity": "series",
+            "targetEntity": "series"
+          },
+          {
+            "field": "description",
+            "type": "full",
+            "language": "en",
+            "content": "Big Buck Bunny Saga (description full)",
+            "sourceEntity": "series",
+            "targetEntity": "series"
+          }
+        ]
+      },
+      {
+        "type": "DmcSeries",
+        "textExperienceId": "77f2d938-aada-479c-bdd1-da9e7e575d47",
+        "seriesId": "77f2d938-aada-479c-bdd1-da9e7e575d47",
+        "encodedSeriesId": "77f2d938-aada-479c-bdd1-da9e7e575d47",
+        "contentId": "77f2d938-aada-479c-bdd1-da9e7e575d47",
+        "partnerSeriesId": "37d87bd6-a2c1-4251-afb7-5b1d7ed50f7d",
+        "contentSource": "dmgz",
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948114/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10",
+            "purpose": "poster"
+          },
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948114/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10",
+            "purpose": "backdrop"
+          }
+        ],
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "mls_blk_123",
+            "duration": 3600,
+            "global": false
+          }
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "full",
+            "language": "en",
+            "content": "Caminandes Series",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "full",
+            "language": "en",
+            "content": "Caminandes Series (description full)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          }
+        ]
+      },
+      {
+        "type": "DmcSeries",
+        "textExperienceId": "2b5edb25-698b-4d31-b65a-5be6a2d89cd0",
+        "seriesId": "59ea196a-ebee-4f88-a250-f2dd09ea2cd0",
+        "encodedSeriesId": "59ea196a-ebee-4f88-a250-f2dd09ea2cd0",
+        "contentId": "59ea196a-ebee-4f88-a250-f2dd09ea2cd0",
+        "partnerSeriesId": "2a9d1a8d-9431-4326-bc3e-506636206cb51",
+        "contentSource": "dmgz",
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948011/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10",
+            "purpose": "poster"
+          },
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948011/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10",
+            "purpose": "backdrop"
+          }
+        ],
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "mls_blk_123",
+            "duration": 3600,
+            "global": false
+          }
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "full",
+            "language": "en",
+            "content": "Disney Jake and The Never Land Pirates",
+            "sourceEntity": "series",
+            "targetEntity": "series"
+          },
+          {
+            "field": "description",
+            "type": "full",
+            "language": "en",
+            "content": "Follow Jake, Izzy, Cubby and their parrot Skully as they board their ship Bucky and sail from their hideout on Pirate Island on a treasure hunt adventure against Captain Hook and Smee. Be it a skateboard, a guitar or a prized seashell, Captain Hook will do anything to get his hands on the treasure. Jake, though, invites viewers to use teamwork, problem-solving and physical activity to reclaim their treasure, earning gold doubloons for the team treasure chest along the way.",
+            "sourceEntity": "series",
+            "targetEntity": "series"
+          },
+          {
+            "field": "description",
+            "type": "brief",
+            "language": "en",
+            "content": "Jake, Izzy, Cubby and their parrot Skully sail from Pirate Island for treasure hunt adventures against Captain Hook.",
+            "sourceEntity": "series",
+            "targetEntity": "series"
+          }
+        ]
+      }
+    ]
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/app_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.bamtechmedia.dominguez.core.design.widgets.StorageIndicator android:layout_gravity="center_vertical" android:id="@+id/storage_indicator" android:layout_width="match_parent" android:layout_height="8dp"/>
+</FrameLayout>

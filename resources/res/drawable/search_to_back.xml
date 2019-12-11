@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/ic_search_back">
+    <target android:name="search" android:animation="@animator/checkable_disappear"/>
+    <target android:name="back" android:animation="@animator/checkable_appear"/>
+</animated-vector>

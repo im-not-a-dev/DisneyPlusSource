@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_white" android:id="@+id/subscription_title" android:layout_width="510dp" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_extra_small" android:lineSpacingExtra="6.5sp" android:paddingStart="10dp"/>
+    <TextView android:textAppearance="@style/Disney.TextAppearance.Metadata" android:id="@+id/subscription_copy" android:layout_width="510dp" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_extra_small" android:text="@string/account_subscription_manage" android:lineSpacingExtra="5sp" android:paddingStart="10dp"/>
+</LinearLayout>

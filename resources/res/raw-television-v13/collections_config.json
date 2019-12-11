@@ -1,0 +1,460 @@
+{
+  "ages": {
+    "title": "text",
+    "sets": {
+      "default": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      }
+    }
+  },
+  "avatars": {
+    "sets": {
+      "character": {
+        "shelf_grid": {
+          "meta": "character",
+          "title": "above",
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 1,
+              "purpose": "character,tile",
+              "tiles": 7
+            }
+          }
+        }
+      },
+      "hidden": {
+        "shelf_grid": {
+          "render": false
+        }
+      }
+    }
+  },
+  "brand": {
+    "background": "hero_collection,hero",
+    "title": "logo_layer,logo",
+    "titleAspectRatio": 2.00,
+    "sets": {
+      "contentType": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "television": {
+              "tiles": 4
+            }
+          }
+        }
+      },
+      "default": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "television": {
+              "tiles": 4
+            }
+          }
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "television": {
+              "tiles": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  "character": {
+    "background": "hero_collection,hero",
+    "title": "text",
+    "sets": {
+      "default": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      }
+    }
+  },
+  "contentType": {
+    "displayType": "tabbed",
+    "title": "text",
+    "sets": {
+      "contentType": {
+        "shelf_grid": {
+          "tags": [
+            "DisableFirstGridRowTopPadding"
+          ],
+          "breakpoints": {
+            "television": {
+              "tiles": 4
+            }
+          }
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "tags": [
+            "DisableFirstGridRowTopPadding"
+          ],
+          "breakpoints": {
+            "television": {
+              "tiles": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  "default": {
+    "background": "none",
+    "displayType": "stacked",
+    "title": "none",
+    "titleAspectRatio": 1.78,
+    "backgroundAspectRatio": {
+      "television": 1.78
+    },
+    "sets": {
+      "default": {
+        "shelf_grid": {
+          "render": true,
+          "scaleOnFocus": 1.0,
+          "snap": "none",
+          "tags": [ 
+          ],
+          "title": "none",
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 1.78,
+              "gridMargin": 75,
+              "itemMargin": 20,
+              "list": false,
+              "meta": "none",
+              "purpose": "tile,tile_keystone",
+              "tiles": 5,
+              "title": "none",
+              "topGridMargin": 20
+            }
+          }
+        }
+      }
+    }
+  },
+  "detailContent": {
+    "sets": {
+      "extras": {
+        "shelf_grid": {
+          "breakpoints": {
+            "television": {
+              "tiles": 4,
+              "topGridMargin": 15
+            }
+          }
+        }
+      },
+      "related": {
+        "shelf_grid": {
+          "breakpoints": {
+            "television": {
+              "tiles": 4,
+              "topGridMargin": 15
+            }
+          }
+        }
+      },
+      "seasons": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "television": {
+              "tiles": 4,
+              "topGridMargin": 15
+            }
+          }
+        }
+      }
+    }
+  },
+  "editorial": {
+    "background": "hero_collection,hero",
+    "title": "title_treatment",
+    "sets": {
+      "default": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "television": {
+              "tiles": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  "explore": {
+    "sets": {
+      "ages": {
+        "shelf_grid": {
+          "breakpoints": {
+            "television": {
+              "tiles": 4,
+              "topGridMargin": 30
+            }
+          }
+        }
+      },
+      "brand": {
+        "shelf_grid": {
+          "breakpoints": {
+            "television": {
+              "purpose": "tile,tile_keystone",
+              "topGridMargin": 30
+            }
+          }
+        }
+      },
+      "category": {
+        "shelf_grid": {
+          "meta": "category",
+          "render": false
+        }
+      },
+      "character": {
+        "shelf_grid": {
+          "meta": "character",
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 1.78,
+              "topGridMargin": 30
+            }
+          }
+        }
+      },
+      "contentType": {
+        "shelf_grid": {
+          "render": false
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "tags": [
+            "DisableFirstGridRowTopPadding"
+          ],
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 1.78,
+              "tiles": 4,
+              "topGridMargin": 30
+            }
+          }
+        }
+      },
+      "franchise": {
+        "shelf_grid": {
+          "breakpoints": {
+            "television": {
+              "tiles": 4,
+              "topGridMargin": 30
+            }
+          }
+        }
+      }
+    }
+  },
+  "franchise": {
+    "background": "hero_collection,hero",
+    "title": "title_treatment",
+    "sets": {
+      "default": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "television": {
+              "tiles": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  "home": {
+    "sets": {
+      "BecauseYouSet": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "ContinueWatchingSet": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 1.78,
+              "meta": "bookmark",
+              "purpose": "thumbnail,tile",
+              "tiles": 5
+            }
+          }
+        }
+      },
+      "RecommendationSet": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "TrendingSet": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "WatchlistSet": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "brand": {
+        "shelf_grid": {
+          "tags": [
+            "DisableFirstGridRowTopPadding"
+          ],
+          "breakpoints": {
+            "television": {
+              "gridMargin": 58,
+              "itemMargin": 13.5,
+              "purpose": "tile,tile_keystone"
+            }
+          }
+        }
+      },
+      "character": {
+        "shelf_grid": {
+          "meta": "character",
+          "title": "above"
+        }
+      },
+      "contentType": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "featured": {
+        "shelf_grid": {
+          "tags": [
+            "DisableFirstGridRowTopPadding"
+          ],
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 1.2,
+              "purpose": "tile,tile_keystone",
+              "tiles": 6
+            }
+          }
+        }
+      },
+      "franchise": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "hero": {
+        "hero": {
+          "scaleOnFocus": 1.02,
+          "snap": "centerScale",
+          "tags": [
+            "Loop",
+            "FullTopMargin"
+          ],
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 3.91,
+              "gridMargin": 58,
+              "purpose": "hero_tile",
+              "tiles": 1
+            }
+          }
+        },
+        "hero_full_bleed": {
+          "tags": [
+            "Loop"
+          ],
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 3.0,
+              "purpose": "hero_tile",
+              "tiles": 1
+            }
+          }
+        }
+      },
+      "standard": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      }
+    }
+  },
+  "originals": {
+    "background": "hero_collection,hero",
+    "title": "logo",
+    "sets": {
+      "editorial": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 1.78,
+              "tiles": 3
+            }
+          }
+        }
+      }
+    }
+  },
+  "search": {
+    "sets": {
+      "results": {
+        "shelf_grid": {
+          "breakpoints": {
+            "television": {
+              "tiles": 4
+            }
+          }
+        }
+      }
+    }
+  },
+  "watchlist": {
+    "title": "none",
+    "sets": {
+      "WatchlistSet": {
+        "shelf_grid": {
+          "breakpoints": {
+            "television": {
+              "aspectRatio": 1.78,
+              "purpose": "thumbnail,tile",
+              "tiles": 4
+            }
+          }
+        }
+      }
+    }
+  }
+}

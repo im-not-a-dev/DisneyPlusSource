@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.appboy.p034ui.inappmessage.views.AppboyInAppMessageModalView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/com_appboy_inappmessage_modal_container" android:padding="0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/com_appboy_inappmessage_modal_frame" style="@style/Appboy.InAppMessage.Frame.Modal.Graphic"/>
+    <RelativeLayout android:id="@+id/com_appboy_inappmessage_modal_graphic_bound" android:padding="0dp" android:layout_width="0dp" android:layout_height="0dp" android:layout_centerInParent="true">
+        <RelativeLayout android:id="@+id/com_appboy_inappmessage_modal" style="@style/Appboy.InAppMessage.Modal.Graphic">
+            <com.appboy.p034ui.inappmessage.AppboyInAppMessageImageView android:id="@+id/com_appboy_inappmessage_modal_imageview" style="@style/Appboy.InAppMessage.Image.Modal.Graphic"/>
+            <RelativeLayout android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="25dp" android:layout_marginRight="25dp">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/com_appboy_inappmessage_modal_button_layout_single" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" style="@style/Appboy.InAppMessage.Layout.Button.Modal.Graphic">
+                    <Button android:id="@+id/com_appboy_inappmessage_modal_button_single_one" style="@style/Appboy.InAppMessage.Button.Modal.Single.Graphic"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/com_appboy_inappmessage_modal_button_layout_dual" android:visibility="gone" style="@style/Appboy.InAppMessage.Layout.Button.Modal.Graphic">
+                    <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <Button android:id="@+id/com_appboy_inappmessage_modal_button_dual_one" style="@style/Appboy.InAppMessage.Button.Modal.Dual.One.Graphic"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <Button android:id="@+id/com_appboy_inappmessage_modal_button_dual_two" style="@style/Appboy.InAppMessage.Button.Modal.Dual.Two.Graphic"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <ImageButton android:id="@+id/com_appboy_inappmessage_modal_close_button" style="@style/Appboy.InAppMessage.CloseButton.Modal.Graphic"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</com.appboy.p034ui.inappmessage.views.AppboyInAppMessageModalView>

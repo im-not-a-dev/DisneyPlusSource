@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_focused="true">
+        <set>
+            <objectAnimator android:duration="200" android:valueTo="1.1" android:valueType="floatType" android:propertyName="scaleX"/>
+            <objectAnimator android:duration="200" android:valueTo="1.02" android:valueType="floatType" android:propertyName="scaleY"/>
+            <objectAnimator android:duration="200" android:valueFrom="@color/vader_white_80" android:valueTo="@color/vader_primary" android:propertyName="backgroundColor"/>
+        </set>
+    </item>
+    <item android:state_focused="false">
+        <set>
+            <objectAnimator android:duration="200" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX"/>
+            <objectAnimator android:duration="200" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY"/>
+            <objectAnimator android:duration="200" android:valueFrom="@color/vader_primary" android:valueTo="@color/vader_white_10" android:propertyName="backgroundColor"/>
+        </set>
+    </item>
+</selector>

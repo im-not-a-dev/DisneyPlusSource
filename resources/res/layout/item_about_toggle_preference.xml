@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.SwitchCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/vader_grey8" android:id="@+id/about_item_toggle" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/btn_min_size" android:paddingStart="@dimen/padding_medium" android:paddingEnd="@dimen/padding_medium"/>

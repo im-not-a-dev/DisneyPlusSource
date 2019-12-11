@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:layout_marginBottom="5dp">
+        <ImageView android:id="@+id/checkBoxImageView" android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_overlay_checkmark_selector" android:layout_marginEnd="3dp"/>
+        <TextView android:textAppearance="@style/Disney.TextAppearance.TrackItem" android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/rowTitleText" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="22dp" android:includeFontPadding="false" android:lineSpacingExtra="4sp"/>
+    </LinearLayout>
+    <View android:background="@color/vader_white_10" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp"/>
+</LinearLayout>

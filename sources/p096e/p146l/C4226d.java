@@ -1,0 +1,68 @@
+package p096e.p146l;
+
+/* renamed from: e.l.d */
+/* compiled from: R */
+public final class C4226d {
+    public static final int lb_action_bg = 2131231305;
+    public static final int lb_action_bg_focused = 2131231306;
+    public static final int lb_background = 2131231307;
+    public static final int lb_card_foreground = 2131231308;
+    public static final int lb_card_shadow_focused = 2131231309;
+    public static final int lb_card_shadow_normal = 2131231310;
+    public static final int lb_control_button_primary = 2131231311;
+    public static final int lb_control_button_secondary = 2131231312;
+    public static final int lb_headers_right_fading = 2131231313;
+    public static final int lb_ic_actions_right_arrow = 2131231314;
+    public static final int lb_ic_cc = 2131231315;
+    public static final int lb_ic_fast_forward = 2131231316;
+    public static final int lb_ic_fast_rewind = 2131231317;
+    public static final int lb_ic_guidedactions_item_chevron = 2131231318;
+    public static final int lb_ic_hq = 2131231319;
+    public static final int lb_ic_in_app_search = 2131231320;
+    public static final int lb_ic_loop = 2131231321;
+    public static final int lb_ic_loop_one = 2131231322;
+    public static final int lb_ic_more = 2131231323;
+    public static final int lb_ic_nav_arrow = 2131231324;
+    public static final int lb_ic_pause = 2131231325;
+    public static final int lb_ic_pip = 2131231326;
+    public static final int lb_ic_play = 2131231327;
+    public static final int lb_ic_play_fit = 2131231328;
+    public static final int lb_ic_playback_loop = 2131231329;
+    public static final int lb_ic_replay = 2131231330;
+    public static final int lb_ic_sad_cloud = 2131231331;
+    public static final int lb_ic_search_mic = 2131231332;
+    public static final int lb_ic_search_mic_out = 2131231333;
+    public static final int lb_ic_shuffle = 2131231334;
+    public static final int lb_ic_skip_next = 2131231335;
+    public static final int lb_ic_skip_previous = 2131231336;
+    public static final int lb_ic_stop = 2131231337;
+    public static final int lb_ic_thumb_down = 2131231338;
+    public static final int lb_ic_thumb_down_outline = 2131231339;
+    public static final int lb_ic_thumb_up = 2131231340;
+    public static final int lb_ic_thumb_up_outline = 2131231341;
+    public static final int lb_in_app_search_bg = 2131231342;
+    public static final int lb_in_app_search_shadow_focused = 2131231343;
+    public static final int lb_in_app_search_shadow_normal = 2131231344;
+    public static final int lb_onboarding_start_button_background = 2131231345;
+    public static final int lb_playback_now_playing_bar = 2131231346;
+    public static final int lb_playback_progress_bar = 2131231347;
+    public static final int lb_search_orb = 2131231348;
+    public static final int lb_selectable_item_rounded_rect = 2131231349;
+    public static final int lb_speech_orb = 2131231350;
+    public static final int lb_text_dot_one = 2131231351;
+    public static final int lb_text_dot_one_small = 2131231352;
+    public static final int lb_text_dot_two = 2131231353;
+    public static final int lb_text_dot_two_small = 2131231354;
+    public static final int notification_action_background = 2131231377;
+    public static final int notification_bg = 2131231378;
+    public static final int notification_bg_low = 2131231379;
+    public static final int notification_bg_low_normal = 2131231380;
+    public static final int notification_bg_low_pressed = 2131231381;
+    public static final int notification_bg_normal = 2131231382;
+    public static final int notification_bg_normal_pressed = 2131231383;
+    public static final int notification_icon_background = 2131231384;
+    public static final int notification_template_icon_bg = 2131231385;
+    public static final int notification_template_icon_low_bg = 2131231386;
+    public static final int notification_tile_bg = 2131231387;
+    public static final int notify_panel_notification_icon_bg = 2131231388;
+}

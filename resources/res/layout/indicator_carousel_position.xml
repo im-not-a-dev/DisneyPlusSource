@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <ImageView android:id="@+id/indicator_carousel_position" android:layout_width="40dp" android:layout_height="10dp" android:layout_marginTop="300dp" android:src="@drawable/fullbleed_carousel_items_indicator" android:layout_marginEnd="65dp" style="@style/Disney.Button.Secondary.Small"/>
+</merge>

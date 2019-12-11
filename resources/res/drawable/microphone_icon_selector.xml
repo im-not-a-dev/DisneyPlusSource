@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_focused="false" android:id="@+id/unselectedFocused" android:drawable="@drawable/ic_microphone"/>
+    <item android:state_focused="true" android:id="@+id/selectedFocused" android:drawable="@drawable/ic_microphone_focused"/>
+    <transition android:drawable="@drawable/microphone_transition" android:toId="@+id/selectedFocused" android:fromId="@+id/unselectedFocused" android:reversible="true"/>
+</animated-selector>

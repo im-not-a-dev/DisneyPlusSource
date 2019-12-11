@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <Transition app:constraintSetEnd="@+id/collapsed" app:constraintSetStart="@+id/expanded">
+        <OnSwipe app:dragDirection="0" app:touchAnchorId="@+id/brandRecyclerView" app:touchAnchorSide="0"/>
+        <KeyFrameSet>
+            <KeyAttribute android:alpha="1" android:scaleX="1" android:scaleY="1" app:framePosition="0" app:motionTarget="@+id/brandLogoImageView"/>
+            <KeyAttribute android:scaleX="0.6" android:scaleY="0.6" app:framePosition="10" app:motionTarget="@+id/brandLogoImageView"/>
+            <KeyAttribute android:alpha="0" app:framePosition="15" app:motionTarget="@+id/brandLogoImageView"/>
+            <KeyAttribute android:alpha="0" app:framePosition="15" app:motionTarget="@+id/brandTopLogoImageView"/>
+            <KeyAttribute android:alpha="1" app:framePosition="25" app:motionTarget="@+id/brandTopLogoImageView"/>
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@+id/expanded"/>
+    <ConstraintSet android:id="@+id/collapsed">
+        <Constraint android:id="@+id/brandBackgroundImageView">
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+        <Constraint android:id="@+id/brandLogoImageView">
+            <PropertySet android:alpha="0"/>
+            <Transform android:scaleX="0.5" android:scaleY="0.5" app:pivotX="0.5"/>
+        </Constraint>
+        <Constraint android:id="@+id/brandTopLogoImageView">
+            <Layout android:layout_width="0dp" android:layout_height="40dp" android:layout_marginBottom="@dimen/padding_small" app:layout_constraintBottom_toBottomOf="@+id/brandBackLayout" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+            <PropertySet android:alpha="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/brandRecyclerView">
+            <Layout android:paddingTop="@dimen/brand_top_padding" android:clipToPadding="false" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/brandBackLayout"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

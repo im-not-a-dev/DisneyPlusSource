@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/ic_pause_corner_unfocused">
+    <target android:name="pause_unfocused_group" android:animation="@drawable/$pause_to_play_unfocused_anim__0"/>
+    <target android:name="pause_unfocused" android:animation="@drawable/$pause_to_play_unfocused_anim__1"/>
+    <target android:name="play_unfocused_group" android:animation="@drawable/$pause_to_play_unfocused_anim__2"/>
+    <target android:name="play_unfocused" android:animation="@drawable/$pause_to_play_unfocused_anim__3"/>
+</animated-vector>

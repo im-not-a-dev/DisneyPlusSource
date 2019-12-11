@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonBase">
+        <item name="android:textAppearance">@style/Disney.TextAppearance.ButtonFocused</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:minHeight">33dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="Disney.Button.Destruction">
+        <item name="android:textColor">?attr/buttonDestructionTextColor</item>
+        <item name="android:background">?attr/buttonDestructionBackground</item>
+        <item name="android:stateListAnimator">@animator/default_button_animator</item>
+    </style>
+    <style name="Disney.Button.PostPlay">
+        <item name="android:textAppearance">@style/Disney.TextAppearance.ButtonFocused.PostPlayNew</item>
+        <item name="android:background">@drawable/selector_tv_post_play_btn_background</item>
+        <item name="android:paddingStart">34dp</item>
+        <item name="android:paddingEnd">34dp</item>
+        <item name="android:stateListAnimator">@animator/default_button_animator</item>
+    </style>
+    <style name="Disney.Button.Primary">
+        <item name="android:textColor">?attr/buttonPrimaryTextColor</item>
+        <item name="android:background">?attr/buttonPrimaryBackground</item>
+        <item name="android:stateListAnimator">@animator/default_button_animator</item>
+    </style>
+    <style name="Disney.Button.Secondary">
+        <item name="android:textAppearance">@style/Disney.TextAppearance.Secondary</item>
+        <item name="android:textColor">?attr/buttonSecondaryTextColor</item>
+        <item name="android:background">?attr/buttonSecondaryBackground</item>
+        <item name="android:stateListAnimator">@animator/default_button_animator</item>
+    </style>
+    <style name="Disney.DetailScreenTabStyle">
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="tabRippleColor">@null</item>
+    </style>
+    <style name="Disney.Pincode">
+        <item name="android:textSize">37sp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+    <style name="Disney.TextAppearance.BodyCopy">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/vader_grey8</item>
+        <item name="android:lineSpacingExtra">6.5sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.BodyCopy.Grey7">
+        <item name="android:textColor">@color/vader_grey7</item>
+    </style>
+    <style name="Disney.TextAppearance.BodyCopyHeadline">
+        <item name="android:textSize">17sp</item>
+        <item name="android:lineSpacingExtra">6.5sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.BodyCopyPaywallLegal">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/vader_white</item>
+        <item name="android:lineSpacingExtra">6.5sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.ButtonFocused">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/vader_white</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+    <style name="Disney.TextAppearance.ButtonFocused.PostPlayNew">
+        <item name="android:textColor">@color/selector_post_play_button_text</item>
+    </style>
+    <style name="Disney.TextAppearance.ButtonUnfocused">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/vader_white_80</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+    <style name="Disney.TextAppearance.CollectionTitle">
+        <item name="android:textColor">@color/vader_white</item>
+    </style>
+    <style name="Disney.TextAppearance.ContinueWatchingTitle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+    </style>
+    <style name="Disney.TextAppearance.FacetNav">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/vader_white</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.H1">
+        <item name="android:textSize">37sp</item>
+        <item name="android:textColor">@color/vader_white</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.H2">
+        <item name="android:textSize">28.5sp</item>
+        <item name="android:textColor">@color/vader_white</item>
+        <item name="android:lineSpacingExtra">5.5sp</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.H3">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/vader_white</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.H4">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/vader_white_80</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.H5">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/vader_white_80</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.LanguageNameFocused">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/vader_black</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.LanguageNameUnFocused">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/vader_grey8</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.LegalBody">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/vader_grey8</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">0.07</item>
+    </style>
+    <style name="Disney.TextAppearance.LegalHeadline">
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.Metadata">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/vader_grey8</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.Metadata.CtvActivationInfo">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Disney.TextAppearance.PageNavFocused">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+    <style name="Disney.TextAppearance.PageNavUnfocused">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+    <style name="Disney.TextAppearance.PostPlay">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/selector_post_play_button_text</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+    <style name="Disney.TextAppearance.ProfileNameFocused">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/vader_white</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.ProfileNameUnfocused">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/vader_grey8</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.Secondary">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/selector_secondary_button_text</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+    <style name="Disney.TextAppearance.SeriesTitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/vader_white</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.SubHead">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">0sp</item>
+        <item name="android:fontFamily">@font/avenir55_roman</item>
+        <item name="android:letterSpacing">@null</item>
+    </style>
+    <style name="Disney.TextAppearance.Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/vader_white</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:fontFamily">@font/avenir65_medium</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+    <style name="Disney.TextAppearance.TrackItem">
+        <item name="android:textColor">@color/vader_grey8</item>
+    </style>
+    <style name="Disney.TextAppearance.TrackItem.Focused">
+        <item name="android:textColor">@color/vader_black</item>
+    </style>
+    <style name="Disney.TextAppearance.TrackItem.SelectedFocused">
+        <item name="android:textColor">@color/vader_black</item>
+        <item name="android:fontFamily">@font/avenir85_heavy</item>
+    </style>
+    <style name="Disney.TextView.BodyCopy">
+        <item name="android:lineSpacingExtra">6.5sp</item>
+    </style>
+    <style name="Disney.TextView.BodyCopyHeadline">
+        <item name="android:lineSpacingExtra">6.5sp</item>
+    </style>
+    <style name="Disney.TextView.BookmarkTextView">
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+    <style name="Disney.TextView.ButtonUnfocused">
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+    <style name="Disney.TextView.CollectionTitle">
+        <item name="android:lineSpacingExtra">6.5sp</item>
+    </style>
+    <style name="Disney.TextView.DownloadsEmptyTitle">
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+    <style name="Disney.TextView.GlobalNav.PageNavFocused">
+        <item name="android:textColor">@color/selected_menu_item_text_color</item>
+    </style>
+    <style name="Disney.TextView.GlobalNav.PageNavUnfocused">
+        <item name="android:textColor">@color/selected_menu_item_text_color</item>
+    </style>
+    <style name="Disney.TextView.H2">
+        <item name="android:lineSpacingExtra">5.5sp</item>
+    </style>
+    <style name="Disney.TextView.H3">
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+    <style name="Disney.TextView.H5">
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+    <style name="Disney.TextView.NoResults">
+        <item name="android:lineSpacingExtra">5.5sp</item>
+    </style>
+    <style name="Disney.TextView.SkipMilestoneButton">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/selector_skip_intro_text_color</item>
+        <item name="android:gravity">clip_horizontal</item>
+        <item name="android:background">@drawable/selector_skip_intro_btn_background</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_marginBottom">120dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableStart">@drawable/selector_skip_intro_skip_btn_tv</item>
+        <item name="android:paddingStart">@dimen/padding_medium</item>
+        <item name="android:paddingEnd">@dimen/padding_medium</item>
+        <item name="android:layout_marginEnd">42dp</item>
+    </style>
+    <style name="Disney.TextView.Title">
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+</resources>

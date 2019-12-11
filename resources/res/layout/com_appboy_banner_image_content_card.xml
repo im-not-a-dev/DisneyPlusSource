@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/Appboy.ContentCards.BannerImage">
+    <RelativeLayout android:id="@+id/com_appboy_content_cards_banner_image_card_image_container" style="@style/Appboy.ContentCards.BannerImage.ImageContainer"/>
+    <ImageView android:id="@+id/com_appboy_content_cards_pinned_icon" style="@style/Appboy.ContentCards.PinnedIcon.Banner"/>
+    <View android:id="@+id/com_appboy_content_cards_unread_bar" style="@style/Appboy.ContentCards.UnreadBar.Banner"/>
+</RelativeLayout>

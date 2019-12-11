@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_pressed="true">
+        <set>
+            <objectAnimator android:duration="50" android:valueTo="@color/vader_white" android:valueType="3" android:propertyName="colorFilter"/>
+            <objectAnimator android:valueTo="0.6" android:valueType="floatType" android:propertyName="alpha"/>
+            <objectAnimator android:duration="50" android:valueTo="0.95" android:valueType="floatType" android:propertyName="scaleX"/>
+            <objectAnimator android:duration="50" android:valueTo="0.95" android:valueType="floatType" android:propertyName="scaleY"/>
+        </set>
+    </item>
+    <item android:state_selected="true">
+        <set>
+            <objectAnimator android:duration="100" android:valueTo="@color/vader_white" android:valueType="3" android:propertyName="colorFilter"/>
+            <objectAnimator android:valueTo="1" android:valueType="floatType" android:propertyName="alpha"/>
+            <objectAnimator android:duration="100" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX"/>
+            <objectAnimator android:duration="100" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY"/>
+        </set>
+    </item>
+    <item>
+        <set>
+            <objectAnimator android:duration="100" android:valueTo="@color/vader_white" android:valueType="3" android:propertyName="colorFilter"/>
+            <objectAnimator android:valueTo="0.6" android:valueType="floatType" android:propertyName="alpha"/>
+            <objectAnimator android:duration="100" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX"/>
+            <objectAnimator android:duration="100" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY"/>
+        </set>
+    </item>
+</selector>

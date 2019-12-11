@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <Transition app:constraintSetEnd="@+id/collapsed" app:constraintSetStart="@+id/expanded">
+        <OnSwipe app:dragDirection="0" app:touchAnchorId="@+id/landingPageRecyclerView" app:touchAnchorSide="0"/>
+    </Transition>
+    <ConstraintSet android:id="@+id/expanded"/>
+    <ConstraintSet android:id="@+id/collapsed">
+        <Constraint android:id="@+id/landingPageTextView">
+            <Layout android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@+id/disneyToolbar" app:layout_constraintTop_toTopOf="@+id/disneyToolbar"/>
+            <Transform android:translationX="@dimen/padding_large" android:scaleX="0.6" android:scaleY="0.6"/>
+        </Constraint>
+        <Constraint android:id="@+id/landingPageTypeChipLayout">
+            <Layout android:layout_width="@dimen/match_constraints" android:layout_height="wrap_content" android:layout_marginStart="@dimen/padding_medium" android:layout_marginEnd="@dimen/padding_medium" app:layout_constraintBottom_toBottomOf="@+id/landingPageTextView" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/landingPageTextView" app:layout_constraintTop_toTopOf="@+id/landingPageTextView"/>
+        </Constraint>
+        <Constraint android:id="@+id/landingPageRecyclerView">
+            <Layout android:layout_width="@dimen/match_constraints" android:layout_height="@dimen/match_constraints" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/disneyToolbar"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

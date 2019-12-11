@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_grey8" android:id="@+id/browsable_section_item_title" android:paddingBottom="@dimen/padding_extra_small" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/body_copy_line_spacing_extra"/>
+    <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_white" android:id="@+id/browsable_section_item_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/details_content_padding" android:lineSpacingExtra="@dimen/body_copy_line_spacing_extra" android:layout_marginEnd="12dp"/>
+</merge>

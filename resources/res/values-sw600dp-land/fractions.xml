@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="editorial_guide_hero_image_ratio">1.78</fraction>
+    <fraction name="guide_ratio_background">2.19</fraction>
+    <fraction name="left_guide_percentage">0.2</fraction>
+    <fraction name="legal_center_guideline_end">0.79</fraction>
+    <fraction name="legal_center_guideline_start">0.21</fraction>
+    <fraction name="onboarding_width">0.375</fraction>
+    <fraction name="paywall_bias">0</fraction>
+    <fraction name="profiles_guideline_end">0.81</fraction>
+    <fraction name="profiles_guideline_start">0.19</fraction>
+    <fraction name="right_guide_percentage">0.8</fraction>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="24dp" android:width="24dp" android:viewportWidth="40" android:viewportHeight="40">
+    <path android:name="content" android:fillColor="?attr/circleButtonBackgroundColor" android:pathData="M20,20m-17.333,0a17.333,17.333 0,1 1,34.666 0a17.333,17.333 0,1 1,-34.666 0" android:strokeColor="?attr/circleButtonBorderColor" android:strokeWidth="2" android:fillType="1"/>
+    <path android:name="icon" android:fillColor="?attr/circleButtonContentColor" android:pathData="M25.15,18.483h-3.633V14.85a1.517,1.517 0,0 0,-3.034 0v3.633H14.85a1.517,1.517 0,0 0,0 3.034h3.633v3.633a1.517,1.517 0,0 0,3.034 0v-3.633h3.633a1.517,1.517 0,1 0,0 -3.034z" android:fillType="0"/>
+</vector>

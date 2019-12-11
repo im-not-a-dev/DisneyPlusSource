@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="base_playback_scenario_overrides">
+    </array>
+    <array name="defaultAmazonWhitelist">
+    </array>
+    <array name="defaultGoogleWhitelist">
+        <item>USD</item>
+        <item>EUR</item>
+    </array>
+</resources>

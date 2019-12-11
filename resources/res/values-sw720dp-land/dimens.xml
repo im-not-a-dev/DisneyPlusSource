@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_container_inter_item_margin">14dp</dimen>
+    <dimen name="paywall_background_guideline">0.7</dimen>
+    <dimen name="paywall_content_guideline">0.4</dimen>
+    <dimen name="vader_grid_item_margin">14dp</dimen>
+    <dimen name="vader_grid_start_margin">27dp</dimen>
+</resources>

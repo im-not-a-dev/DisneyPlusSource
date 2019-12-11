@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/$ic_file_dl_queued_large__0">
+    <target android:name="group_1" android:animation="@drawable/$ic_file_dl_queued_large__1"/>
+    <target android:name="path_3" android:animation="@drawable/$ic_file_dl_queued_large__2"/>
+</animated-vector>

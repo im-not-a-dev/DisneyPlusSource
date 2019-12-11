@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textAppearance="@style/Disney.TextAppearance.H1" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="211dp" android:layout_marginBottom="33dp" android:text="@string/help_link_1_text" android:lineSpacingExtra="5sp" android:textAlignment="center"/>
+    <TextView android:textAppearance="@style/Disney.TextAppearance.H3" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_helpscreen_copy" android:lineSpacingExtra="5sp" android:textAlignment="center"/>
+    <TextView android:textAppearance="@style/Disney.TextAppearance.H3" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_helpscreen_url" android:lineSpacingExtra="5sp" android:textAlignment="center"/>
+</LinearLayout>

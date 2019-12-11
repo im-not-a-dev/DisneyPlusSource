@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_activated="true">
+        <objectAnimator android:interpolator="@android:interpolator/decelerate_quint" android:duration="@integer/profile_selection_duration_millis" android:valueFrom="0.6" android:valueTo="1" android:valueType="floatType" android:propertyName="alpha"/>
+    </item>
+    <item android:state_activated="false">
+        <objectAnimator android:interpolator="@android:interpolator/decelerate_quint" android:duration="@integer/profile_selection_duration_millis" android:valueFrom="1" android:valueTo="0.6" android:valueType="floatType" android:propertyName="alpha"/>
+    </item>
+</selector>

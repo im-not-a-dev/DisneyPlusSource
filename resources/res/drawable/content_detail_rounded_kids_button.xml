@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:color="@color/anakin_button_primary_pressed">
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <shape android:shape="oval">
+                    <gradient android:startColor="@color/anakin_button_primary_disabled_grad1" android:endColor="@color/anakin_button_primary_disabled_grad2" android:angle="270"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="oval">
+                    <gradient android:startColor="@color/anakin_button_primary_grad1" android:endColor="@color/anakin_button_primary_grad2" android:angle="270" android:centerColor="@color/anakin_button_primary_grad1_5"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

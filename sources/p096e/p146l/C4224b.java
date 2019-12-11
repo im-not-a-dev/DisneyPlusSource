@@ -1,0 +1,66 @@
+package p096e.p146l;
+
+/* renamed from: e.l.b */
+/* compiled from: R */
+public final class C4224b {
+    public static final int lb_action_text_color = 2131099853;
+    public static final int lb_background_protection = 2131099854;
+    public static final int lb_basic_card_bg_color = 2131099855;
+    public static final int lb_basic_card_content_text_color = 2131099856;
+    public static final int lb_basic_card_info_bg_color = 2131099857;
+    public static final int lb_basic_card_title_text_color = 2131099858;
+    public static final int lb_browse_header_color = 2131099859;
+    public static final int lb_browse_header_description_color = 2131099860;
+    public static final int lb_browse_title_color = 2131099861;
+    public static final int lb_control_button_color = 2131099862;
+    public static final int lb_control_button_text = 2131099863;
+    public static final int lb_default_brand_color = 2131099864;
+    public static final int lb_default_brand_color_dark = 2131099865;
+    public static final int lb_default_search_color = 2131099866;
+    public static final int lb_default_search_icon_color = 2131099867;
+    public static final int lb_details_description_body_color = 2131099868;
+    public static final int lb_details_description_color = 2131099869;
+    public static final int lb_details_overview_bg_color = 2131099870;
+    public static final int lb_error_background_color_opaque = 2131099871;
+    public static final int lb_error_background_color_translucent = 2131099872;
+    public static final int lb_error_message = 2131099873;
+    public static final int lb_grey = 2131099874;
+    public static final int lb_guidedactions_background = 2131099875;
+    public static final int lb_guidedactions_background_dark = 2131099876;
+    public static final int lb_guidedactions_item_unselected_text_color = 2131099877;
+    public static final int lb_list_item_unselected_text_color = 2131099878;
+    public static final int lb_media_background_color = 2131099879;
+    public static final int lb_page_indicator_arrow_background = 2131099880;
+    public static final int lb_page_indicator_arrow_shadow = 2131099881;
+    public static final int lb_page_indicator_dot = 2131099882;
+    public static final int lb_playback_background_progress_color = 2131099883;
+    public static final int lb_playback_controls_background_dark = 2131099884;
+    public static final int lb_playback_controls_background_light = 2131099885;
+    public static final int lb_playback_controls_time_text_color = 2131099886;
+    public static final int lb_playback_icon_highlight_no_theme = 2131099887;
+    public static final int lb_playback_media_row_highlight_color = 2131099888;
+    public static final int lb_playback_media_row_separator_highlight_color = 2131099889;
+    public static final int lb_playback_now_playing_bar_color = 2131099890;
+    public static final int lb_playback_progress_color_no_theme = 2131099891;
+    public static final int lb_playback_progress_secondary_color_no_theme = 2131099892;
+    public static final int lb_playback_secondary_progress_color = 2131099893;
+    public static final int lb_preference_item_category_text_color = 2131099894;
+    public static final int lb_search_bar_hint = 2131099895;
+    public static final int lb_search_bar_hint_speech_mode = 2131099896;
+    public static final int lb_search_bar_text = 2131099897;
+    public static final int lb_search_bar_text_speech_mode = 2131099898;
+    public static final int lb_search_plate_hint_text_color = 2131099899;
+    public static final int lb_speech_orb_not_recording = 2131099900;
+    public static final int lb_speech_orb_not_recording_icon = 2131099901;
+    public static final int lb_speech_orb_not_recording_pulsed = 2131099902;
+    public static final int lb_speech_orb_recording = 2131099903;
+    public static final int lb_tv_white = 2131099904;
+    public static final int lb_view_dim_mask_color = 2131099905;
+    public static final int notification_action_color_filter = 2131099950;
+    public static final int notification_icon_bg_color = 2131099951;
+    public static final int notification_material_background_media_default_color = 2131099952;
+    public static final int primary_text_default_material_dark = 2131099965;
+    public static final int ripple_material_light = 2131099972;
+    public static final int secondary_text_default_material_dark = 2131099975;
+    public static final int secondary_text_default_material_light = 2131099976;
+}

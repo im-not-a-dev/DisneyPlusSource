@@ -1,0 +1,8 @@
+package com.bamtech.sdk4.internal.identity.bam;
+
+import kotlin.Metadata;
+
+@Metadata(mo31005bv = {1, 0, 3}, mo31006d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\b`\u0018\u00002\u00020\u0001J@\u0010\u0002\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00040\u00032\u0006\u0010\u0005\u001a\u00020\u00062\u0016\u0010\u0007\u001a\u0012\u0012\u0004\u0012\u00020\t\u0012\u0004\u0012\u00020\t0\bj\u0002`\n2\u000e\u0010\u000b\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00040\fH&J;\u0010\r\u001a\u00020\u000e\"\u0004\b\u0000\u0010\u000f2\u0006\u0010\u0005\u001a\u00020\u00062\u0016\u0010\u0007\u001a\u0012\u0012\u0004\u0012\u00020\t\u0012\u0004\u0012\u00020\t0\bj\u0002`\n2\u0006\u0010\u0010\u001a\u0002H\u000fH&¢\u0006\u0002\u0010\u0011¨\u0006\u0012"}, mo31007d2 = {"Lcom/bamtech/sdk4/internal/identity/bam/BaseIdentityClient;", "", "getIdentity", "Lio/reactivex/Single;", "Lcom/bamtech/sdk4/identity/bam/Identity;", "transaction", "Lcom/bamtech/sdk4/internal/service/ServiceTransaction;", "tokenMap", "", "", "Lcom/bamtech/sdk4/internal/service/TokenMap;", "identityType", "Ljava/lang/Class;", "updateAttributes", "Lio/reactivex/Completable;", "T", "attributes", "(Lcom/bamtech/sdk4/internal/service/ServiceTransaction;Ljava/util/Map;Ljava/lang/Object;)Lio/reactivex/Completable;", "plugin-identity-bam"}, mo31008k = 1, mo31009mv = {1, 1, 15})
+/* compiled from: BaseIdentityClient.kt */
+public interface BaseIdentityClient {
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bamtechmedia.dominguez.collections.items.ShelfItemLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/shelfItemLayout" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="@dimen/brand_shelf_list_item_corner" app:foreground="@drawable/selected_brand_item_border">
+    <androidx.cardview.widget.CardView android:id="@+id/playerViewLayout" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" app:cardCornerRadius="@dimen/brand_shelf_list_item_corner" app:cardElevation="0dp">
+        <com.google.android.exoplayer2.p391ui.PlayerView android:id="@+id/player_view" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toTopOf="0" app:use_controller="false"/>
+    </androidx.cardview.widget.CardView>
+    <ImageView android:id="@+id/brandTileBackground" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/brand_tile_bg" android:contentDescription="@null"/>
+    <com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView android:id="@+id/brandNormalLogoImage" android:layout_width="match_parent" android:layout_height="@dimen/match_constraints" android:scaleType="centerCrop"/>
+    <com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView android:id="@+id/brandWhiteLogoImage" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/match_constraints" android:scaleType="centerCrop"/>
+</com.bamtechmedia.dominguez.collections.items.ShelfItemLayout>

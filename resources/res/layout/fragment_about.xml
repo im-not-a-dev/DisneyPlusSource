@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/leftGuide" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="@fraction/left_guide_percentage"/>
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/rightGuide" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="@fraction/right_guide_percentage"/>
+    <include android:id="@+id/aboutBackButton" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/back_layout"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/aboutRecyclerView" android:layout_height="0dp" android:layout_marginTop="@dimen/padding_small" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/rightGuide" app:layout_constraintStart_toStartOf="@+id/leftGuide" app:layout_constraintTop_toBottomOf="@+id/aboutBackButton" style="@style/Disney.Layout.Guided"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

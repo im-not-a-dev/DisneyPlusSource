@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="16dp" android:width="14dp" android:viewportWidth="36" android:viewportHeight="36">
+    <path android:fillColor="@color/vader_black" android:pathData="M12,7.5l0,21l16.5,-10.5z" android:strokeColor="#00000000" android:strokeWidth="1"/>
+</vector>

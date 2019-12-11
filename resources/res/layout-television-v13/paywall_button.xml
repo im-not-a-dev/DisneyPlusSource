@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bamtechmedia.dominguez.core.design.widgets.LoadingButton xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/paywallBtn" android:layout_width="273dp" android:layout_height="@dimen/btn_min_height" android:layout_marginBottom="@dimen/padding_small" style="@style/Disney.Button.Primary.Large"/>

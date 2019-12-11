@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paywall_background_guideline">0.75</dimen>
+    <dimen name="paywall_content_guideline">0.4</dimen>
+</resources>

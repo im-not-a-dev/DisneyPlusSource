@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:background="#323540" android:padding="@dimen/design_sample_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopyHeadline" android:textColor="@color/vader_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_medium" android:text="Primary"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_medium" android:text="Large / Primary" style="@style/Disney.Button.Primary.Large"/>
+        <Button android:enabled="false" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_medium" android:text="Large / Primary / Disabled" style="@style/Disney.Button.Primary.Large"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Large" android:layout_weight="4" style="@style/Disney.Button.Primary.Large"/>
+            <Space android:layout_width="@dimen/padding_large" android:layout_height="wrap_content"/>
+            <Button android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="medium" android:layout_weight="3" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" style="@style/Disney.Button.Primary.Medium"/>
+            <Space android:layout_width="@dimen/padding_large" android:layout_height="wrap_content"/>
+            <Button android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="small" android:layout_weight="2" style="@style/Disney.Button.Primary.Small"/>
+        </LinearLayout>
+        <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopyHeadline" android:textColor="@color/vader_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_medium" android:layout_marginBottom="@dimen/padding_medium" android:text="Secondary"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_medium" android:text="Large / Secondary" style="@style/Disney.Button.Secondary.Large"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Large" android:layout_weight="4" style="@style/Disney.Button.Secondary.Large"/>
+            <Space android:layout_width="@dimen/padding_large" android:layout_height="wrap_content"/>
+            <Button android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="medium" android:layout_weight="3" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" style="@style/Disney.Button.Secondary.Medium"/>
+            <Space android:layout_width="@dimen/padding_large" android:layout_height="wrap_content"/>
+            <Button android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="small" android:layout_weight="2" style="@style/Disney.Button.Secondary.Small"/>
+        </LinearLayout>
+        <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopyHeadline" android:textColor="@color/vader_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_medium" android:layout_marginBottom="@dimen/padding_medium" android:text="Destruction"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_medium" android:text="Large / Destruction" style="@style/Disney.Button.Destruction.Large"/>
+    </LinearLayout>
+</ScrollView>

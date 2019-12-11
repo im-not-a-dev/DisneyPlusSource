@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="@dimen/padding_medium" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_medium" android:text="avenir roman"/>
+    <TextView android:textColor="@color/vader_black" android:id="@+id/txt_avenir_roman" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/test_text_english" android:fontFamily="@font/avenir55_roman"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_medium" android:layout_marginBottom="@dimen/padding_medium" android:text="avenir heavy"/>
+    <TextView android:textColor="@color/vader_black" android:id="@+id/txt_avenir_heavy" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/test_text_english" android:fontFamily="@font/avenir85_heavy"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_medium" android:layout_marginBottom="@dimen/padding_medium" android:text="avenir black"/>
+    <TextView android:textColor="@color/vader_black" android:id="@+id/txt_avenir_black" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/test_text_english" android:fontFamily="@font/avenir95_black"/>
+</LinearLayout>

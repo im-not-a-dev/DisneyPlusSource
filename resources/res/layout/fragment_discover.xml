@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/rootView" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBar" android:background="@color/transparent" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="0dp" app:elevation="0dp">
+            <include layout="@layout/fragment_discover_header"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/discoverRecyclerView" android:paddingBottom="@dimen/collection_padding_bottom" android:fitsSystemWindows="false" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        <com.bamtechmedia.dominguez.core.design.widgets.NoConnectionView android:layout_gravity="center" android:id="@+id/discoverNoConnectionView" android:layout_width="@dimen/no_connection_view_width" android:layout_height="@dimen/no_connection_view_height"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <ImageView android:id="@+id/statusbarBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:adjustViewBounds="true" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/discoverProgressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" style="@style/CircularProgressbar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

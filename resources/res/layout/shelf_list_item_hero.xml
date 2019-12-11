@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bamtechmedia.dominguez.collections.items.ShelfItemLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/shelfItemLayout" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vader_hero_item_margin_top" app:foreground="@drawable/selected_item_border">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/heroItemContainer" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView android:id="@+id/poster" android:layout_width="match_parent" android:layout_height="0dp" android:scaleType="centerCrop" app:layout_constraintTop_toTopOf="0"/>
+        <com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView android:id="@+id/logo" android:layout_width="@dimen/match_constraints" android:layout_height="@dimen/match_constraints" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.bamtechmedia.dominguez.collections.items.ShelfItemLayout>

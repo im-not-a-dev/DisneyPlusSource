@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:drawable="@drawable/rw_01_speed" android:maxLevel="0"/>
+    <item android:drawable="@drawable/rw_02_speed" android:maxLevel="1"/>
+    <item android:drawable="@drawable/rw_03_speed" android:maxLevel="2"/>
+</level-list>

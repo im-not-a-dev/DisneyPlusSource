@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="?attr/themeBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.bamtechmedia.dominguez.core.design.widgets.DisneyTitleToolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" app:toolbarTitleText="@string/ui_language_setting"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:paddingTop="17dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingStart="19dp" android:paddingEnd="19dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+</LinearLayout>

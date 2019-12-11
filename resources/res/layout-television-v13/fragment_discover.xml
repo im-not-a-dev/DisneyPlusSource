@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/parentContainer" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ProgressBar android:layout_gravity="center" android:id="@+id/discoverProgressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/CircularProgressbar"/>
+    <FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleX="1.06" android:scaleY="1.06">
+        <com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView android:id="@+id/discoverFullBleedImage" android:layout_width="match_parent" android:layout_height="0dp" android:scaleType="centerCrop" android:alpha="0" app:floatRatio="3"/>
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/discoverRecyclerView" android:paddingBottom="@dimen/collection_padding_bottom" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    <com.bamtechmedia.dominguez.core.design.widgets.NoConnectionView android:layout_gravity="center" android:id="@+id/discoverNoConnectionView" android:layout_width="wrap_content" android:layout_height="@dimen/no_connection_view_height"/>
+</FrameLayout>

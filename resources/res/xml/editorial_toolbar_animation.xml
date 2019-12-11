@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <Transition app:constraintSetEnd="@+id/collapsed" app:constraintSetStart="@+id/expanded">
+        <OnSwipe app:dragDirection="0" app:touchAnchorId="@+id/editorialRecyclerView" app:touchAnchorSide="0"/>
+        <KeyFrameSet>
+            <KeyAttribute app:framePosition="0" app:motionTarget="@+id/editorialLogoTextView">
+                <CustomAttribute app:attributeName="alpha" app:customFloatValue="1"/>
+            </KeyAttribute>
+            <KeyAttribute app:framePosition="15" app:motionTarget="@+id/editorialLogoTextView">
+                <CustomAttribute app:attributeName="alpha" app:customFloatValue="0"/>
+            </KeyAttribute>
+            <KeyAttribute android:translationY="10dp" app:framePosition="15" app:motionTarget="@+id/editorialTopLogoImageView">
+                <CustomAttribute app:attributeName="alpha" app:customFloatValue="0"/>
+            </KeyAttribute>
+            <KeyAttribute app:framePosition="15" app:motionTarget="@+id/editorialTopLogoTextView">
+                <CustomAttribute app:attributeName="translationY" app:customDimension="10dp"/>
+            </KeyAttribute>
+            <KeyAttribute app:framePosition="25" app:motionTarget="@+id/editorialTopLogoImageView">
+                <CustomAttribute app:attributeName="alpha" app:customFloatValue="1"/>
+            </KeyAttribute>
+            <KeyAttribute app:framePosition="25" app:motionTarget="@+id/editorialTopLogoTextView">
+                <CustomAttribute app:attributeName="alpha" app:customFloatValue="1"/>
+            </KeyAttribute>
+            <KeyAttribute android:alpha="1" android:scaleX="1" android:scaleY="1" app:framePosition="0" app:motionTarget="@+id/editorialLogoImageView"/>
+            <KeyAttribute android:scaleX="0.6" android:scaleY="0.6" app:framePosition="10" app:motionTarget="@+id/editorialLogoImageView"/>
+            <KeyAttribute android:alpha="0" app:framePosition="15" app:motionTarget="@+id/editorialLogoImageView"/>
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet android:id="@+id/expanded"/>
+    <ConstraintSet android:id="@+id/collapsed">
+        <Constraint android:id="@+id/editorialBackgroundImageView">
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+        <Constraint android:id="@+id/editorialRecyclerView">
+            <Layout android:paddingTop="@dimen/editorial_top_padding" android:clipToPadding="false" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/editorialBackLayout"/>
+        </Constraint>
+        <Constraint android:id="@+id/editorialLogoTextView">
+            <PropertySet android:alpha="0"/>
+            <Transform android:scaleX="0.7" android:scaleY="0.7" app:pivotX="0.5"/>
+        </Constraint>
+        <Constraint android:gravity="center_vertical" android:id="@+id/editorialTopLogoTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:alpha="1" android:layout_marginStart="@dimen/padding_extra_small" app:layout_constraintBottom_toBottomOf="@+id/textHolderDummyView" app:layout_constraintEnd_toStartOf="@+id/editorialCastButton" app:layout_constraintStart_toEndOf="@+id/editorialBackLayout" app:layout_constraintTop_toTopOf="@+id/textHolderDummyView"/>
+        <Constraint android:id="@+id/editorialTopLogoImageView">
+            <PropertySet android:alpha="1"/>
+            <Transform android:layout_marginBottom="@dimen/padding_small"/>
+        </Constraint>
+        <Constraint android:id="@+id/editorialLogoImageView">
+            <PropertySet android:alpha="0"/>
+            <Transform android:scaleX="0.5" android:scaleY="0.5" app:pivotX="0.5"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

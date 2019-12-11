@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_focused="true" android:id="@+id/focused" android:drawable="@drawable/ic_chromecast_audio_subtitles"/>
+    <item android:id="@+id/unfocused" android:drawable="@drawable/ic_chromecast_audio_subtitles_unfocused"/>
+    <transition android:drawable="@drawable/ic_chromecast_audio_subtitles_to_focus" android:toId="@+id/focused" android:fromId="@+id/unfocused" android:reversible="true"/>
+</animated-selector>

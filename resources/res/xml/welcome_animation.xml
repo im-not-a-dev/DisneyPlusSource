@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <Transition android:id="@+id/transition_welcome" app:constraintSetEnd="@+id/end" app:constraintSetStart="@+id/start" app:duration="500" app:motionInterpolator="0"/>
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/welcomeButtonLogIn">
+            <PropertySet app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/viewSeparator">
+            <PropertySet app:visibilityMode="1"/>
+        </Constraint>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/welcomeLogo">
+            <Layout android:id="@+id/welcomeLogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_medium" app:layout_constraintBottom_toTopOf="@+id/welcomeDescriptionMain" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+            <Transform android:scaleX="1" android:scaleY="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/welcomeButtonLogIn">
+            <PropertySet app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/viewSeparator">
+            <PropertySet app:visibilityMode="1"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

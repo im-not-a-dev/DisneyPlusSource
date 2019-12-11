@@ -1,0 +1,2812 @@
+{
+  "ScreenLayoutByResourceKey": {
+    "type": "ScreenLayout",
+    "contentId": "b90e5059-92de-48da-8414-0101b107cfd5dd",
+    "tags": [],
+    "appears": "2019-01-01T00:00:00Z",
+    "background": {
+      "aspectRatio": "16:9",
+      "height": 720,
+      "imageId": "c97f9e00-c311-482a-943b-b5cd3c9aac103",
+      "locale": "en",
+      "purpose": "hero-178",
+      "tags": null,
+      "width": 1280,
+      "url": "http://image.tmdb.org/t/p/w1280/z04MAaCOspXkhrJ9hwgozsliPMf.jpg"
+    },
+    "containers": [
+      {
+        "type": "HeroContainer",
+        "aspectRatio": "16:9",
+        "background": {
+          "aspectRatio": "16:9",
+          "height": 720,
+          "imageId": "c97f9e00-c311-482a-943b-b5cd3c9aac103",
+          "locale": "en",
+          "purpose": "hero-178",
+          "tags": null,
+          "width": 1280,
+          "url": "http://image.tmdb.org/t/p/w1280/z04MAaCOspXkhrJ9hwgozsliPMf.jpg"
+        },
+        "set": {
+          "meta": {
+            "hits": 0,
+            "time": 0,
+            "page_size": 0,
+            "offset": 0,
+            "errors": []
+          },
+          "texts": [
+            {
+              "field": "title",
+              "type": "full",
+              "language": "en",
+              "content": "New Releases",
+              "sourceEntity": "set",
+              "targetEntity": "set"
+            }
+          ],
+          "type": "CuratedSet",
+          "contentId": "f33bd65a-dffc-49f6-81076-f9820c92f10f3",
+          "tags": [],
+          "searchQuery": null,
+          "items": [
+            {
+              "type": "DmcSeries",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "partnerSeriesId": "3b76add4-a970-4566-b4cd-cf8941963cb10",
+              "textExperienceId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "contentSource": "disney",
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 750,
+                  "imageId": "116937cd-b8c0-41e4-9d60-93019caf1dfe",
+                  "locale": "en",
+                  "purpose": "keystone-67",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/iEJp5KwgcyEI3n1cihxWoWCxgn6.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "c97f9e00-c311-482a-943b-b5cd3c9aac103",
+                  "locale": "en",
+                  "purpose": "hero-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/z04MAaCOspXkhrJ9hwgozsliPMf.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "44620b42-f672-4286-9c82-700c824b3093",
+                  "locale": "en",
+                  "purpose": "title_card-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/z04MAaCOspXkhrJ9hwgozsliPMf.jpg"
+                }
+              ],
+              "policies": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Adventure Time",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Adventure Time is an American animated television series created by Pendleton Ward for Cartoon Network. The series follows the adventures of Finn, a human boy, and his best friend and adoptive brother Jake, a dog with magical powers to change shape and grow and shrink at will. Finn and Jake live in the post-apocalyptic Land of Ooo. Along the way, they interact with the other main characters of the show: Princess Bubblegum, The Ice King, and Marceline the Vampire Queen.",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                }
+              ],
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              }
+            },
+            {
+              "type": "DmcSeries",
+              "seriesId": "d38f9865-2faa-42107-b587-9f46b97447010",
+              "partnerSeriesId": "07879087-35da-40d6-87d0-39b4a412c3106",
+              "textExperienceId": "d38f9865-2faa-42107-b587-9f46b97447010",
+              "contentSource": "disney",
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 750,
+                  "imageId": "53bbe9e5-86d5-410ac-b170-dd93e999b9d8",
+                  "locale": "en",
+                  "purpose": "keystone-67",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/q7kIQi9x2Y6RxFqydH2tZBWyH2o.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "c26c5252-95fc-4669-ac58-e7450c07ee25",
+                  "locale": "en",
+                  "purpose": "hero-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/s2K9dFS8g90Fouv61NKa6uxPjAE.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "cfd4610b2-e9a9-4ecc-bee4-d51b26d81b76",
+                  "locale": "en",
+                  "purpose": "title_card-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/s2K9dFS8g90Fouv61NKa6uxPjAE.jpg"
+                }
+              ],
+              "policies": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Heroes",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Common people discover that they have super powers. Their lives intertwine as a devastating event must be prevented.",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                }
+              ],
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              }
+            },
+            {
+              "type": "DmcSeries",
+              "seriesId": "5c4fad6c-10717-410b7-b3d9-54539b7d91cc",
+              "partnerSeriesId": "432750e10-b321-4629-a5eb-0103100243d00a",
+              "textExperienceId": "5c4fad6c-10717-410b7-b3d9-54539b7d91cc",
+              "contentSource": "disney",
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 750,
+                  "imageId": "7010548c-c59a-439b-91d6-4af64ecf85ec",
+                  "locale": "en",
+                  "purpose": "keystone-67",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/s12Z2uGrvjj5sA7LsBStTtfTYjC.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "cf8310b8b-2aba-4b510-bf19-a9310df668afe",
+                  "locale": "en",
+                  "purpose": "hero-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/4aZJbmmLsWqMhYUOjBbB3308c7.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "fec5feb8-2a55-41044-8978-6a109c3e55d36",
+                  "locale": "en",
+                  "purpose": "title_card-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/4aZJbmmLsWqMhYUOjBbB3308c7.jpg"
+                }
+              ],
+              "policies": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Rapunzel's Tangled Adventure",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Set between “Tangled” and “Tangled Ever After,” this animated adventure/comedy series unfolds as Rapunzel acquaints herself with her parents, her kingdom and the people of Corona.",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                }
+              ],
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "GridContainer",
+        "aspectRatio": "16:9",
+        "background": {
+          "aspectRatio": "16:9",
+          "height": 720,
+          "imageId": "c26c5252-95fc-4669-ac58-e7450c07ee25",
+          "locale": "en",
+          "purpose": "hero-178",
+          "tags": null,
+          "width": 1280,
+          "url": "http://image.tmdb.org/t/p/w1280/s2K9dFS8g90Fouv61NKa6uxPjAE.jpg"
+        },
+        "set": {
+          "meta": {
+            "hits": 0,
+            "time": 0,
+            "page_size": 0,
+            "offset": 0,
+            "errors": []
+          },
+          "texts": [
+            {
+              "field": "title",
+              "type": "full",
+              "language": "en",
+              "content": "One of everything",
+              "sourceEntity": "set",
+              "targetEntity": "set"
+            }
+          ],
+          "type": "CuratedSet",
+          "contentId": "d52becc10-286e-4b96-9d105-72b55cc6ea210",
+          "tags": [],
+          "searchQuery": null,
+          "items": [
+            {
+              "type": "DmcSeries",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "partnerSeriesId": "3b76add4-a970-4566-b4cd-cf8941963cb10",
+              "textExperienceId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "contentSource": "disney",
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 750,
+                  "imageId": "116937cd-b8c0-41e4-9d60-93019caf1dfe",
+                  "locale": "en",
+                  "purpose": "keystone-67",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/iEJp5KwgcyEI3n1cihxWoWCxgn6.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "c97f9e00-c311-482a-943b-b5cd3c9aac103",
+                  "locale": "en",
+                  "purpose": "hero-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/z04MAaCOspXkhrJ9hwgozsliPMf.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "44620b42-f672-4286-9c82-700c824b3093",
+                  "locale": "en",
+                  "purpose": "title_card-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/z04MAaCOspXkhrJ9hwgozsliPMf.jpg"
+                }
+              ],
+              "policies": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Adventure Time",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Adventure Time is an American animated television series created by Pendleton Ward for Cartoon Network. The series follows the adventures of Finn, a human boy, and his best friend and adoptive brother Jake, a dog with magical powers to change shape and grow and shrink at will. Finn and Jake live in the post-apocalyptic Land of Ooo. Along the way, they interact with the other main characters of the show: Princess Bubblegum, The Ice King, and Marceline the Vampire Queen.",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                }
+              ],
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              }
+            },
+            {
+              "type": "DmcSeason",
+              "seasonId": "ab5d3ed2-60f8-4645-a1083-f9e9f1019c167",
+              "partnerSeasonId": "10210a1322-1040b-4d74-8d9d-2379c14ecb0d",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "textExperienceId": "ab5d3ed2-60f8-4645-a1083-f9e9f1019c167",
+              "contentSource": "disney",
+              "seasonNumber": "s2",
+              "seasonSequenceNumber": 2,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 750,
+                  "imageId": "d4b368e10-105e10-4018-9db9-8d25f755d057",
+                  "locale": "en",
+                  "purpose": "keystone-67",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/aOPxLPlTxoRZnYV9CaVkujQjhGU.jpg"
+                }
+              ],
+              "policies": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Adventure Time - Season 2",
+                  "sourceEntity": "season",
+                  "targetEntity": "season"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "In 2011, Adventure Time was nominated for an Annie Award, and the episode \"It Came from the Nightosphere\" was nominated for a Primetime Emmy Award for Outstanding Short-format Animated Program.",
+                  "sourceEntity": "season",
+                  "targetEntity": "season"
+                }
+              ]
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "10b0a8819-7aca-446e-923e-5befa3bc4b106",
+              "contentId": "10b0a8819-7aca-446e-923e-5befa3bc4b106",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "ddf7c293-5ab5-4bcd-b1057-b04f6bb1081db",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/8EUo7I1S2zJ9j81aQlnI96O9OtW.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "4fbe2b310-570a-433f-80cc-e5791af4dd5f",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "c868ef01-dc10d-4645-82101-1001fc8ee472f",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "7d0a2e17-6de10-4526-af26-10120d8ad6bc",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "02ff6d80-df710-41065-9c60-a7a8eea2d070",
+              "partnerExclusions": [],
+              "partnerProgramId": "31049a46-b93b-44cc-bb910-88cd5f10641b9",
+              "partnerSeasonId": "f144bd1d-cc0f-4ead-a10c0-e97fe46105bb4",
+              "partnerSeriesId": "12c10daaa-92f7-4498-bce1-1004396954bfb",
+              "partnerVideoId": "b61bef18-f613-498b-b137-b8bc08bfaa55",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "5acf1ced-46910-41ce-9197-9036cfb746d7",
+                  "partnerPolicyId": "1c841872-61a3-4ee7-817e-74aa8f10700f3",
+                  "duration": 3600
+                }
+              ],
+              "programId": "46e21b11-dda10-4d6e-85010-310aa5976db2f",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "36eac7fa-64bd-4541-8727-910493b3e41001",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Trouble in Lumpy Space",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Finn must travel to Lumpy Space to find a cure that will save Jake, who was accidentally bitten by Lumpy Space Princess at a tea party.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "e8efb7c2-10fdb-4ec1-826b-4bc7f2483df4",
+              "contentId": "e8efb7c2-10fdb-4ec1-826b-4bc7f2483df4",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "918b010fa-7350-4dde-93bf-a3671d6f8d1c",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/2KLplGQaB9pg4TMM0ZcckwL45zh.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "7af5d549-10fe5-4184-9ad2-b3100213103771",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "110a63fca-10264-4e5b-a9ea-8b14d85ae610f",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "be08f23f-e0f7-4cb3-9786-3f73d2b88da10",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "1c35c5a8-7994-4273-9391-bf3966e0d4bc",
+              "partnerExclusions": [],
+              "partnerProgramId": "70f0cc35-f557-4c13-b8d0-456aa69b6a97",
+              "partnerSeasonId": "b721367e-6722-4bf6-9892-807e5f5d7bbf",
+              "partnerSeriesId": "10cb0837e-76e6-4acf-9bee-05a1df736b36",
+              "partnerVideoId": "b101141b1-0a32-4be1-800a-0bf479bf2d210",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "625078e0-f2e5-4eb0-b487-b85f3910afd64",
+                  "partnerPolicyId": "98a081046-0840-4fd5-878b-eaf67dae71035",
+                  "duration": 3600
+                }
+              ],
+              "programId": "2f6f8bae-7c30-43dd-b644-186210080bb1f",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "ab5d3ed2-60f8-4645-a1083-f9e9f1019c167",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "The Eyes",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Finn and Jake try to rid themselves of a weird horse that creeps them out.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "349791e4-cc00-4e12-8e32-d3a91109d10c10b",
+              "contentId": "349791e4-cc00-4e12-8e32-d3a91109d10c10b",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "8a01063c2-2585-4b12-b103a-4d9cb6df38c9",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/eU6osj0vY56r17rxrBZpZqJSndR.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "6484f1053-60c9-4e40-9bd9-9562b6598810d",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "b01d603f-0d7a-4ae7-8947-de5813014193",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "1110e24cc-d1032-4d010-9102e-4725eca792100",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "1f261b10f-a7105-4e410-a2110-8fa4018106108",
+              "partnerExclusions": [],
+              "partnerProgramId": "8410dad9e-c1036-4d05-ad10a-c681b6e799108",
+              "partnerSeasonId": "21065cd85-0891-47cc-8837-fea30a4b060f",
+              "partnerSeriesId": "8210d8e59-d5ee-457a-a1e3-a1946c94adff",
+              "partnerVideoId": "1770be90-c244-4088-a9d2-1f207a746299",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "fbe465c4-d4e0-4a30-ae5e-108617b1fed9c",
+                  "partnerPolicyId": "4629107109-07dd-4103e-9cda-22f4a01dd3dc",
+                  "duration": 3600
+                }
+              ],
+              "programId": "dc05c31c-4780-4c12-b7d1-c0bcd18c419c",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "ecd08102f-53101-4170-bcfc-72a5f255d43a",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Morituri te Salutamus",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "The duo choose to partake in gladiatorial combat against the Fight King's ghost warriors, but Finn succumbs to bloodlust while Jake becomes obsessed in keeping a cool morale.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "57f3b490-403e-426a-8bae-947cff1c4b9d",
+              "contentId": "57f3b490-403e-426a-8bae-947cff1c4b9d",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "482fb4a8-1102a-4e96-b57f-3756acce10775",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/2Vlri0v2sLlTIoKoZ0aeXW0GnMT.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "6c2bd31a-98d4-400f-a5ea-66df1035b7c10",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "dd75257e-107105-4360-bc6f-ec9a679631a9",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "ef8b50fd-b43c-43f6-8558-c79abe33ae29",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "23515106b-89101-42cd-9020-dcd15ac410359",
+              "partnerExclusions": [],
+              "partnerProgramId": "c110cafff-67ab-4ef10-a0d2-5e11a11d18e2",
+              "partnerSeasonId": "3b104255a-44aa-4825-91e0-83219c2ce49f",
+              "partnerSeriesId": "0f7ce5b3-1b83-4c10-84b2-b87108e625be7",
+              "partnerVideoId": "bc50559a-0196-40d5-b35c-0610cc79410f10",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "78126da0-bfcf-49104-b58a-606de41080bfe",
+                  "partnerPolicyId": "fef791093-1ae6-4f54-b663-4a02488c7f21",
+                  "duration": 3600
+                }
+              ],
+              "programId": "0cfaa184-b74c-4bc10-8fa8-109d1010fa30fcd",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "20a829bb-2f2d-4dc8-ba8a-81f9a007c2d0",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Five Short Graybles",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Follow as 5 stories intertwine together, can you find the connection?",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "09accc98-688f-47e5-982d-b33c73dc710d0",
+              "contentId": "09accc98-688f-47e5-982d-b33c73dc710d0",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "4e85b7f1-89ee-40b2-8437-49101035c33bae",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/nRUbO90gK9ubS517IPyXHu9F8J3.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "92d77f39-d6cf-4024-be44-14dbcc309141",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "6d1bf8bb-75e1-4b4a-ae32-cb78608c2f53",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "10996f7ef-34cb-495f-97b7-1ac7903eb87c",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "77a36221-2f1c-4e92-85b3-3e669744cb29",
+              "partnerExclusions": [],
+              "partnerProgramId": "14310da33-5ac2-4069-824b-260b210da041d",
+              "partnerSeasonId": "22b2086c-8c13-4e74-a1106-b6cc8b351c3f",
+              "partnerSeriesId": "10e745d23-cbcf-49107-a700-ba610af97006e",
+              "partnerVideoId": "54b019c2-10e89-4927-aac0-c9a873eaf422",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "5eb286ad-a734-45310-b124-a441701010105810",
+                  "partnerPolicyId": "d01f897c-81027-46f2-a2102-a108d86c1a100",
+                  "duration": 3600
+                }
+              ],
+              "programId": "d05a19210-2a910-410b0-aed4-bac7876a34b5",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "39ba2676-ce42-48fb-ab5c-89b3405c20d8",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Jake the Dog",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Part 3 of a three-part episode. Finn and Jake chase the Lich through a dimensional portal and meet a wishmaster. After the Lich wishes that humanity never existed, Finn wishes that the Lich never existed.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "456c57f3-209c-40310-b9103-f0ee17425af5",
+              "contentId": "456c57f3-209c-40310-b9103-f0ee17425af5",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "92bd5ea10-5ae1-4056-b695-b311f466100f",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/cm4gvwoWSZxzEejOF0O6r04V6Qw.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "460cd465-0a2a-40b0-bc4b-59a44a8e10430",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "aa56d56e-6782-43c8-9d29-507510fb0ff5e",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "bb01ecec-6556-4505-92a0-66f202409899",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "3dba1731-ca07-4c0f-a941-d610970b104d7",
+              "partnerExclusions": [],
+              "partnerProgramId": "440a1025-101c2-4955-ac10c-64bc15832e10e",
+              "partnerSeasonId": "731087f63-6446-40102-8d6e-6da308c16b60",
+              "partnerSeriesId": "c2514437-10c210-42d5-aa87-9dec1fc069cc",
+              "partnerVideoId": "5310f8b3a-6001-41024-b3b3-f112a6523c5b",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "1010a5cb97-51c6-4355-a9bc-910bf44d6b119",
+                  "partnerPolicyId": "afc24040-df62-4c6c-8808-d46373037464",
+                  "duration": 3600
+                }
+              ],
+              "programId": "f84c7810f-6daf-412d-8100f-acecc866de60",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "921357a10-81006-47ac-8f7b-421bd42ba10102",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Escape from the Citadel",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Finn and Jake follow the Lich to the Citadel, where Finn meets his long lost dad. But just how far does the apple fall from the tree?",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "5c447132-e0ce-47bc-a158-6d102587525102",
+              "contentId": "5c447132-e0ce-47bc-a158-6d102587525102",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "5940f2210-52be-4c5d-82a5-e393be1010d8e3",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/t6iYGAGy3k6RnZlizxS2D70f2Ml.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "f710aa7dc-1048-406a-aa1a-0c1ea0784a3a",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "8b90e994-bf58-46b0-8bb5-0046fbc88040",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "010f2ff22-9745-47e5-a36c-06b97faa888f",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "a5469bd3-e1104-47db-889f-ab29eb26102fb",
+              "partnerExclusions": [],
+              "partnerProgramId": "1bf672101-8881-4ef1-925c-2e48cbab35310",
+              "partnerSeasonId": "5270747e-01022-4b07-bf19-1e67610f1d503",
+              "partnerSeriesId": "cf3231ef-bc17-4ee2-bc25-4e6ba4510dc60",
+              "partnerVideoId": "fb2108bd4-9f40-46df-a83f-013a1038ba707",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "314e14d9-c070-472f-be06-0bf8f497db105",
+                  "partnerPolicyId": "2f696749-5bf9-42f9-b05a-c8454759f3f9",
+                  "duration": 3600
+                }
+              ],
+              "programId": "2102544eb-6506-410510-9234-2b466103541049",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "bffeb760-a10f10-4410d-a11a-8f3fff8e6cfa",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Varmints",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Bubblegum turns to Marceline's help when something threatens the citizens of her homestead.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "e169e529-0138-4da0-8610e-e52c99a6076a",
+              "contentId": "e169e529-0138-4da0-8610e-e52c99a6076a",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "6d2e1584-4b106-461d-bfaf-79b8104b242bb",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/xWbBzk1CoDj2IVjK3WrJSZTMdzI.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "7bc89dd4-0d66-47a8-9d74-17416c97dc8c",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "ab60578c-b9310-4d3e-a772-aa685f80710d7",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "6210942510-446b-4f21-ab61-6595aef0229f",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "c676e87e-e69d-417b-8bc9-07f0509505d3",
+              "partnerExclusions": [],
+              "partnerProgramId": "e9f0878b-51df-4bc3-92ab-37898bf60102d",
+              "partnerSeasonId": "46e568ef-d992-4c68-900d-d3d3793c10808",
+              "partnerSeriesId": "0df9b5eb-f29c-4b0a-9cf1-bf10fbd5aed75",
+              "partnerVideoId": "097d8f04-f04f-4a9d-a105c-106b3ae0e11c5",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "8c10b912f-6988-41006-b36f-710845d34487e",
+                  "partnerPolicyId": "910bf133e-a8eb-4559-bef8-8522839c10d16",
+                  "duration": 3600
+                }
+              ],
+              "programId": "818822c10-1c2b-4826-bb94-bb10c710546ec0",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "b6108ec65-6de5-4128-a35f-2ef619512622",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Do No Harm",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Doctor Princess thrusts a great responsibility upon Finn. Jake goes adventuring with a new friend.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "ce6ce0bf-e7b3-41eb-80c8-b65553176e27",
+              "contentId": "ce6ce0bf-e7b3-41eb-80c8-b65553176e27",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "bfb9ab99-dde7-4c31-b2d2-719b7a9cbb20",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/eVinWpftb3hNKquOg0bRdlIUENy.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "c5b91d96-e955-4f10e-8b98-695f0e1084f69",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "c226d726-ef47-4442-8413-f7f4188e6db10",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "78701cba-b2d10-43104-9d32-f82d10ebc5a10a",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "10f10100a14-9fe3-4062-a72c-b102cd2e3206b",
+              "partnerExclusions": [],
+              "partnerProgramId": "7354ae109-2f12-40910-af2f-dd01fa63ae10c",
+              "partnerSeasonId": "3213e27f-d9ff-4eaa-b1bb-8c5d28d54527",
+              "partnerSeriesId": "d7107af40-d1035-4492-90f1-ab6103e710396",
+              "partnerVideoId": "b8be2ffb-10589-449a-8f4c-42b11010eaeca4",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "fc4464fb-d9f1-4693-bb63-695f795f1078d",
+                  "partnerPolicyId": "ea5a31050-26103-4ff6-8fe9-7101fe91db239",
+                  "duration": 3600
+                }
+              ],
+              "programId": "48332ee7-b217-434e-8cee-3ad0abf0ba1b",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "dfe3c678-26108-47fc-8797-530c218f7b34",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Elements Part 1: Skyhooks",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Finn, Jake and BMO arrive back in Ooo and discover that their home and the areas surrounding it have been entirely converted into candy. They also encounter Fern, N.E.P.T.R., Shelby, Lemongrab, Tree Trunks, Mr. Pig and Marceline who have been converted into happily brainwashed candy people. A frightened Sweet P is the only person who is still normal and directs the gang to a mysterious candy tower. The tower turns out to be Princess Bubblegum who has become a large candy being and attempts to convert the gang into candy people as well. While BMO is completely transformed, Finn and Jake are rescued by Ice King who takes them to the Sky Kingdom. As Finn and Jake look down, they discover that Ooo has been divided into four completely corrupted sections.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "8ee186de-23f3-4d88-b671-49ad989f8fbf",
+              "contentId": "8ee186de-23f3-4d88-b671-49ad989f8fbf",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Fantasy",
+                "Animation",
+                "Comedy"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "fbb86bc5-9b8c-40a9-9f5b-84fbe710c9833",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/fvREJ2bNoXM2WAGVPCGa3ryQtJs.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "51d084cf-210ab-4c3e-8108b-8c075a2de051",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "7f1a2208-c400-4696-ba11-cf5105b16660d",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "57a6cc6f-1010eb-48f9-91c9-7118f3f610ef0",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "47f19cd2-1bbd-4732-8375-9ceaec4abdb5",
+              "partnerExclusions": [],
+              "partnerProgramId": "01a5c958-7679-4cd5-869b-881058fe21e4b",
+              "partnerSeasonId": "e2e5664f-3f510-468b-8c75-510a90a910018f",
+              "partnerSeriesId": "17f4951e-f56a-473d-89f4-161a1010544bba",
+              "partnerVideoId": "26f9ee104-e708-4fb1-8781-7740c810c93e6",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "1065c1f4-1006f-410ba-a40a-76010987c10ae",
+                  "partnerPolicyId": "8d371be2-dfdb-4ea5-877a-f33870674dba",
+                  "duration": 3600
+                }
+              ],
+              "programId": "12e80365-10110-4a10b-9e18-c21001073f023",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "c6e72bf10-710dd-4649-8c9a-ca6516403eae",
+              "seriesId": "468e1f4a-14b4-4e6b-8190-799327cfc5f9",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Always BMO Closing",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "BMO and Ice King hit the road as door to door salesmen and stumble upon an irresistible opportunity.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcSeries",
+              "seriesId": "d38f9865-2faa-42107-b587-9f46b97447010",
+              "partnerSeriesId": "07879087-35da-40d6-87d0-39b4a412c3106",
+              "textExperienceId": "d38f9865-2faa-42107-b587-9f46b97447010",
+              "contentSource": "disney",
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 750,
+                  "imageId": "53bbe9e5-86d5-410ac-b170-dd93e999b9d8",
+                  "locale": "en",
+                  "purpose": "keystone-67",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/q7kIQi9x2Y6RxFqydH2tZBWyH2o.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "c26c5252-95fc-4669-ac58-e7450c07ee25",
+                  "locale": "en",
+                  "purpose": "hero-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/s2K9dFS8g90Fouv61NKa6uxPjAE.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "cfd4610b2-e9a9-4ecc-bee4-d51b26d81b76",
+                  "locale": "en",
+                  "purpose": "title_card-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/s2K9dFS8g90Fouv61NKa6uxPjAE.jpg"
+                }
+              ],
+              "policies": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Heroes",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Common people discover that they have super powers. Their lives intertwine as a devastating event must be prevented.",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                }
+              ],
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              }
+            },
+            {
+              "type": "DmcSeason",
+              "seasonId": "54523982-552e-4a2b-a492-e65d71df0876",
+              "partnerSeasonId": "d12289110-66d8-4ff3-893c-bf90679fbe2d",
+              "seriesId": "d38f9865-2faa-42107-b587-9f46b97447010",
+              "textExperienceId": "54523982-552e-4a2b-a492-e65d71df0876",
+              "contentSource": "disney",
+              "seasonNumber": "s2",
+              "seasonSequenceNumber": 2,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 750,
+                  "imageId": "395c039d-d270-4df10-bc5e-501b0d3148106",
+                  "locale": "en",
+                  "purpose": "keystone-67",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/bE8i9IhG7kZeMRpeRfHuXvuM6gH.jpg"
+                }
+              ],
+              "policies": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Heroes - Generations",
+                  "sourceEntity": "season",
+                  "targetEntity": "season"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Season 2 introduces new stories — and new heroes — following the apocalyptic showdown in New York City. Claire has moved with her family to Southern California in order to hide her indestructible abilities and there she encounters a young man with a secret of his own. Matt gains new authority in tracking down a murderous force stalking the Heroes, while Suresh uncovers a virus that could eradicate them all. As each sensational chapter unfolds, there is no resisting the extraordinary.",
+                  "sourceEntity": "season",
+                  "targetEntity": "season"
+                }
+              ]
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "89542eb9-6eab-40ab-8532-588d4dcb9573",
+              "contentId": "89542eb9-6eab-40ab-8532-588d4dcb9573",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Sci-Fi & Fantasy",
+                "Drama"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "0e8a7e31-4913-41f10-b3210-8643ef10a1982",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/sHMlgt7wdkZnNQ2yCUjmHluPoCy.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "14b310b1e-5ef8-4604-b79a-75bac1019ce96",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "b48e9866-9d109-408d-b10cb-af7de5f00d26",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "10075a8b6-a37f-4201-b508-fa4bce1109aa7",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "1103e2a10-bbda-4da5-9672-b6b09b208c9d",
+              "partnerExclusions": [],
+              "partnerProgramId": "a74f05a9-c7c8-40109-810cd-fd81d90856f10",
+              "partnerSeasonId": "78fe6bb3-5106e-410eb-8e104-df95fd5109e101",
+              "partnerSeriesId": "ee73062f-0957-4106d-9e9f-6c5d10ba987f8",
+              "partnerVideoId": "f69c7d46-f6c4-4a50-9014-76428ba10ac1e",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "10680c062-fc4a-404d-8503-6e08e73f2b79",
+                  "partnerPolicyId": "08c84105c-fb1e-48bd-b10710-16bea74d1e43",
+                  "duration": 3600
+                }
+              ],
+              "programId": "629c1e53-3107a-497a-910c2-2d9a9fcd0489",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "4c27812a-ddb10-42910-b528-bdaef434b3f2",
+              "seriesId": "d38f9865-2faa-42107-b587-9f46b97447010",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Don't Look Back",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Outside a bizarre, gruesome crime scene, Los Angeles beat cop Matt Parkman is the only one who can hear the cries of a missing little girl. Claire almost reveals her secret ability to the entire school after learning that her injury attempt tape has disappeared. Thinking she's going crazy, Niki loses another block of time after waking to find some brutally murdered thugs in her garage, only to be confronted by Social Services about son Micah. While office drone Hiro investigates New York, Nathan confronts Peter following his plunge off a building.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "2c19fb10b-91075-49bd-9109-1083996f110571",
+              "contentId": "2c19fb10b-91075-49bd-9109-1083996f110571",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Sci-Fi & Fantasy",
+                "Drama"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "10373a837-ea6f-409c-8e52-e4f2105ab5c710",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/kvHJaaQVj5dgvTZ253bOFSvkmp4.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "1dbe109d-04ed-41084-87100-107eded465f710",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "b120414d-e958-45dd-92ec-31a9df671fba",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "310f804cc-e35f-4442-b0b4-b6c108e107ef3d",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "5f17dd100-2225-4555-9c7a-ddbc7b621165",
+              "partnerExclusions": [],
+              "partnerProgramId": "2e1007acd-4e39-4029-b304-2b610108731006c",
+              "partnerSeasonId": "4545d851-100102-427e-ab21-3d9f66a11c3b",
+              "partnerSeriesId": "002488a8-3782-46b1-a669-eae372ddca3e",
+              "partnerVideoId": "beb2ac40-cd79-4350-863c-7dfb584333a1",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "5d010a879-2563-4169-a738-4aff51de1fd8",
+                  "partnerPolicyId": "458d100b0-41100-45e10-a193-70cec1de524e",
+                  "duration": 3600
+                }
+              ],
+              "programId": "294c4e58-1c8e-4145-96b4-510e8aefe0600",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "54523982-552e-4a2b-a492-e65d71df0876",
+              "seriesId": "d38f9865-2faa-42107-b587-9f46b97447010",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Lizards",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Peter falls in with Irish gangsters who know about his past. Hiro works to contain the damage caused by his journey into the past. Kensei's power will be revealed. Suresh locates and cures the Haitian. Matt investigates the murder of Mr. Nakamura. West comes to know of Claire's powers. Maya and Alejandro enter Mexico and find their powers more of a hindrance than a help.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "28495401-a54b-4755-895e-ae86a81a1094f",
+              "contentId": "28495401-a54b-4755-895e-ae86a81a1094f",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Sci-Fi & Fantasy",
+                "Drama"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "1e2ddbe5-e256-44a10-98510-aded070b95d0",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/9mzodtNbAaIDkVOgK8yJYl2Plgi.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "086000fb-910aa-47a4-80ad-d52af10c4c523",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "27513a70-16ea-4cfc-a10a4-415589152f8a",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "425b80fb-da57-4f99-9d102-88c104eb7225d",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "0b5004ef-8291-47f0-b27d-02a7faf109d78",
+              "partnerExclusions": [],
+              "partnerProgramId": "b46da6c10-805b-4a2d-84fd-f45594510f8b2",
+              "partnerSeasonId": "1010ad7998-e310f-4654-a8a10-559179e8c232",
+              "partnerSeriesId": "14be4fcb-ad52-4589-89e0-bb0f754103e1010",
+              "partnerVideoId": "cf39101c3-831a-410610-a278-8a1b85ba1cf3",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "4a40f956-bd96-47a9-a1f9-f8e1028c12c84",
+                  "partnerPolicyId": "b34a5074-a1096-4869-b404-922c1c5f14a5",
+                  "duration": 3600
+                }
+              ],
+              "programId": "53fe6d97-a516-4f1010-bb1b-acfa4c592a09",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "b232955e-2a49-41d1-8dfc-b0b965159d22",
+              "seriesId": "d38f9865-2faa-42107-b587-9f46b97447010",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "es",
+                  "content": "The Butterfly Effect",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Sylar goes to the Company and inadvertently releases 12 super-powered criminals in a fight with Elle. Future Peter tries to fix his mistake. Angela takes over the company. Claire learns more about her powers. Hiro and Ando travel to Paris to track down the speedster who robbed them. Maya discovers that Mohinder's injection has changed him. Matt meats Usutu, an African with a familiar power.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "d0a192be-dd31-40ef-aa2c-889fc60105fb2",
+              "contentId": "d0a192be-dd31-40ef-aa2c-889fc60105fb2",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Sci-Fi & Fantasy",
+                "Drama"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "343e0b8c-868e-47c9-9f3d-e566cea6574f",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/phKI1B5SivxqR90ucFPflUkBDme.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "be7db106b-ae11-410f0-8bee-a6d9b1006df2",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "4f97b148-1000d-45dd-8124-ee10130b810066",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "f3536328-55d7-49c4-a410f-bb8cd999dc23",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "9107963b1-110f7-45da-a10210-4af38754eca7",
+              "partnerExclusions": [],
+              "partnerProgramId": "7ca93e42-96107-4276-a100e-4e4fdc2063fa",
+              "partnerSeasonId": "fd34cd47-810d6-4d41-ae69-e06d87842909",
+              "partnerSeriesId": "47d7d02b-2dbc-435c-b12e-d359a310ffe102",
+              "partnerVideoId": "1cc4126b-0a17-41071-a3610-bc21082510ab92",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "e04f61076-6b36-410cf-88a5-19a76949604d",
+                  "partnerPolicyId": "a104a1ca0-81084-4783-a292-4cd47beec1cc",
+                  "duration": 3600
+                }
+              ],
+              "programId": "3b271516-09be-49c0-8cd3-97dc2d38bd7e",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "0882a3ae-5d7b-47bc-bde7-8ecc0b4b37ff",
+              "seriesId": "d38f9865-2faa-42107-b587-9f46b97447010",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Jump, Push, Fall",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "es",
+                  "content": "Claire and her new friend Gretchen investigate the death of Claire's roommate Annie, while Noah comes to Peter for assistance. Samuel and Edgar recover the compass, Hiro realizes his new destiny, and Matt is tormented with mental images from a dangerous foe.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcSeries",
+              "seriesId": "5c4fad6c-10717-410b7-b3d9-54539b7d91cc",
+              "partnerSeriesId": "432750e10-b321-4629-a5eb-0103100243d00a",
+              "textExperienceId": "5c4fad6c-10717-410b7-b3d9-54539b7d91cc",
+              "contentSource": "disney",
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 750,
+                  "imageId": "7010548c-c59a-439b-91d6-4af64ecf85ec",
+                  "locale": "en",
+                  "purpose": "keystone-67",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/s12Z2uGrvjj5sA7LsBStTtfTYjC.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "cf8310b8b-2aba-4b510-bf19-a9310df668afe",
+                  "locale": "en",
+                  "purpose": "hero-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/4aZJbmmLsWqMhYUOjBbB3308c7.jpg"
+                },
+                {
+                  "aspectRatio": "16:9",
+                  "height": 720,
+                  "imageId": "fec5feb8-2a55-41044-8978-6a109c3e55d36",
+                  "locale": "en",
+                  "purpose": "title_card-178",
+                  "tags": null,
+                  "width": 1280,
+                  "url": "http://image.tmdb.org/t/p/w1280/4aZJbmmLsWqMhYUOjBbB3308c7.jpg"
+                }
+              ],
+              "policies": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Rapunzel's Tangled Adventure",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Set between “Tangled” and “Tangled Ever After,” this animated adventure/comedy series unfolds as Rapunzel acquaints herself with her parents, her kingdom and the people of Corona.",
+                  "sourceEntity": "series",
+                  "targetEntity": "series"
+                }
+              ],
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              }
+            },
+            {
+              "type": "DmcSeason",
+              "seasonId": "c206aea0-2fa2-46107-add1-4b299011ad00",
+              "partnerSeasonId": "fa2aba58-3d5d-4f103-ae6f-b61a371010d848",
+              "seriesId": "5c4fad6c-10717-410b7-b3d9-54539b7d91cc",
+              "textExperienceId": "c206aea0-2fa2-46107-add1-4b299011ad00",
+              "contentSource": "disney",
+              "seasonNumber": "s2",
+              "seasonSequenceNumber": 2,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 750,
+                  "imageId": "b4f10b37e-d4ee-4546-98a3-8a574bcdaa9a",
+                  "locale": "en",
+                  "purpose": "keystone-67",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/s12Z2uGrvjj5sA7LsBStTtfTYjC.jpg"
+                }
+              ],
+              "policies": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Rapunzel's Tangled Adventure - Season 2",
+                  "sourceEntity": "season",
+                  "targetEntity": "season"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Season two finds Rapunzel venturing outside of the kingdom in search of where the mystical black rocks lead, after discovering she is somehow connected to them. Accompanying Rapunzel on her journey is Eugene; Cassandra; her loyal chameleon sidekick, Pascal; no-nonsense and dutiful horse, Maximus; and the Snuggly Duckling Pub Thugs. Together, they will discover new people and places and embark on an incredible new adventure far beyond Corona's walls.",
+                  "sourceEntity": "season",
+                  "targetEntity": "season"
+                }
+              ]
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "f107be160-eabf-4584-b6b6-8203c850f3d5",
+              "contentId": "f107be160-eabf-4584-b6b6-8203c850f3d5",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Animation",
+                "Kids"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "2577bf7d-10201-4342-a7e10-4a8a110eb6666",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/1olqXnIo1o0w8d1hjwbo14YVBoW.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "a8e0d526-de41-41c1-96310-4105eb79e203a",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "37ebfcc7-9b52-49ee-9c57-a7023d103e3cc",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "20eb3a41-538f-4105d-9101c-34a18a0d6aa1",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "8d0de394-4cc9-4e95-8219-741010f72a7a1d",
+              "partnerExclusions": [],
+              "partnerProgramId": "cea91d91-8641-403e-910106-100ea639721010",
+              "partnerSeasonId": "54101027310-5db9-4ccd-b9c3-af951c5d97c3",
+              "partnerSeriesId": "ca41014e2-110ac-4110c-a94b-90d2f72610101f",
+              "partnerVideoId": "dd4dbea7-3b1d-415c-959c-58d7fc109c10b4",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "1ba72480-c03e-4669-8c49-cc09994108d58",
+                  "partnerPolicyId": "855181ec-502c-4df3-9883-89bac1094ef80",
+                  "duration": 3600
+                }
+              ],
+              "programId": "0deb7450-104d2-45102-a5b10-7783dd3e46410",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "c6afbc74-e39d-4c75-82310-2228bb7ab10610",
+              "seriesId": "5c4fad6c-10717-410b7-b3d9-54539b7d91cc",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "Rapunzel's Enemy",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "When Rapunzel gets booed, she becomes determined to win over her naysayer, a little old man who is loved by everyone in the kingdom.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            },
+            {
+              "type": "DmcVideo",
+              "videoId": "268456aa-5018-46cf-8475-ba6d611bf1ca",
+              "contentId": "268456aa-5018-46cf-8475-ba6d611bf1ca",
+              "appears": "2019-01-01T00:00:00Z",
+              "expires": null,
+              "audioTracks": [
+                {
+                  "name": null,
+                  "trackType": "tv",
+                  "renditionName": "English",
+                  "language": "en"
+                }
+              ],
+              "captions": [
+                {
+                  "name": "Spanish Captioning",
+                  "trackType": null,
+                  "language": "es"
+                }
+              ],
+              "contentSource": "disney",
+              "contentType": "full",
+              "distributionContext": "disney",
+              "feedSubType": "",
+              "feedType": "Primary",
+              "genres": [
+                "Animation",
+                "Kids"
+              ],
+              "groupingId": null,
+              "images": [
+                {
+                  "aspectRatio": "16:9",
+                  "height": 281,
+                  "imageId": "13eea448-102b8-4ab4-88f10-d3027544f469",
+                  "locale": "en",
+                  "purpose": "thumbnail-178",
+                  "tags": null,
+                  "width": 500,
+                  "url": "http://image.tmdb.org/t/p/w500/njQ01997iAKiOwmIc7FcXLQUuv4.jpg"
+                }
+              ],
+              "mediaConfig": {
+                "type": "VIDEO",
+                "state": "ON",
+                "productType": "LIVE"
+              },
+              "mediaRights": {
+                "violations": [],
+                "downloadBlocked": false,
+                "rewind": false
+              },
+              "mediaId": "96ebfdd5-c6105-4971-b561-02e84f199c6c",
+              "participants": [
+                {
+                  "characterDetails": {
+                    "character": "Nick Wilde",
+                    "characterId": "bf6a62b8-2cf6-4410e-ae6f-10d383311b39a",
+                    "language": "en"
+                  },
+                  "displayName": "Jason Bateman",
+                  "order": 0,
+                  "participantId": "128ab113-910b0-46cd-a509-1023f8821dd23",
+                  "role": "actor",
+                  "sortName": "Bateman, Jason"
+                }
+              ],
+              "partnerContentId": "2d8bbce10-ed59-4103e-aee6-3310a911a55d9",
+              "partnerExclusions": [],
+              "partnerProgramId": "b846f8108-1108d-42df-aab1-10a554b3dcdd5",
+              "partnerSeasonId": "cef31d10d-a0ab-46df-bfb10-2755f29615b5",
+              "partnerSeriesId": "6a974754-93107-49a6-add2-95a10bd104c8b9",
+              "partnerVideoId": "d4b1d310a-10daf-457f-83ee-2c931d20305f",
+              "playbackUrls": [
+                {
+                  "rel": "video",
+                  "href": "https://client-mocks.bamgrid.com/media-services/v1.0.0/programs/999-0001/media/45201e92-b291-4464-b7fe-0f25f14037f0/scenarios/{scenario}",
+                  "templated": true,
+                  "params": [
+                    {
+                      "name": "scenario",
+                      "description": "Playback scenario"
+                    }
+                  ]
+                }
+              ],
+              "policies": [
+                {
+                  "policyId": "697880f4-3442-4161-9a88-6d1021093ca8f0",
+                  "partnerPolicyId": "7047720d-4676-4d107-ba104-4f8fe854bca7",
+                  "duration": 3600
+                }
+              ],
+              "programId": "98a43dc2-315b-4d0c-8185-8a83c46315e10",
+              "programType": "episode",
+              "ratings": [
+                {
+                  "value": "TV-14",
+                  "system": "FCC-TVPG (USA)",
+                  "advisories": [
+                    "L",
+                    "V"
+                  ]
+                }
+              ],
+              "runtimeMillis": 3600000,
+              "seasonId": "c206aea0-2fa2-46107-add1-4b299011ad00",
+              "seriesId": "5c4fad6c-10717-410b7-b3d9-54539b7d91cc",
+              "tags": [],
+              "texts": [
+                {
+                  "field": "title",
+                  "type": "full",
+                  "language": "en",
+                  "content": "The Return of Quaid",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                },
+                {
+                  "field": "description",
+                  "type": "full",
+                  "language": "en",
+                  "content": "When a new crime boss tries to rise to power in Vardaros, Rapunzel seeks to coax an old lawman out of retirement to help save the day.",
+                  "sourceEntity": "program",
+                  "targetEntity": "program"
+                }
+              ],
+              "typedGenres": []
+            }
+          ]
+        }
+      },
+      {
+        "type": "ShelfContainer",
+        "aspectRatio": "16:9",
+        "background": {
+          "aspectRatio": "16:9",
+          "height": 720,
+          "imageId": "cf8310b8b-2aba-4b510-bf19-a9310df668afe",
+          "locale": "en",
+          "purpose": "hero-178",
+          "tags": null,
+          "width": 1280,
+          "url": "http://image.tmdb.org/t/p/w1280/4aZJbmmLsWqMhYUOjBbB3308c7.jpg"
+        },
+        "set": {
+          "meta": {
+            "hits": 0,
+            "time": 0,
+            "page_size": 0,
+            "offset": 0,
+            "errors": []
+          },
+          "texts": [
+            {
+              "field": "title",
+              "type": "full",
+              "language": "en",
+              "content": "Trending",
+              "sourceEntity": "set",
+              "targetEntity": "set"
+            }
+          ],
+          "type": "SetRef",
+          "refType": "TrendingSet",
+          "refId": "06c21101d-b349-4133-a0f3-9410e43fabc4b",
+          "refIdType": "contentId"
+        }
+      },
+      {
+        "type": "ShelfContainer",
+        "aspectRatio": "16:9",
+        "background": {
+          "aspectRatio": "16:9",
+          "height": 720,
+          "imageId": "12210e08e-3f47-4cbc-85af-684b556766c6",
+          "locale": "en",
+          "purpose": "hero-178",
+          "tags": null,
+          "width": 1280,
+          "url": "http://image.tmdb.org/t/p/w1280/bhF63Jd90gRYyTHd4y5GCGA2vX6.jpg"
+        },
+        "set": {
+          "meta": {
+            "hits": 0,
+            "time": 0,
+            "page_size": 0,
+            "offset": 0,
+            "errors": []
+          },
+          "texts": [
+            {
+              "field": "title",
+              "type": "full",
+              "language": "en",
+              "content": "Bookmarks",
+              "sourceEntity": "set",
+              "targetEntity": "set"
+            }
+          ],
+          "type": "SetRef",
+          "refType": "BookmarkSet",
+          "refId": "cc210d3a5-35e1-4210f-9972-48916a7c105106",
+          "refIdType": "contentId"
+        }
+      },
+      {
+        "type": "ShelfContainer",
+        "aspectRatio": "16:9",
+        "background": {
+          "aspectRatio": "16:9",
+          "height": 720,
+          "imageId": "70141a310-3f0c-4167-872c-76037fc9865b",
+          "locale": "en",
+          "purpose": "hero-178",
+          "tags": null,
+          "width": 1280,
+          "url": "http://image.tmdb.org/t/p/w1280/hHwEptckXUwZM7XO2lxZ8w8upuU.jpg"
+        },
+        "set": {
+          "meta": {
+            "hits": 0,
+            "time": 0,
+            "page_size": 0,
+            "offset": 0,
+            "errors": []
+          },
+          "texts": [
+            {
+              "field": "title",
+              "type": "full",
+              "language": "en",
+              "content": "Watchlist",
+              "sourceEntity": "set",
+              "targetEntity": "set"
+            }
+          ],
+          "type": "SetRef",
+          "refType": "WatchlistSet",
+          "refId": "a7a74ed7-a19e-4de0-8125-36ce4d3a8d52",
+          "refIdType": "contentId"
+        }
+      }
+    ],
+    "expires": null,
+    "resourceKey": "homepage/appletv/en",
+    "texts": [
+      {
+        "field": "title",
+        "type": "full",
+        "language": "en",
+        "content": "Example Layout",
+        "sourceEntity": "layout",
+        "targetEntity": "layout"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:dither="true" android:variablePadding="true" android:constantSize="false">
+    <item android:id="@+id/pause_focused_icon" android:drawable="@drawable/ic_pause_corner" android:state_activated="true"/>
+    <item android:id="@+id/play_focused_icon" android:drawable="@drawable/ic_play_corner"/>
+    <transition android:drawable="@drawable/pause_to_play_focused_anim" android:toId="@+id/play_focused_icon" android:fromId="@+id/pause_focused_icon"/>
+    <transition android:drawable="@drawable/play_to_pause_focused_anim" android:toId="@+id/pause_focused_icon" android:fromId="@+id/play_focused_icon"/>
+</animated-selector>

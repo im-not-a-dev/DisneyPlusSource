@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/optionsListRowRoot" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopyHeadline" android:textColor="@color/vader_white" android:gravity="center_vertical" android:id="@+id/title" android:paddingTop="@dimen/padding_medium" android:paddingBottom="@dimen/padding_medium" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingExtra="4sp" android:paddingStart="18dp" android:paddingEnd="@dimen/padding_large"/>
+    <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/badgeIcon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_icon_toast_error_24" android:layout_marginEnd="20dp"/>
+    <View android:layout_gravity="bottom" android:background="@color/vader_white_20" android:layout_width="match_parent" android:layout_height="@dimen/separator_height" android:layout_marginStart="18dp"/>
+</FrameLayout>

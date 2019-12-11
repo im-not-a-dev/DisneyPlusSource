@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@drawable/custom_snackbar_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_medium">
+    <TextView android:textColor="@color/vader_grey4" android:layout_gravity="center" android:id="@+id/description" android:paddingTop="@dimen/padding_medium" android:paddingBottom="@dimen/padding_medium" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:paddingStart="@dimen/padding_medium" android:paddingEnd="0dp" style="@style/Disney.TextView.BodyCopy"/>
+    <TextView android:textColor="@color/vader_secondary" android:gravity="center" android:id="@+id/action" android:background="?android:attr/selectableItemBackground" android:padding="@dimen/padding_medium" android:layout_width="wrap_content" android:layout_height="match_parent" style="@style/Disney.TextView.BodyCopyHeadline"/>
+</LinearLayout>

@@ -1,0 +1,570 @@
+{
+  "DmcVideos": {
+    "videos": [
+      {
+        "type": "DmcVideo",
+        "videoId": "1fe0803a-457e-4b0a-9529-ce6a568b44e1",
+        "mediaId": "3821d400-fc65-444d-a4be-428f096257cc",
+        "contentId": "5d3f3eb7-9777-4d96-82c1-803c17d43607",
+        "programId": "ad223a38-c488-4522-9d97-0b165dea0b68",
+        "seasonId": "f9ca8429-f9d5-4ffa-8748-082865fe184e",
+        "seriesId": "d7663bdb-7d40-4dba-8e67-92eb62f57129",
+        "partnerVideoId": "12345",
+        "partnerContentId": "abcde",
+        "partnerProgramId": "zxywv",
+        "programType": "movie",
+        "runtimeMillis": 3600000,
+        "appears": "2018-01-01T00:00:00Z",
+        "expires": "2019-01-01T00:00:00Z",
+        "genres": [
+          "Animated",
+          "Whatever",
+          "OtherGenre"
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "full",
+            "language": "en",
+            "content": "LW Test 15 - Big Buck Bunny",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "full",
+            "language": "en",
+            "content": "LW Test 15 - Big Buck Bunny (descriptionLong)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "brief",
+            "language": "en",
+            "content": "LW Test 15 - Big Buck Bunny (descriptionBrief)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          }
+        ],
+        "captions": [
+          {
+            "name": "Spanish Captioning",
+            "trackType": null,
+            "language": "es"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948011/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "playbackUrls": [
+          {
+            "href": "https://qa.edge.bamgrid.com/media/188bf83a-fb99-4db5-91ba-53139cac3f61/scenarios/{scenario}",
+            "rel": "video",
+            "templated": true
+          }
+        ],
+        "feedType": "Primary",
+        "feedSubType": "",
+        "ratings": [
+          {
+            "value": "TV-14",
+            "system": "FCC-TVPG (USA)",
+            "advisories": [
+              "L",
+              "V"
+            ]
+          }
+        ],
+        "state": "A",
+        "contentSource": "dmgz",
+        "distributionContext": "dmgz",
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "dmgz_123",
+            "duration": 3600,
+            "global": false
+          }
+        ]
+      },
+      {
+        "type": "DmcVideo",
+        "videoId": "3f50db8f-ebaf-4a90-a4b2-adfbedf8ff3d",
+        "mediaId": "49fd05ea-42f1-4c33-b217-ea91a3a08541",
+        "contentId": "19eb7fce-45f7-48ca-94ac-c9e7555d5acf",
+        "programId": "ad223a38-c488-4522-9d97-0b165dea0b68",
+        "seasonId": "f9ca8429-f9d5-4ffa-8748-082865fe184e",
+        "seriesId": "d7663bdb-7d40-4dba-8e67-92eb62f57129",
+        "partnerVideoId": "12345",
+        "partnerContentId": "abcde",
+        "partnerProgramId": "zxywv",
+        "programType": "movie",
+        "runtimeMillis": 3600000,
+        "appears": "2018-01-01T00:00:00Z",
+        "expires": "2019-01-01T00:00:00Z",
+        "genres": [
+          "Animated",
+          "Whatever",
+          "OtherGenre"
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "full",
+            "language": "en",
+            "content": "Tears of Steel",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "full",
+            "language": "en",
+            "content": "Tears of Steel (descriptionLong)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "brief",
+            "language": "en",
+            "content": "Tears of Steel (descriptionBrief)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          }
+        ],
+        "captions": [
+          {
+            "name": "Spanish Captioning",
+            "trackType": null,
+            "language": "es"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948520/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "playbackUrls": [
+          {
+            "href": "https://qa.edge.bamgrid.com/media/49fd05ea-42f1-4c33-b217-ea91a3a08541/scenarios/{scenario}",
+            "rel": "video",
+            "templated": true
+          }
+        ],
+        "feedType": "Primary",
+        "feedSubType": "",
+        "ratings": [
+          {
+            "value": "TV-14",
+            "system": "FCC-TVPG (USA)",
+            "advisories": [
+              "L",
+              "V"
+            ]
+          }
+        ],
+        "state": "A",
+        "contentSource": "dmgz",
+        "distributionContext": "dmgz",
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "dmgz_123",
+            "duration": 3600,
+            "global": false
+          }
+        ]
+      },
+      {
+        "type": "DmcVideo",
+        "videoId": "04b18d47-072f-4c53-acb9-6defa16025c9",
+        "mediaId": "42fe26c6-b3b2-4c5d-bb56-29751ff95520",
+        "contentId": "7e51a704-47ca-47fa-911d-4db195b243d8",
+        "programId": "ad223a38-c488-4522-9d97-0b165dea0b68",
+        "seasonId": "f9ca8429-f9d5-4ffa-8748-082865fe184e",
+        "seriesId": "d7663bdb-7d40-4dba-8e67-92eb62f57129",
+        "partnerVideoId": "12345",
+        "partnerContentId": "abcde",
+        "partnerProgramId": "zxywv",
+        "programType": "movie",
+        "runtimeMillis": 3600000,
+        "appears": "2018-01-01T00:00:00Z",
+        "expires": "2019-01-01T00:00:00Z",
+        "genres": [
+          "Animated",
+          "Whatever",
+          "OtherGenre"
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "full",
+            "language": "en",
+            "content": "Caminandes : Llamigos",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "full",
+            "language": "en",
+            "content": "Caminandes : Llamigos (descriptionLong)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "brief",
+            "language": "en",
+            "content": "Caminandes : Llamigos (descriptionBrief)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          }
+        ],
+        "captions": [
+          {
+            "name": "Spanish Captioning",
+            "trackType": null,
+            "language": "es"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948114/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "playbackUrls": [
+          {
+            "href": "https://qa.edge.bamgrid.com/media/42fe26c6-b3b2-4c5d-bb56-29751ff95520/scenarios/{scenario}",
+            "rel": "video",
+            "templated": true
+          }
+        ],
+        "feedType": "Primary",
+        "feedSubType": "",
+        "ratings": [
+          {
+            "value": "TV-14",
+            "system": "FCC-TVPG (USA)",
+            "advisories": [
+              "L",
+              "V"
+            ]
+          }
+        ],
+        "state": "A",
+        "contentSource": "dmgz",
+        "distributionContext": "dmgz",
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "dmgz_123",
+            "duration": 3600,
+            "global": false
+          }
+        ]
+      },
+      {
+        "type": "DmcVideo",
+        "videoId": "e95a39a6-0090-41e8-96e9-970e264a11ab",
+        "mediaId": "e33e66e7-5c67-498e-95dc-2703a0f48a36",
+        "contentId": "e51af742-c688-46a4-bd83-3b8abbee0971",
+        "programId": "ad223a38-c488-4522-9d97-0b165dea0b68",
+        "seasonId": "f9ca8429-f9d5-4ffa-8748-082865fe184e",
+        "seriesId": "d7663bdb-7d40-4dba-8e67-92eb62f57129",
+        "partnerVideoId": "12345",
+        "partnerContentId": "abcde",
+        "partnerProgramId": "zxywv",
+        "programType": "movie",
+        "runtimeMillis": 3600000,
+        "appears": "2018-01-01T00:00:00Z",
+        "expires": "2019-01-01T00:00:00Z",
+        "genres": [
+          "Animated",
+          "Whatever",
+          "OtherGenre"
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "full",
+            "language": "en",
+            "content": "Sintel",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "full",
+            "language": "en",
+            "content": "Sintel (descriptionLong)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "brief",
+            "language": "en",
+            "content": "Sintel (descriptionBrief)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          }
+        ],
+        "captions": [
+          {
+            "name": "Spanish Captioning",
+            "trackType": null,
+            "language": "es"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948777/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "playbackUrls": [
+          {
+            "href": "https://qa.edge.bamgrid.com/media/e33e66e7-5c67-498e-95dc-2703a0f48a36/scenarios/{scenario}",
+            "rel": "video",
+            "templated": true
+          }
+        ],
+        "feedType": "Primary",
+        "feedSubType": "",
+        "ratings": [
+          {
+            "value": "TV-14",
+            "system": "FCC-TVPG (USA)",
+            "advisories": [
+              "L",
+              "V"
+            ]
+          }
+        ],
+        "state": "A",
+        "contentSource": "dmgz",
+        "distributionContext": "dmgz",
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "dmgz_123",
+            "duration": 3600,
+            "global": false
+          }
+        ]
+      },
+      {
+        "type": "DmcVideo",
+        "videoId": "16d2dd47-cfd1-4792-9e77-b70dffe0ba3f",
+        "mediaId": "188bf83a-fb99-4db5-91ba-53139cac3f61",
+        "contentId": "011b6b63-b201-4733-9965-68898756ef94",
+        "programId": "ad223a38-c488-4522-9d97-0b165dea0b68",
+        "seasonId": "f9ca8429-f9d5-4ffa-8748-082865fe184e",
+        "seriesId": "d7663bdb-7d40-4dba-8e67-92eb62f57129",
+        "partnerVideoId": "12345",
+        "partnerContentId": "abcde",
+        "partnerProgramId": "zxywv",
+        "programType": "movie",
+        "runtimeMillis": 3600000,
+        "appears": "2018-01-01T00:00:00Z",
+        "expires": "2019-01-01T00:00:00Z",
+        "genres": [
+          "Animated",
+          "Whatever",
+          "OtherGenre"
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "full",
+            "language": "en",
+            "content": "Big Buck Bunny",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "full",
+            "language": "en",
+            "content": "Big Buck Bunny (descriptionLong)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "brief",
+            "language": "en",
+            "content": "Big Buck Bunny (descriptionBrief)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          }
+        ],
+        "captions": [
+          {
+            "name": "Spanish Captioning",
+            "trackType": null,
+            "language": "es"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948011/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "playbackUrls": [
+          {
+            "href": "https://qa.edge.bamgrid.com/media/188bf83a-fb99-4db5-91ba-53139cac3f61/scenarios/{scenario}",
+            "rel": "video",
+            "templated": true
+          }
+        ],
+        "feedType": "Primary",
+        "feedSubType": "",
+        "ratings": [
+          {
+            "value": "TV-14",
+            "system": "FCC-TVPG (USA)",
+            "advisories": [
+              "L",
+              "V"
+            ]
+          }
+        ],
+        "state": "A",
+        "contentSource": "dmgz",
+        "distributionContext": "dmgz",
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "dmgz_123",
+            "duration": 3600,
+            "global": false
+          }
+        ]
+      },
+      {
+        "type": "DmcVideo",
+        "videoId": "b5d5a33f-fa6e-49bc-9d86-73d3171e6338",
+        "mediaId": "38a4cca7-4665-4612-be58-dff768a9701b",
+        "contentId": "956a32ca-307d-439c-a881-4f011b8be98a",
+        "programId": "ad223a38-c488-4522-9d97-0b165dea0b68",
+        "seasonId": "f9ca8429-f9d5-4ffa-8748-082865fe184e",
+        "seriesId": "d7663bdb-7d40-4dba-8e67-92eb62f57129",
+        "partnerVideoId": "12345",
+        "partnerContentId": "abcde",
+        "partnerProgramId": "zxywv",
+        "programType": "movie",
+        "runtimeMillis": 3600000,
+        "appears": "2018-01-01T00:00:00Z",
+        "expires": "2019-01-01T00:00:00Z",
+        "genres": [
+          "Animated",
+          "Whatever",
+          "OtherGenre"
+        ],
+        "texts": [
+          {
+            "field": "title",
+            "type": "full",
+            "language": "en",
+            "content": "Caminandes 2: Gran Dillama",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "full",
+            "language": "en",
+            "content": "Caminandes 2: Gran Dillama (descriptionLong)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          },
+          {
+            "field": "description",
+            "type": "brief",
+            "language": "en",
+            "content": "Caminandes 2: Gran Dillama (descriptionBrief)",
+            "sourceEntity": "program",
+            "targetEntity": "program"
+          }
+        ],
+        "captions": [
+          {
+            "name": "Spanish Captioning",
+            "trackType": null,
+            "language": "es"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://cms-bamtech-binary-content-qa-us-east-1.s3.amazonaws.com/206/images/photos/1258948111/raw.jpg",
+            "aspectRatio": "16:9",
+            "width": 1920,
+            "height": 1080,
+            "locale": "en",
+            "imageId": "aac10ef05-f78d-4c45-8068-8ef01110076c10"
+          }
+        ],
+        "playbackUrls": [
+          {
+            "href": "https://qa.edge.bamgrid.com/media/38a4cca7-4665-4612-be58-dff768a9701b/scenarios/{scenario}",
+            "rel": "video",
+            "templated": true
+          }
+        ],
+        "feedType": "Primary",
+        "feedSubType": "",
+        "ratings": [
+          {
+            "value": "TV-14",
+            "system": "FCC-TVPG (USA)",
+            "advisories": [
+              "L",
+              "V"
+            ]
+          }
+        ],
+        "state": "A",
+        "contentSource": "dmgz",
+        "distributionContext": "dmgz",
+        "policies": [
+          {
+            "policyId": "d2193546-58fe-4bad-93e4-bace0d232a54",
+            "partnerPolicyId": "dmgz_123",
+            "duration": 3600,
+            "global": false
+          }
+        ]
+      }
+    ]
+  }
+}

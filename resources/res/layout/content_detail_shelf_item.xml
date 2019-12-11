@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.bamtechmedia.dominguez.collections.items.ShelfContainerLayout android:id="@+id/shelfContainer" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_white" android:id="@+id/episodeDescription" android:paddingTop="@dimen/padding_extra_small" android:paddingBottom="@dimen/padding_medium" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="500dp" android:minLines="3" android:lineSpacingExtra="@dimen/body_copy_line_spacing_extra" android:paddingStart="@dimen/detail_content_padding_horizontal" android:paddingEnd="0dp"/>
+</LinearLayout>

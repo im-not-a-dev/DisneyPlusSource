@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:shape="rectangle">
+    <stroke android:width="@dimen/shelf_list_item_stroke" android:color="?attr/themeColorGray6"/>
+    <gradient android:startColor="#242632" android:endColor="#3a3c4a" android:angle="90"/>
+    <corners android:radius="@dimen/brand_shelf_list_item_corner"/>
+</shape>

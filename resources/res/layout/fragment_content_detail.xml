@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/contentDetailMotionLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/backgroundScrim" android:background="?attr/detailBackgroundScrim" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/roundedBackground" android:background="?attr/themeBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/backgroundContentDetail" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@null" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <com.bamtechmedia.dominguez.core.design.widgets.NoConnectionView android:id="@+id/contentDetailNoConnectionView" android:layout_width="@dimen/no_connection_view_width" android:layout_height="@dimen/no_connection_view_height" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <include layout="@layout/include_content_detail"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bookmark_button_label_color">@color/vader_white</color>
+    <color name="focus">@color/vader_white</color>
+    <color name="unfocus">@color/vader_white_20</color>
+</resources>

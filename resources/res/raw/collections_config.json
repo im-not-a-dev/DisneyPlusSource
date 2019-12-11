@@ -1,0 +1,862 @@
+{
+  "ages": {
+    "title": "text",
+    "sets": {
+      "default": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      }
+    }
+  },
+  "avatars": {
+    "sets": {
+      "character": {
+        "shelf_grid": {
+          "meta": "character",
+          "title": "above",
+          "breakpoints": {
+            "land": {
+              "aspectRatio": 1,
+              "purpose": "character,tile"
+            },
+            "port": {
+              "aspectRatio": 1,
+              "purpose": "character,tile",
+              "tiles": 3
+            },
+            "sw420dp-port": {
+              "aspectRatio": 1,
+              "purpose": "character,tile",
+              "tiles": 3
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1,
+              "itemMargin": 17,
+              "purpose": "character,tile",
+              "tiles": 8
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1,
+              "itemMargin": 17,
+              "purpose": "character,tile",
+              "tiles": 5
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1,
+              "itemMargin": 17,
+              "purpose": "character,tile",
+              "tiles": 8
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1,
+              "itemMargin": 17,
+              "purpose": "character,tile",
+              "tiles": 5
+            }
+          }
+        }
+      },
+      "hidden": {
+        "shelf_grid": {
+          "render": false
+        }
+      }
+    }
+  },
+  "brand": {
+    "background": "hero_collection,hero",
+    "title": "logo_layer,logo",
+    "titleAspectRatio": 2.00,
+    "sets": {
+      "contentType": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "default": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      }
+    }
+  },
+  "character": {
+    "background": "hero_collection,hero",
+    "title": "text",
+    "sets": {
+      "character": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      }
+    }
+  },
+  "contentType": {
+    "displayType": "tabbed",
+    "title": "text",
+    "sets": {
+      "contentType": {
+        "shelf_grid": {
+          "tags": [
+            "DisableFirstGridRowTopPadding"
+          ]
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "tags": [
+            "DisableFirstGridRowTopPadding"
+          ]
+        }
+      }
+    }
+  },
+  "default": {
+    "background": "none",
+    "displayType": "stacked",
+    "title": "none",
+    "titleAspectRatio": 1.78,
+    "backgroundAspectRatio": {
+      "land": 2.19,
+      "port": 0.71,
+      "sw420dp-port": 0.71,
+      "sw600dp-land": 1.78,
+      "sw600dp-port": 1.78,
+      "sw720dp-land": 1.78,
+      "sw720dp-port": 1.78
+    },
+    "sets": {
+      "default": {
+        "shelf_grid": {
+          "render": true,
+          "scaleOnFocus": 1.0,
+          "snap": "none",
+          "tags": [],
+          "title": "none",
+          "breakpoints": {
+            "land": {
+              "aspectRatio": 0.71,
+              "gridMargin": 18,
+              "itemMargin": 12,
+              "list": false,
+              "meta": "none",
+              "purpose": "tile,tile_keystone",
+              "tiles": 3,
+              "title": "none",
+              "topGridMargin": 20
+            },
+            "port": {
+              "aspectRatio": 0.71,
+              "gridMargin": 18,
+              "itemMargin": 12,
+              "list": false,
+              "meta": "none",
+              "purpose": "tile,tile_keystone",
+              "tiles": 3,
+              "title": "none",
+              "topGridMargin": 20
+            },
+            "sw420dp-port": {
+              "aspectRatio": 0.71,
+              "gridMargin": 20,
+              "itemMargin": 12,
+              "list": false,
+              "meta": "none",
+              "purpose": "tile,tile_keystone",
+              "tiles": 3,
+              "title": "none",
+              "topGridMargin": 20
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.78,
+              "gridMargin": 30,
+              "itemMargin": 12,
+              "list": false,
+              "meta": "none",
+              "purpose": "tile,tile_keystone",
+              "tiles": 4,
+              "title": "none",
+              "topGridMargin": 24
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.78,
+              "gridMargin": 24,
+              "itemMargin": 12,
+              "list": false,
+              "meta": "none",
+              "purpose": "tile,tile_keystone",
+              "tiles": 3,
+              "title": "none",
+              "topGridMargin": 24
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.78,
+              "gridMargin": 27,
+              "itemMargin": 14,
+              "list": false,
+              "meta": "none",
+              "purpose": "tile,tile_keystone",
+              "tiles": 5,
+              "title": "none",
+              "topGridMargin": 24
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.78,
+              "gridMargin": 22,
+              "itemMargin": 12,
+              "list": false,
+              "meta": "none",
+              "purpose": "tile,tile_keystone",
+              "tiles": 4,
+              "title": "none",
+              "topGridMargin": 24
+            }
+          }
+        }
+      }
+    }
+  },
+  "detailContent": {
+    "sets": {
+      "extras": {
+        "shelf_grid": {
+          "list": true,
+          "meta": "extra",
+          "tiles": 1
+        }
+      },
+      "related": {
+        "shelf_grid": {
+          "tags": [
+            "DisableFirstGridRowTopPadding"
+          ],
+          "breakpoints": {
+            "port": {
+              "meta": "extra",
+              "tiles": 2
+            },
+            "sw420dp-port": {
+              "meta": "extra",
+              "tiles": 2
+            },
+            "sw600dp-land": {
+              "tiles": 3,
+              "gridMargin": 32
+            },
+            "sw600dp-port": {
+              "tiles": 3,
+              "gridMargin": 32
+            },
+            "sw720dp-land": {
+              "tiles": 3,
+              "gridMargin": 32
+            },
+            "sw720dp-port": {
+              "tiles": 3,
+              "gridMargin": 32
+            }
+          }
+        }
+      }
+    }
+  },
+  "editorial": {
+    "background": "hero_collection,hero",
+    "title": "logo",
+    "sets": {
+      "editorial": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      }
+    }
+  },
+  "explore": {
+    "sets": {
+      "ages": {
+        "shelf_grid": {
+          "breakpoints": {
+            "land": {
+              "tiles": 2
+            },
+            "port": {
+              "tiles": 2
+            },
+            "sw420dp-port": {
+              "tiles": 2
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.78
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.78
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.78
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.78
+            }
+          }
+        }
+      },
+      "brand": {
+        "shelf_grid": {
+          "tags": [
+            "MatchWidthVaderGrid"
+          ],
+          "breakpoints": {
+            "land": {
+              "aspectRatio": 1.78,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5
+            },
+            "port": {
+              "aspectRatio": 0.71,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5
+            },
+            "sw420dp-port": {
+              "aspectRatio": 0.71,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.78,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.78,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.78,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.78,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5
+            }
+          }
+        }
+      },
+      "character": {
+        "shelf_grid": {
+          "meta": "character",
+          "breakpoints": {
+            "land": {
+              "aspectRatio": 1.78,
+              "tiles": 4
+            },
+            "port": {
+              "aspectRatio": 0.71,
+              "tiles": 3
+            },
+            "sw420dp-port": {
+              "aspectRatio": 0.71,
+              "tiles": 3
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.78,
+              "tiles": 5
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.78,
+              "tiles": 4
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.78,
+              "tiles": 6
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.78,
+              "tiles": 5
+            }
+          }
+        }
+      },
+      "contentType": {
+        "shelf_grid": {
+          "matchWidthVaderGrid": true,
+          "meta": "category",
+          "tags": [
+            "MatchWidthVaderGrid",
+            "TilesMatchAssetCount"
+          ],
+          "breakpoints": {
+            "land": {
+              "aspectRatio": 1.33,
+              "tiles": 3,
+              "title": "over_bottom"
+            },
+            "port": {
+              "tiles": 3,
+              "title": "over_bottom"
+            },
+            "sw420dp-port": {
+              "tiles": 3,
+              "title": "over_bottom"
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.33,
+              "tiles": 3,
+              "title": "over_bottom",
+              "topGridMargin": 30
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.33,
+              "tiles": 3,
+              "title": "over_bottom",
+              "topGridMargin": 30
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.33,
+              "tiles": 3,
+              "title": "over_bottom",
+              "topGridMargin": 30
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.33,
+              "tiles": 3,
+              "title": "over_bottom",
+              "topGridMargin": 30
+            }
+          }
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "breakpoints": {
+            "port": {
+              "aspectRatio": 0.71,
+              "tiles": 2,
+              "topGridMargin": 30
+            },
+            "sw420dp-port": {
+              "aspectRatio": 0.71,
+              "tiles": 2,
+              "topGridMargin": 30
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.78,
+              "tiles": 4,
+              "topGridMargin": 40
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.78,
+              "topGridMargin": 40
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.78,
+              "tiles": 5,
+              "topGridMargin": 40
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.78,
+              "tiles": 4,
+              "topGridMargin": 40
+            }
+          }
+        }
+      },
+      "franchise": {
+        "shelf_grid": {
+          "breakpoints": {
+            "land": {
+              "aspectRatio": 1.78,
+              "tiles": 3
+            },
+            "port": {
+              "aspectRatio": 0.71,
+              "tiles": 2
+            },
+            "sw420dp-port": {
+              "aspectRatio": 0.71,
+              "tiles": 2
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.78
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.78,
+              "tiles": 3
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.78
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.78
+            }
+          }
+        }
+      }
+    }
+  },
+  "franchise": {
+    "background": "hero_collection,hero",
+    "title": "title_treatment",
+    "sets": {
+      "editorial": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      }
+    }
+  },
+  "home": {
+    "sets": {
+      "BecauseYouSet": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "ContinueWatchingSet": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "port": {
+              "aspectRatio": 1.78,
+              "meta": "bookmark",
+              "purpose": "thumbnail,tile",
+              "tiles": 1
+            },
+            "land": {
+              "aspectRatio": 1.78,
+              "meta": "bookmark",
+              "purpose": "thumbnail,tile",
+              "tiles": 1
+            },
+            "sw420dp-port": {
+              "aspectRatio": 1.78,
+              "meta": "bookmark",
+              "purpose": "thumbnail,tile",
+              "tiles": 1
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.78,
+              "meta": "bookmark",
+              "purpose": "thumbnail,tile"
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.78,
+              "meta": "bookmark",
+              "purpose": "thumbnail,tile"
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.78,
+              "meta": "bookmark",
+              "purpose": "thumbnail,tile"
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.78,
+              "meta": "bookmark",
+              "purpose": "thumbnail,tile"
+            }
+          }
+        }
+      },
+      "RecommendationSet": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "TrendingSet": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "WatchlistSet": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "brand": {
+        "shelf_grid": {
+          "tags": [
+            "MatchWidthVaderGrid"
+          ],
+          "breakpoints": {
+            "port": {
+              "aspectRatio": 1,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5,
+              "topGridMargin": 15
+            },
+            "land": {
+              "aspectRatio": 1,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5,
+              "topGridMargin": 15
+            },
+            "sw420dp-port": {
+              "aspectRatio": 1,
+              "purpose": "tile,tile_keystone",
+              "tiles": 5,
+              "topGridMargin": 15
+            },
+            "sw600dp-land": {
+              "purpose": "tile,tile_keystone",
+              "tiles": 5,
+              "topGridMargin": 15
+            },
+            "sw600dp-port": {
+              "purpose": "tile,tile_keystone",
+              "tiles": 5,
+              "topGridMargin": 15
+            },
+            "sw720dp-land": {
+              "purpose": "tile,tile_keystone",
+              "tiles": 5,
+              "topGridMargin": 15
+            },
+            "sw720dp-port": {
+              "purpose": "tile,tile_keystone",
+              "tiles": 5,
+              "topGridMargin": 15
+            }
+          }
+        }
+      },
+      "character": {
+        "shelf_grid": {
+          "meta": "character",
+          "title": "above"
+        }
+      },
+      "contentType": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "editorial": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "featured": {
+        "shelf_grid": {
+          "tags": [],
+          "breakpoints": {
+            "port": {
+              "aspectRatio": 1.2,
+              "purpose": "tile,tile_keystone",
+              "tiles": 3
+            },
+            "land": {
+              "aspectRatio": 1.2,
+              "purpose": "tile,tile_keystone",
+              "tiles": 3
+            },
+            "sw420dp-port": {
+              "aspectRatio": 1.2,
+              "purpose": "tile,tile_keystone",
+              "tiles": 3
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.2,
+              "purpose": "tile,tile_keystone",
+              "tiles": 6
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.2,
+              "purpose": "tile,tile_keystone",
+              "tiles": 6
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.2,
+              "purpose": "tile,tile_keystone",
+              "tiles": 6
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.2,
+              "purpose": "tile,tile_keystone",
+              "tiles": 6
+            }
+          }
+        }
+      },
+      "franchise": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      },
+      "hero": {
+        "hero": {
+          "snap": "centerScale",
+          "tags": [
+            "Loop"
+          ],
+          "breakpoints": {
+            "land": {
+              "aspectRatio": 1.78,
+              "purpose": "hero_tile",
+              "tiles": 1,
+              "itemMargin": 10
+            },
+            "port": {
+              "aspectRatio": 1.78,
+              "purpose": "hero_tile",
+              "tiles": 1,
+              "itemMargin": 10
+            },
+            "sw420dp-port": {
+              "aspectRatio": 1.78,
+              "purpose": "hero_tile",
+              "tiles": 1,
+              "itemMargin": 10
+            },
+            "sw600dp-land": {
+              "aspectRatio": 3.91,
+              "purpose": "hero_tile",
+              "tiles": 1
+            },
+            "sw600dp-port": {
+              "aspectRatio": 3.91,
+              "purpose": "hero_tile",
+              "tiles": 1
+            },
+            "sw720dp-land": {
+              "aspectRatio": 3.91,
+              "purpose": "hero_tile",
+              "tiles": 1
+            },
+            "sw720dp-port": {
+              "aspectRatio": 3.91,
+              "purpose": "hero_tile",
+              "tiles": 1
+            }
+          }
+        }
+      },
+      "standard": {
+        "shelf_grid": {
+          "title": "above"
+        }
+      }
+    }
+  },
+  "originals": {
+    "background": "hero_collection,hero",
+    "title": "logo",
+    "sets": {
+      "editorial": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "land": {
+              "aspectRatio": 0.71,
+              "tiles": 2
+            },
+            "port": {
+              "aspectRatio": 0.71,
+              "tiles": 2
+            },
+            "sw420dp-port": {
+              "aspectRatio": 0.71,
+              "tiles": 2
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.78,
+              "tiles": 3
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.78,
+              "tiles": 2
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.78,
+              "tiles": 3
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.78,
+              "tiles": 2
+            }
+          }
+        }
+      }
+    }
+  },
+  "search": {
+    "sets": {
+      "results": {
+        "shelf_grid": {
+          "title": "above",
+          "breakpoints": {
+            "port": {
+              "aspectRatio": 1.78,
+              "list": true,
+              "purpose": "thumbnail,tile",
+              "tiles": 1
+            },
+            "sw420dp-port": {
+              "aspectRatio": 1.78,
+              "list": true,
+              "purpose": "thumbnail,tile",
+              "tiles": 1
+            },
+            "sw600dp-land": {
+              "aspectRatio": 1.78,
+              "list": true,
+              "purpose": "thumbnail,tile",
+              "tiles": 1
+            },
+            "sw600dp-port": {
+              "aspectRatio": 1.78,
+              "list": true,
+              "purpose": "thumbnail,tile",
+              "tiles": 1
+            },
+            "sw720dp-land": {
+              "aspectRatio": 1.78,
+              "list": true,
+              "purpose": "thumbnail,tile",
+              "tiles": 1
+            },
+            "sw720dp-port": {
+              "aspectRatio": 1.78,
+              "list": true,
+              "purpose": "thumbnail,tile",
+              "tiles": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "watchlist": {
+    "title": "text",
+    "sets": {
+      "WatchlistSet": {
+        "shelf_grid": {
+          "breakpoints": {
+            "port": {
+              "aspectRatio": 1.78,
+              "list": true,
+              "purpose": "thumbnail,tile"
+            },
+            "sw420dp-port": {
+              "aspectRatio": 1.78,
+              "list": true,
+              "purpose": "thumbnail,tile"
+            }
+          }
+        }
+      }
+    }
+  }
+}

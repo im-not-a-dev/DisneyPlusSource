@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <Transition app:constraintSetEnd="@+id/collapsed" app:constraintSetStart="@+id/expanded" app:duration="@integer/duration2" app:motionInterpolator="3"/>
+    <Transition app:constraintSetEnd="@+id/collapsed" app:constraintSetStart="@+id/hidden" app:duration="@integer/duration2" app:motionInterpolator="3"/>
+    <Transition app:constraintSetEnd="@+id/disabled" app:constraintSetStart="@+id/collapsed" app:duration="1"/>
+    <ConstraintSet android:id="@+id/expanded">
+        <Constraint android:id="@+id/sideMenu" android:layout_width="@dimen/global_nav_expanded_width" android:layout_height="match_parent" android:elevation="2dp"/>
+        <Constraint android:id="@+id/sideMenuBackground" android:visibility="visible" android:layout_width="@dimen/global_nav_expanded_width" android:layout_height="match_parent" android:elevation="2dp"/>
+        <Constraint android:id="@+id/shadowMenu" android:visibility="visible" android:layout_width="@dimen/global_nav_shadow_width" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/sideMenuBackground" app:layout_constraintTop_toTopOf="0"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/collapsed">
+        <Constraint android:id="@+id/sideMenu" android:layout_width="@dimen/global_nav_collapsed_width" android:layout_height="match_parent" android:elevation="0dp"/>
+        <Constraint android:id="@+id/sideMenuBackground" android:visibility="invisible" android:layout_width="@dimen/global_nav_collapsed_width" android:layout_height="match_parent" android:elevation="0dp"/>
+        <Constraint android:id="@+id/shadowMenu" android:visibility="invisible" android:layout_width="0dp" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/sideMenuBackground" app:layout_constraintTop_toTopOf="0"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/hidden">
+        <Constraint android:id="@+id/sideMenu" android:visibility="invisible" android:layout_width="@dimen/global_nav_collapsed_width" android:layout_height="match_parent"/>
+        <Constraint android:id="@+id/sideMenuBackground" android:visibility="invisible" android:layout_width="@dimen/global_nav_collapsed_width" android:layout_height="match_parent"/>
+        <Constraint android:id="@+id/shadowMenu" android:visibility="invisible" android:layout_width="0dp" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/sideMenuBackground" app:layout_constraintTop_toTopOf="0"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/disabled">
+        <Constraint android:id="@+id/sideMenu" android:visibility="gone" android:layout_width="@dimen/global_nav_collapsed_width" android:layout_height="match_parent"/>
+        <Constraint android:id="@+id/sideMenuBackground" android:visibility="invisible" android:layout_width="@dimen/global_nav_collapsed_width" android:layout_height="match_parent"/>
+        <Constraint android:id="@+id/shadowMenu" android:visibility="invisible" android:layout_width="0dp" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/sideMenuBackground" app:layout_constraintTop_toTopOf="0"/>
+    </ConstraintSet>
+</MotionScene>

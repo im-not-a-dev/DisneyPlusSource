@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/$microphone_transition__0">
+    <target android:name="path" android:animation="@drawable/$microphone_transition__1"/>
+    <target android:name="group" android:animation="@drawable/$microphone_transition__2"/>
+    <target android:name="path_1" android:animation="@drawable/$microphone_transition__3"/>
+    <target android:name="group_1" android:animation="@drawable/$microphone_transition__4"/>
+</animated-vector>

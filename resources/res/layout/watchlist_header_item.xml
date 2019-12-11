@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:textAppearance="@style/Disney.TextAppearance.H1" android:textColor="@color/vader_white" android:gravity="bottom" android:id="@+id/watchlistHeaderTextView" android:paddingBottom="12dp" android:layout_width="wrap_content" android:layout_height="@dimen/watchlist_header_size" android:lineSpacingExtra="5sp" android:layout_marginStart="@dimen/vader_grid_start_margin"/>

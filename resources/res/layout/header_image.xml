@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.bamtechmedia.dominguez.core.design.widgets.AspectRatioImageView android:id="@+id/headerImage" android:layout_width="match_parent" android:layout_height="@dimen/match_constraints" android:scaleType="centerCrop" app:layout_constraintTop_toTopOf="0"/>
+    <ImageView android:layout_gravity="center" android:id="@+id/headerImagePlayButton" android:visibility="gone" android:layout_width="72dp" android:layout_height="72dp" android:src="@drawable/ic_button_ga_play_72" android:contentDescription="@string/btn_play1" app:layout_constraintBottom_toBottomOf="@+id/headerImage" app:layout_constraintEnd_toEndOf="@+id/headerImage" app:layout_constraintStart_toStartOf="@+id/headerImage" app:layout_constraintTop_toTopOf="@+id/headerImage"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

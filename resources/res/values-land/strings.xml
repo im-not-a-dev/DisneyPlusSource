@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="collection_size_qualifier">land</string>
+    <string name="complete_purchase_suffix">landscape</string>
+    <string name="welcome_screen_suffix">landscape</string>
+</resources>

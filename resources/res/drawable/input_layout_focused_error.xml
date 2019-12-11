@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item>
+        <shape>
+            <solid android:color="@color/white20"/>
+            <stroke android:width="3dp" android:color="@color/vader_error"/>
+            <corners android:radius="@dimen/text_input_layout_radius"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <stroke android:width="@dimen/text_input_layout_radius_text" android:color="@color/vader_white"/>
+            <corners android:radius="@dimen/text_input_layout_radius"/>
+        </shape>
+    </item>
+</layer-list>

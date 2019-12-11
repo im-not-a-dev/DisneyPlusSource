@@ -1,0 +1,41 @@
+{
+  "lastModified": "2018-08-23T16:22:47.288Z",
+  "marketingCloud": {
+    "org": "25823F955A99D5040A495C1D@AdobeOrg",
+    "server": "disney.demdex.net",
+    "coopUnsafe": false
+  },
+  "target": {
+    "clientCode": "bamtech",
+    "timeout": 5
+  },
+  "audienceManager": {
+    "server": "disney.demdex.net",
+    "analyticsForwardingEnabled": false,
+    "timeout": 5
+  },
+  "acquisition": {
+    "server": "c00.adobe.com",
+    "appid": "de62215bbad1a76d1243b4f7293dc4106d04b46fb9de081545ed549de87f0e47"
+  },
+  "analytics": {
+    "rsids": "wdgdsvodandroid",
+    "server": "sanalytics.disneyplus.com",
+    "ssl": true,
+    "offlineEnabled": true,
+    "charset": "UTF-8",
+    "lifecycleTimeout": 300,
+    "privacyDefault": "optedin",
+    "batchLimit": 0,
+    "timezone": "EDT",
+    "timezoneOffset": -240,
+    "referrerTimeout": 0,
+    "backdateSessionInfo": false,
+    "poi": []
+  },
+  "messages": [],
+  "remotes": {
+    "analytics.poi": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-5b7ed92964746d7f9d00162f.json",
+    "messages": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-5b7ed92864746d1996008a16.json"
+  }
+}

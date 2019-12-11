@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/padding_large" android:paddingEnd="@dimen/padding_large">
+        <TextView android:textAppearance="@style/Disney.TextAppearance.H2" android:textColor="@color/vader_grey8" android:id="@+id/content_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:width="@dimen/onboarding_max_width" android:lineSpacingExtra="3sp"/>
+        <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopy" android:textColor="@color/vader_white" android:id="@+id/content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:width="@dimen/onboarding_max_width" android:lineSpacingExtra="4sp"/>
+        <Button android:id="@+id/positive_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_large" android:width="@dimen/onboarding_max_width" style="@style/Disney.Button.Primary.Large"/>
+        <Button android:id="@+id/neutral_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:width="@dimen/onboarding_max_width" style="@style/Disney.Button.Secondary.Large"/>
+        <Button android:id="@+id/negative_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:width="@dimen/onboarding_max_width" style="@style/Disney.Button.Secondary.Large"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="collection_total_span_count">15</integer>
+    <integer name="details_related_grid_span">5</integer>
+    <integer name="vader_grid_column_count">16</integer>
+</resources>

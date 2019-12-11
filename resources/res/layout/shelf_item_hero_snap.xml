@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.bamtechmedia.dominguez.collections.items.ShelfContainerLayout android:id="@+id/shelfContainer" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.bamtechmedia.dominguez.p331ui.pagingbehaviour.pageindicator.PageIndicatorView android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/pageIndicatorView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="28dp" android:layout_marginEnd="61dp" app:indicatorColor="#808794" app:indicatorColorSelected="@color/vader_white" app:indicatorDistanceBetween="10dp" app:indicatorSelectedItemSize="7dp" app:indicatorShape="0" app:indicatorSize="7dp"/>
+</FrameLayout>

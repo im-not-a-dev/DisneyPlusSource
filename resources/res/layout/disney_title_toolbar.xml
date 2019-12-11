@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/toolbarBackground" android:background="?attr/themeBackgroundColor" android:layout_width="@dimen/match_constraints" android:layout_height="@dimen/match_constraints" android:alpha="0" app:layout_constraintBottom_toBottomOf="@+id/contentToolbarLayout" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <View android:id="@+id/separator" android:background="@color/vader_white_20" android:layout_width="@dimen/match_constraints" android:layout_height="@dimen/separator_height" android:alpha="0" app:layout_constraintBottom_toBottomOf="@+id/contentToolbarLayout" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/contentToolbarLayout" android:layout_width="@dimen/match_constraints" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <FrameLayout android:id="@+id/buttonFrameLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <include android:id="@+id/backButtonLayout" layout="@layout/back_layout"/>
+            <include android:id="@+id/closeButtonLayout" android:visibility="gone" layout="@layout/close_layout"/>
+            <include android:id="@+id/blackBackButtonLayout" android:visibility="gone" layout="@layout/toolbar_back_layout_black"/>
+            <View android:id="@+id/spacingNoButton" android:visibility="gone" android:layout_width="14dp" android:layout_height="@dimen/nav_bar_height"/>
+        </FrameLayout>
+        <FrameLayout android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1">
+            <TextView android:textAppearance="@style/Disney.TextAppearance.H3" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxLines="1" android:drawablePadding="@dimen/padding_extra_small" android:lineSpacingExtra="4sp" android:paddingStart="@dimen/padding_extra_small" android:paddingEnd="@dimen/padding_extra_small"/>
+        </FrameLayout>
+        <TextView android:textAppearance="@style/Disney.TextAppearance.BodyCopyHeadline" android:textColor="@color/text_color_vader_white" android:id="@+id/actionButton" android:background="?attr/selectableItemBackground" android:padding="@dimen/padding_medium" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/nav_bar_height" android:lineSpacingExtra="4sp"/>
+        <View android:id="@+id/dummyChromeCastView" android:visibility="gone" android:layout_width="48dp" android:layout_height="48dp"/>
+    </LinearLayout>
+</merge>
