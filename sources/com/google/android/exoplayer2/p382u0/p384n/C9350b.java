@@ -9,9 +9,9 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.util.SparseArray;
 import com.google.android.exoplayer2.p382u0.C9322b;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9571v;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9571v;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -635,7 +635,7 @@ final class C9350b {
     /* JADX WARNING: Unknown variable types count: 12 */
     /* renamed from: b */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    private static int m28509b(com.google.android.exoplayer2.p393v0.C9571v r13, int[] r14, byte[] r15, int r16, int r17, android.graphics.Paint r18, android.graphics.Canvas r19) {
+    private static int m28509b(com.google.android.exoplayer2.util.C9571v r13, int[] r14, byte[] r15, int r16, int r17, android.graphics.Paint r18, android.graphics.Canvas r19) {
         /*
             r0 = r13
             r1 = r17
@@ -741,7 +741,7 @@ final class C9350b {
     /* JADX WARNING: Incorrect type for immutable var: ssa=byte, code=int, for r3v4, types: [byte] */
     /* renamed from: c */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    private static int m28513c(com.google.android.exoplayer2.p393v0.C9571v r13, int[] r14, byte[] r15, int r16, int r17, android.graphics.Paint r18, android.graphics.Canvas r19) {
+    private static int m28513c(com.google.android.exoplayer2.util.C9571v r13, int[] r14, byte[] r15, int r16, int r17, android.graphics.Paint r18, android.graphics.Canvas r19) {
         /*
             r0 = r13
             r1 = r17
@@ -1101,7 +1101,7 @@ final class C9350b {
     /* JADX WARNING: Unknown variable types count: 11 */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    private static int m28502a(com.google.android.exoplayer2.p393v0.C9571v r13, int[] r14, byte[] r15, int r16, int r17, android.graphics.Paint r18, android.graphics.Canvas r19) {
+    private static int m28502a(com.google.android.exoplayer2.util.C9571v r13, int[] r14, byte[] r15, int r16, int r17, android.graphics.Paint r18, android.graphics.Canvas r19) {
         /*
             r0 = r13
             r1 = r17

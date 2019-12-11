@@ -45,14 +45,14 @@ import com.google.android.exoplayer2.p391ui.AspectRatioFrameLayout.C9392b;
 import com.google.android.exoplayer2.p391ui.C9405g.C9409d;
 import com.google.android.exoplayer2.p391ui.p392r.C9429g;
 import com.google.android.exoplayer2.p391ui.p392r.C9430h;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9555l;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9555l;
 import com.google.android.exoplayer2.p394w0.C9601p;
 import com.google.android.exoplayer2.p394w0.C9602q;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.source.p378l0.C9206b;
-import com.google.android.exoplayer2.trackselection.C9311j;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import java.util.ArrayList;
 import java.util.List;
@@ -477,7 +477,7 @@ public class PlayerView extends FrameLayout implements C9206b {
 
     public void setPlayer(Player player) {
         Assertions.checkState(Looper.myLooper() == Looper.getMainLooper());
-        Assertions.m29299a(player == null || player.getApplicationLooper() == Looper.getMainLooper());
+        Assertions.checkArgument(player == null || player.getApplicationLooper() == Looper.getMainLooper());
         Player player2 = this.f21694h0;
         if (player2 != player) {
             if (player2 != null) {
@@ -926,7 +926,7 @@ public class PlayerView extends FrameLayout implements C9206b {
         m28747e();
         if (this.f21696j0) {
             for (int i2 = 0; i2 < currentTrackSelections.f21167a; i2++) {
-                C9311j a = currentTrackSelections.mo24040a(i2);
+                TrackSelection a = currentTrackSelections.mo24040a(i2);
                 if (a != null) {
                     int i3 = 0;
                     while (i3 < a.length()) {

@@ -7,12 +7,12 @@ import android.content.IntentFilter;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.SparseArray;
-import com.google.android.exoplayer2.p393v0.C9532c0;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9542g;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9557m;
-import com.google.android.exoplayer2.p393v0.C9557m.C9558a;
+import com.google.android.exoplayer2.util.C9532c0;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9542g;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.EventDispatcher;
+import com.google.android.exoplayer2.util.EventDispatcher.Event;
 import com.google.android.exoplayer2.upstream.BandwidthMeter.C9434a;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -46,7 +46,7 @@ public final class C9510p implements BandwidthMeter, TransferListener {
     private final SparseArray<Long> f22160b;
 
     /* renamed from: c */
-    private final C9557m<C9434a> f22161c;
+    private final EventDispatcher<C9434a> f22161c;
 
     /* renamed from: d */
     private final C9532c0 f22162d;
@@ -489,7 +489,7 @@ public final class C9510p implements BandwidthMeter, TransferListener {
             goto L_0x0015
         L_0x000f:
             android.content.Context r0 = r10.f22159a     // Catch:{ all -> 0x005a }
-            int r0 = com.google.android.exoplayer2.p393v0.Util.m29427b(r0)     // Catch:{ all -> 0x005a }
+            int r0 = com.google.android.exoplayer2.util.Util.m29427b(r0)     // Catch:{ all -> 0x005a }
         L_0x0015:
             int r2 = r10.f22167i     // Catch:{ all -> 0x005a }
             if (r2 != r0) goto L_0x001b
@@ -598,7 +598,7 @@ public final class C9510p implements BandwidthMeter, TransferListener {
 
     /* renamed from: a */
     public void mo24445a(Handler handler, C9434a aVar) {
-        this.f22161c.mo24647a(handler, aVar);
+        this.f22161c.addListener(handler, aVar);
     }
 
     private C9510p(Context context, SparseArray<Long> sparseArray, int i, C9542g gVar, boolean z) {
@@ -611,7 +611,7 @@ public final class C9510p implements BandwidthMeter, TransferListener {
         }
         this.f22159a = context2;
         this.f22160b = sparseArray;
-        this.f22161c = new C9557m<>();
+        this.f22161c = new EventDispatcher<>();
         this.f22162d = new C9532c0(i);
         this.f22163e = gVar;
         if (context == null) {
@@ -628,16 +628,16 @@ public final class C9510p implements BandwidthMeter, TransferListener {
 
     /* renamed from: a */
     public void mo24446a(C9434a aVar) {
-        this.f22161c.mo24649a(aVar);
+        this.f22161c.removeListener(aVar);
     }
 
     /* renamed from: a */
     private void m29224a(int i, long j, long j2) {
         if (i != 0 || j != 0 || j2 != this.f22171m) {
             this.f22171m = j2;
-            C9557m<C9434a> mVar = this.f22161c;
+            EventDispatcher<C9434a> mVar = this.f22161c;
             C9441a aVar = new C9441a(i, j, j2);
-            mVar.mo24648a((C9558a<T>) aVar);
+            mVar.dispatch((Event<T>) aVar);
         }
     }
 

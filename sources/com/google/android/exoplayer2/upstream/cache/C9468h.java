@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.google.android.exoplayer2.database.C8684a;
 import com.google.android.exoplayer2.database.C8686c;
 import com.google.android.exoplayer2.database.DatabaseProvider;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.util.Set;
 
 /* renamed from: com.google.android.exoplayer2.upstream.cache.h */

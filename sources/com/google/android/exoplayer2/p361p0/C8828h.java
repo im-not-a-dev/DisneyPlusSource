@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.p361p0;
 
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.p393v0.C9571v;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9571v;
+import com.google.android.exoplayer2.util.C9572w;
 import java.nio.ByteBuffer;
 import net.danlew.android.joda.DateUtils;
 
@@ -55,7 +55,7 @@ public final class C8828h {
      */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public static com.google.android.exoplayer2.p361p0.C8828h.C8830b m25609a(com.google.android.exoplayer2.p393v0.C9571v r10) {
+    public static com.google.android.exoplayer2.p361p0.C8828h.C8830b m25609a(com.google.android.exoplayer2.util.C9571v r10) {
         /*
             r0 = 16
             int r1 = r10.mo24660a(r0)

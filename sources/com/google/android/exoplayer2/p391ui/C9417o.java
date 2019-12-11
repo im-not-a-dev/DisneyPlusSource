@@ -15,7 +15,7 @@ import android.text.TextPaint;
 import android.text.TextUtils;
 import com.google.android.exoplayer2.p382u0.C9321a;
 import com.google.android.exoplayer2.p382u0.C9322b;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.ui.o */
 /* compiled from: SubtitlePainter */
@@ -189,7 +189,7 @@ final class C9417o {
             java.lang.String r6 = "SubtitlePainter"
             if (r5 > 0) goto L_0x0036
             java.lang.String r1 = "Skipped drawing subtitle cue (insufficient space)"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r6, r1)
+            com.google.android.exoplayer2.util.Log.m29500d(r6, r1)
             return
         L_0x0036:
             java.lang.CharSequence r8 = r0.f21847h
@@ -344,7 +344,7 @@ final class C9417o {
             int r4 = r4 - r1
             if (r4 > 0) goto L_0x0148
             java.lang.String r1 = "Skipped drawing subtitle cue (invalid horizontal positioning)"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r6, r1)
+            com.google.android.exoplayer2.util.Log.m29500d(r6, r1)
             return
         L_0x0148:
             float r5 = r0.f21850k

@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Log;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9141f0;
 import com.google.android.exoplayer2.source.C9231q;
@@ -9,7 +9,7 @@ import com.google.android.exoplayer2.source.C9258v;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.trackselection.C9311j;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
 import com.google.android.exoplayer2.trackselection.C9318m;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import com.google.android.exoplayer2.trackselection.TrackSelector;
@@ -80,7 +80,7 @@ final class C8683d0 {
         if (m25121l() && mVar != null) {
             for (int i = 0; i < mVar.f21310a; i++) {
                 boolean a = mVar.mo24134a(i);
-                C9311j a2 = mVar.f21312c.mo24040a(i);
+                TrackSelection a2 = mVar.f21312c.mo24040a(i);
                 if (a && a2 != null) {
                     a2.mo24074e();
                 }
@@ -94,7 +94,7 @@ final class C8683d0 {
         if (m25121l() && mVar != null) {
             for (int i = 0; i < mVar.f21310a; i++) {
                 boolean a = mVar.mo24134a(i);
-                C9311j a2 = mVar.f21312c.mo24040a(i);
+                TrackSelection a2 = mVar.f21312c.mo24040a(i);
                 if (a && a2 != null) {
                     a2.mo24058c();
                 }
@@ -188,12 +188,12 @@ final class C8683d0 {
 
     /* renamed from: b */
     public C9318m mo22725b(float f, Timeline timeline) throws ExoPlaybackException {
-        C9311j[] a;
+        TrackSelection[] a;
         C9318m a2 = this.f18438i.mo24044a(this.f18437h, mo22733f(), this.f18435f.f18510a, timeline);
         if (a2.mo24135a(this.f18442m)) {
             return null;
         }
-        for (C9311j jVar : a2.f21312c.mo24041a()) {
+        for (TrackSelection jVar : a2.f21312c.mo24041a()) {
             if (jVar != null) {
                 jVar.mo24052a(f);
             }

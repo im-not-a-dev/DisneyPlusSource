@@ -4,9 +4,9 @@ import com.google.android.exoplayer2.metadata.C8739b;
 import com.google.android.exoplayer2.metadata.C8742d;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.C9545h0;
-import com.google.android.exoplayer2.p393v0.C9571v;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9545h0;
+import com.google.android.exoplayer2.util.C9571v;
+import com.google.android.exoplayer2.util.C9572w;
 import java.nio.ByteBuffer;
 
 /* renamed from: com.google.android.exoplayer2.metadata.k.c */

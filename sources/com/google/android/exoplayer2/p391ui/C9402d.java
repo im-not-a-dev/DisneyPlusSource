@@ -11,7 +11,7 @@ import com.google.android.exoplayer2.PlaybackParameters;
 import com.google.android.exoplayer2.Player.EventListener;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.p362q0.C8878d;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import java.util.Locale;
@@ -30,7 +30,7 @@ public class C9402d implements EventListener, Runnable {
     private final SimpleExoPlayer f21738c;
 
     public C9402d(SimpleExoPlayer o0Var, TextView textView) {
-        Assertions.m29299a(o0Var.getApplicationLooper() == Looper.getMainLooper());
+        Assertions.checkArgument(o0Var.getApplicationLooper() == Looper.getMainLooper());
         this.f21738c = o0Var;
         this.f21736U = textView;
     }

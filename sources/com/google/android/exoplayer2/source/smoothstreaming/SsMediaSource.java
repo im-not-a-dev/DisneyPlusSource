@@ -8,7 +8,7 @@ import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.offline.C8808b;
 import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9197i0;
 import com.google.android.exoplayer2.source.C9229o;
@@ -23,24 +23,24 @@ import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a.C9247b;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9248b;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9255c;
-import com.google.android.exoplayer2.upstream.C9442a0;
-import com.google.android.exoplayer2.upstream.C9442a0.C9444b;
-import com.google.android.exoplayer2.upstream.C9442a0.C9445c;
-import com.google.android.exoplayer2.upstream.C9452b0;
-import com.google.android.exoplayer2.upstream.C9452b0.C9453a;
-import com.google.android.exoplayer2.upstream.C9455c0;
-import com.google.android.exoplayer2.upstream.C9455c0.C9456a;
+import com.google.android.exoplayer2.upstream.Loader;
+import com.google.android.exoplayer2.upstream.Loader.C9444b;
+import com.google.android.exoplayer2.upstream.Loader.C9445c;
+import com.google.android.exoplayer2.upstream.LoaderErrorThrower;
+import com.google.android.exoplayer2.upstream.LoaderErrorThrower.Dummy;
+import com.google.android.exoplayer2.upstream.ParsingLoadable;
+import com.google.android.exoplayer2.upstream.ParsingLoadable.Parser;
 import com.google.android.exoplayer2.upstream.C9491f;
 import com.google.android.exoplayer2.upstream.C9518u;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a>> {
+public final class SsMediaSource extends C9229o implements C9444b<ParsingLoadable<C9245a>> {
 
     /* renamed from: Y */
     private final boolean f20952Y;
@@ -49,7 +49,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
     private final Uri f20953Z;
 
     /* renamed from: a0 */
-    private final C9435a f20954a0;
+    private final DataSource f20954a0;
 
     /* renamed from: b0 */
     private final C9243a f20955b0;
@@ -58,7 +58,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
     private final C9256t f20956c0;
 
     /* renamed from: d0 */
-    private final C9524z f20957d0;
+    private final LoadErrorHandlingPolicy f20957d0;
 
     /* renamed from: e0 */
     private final long f20958e0;
@@ -67,7 +67,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
     private final C9068a f20959f0;
 
     /* renamed from: g0 */
-    private final C9456a<? extends C9245a> f20960g0;
+    private final Parser<? extends C9245a> f20960g0;
 
     /* renamed from: h0 */
     private final ArrayList<C9244d> f20961h0;
@@ -79,10 +79,10 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
     private DataSource f20963j0;
 
     /* renamed from: k0 */
-    private C9442a0 f20964k0;
+    private Loader f20964k0;
 
     /* renamed from: l0 */
-    private C9452b0 f20965l0;
+    private LoaderErrorThrower f20965l0;
 
     /* renamed from: m0 */
     private TransferListener f20966m0;
@@ -102,10 +102,10 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
         private final C9243a f20970a;
 
         /* renamed from: b */
-        private final C9435a f20971b;
+        private final DataSource f20971b;
 
         /* renamed from: c */
-        private C9456a<? extends C9245a> f20972c;
+        private Parser<? extends C9245a> f20972c;
 
         /* renamed from: d */
         private List<StreamKey> f20973d;
@@ -114,7 +114,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
         private C9256t f20974e;
 
         /* renamed from: f */
-        private C9524z f20975f;
+        private LoadErrorHandlingPolicy f20975f;
 
         /* renamed from: g */
         private long f20976g;
@@ -125,7 +125,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
         /* renamed from: i */
         private Object f20978i;
 
-        public Factory(C9435a aVar) {
+        public Factory(DataSource aVar) {
             this(new C9240a(aVar), aVar);
         }
 
@@ -149,7 +149,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
             return this;
         }
 
-        public Factory(C9243a aVar, C9435a aVar2) {
+        public Factory(C9243a aVar, DataSource aVar2) {
             Assertions.checkNotNull(aVar);
             this.f20970a = aVar;
             this.f20971b = aVar2;
@@ -215,7 +215,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
     /* renamed from: e */
     public void m27886e() {
         if (!this.f20964k0.mo24460d()) {
-            C9455c0 c0Var = new C9455c0(this.f20963j0, this.f20953Z, 4, this.f20960g0);
+            ParsingLoadable c0Var = new ParsingLoadable(this.f20963j0, this.f20953Z, 4, this.f20960g0);
             this.f20959f0.mo23513a(c0Var.f21975a, c0Var.f21976b, this.f20964k0.mo24455a(c0Var, this, this.f20957d0.getMinimumLoadableRetryCount(c0Var.f21976b)));
         }
     }
@@ -225,7 +225,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
         this.f20968o0 = this.f20952Y ? this.f20968o0 : null;
         this.f20963j0 = null;
         this.f20967n0 = 0;
-        C9442a0 a0Var = this.f20964k0;
+        Loader a0Var = this.f20964k0;
         if (a0Var != null) {
             a0Var.mo24462f();
             this.f20964k0 = null;
@@ -237,7 +237,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
         }
     }
 
-    private SsMediaSource(C9245a aVar, Uri uri, C9435a aVar2, C9456a<? extends C9245a> aVar3, C9243a aVar4, C9256t tVar, C9524z zVar, long j, Object obj) {
+    private SsMediaSource(C9245a aVar, Uri uri, DataSource aVar2, Parser<? extends C9245a> aVar3, C9243a aVar4, C9256t tVar, LoadErrorHandlingPolicy zVar, long j, Object obj) {
         Uri uri2;
         boolean z = false;
         Assertions.checkState(aVar == null || !aVar.f21005d);
@@ -267,12 +267,12 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
     public void mo23580a(TransferListener transferListener) {
         this.f20966m0 = transferListener;
         if (this.f20952Y) {
-            this.f20965l0 = new C9453a();
+            this.f20965l0 = new Dummy();
             m27884c();
             return;
         }
         this.f20963j0 = this.f20954a0.mo24448a();
-        this.f20964k0 = new C9442a0("Loader:Manifest");
+        this.f20964k0 = new Loader("Loader:Manifest");
         this.f20965l0 = this.f20964k0;
         this.f20969p0 = new Handler();
         m27886e();
@@ -280,7 +280,7 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
 
     /* renamed from: a */
     public void mo23487a() throws IOException {
-        this.f20965l0.mo23621a();
+        this.f20965l0.maybeThrowError();
     }
 
     /* renamed from: a */
@@ -297,8 +297,8 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
     }
 
     /* renamed from: a */
-    public void mo23559a(C9455c0<C9245a> c0Var, long j, long j2) {
-        C9455c0<C9245a> c0Var2 = c0Var;
+    public void mo23559a(ParsingLoadable<C9245a> c0Var, long j, long j2) {
+        ParsingLoadable<C9245a> c0Var2 = c0Var;
         this.f20959f0.mo23524b(c0Var2.f21975a, c0Var.mo24474e(), c0Var.mo24472c(), c0Var2.f21976b, j, j2, c0Var.mo24471b());
         this.f20968o0 = (C9245a) c0Var.mo24473d();
         this.f20967n0 = j - j2;
@@ -307,20 +307,20 @@ public final class SsMediaSource extends C9229o implements C9444b<C9455c0<C9245a
     }
 
     /* renamed from: a */
-    public void mo23560a(C9455c0<C9245a> c0Var, long j, long j2, boolean z) {
-        C9455c0<C9245a> c0Var2 = c0Var;
+    public void mo23560a(ParsingLoadable<C9245a> c0Var, long j, long j2, boolean z) {
+        ParsingLoadable<C9245a> c0Var2 = c0Var;
         this.f20959f0.mo23516a(c0Var2.f21975a, c0Var.mo24474e(), c0Var.mo24472c(), c0Var2.f21976b, j, j2, c0Var.mo24471b());
     }
 
     /* renamed from: a */
-    public C9445c mo23555a(C9455c0<C9245a> c0Var, long j, long j2, IOException iOException, int i) {
+    public C9445c mo23555a(ParsingLoadable<C9245a> c0Var, long j, long j2, IOException iOException, int i) {
         C9445c cVar;
-        C9455c0<C9245a> c0Var2 = c0Var;
+        ParsingLoadable<C9245a> c0Var2 = c0Var;
         long retryDelayMsFor = this.f20957d0.getRetryDelayMsFor(4, j2, iOException, i);
         if (retryDelayMsFor == -9223372036854775807L) {
-            cVar = C9442a0.f21955e;
+            cVar = Loader.f21955e;
         } else {
-            cVar = C9442a0.m28955a(false, retryDelayMsFor);
+            cVar = Loader.m28955a(false, retryDelayMsFor);
         }
         this.f20959f0.mo23517a(c0Var2.f21975a, c0Var.mo24474e(), c0Var.mo24472c(), c0Var2.f21976b, j, j2, c0Var.mo24471b(), iOException, !cVar.mo24463a());
         return cVar;

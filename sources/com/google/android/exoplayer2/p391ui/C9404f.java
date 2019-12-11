@@ -3,9 +3,9 @@ package com.google.android.exoplayer2.p391ui;
 import android.content.res.Resources;
 import android.text.TextUtils;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9566t;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9566t;
 import java.util.Locale;
 
 /* renamed from: com.google.android.exoplayer2.ui.f */

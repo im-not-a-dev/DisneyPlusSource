@@ -5,7 +5,7 @@ import android.media.MediaCryptoException;
 import android.media.MediaDrmException;
 import android.media.NotProvisionedException;
 import com.google.android.exoplayer2.drm.ExoMediaCrypto;
-import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
+import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -76,7 +76,7 @@ public interface ExoMediaDrm<T extends ExoMediaCrypto> {
 	/
 
     /* renamed from: a */
-    KeyRequest mo22775a(byte[] bArr, List<C8692b> list, int i, HashMap<String, String> hashMap) throws NotProvisionedException;
+    KeyRequest mo22775a(byte[] bArr, List<SchemeData> list, int i, HashMap<String, String> hashMap) throws NotProvisionedException;
 
     /* renamed from: a */
     ProvisionRequest mo22776a();

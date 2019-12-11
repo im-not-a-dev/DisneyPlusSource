@@ -8,7 +8,7 @@ import java.util.Map;
 public interface DataSource {
 
     /* renamed from: com.google.android.exoplayer2.upstream.DataSource$a */
-    public interface C9435a {
+    public interface DataSource {
         /* renamed from: a */
         DataSource mo24448a();
     }

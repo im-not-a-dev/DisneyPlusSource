@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.hls;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.upstream.C9508n;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;

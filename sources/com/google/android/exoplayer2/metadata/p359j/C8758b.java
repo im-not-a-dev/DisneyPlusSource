@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.metadata.p359j;
 
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.metadata.j.b */

@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.source;
 
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.Timeline.C8669b;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.source.i0 */
 /* compiled from: SinglePeriodTimeline */
@@ -59,7 +59,7 @@ public final class C9197i0 extends Timeline {
             r1 = 0
             r2 = 1
             r3 = r19
-            com.google.android.exoplayer2.p393v0.Assertions.m29295a(r3, r1, r2)
+            com.google.android.exoplayer2.util.Assertions.m29295a(r3, r1, r2)
             if (r21 == 0) goto L_0x000e
             java.lang.Object r1 = r0.f20827j
             goto L_0x000f

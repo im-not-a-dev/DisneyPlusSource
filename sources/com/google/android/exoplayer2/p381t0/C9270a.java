@@ -8,10 +8,10 @@ import android.media.MediaCodecInfo.CodecProfileLevel;
 import android.media.MediaCodecInfo.VideoCapabilities;
 import android.util.Pair;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9566t;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9566t;
 
 /* renamed from: com.google.android.exoplayer2.t0.a */
 /* compiled from: MediaCodecInfo */
@@ -159,7 +159,7 @@ public final class C9270a {
             if (r4 > 0) goto L_0x001a
             goto L_0x0052
         L_0x001a:
-            int r5 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r5 = com.google.android.exoplayer2.util.Util.SDK_INT
             if (r5 < r2) goto L_0x0026
             float r7 = r7.f18357i0
             double r1 = (double) r7
@@ -189,7 +189,7 @@ public final class C9270a {
         L_0x0052:
             return r3
         L_0x0053:
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             if (r0 < r2) goto L_0x006c
             int r0 = r7.f18364p0
             r2 = -1

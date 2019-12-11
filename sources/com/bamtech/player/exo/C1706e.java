@@ -17,7 +17,7 @@ import com.google.android.exoplayer2.p394w0.C9602q;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.trackselection.C9295d.C9301e;
 import com.google.android.exoplayer2.upstream.BandwidthMeter;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import java.util.ArrayList;
 import org.joda.time.DateTime;
 import p163g.p174d.p178b.C5300m;
@@ -66,7 +66,7 @@ public class C1706e implements C5326w {
     /* renamed from: k */
     C1701a f5961k;
 
-    public C1706e(C1708g gVar, BandwidthMeter bandwidthMeter, C1732d dVar, C1739a aVar, C9435a aVar2, C5300m mVar, C4952a aVar3) {
+    public C1706e(C1708g gVar, BandwidthMeter bandwidthMeter, C1732d dVar, C1739a aVar, DataSource aVar2, C5300m mVar, C4952a aVar3) {
         this.f5951a = gVar;
         this.f5953c = aVar;
         this.f5954d = mVar;

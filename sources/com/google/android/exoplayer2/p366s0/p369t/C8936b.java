@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p366s0.p369t;
 
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.io.IOException;
 import java.util.ArrayDeque;
 

@@ -10,10 +10,10 @@ import android.util.SparseBooleanArray;
 import com.google.android.exoplayer2.database.C8684a;
 import com.google.android.exoplayer2.database.C8686c;
 import com.google.android.exoplayer2.database.DatabaseProvider;
-import com.google.android.exoplayer2.p393v0.C9530b0;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9539f;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.C9530b0;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9539f;
+import com.google.android.exoplayer2.util.Util;
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
 import java.io.DataInputStream;
@@ -164,7 +164,7 @@ class C9475m {
             L_0x000c:
                 r0 = 0
             L_0x000d:
-                com.google.android.exoplayer2.p393v0.Assertions.checkState(r0)
+                com.google.android.exoplayer2.util.Assertions.checkState(r0)
                 com.google.android.exoplayer2.database.DatabaseProvider r0 = r7.f22052a     // Catch:{ SQLiteException -> 0x0081 }
                 android.database.sqlite.SQLiteDatabase r0 = r0.getReadableDatabase()     // Catch:{ SQLiteException -> 0x0081 }
                 java.lang.String r3 = r7.f22054c     // Catch:{ SQLiteException -> 0x0081 }
@@ -362,7 +362,7 @@ class C9475m {
             Cipher cipher;
             Random random = null;
             if (bArr != null) {
-                Assertions.m29299a(bArr.length == 16);
+                Assertions.checkArgument(bArr.length == 16);
                 try {
                     cipher = C9475m.m29075e();
                     secretKeySpec = new SecretKeySpec(bArr, "AES");
@@ -370,7 +370,7 @@ class C9475m {
                     throw new IllegalStateException(e);
                 }
             } else {
-                Assertions.m29299a(!z);
+                Assertions.checkArgument(!z);
                 cipher = null;
                 secretKeySpec = null;
             }
@@ -497,7 +497,7 @@ class C9475m {
                 if (r6 == 0) goto L_0x0060
                 javax.crypto.Cipher r6 = r10.f22057b     // Catch:{ IOException -> 0x00a7, all -> 0x00a5 }
                 if (r6 != 0) goto L_0x0036
-                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
+                com.google.android.exoplayer2.util.Util.m29406a(r4)
                 return r2
             L_0x0036:
                 r6 = 16
@@ -558,13 +558,13 @@ class C9475m {
                 if (r12 != 0) goto L_0x0099
                 goto L_0x009d
             L_0x0099:
-                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
+                com.google.android.exoplayer2.util.Util.m29406a(r4)
                 return r1
             L_0x009d:
-                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
+                com.google.android.exoplayer2.util.Util.m29406a(r4)
                 return r2
             L_0x00a1:
-                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
+                com.google.android.exoplayer2.util.Util.m29406a(r4)
                 return r2
             L_0x00a5:
                 r11 = move-exception
@@ -576,14 +576,14 @@ class C9475m {
                 r4 = r0
             L_0x00ab:
                 if (r4 == 0) goto L_0x00b0
-                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
+                com.google.android.exoplayer2.util.Util.m29406a(r4)
             L_0x00b0:
                 throw r11
             L_0x00b1:
                 r4 = r0
             L_0x00b2:
                 if (r4 == 0) goto L_0x00b7
-                com.google.android.exoplayer2.p393v0.Util.m29406a(r4)
+                com.google.android.exoplayer2.util.Util.m29406a(r4)
             L_0x00b7:
                 return r2
             */

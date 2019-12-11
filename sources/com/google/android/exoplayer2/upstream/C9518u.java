@@ -1,14 +1,14 @@
 package com.google.android.exoplayer2.upstream;
 
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.upstream.C9442a0.C9450h;
+import com.google.android.exoplayer2.upstream.Loader.C9450h;
 import com.google.android.exoplayer2.upstream.HttpDataSource.C9439d;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /* renamed from: com.google.android.exoplayer2.upstream.u */
 /* compiled from: DefaultLoadErrorHandlingPolicy */
-public class C9518u implements C9524z {
+public class C9518u implements LoadErrorHandlingPolicy {
     private final int minimumLoadableRetryCount;
 
     public C9518u() {

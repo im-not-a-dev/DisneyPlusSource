@@ -32,9 +32,9 @@ import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.Timeline.C8670c;
 import com.google.android.exoplayer2.p391ui.C9418p.C9419a;
-import com.google.android.exoplayer2.p393v0.C9528a0;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.C9528a0;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import java.util.Arrays;
@@ -543,7 +543,7 @@ public class C9405g extends FrameLayout {
         if (!(player == null || player.getApplicationLooper() == Looper.getMainLooper())) {
             z = false;
         }
-        Assertions.m29299a(z);
+        Assertions.checkArgument(z);
         Player player2 = this.f21778B0;
         if (player2 != player) {
             if (player2 != null) {

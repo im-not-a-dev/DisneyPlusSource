@@ -1,14 +1,14 @@
 package com.google.android.exoplayer2.trackselection;
 
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9542g;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9542g;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.p379m0.C9224l;
 import com.google.android.exoplayer2.source.p379m0.C9225m;
-import com.google.android.exoplayer2.trackselection.C9311j.C9312a;
-import com.google.android.exoplayer2.trackselection.C9311j.C9313b;
+import com.google.android.exoplayer2.trackselection.TrackSelection.C9312a;
+import com.google.android.exoplayer2.trackselection.TrackSelection.C9313b;
 import com.google.android.exoplayer2.upstream.BandwidthMeter;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -123,7 +123,7 @@ public class C9287b extends C9292c {
         /* access modifiers changed from: 0000 */
         /* renamed from: a */
         public void mo24062a(long[][] jArr) {
-            Assertions.m29299a(jArr.length >= 2);
+            Assertions.checkArgument(jArr.length >= 2);
             this.f21191d = jArr;
         }
     }
@@ -167,12 +167,12 @@ public class C9287b extends C9292c {
         }
 
         /* renamed from: a */
-        public final C9311j[] mo24064a(C9312a[] aVarArr, BandwidthMeter bandwidthMeter) {
+        public final TrackSelection[] mo24064a(C9312a[] aVarArr, BandwidthMeter bandwidthMeter) {
             BandwidthMeter bandwidthMeter2 = this.f21192a;
             if (bandwidthMeter2 != null) {
                 bandwidthMeter = bandwidthMeter2;
             }
-            C9311j[] jVarArr = new C9311j[aVarArr.length];
+            TrackSelection[] jVarArr = new TrackSelection[aVarArr.length];
             ArrayList arrayList = new ArrayList();
             int i = 0;
             for (int i2 = 0; i2 < aVarArr.length; i2++) {

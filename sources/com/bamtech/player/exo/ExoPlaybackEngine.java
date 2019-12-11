@@ -27,12 +27,12 @@ import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.trackselection.C9287b.C9291d;
 import com.google.android.exoplayer2.trackselection.C9295d.C9299d;
 import com.google.android.exoplayer2.trackselection.C9295d.C9301e;
-import com.google.android.exoplayer2.trackselection.C9311j.C9313b;
+import com.google.android.exoplayer2.trackselection.TrackSelection.C9313b;
 import com.google.android.exoplayer2.upstream.C9510p;
 import com.google.android.exoplayer2.upstream.C9510p.C9512b;
 import com.google.android.exoplayer2.upstream.C9515r;
-import com.google.android.exoplayer2.upstream.C9517t;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.net.CookieHandler;
 import java.net.CookieManager;
@@ -146,7 +146,7 @@ public class ExoPlaybackEngine implements C5280i, C0721l {
         protected CookieManager f5917p;
 
         /* renamed from: q */
-        protected C9435a f5918q;
+        protected DataSource f5918q;
 
         /* renamed from: r */
         protected C5304b f5919r;
@@ -238,7 +238,7 @@ public class ExoPlaybackEngine implements C5280i, C0721l {
                 this.f5914m = new Handler();
             }
             if (this.f5918q == null) {
-                this.f5918q = new C9515r(this.f5902a, (TransferListener) this.f5909h, (C9435a) new C9517t(this.f5905d, this.f5909h));
+                this.f5918q = new C9515r(this.f5902a, (TransferListener) this.f5909h, (DataSource) new DefaultHttpDataSourceFactory(this.f5905d, this.f5909h));
             }
             if (this.f5916o == null) {
                 this.f5916o = new C1728a(this.f5906e, new C1726a(null));

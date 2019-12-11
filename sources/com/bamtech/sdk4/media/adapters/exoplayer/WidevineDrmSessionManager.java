@@ -282,7 +282,7 @@ public final class WidevineDrmSessionManager implements DrmSessionManager<Framew
 
     public final String extractSessionKeyId(DrmSession<FrameworkMediaCrypto> drmSession) {
         if (drmSession != null) {
-            byte[] c = drmSession.mo22772c();
+            byte[] c = drmSession.getOfflineLicenseKeySetId();
             if (c != null) {
                 return new String(c, C12801c.f29474a);
             }

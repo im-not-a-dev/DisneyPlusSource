@@ -10,15 +10,15 @@ import android.media.NotProvisionedException;
 import android.media.UnsupportedSchemeException;
 import android.text.TextUtils;
 import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
+import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.OnKeyStatusChangeListener;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.KeyRequest;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.ProvisionRequest;
 import com.google.android.exoplayer2.p366s0.p371v.C8980k;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9572w;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.Charset;
@@ -119,10 +119,10 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto
     }
 
     /* renamed from: a */
-    public KeyRequest mo22775a(byte[] bArr, List<C8692b> list, int i, HashMap<String, String> hashMap) throws NotProvisionedException {
+    public KeyRequest mo22775a(byte[] bArr, List<SchemeData> list, int i, HashMap<String, String> hashMap) throws NotProvisionedException {
         String str;
         byte[] bArr2;
-        C8692b bVar = null;
+        SchemeData bVar = null;
         if (list != null) {
             bVar = m25189a(this.f18473a, list);
             UUID uuid = this.f18473a;
@@ -173,7 +173,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:19:0x0056, code lost:
-        if ("AFTM".equals(com.google.android.exoplayer2.p393v0.Util.MODEL) != false) goto L_0x0058;
+        if ("AFTM".equals(com.google.android.exoplayer2.util.Util.MODEL) != false) goto L_0x0058;
      */
     /* renamed from: b */
     /* Code decompiled incorrectly, please refer to instructions dump. */
@@ -192,7 +192,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto
             byte[] r3 = m25197e(r3)
             byte[] r3 = com.google.android.exoplayer2.p366s0.p371v.C8980k.m26491a(r0, r3)
         L_0x001a:
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             r1 = 21
             if (r0 >= r1) goto L_0x0028
             java.util.UUID r0 = com.google.android.exoplayer2.C.WIDEVINE_UUID
@@ -202,19 +202,19 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto
             java.util.UUID r0 = com.google.android.exoplayer2.C.PLAYREADY_UUID
             boolean r0 = r0.equals(r2)
             if (r0 == 0) goto L_0x005f
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MANUFACTURER
             java.lang.String r1 = "Amazon"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x005f
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "AFTB"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x0058
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "AFTS"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x0058
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "AFTM"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x005f
@@ -255,13 +255,13 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto
     }
 
     /* renamed from: a */
-    private static C8692b m25189a(UUID uuid, List<C8692b> list) {
+    private static SchemeData m25189a(UUID uuid, List<SchemeData> list) {
         boolean z;
         if (!C.WIDEVINE_UUID.equals(uuid)) {
-            return (C8692b) list.get(0);
+            return (SchemeData) list.get(0);
         }
         if (Util.SDK_INT >= 28 && list.size() > 1) {
-            C8692b bVar = (C8692b) list.get(0);
+            SchemeData bVar = (SchemeData) list.get(0);
             int i = 0;
             int i2 = 0;
             while (true) {
@@ -269,7 +269,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto
                     z = true;
                     break;
                 }
-                C8692b bVar2 = (C8692b) list.get(i);
+                SchemeData bVar2 = (SchemeData) list.get(i);
                 byte[] bArr = bVar2.f18466X;
                 Util.castNonNull(bArr);
                 byte[] bArr2 = bArr;
@@ -285,7 +285,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto
                 byte[] bArr3 = new byte[i2];
                 int i3 = 0;
                 for (int i4 = 0; i4 < list.size(); i4++) {
-                    byte[] bArr4 = ((C8692b) list.get(i4)).f18466X;
+                    byte[] bArr4 = ((SchemeData) list.get(i4)).f18466X;
                     Util.castNonNull(bArr4);
                     byte[] bArr5 = bArr4;
                     int length = bArr5.length;
@@ -296,7 +296,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto
             }
         }
         for (int i5 = 0; i5 < list.size(); i5++) {
-            C8692b bVar3 = (C8692b) list.get(i5);
+            SchemeData bVar3 = (SchemeData) list.get(i5);
             byte[] bArr6 = bVar3.f18466X;
             Util.castNonNull(bArr6);
             int d = C8980k.m26496d(bArr6);
@@ -307,7 +307,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm<FrameworkMediaCrypto
                 return bVar3;
             }
         }
-        return (C8692b) list.get(0);
+        return (SchemeData) list.get(0);
     }
 
     /* renamed from: a */

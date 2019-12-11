@@ -5,9 +5,9 @@ import android.os.Handler;
 import android.os.SystemClock;
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.source.MediaSourceEventListener.C9068a;
-import com.google.android.exoplayer2.source.hls.C9162h;
+import com.google.android.exoplayer2.source.hls.HlsDataSourceFactory;
 import com.google.android.exoplayer2.source.hls.playlist.C9182e.C9184b;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h.C9189a;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h.C9190b;
@@ -15,12 +15,12 @@ import com.google.android.exoplayer2.source.hls.playlist.C9188h.C9191c;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h.C9192d;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h.C9193e;
 import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist.C9176a;
-import com.google.android.exoplayer2.upstream.C9442a0;
-import com.google.android.exoplayer2.upstream.C9442a0.C9444b;
-import com.google.android.exoplayer2.upstream.C9442a0.C9445c;
-import com.google.android.exoplayer2.upstream.C9455c0;
-import com.google.android.exoplayer2.upstream.C9455c0.C9456a;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.upstream.Loader;
+import com.google.android.exoplayer2.upstream.Loader.C9444b;
+import com.google.android.exoplayer2.upstream.Loader.C9445c;
+import com.google.android.exoplayer2.upstream.ParsingLoadable;
+import com.google.android.exoplayer2.upstream.ParsingLoadable.Parser;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,17 +29,17 @@ import java.util.List;
 
 /* renamed from: com.google.android.exoplayer2.source.hls.playlist.c */
 /* compiled from: DefaultHlsPlaylistTracker */
-public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
+public final class C9179c implements C9188h, C9444b<ParsingLoadable<HlsPlaylist>> {
 
     /* renamed from: j0 */
     public static final C9189a f20718j0 = C9177a.f20717a;
 
     /* renamed from: U */
-    private final C9187g f20719U;
+    private final HlsPlaylistParserFactory f20719U;
     /* access modifiers changed from: private */
 
     /* renamed from: V */
-    public final C9524z f20720V;
+    public final LoadErrorHandlingPolicy f20720V;
 
     /* renamed from: W */
     private final HashMap<Uri, C9180a> f20721W;
@@ -53,18 +53,18 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
     /* access modifiers changed from: private */
 
     /* renamed from: Z */
-    public C9456a<HlsPlaylist> f20724Z;
+    public Parser<HlsPlaylist> f20724Z;
     /* access modifiers changed from: private */
 
     /* renamed from: a0 */
     public C9068a f20725a0;
 
     /* renamed from: b0 */
-    private C9442a0 f20726b0;
+    private Loader f20726b0;
     /* access modifiers changed from: private */
 
     /* renamed from: c */
-    public final C9162h f20727c;
+    public final HlsDataSourceFactory f20727c;
     /* access modifiers changed from: private */
 
     /* renamed from: c0 */
@@ -91,13 +91,13 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
 
     /* renamed from: com.google.android.exoplayer2.source.hls.playlist.c$a */
     /* compiled from: DefaultHlsPlaylistTracker */
-    private final class C9180a implements C9444b<C9455c0<HlsPlaylist>>, Runnable {
+    private final class C9180a implements C9444b<ParsingLoadable<HlsPlaylist>>, Runnable {
 
         /* renamed from: U */
-        private final C9442a0 f20735U = new C9442a0("DefaultHlsPlaylistTracker:MediaPlaylist");
+        private final Loader f20735U = new Loader("DefaultHlsPlaylistTracker:MediaPlaylist");
 
         /* renamed from: V */
-        private final C9455c0<HlsPlaylist> f20736V;
+        private final ParsingLoadable<HlsPlaylist> f20736V;
 
         /* renamed from: W */
         private HlsMediaPlaylist f20737W;
@@ -127,14 +127,14 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
 
         public C9180a(Uri uri) {
             this.f20743c = uri;
-            this.f20736V = new C9455c0<>(C9179c.this.f20727c.createDataSource(4), uri, 4, C9179c.this.f20724Z);
+            this.f20736V = new ParsingLoadable<>(C9179c.this.f20727c.createDataSource(4), uri, 4, C9179c.this.f20724Z);
         }
 
         /* renamed from: f */
         private void m27637f() {
             long a = this.f20735U.mo24455a(this.f20736V, this, C9179c.this.f20720V.getMinimumLoadableRetryCount(this.f20736V.f21976b));
             C9068a g = C9179c.this.f20725a0;
-            C9455c0<HlsPlaylist> c0Var = this.f20736V;
+            ParsingLoadable<HlsPlaylist> c0Var = this.f20736V;
             g.mo23513a(c0Var.f21975a, c0Var.f21976b, a);
         }
 
@@ -154,7 +154,7 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
 
         /* renamed from: d */
         public void mo23892d() throws IOException {
-            this.f20735U.mo23621a();
+            this.f20735U.maybeThrowError();
             IOException iOException = this.f20744c0;
             if (iOException != null) {
                 throw iOException;
@@ -216,7 +216,7 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
         }
 
         /* renamed from: a */
-        public void mo23559a(C9455c0<HlsPlaylist> c0Var, long j, long j2) {
+        public void mo23559a(ParsingLoadable<HlsPlaylist> c0Var, long j, long j2) {
             HlsPlaylist hlsPlaylist = (HlsPlaylist) c0Var.mo24473d();
             if (hlsPlaylist instanceof HlsMediaPlaylist) {
                 long j3 = j2;
@@ -228,14 +228,14 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
         }
 
         /* renamed from: a */
-        public void mo23560a(C9455c0<HlsPlaylist> c0Var, long j, long j2, boolean z) {
+        public void mo23560a(ParsingLoadable<HlsPlaylist> c0Var, long j, long j2, boolean z) {
             C9179c.this.f20725a0.mo23516a(c0Var.f21975a, c0Var.mo24474e(), c0Var.mo24472c(), 4, j, j2, c0Var.mo24471b());
         }
 
         /* renamed from: a */
-        public C9445c mo23555a(C9455c0<HlsPlaylist> c0Var, long j, long j2, IOException iOException, int i) {
+        public C9445c mo23555a(ParsingLoadable<HlsPlaylist> c0Var, long j, long j2, IOException iOException, int i) {
             C9445c cVar;
-            C9455c0<HlsPlaylist> c0Var2 = c0Var;
+            ParsingLoadable<HlsPlaylist> c0Var2 = c0Var;
             long blacklistDurationMsFor = C9179c.this.f20720V.getBlacklistDurationMsFor(c0Var2.f21976b, j2, iOException, i);
             boolean z = blacklistDurationMsFor != -9223372036854775807L;
             boolean z2 = C9179c.this.m27600a(this.f20743c, blacklistDurationMsFor) || !z;
@@ -244,9 +244,9 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
             }
             if (z2) {
                 long retryDelayMsFor = C9179c.this.f20720V.getRetryDelayMsFor(c0Var2.f21976b, j2, iOException, i);
-                cVar = retryDelayMsFor != -9223372036854775807L ? C9442a0.m28955a(false, retryDelayMsFor) : C9442a0.f21955e;
+                cVar = retryDelayMsFor != -9223372036854775807L ? Loader.m28955a(false, retryDelayMsFor) : Loader.f21955e;
             } else {
-                cVar = C9442a0.f21954d;
+                cVar = Loader.f21954d;
             }
             C9179c.this.f20725a0.mo23517a(c0Var2.f21975a, c0Var.mo24474e(), c0Var.mo24472c(), 4, j, j2, c0Var.mo24471b(), iOException, !cVar.mo24463a());
             return cVar;
@@ -294,7 +294,7 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
         }
     }
 
-    public C9179c(C9162h hVar, C9524z zVar, C9187g gVar) {
+    public C9179c(HlsDataSourceFactory hVar, LoadErrorHandlingPolicy zVar, HlsPlaylistParserFactory gVar) {
         this(hVar, zVar, gVar, 3.5d);
     }
 
@@ -313,7 +313,7 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
         this.f20721W.clear();
     }
 
-    public C9179c(C9162h hVar, C9524z zVar, C9187g gVar, double d) {
+    public C9179c(HlsDataSourceFactory hVar, LoadErrorHandlingPolicy zVar, HlsPlaylistParserFactory gVar, double d) {
         this.f20727c = hVar;
         this.f20719U = gVar;
         this.f20720V = zVar;
@@ -352,9 +352,9 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
 
     /* renamed from: d */
     public void mo23884d() throws IOException {
-        C9442a0 a0Var = this.f20726b0;
+        Loader a0Var = this.f20726b0;
         if (a0Var != null) {
-            a0Var.mo23621a();
+            a0Var.maybeThrowError();
         }
         Uri uri = this.f20731f0;
         if (uri != null) {
@@ -419,9 +419,9 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
         this.f20728c0 = new Handler();
         this.f20725a0 = aVar;
         this.f20729d0 = eVar;
-        C9455c0 c0Var = new C9455c0(this.f20727c.createDataSource(4), uri, 4, this.f20719U.mo23869a());
+        ParsingLoadable c0Var = new ParsingLoadable(this.f20727c.createDataSource(4), uri, 4, this.f20719U.mo23869a());
         Assertions.checkState(this.f20726b0 == null);
-        this.f20726b0 = new C9442a0("DefaultHlsPlaylistTracker:MasterPlaylist");
+        this.f20726b0 = new Loader("DefaultHlsPlaylistTracker:MasterPlaylist");
         aVar.mo23513a(c0Var.f21975a, c0Var.f21976b, this.f20726b0.mo24455a(c0Var, this, this.f20720V.getMinimumLoadableRetryCount(c0Var.f21976b)));
     }
 
@@ -479,7 +479,7 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
     }
 
     /* renamed from: a */
-    public void mo23559a(C9455c0<HlsPlaylist> c0Var, long j, long j2) {
+    public void mo23559a(ParsingLoadable<HlsPlaylist> c0Var, long j, long j2) {
         C9182e eVar;
         HlsPlaylist hlsPlaylist = (HlsPlaylist) c0Var.mo24473d();
         boolean z = hlsPlaylist instanceof HlsMediaPlaylist;
@@ -503,7 +503,7 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
     }
 
     /* renamed from: a */
-    public void mo23560a(C9455c0<HlsPlaylist> c0Var, long j, long j2, boolean z) {
+    public void mo23560a(ParsingLoadable<HlsPlaylist> c0Var, long j, long j2, boolean z) {
         C9068a aVar = this.f20725a0;
         DataSpec dataSpec = c0Var.f21975a;
         Uri e = c0Var.mo24474e();
@@ -511,15 +511,15 @@ public final class C9179c implements C9188h, C9444b<C9455c0<HlsPlaylist>> {
     }
 
     /* renamed from: a */
-    public C9445c mo23555a(C9455c0<HlsPlaylist> c0Var, long j, long j2, IOException iOException, int i) {
-        C9455c0<HlsPlaylist> c0Var2 = c0Var;
+    public C9445c mo23555a(ParsingLoadable<HlsPlaylist> c0Var, long j, long j2, IOException iOException, int i) {
+        ParsingLoadable<HlsPlaylist> c0Var2 = c0Var;
         long retryDelayMsFor = this.f20720V.getRetryDelayMsFor(c0Var2.f21976b, j2, iOException, i);
         boolean z = retryDelayMsFor == -9223372036854775807L;
         this.f20725a0.mo23517a(c0Var2.f21975a, c0Var.mo24474e(), c0Var.mo24472c(), 4, j, j2, c0Var.mo24471b(), iOException, z);
         if (z) {
-            return C9442a0.f21955e;
+            return Loader.f21955e;
         }
-        return C9442a0.m28955a(false, retryDelayMsFor);
+        return Loader.m28955a(false, retryDelayMsFor);
     }
 
     /* renamed from: a */

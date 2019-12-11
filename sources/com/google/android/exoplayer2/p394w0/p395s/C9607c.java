@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p394w0.p395s;
 
 import android.opengl.Matrix;
-import com.google.android.exoplayer2.p393v0.C9543g0;
+import com.google.android.exoplayer2.util.C9543g0;
 
 /* renamed from: com.google.android.exoplayer2.w0.s.c */
 /* compiled from: FrameRotationQueue */

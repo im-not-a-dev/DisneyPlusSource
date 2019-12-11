@@ -2,10 +2,10 @@ package com.bamtech.sdk4.internal.media.offline;
 
 import android.util.Pair;
 import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
-import com.google.android.exoplayer2.drm.C8714p;
-import com.google.android.exoplayer2.drm.C8717s;
+import com.google.android.exoplayer2.drm.KeysExpiredException;
+import com.google.android.exoplayer2.drm.WidevineUtil;
 import com.google.android.exoplayer2.drm.DrmSession;
-import com.google.android.exoplayer2.drm.DrmSession.C8694a;
+import com.google.android.exoplayer2.drm.DrmSession.DrmSessionException;
 import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -27,21 +27,21 @@ final class OfflineLicenseManager$getLicenseDuration$1 extends C12881k implement
 
     public final long invoke(DrmSession<FrameworkMediaCrypto> drmSession) {
         if (drmSession.getError() != null) {
-            C8694a error = drmSession.getError();
+            DrmSessionException error = drmSession.getError();
             String str = "null cannot be cast to non-null type com.google.android.exoplayer2.drm.DrmSession.DrmSessionException";
             if (error == null) {
                 throw new TypeCastException(str);
-            } else if (error.getCause() instanceof C8714p) {
+            } else if (error.getCause() instanceof KeysExpiredException) {
                 return 0;
             } else {
-                C8694a error2 = drmSession.getError();
+                DrmSessionException error2 = drmSession.getError();
                 if (error2 == null) {
                     throw new TypeCastException(str);
                 }
                 throw error2;
             }
         } else {
-            Pair a = C8717s.m25263a(drmSession);
+            Pair a = WidevineUtil.getLicenseDurationRemainingSec(drmSession);
             if (a != null) {
                 Object obj = a.first;
                 Intrinsics.checkReturnedValueIsNotNull(obj, "WidevineUtil.getLicenseD…iningSec(session)!!.first");

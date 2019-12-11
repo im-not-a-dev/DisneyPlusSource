@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.p379m0;
 
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 

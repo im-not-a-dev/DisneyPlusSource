@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.provider.Settings.Global;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import java.util.Arrays;
 
 @TargetApi(21)

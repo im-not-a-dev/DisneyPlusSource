@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p366s0.p374y;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.s0.y.v */

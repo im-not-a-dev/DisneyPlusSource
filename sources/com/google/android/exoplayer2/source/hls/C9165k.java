@@ -6,9 +6,9 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9566t;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9566t;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
 import com.google.android.exoplayer2.source.C9141f0;
@@ -23,7 +23,7 @@ import com.google.android.exoplayer2.source.hls.playlist.C9182e.C9183a;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h.C9190b;
 import com.google.android.exoplayer2.upstream.C9491f;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -42,13 +42,13 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
     private final C9188h f20614U;
 
     /* renamed from: V */
-    private final C9162h f20615V;
+    private final HlsDataSourceFactory f20615V;
 
     /* renamed from: W */
     private final TransferListener f20616W;
 
     /* renamed from: X */
-    private final C9524z f20617X;
+    private final LoadErrorHandlingPolicy f20617X;
 
     /* renamed from: Y */
     private final C9068a f20618Y;
@@ -95,7 +95,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
     /* renamed from: l0 */
     private boolean f20632l0;
 
-    public C9165k(HlsExtractorFactory hlsExtractorFactory, C9188h hVar, C9162h hVar2, TransferListener transferListener, C9524z zVar, C9068a aVar, C9491f fVar, C9256t tVar, boolean z, boolean z2) {
+    public C9165k(HlsExtractorFactory hlsExtractorFactory, C9188h hVar, HlsDataSourceFactory hVar2, TransferListener transferListener, LoadErrorHandlingPolicy zVar, C9068a aVar, C9491f fVar, C9256t tVar, boolean z, boolean z2) {
         this.f20622c = hlsExtractorFactory;
         this.f20614U = hVar;
         this.f20615V = hVar2;
@@ -228,7 +228,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
      */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public long mo23540a(com.google.android.exoplayer2.trackselection.C9311j[] r21, boolean[] r22, com.google.android.exoplayer2.source.C9141f0[] r23, boolean[] r24, long r25) {
+    public long mo23540a(com.google.android.exoplayer2.trackselection.TrackSelection[] r21, boolean[] r22, com.google.android.exoplayer2.source.C9141f0[] r23, boolean[] r24, long r25) {
         /*
             r20 = this;
             r0 = r20
@@ -285,7 +285,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
             int r7 = r1.length
             com.google.android.exoplayer2.source.f0[] r7 = new com.google.android.exoplayer2.source.C9141f0[r7]
             int r8 = r1.length
-            com.google.android.exoplayer2.trackselection.j[] r15 = new com.google.android.exoplayer2.trackselection.C9311j[r8]
+            com.google.android.exoplayer2.trackselection.j[] r15 = new com.google.android.exoplayer2.trackselection.TrackSelection[r8]
             com.google.android.exoplayer2.source.hls.m[] r8 = r0.f20629i0
             int r8 = r8.length
             com.google.android.exoplayer2.source.hls.m[] r13 = new com.google.android.exoplayer2.source.hls.C9167m[r8]
@@ -348,7 +348,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
         L_0x00b0:
             r10 = 0
         L_0x00b1:
-            com.google.android.exoplayer2.p393v0.Assertions.checkState(r10)
+            com.google.android.exoplayer2.util.Assertions.checkState(r10)
             r10 = r7[r9]
             r6[r9] = r10
             java.util.IdentityHashMap<com.google.android.exoplayer2.source.f0, java.lang.Integer> r10 = r0.f20620a0
@@ -366,7 +366,7 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
         L_0x00ce:
             r12 = 0
         L_0x00cf:
-            com.google.android.exoplayer2.p393v0.Assertions.checkState(r12)
+            com.google.android.exoplayer2.util.Assertions.checkState(r12)
         L_0x00d2:
             int r9 = r9 + 1
             goto L_0x00a2
@@ -541,12 +541,12 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
             int r10 = r6.f18356h0
             if (r10 > 0) goto L_0x0040
             java.lang.String r10 = r6.f18346Y
-            java.lang.String r10 = com.google.android.exoplayer2.p393v0.Util.m29396a(r10, r8)
+            java.lang.String r10 = com.google.android.exoplayer2.util.Util.m29396a(r10, r8)
             if (r10 == 0) goto L_0x0030
             goto L_0x0040
         L_0x0030:
             java.lang.String r6 = r6.f18346Y
-            java.lang.String r6 = com.google.android.exoplayer2.p393v0.Util.m29396a(r6, r9)
+            java.lang.String r6 = com.google.android.exoplayer2.util.Util.m29396a(r6, r9)
             if (r6 == 0) goto L_0x003d
             r1[r3] = r9
             int r5 = r5 + 1
@@ -630,14 +630,14 @@ public final class C9165k implements C9072a0, C9168a, C9190b {
             boolean r10 = r5.f20624d0
             if (r10 == 0) goto L_0x018b
             if (r1 == 0) goto L_0x018b
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.m29396a(r1, r8)
+            java.lang.String r8 = com.google.android.exoplayer2.util.Util.m29396a(r1, r8)
             if (r8 == 0) goto L_0x00bc
             r8 = 1
             goto L_0x00bd
         L_0x00bc:
             r8 = 0
         L_0x00bd:
-            java.lang.String r10 = com.google.android.exoplayer2.p393v0.Util.m29396a(r1, r9)
+            java.lang.String r10 = com.google.android.exoplayer2.util.Util.m29396a(r1, r9)
             if (r10 == 0) goto L_0x00c5
             r10 = 1
             goto L_0x00c6

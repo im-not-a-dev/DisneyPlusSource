@@ -36,7 +36,7 @@ import com.google.android.exoplayer2.source.MediaSourceEventListener.MediaLoadDa
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.C9306f;
 import com.google.android.exoplayer2.trackselection.C9306f.C9307a;
-import com.google.android.exoplayer2.trackselection.C9311j;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import java.io.IOException;
 import java.text.NumberFormat;
@@ -300,7 +300,7 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
                 break;
             }
             TrackGroupArray b = c.mo24130b(i);
-            C9311j a = trackSelectionArray.mo24040a(i);
+            TrackSelection a = trackSelectionArray.mo24040a(i);
             if (b.f20170c > 0) {
                 Timber.m44522a("  Renderer:%d [", Integer.valueOf(i));
                 int i3 = 0;
@@ -360,7 +360,7 @@ public class C1731c implements EventListener, C8842n, C9603r, C9228n, C9261b, C8
     }
 
     /* renamed from: a */
-    private static String m8010a(C9311j jVar, C9199j0 j0Var, int i) {
+    private static String m8010a(TrackSelection jVar, C9199j0 j0Var, int i) {
         return m8014b((jVar == null || jVar.mo24067a() != j0Var || jVar.mo24072c(i) == -1) ? false : true);
     }
 

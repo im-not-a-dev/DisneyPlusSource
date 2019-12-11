@@ -6,7 +6,7 @@ import com.facebook.stetho.server.http.HttpStatus;
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
+import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
 import com.google.android.exoplayer2.p361p0.C8825g;
 import com.google.android.exoplayer2.p366s0.C8907b;
 import com.google.android.exoplayer2.p366s0.C8912g;
@@ -17,11 +17,11 @@ import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9564r;
-import com.google.android.exoplayer2.p393v0.C9568u;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9564r;
+import com.google.android.exoplayer2.util.C9568u;
+import com.google.android.exoplayer2.util.C9572w;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -518,14 +518,14 @@ public class C8941e implements C8912g {
             r11 = r11 | r12;
          */
         /* JADX WARNING: Code restructure failed: missing block: B:147:0x0332, code lost:
-            if (com.google.android.exoplayer2.p393v0.C9566t.m29517j(r1) == false) goto L_0x0359;
+            if (com.google.android.exoplayer2.util.C9566t.m29517j(r1) == false) goto L_0x0359;
          */
         /* JADX WARNING: Code restructure failed: missing block: B:148:0x0334, code lost:
             r1 = com.google.android.exoplayer2.Format.m24874a(java.lang.Integer.toString(r34), r1, (java.lang.String) null, -1, r20, r0.f19305L, r0.f19307N, r23, r3, r0.f19325j, r11 ? 1 : 0, r0.f19313T);
             r7 = 1;
          */
         /* JADX WARNING: Code restructure failed: missing block: B:150:0x035d, code lost:
-            if (com.google.android.exoplayer2.p393v0.C9566t.m29519l(r1) == false) goto L_0x0459;
+            if (com.google.android.exoplayer2.util.C9566t.m29519l(r1) == false) goto L_0x0459;
          */
         /* JADX WARNING: Code restructure failed: missing block: B:152:0x0361, code lost:
             if (r0.f19330o != 0) goto L_0x0373;
@@ -996,7 +996,7 @@ public class C8941e implements C8912g {
                 goto L_0x031e
             L_0x01b7:
                 int r1 = r0.f19306M
-                int r1 = com.google.android.exoplayer2.p393v0.Util.getPcmEncoding(r1)
+                int r1 = com.google.android.exoplayer2.util.Util.getPcmEncoding(r1)
                 if (r1 != 0) goto L_0x01de
                 java.lang.StringBuilder r1 = new java.lang.StringBuilder
                 r1.<init>()
@@ -1008,7 +1008,7 @@ public class C8941e implements C8912g {
                 r1.append(r3)
                 r1.append(r14)
                 java.lang.String r1 = r1.toString()
-                com.google.android.exoplayer2.p393v0.Log.m29500d(r13, r1)
+                com.google.android.exoplayer2.util.Log.m29500d(r13, r1)
                 goto L_0x022e
             L_0x01de:
                 r23 = r1
@@ -1023,7 +1023,7 @@ public class C8941e implements C8912g {
                 boolean r1 = m26296b(r1)
                 if (r1 == 0) goto L_0x021a
                 int r1 = r0.f19306M
-                int r1 = com.google.android.exoplayer2.p393v0.Util.getPcmEncoding(r1)
+                int r1 = com.google.android.exoplayer2.util.Util.getPcmEncoding(r1)
                 if (r1 != 0) goto L_0x01de
                 java.lang.StringBuilder r1 = new java.lang.StringBuilder
                 r1.<init>()
@@ -1035,7 +1035,7 @@ public class C8941e implements C8912g {
                 r1.append(r3)
                 r1.append(r14)
                 java.lang.String r1 = r1.toString()
-                com.google.android.exoplayer2.p393v0.Log.m29500d(r13, r1)
+                com.google.android.exoplayer2.util.Log.m29500d(r13, r1)
                 goto L_0x022e
             L_0x021a:
                 java.lang.StringBuilder r1 = new java.lang.StringBuilder
@@ -1044,7 +1044,7 @@ public class C8941e implements C8912g {
                 r1.append(r3)
                 r1.append(r14)
                 java.lang.String r1 = r1.toString()
-                com.google.android.exoplayer2.p393v0.Log.m29500d(r13, r1)
+                com.google.android.exoplayer2.util.Log.m29500d(r13, r1)
             L_0x022e:
                 r1 = r14
                 goto L_0x031e
@@ -1195,7 +1195,7 @@ public class C8941e implements C8912g {
                 r12 = 0
             L_0x032d:
                 r11 = r11 | r12
-                boolean r12 = com.google.android.exoplayer2.p393v0.C9566t.m29517j(r1)
+                boolean r12 = com.google.android.exoplayer2.util.C9566t.m29517j(r1)
                 if (r12 == 0) goto L_0x0359
                 java.lang.String r16 = java.lang.Integer.toString(r34)
                 r18 = 0
@@ -1215,7 +1215,7 @@ public class C8941e implements C8912g {
                 r7 = 1
                 goto L_0x04df
             L_0x0359:
-                boolean r4 = com.google.android.exoplayer2.p393v0.C9566t.m29519l(r1)
+                boolean r4 = com.google.android.exoplayer2.util.C9566t.m29519l(r1)
                 if (r4 == 0) goto L_0x0459
                 int r2 = r0.f19330o
                 if (r2 != 0) goto L_0x0373
@@ -1913,7 +1913,7 @@ public class C8941e implements C8912g {
                 if (cVar3.f19321f) {
                     C8925a aVar = cVar3.f19323h;
                     if (aVar != null) {
-                        cVar3.f19325j = new DrmInitData(new C8692b(C.UUID_NIL, "video/webm", aVar.f19172b));
+                        cVar3.f19325j = new DrmInitData(new SchemeData(C.UUID_NIL, "video/webm", aVar.f19172b));
                     } else {
                         throw new C8723g0("Encrypted Track found but ContentEncKeyID was not found");
                     }
@@ -2959,7 +2959,7 @@ public class C8941e implements C8912g {
         L_0x0197:
             r4 = 0
         L_0x0198:
-            com.google.android.exoplayer2.p393v0.Assertions.checkState(r4)
+            com.google.android.exoplayer2.util.Assertions.checkState(r4)
             com.google.android.exoplayer2.s0.t.e$d r1 = r12.f19310Q
             int r3 = r10.f19254M
             r1.mo23353a(r11, r3, r13)

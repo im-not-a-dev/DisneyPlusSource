@@ -5,7 +5,7 @@ import java.io.IOException;
 public interface Call extends Cloneable {
 
     /* renamed from: okhttp3.Call$a */
-    public interface C14111a {
+    public interface Factory {
         /* renamed from: a */
         Call mo35727a(Request request);
     }

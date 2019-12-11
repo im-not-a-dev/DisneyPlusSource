@@ -10,9 +10,9 @@ import android.text.TextUtils;
 import android.util.Pair;
 import android.util.SparseIntArray;
 import com.bamtech.sdk4.internal.configuration.ContentServiceClientExtras;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9566t;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9566t;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -601,7 +601,7 @@ public final class C9275d {
             r17 = r10
             r1 = r11
         L_0x00a9:
-            int r6 = com.google.android.exoplayer2.p393v0.Util.SDK_INT     // Catch:{ Exception -> 0x00fb }
+            int r6 = com.google.android.exoplayer2.util.Util.SDK_INT     // Catch:{ Exception -> 0x00fb }
             r7 = 23
             java.lang.String r8 = "MediaCodecUtil"
             if (r6 > r7) goto L_0x00d6
@@ -615,7 +615,7 @@ public final class C9275d {
             java.lang.String r1 = " (failed to query capabilities)"
             r0.append(r1)     // Catch:{ Exception -> 0x00fb }
             java.lang.String r0 = r0.toString()     // Catch:{ Exception -> 0x00fb }
-            com.google.android.exoplayer2.p393v0.Log.m29497b(r8, r0)     // Catch:{ Exception -> 0x00fb }
+            com.google.android.exoplayer2.util.Log.m29497b(r8, r0)     // Catch:{ Exception -> 0x00fb }
         L_0x00d0:
             int r15 = r15 + 1
             r1 = r18
@@ -633,7 +633,7 @@ public final class C9275d {
             java.lang.String r1 = ")"
             r2.append(r1)     // Catch:{ Exception -> 0x00fb }
             java.lang.String r1 = r2.toString()     // Catch:{ Exception -> 0x00fb }
-            com.google.android.exoplayer2.p393v0.Log.m29497b(r8, r1)     // Catch:{ Exception -> 0x00fb }
+            com.google.android.exoplayer2.util.Log.m29497b(r8, r1)     // Catch:{ Exception -> 0x00fb }
             throw r0     // Catch:{ Exception -> 0x00fb }
         L_0x00fa:
             return r5
@@ -769,16 +769,16 @@ public final class C9275d {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:29:0x0074, code lost:
-        if (com.google.android.exoplayer2.p393v0.Util.DEVICE.startsWith("HM") != false) goto L_0x0076;
+        if (com.google.android.exoplayer2.util.Util.DEVICE.startsWith("HM") != false) goto L_0x0076;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:58:0x00fb, code lost:
-        if ("SO-02E".equals(com.google.android.exoplayer2.p393v0.Util.DEVICE) != false) goto L_0x00fd;
+        if ("SO-02E".equals(com.google.android.exoplayer2.util.Util.DEVICE) != false) goto L_0x00fd;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:71:0x0130, code lost:
-        if ("C1605".equals(com.google.android.exoplayer2.p393v0.Util.DEVICE) != false) goto L_0x0132;
+        if ("C1605".equals(com.google.android.exoplayer2.util.Util.DEVICE) != false) goto L_0x0132;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:96:0x01a1, code lost:
-        if ("SCV31".equals(com.google.android.exoplayer2.p393v0.Util.DEVICE) != false) goto L_0x01a3;
+        if ("SCV31".equals(com.google.android.exoplayer2.util.Util.DEVICE) != false) goto L_0x01a3;
      */
     /* renamed from: b */
     /* Code decompiled incorrectly, please refer to instructions dump. */
@@ -793,7 +793,7 @@ public final class C9275d {
             if (r3 == 0) goto L_0x0013
             goto L_0x0215
         L_0x0013:
-            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r3 = com.google.android.exoplayer2.util.Util.SDK_INT
             r5 = 21
             if (r3 >= r5) goto L_0x004a
             java.lang.String r3 = "CIPAACDecoder"
@@ -817,109 +817,109 @@ public final class C9275d {
         L_0x0049:
             return r0
         L_0x004a:
-            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r3 = com.google.android.exoplayer2.util.Util.SDK_INT
             r5 = 18
             if (r3 >= r5) goto L_0x0077
             java.lang.String r3 = "OMX.MTK.AUDIO.DECODER.AAC"
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x0077
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "a70"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x0076
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.MANUFACTURER
             java.lang.String r5 = "Xiaomi"
             boolean r3 = r5.equals(r3)
             if (r3 == 0) goto L_0x0077
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "HM"
             boolean r3 = r3.startsWith(r5)
             if (r3 == 0) goto L_0x0077
         L_0x0076:
             return r0
         L_0x0077:
-            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r3 = com.google.android.exoplayer2.util.Util.SDK_INT
             r5 = 16
             if (r3 != r5) goto L_0x00fe
             java.lang.String r3 = "OMX.qcom.audio.decoder.mp3"
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x00fe
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "dlxu"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "protou"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "ville"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "villeplus"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "villec2"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "gee"
             boolean r3 = r3.startsWith(r1)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "C6602"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "C6603"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "C6606"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "C6616"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "L36h"
             boolean r3 = r1.equals(r3)
             if (r3 != 0) goto L_0x00fd
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "SO-02E"
             boolean r3 = r1.equals(r3)
             if (r3 == 0) goto L_0x00fe
         L_0x00fd:
             return r0
         L_0x00fe:
-            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r3 = com.google.android.exoplayer2.util.Util.SDK_INT
             if (r3 != r5) goto L_0x0133
             java.lang.String r3 = "OMX.qcom.audio.decoder.aac"
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x0133
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "C1504"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x0132
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "C1505"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x0132
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "C1604"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x0132
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "C1605"
             boolean r3 = r5.equals(r3)
             if (r3 == 0) goto L_0x0133
         L_0x0132:
             return r0
         L_0x0133:
-            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r3 = com.google.android.exoplayer2.util.Util.SDK_INT
             r5 = 24
             java.lang.String r1 = "samsung"
             if (r3 >= r5) goto L_0x01a4
@@ -930,79 +930,79 @@ public final class C9275d {
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x01a4
         L_0x014b:
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.MANUFACTURER
             boolean r3 = r1.equals(r3)
             if (r3 == 0) goto L_0x01a4
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "zeroflte"
             boolean r3 = r3.startsWith(r5)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "zerolte"
             boolean r3 = r3.startsWith(r5)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "zenlte"
             boolean r3 = r3.startsWith(r5)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "SC-05G"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "marinelteatt"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "404SC"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "SC-04G"
             boolean r3 = r5.equals(r3)
             if (r3 != 0) goto L_0x01a3
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r5 = "SCV31"
             boolean r3 = r5.equals(r3)
             if (r3 == 0) goto L_0x01a4
         L_0x01a3:
             return r0
         L_0x01a4:
-            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r3 = com.google.android.exoplayer2.util.Util.SDK_INT
             java.lang.String r5 = "jflte"
             r2 = 19
             if (r3 > r2) goto L_0x01ed
             java.lang.String r3 = "OMX.SEC.vp8.dec"
             boolean r3 = r3.equals(r4)
             if (r3 == 0) goto L_0x01ed
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.MANUFACTURER
             boolean r3 = r1.equals(r3)
             if (r3 == 0) goto L_0x01ed
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "d2"
             boolean r3 = r3.startsWith(r1)
             if (r3 != 0) goto L_0x01ec
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "serrano"
             boolean r3 = r3.startsWith(r1)
             if (r3 != 0) goto L_0x01ec
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             boolean r3 = r3.startsWith(r5)
             if (r3 != 0) goto L_0x01ec
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "santos"
             boolean r3 = r3.startsWith(r1)
             if (r3 != 0) goto L_0x01ec
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "t0"
             boolean r3 = r3.startsWith(r1)
             if (r3 == 0) goto L_0x01ed
         L_0x01ec:
             return r0
         L_0x01ed:
-            int r3 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r3 = com.google.android.exoplayer2.util.Util.SDK_INT
             if (r3 > r2) goto L_0x0202
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             boolean r3 = r3.startsWith(r5)
             if (r3 == 0) goto L_0x0202
             java.lang.String r3 = "OMX.qcom.video.decoder.vp8"
@@ -1067,20 +1067,20 @@ public final class C9275d {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:5:0x0018, code lost:
-        if ("Nexus 10".equals(com.google.android.exoplayer2.p393v0.Util.MODEL) != false) goto L_0x001a;
+        if ("Nexus 10".equals(com.google.android.exoplayer2.util.Util.MODEL) != false) goto L_0x001a;
      */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private static boolean m28135a(java.lang.String r2) {
         /*
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             r1 = 22
             if (r0 > r1) goto L_0x002c
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "ODROID-XU3"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x001a
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "Nexus 10"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x002c

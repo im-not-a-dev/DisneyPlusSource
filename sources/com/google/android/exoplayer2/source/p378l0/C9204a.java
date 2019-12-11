@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.p378l0;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.source.l0.a */
@@ -76,7 +76,7 @@ public final class C9204a {
         }
 
         private C9205a(int i, int[] iArr, Uri[] uriArr, long[] jArr) {
-            Assertions.m29299a(iArr.length == uriArr.length);
+            Assertions.checkArgument(iArr.length == uriArr.length);
             this.f20842a = i;
             this.f20844c = iArr;
             this.f20843b = uriArr;

@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.upstream.cache;
 
 import android.net.Uri;
 import android.util.Pair;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9575z;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9575z;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import java.io.EOFException;
@@ -173,7 +173,7 @@ public final class C9471k {
         r0 = false;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:44:0x0086, code lost:
-        com.google.android.exoplayer2.p393v0.Util.m29405a(r20);
+        com.google.android.exoplayer2.util.Util.m29405a(r20);
      */
     /* JADX WARNING: Code restructure failed: missing block: B:45:0x0089, code lost:
         throw r0;
@@ -181,7 +181,7 @@ public final class C9471k {
     /* JADX WARNING: Removed duplicated region for block: B:13:0x0030 A[ExcHandler: all (r0v12 'th' java.lang.Throwable A[CUSTOM_DECLARE]), Splitter:B:10:0x0026] */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    private static long m29044a(com.google.android.exoplayer2.upstream.DataSpec r15, long r16, long r18, com.google.android.exoplayer2.upstream.DataSource r20, byte[] r21, com.google.android.exoplayer2.p393v0.C9575z r22, int r23, com.google.android.exoplayer2.upstream.cache.C9471k.C9473b r24, boolean r25, java.util.concurrent.atomic.AtomicBoolean r26) throws java.io.IOException, java.lang.InterruptedException {
+    private static long m29044a(com.google.android.exoplayer2.upstream.DataSpec r15, long r16, long r18, com.google.android.exoplayer2.upstream.DataSource r20, byte[] r21, com.google.android.exoplayer2.util.C9575z r22, int r23, com.google.android.exoplayer2.upstream.cache.C9471k.C9473b r24, boolean r25, java.util.concurrent.atomic.AtomicBoolean r26) throws java.io.IOException, java.lang.InterruptedException {
         /*
             r1 = r15
             r2 = r20
@@ -219,7 +219,7 @@ public final class C9471k {
             if (r25 == 0) goto L_0x003f
             boolean r13 = m29052a(r0)     // Catch:{ a -> 0x008a, all -> 0x0030 }
             if (r13 == 0) goto L_0x003f
-            com.google.android.exoplayer2.p393v0.Util.m29405a(r20)     // Catch:{ a -> 0x008a, all -> 0x0030 }
+            com.google.android.exoplayer2.util.Util.m29405a(r20)     // Catch:{ a -> 0x008a, all -> 0x0030 }
             goto L_0x0042
         L_0x003f:
             throw r0     // Catch:{ a -> 0x008a, all -> 0x0030 }
@@ -269,15 +269,15 @@ public final class C9471k {
             r7 = -1
             goto L_0x005a
         L_0x0086:
-            com.google.android.exoplayer2.p393v0.Util.m29405a(r20)
+            com.google.android.exoplayer2.util.Util.m29405a(r20)
             throw r0
         L_0x008a:
-            com.google.android.exoplayer2.p393v0.Util.m29405a(r20)
+            com.google.android.exoplayer2.util.Util.m29405a(r20)
             r7 = -1
             goto L_0x0016
         L_0x0090:
             long r11 = r11 - r5
-            com.google.android.exoplayer2.p393v0.Util.m29405a(r20)
+            com.google.android.exoplayer2.util.Util.m29405a(r20)
             return r11
         */
         throw new UnsupportedOperationException("Method not decompiled: com.google.android.exoplayer2.upstream.cache.C9471k.m29044a(com.google.android.exoplayer2.upstream.DataSpec, long, long, com.google.android.exoplayer2.upstream.DataSource, byte[], com.google.android.exoplayer2.v0.z, int, com.google.android.exoplayer2.upstream.cache.k$b, boolean, java.util.concurrent.atomic.AtomicBoolean):long");

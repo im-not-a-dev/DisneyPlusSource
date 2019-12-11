@@ -4,14 +4,14 @@ import android.net.Uri;
 import com.google.android.exoplayer2.offline.C8809c;
 import com.google.android.exoplayer2.offline.DownloaderConstructorHelper;
 import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.p393v0.C9549j0;
+import com.google.android.exoplayer2.util.C9549j0;
 import com.google.android.exoplayer2.source.hls.playlist.C9182e;
 import com.google.android.exoplayer2.source.hls.playlist.C9185f;
 import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist;
 import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist.C9176a;
 import com.google.android.exoplayer2.source.hls.playlist.HlsPlaylist;
-import com.google.android.exoplayer2.upstream.C9455c0;
-import com.google.android.exoplayer2.upstream.C9455c0.C9456a;
+import com.google.android.exoplayer2.upstream.ParsingLoadable;
+import com.google.android.exoplayer2.upstream.ParsingLoadable.Parser;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
@@ -29,7 +29,7 @@ public final class C9195a extends C8809c<HlsPlaylist> {
 
     /* renamed from: b */
     private static HlsPlaylist m27709b(DataSource dataSource, DataSpec dataSpec) throws IOException {
-        return (HlsPlaylist) C9455c0.m28987a(dataSource, (C9456a<? extends T>) new C9185f<Object>(), dataSpec, 4);
+        return (HlsPlaylist) ParsingLoadable.m28987a(dataSource, (Parser<? extends T>) new C9185f<Object>(), dataSpec, 4);
     }
 
     /* access modifiers changed from: protected */

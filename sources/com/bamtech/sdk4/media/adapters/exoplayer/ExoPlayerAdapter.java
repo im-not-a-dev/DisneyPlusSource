@@ -33,24 +33,24 @@ import com.google.android.exoplayer2.Player.TextComponent;
 import com.google.android.exoplayer2.Player.VideoComponent;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.analytics.AnalyticsListener;
-import com.google.android.exoplayer2.p363r0.p365b.C8897b;
+import com.google.android.exoplayer2.ext.okhttp.OkHttpDataSourceFactory;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MediaSourceEventListener;
 import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.source.hls.C9162h;
+import com.google.android.exoplayer2.source.hls.HlsDataSourceFactory;
 import com.google.android.exoplayer2.source.hls.HlsExtractorFactory;
 import com.google.android.exoplayer2.source.hls.HlsMediaSource;
-import com.google.android.exoplayer2.source.hls.playlist.C9178b;
-import com.google.android.exoplayer2.source.hls.playlist.C9187g;
-import com.google.android.exoplayer2.trackselection.C9311j;
+import com.google.android.exoplayer2.source.hls.playlist.DefaultHlsPlaylistParserFactory;
+import com.google.android.exoplayer2.source.hls.playlist.HlsPlaylistParserFactory;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import com.google.android.exoplayer2.upstream.BandwidthMeter;
-import com.google.android.exoplayer2.upstream.C9517t;
-import com.google.android.exoplayer2.upstream.C9524z;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.HttpDataSource.Factory;
 import com.google.android.exoplayer2.upstream.TransferListener;
-import com.google.android.exoplayer2.upstream.cache.C9465e;
+import com.google.android.exoplayer2.upstream.cache.CacheDataSourceFactory;
 import java.util.Iterator;
 import java.util.UUID;
 import kotlin.TypeCastException;
@@ -347,9 +347,9 @@ public final class ExoPlayerAdapter extends AbstractPlayerAdapter implements Exo
     }
 
     private final MediaSource getCachedMediaSource(CachedMediaItemPlaylist cachedMediaItemPlaylist) {
-        C9517t tVar = new C9517t("ExoPlayerAdapter", null);
+        DefaultHttpDataSourceFactory tVar = new DefaultHttpDataSourceFactory("ExoPlayerAdapter", null);
         configureDrm(C.WIDEVINE_UUID, cachedMediaItemPlaylist.getLicense(), cachedMediaItemPlaylist.getAudioLicense(), null, true);
-        HlsMediaSource.Factory streamKeys = new HlsMediaSource.Factory((C9435a) new C9465e(cachedMediaItemPlaylist.getCache(), tVar, 2)).mo23785a((C9187g) new C9178b()).setStreamKeys(cachedMediaItemPlaylist.getRenditionKeys());
+        HlsMediaSource.Factory streamKeys = new HlsMediaSource.Factory((DataSource) new CacheDataSourceFactory(cachedMediaItemPlaylist.getCache(), tVar, 2)).mo23785a((HlsPlaylistParserFactory) new DefaultHlsPlaylistParserFactory()).setStreamKeys(cachedMediaItemPlaylist.getRenditionKeys());
         streamKeys.mo23787a(this.options.getAllowChunklessPreparation());
         HlsExtractorFactory hlsExtractorFactory = this.options.getHlsExtractorFactory();
         if (hlsExtractorFactory != null) {
@@ -377,8 +377,8 @@ public final class ExoPlayerAdapter extends AbstractPlayerAdapter implements Exo
         if (obj != null) {
             SilkDrmProvider silkDrmProvider = (SilkDrmProvider) obj;
             configureDrm$default(this, uuid, null, null, str, false, 6, null);
-            HlsMediaSource.Factory factory = new HlsMediaSource.Factory((C9162h) new BamHttpDataSourceFactory(silkDrmProvider, prepareSegmentDataSourceFactory(silkDrmProvider), prepareManifestDataSourceFactory(silkDrmProvider)));
-            factory.mo23786a((C9524z) new ExoPlayerAdapter$getOnlineMediaSource$$inlined$with$lambda$1(this.options.getMinLoadableRetryCount(), this, mediaItemPlaylist));
+            HlsMediaSource.Factory factory = new HlsMediaSource.Factory((HlsDataSourceFactory) new BamHttpDataSourceFactory(silkDrmProvider, prepareSegmentDataSourceFactory(silkDrmProvider), prepareManifestDataSourceFactory(silkDrmProvider)));
+            factory.mo23786a((LoadErrorHandlingPolicy) new ExoPlayerAdapter$getOnlineMediaSource$$inlined$with$lambda$1(this.options.getMinLoadableRetryCount(), this, mediaItemPlaylist));
             factory.mo23787a(this.options.getAllowChunklessPreparation());
             HlsExtractorFactory hlsExtractorFactory = this.options.getHlsExtractorFactory();
             if (hlsExtractorFactory != null) {
@@ -409,7 +409,7 @@ public final class ExoPlayerAdapter extends AbstractPlayerAdapter implements Exo
         if (client == null) {
             client = networkConfigurationProvider.getOkHttpClientBuilder().mo35820a();
         }
-        return new C8897b(client, networkConfigurationProvider.getUserAgent(), null, this.options.getCacheControl());
+        return new OkHttpDataSourceFactory(client, networkConfigurationProvider.getUserAgent(), null, this.options.getCacheControl());
     }
 
     private final Factory prepareSegmentDataSourceFactory(NetworkConfigurationProvider networkConfigurationProvider) {
@@ -433,7 +433,7 @@ public final class ExoPlayerAdapter extends AbstractPlayerAdapter implements Exo
             } catch (Throwable unused) {
             }
         }
-        return new C8897b(client, networkConfigurationProvider.getUserAgent(), transferListener, this.options.getCacheControl());
+        return new OkHttpDataSourceFactory(client, networkConfigurationProvider.getUserAgent(), transferListener, this.options.getCacheControl());
     }
 
     public void addListener(EventListener eventListener) {
@@ -544,7 +544,7 @@ public final class ExoPlayerAdapter extends AbstractPlayerAdapter implements Exo
         if (i >= 0) {
             int i2 = 0;
             while (true) {
-                C9311j a = getCurrentTrackSelections().mo24040a(i2);
+                TrackSelection a = getCurrentTrackSelections().mo24040a(i2);
                 if (a != null) {
                     Format f = a.mo24076f();
                     if (f != null) {

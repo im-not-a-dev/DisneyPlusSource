@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p382u0.p390t;
 
 import android.text.Layout.Alignment;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

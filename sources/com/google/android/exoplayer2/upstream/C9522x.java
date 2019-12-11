@@ -1,10 +1,10 @@
 package com.google.android.exoplayer2.upstream;
 
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 
 /* renamed from: com.google.android.exoplayer2.upstream.x */
 /* compiled from: FileDataSourceFactory */
-public final class C9522x implements C9435a {
+public final class C9522x implements DataSource {
 
     /* renamed from: a */
     private final TransferListener f22224a;

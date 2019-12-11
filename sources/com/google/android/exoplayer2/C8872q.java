@@ -3,8 +3,8 @@ package com.google.android.exoplayer2;
 import com.google.android.exoplayer2.drm.DrmSessionManager;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9565s;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9565s;
 import com.google.android.exoplayer2.source.C9141f0;
 import java.io.IOException;
 

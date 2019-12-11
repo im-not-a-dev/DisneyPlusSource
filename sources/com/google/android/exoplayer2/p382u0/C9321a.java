@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p382u0;
 import android.annotation.TargetApi;
 import android.graphics.Typeface;
 import android.view.accessibility.CaptioningManager.CaptionStyle;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.u0.a */
 /* compiled from: CaptionStyleCompat */

@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 
 /* renamed from: com.google.android.exoplayer2.e0 */

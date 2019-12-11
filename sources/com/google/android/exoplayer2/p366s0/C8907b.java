@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0;
 
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.s0.b */

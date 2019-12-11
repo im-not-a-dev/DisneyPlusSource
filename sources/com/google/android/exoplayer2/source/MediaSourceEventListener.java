@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import java.io.IOException;
@@ -135,7 +135,7 @@ public interface MediaSourceEventListener {
 
         /* renamed from: a */
         public void mo23502a(Handler handler, MediaSourceEventListener mediaSourceEventListener) {
-            Assertions.m29299a((handler == null || mediaSourceEventListener == null) ? false : true);
+            Assertions.checkArgument((handler == null || mediaSourceEventListener == null) ? false : true);
             this.f20163c.add(new C9069a(handler, mediaSourceEventListener));
         }
 

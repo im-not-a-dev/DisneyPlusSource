@@ -5,8 +5,8 @@ import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8919n;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9572w;
 import java.io.IOException;
 
 /* renamed from: com.google.android.exoplayer2.s0.s.c */

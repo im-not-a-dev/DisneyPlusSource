@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2;
 
 import com.google.android.exoplayer2.PlayerMessage.Target;
-import com.google.android.exoplayer2.p393v0.C9565s;
+import com.google.android.exoplayer2.util.C9565s;
 import com.google.android.exoplayer2.source.C9141f0;
 import java.io.IOException;
 

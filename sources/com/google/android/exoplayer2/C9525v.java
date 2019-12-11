@@ -1,8 +1,8 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.p393v0.C9536d0;
-import com.google.android.exoplayer2.p393v0.C9542g;
-import com.google.android.exoplayer2.p393v0.C9565s;
+import com.google.android.exoplayer2.util.C9536d0;
+import com.google.android.exoplayer2.util.C9542g;
+import com.google.android.exoplayer2.util.C9565s;
 
 /* renamed from: com.google.android.exoplayer2.v */
 /* compiled from: DefaultMediaClock */

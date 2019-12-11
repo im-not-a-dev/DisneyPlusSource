@@ -23,10 +23,10 @@ import com.google.android.exoplayer2.p381t0.C9271b;
 import com.google.android.exoplayer2.p381t0.C9273c;
 import com.google.android.exoplayer2.p381t0.C9275d.C9278c;
 import com.google.android.exoplayer2.p381t0.C9284e;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9565s;
-import com.google.android.exoplayer2.p393v0.C9566t;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9565s;
+import com.google.android.exoplayer2.util.C9566t;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -125,20 +125,20 @@ public class C8867x extends C9271b implements C9565s {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:5:0x0018, code lost:
-        if ("AXON 7 mini".equals(com.google.android.exoplayer2.p393v0.Util.MODEL) != false) goto L_0x001a;
+        if ("AXON 7 mini".equals(com.google.android.exoplayer2.util.Util.MODEL) != false) goto L_0x001a;
      */
     /* renamed from: H */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private static boolean m25824H() {
         /*
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             r1 = 23
             if (r0 != r1) goto L_0x001c
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "ZTE B2017G"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x001a
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "AXON 7 mini"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x001c

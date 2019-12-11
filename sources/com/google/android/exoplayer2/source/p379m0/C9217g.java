@@ -4,21 +4,21 @@ import com.google.android.exoplayer2.C8679b0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
 import com.google.android.exoplayer2.source.C9137e0;
 import com.google.android.exoplayer2.source.C9141f0;
 import com.google.android.exoplayer2.source.C9143g0;
 import com.google.android.exoplayer2.source.C9143g0.C9144a;
 import com.google.android.exoplayer2.source.MediaSourceEventListener.C9068a;
 import com.google.android.exoplayer2.source.p379m0.C9220h;
-import com.google.android.exoplayer2.upstream.C9442a0;
-import com.google.android.exoplayer2.upstream.C9442a0.C9444b;
-import com.google.android.exoplayer2.upstream.C9442a0.C9445c;
-import com.google.android.exoplayer2.upstream.C9442a0.C9448f;
+import com.google.android.exoplayer2.upstream.Loader;
+import com.google.android.exoplayer2.upstream.Loader.C9444b;
+import com.google.android.exoplayer2.upstream.Loader.C9445c;
+import com.google.android.exoplayer2.upstream.Loader.C9448f;
 import com.google.android.exoplayer2.upstream.C9491f;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -51,10 +51,10 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
     public final C9068a f20887Z;
 
     /* renamed from: a0 */
-    private final C9524z f20888a0;
+    private final LoadErrorHandlingPolicy f20888a0;
 
     /* renamed from: b0 */
-    private final C9442a0 f20889b0 = new C9442a0("Loader:ChunkSampleStream");
+    private final Loader f20889b0 = new Loader("Loader:ChunkSampleStream");
 
     /* renamed from: c */
     public final int f20890c;
@@ -182,7 +182,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
         void mo23632a(C9217g<T> gVar);
     }
 
-    public C9217g(int i, int[] iArr, Format[] formatArr, T t, C9144a<C9217g<T>> aVar, C9491f fVar, long j, C9524z zVar, C9068a aVar2) {
+    public C9217g(int i, int[] iArr, Format[] formatArr, T t, C9144a<C9217g<T>> aVar, C9491f fVar, long j, LoadErrorHandlingPolicy zVar, C9068a aVar2) {
         int i2;
         this.f20890c = i;
         this.f20882U = iArr;
@@ -561,7 +561,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
 
     /* renamed from: a */
     public void mo23574a() throws IOException {
-        this.f20889b0.mo23621a();
+        this.f20889b0.maybeThrowError();
         if (!this.f20889b0.mo24461e()) {
             this.f20885X.mo23646a();
         }
@@ -609,7 +609,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
         C9445c cVar = null;
         if (this.f20885X.mo23649a(dVar, z, (Exception) iOException, z ? this.f20888a0.getBlacklistDurationMsFor(dVar2.f20857b, j2, iOException, i) : -9223372036854775807L)) {
             if (z) {
-                cVar = C9442a0.f21954d;
+                cVar = Loader.f21954d;
                 if (a) {
                     Assertions.checkState(m27777b(size) == dVar2);
                     if (this.f20892d0.isEmpty()) {
@@ -622,7 +622,7 @@ public class C9217g<T extends C9220h> implements C9141f0, C9143g0, C9444b<C9212d
         }
         if (cVar == null) {
             long retryDelayMsFor = this.f20888a0.getRetryDelayMsFor(dVar2.f20857b, j2, iOException, i);
-            cVar = retryDelayMsFor != -9223372036854775807L ? C9442a0.m28955a(false, retryDelayMsFor) : C9442a0.f21955e;
+            cVar = retryDelayMsFor != -9223372036854775807L ? Loader.m28955a(false, retryDelayMsFor) : Loader.f21955e;
         }
         C9445c cVar2 = cVar;
         boolean z2 = !cVar2.mo24463a();

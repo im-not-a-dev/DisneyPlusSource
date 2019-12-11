@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.text.TextUtils;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.upstream.y */
 /* compiled from: HttpDataSource */

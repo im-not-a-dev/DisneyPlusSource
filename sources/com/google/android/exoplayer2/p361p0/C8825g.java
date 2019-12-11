@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.p361p0;
 
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.p393v0.C9571v;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9571v;
+import com.google.android.exoplayer2.util.C9572w;
 import java.nio.ByteBuffer;
 import net.danlew.android.joda.DateUtils;
 

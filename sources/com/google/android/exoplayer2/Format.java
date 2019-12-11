@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.p394w0.C9586i;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -509,7 +509,7 @@ public final class Format implements Parcelable {
             return r0
         L_0x0007:
             java.lang.String r2 = r0.f18349b0
-            int r2 = com.google.android.exoplayer2.p393v0.C9566t.m29513f(r2)
+            int r2 = com.google.android.exoplayer2.util.C9566t.m29513f(r2)
             java.lang.String r4 = r1.f18350c
             java.lang.String r3 = r1.f18342U
             if (r3 == 0) goto L_0x0014
@@ -540,8 +540,8 @@ public final class Format implements Parcelable {
             java.lang.String r3 = r0.f18346Y
             if (r3 != 0) goto L_0x0043
             java.lang.String r6 = r1.f18346Y
-            java.lang.String r6 = com.google.android.exoplayer2.p393v0.Util.m29396a(r6, r2)
-            java.lang.String[] r9 = com.google.android.exoplayer2.p393v0.Util.m29456j(r6)
+            java.lang.String r6 = com.google.android.exoplayer2.util.Util.m29396a(r6, r2)
+            java.lang.String[] r9 = com.google.android.exoplayer2.util.Util.m29456j(r6)
             int r9 = r9.length
             if (r9 != r7) goto L_0x0043
             r9 = r6

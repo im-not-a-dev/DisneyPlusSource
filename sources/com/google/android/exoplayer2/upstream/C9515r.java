@@ -1,11 +1,11 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.content.Context;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 
 /* renamed from: com.google.android.exoplayer2.upstream.r */
 /* compiled from: DefaultDataSourceFactory */
-public final class C9515r implements C9435a {
+public final class C9515r implements DataSource {
 
     /* renamed from: a */
     private final Context f22193a;
@@ -14,14 +14,14 @@ public final class C9515r implements C9435a {
     private final TransferListener f22194b;
 
     /* renamed from: c */
-    private final C9435a f22195c;
+    private final DataSource f22195c;
 
     public C9515r(Context context, String str) {
         this(context, str, (TransferListener) null);
     }
 
     public C9515r(Context context, String str, TransferListener transferListener) {
-        this(context, transferListener, (C9435a) new C9517t(str, transferListener));
+        this(context, transferListener, (DataSource) new DefaultHttpDataSourceFactory(str, transferListener));
     }
 
     /* renamed from: a */
@@ -34,7 +34,7 @@ public final class C9515r implements C9435a {
         return qVar;
     }
 
-    public C9515r(Context context, TransferListener transferListener, C9435a aVar) {
+    public C9515r(Context context, TransferListener transferListener, DataSource aVar) {
         this.f22193a = context.getApplicationContext();
         this.f22194b = transferListener;
         this.f22195c = aVar;

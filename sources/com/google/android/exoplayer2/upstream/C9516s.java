@@ -1,14 +1,14 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9574y;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9574y;
 import com.google.android.exoplayer2.upstream.HttpDataSource.C9437b;
 import com.google.android.exoplayer2.upstream.HttpDataSource.C9438c;
 import com.google.android.exoplayer2.upstream.HttpDataSource.C9439d;
-import com.google.android.exoplayer2.upstream.HttpDataSource.C9440e;
+import com.google.android.exoplayer2.upstream.HttpDataSource.Factory;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -52,10 +52,10 @@ public class C9516s extends C9497h implements HttpDataSource {
     private final C9574y<String> f22202i;
 
     /* renamed from: j */
-    private final C9440e f22203j;
+    private final Factory f22203j;
 
     /* renamed from: k */
-    private final C9440e f22204k = new C9440e();
+    private final Factory f22204k = new Factory();
 
     /* renamed from: l */
     private DataSpec f22205l;
@@ -84,7 +84,7 @@ public class C9516s extends C9497h implements HttpDataSource {
     /* renamed from: t */
     private long f22213t;
 
-    public C9516s(String str, C9574y<String> yVar, int i, int i2, boolean z, C9440e eVar) {
+    public C9516s(String str, C9574y<String> yVar, int i, int i2, boolean z, Factory eVar) {
         super(true);
         Assertions.m29298a(str);
         this.f22201h = str;
@@ -271,7 +271,7 @@ public class C9516s extends C9497h implements HttpDataSource {
         HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
         httpURLConnection.setConnectTimeout(this.f22199f);
         httpURLConnection.setReadTimeout(this.f22200g);
-        C9440e eVar = this.f22203j;
+        Factory eVar = this.f22203j;
         if (eVar != null) {
             for (Entry entry : eVar.mo24454a().entrySet()) {
                 httpURLConnection.setRequestProperty((String) entry.getKey(), (String) entry.getValue());
@@ -403,7 +403,7 @@ public class C9516s extends C9497h implements HttpDataSource {
             r1.append(r0)
             r1.append(r2)
             java.lang.String r1 = r1.toString()
-            com.google.android.exoplayer2.p393v0.Log.m29497b(r3, r1)
+            com.google.android.exoplayer2.util.Log.m29497b(r3, r1)
         L_0x002c:
             r4 = -1
         L_0x002e:
@@ -442,7 +442,7 @@ public class C9516s extends C9497h implements HttpDataSource {
             r1.append(r10)     // Catch:{ NumberFormatException -> 0x008d }
             r1.append(r2)     // Catch:{ NumberFormatException -> 0x008d }
             java.lang.String r0 = r1.toString()     // Catch:{ NumberFormatException -> 0x008d }
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r3, r0)     // Catch:{ NumberFormatException -> 0x008d }
+            com.google.android.exoplayer2.util.Log.m29500d(r3, r0)     // Catch:{ NumberFormatException -> 0x008d }
             long r0 = java.lang.Math.max(r4, r6)     // Catch:{ NumberFormatException -> 0x008d }
             r4 = r0
             goto L_0x00a4
@@ -454,7 +454,7 @@ public class C9516s extends C9497h implements HttpDataSource {
             r0.append(r10)
             r0.append(r2)
             java.lang.String r10 = r0.toString()
-            com.google.android.exoplayer2.p393v0.Log.m29497b(r3, r10)
+            com.google.android.exoplayer2.util.Log.m29497b(r3, r10)
         L_0x00a4:
             return r4
         */

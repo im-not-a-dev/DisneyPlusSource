@@ -5,17 +5,17 @@ import com.google.android.exoplayer2.C8672a0;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9197i0;
 import com.google.android.exoplayer2.source.C9229o;
 import com.google.android.exoplayer2.source.C9256t;
 import com.google.android.exoplayer2.source.C9257u;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
-import com.google.android.exoplayer2.source.hls.playlist.C9178b;
+import com.google.android.exoplayer2.source.hls.playlist.DefaultHlsPlaylistParserFactory;
 import com.google.android.exoplayer2.source.hls.playlist.C9179c;
 import com.google.android.exoplayer2.source.hls.playlist.C9181d;
-import com.google.android.exoplayer2.source.hls.playlist.C9187g;
+import com.google.android.exoplayer2.source.hls.playlist.HlsPlaylistParserFactory;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h.C9189a;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h.C9193e;
@@ -24,8 +24,8 @@ import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist.C9176a
 import com.google.android.exoplayer2.source.p378l0.C9207c;
 import com.google.android.exoplayer2.upstream.C9491f;
 import com.google.android.exoplayer2.upstream.C9518u;
-import com.google.android.exoplayer2.upstream.C9524z;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.io.IOException;
 import java.util.List;
@@ -39,13 +39,13 @@ public final class HlsMediaSource extends C9229o implements C9193e {
     private final Uri f20535Z;
 
     /* renamed from: a0 */
-    private final C9162h f20536a0;
+    private final HlsDataSourceFactory f20536a0;
 
     /* renamed from: b0 */
     private final C9256t f20537b0;
 
     /* renamed from: c0 */
-    private final C9524z f20538c0;
+    private final LoadErrorHandlingPolicy f20538c0;
 
     /* renamed from: d0 */
     private final boolean f20539d0;
@@ -65,13 +65,13 @@ public final class HlsMediaSource extends C9229o implements C9193e {
     public static final class Factory implements C9207c {
 
         /* renamed from: a */
-        private final C9162h f20544a;
+        private final HlsDataSourceFactory f20544a;
 
         /* renamed from: b */
         private HlsExtractorFactory f20545b;
 
         /* renamed from: c */
-        private C9187g f20546c;
+        private HlsPlaylistParserFactory f20546c;
 
         /* renamed from: d */
         private List<StreamKey> f20547d;
@@ -83,7 +83,7 @@ public final class HlsMediaSource extends C9229o implements C9193e {
         private C9256t f20549f;
 
         /* renamed from: g */
-        private C9524z f20550g;
+        private LoadErrorHandlingPolicy f20550g;
 
         /* renamed from: h */
         private boolean f20551h;
@@ -97,8 +97,8 @@ public final class HlsMediaSource extends C9229o implements C9193e {
         /* renamed from: k */
         private Object f20554k;
 
-        public Factory(C9435a aVar) {
-            this((C9162h) new C9154e(aVar));
+        public Factory(DataSource aVar) {
+            this((HlsDataSourceFactory) new C9154e(aVar));
         }
 
         /* renamed from: a */
@@ -121,10 +121,10 @@ public final class HlsMediaSource extends C9229o implements C9193e {
             if (list != null) {
                 this.f20546c = new C9181d(this.f20546c, list);
             }
-            C9162h hVar = this.f20544a;
+            HlsDataSourceFactory hVar = this.f20544a;
             HlsExtractorFactory hlsExtractorFactory = this.f20545b;
             C9256t tVar = this.f20549f;
-            C9524z zVar = this.f20550g;
+            LoadErrorHandlingPolicy zVar = this.f20550g;
             HlsMediaSource hlsMediaSource = new HlsMediaSource(uri, hVar, hlsExtractorFactory, tVar, zVar, this.f20548e.mo23868a(hVar, zVar, this.f20546c), this.f20551h, this.f20552i, this.f20554k);
             return hlsMediaSource;
         }
@@ -135,10 +135,10 @@ public final class HlsMediaSource extends C9229o implements C9193e {
             return this;
         }
 
-        public Factory(C9162h hVar) {
+        public Factory(HlsDataSourceFactory hVar) {
             Assertions.checkNotNull(hVar);
             this.f20544a = hVar;
-            this.f20546c = new C9178b();
+            this.f20546c = new DefaultHlsPlaylistParserFactory();
             this.f20548e = C9179c.f20718j0;
             this.f20545b = HlsExtractorFactory.f20530a;
             this.f20550g = new C9518u();
@@ -146,14 +146,14 @@ public final class HlsMediaSource extends C9229o implements C9193e {
         }
 
         /* renamed from: a */
-        public Factory mo23786a(C9524z zVar) {
+        public Factory mo23786a(LoadErrorHandlingPolicy zVar) {
             Assertions.checkState(!this.f20553j);
             this.f20550g = zVar;
             return this;
         }
 
         /* renamed from: a */
-        public Factory mo23785a(C9187g gVar) {
+        public Factory mo23785a(HlsPlaylistParserFactory gVar) {
             Assertions.checkState(!this.f20553j);
             Assertions.checkNotNull(gVar);
             this.f20546c = gVar;
@@ -183,7 +183,7 @@ public final class HlsMediaSource extends C9229o implements C9193e {
         this.f20541f0.stop();
     }
 
-    private HlsMediaSource(Uri uri, C9162h hVar, HlsExtractorFactory hlsExtractorFactory, C9256t tVar, C9524z zVar, C9188h hVar2, boolean z, boolean z2, Object obj) {
+    private HlsMediaSource(Uri uri, HlsDataSourceFactory hVar, HlsExtractorFactory hlsExtractorFactory, C9256t tVar, LoadErrorHandlingPolicy zVar, C9188h hVar2, boolean z, boolean z2, Object obj) {
         this.f20535Z = uri;
         this.f20536a0 = hVar;
         this.f20534Y = hlsExtractorFactory;

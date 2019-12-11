@@ -3,7 +3,7 @@ package com.google.android.exoplayer2;
 import android.util.Pair;
 import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.Timeline.C8670c;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 
@@ -213,7 +213,7 @@ final class C8721f0 {
             com.google.android.exoplayer2.d0 r11 = r10.f18526i
             if (r11 == 0) goto L_0x0045
             boolean r11 = r10.mo22826g()
-            com.google.android.exoplayer2.p393v0.Assertions.checkState(r11)
+            com.google.android.exoplayer2.util.Assertions.checkState(r11)
             com.google.android.exoplayer2.d0 r11 = r10.f18526i
             r11.mo22723a(r0)
         L_0x0045:

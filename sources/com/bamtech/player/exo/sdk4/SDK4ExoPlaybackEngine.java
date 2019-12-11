@@ -16,7 +16,7 @@ import com.bamtech.sdk4.media.adapters.exoplayer.WidevineDrmSessionManager;
 import com.google.android.exoplayer2.drm.DrmSessionManager;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.upstream.C9510p;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.HttpDataSource.Factory;
 import p163g.p174d.p178b.C5300m;
 import p163g.p174d.p178b.C5312n;
@@ -57,7 +57,7 @@ public class SDK4ExoPlaybackEngine extends ExoPlaybackEngine {
             if (function != null) {
                 bandwidthMeter.wrapMediaSource(function);
             }
-            C9435a aVar = this.f5918q;
+            DataSource aVar = this.f5918q;
             if (aVar instanceof Factory) {
                 bandwidthMeter.dataSourceFactory((Factory) aVar);
             }

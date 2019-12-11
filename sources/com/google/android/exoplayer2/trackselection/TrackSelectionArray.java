@@ -8,18 +8,18 @@ public final class TrackSelectionArray {
     public final int f21167a;
 
     /* renamed from: b */
-    private final C9311j[] f21168b;
+    private final TrackSelection[] f21168b;
 
     /* renamed from: c */
     private int f21169c;
 
-    public TrackSelectionArray(C9311j... jVarArr) {
+    public TrackSelectionArray(TrackSelection... jVarArr) {
         this.f21168b = jVarArr;
         this.f21167a = jVarArr.length;
     }
 
     /* renamed from: a */
-    public C9311j mo24040a(int i) {
+    public TrackSelection mo24040a(int i) {
         return this.f21168b[i];
     }
 
@@ -41,7 +41,7 @@ public final class TrackSelectionArray {
     }
 
     /* renamed from: a */
-    public C9311j[] mo24041a() {
-        return (C9311j[]) this.f21168b.clone();
+    public TrackSelection[] mo24041a() {
+        return (TrackSelection[]) this.f21168b.clone();
     }
 }

@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream.cache;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 import java.io.File;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

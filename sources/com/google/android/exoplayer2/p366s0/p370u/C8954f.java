@@ -3,9 +3,9 @@ package com.google.android.exoplayer2.p366s0.p370u;
 import com.google.android.exoplayer2.p366s0.C8918m;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.s0.u.f */
 /* compiled from: VbriSeeker */

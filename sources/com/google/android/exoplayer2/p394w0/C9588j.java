@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p394w0;
 
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.w0.j */
 /* compiled from: DolbyVisionConfig */

@@ -5,8 +5,8 @@ import com.google.android.exoplayer2.C8872q;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9572w;
 import java.nio.ByteBuffer;
 
 /* renamed from: com.google.android.exoplayer2.w0.s.b */

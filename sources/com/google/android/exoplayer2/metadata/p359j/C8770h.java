@@ -5,10 +5,10 @@ import com.google.android.exoplayer2.metadata.C8739b;
 import com.google.android.exoplayer2.metadata.C8742d;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9571v;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9571v;
+import com.google.android.exoplayer2.util.C9572w;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -340,7 +340,7 @@ public final class C8770h implements C8739b {
     /* JADX WARNING: Removed duplicated region for block: B:64:0x0097 A[SYNTHETIC] */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    private static boolean m25402a(com.google.android.exoplayer2.p393v0.C9572w r18, int r19, int r20, boolean r21) {
+    private static boolean m25402a(com.google.android.exoplayer2.util.C9572w r18, int r19, int r20, boolean r21) {
         /*
             r1 = r18
             r0 = r19
@@ -498,7 +498,7 @@ public final class C8770h implements C8739b {
      */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    private static com.google.android.exoplayer2.metadata.p359j.C8773i m25399a(int r19, com.google.android.exoplayer2.p393v0.C9572w r20, boolean r21, int r22, com.google.android.exoplayer2.metadata.p359j.C8770h.C8771a r23) {
+    private static com.google.android.exoplayer2.metadata.p359j.C8773i m25399a(int r19, com.google.android.exoplayer2.util.C9572w r20, boolean r21, int r22, com.google.android.exoplayer2.metadata.p359j.C8770h.C8771a r23) {
         /*
             r0 = r19
             r7 = r20
@@ -565,7 +565,7 @@ public final class C8770h implements C8739b {
             java.lang.String r4 = "Id3Decoder"
             if (r5 <= r1) goto L_0x0082
             java.lang.String r0 = "Frame size exceeds remaining tag data"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r4, r0)
+            com.google.android.exoplayer2.util.Log.m29500d(r4, r0)
             int r0 = r20.mo24690d()
             r7.mo24693e(r0)
             return r16
@@ -821,13 +821,13 @@ public final class C8770h implements C8739b {
             r2.append(r0)     // Catch:{ UnsupportedEncodingException -> 0x021f }
             r2.append(r15)     // Catch:{ UnsupportedEncodingException -> 0x021f }
             java.lang.String r0 = r2.toString()     // Catch:{ UnsupportedEncodingException -> 0x021f }
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r12, r0)     // Catch:{ UnsupportedEncodingException -> 0x021f }
+            com.google.android.exoplayer2.util.Log.m29500d(r12, r0)     // Catch:{ UnsupportedEncodingException -> 0x021f }
         L_0x021b:
             r7.mo24693e(r14)
             return r1
         L_0x021f:
             java.lang.String r0 = "Unsupported character encoding"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r12, r0)     // Catch:{ all -> 0x012f }
+            com.google.android.exoplayer2.util.Log.m29500d(r12, r0)     // Catch:{ all -> 0x012f }
             r7.mo24693e(r14)
             return r16
         L_0x0228:
@@ -835,7 +835,7 @@ public final class C8770h implements C8739b {
             throw r0
         L_0x022c:
             java.lang.String r0 = "Skipping unsupported compressed or encrypted frame"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r12, r0)
+            com.google.android.exoplayer2.util.Log.m29500d(r12, r0)
             r7.mo24693e(r14)
             return r16
         */

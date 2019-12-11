@@ -9,8 +9,8 @@ import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.source.p378l0.C9207c;
 import com.google.android.exoplayer2.upstream.C9491f;
 import com.google.android.exoplayer2.upstream.C9518u;
-import com.google.android.exoplayer2.upstream.C9524z;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.io.IOException;
 
@@ -34,7 +34,7 @@ public final class C9259w extends C9229o implements C9067a {
     public static final class C9262c implements C9207c {
 
         /* renamed from: a */
-        private final C9435a f21062a;
+        private final DataSource f21062a;
 
         /* renamed from: b */
         private C8915j f21063b;
@@ -46,12 +46,12 @@ public final class C9259w extends C9229o implements C9067a {
         private Object f21065d;
 
         /* renamed from: e */
-        private C9524z f21066e = new C9518u();
+        private LoadErrorHandlingPolicy f21066e = new C9518u();
 
         /* renamed from: f */
         private int f21067f = 1048576;
 
-        public C9262c(C9435a aVar) {
+        public C9262c(DataSource aVar) {
             this.f21062a = aVar;
         }
 
@@ -75,7 +75,7 @@ public final class C9259w extends C9229o implements C9067a {
         this.f21061Y.mo23489a((C9067a) this);
     }
 
-    private C9259w(Uri uri, C9435a aVar, C8915j jVar, C9524z zVar, String str, int i, Object obj) {
+    private C9259w(Uri uri, DataSource aVar, C8915j jVar, LoadErrorHandlingPolicy zVar, String str, int i, Object obj) {
         C9083c0 c0Var = new C9083c0(uri, aVar, jVar, zVar, str, i, obj);
         this.f21061Y = c0Var;
     }

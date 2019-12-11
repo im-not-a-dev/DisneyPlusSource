@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p366s0;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.metadata.p359j.C8770h;
 import com.google.android.exoplayer2.metadata.p359j.C8770h.C8771a;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9572w;
 import java.io.EOFException;
 import java.io.IOException;
 

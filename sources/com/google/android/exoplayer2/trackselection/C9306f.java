@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.C8735m0;
 import com.google.android.exoplayer2.C8800n0;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.source.TrackGroupArray;
@@ -131,7 +131,7 @@ public abstract class C9306f extends TrackSelector {
 
     /* access modifiers changed from: protected */
     /* renamed from: a */
-    public abstract Pair<C8800n0[], C9311j[]> mo24082a(C9307a aVar, int[][][] iArr, int[] iArr2) throws ExoPlaybackException;
+    public abstract Pair<C8800n0[], TrackSelection[]> mo24082a(C9307a aVar, int[][][] iArr, int[] iArr2) throws ExoPlaybackException;
 
     /* renamed from: a */
     public final void mo24047a(Object obj) {
@@ -180,7 +180,7 @@ public abstract class C9306f extends TrackSelector {
         int[][][] iArr6 = iArr3;
         C9307a aVar = new C9307a(iArr4, trackGroupArrayArr, iArr5, iArr6, new TrackGroupArray((C9199j0[]) Util.m29420a((T[]) j0VarArr[m0VarArr.length], iArr2[m0VarArr.length])));
         Pair a4 = mo24082a(aVar, iArr3, a);
-        return new C9318m((C8800n0[]) a4.first, (C9311j[]) a4.second, aVar);
+        return new C9318m((C8800n0[]) a4.first, (TrackSelection[]) a4.second, aVar);
     }
 
     /* renamed from: a */

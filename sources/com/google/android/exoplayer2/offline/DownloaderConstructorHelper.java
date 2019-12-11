@@ -1,15 +1,15 @@
 package com.google.android.exoplayer2.offline;
 
 import androidx.core.app.NotificationManagerCompat;
-import com.google.android.exoplayer2.p393v0.C9575z;
+import com.google.android.exoplayer2.util.C9575z;
 import com.google.android.exoplayer2.upstream.C9490e0;
 import com.google.android.exoplayer2.upstream.C9504k.C9505a;
 import com.google.android.exoplayer2.upstream.C9519v;
 import com.google.android.exoplayer2.upstream.C9522x;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.cache.C9462c;
 import com.google.android.exoplayer2.upstream.cache.C9463d;
-import com.google.android.exoplayer2.upstream.cache.C9465e;
+import com.google.android.exoplayer2.upstream.cache.CacheDataSourceFactory;
 import com.google.android.exoplayer2.upstream.cache.C9469i;
 import com.google.android.exoplayer2.upstream.cache.C9471k;
 import com.google.android.exoplayer2.upstream.cache.Cache;
@@ -26,12 +26,12 @@ public final class DownloaderConstructorHelper {
     private final C9575z f18719c;
 
     /* renamed from: d */
-    private final C9465e f18720d;
+    private final CacheDataSourceFactory f18720d;
 
     /* renamed from: e */
-    private final C9465e f18721e;
+    private final CacheDataSourceFactory f18721e;
 
-    public DownloaderConstructorHelper(Cache cache, C9435a aVar) {
+    public DownloaderConstructorHelper(Cache cache, DataSource aVar) {
         this(cache, aVar, null, null, null);
     }
 
@@ -62,17 +62,17 @@ public final class DownloaderConstructorHelper {
         return zVar != null ? zVar : new C9575z();
     }
 
-    public DownloaderConstructorHelper(Cache cache, C9435a aVar, C9435a aVar2, C9505a aVar3, C9575z zVar) {
+    public DownloaderConstructorHelper(Cache cache, DataSource aVar, DataSource aVar2, C9505a aVar3, C9575z zVar) {
         this(cache, aVar, aVar2, aVar3, zVar, null);
     }
 
-    public DownloaderConstructorHelper(Cache cache, C9435a aVar, C9435a aVar2, C9505a aVar3, C9575z zVar, C9469i iVar) {
-        C9435a aVar4;
-        C9435a aVar5;
+    public DownloaderConstructorHelper(Cache cache, DataSource aVar, DataSource aVar2, C9505a aVar3, C9575z zVar, C9469i iVar) {
+        DataSource aVar4;
+        DataSource aVar5;
         Cache cache2 = cache;
         C9575z zVar2 = zVar;
         if (zVar2 != null) {
-            C9435a aVar6 = aVar;
+            DataSource aVar6 = aVar;
             aVar4 = new C9490e0(aVar, zVar2, NotificationManagerCompat.IMPORTANCE_UNSPECIFIED);
         } else {
             aVar4 = aVar;
@@ -83,11 +83,11 @@ public final class DownloaderConstructorHelper {
             aVar5 = new C9522x();
         }
         Cache cache3 = cache;
-        C9435a aVar7 = aVar5;
+        DataSource aVar7 = aVar5;
         C9469i iVar2 = iVar;
-        C9465e eVar = new C9465e(cache3, aVar4, aVar7, aVar3 == null ? new C9462c(cache, 5242880) : aVar3, 1, null, iVar2);
+        CacheDataSourceFactory eVar = new CacheDataSourceFactory(cache3, aVar4, aVar7, aVar3 == null ? new C9462c(cache, 5242880) : aVar3, 1, null, iVar2);
         this.f18720d = eVar;
-        C9465e eVar2 = new C9465e(cache3, C9519v.f22219a, aVar7, null, 1, null, iVar2);
+        CacheDataSourceFactory eVar2 = new CacheDataSourceFactory(cache3, C9519v.f22219a, aVar7, null, 1, null, iVar2);
         this.f18721e = eVar2;
         this.f18717a = cache2;
         this.f18719c = zVar2;

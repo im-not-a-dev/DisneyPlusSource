@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p362q0;
 
 import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p362q0.C8880f;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.lang.Exception;
 import java.util.ArrayDeque;
 
@@ -317,7 +317,7 @@ public abstract class C8881g<I extends C8879e, O extends C8880f, E extends Excep
     public final void mo23218a(I i) throws Exception {
         synchronized (this.f19029b) {
             m25951i();
-            Assertions.m29299a(i == this.f19036i);
+            Assertions.checkArgument(i == this.f19036i);
             this.f19030c.addLast(i);
             m25950h();
             this.f19036i = null;

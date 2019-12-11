@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.smoothstreaming.p380e;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.source.smoothstreaming.e.c */
 /* compiled from: SsUtil */

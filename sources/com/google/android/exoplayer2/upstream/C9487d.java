@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.upstream;
 
-import com.google.android.exoplayer2.p393v0.C9574y;
+import com.google.android.exoplayer2.util.C9574y;
 
 /* renamed from: com.google.android.exoplayer2.upstream.d */
 /* compiled from: lambda */

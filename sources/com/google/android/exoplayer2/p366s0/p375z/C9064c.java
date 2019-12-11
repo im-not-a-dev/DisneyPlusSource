@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p366s0.p375z;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.s0.z.c */
 /* compiled from: WavHeader */

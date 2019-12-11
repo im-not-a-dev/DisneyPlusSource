@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream.cache;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.upstream.C9498h0;
 import com.google.android.exoplayer2.upstream.C9504k;
 import com.google.android.exoplayer2.upstream.C9507m;

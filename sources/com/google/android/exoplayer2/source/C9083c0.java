@@ -5,9 +5,9 @@ import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.p366s0.C8915j;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.upstream.C9491f;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.io.IOException;
 
@@ -19,13 +19,13 @@ public final class C9083c0 extends C9229o implements C9078c {
     private final Uri f20245Y;
 
     /* renamed from: Z */
-    private final C9435a f20246Z;
+    private final DataSource f20246Z;
 
     /* renamed from: a0 */
     private final C8915j f20247a0;
 
     /* renamed from: b0 */
-    private final C9524z f20248b0;
+    private final LoadErrorHandlingPolicy f20248b0;
 
     /* renamed from: c0 */
     private final String f20249c0;
@@ -45,7 +45,7 @@ public final class C9083c0 extends C9229o implements C9078c {
     /* renamed from: h0 */
     private TransferListener f20254h0;
 
-    C9083c0(Uri uri, C9435a aVar, C8915j jVar, C9524z zVar, String str, int i, Object obj) {
+    C9083c0(Uri uri, DataSource aVar, C8915j jVar, LoadErrorHandlingPolicy zVar, String str, int i, Object obj) {
         this.f20245Y = uri;
         this.f20246Z = aVar;
         this.f20247a0 = jVar;

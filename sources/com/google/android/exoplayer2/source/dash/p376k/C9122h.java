@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.dash.p376k;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.C9549j0;
+import com.google.android.exoplayer2.util.C9549j0;
 
 /* renamed from: com.google.android.exoplayer2.source.dash.k.h */
 /* compiled from: RangedUri */

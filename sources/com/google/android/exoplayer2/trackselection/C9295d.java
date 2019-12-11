@@ -12,14 +12,14 @@ import android.util.SparseBooleanArray;
 import com.google.android.exoplayer2.C8800n0;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.C9287b.C9291d;
 import com.google.android.exoplayer2.trackselection.C9306f.C9307a;
-import com.google.android.exoplayer2.trackselection.C9311j.C9312a;
-import com.google.android.exoplayer2.trackselection.C9311j.C9313b;
+import com.google.android.exoplayer2.trackselection.TrackSelection.C9312a;
+import com.google.android.exoplayer2.trackselection.TrackSelection.C9313b;
 import com.google.android.exoplayer2.trackselection.C9314k.C9316b;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -175,7 +175,7 @@ public class C9295d extends C9306f {
                 r1 = 0
             L_0x0044:
                 r4.f21223c = r1
-                java.lang.String[] r6 = com.google.android.exoplayer2.p393v0.Util.m29443c()
+                java.lang.String[] r6 = com.google.android.exoplayer2.util.Util.m29443c()
                 r7 = 2147483647(0x7fffffff, float:NaN)
                 r1 = 0
             L_0x004e:
@@ -1039,7 +1039,7 @@ public class C9295d extends C9306f {
 
     /* access modifiers changed from: protected */
     /* renamed from: a */
-    public final Pair<C8800n0[], C9311j[]> mo24082a(C9307a aVar, int[][][] iArr, int[] iArr2) throws ExoPlaybackException {
+    public final Pair<C8800n0[], TrackSelection[]> mo24082a(C9307a aVar, int[][][] iArr, int[] iArr2) throws ExoPlaybackException {
         C9299d dVar = (C9299d) this.f21210e.get();
         int a = aVar.mo24123a();
         C9312a[] a2 = mo7774a(aVar, iArr, iArr2, dVar);
@@ -1063,7 +1063,7 @@ public class C9295d extends C9306f {
             }
             i++;
         }
-        C9311j[] a4 = this.f21209d.mo24064a(a2, mo24045a());
+        TrackSelection[] a4 = this.f21209d.mo24064a(a2, mo24045a());
         C8800n0[] n0VarArr = new C8800n0[a];
         for (int i2 = 0; i2 < a; i2++) {
             n0VarArr[i2] = !dVar.mo24094a(i2) && (aVar.mo24124a(i2) == 6 || a4[i2] != null) ? C8800n0.f18680b : null;
@@ -1279,7 +1279,7 @@ public class C9295d extends C9306f {
     /* JADX WARNING: Removed duplicated region for block: B:57:0x00bc  */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    private static com.google.android.exoplayer2.trackselection.C9311j.C9312a m28226a(com.google.android.exoplayer2.source.TrackGroupArray r18, int[][] r19, com.google.android.exoplayer2.trackselection.C9295d.C9299d r20) {
+    private static com.google.android.exoplayer2.trackselection.TrackSelection.C9312a m28226a(com.google.android.exoplayer2.source.TrackGroupArray r18, int[][] r19, com.google.android.exoplayer2.trackselection.C9295d.C9299d r20) {
         /*
             r0 = r18
             r1 = r20
@@ -1646,7 +1646,7 @@ public class C9295d extends C9306f {
     }
 
     /* renamed from: a */
-    private static void m28230a(C9307a aVar, int[][][] iArr, C8800n0[] n0VarArr, C9311j[] jVarArr, int i) {
+    private static void m28230a(C9307a aVar, int[][][] iArr, C8800n0[] n0VarArr, TrackSelection[] jVarArr, int i) {
         boolean z;
         if (i != 0) {
             boolean z2 = false;
@@ -1659,7 +1659,7 @@ public class C9295d extends C9306f {
                     break;
                 }
                 int a = aVar.mo24124a(i2);
-                C9311j jVar = jVarArr[i2];
+                TrackSelection jVar = jVarArr[i2];
                 if ((a == 1 || a == 2) && jVar != null && m28234a(iArr[i2], aVar.mo24130b(i2), jVar)) {
                     if (a == 1) {
                         if (i4 != -1) {
@@ -1687,7 +1687,7 @@ public class C9295d extends C9306f {
     }
 
     /* renamed from: a */
-    private static boolean m28234a(int[][] iArr, TrackGroupArray trackGroupArray, C9311j jVar) {
+    private static boolean m28234a(int[][] iArr, TrackGroupArray trackGroupArray, TrackSelection jVar) {
         if (jVar == null) {
             return false;
         }
@@ -1800,12 +1800,12 @@ public class C9295d extends C9306f {
             int r0 = r7 * r5
             if (r3 < r0) goto L_0x0023
             android.graphics.Point r3 = new android.graphics.Point
-            int r4 = com.google.android.exoplayer2.p393v0.Util.m29381a(r0, r6)
+            int r4 = com.google.android.exoplayer2.util.Util.m29381a(r0, r6)
             r3.<init>(r5, r4)
             return r3
         L_0x0023:
             android.graphics.Point r5 = new android.graphics.Point
-            int r3 = com.google.android.exoplayer2.p393v0.Util.m29381a(r3, r7)
+            int r3 = com.google.android.exoplayer2.util.Util.m29381a(r3, r7)
             r5.<init>(r3, r4)
             return r5
         */

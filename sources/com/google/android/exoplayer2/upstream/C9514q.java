@@ -2,9 +2,9 @@ package com.google.android.exoplayer2.upstream;
 
 import android.content.Context;
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;

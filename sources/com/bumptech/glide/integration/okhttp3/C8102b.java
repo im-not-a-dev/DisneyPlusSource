@@ -12,7 +12,7 @@ import java.util.Map.Entry;
 import okhttp3.C14235h;
 import okhttp3.C14264y;
 import okhttp3.Call;
-import okhttp3.Call.C14111a;
+import okhttp3.Call.Factory;
 import okhttp3.Request;
 import okhttp3.Request.C14113a;
 import okhttp3.Response;
@@ -40,9 +40,9 @@ public class C8102b implements C8122d<InputStream>, C14235h {
     private volatile Call f17350Y;
 
     /* renamed from: c */
-    private final C14111a f17351c;
+    private final Factory f17351c;
 
-    public C8102b(C14111a aVar, C8292g gVar) {
+    public C8102b(Factory aVar, C8292g gVar) {
         this.f17351c = aVar;
         this.f17346U = gVar;
     }

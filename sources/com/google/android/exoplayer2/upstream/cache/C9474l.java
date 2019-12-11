@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream.cache;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Log;
 import java.io.File;
 import java.util.TreeSet;
 

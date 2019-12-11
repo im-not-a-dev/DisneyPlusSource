@@ -5,7 +5,7 @@ import android.util.SparseIntArray;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
 import com.google.android.exoplayer2.source.C9141f0;
@@ -28,10 +28,10 @@ import com.google.android.exoplayer2.source.dash.p376k.C9123i;
 import com.google.android.exoplayer2.source.p379m0.C9217g;
 import com.google.android.exoplayer2.source.p379m0.C9217g.C9218a;
 import com.google.android.exoplayer2.source.p379m0.C9217g.C9219b;
-import com.google.android.exoplayer2.trackselection.C9311j;
-import com.google.android.exoplayer2.upstream.C9452b0;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
+import com.google.android.exoplayer2.upstream.LoaderErrorThrower;
 import com.google.android.exoplayer2.upstream.C9491f;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -56,13 +56,13 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
     private final TransferListener f20343V;
 
     /* renamed from: W */
-    private final C9524z f20344W;
+    private final LoadErrorHandlingPolicy f20344W;
 
     /* renamed from: X */
     private final long f20345X;
 
     /* renamed from: Y */
-    private final C9452b0 f20346Y;
+    private final LoaderErrorThrower f20346Y;
 
     /* renamed from: Z */
     private final C9491f f20347Z;
@@ -172,7 +172,7 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
         }
     }
 
-    public C9101e(int i, C9115b bVar, int i2, C9099a aVar, TransferListener transferListener, C9524z zVar, C9068a aVar2, long j, C9452b0 b0Var, C9491f fVar, C9256t tVar, C9112b bVar2) {
+    public C9101e(int i, C9115b bVar, int i2, C9099a aVar, TransferListener transferListener, LoadErrorHandlingPolicy zVar, C9068a aVar2, long j, LoaderErrorThrower b0Var, C9491f fVar, C9256t tVar, C9112b bVar2) {
         this.f20350c = i;
         this.f20359k0 = bVar;
         this.f20360l0 = i2;
@@ -211,7 +211,7 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
 
     /* renamed from: d */
     public void mo23546d() throws IOException {
-        this.f20346Y.mo23621a();
+        this.f20346Y.maybeThrowError();
     }
 
     /* renamed from: e */
@@ -339,7 +339,7 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
     }
 
     /* renamed from: a */
-    public long mo23540a(C9311j[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr, boolean[] zArr2, long j) {
+    public long mo23540a(TrackSelection[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr, boolean[] zArr2, long j) {
         int[] a = m27151a(jVarArr);
         m27150a(jVarArr, zArr, f0VarArr);
         m27148a(jVarArr, f0VarArr, a);
@@ -409,7 +409,7 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
     }
 
     /* renamed from: a */
-    private int[] m27151a(C9311j[] jVarArr) {
+    private int[] m27151a(TrackSelection[] jVarArr) {
         int[] iArr = new int[jVarArr.length];
         for (int i = 0; i < jVarArr.length; i++) {
             if (jVarArr[i] != null) {
@@ -422,7 +422,7 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
     }
 
     /* renamed from: a */
-    private void m27150a(C9311j[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr) {
+    private void m27150a(TrackSelection[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr) {
         for (int i = 0; i < jVarArr.length; i++) {
             if (jVarArr[i] == null || !zArr[i]) {
                 if (f0VarArr[i] instanceof C9217g) {
@@ -436,7 +436,7 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
     }
 
     /* renamed from: a */
-    private void m27148a(C9311j[] jVarArr, C9141f0[] f0VarArr, int[] iArr) {
+    private void m27148a(TrackSelection[] jVarArr, C9141f0[] f0VarArr, int[] iArr) {
         for (int i = 0; i < jVarArr.length; i++) {
             if ((f0VarArr[i] instanceof C9258v) || (f0VarArr[i] instanceof C9218a)) {
                 int a = m27140a(i, iArr);
@@ -452,9 +452,9 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
     }
 
     /* renamed from: a */
-    private void m27149a(C9311j[] jVarArr, C9141f0[] f0VarArr, boolean[] zArr, long j, int[] iArr) {
+    private void m27149a(TrackSelection[] jVarArr, C9141f0[] f0VarArr, boolean[] zArr, long j, int[] iArr) {
         for (int i = 0; i < jVarArr.length; i++) {
-            C9311j jVar = jVarArr[i];
+            TrackSelection jVar = jVarArr[i];
             if (jVar != null) {
                 if (f0VarArr[i] == null) {
                     zArr[i] = true;
@@ -595,7 +595,7 @@ final class C9101e implements C9072a0, C9144a<C9217g<C9098c>>, C9219b<C9098c> {
     }
 
     /* renamed from: a */
-    private C9217g<C9098c> m27146a(C9102a aVar, C9311j jVar, long j) {
+    private C9217g<C9098c> m27146a(C9102a aVar, TrackSelection jVar, long j) {
         C9199j0 j0Var;
         int i;
         C9199j0 j0Var2;

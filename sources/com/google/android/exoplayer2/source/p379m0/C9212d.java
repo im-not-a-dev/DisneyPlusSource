@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.source.p379m0;
 
 import android.net.Uri;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.upstream.C9442a0.C9447e;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.upstream.Loader.Loadable;
 import com.google.android.exoplayer2.upstream.C9496g0;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /* renamed from: com.google.android.exoplayer2.source.m0.d */
 /* compiled from: Chunk */
-public abstract class C9212d implements C9447e {
+public abstract class C9212d implements Loadable {
 
     /* renamed from: a */
     public final DataSpec f20856a;

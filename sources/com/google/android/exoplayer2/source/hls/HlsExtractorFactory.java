@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.p366s0.C8912g;
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.C9545h0;
+import com.google.android.exoplayer2.util.C9545h0;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;

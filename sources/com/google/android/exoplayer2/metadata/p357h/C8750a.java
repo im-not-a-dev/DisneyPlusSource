@@ -5,7 +5,7 @@ import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.C8738a;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.metadata.h.a */

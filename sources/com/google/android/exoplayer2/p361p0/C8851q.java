@@ -3,8 +3,8 @@ package com.google.android.exoplayer2.p361p0;
 import android.media.AudioTrack;
 import android.os.SystemClock;
 import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 import java.lang.reflect.Method;
 
 /* renamed from: com.google.android.exoplayer2.p0.q */

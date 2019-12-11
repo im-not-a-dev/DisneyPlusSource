@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p361p0;
 
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.p0.d0 */
 /* compiled from: WavUtil */

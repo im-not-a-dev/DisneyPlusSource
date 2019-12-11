@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.source;
 
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.source.C9143g0.C9144a;
-import com.google.android.exoplayer2.trackselection.C9311j;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
 import java.io.IOException;
 
 /* renamed from: com.google.android.exoplayer2.source.a0 */
@@ -23,7 +23,7 @@ public interface C9072a0 extends C9143g0 {
     long mo23539a(long j, SeekParameters seekParameters);
 
     /* renamed from: a */
-    long mo23540a(C9311j[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr, boolean[] zArr2, long j);
+    long mo23540a(TrackSelection[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr, boolean[] zArr2, long j);
 
     /* renamed from: a */
     void mo23541a(long j, boolean z);

@@ -5,8 +5,8 @@ import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.C8738a;
 import com.google.android.exoplayer2.metadata.Metadata.C8737b;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.metadata.i.b */
 /* compiled from: IcyHeaders */
@@ -47,7 +47,7 @@ public final class C8753b implements C8737b {
     }
 
     public C8753b(int i, String str, String str2, String str3, boolean z, int i2) {
-        Assertions.m29299a(i2 == -1 || i2 > 0);
+        Assertions.checkArgument(i2 == -1 || i2 > 0);
         this.f18594c = i;
         this.f18589U = str;
         this.f18590V = str2;
@@ -95,7 +95,7 @@ public final class C8753b implements C8737b {
             r7.append(r8)     // Catch:{ NumberFormatException -> 0x003a }
             r7.append(r1)     // Catch:{ NumberFormatException -> 0x003a }
             java.lang.String r7 = r7.toString()     // Catch:{ NumberFormatException -> 0x003a }
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r2, r7)     // Catch:{ NumberFormatException -> 0x003a }
+            com.google.android.exoplayer2.util.Log.m29500d(r2, r7)     // Catch:{ NumberFormatException -> 0x003a }
             r1 = 0
             r6 = -1
         L_0x0037:
@@ -110,7 +110,7 @@ public final class C8753b implements C8737b {
             r7.append(r8)
             r7.append(r1)
             java.lang.String r1 = r7.toString()
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r2, r1)
+            com.google.android.exoplayer2.util.Log.m29500d(r2, r1)
             r7 = r6
             r1 = 0
             goto L_0x0053
@@ -186,7 +186,7 @@ public final class C8753b implements C8737b {
             r4.append(r0)     // Catch:{ NumberFormatException -> 0x00d6 }
             r4.append(r13)     // Catch:{ NumberFormatException -> 0x00d6 }
             java.lang.String r4 = r4.toString()     // Catch:{ NumberFormatException -> 0x00d6 }
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r2, r4)     // Catch:{ NumberFormatException -> 0x00d6 }
+            com.google.android.exoplayer2.util.Log.m29500d(r2, r4)     // Catch:{ NumberFormatException -> 0x00d6 }
             goto L_0x00e9
         L_0x00d6:
             r3 = r5
@@ -196,7 +196,7 @@ public final class C8753b implements C8737b {
             r4.append(r0)
             r4.append(r13)
             java.lang.String r13 = r4.toString()
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r2, r13)
+            com.google.android.exoplayer2.util.Log.m29500d(r2, r13)
         L_0x00e9:
             r12 = r3
             goto L_0x00ec

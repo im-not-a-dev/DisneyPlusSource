@@ -7,16 +7,16 @@ import android.util.Pair;
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
+import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.p366s0.p371v.C8980k;
 import com.google.android.exoplayer2.p366s0.p371v.C8984n;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9544h;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9544h;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a.C9246a;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a.C9247b;
-import com.google.android.exoplayer2.upstream.C9455c0.C9456a;
+import com.google.android.exoplayer2.upstream.ParsingLoadable.Parser;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 /* renamed from: com.google.android.exoplayer2.source.smoothstreaming.e.b */
 /* compiled from: SsManifestParser */
-public class C9248b implements C9456a<C9245a> {
+public class C9248b implements Parser<C9245a> {
 
     /* renamed from: a */
     private final XmlPullParserFactory f21029a;
@@ -509,7 +509,7 @@ public class C9248b implements C9456a<C9245a> {
             this.f21038e.toArray(bVarArr);
             C9246a aVar = this.f21046m;
             if (aVar != null) {
-                DrmInitData drmInitData = new DrmInitData(new C8692b(aVar.f21010a, "video/mp4", aVar.f21011b));
+                DrmInitData drmInitData = new DrmInitData(new SchemeData(aVar.f21010a, "video/mp4", aVar.f21011b));
                 for (C9247b bVar : bVarArr) {
                     int i = bVar.f21013a;
                     if (i == 2 || i == 1) {

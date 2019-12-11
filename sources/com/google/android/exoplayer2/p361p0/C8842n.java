@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p361p0;
 import android.os.Handler;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p362q0.C8878d;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.p0.n */
 /* compiled from: AudioRendererEventListener */

@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.upstream;
 
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
@@ -9,20 +9,20 @@ import java.util.Map;
 
 public interface HttpDataSource extends DataSource {
 
-    public interface Factory extends C9435a {
+    public interface Factory extends DataSource {
         /* renamed from: a */
         HttpDataSource mo24448a();
     }
 
     /* renamed from: com.google.android.exoplayer2.upstream.HttpDataSource$a */
-    public static abstract class C9436a implements Factory {
+    public static abstract class BaseFactory implements Factory {
 
         /* renamed from: a */
-        private final C9440e f21946a = new C9440e();
+        private final Factory f21946a = new Factory();
 
         /* access modifiers changed from: protected */
         /* renamed from: a */
-        public abstract HttpDataSource mo23262a(C9440e eVar);
+        public abstract HttpDataSource mo23262a(Factory eVar);
 
         /* renamed from: a */
         public final HttpDataSource m28951a() {
@@ -82,7 +82,7 @@ public interface HttpDataSource extends DataSource {
     }
 
     /* renamed from: com.google.android.exoplayer2.upstream.HttpDataSource$e */
-    public static final class C9440e {
+    public static final class Factory {
 
         /* renamed from: a */
         private final Map<String, String> f21949a = new HashMap();

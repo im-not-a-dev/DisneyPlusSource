@@ -1,9 +1,9 @@
 package com.google.android.exoplayer2.upstream.cache;
 
-import com.google.android.exoplayer2.p393v0.C9530b0;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.C9530b0;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
 import com.google.android.exoplayer2.upstream.C9504k;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import com.google.android.exoplayer2.upstream.cache.Cache.C9457a;

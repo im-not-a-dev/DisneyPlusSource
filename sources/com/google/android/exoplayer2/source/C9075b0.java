@@ -18,24 +18,24 @@ import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9548j;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9566t;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9548j;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9566t;
+import com.google.android.exoplayer2.util.C9572w;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
 import com.google.android.exoplayer2.source.C9137e0.C9139b;
 import com.google.android.exoplayer2.source.C9264y.C9265a;
 import com.google.android.exoplayer2.source.MediaSourceEventListener.C9068a;
-import com.google.android.exoplayer2.trackselection.C9311j;
-import com.google.android.exoplayer2.upstream.C9442a0;
-import com.google.android.exoplayer2.upstream.C9442a0.C9444b;
-import com.google.android.exoplayer2.upstream.C9442a0.C9445c;
-import com.google.android.exoplayer2.upstream.C9442a0.C9447e;
-import com.google.android.exoplayer2.upstream.C9442a0.C9448f;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
+import com.google.android.exoplayer2.upstream.Loader;
+import com.google.android.exoplayer2.upstream.Loader.C9444b;
+import com.google.android.exoplayer2.upstream.Loader.C9445c;
+import com.google.android.exoplayer2.upstream.Loader.Loadable;
+import com.google.android.exoplayer2.upstream.Loader.C9448f;
 import com.google.android.exoplayer2.upstream.C9491f;
 import com.google.android.exoplayer2.upstream.C9496g0;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import java.io.EOFException;
@@ -63,7 +63,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
     private final DataSource f20183U;
 
     /* renamed from: V */
-    private final C9524z f20184V;
+    private final LoadErrorHandlingPolicy f20184V;
 
     /* renamed from: W */
     private final C9068a f20185W;
@@ -83,7 +83,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
     public final long f20189a0;
 
     /* renamed from: b0 */
-    private final C9442a0 f20190b0 = new C9442a0("Loader:ProgressiveMediaPeriod");
+    private final Loader f20190b0 = new Loader("Loader:ProgressiveMediaPeriod");
 
     /* renamed from: c */
     private final Uri f20191c;
@@ -165,7 +165,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
 
     /* renamed from: com.google.android.exoplayer2.source.b0$a */
     /* compiled from: ProgressiveMediaPeriod */
-    final class C9076a implements C9447e, C9265a {
+    final class C9076a implements Loadable, C9265a {
 
         /* renamed from: a */
         private final Uri f20216a;
@@ -489,7 +489,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
         }
     }
 
-    public C9075b0(Uri uri, DataSource dataSource, C8912g[] gVarArr, C9524z zVar, C9068a aVar, C9078c cVar, C9491f fVar, String str, int i) {
+    public C9075b0(Uri uri, DataSource dataSource, C8912g[] gVarArr, LoadErrorHandlingPolicy zVar, C9068a aVar, C9078c cVar, C9491f fVar, String str, int i) {
         this.f20191c = uri;
         this.f20183U = dataSource;
         this.f20184V = zVar;
@@ -781,7 +781,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
     }
 
     /* renamed from: a */
-    public long mo23540a(C9311j[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr, boolean[] zArr2, long j) {
+    public long mo23540a(TrackSelection[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr, boolean[] zArr2, long j) {
         C9079d o = m26995o();
         TrackGroupArray trackGroupArray = o.f20233b;
         boolean[] zArr3 = o.f20235d;
@@ -799,7 +799,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
         boolean z = !this.f20207r0 ? j != 0 : i == 0;
         for (int i4 = 0; i4 < jVarArr.length; i4++) {
             if (f0VarArr[i4] == null && jVarArr[i4] != null) {
-                C9311j jVar = jVarArr[i4];
+                TrackSelection jVar = jVarArr[i4];
                 Assertions.checkState(jVar.length() == 1);
                 Assertions.checkState(jVar.mo24070b(0) == 0);
                 int a2 = trackGroupArray.mo23530a(jVar.mo24067a());
@@ -991,7 +991,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
         m26981a(aVar);
         long retryDelayMsFor = this.f20184V.getRetryDelayMsFor(this.f20206q0, j2, iOException, i);
         if (retryDelayMsFor == -9223372036854775807L) {
-            cVar = C9442a0.f21955e;
+            cVar = Loader.f21955e;
             C9076a aVar3 = aVar;
         } else {
             int m = m26993m();
@@ -1002,7 +1002,7 @@ final class C9075b0 implements C9072a0, C8914i, C9444b<C9076a>, C9448f, C9139b {
                 aVar2 = aVar;
                 z = false;
             }
-            cVar = m26982a(aVar2, m) ? C9442a0.m28955a(z, retryDelayMsFor) : C9442a0.f21954d;
+            cVar = m26982a(aVar2, m) ? Loader.m28955a(z, retryDelayMsFor) : Loader.f21954d;
         }
         this.f20185W.mo23515a(aVar.f20225j, aVar.f20217b.mo24563c(), aVar.f20217b.mo24564d(), 1, -1, null, 0, null, aVar.f20224i, this.f20211v0, j, j2, aVar.f20217b.mo24562b(), iOException, !cVar.mo24463a());
         return cVar;

@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p366s0.p371v.C8972g;
 import com.google.android.exoplayer2.p366s0.p371v.C8983m;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.C9230p;
 import com.google.android.exoplayer2.source.p379m0.C9210b;
 import com.google.android.exoplayer2.source.p379m0.C9212d;
@@ -17,10 +17,10 @@ import com.google.android.exoplayer2.source.p379m0.C9225m;
 import com.google.android.exoplayer2.source.smoothstreaming.C9242c.C9243a;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a.C9247b;
-import com.google.android.exoplayer2.trackselection.C9311j;
-import com.google.android.exoplayer2.upstream.C9452b0;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
+import com.google.android.exoplayer2.upstream.LoaderErrorThrower;
 import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.io.IOException;
@@ -31,7 +31,7 @@ import java.util.List;
 public class C9239b implements C9242c {
 
     /* renamed from: a */
-    private final C9452b0 f20980a;
+    private final LoaderErrorThrower f20980a;
 
     /* renamed from: b */
     private final int f20981b;
@@ -43,7 +43,7 @@ public class C9239b implements C9242c {
     private final DataSource f20983d;
 
     /* renamed from: e */
-    private C9311j f20984e;
+    private TrackSelection f20984e;
 
     /* renamed from: f */
     private C9245a f20985f;
@@ -59,14 +59,14 @@ public class C9239b implements C9242c {
     public static final class C9240a implements C9243a {
 
         /* renamed from: a */
-        private final C9435a f20988a;
+        private final DataSource f20988a;
 
-        public C9240a(C9435a aVar) {
+        public C9240a(DataSource aVar) {
             this.f20988a = aVar;
         }
 
         /* renamed from: a */
-        public C9242c mo23979a(C9452b0 b0Var, C9245a aVar, int i, C9311j jVar, TransferListener transferListener) {
+        public C9242c mo23979a(LoaderErrorThrower b0Var, C9245a aVar, int i, TrackSelection jVar, TransferListener transferListener) {
             DataSource a = this.f20988a.mo24448a();
             if (transferListener != null) {
                 a.addTransferListener(transferListener);
@@ -84,10 +84,10 @@ public class C9239b implements C9242c {
         }
     }
 
-    public C9239b(C9452b0 b0Var, C9245a aVar, int i, C9311j jVar, DataSource dataSource) {
+    public C9239b(LoaderErrorThrower b0Var, C9245a aVar, int i, TrackSelection jVar, DataSource dataSource) {
         C9245a aVar2 = aVar;
         int i2 = i;
-        C9311j jVar2 = jVar;
+        TrackSelection jVar2 = jVar;
         this.f20980a = b0Var;
         this.f20985f = aVar2;
         this.f20981b = i2;
@@ -142,7 +142,7 @@ public class C9239b implements C9242c {
     }
 
     /* renamed from: a */
-    public void mo23978a(C9311j jVar) {
+    public void mo23978a(TrackSelection jVar) {
         this.f20984e = jVar;
     }
 
@@ -150,7 +150,7 @@ public class C9239b implements C9242c {
     public void mo23646a() throws IOException {
         IOException iOException = this.f20987h;
         if (iOException == null) {
-            this.f20980a.mo23621a();
+            this.f20980a.maybeThrowError();
             return;
         }
         throw iOException;
@@ -214,7 +214,7 @@ public class C9239b implements C9242c {
     /* renamed from: a */
     public boolean mo23649a(C9212d dVar, boolean z, Exception exc, long j) {
         if (z && j != -9223372036854775807L) {
-            C9311j jVar = this.f20984e;
+            TrackSelection jVar = this.f20984e;
             if (jVar.mo24069a(jVar.mo24065a(dVar.f20858c), j)) {
                 return true;
             }

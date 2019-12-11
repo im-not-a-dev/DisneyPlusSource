@@ -2,7 +2,7 @@ package com.bamtech.sdk4.internal.media.offline;
 
 import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.drm.DrmSession;
-import com.google.android.exoplayer2.drm.DrmSession.C8694a;
+import com.google.android.exoplayer2.drm.DrmSession.DrmSessionException;
 import kotlin.TypeCastException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
@@ -20,13 +20,13 @@ final class OfflineLicenseManager$download$2 extends C12881k implements Function
 
     public final byte[] invoke(DrmSession<FrameworkMediaCrypto> drmSession) {
         if (drmSession.getError() != null) {
-            C8694a error = drmSession.getError();
+            DrmSessionException error = drmSession.getError();
             if (error == null) {
                 throw new TypeCastException("null cannot be cast to non-null type com.google.android.exoplayer2.drm.DrmSession.DrmSessionException");
             }
             throw error;
         }
-        byte[] c = drmSession.mo22772c();
+        byte[] c = drmSession.getOfflineLicenseKeySetId();
         if (c != null) {
             return c;
         }

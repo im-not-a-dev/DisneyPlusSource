@@ -22,12 +22,12 @@ import com.google.android.exoplayer2.drm.DrmSession;
 import com.google.android.exoplayer2.p362q0.C8878d;
 import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p381t0.C9275d.C9278c;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9543g0;
-import com.google.android.exoplayer2.p393v0.C9547i0;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9568u;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9543g0;
+import com.google.android.exoplayer2.util.TraceUtil;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9568u;
 import java.nio.ByteBuffer;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -291,22 +291,22 @@ public abstract class C9271b extends C8872q {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:5:0x001c, code lost:
-        if ("AFTB".equals(com.google.android.exoplayer2.p393v0.Util.MODEL) != false) goto L_0x001e;
+        if ("AFTB".equals(com.google.android.exoplayer2.util.Util.MODEL) != false) goto L_0x001e;
      */
     /* renamed from: G */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private boolean mo23173G() {
         /*
             r2 = this;
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MANUFACTURER
             java.lang.String r1 = "Amazon"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x0020
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "AFTM"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x001e
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "AFTB"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x0020
@@ -569,7 +569,7 @@ public abstract class C9271b extends C8872q {
     @TargetApi(23)
     /* renamed from: U */
     private void m28062U() throws ExoPlaybackException {
-        FrameworkMediaCrypto oVar = (FrameworkMediaCrypto) this.f21138q0.mo22771b();
+        FrameworkMediaCrypto oVar = (FrameworkMediaCrypto) this.f21138q0.getMediaCrypto();
         if (oVar == null) {
             m28057P();
         } else if (C.PLAYREADY_UUID.equals(oVar.f18506a)) {
@@ -663,7 +663,7 @@ public abstract class C9271b extends C8872q {
             DrmSession<FrameworkMediaCrypto> drmSession = this.f21137p0;
             if (drmSession != null) {
                 if (this.f21139r0 == null) {
-                    FrameworkMediaCrypto oVar = (FrameworkMediaCrypto) drmSession.mo22771b();
+                    FrameworkMediaCrypto oVar = (FrameworkMediaCrypto) drmSession.getMediaCrypto();
                     if (oVar != null) {
                         try {
                             this.f21139r0 = new MediaCrypto(oVar.f18506a, oVar.f18507b);
@@ -676,7 +676,7 @@ public abstract class C9271b extends C8872q {
                     }
                 }
                 if (mo23173G()) {
-                    int d = this.f21137p0.mo22773d();
+                    int d = this.f21137p0.getState();
                     if (d == 1) {
                         throw ExoPlaybackException.m24862a(this.f21137p0.getError(), mo23204q());
                     } else if (d != 4) {
@@ -895,7 +895,7 @@ public abstract class C9271b extends C8872q {
         if (this.f21137p0 == null || (!z && this.f21123e0)) {
             return false;
         }
-        int d = this.f21137p0.mo22773d();
+        int d = this.f21137p0.getState();
         boolean z2 = true;
         if (d != 1) {
             if (d == 4) {
@@ -993,7 +993,7 @@ public abstract class C9271b extends C8872q {
             if (r0 == 0) goto L_0x003c
             long r0 = android.os.SystemClock.elapsedRealtime()
             java.lang.String r2 = "drainAndFeed"
-            com.google.android.exoplayer2.p393v0.C9547i0.m29359a(r2)
+            com.google.android.exoplayer2.util.TraceUtil.m29359a(r2)
         L_0x0024:
             boolean r2 = r3.mo24762b(r4, r6)
             if (r2 == 0) goto L_0x002b
@@ -1005,7 +1005,7 @@ public abstract class C9271b extends C8872q {
             if (r4 == 0) goto L_0x0038
             goto L_0x002b
         L_0x0038:
-            com.google.android.exoplayer2.p393v0.C9547i0.m29358a()
+            com.google.android.exoplayer2.util.TraceUtil.m29358a()
             goto L_0x004b
         L_0x003c:
             com.google.android.exoplayer2.q0.d r6 = r3.f21128g1
@@ -1054,7 +1054,7 @@ public abstract class C9271b extends C8872q {
         L_0x000e:
             com.google.android.exoplayer2.drm.DrmInitData r0 = r0.f18353e0
         L_0x0010:
-            boolean r0 = com.google.android.exoplayer2.p393v0.Util.m29414a(r2, r0)
+            boolean r0 = com.google.android.exoplayer2.util.Util.m29414a(r2, r0)
             r0 = r0 ^ r1
             if (r0 == 0) goto L_0x004d
             com.google.android.exoplayer2.drm.DrmInitData r0 = r5.f18353e0
@@ -1105,7 +1105,7 @@ public abstract class C9271b extends C8872q {
             boolean r0 = r0.f21087f
             if (r0 == 0) goto L_0x007b
         L_0x006f:
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             r2 = 23
             if (r0 >= r2) goto L_0x007f
             com.google.android.exoplayer2.drm.DrmSession<com.google.android.exoplayer2.drm.o> r0 = r4.f21138q0
@@ -1252,15 +1252,15 @@ public abstract class C9271b extends C8872q {
             StringBuilder sb = new StringBuilder();
             sb.append("createCodec:");
             sb.append(str);
-            C9547i0.m29359a(sb.toString());
+            TraceUtil.m29359a(sb.toString());
             mediaCodec = MediaCodec.createByCodecName(str);
-            C9547i0.m29358a();
-            C9547i0.m29359a("configureCodec");
+            TraceUtil.m29358a();
+            TraceUtil.m29359a("configureCodec");
             mo23185a(aVar, mediaCodec, this.f21135n0, mediaCrypto, f);
-            C9547i0.m29358a();
-            C9547i0.m29359a("startCodec");
+            TraceUtil.m29358a();
+            TraceUtil.m29359a("startCodec");
             mediaCodec.start();
-            C9547i0.m29358a();
+            TraceUtil.m29358a();
             long elapsedRealtime2 = SystemClock.elapsedRealtime();
             m28065a(mediaCodec);
             this.f21143v0 = mediaCodec;
@@ -1492,25 +1492,25 @@ public abstract class C9271b extends C8872q {
     private static boolean m28074b(com.google.android.exoplayer2.p381t0.C9270a r3) {
         /*
             java.lang.String r0 = r3.f21082a
-            int r1 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r1 = com.google.android.exoplayer2.util.Util.SDK_INT
             r2 = 25
             if (r1 > r2) goto L_0x0010
             java.lang.String r1 = "OMX.rk.video_decoder.avc"
             boolean r1 = r1.equals(r0)
             if (r1 != 0) goto L_0x0036
         L_0x0010:
-            int r1 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r1 = com.google.android.exoplayer2.util.Util.SDK_INT
             r2 = 17
             if (r1 > r2) goto L_0x001e
             java.lang.String r1 = "OMX.allwinner.video.decoder.avc"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x0036
         L_0x001e:
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MANUFACTURER
             java.lang.String r1 = "Amazon"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x0038
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "AFTS"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x0038
@@ -1539,27 +1539,27 @@ public abstract class C9271b extends C8872q {
         if ("OMX.amlogic.avc.decoder.awesome.secure".equals(r2) == false) goto L_0x003a;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:9:0x0026, code lost:
-        if ("stvm8".equals(com.google.android.exoplayer2.p393v0.Util.DEVICE) != false) goto L_0x0028;
+        if ("stvm8".equals(com.google.android.exoplayer2.util.Util.DEVICE) != false) goto L_0x0028;
      */
     /* renamed from: b */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private static boolean m28075b(java.lang.String r2) {
         /*
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             r1 = 23
             if (r0 > r1) goto L_0x000e
             java.lang.String r0 = "OMX.google.vorbis.decoder"
             boolean r0 = r0.equals(r2)
             if (r0 != 0) goto L_0x0038
         L_0x000e:
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             r1 = 19
             if (r0 > r1) goto L_0x003a
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "hb2000"
             boolean r0 = r1.equals(r0)
             if (r0 != 0) goto L_0x0028
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r1 = "stvm8"
             boolean r0 = r1.equals(r0)
             if (r0 == 0) goto L_0x003a
@@ -1611,32 +1611,32 @@ public abstract class C9271b extends C8872q {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:27:0x0074, code lost:
-        if ("tilapia".equals(com.google.android.exoplayer2.p393v0.Util.DEVICE) != false) goto L_0x0076;
+        if ("tilapia".equals(com.google.android.exoplayer2.util.Util.DEVICE) != false) goto L_0x0076;
      */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private int mo24759a(java.lang.String r3) {
         /*
             r2 = this;
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             r1 = 25
             if (r0 > r1) goto L_0x0038
             java.lang.String r0 = "OMX.Exynos.avc.dec.secure"
             boolean r0 = r0.equals(r3)
             if (r0 == 0) goto L_0x0038
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "SM-T585"
             boolean r0 = r0.startsWith(r1)
             if (r0 != 0) goto L_0x0036
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "SM-A510"
             boolean r0 = r0.startsWith(r1)
             if (r0 != 0) goto L_0x0036
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "SM-A520"
             boolean r0 = r0.startsWith(r1)
             if (r0 != 0) goto L_0x0036
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "SM-J700"
             boolean r0 = r0.startsWith(r1)
             if (r0 == 0) goto L_0x0038
@@ -1644,7 +1644,7 @@ public abstract class C9271b extends C8872q {
             r3 = 2
             return r3
         L_0x0038:
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             r1 = 24
             if (r0 >= r1) goto L_0x0078
             java.lang.String r0 = "OMX.Nvidia.h264.decode"
@@ -1654,19 +1654,19 @@ public abstract class C9271b extends C8872q {
             boolean r3 = r0.equals(r3)
             if (r3 == 0) goto L_0x0078
         L_0x004e:
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r0 = "flounder"
             boolean r3 = r0.equals(r3)
             if (r3 != 0) goto L_0x0076
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r0 = "flounder_lte"
             boolean r3 = r0.equals(r3)
             if (r3 != 0) goto L_0x0076
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r0 = "grouper"
             boolean r3 = r0.equals(r3)
             if (r3 != 0) goto L_0x0076
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.DEVICE
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.DEVICE
             java.lang.String r0 = "tilapia"
             boolean r3 = r0.equals(r3)
             if (r3 == 0) goto L_0x0078

@@ -223,7 +223,7 @@ public final class ExoPlayerListener implements EventListener, QOSListener {
             goto L_0x0038
         L_0x0065:
             java.lang.Object r8 = kotlin.p590y.C13199w.m40591g(r9)
-            com.google.android.exoplayer2.trackselection.j r8 = (com.google.android.exoplayer2.trackselection.C9311j) r8
+            com.google.android.exoplayer2.trackselection.j r8 = (com.google.android.exoplayer2.trackselection.TrackSelection) r8
             if (r8 == 0) goto L_0x0073
             boolean r8 = r8.equals(r7)
             if (r8 == r12) goto L_0x00ef
@@ -311,7 +311,7 @@ public final class ExoPlayerListener implements EventListener, QOSListener {
         L_0x00fb:
             int r3 = r2.length
             java.lang.Object[] r2 = java.util.Arrays.copyOf(r2, r3)
-            com.google.android.exoplayer2.trackselection.j[] r2 = (com.google.android.exoplayer2.trackselection.C9311j[]) r2
+            com.google.android.exoplayer2.trackselection.j[] r2 = (com.google.android.exoplayer2.trackselection.TrackSelection[]) r2
             r1.<init>(r2)
             r0.lastTrackSelections = r1
             return

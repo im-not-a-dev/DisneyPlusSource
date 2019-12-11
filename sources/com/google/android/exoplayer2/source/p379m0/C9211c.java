@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.source.p379m0;
 
 import com.google.android.exoplayer2.p366s0.C8911f;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Log;
 import com.google.android.exoplayer2.source.C9137e0;
 import com.google.android.exoplayer2.source.p379m0.C9213e.C9215b;
 

@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.p382u0.p383m;
 
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9325e;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.util.Collections;
 import java.util.List;
 
@@ -29,7 +29,7 @@ final class C9347f implements C9325e {
 
     /* renamed from: a */
     public long mo24146a(int i) {
-        Assertions.m29299a(i == 0);
+        Assertions.checkArgument(i == 0);
         return 0;
     }
 

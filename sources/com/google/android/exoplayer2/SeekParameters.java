@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 
 public final class SeekParameters {
 
@@ -24,11 +24,11 @@ public final class SeekParameters {
 
     public SeekParameters(long j, long j2) {
         boolean z = true;
-        Assertions.m29299a(j >= 0);
+        Assertions.checkArgument(j >= 0);
         if (j2 < 0) {
             z = false;
         }
-        Assertions.m29299a(z);
+        Assertions.checkArgument(z);
         this.f18391a = j;
         this.f18392b = j2;
     }

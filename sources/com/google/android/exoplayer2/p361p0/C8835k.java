@@ -5,9 +5,9 @@ import android.media.AudioFocusRequest;
 import android.media.AudioFocusRequest.Builder;
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
 
 /* renamed from: com.google.android.exoplayer2.p0.k */
 /* compiled from: AudioFocusManager */

@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p361p0;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.nio.ShortBuffer;
 import java.util.Arrays;
 

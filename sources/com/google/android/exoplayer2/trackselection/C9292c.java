@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.trackselection;
 
 import android.os.SystemClock;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.p379m0.C9224l;
 import com.google.android.exoplayer2.source.p379m0.C9225m;
@@ -13,7 +13,7 @@ import java.util.List;
 
 /* renamed from: com.google.android.exoplayer2.trackselection.c */
 /* compiled from: BaseTrackSelection */
-public abstract class C9292c implements C9311j {
+public abstract class C9292c implements TrackSelection {
 
     /* renamed from: a */
     protected final C9199j0 f21202a;

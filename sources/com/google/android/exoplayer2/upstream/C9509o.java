@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 import java.util.Arrays;
 
 /* renamed from: com.google.android.exoplayer2.upstream.o */
@@ -98,8 +98,8 @@ public final class C9509o implements C9491f {
     }
 
     public C9509o(boolean z, int i, int i2) {
-        Assertions.m29299a(i > 0);
-        Assertions.m29299a(i2 >= 0);
+        Assertions.checkArgument(i > 0);
+        Assertions.checkArgument(i2 >= 0);
         this.f22146a = z;
         this.f22147b = i;
         this.f22152g = i2;

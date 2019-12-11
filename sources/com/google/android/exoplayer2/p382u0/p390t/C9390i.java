@@ -3,8 +3,8 @@ package com.google.android.exoplayer2.p382u0.p390t;
 import android.text.SpannableStringBuilder;
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9325e;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -97,11 +97,11 @@ final class C9390i implements C9325e {
     /* renamed from: a */
     public long mo24146a(int i) {
         boolean z = true;
-        Assertions.m29299a(i >= 0);
+        Assertions.checkArgument(i >= 0);
         if (i >= this.f21672W.length) {
             z = false;
         }
-        Assertions.m29299a(z);
+        Assertions.checkArgument(z);
         return this.f21672W[i];
     }
 }

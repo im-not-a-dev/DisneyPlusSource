@@ -3,9 +3,9 @@ package com.google.android.exoplayer2.p366s0.p375z;
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.p361p0.C8822d0;
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9572w;
 import java.io.IOException;
 
 /* renamed from: com.google.android.exoplayer2.s0.z.d */

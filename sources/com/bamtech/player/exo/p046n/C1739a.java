@@ -9,8 +9,8 @@ import com.google.android.exoplayer2.trackselection.C9295d;
 import com.google.android.exoplayer2.trackselection.C9295d.C9299d;
 import com.google.android.exoplayer2.trackselection.C9295d.C9301e;
 import com.google.android.exoplayer2.trackselection.C9306f.C9307a;
-import com.google.android.exoplayer2.trackselection.C9311j.C9312a;
-import com.google.android.exoplayer2.trackselection.C9311j.C9313b;
+import com.google.android.exoplayer2.trackselection.TrackSelection.C9312a;
+import com.google.android.exoplayer2.trackselection.TrackSelection.C9313b;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -606,7 +606,7 @@ public class C1739a extends C9295d {
     /* JADX WARNING: Removed duplicated region for block: B:31:0x005c A[SYNTHETIC] */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public final com.google.android.exoplayer2.trackselection.C9311j.C9312a mo7763a(com.google.android.exoplayer2.source.TrackGroupArray r10, int[][] r11, java.lang.String r12, java.util.List<java.lang.String> r13) {
+    public final com.google.android.exoplayer2.trackselection.TrackSelection.C9312a mo7763a(com.google.android.exoplayer2.source.TrackGroupArray r10, int[][] r11, java.lang.String r12, java.util.List<java.lang.String> r13) {
         /*
             r9 = this;
             if (r10 == 0) goto L_0x0062

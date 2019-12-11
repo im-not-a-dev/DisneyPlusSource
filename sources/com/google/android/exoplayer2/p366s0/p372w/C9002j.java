@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p366s0.p372w;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.s0.w.j */
 /* compiled from: VorbisBitArray */

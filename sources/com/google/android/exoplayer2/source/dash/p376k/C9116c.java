@@ -8,20 +8,20 @@ import com.facebook.stetho.common.Utf8Charset;
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
+import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.metadata.p356g.C8746a;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9549j0;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9556l0;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9566t;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9549j0;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9556l0;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9566t;
 import com.google.android.exoplayer2.source.dash.p376k.C9127j.C9129b;
 import com.google.android.exoplayer2.source.dash.p376k.C9127j.C9130c;
 import com.google.android.exoplayer2.source.dash.p376k.C9127j.C9131d;
 import com.google.android.exoplayer2.source.dash.p376k.C9127j.C9132e;
-import com.google.android.exoplayer2.upstream.C9455c0.C9456a;
+import com.google.android.exoplayer2.upstream.ParsingLoadable.Parser;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,7 +39,7 @@ import org.xmlpull.v1.XmlSerializer;
 
 /* renamed from: com.google.android.exoplayer2.source.dash.k.c */
 /* compiled from: DashManifestParser */
-public class C9116c extends DefaultHandler implements C9456a<C9115b> {
+public class C9116c extends DefaultHandler implements Parser<C9115b> {
 
     /* renamed from: b */
     private static final Pattern f20435b = Pattern.compile("(\\d+)(?:/(\\d+))?");
@@ -70,7 +70,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         public final String f20442d;
 
         /* renamed from: e */
-        public final ArrayList<C8692b> f20443e;
+        public final ArrayList<SchemeData> f20443e;
 
         /* renamed from: f */
         public final ArrayList<C9118d> f20444f;
@@ -78,7 +78,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         /* renamed from: g */
         public final long f20445g;
 
-        public C9117a(Format format, String str, C9127j jVar, String str2, ArrayList<C8692b> arrayList, ArrayList<C9118d> arrayList2, long j) {
+        public C9117a(Format format, String str, C9127j jVar, String str2, ArrayList<SchemeData> arrayList, ArrayList<C9118d> arrayList2, long j) {
             this.f20439a = format;
             this.f20440b = str;
             this.f20441c = jVar;
@@ -119,7 +119,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r0 = 0
             java.lang.String r1 = "value"
             java.lang.String r5 = r5.getAttributeValue(r0, r1)
-            java.lang.String r5 = com.google.android.exoplayer2.p393v0.Util.m29457k(r5)
+            java.lang.String r5 = com.google.android.exoplayer2.util.Util.m29457k(r5)
             r0 = -1
             if (r5 != 0) goto L_0x000f
             return r0
@@ -285,7 +285,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
     /* JADX WARNING: Unknown variable types count: 20 */
     /* renamed from: c */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public android.util.Pair<java.lang.String, com.google.android.exoplayer2.drm.DrmInitData.C8692b> mo23710c(org.xmlpull.v1.XmlPullParser r17) throws org.xmlpull.v1.XmlPullParserException, java.io.IOException {
+    public android.util.Pair<java.lang.String, com.google.android.exoplayer2.drm.DrmInitData.SchemeData> mo23710c(org.xmlpull.v1.XmlPullParser r17) throws org.xmlpull.v1.XmlPullParserException, java.io.IOException {
         /*
             r16 = this;
             r0 = r17
@@ -295,7 +295,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r3 = 1
             r4 = 0
             if (r2 == 0) goto L_0x0098
-            java.lang.String r2 = com.google.android.exoplayer2.p393v0.Util.m29457k(r2)
+            java.lang.String r2 = com.google.android.exoplayer2.util.Util.m29457k(r2)
             r5 = -1
             int r6 = r2.hashCode()
             r7 = 489446379(0x1d2c5beb, float:2.281153E-21)
@@ -340,7 +340,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             java.lang.String r2 = "value"
             java.lang.String r2 = r0.getAttributeValue(r1, r2)
             java.lang.String r5 = "default_KID"
-            java.lang.String r5 = com.google.android.exoplayer2.p393v0.C9556l0.m29464b(r0, r5)
+            java.lang.String r5 = com.google.android.exoplayer2.util.C9556l0.m29464b(r0, r5)
             boolean r6 = android.text.TextUtils.isEmpty(r5)
             if (r6 != 0) goto L_0x0092
             java.lang.String r6 = "00000000-0000-0000-0000-000000000000"
@@ -386,7 +386,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         L_0x009d:
             r17.next()
             java.lang.String r9 = "ms:laurl"
-            boolean r9 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r9)
+            boolean r9 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r9)
             if (r9 == 0) goto L_0x00b4
             java.lang.String r7 = "licenseUrl"
             java.lang.String r7 = r0.getAttributeValue(r1, r7)
@@ -399,7 +399,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x0126
         L_0x00b4:
             java.lang.String r9 = "widevine:license"
-            boolean r9 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r9)
+            boolean r9 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r9)
             if (r9 == 0) goto L_0x00d0
             java.lang.String r8 = "robustness_level"
             java.lang.String r8 = r0.getAttributeValue(r1, r8)
@@ -416,7 +416,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r9 = 4
             if (r5 != 0) goto L_0x00fb
             java.lang.String r10 = "pssh"
-            boolean r10 = com.google.android.exoplayer2.p393v0.C9556l0.m29468e(r0, r10)
+            boolean r10 = com.google.android.exoplayer2.util.C9556l0.m29468e(r0, r10)
             if (r10 == 0) goto L_0x00fb
             int r10 = r17.next()
             if (r10 != r9) goto L_0x00fb
@@ -426,7 +426,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             if (r5 != 0) goto L_0x00f8
             java.lang.String r2 = "MpdParser"
             java.lang.String r9 = "Skipping malformed cenc:pssh data"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r2, r9)
+            com.google.android.exoplayer2.util.Log.m29500d(r2, r9)
             r13 = r1
             goto L_0x00f9
         L_0x00f8:
@@ -440,7 +440,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             boolean r10 = r10.equals(r2)
             if (r10 == 0) goto L_0x0122
             java.lang.String r10 = "mspr:pro"
-            boolean r10 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r10)
+            boolean r10 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r10)
             if (r10 == 0) goto L_0x0122
             int r10 = r17.next()
             if (r10 != r9) goto L_0x0122
@@ -454,7 +454,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x00ae
         L_0x0126:
             java.lang.String r2 = "ContentProtection"
-            boolean r2 = com.google.android.exoplayer2.p393v0.C9556l0.m29466c(r0, r2)
+            boolean r2 = com.google.android.exoplayer2.util.C9556l0.m29466c(r0, r2)
             if (r2 == 0) goto L_0x013f
             if (r10 == 0) goto L_0x0139
             com.google.android.exoplayer2.drm.DrmInitData$b r0 = new com.google.android.exoplayer2.drm.DrmInitData$b
@@ -725,7 +725,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         L_0x006c:
             r33.next()
             java.lang.String r11 = "BaseURL"
-            boolean r11 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r11)
+            boolean r11 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r11)
             if (r11 == 0) goto L_0x008a
             if (r12 != 0) goto L_0x0082
             java.lang.String r7 = m27271b(r0, r7)
@@ -739,7 +739,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x012c
         L_0x008a:
             java.lang.String r11 = "ProgramInformation"
-            boolean r11 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r11)
+            boolean r11 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r11)
             if (r11 == 0) goto L_0x009c
             com.google.android.exoplayer2.source.dash.k.g r11 = r32.mo23714g(r33)
             r25 = r11
@@ -748,14 +748,14 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x0130
         L_0x009c:
             java.lang.String r11 = "UTCTiming"
-            boolean r11 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r11)
+            boolean r11 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r11)
             if (r11 == 0) goto L_0x00ab
             com.google.android.exoplayer2.source.dash.k.m r11 = r32.mo23717j(r33)
             r26 = r11
             goto L_0x0098
         L_0x00ab:
             java.lang.String r11 = "Location"
-            boolean r11 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r11)
+            boolean r11 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r11)
             if (r11 == 0) goto L_0x00be
             java.lang.String r11 = r33.nextText()
             android.net.Uri r11 = android.net.Uri.parse(r11)
@@ -763,7 +763,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x0098
         L_0x00be:
             java.lang.String r11 = "Period"
-            boolean r11 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r11)
+            boolean r11 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r11)
             if (r11 == 0) goto L_0x0123
             if (r22 != 0) goto L_0x0123
             r11 = r32
@@ -817,7 +817,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r1 = r28
         L_0x0130:
             java.lang.String r11 = "MPD"
-            boolean r11 = com.google.android.exoplayer2.p393v0.C9556l0.m29466c(r0, r11)
+            boolean r11 = com.google.android.exoplayer2.util.C9556l0.m29466c(r0, r11)
             r14 = -9223372036854775807(0x8000000000000001, double:-4.9E-324)
             if (r11 == 0) goto L_0x0179
             int r0 = (r3 > r14 ? 1 : (r3 == r14 ? 0 : -1))
@@ -1168,7 +1168,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         L_0x006c:
             r40.next()
             java.lang.String r0 = "BaseURL"
-            boolean r0 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r14, r0)
+            boolean r0 = com.google.android.exoplayer2.util.C9556l0.m29467d(r14, r0)
             if (r0 == 0) goto L_0x009a
             if (r25 != 0) goto L_0x0098
             java.lang.String r0 = m27271b(r14, r5)
@@ -1194,7 +1194,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x00d0
         L_0x009a:
             java.lang.String r0 = "ContentProtection"
-            boolean r0 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r14, r0)
+            boolean r0 = com.google.android.exoplayer2.util.C9556l0.m29467d(r14, r0)
             if (r0 == 0) goto L_0x00b7
             android.util.Pair r0 = r39.mo23710c(r40)
             java.lang.Object r1 = r0.first
@@ -1210,7 +1210,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x00d0
         L_0x00b7:
             java.lang.String r0 = "ContentComponent"
-            boolean r0 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r14, r0)
+            boolean r0 = com.google.android.exoplayer2.util.C9556l0.m29467d(r14, r0)
             if (r0 == 0) goto L_0x00e5
             java.lang.String r0 = r14.getAttributeValue(r13, r12)
             java.lang.String r4 = m27270b(r4, r0)
@@ -1233,34 +1233,34 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x01f5
         L_0x00e5:
             java.lang.String r0 = "Role"
-            boolean r1 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r14, r0)
+            boolean r1 = com.google.android.exoplayer2.util.C9556l0.m29467d(r14, r0)
             if (r1 == 0) goto L_0x00f5
             com.google.android.exoplayer2.source.dash.k.d r0 = m27274c(r14, r0)
             r8.add(r0)
             goto L_0x0098
         L_0x00f5:
             java.lang.String r0 = "AudioChannelConfiguration"
-            boolean r0 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r14, r0)
+            boolean r0 = com.google.android.exoplayer2.util.C9556l0.m29467d(r14, r0)
             if (r0 == 0) goto L_0x0102
             int r26 = r39.mo23708b(r40)
             goto L_0x00b5
         L_0x0102:
             java.lang.String r0 = "Accessibility"
-            boolean r1 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r14, r0)
+            boolean r1 = com.google.android.exoplayer2.util.C9556l0.m29467d(r14, r0)
             if (r1 == 0) goto L_0x0112
             com.google.android.exoplayer2.source.dash.k.d r0 = m27274c(r14, r0)
             r9.add(r0)
             goto L_0x0098
         L_0x0112:
             java.lang.String r0 = "SupplementalProperty"
-            boolean r1 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r14, r0)
+            boolean r1 = com.google.android.exoplayer2.util.C9556l0.m29467d(r14, r0)
             if (r1 == 0) goto L_0x0123
             com.google.android.exoplayer2.source.dash.k.d r0 = m27274c(r14, r0)
             r7.add(r0)
             goto L_0x0098
         L_0x0123:
             java.lang.String r0 = "Representation"
-            boolean r0 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r14, r0)
+            boolean r0 = com.google.android.exoplayer2.util.C9556l0.m29467d(r14, r0)
             if (r0 == 0) goto L_0x0182
             r0 = r39
             r1 = r40
@@ -1318,7 +1318,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r6 = r15
             java.lang.String r0 = "SegmentBase"
             r1 = r40
-            boolean r0 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r1, r0)
+            boolean r0 = com.google.android.exoplayer2.util.C9556l0.m29467d(r1, r0)
             if (r0 == 0) goto L_0x01b2
             r0 = r27
             com.google.android.exoplayer2.source.dash.k.j$e r0 = (com.google.android.exoplayer2.source.dash.p376k.C9127j.C9132e) r0
@@ -1332,7 +1332,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x01f7
         L_0x01b2:
             java.lang.String r0 = "SegmentList"
-            boolean r0 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r1, r0)
+            boolean r0 = com.google.android.exoplayer2.util.C9556l0.m29467d(r1, r0)
             if (r0 == 0) goto L_0x01c3
             r0 = r27
             com.google.android.exoplayer2.source.dash.k.j$b r0 = (com.google.android.exoplayer2.source.dash.p376k.C9127j.C9129b) r0
@@ -1340,7 +1340,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x01a9
         L_0x01c3:
             java.lang.String r0 = "SegmentTemplate"
-            boolean r0 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r1, r0)
+            boolean r0 = com.google.android.exoplayer2.util.C9556l0.m29467d(r1, r0)
             if (r0 == 0) goto L_0x01d6
             r0 = r27
             com.google.android.exoplayer2.source.dash.k.j$c r0 = (com.google.android.exoplayer2.source.dash.p376k.C9127j.C9130c) r0
@@ -1350,7 +1350,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         L_0x01d6:
             r5 = r41
             java.lang.String r0 = "InbandEventStream"
-            boolean r4 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r1, r0)
+            boolean r4 = com.google.android.exoplayer2.util.C9556l0.m29467d(r1, r0)
             if (r4 == 0) goto L_0x01ea
             com.google.android.exoplayer2.source.dash.k.d r0 = m27274c(r1, r0)
             r4 = r35
@@ -1358,14 +1358,14 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x01f5
         L_0x01ea:
             r4 = r35
-            boolean r0 = com.google.android.exoplayer2.p393v0.C9556l0.m29465b(r40)
+            boolean r0 = com.google.android.exoplayer2.util.C9556l0.m29465b(r40)
             if (r0 == 0) goto L_0x01f5
             r39.mo23704a(r40)
         L_0x01f5:
             r0 = r28
         L_0x01f7:
             java.lang.String r7 = "AdaptationSet"
-            boolean r7 = com.google.android.exoplayer2.p393v0.C9556l0.m29466c(r1, r7)
+            boolean r7 = com.google.android.exoplayer2.util.C9556l0.m29466c(r1, r7)
             if (r7 == 0) goto L_0x022d
             java.util.ArrayList r7 = new java.util.ArrayList
             int r1 = r3.size()
@@ -1488,7 +1488,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r23.next()
             r26 = r13
             java.lang.String r13 = "BaseURL"
-            boolean r13 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r13)
+            boolean r13 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r13)
             if (r13 == 0) goto L_0x0080
             if (r7 != 0) goto L_0x0078
             java.lang.String r1 = m27271b(r0, r1)
@@ -1508,7 +1508,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x010d
         L_0x0080:
             java.lang.String r13 = "AudioChannelConfiguration"
-            boolean r13 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r13)
+            boolean r13 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r13)
             if (r13 == 0) goto L_0x0097
             int r13 = r22.mo23708b(r23)
             r16 = r1
@@ -1519,21 +1519,21 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             goto L_0x0117
         L_0x0097:
             java.lang.String r13 = "SegmentBase"
-            boolean r13 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r13)
+            boolean r13 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r13)
             if (r13 == 0) goto L_0x00a6
             com.google.android.exoplayer2.source.dash.k.j$e r10 = (com.google.android.exoplayer2.source.dash.p376k.C9127j.C9132e) r10
             com.google.android.exoplayer2.source.dash.k.j$e r10 = r15.mo23701a(r0, r10)
             goto L_0x006c
         L_0x00a6:
             java.lang.String r13 = "SegmentList"
-            boolean r13 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r13)
+            boolean r13 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r13)
             if (r13 == 0) goto L_0x00b5
             com.google.android.exoplayer2.source.dash.k.j$b r10 = (com.google.android.exoplayer2.source.dash.p376k.C9127j.C9129b) r10
             com.google.android.exoplayer2.source.dash.k.j$b r10 = r15.mo23696a(r0, r10)
             goto L_0x006c
         L_0x00b5:
             java.lang.String r13 = "SegmentTemplate"
-            boolean r13 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r13)
+            boolean r13 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r13)
             if (r13 == 0) goto L_0x00c6
             com.google.android.exoplayer2.source.dash.k.j$c r10 = (com.google.android.exoplayer2.source.dash.p376k.C9127j.C9130c) r10
             r13 = r36
@@ -1543,7 +1543,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r13 = r36
             r24 = r1
             java.lang.String r1 = "ContentProtection"
-            boolean r1 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r1)
+            boolean r1 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r1)
             if (r1 == 0) goto L_0x00e8
             android.util.Pair r1 = r22.mo23710c(r23)
             r27 = r7
@@ -1559,14 +1559,14 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
         L_0x00e8:
             r27 = r7
             java.lang.String r1 = "InbandEventStream"
-            boolean r7 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r1)
+            boolean r7 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r1)
             if (r7 == 0) goto L_0x00fa
             com.google.android.exoplayer2.source.dash.k.d r1 = m27274c(r0, r1)
             r12.add(r1)
             goto L_0x010d
         L_0x00fa:
             java.lang.String r1 = "SupplementalProperty"
-            boolean r7 = com.google.android.exoplayer2.p393v0.C9556l0.m29467d(r0, r1)
+            boolean r7 = com.google.android.exoplayer2.util.C9556l0.m29467d(r0, r1)
             if (r7 == 0) goto L_0x010a
             com.google.android.exoplayer2.source.dash.k.d r1 = m27274c(r0, r1)
             r11.add(r1)
@@ -1581,7 +1581,7 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
             r16 = r24
         L_0x0117:
             java.lang.String r1 = "Representation"
-            boolean r1 = com.google.android.exoplayer2.p393v0.C9556l0.m29466c(r0, r1)
+            boolean r1 = com.google.android.exoplayer2.util.C9556l0.m29466c(r0, r1)
             if (r1 == 0) goto L_0x015b
             r0 = r22
             r1 = r2
@@ -1665,17 +1665,17 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
 
     /* access modifiers changed from: protected */
     /* renamed from: a */
-    public C9123i mo23694a(C9117a aVar, String str, ArrayList<C8692b> arrayList, ArrayList<C9118d> arrayList2) {
+    public C9123i mo23694a(C9117a aVar, String str, ArrayList<SchemeData> arrayList, ArrayList<C9118d> arrayList2) {
         Format format = aVar.f20439a;
         String str2 = aVar.f20442d;
         if (str2 != null) {
             str = str2;
         }
-        ArrayList<C8692b> arrayList3 = aVar.f20443e;
+        ArrayList<SchemeData> arrayList3 = aVar.f20443e;
         arrayList3.addAll(arrayList);
         if (!arrayList3.isEmpty()) {
             m27268a(arrayList3);
-            format = format.mo22602a(new DrmInitData(str, (List<C8692b>) arrayList3));
+            format = format.mo22602a(new DrmInitData(str, (List<SchemeData>) arrayList3));
         }
         Format format2 = format;
         ArrayList<C9118d> arrayList4 = aVar.f20444f;
@@ -2129,15 +2129,15 @@ public class C9116c extends DefaultHandler implements C9456a<C9115b> {
     }
 
     /* renamed from: a */
-    private static void m27268a(ArrayList<C8692b> arrayList) {
+    private static void m27268a(ArrayList<SchemeData> arrayList) {
         for (int size = arrayList.size() - 1; size >= 0; size--) {
-            C8692b bVar = (C8692b) arrayList.get(size);
+            SchemeData bVar = (SchemeData) arrayList.get(size);
             if (!bVar.mo22760X()) {
                 int i = 0;
                 while (true) {
                     if (i >= arrayList.size()) {
                         break;
-                    } else if (((C8692b) arrayList.get(i)).mo22762a(bVar)) {
+                    } else if (((SchemeData) arrayList.get(i)).mo22762a(bVar)) {
                         arrayList.remove(size);
                         break;
                     } else {

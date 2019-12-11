@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.util.Arrays;
 
 public final class DataSpec {
@@ -122,12 +122,12 @@ public final class DataSpec {
         long j5 = j2;
         long j6 = j3;
         boolean z = true;
-        Assertions.m29299a(j4 >= 0);
-        Assertions.m29299a(j5 >= 0);
+        Assertions.checkArgument(j4 >= 0);
+        Assertions.checkArgument(j5 >= 0);
         if (j6 <= 0 && j6 != -1) {
             z = false;
         }
-        Assertions.m29299a(z);
+        Assertions.checkArgument(z);
         this.f21938a = uri;
         this.f21939b = i;
         if (bArr2 == null || bArr2.length == 0) {

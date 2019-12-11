@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2;
 
 import android.os.Handler;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 
 public final class PlayerMessage {
 
@@ -119,7 +119,7 @@ public final class PlayerMessage {
     public PlayerMessage mo22647k() {
         Assertions.checkState(!this.f18385j);
         if (this.f18383h == -9223372036854775807L) {
-            Assertions.m29299a(this.f18384i);
+            Assertions.checkArgument(this.f18384i);
         }
         this.f18385j = true;
         this.f18377b.mo22649a(this);

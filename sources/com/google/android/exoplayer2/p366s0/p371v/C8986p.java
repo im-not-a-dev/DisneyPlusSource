@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0.p371v;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.s0.v.p */
 /* compiled from: TrackSampleTable */
@@ -33,12 +33,12 @@ final class C8986p {
 
     public C8986p(C8983m mVar, long[] jArr, int[] iArr, int i, long[] jArr2, int[] iArr2, long j) {
         boolean z = false;
-        Assertions.m29299a(iArr.length == jArr2.length);
-        Assertions.m29299a(jArr.length == jArr2.length);
+        Assertions.checkArgument(iArr.length == jArr2.length);
+        Assertions.checkArgument(jArr.length == jArr2.length);
         if (iArr2.length == jArr2.length) {
             z = true;
         }
-        Assertions.m29299a(z);
+        Assertions.checkArgument(z);
         this.f19697a = mVar;
         this.f19699c = jArr;
         this.f19700d = iArr;

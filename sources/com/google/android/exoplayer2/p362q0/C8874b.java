@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p362q0;
 import android.annotation.TargetApi;
 import android.media.MediaCodec.CryptoInfo;
 import android.media.MediaCodec.CryptoInfo.Pattern;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.q0.b */
 /* compiled from: CryptoInfo */

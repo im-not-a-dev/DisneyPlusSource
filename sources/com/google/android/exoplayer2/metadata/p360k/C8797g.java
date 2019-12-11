@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.metadata.p360k;
 
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
-import com.google.android.exoplayer2.p393v0.C9545h0;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9545h0;
+import com.google.android.exoplayer2.util.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.metadata.k.g */
 /* compiled from: TimeSignalCommand */

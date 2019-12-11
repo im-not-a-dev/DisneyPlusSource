@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.upstream;
 import android.net.Uri;
 import android.util.Base64;
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import java.io.IOException;
 import java.net.URLDecoder;
 

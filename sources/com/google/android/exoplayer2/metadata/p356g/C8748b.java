@@ -3,8 +3,8 @@ package com.google.android.exoplayer2.metadata.p356g;
 import com.google.android.exoplayer2.metadata.C8739b;
 import com.google.android.exoplayer2.metadata.C8742d;
 import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9572w;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 

@@ -4,11 +4,11 @@ import com.google.android.exoplayer2.C8679b0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p362q0.C8879e;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9566t;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9566t;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
-import com.google.android.exoplayer2.trackselection.C9311j;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
 import java.io.IOException;
 
 /* renamed from: com.google.android.exoplayer2.source.q */
@@ -209,7 +209,7 @@ public final class C9231q implements C9072a0, C9073a {
     /* JADX WARNING: Removed duplicated region for block: B:28:0x006e  */
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public long mo23540a(com.google.android.exoplayer2.trackselection.C9311j[] r13, boolean[] r14, com.google.android.exoplayer2.source.C9141f0[] r15, boolean[] r16, long r17) {
+    public long mo23540a(com.google.android.exoplayer2.trackselection.TrackSelection[] r13, boolean[] r14, com.google.android.exoplayer2.source.C9141f0[] r15, boolean[] r16, long r17) {
         /*
             r12 = this;
             r0 = r12
@@ -277,7 +277,7 @@ public final class C9231q implements C9072a0, C9073a {
         L_0x0067:
             r4 = 1
         L_0x0068:
-            com.google.android.exoplayer2.p393v0.Assertions.checkState(r4)
+            com.google.android.exoplayer2.util.Assertions.checkState(r4)
         L_0x006b:
             int r4 = r1.length
             if (r10 >= r4) goto L_0x0099
@@ -356,7 +356,7 @@ public final class C9231q implements C9072a0, C9073a {
         L_0x0034:
             r2 = 1
         L_0x0035:
-            com.google.android.exoplayer2.p393v0.Assertions.checkState(r2)
+            com.google.android.exoplayer2.util.Assertions.checkState(r2)
             return r0
         */
         throw new UnsupportedOperationException("Method not decompiled: com.google.android.exoplayer2.source.C9231q.mo23538a(long):long");
@@ -383,9 +383,9 @@ public final class C9231q implements C9072a0, C9073a {
     }
 
     /* renamed from: a */
-    private static boolean m27845a(long j, C9311j[] jVarArr) {
+    private static boolean m27845a(long j, TrackSelection[] jVarArr) {
         if (j != 0) {
-            for (C9311j jVar : jVarArr) {
+            for (TrackSelection jVar : jVarArr) {
                 if (jVar != null && !C9566t.m29517j(jVar.mo24076f().f18349b0)) {
                     return true;
                 }

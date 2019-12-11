@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p382u0.p388r;
 
 import android.text.Layout.Alignment;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.u0.r.e */
 /* compiled from: TtmlStyle */

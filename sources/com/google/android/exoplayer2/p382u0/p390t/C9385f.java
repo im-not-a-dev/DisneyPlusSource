@@ -12,9 +12,9 @@ import android.text.style.StyleSpan;
 import android.text.style.TypefaceSpan;
 import android.text.style.UnderlineSpan;
 import com.google.android.exoplayer2.p382u0.p390t.C9382e.C9384b;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9572w;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -223,7 +223,7 @@ public final class C9385f {
             r0.append(r6)
             java.lang.String r6 = r0.toString()
             java.lang.String r0 = "WebvttCueParser"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r0, r6)
+            com.google.android.exoplayer2.util.Log.m29500d(r0, r6)
             r6 = 0
             return r6
         L_0x006e:
@@ -316,7 +316,7 @@ public final class C9385f {
             r0.append(r5)
             java.lang.String r5 = r0.toString()
             java.lang.String r0 = "WebvttCueParser"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r0, r5)
+            com.google.android.exoplayer2.util.Log.m29500d(r0, r5)
             r5 = -2147483648(0xffffffff80000000, float:-0.0)
             return r5
         L_0x0056:
@@ -602,7 +602,7 @@ public final class C9385f {
             r6.append(r5)
             java.lang.String r5 = r6.toString()
             java.lang.String r6 = "WebvttCueParser"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r6, r5)
+            com.google.android.exoplayer2.util.Log.m29500d(r6, r5)
             goto L_0x007e
         L_0x0067:
             r5 = 38

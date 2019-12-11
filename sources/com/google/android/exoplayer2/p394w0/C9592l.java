@@ -1,8 +1,8 @@
 package com.google.android.exoplayer2.p394w0;
 
 import com.google.android.exoplayer2.C8723g0;
-import com.google.android.exoplayer2.p393v0.C9568u;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9568u;
+import com.google.android.exoplayer2.util.C9572w;
 import java.util.Collections;
 import java.util.List;
 

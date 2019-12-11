@@ -26,11 +26,11 @@ import com.google.android.exoplayer2.p381t0.C9273c;
 import com.google.android.exoplayer2.p381t0.C9275d;
 import com.google.android.exoplayer2.p381t0.C9275d.C9278c;
 import com.google.android.exoplayer2.p381t0.C9284e;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9547i0;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9566t;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.TraceUtil;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9566t;
 import com.google.android.exoplayer2.p394w0.C9603r.C9604a;
 import java.nio.ByteBuffer;
 import java.util.Collections;
@@ -516,9 +516,9 @@ public class C9593m extends C9271b {
     /* access modifiers changed from: protected */
     /* renamed from: c */
     public void mo24764c(MediaCodec mediaCodec, int i, long j) {
-        C9547i0.m29359a("skipVideoBuffer");
+        TraceUtil.m29359a("skipVideoBuffer");
         mediaCodec.releaseOutputBuffer(i, false);
-        C9547i0.m29358a();
+        TraceUtil.m29358a();
         this.f21128g1.f19018f++;
     }
 
@@ -552,9 +552,9 @@ public class C9593m extends C9271b {
     /* renamed from: b */
     public void mo24760b(MediaCodec mediaCodec, int i, long j) {
         m29630L();
-        C9547i0.m29359a("releaseOutputBuffer");
+        TraceUtil.m29359a("releaseOutputBuffer");
         mediaCodec.releaseOutputBuffer(i, true);
-        C9547i0.m29358a();
+        TraceUtil.m29358a();
         this.f22398C1 = SystemClock.elapsedRealtime() * 1000;
         this.f21128g1.f19017e++;
         this.f22396A1 = 0;
@@ -586,9 +586,9 @@ public class C9593m extends C9271b {
     /* renamed from: b */
     public void mo24761b(MediaCodec mediaCodec, int i, long j, long j2) {
         m29630L();
-        C9547i0.m29359a("releaseOutputBuffer");
+        TraceUtil.m29359a("releaseOutputBuffer");
         mediaCodec.releaseOutputBuffer(i, j2);
-        C9547i0.m29358a();
+        TraceUtil.m29358a();
         this.f22398C1 = SystemClock.elapsedRealtime() * 1000;
         this.f21128g1.f19017e++;
         this.f22396A1 = 0;
@@ -916,9 +916,9 @@ public class C9593m extends C9271b {
     /* access modifiers changed from: protected */
     /* renamed from: a */
     public void mo24756a(MediaCodec mediaCodec, int i, long j) {
-        C9547i0.m29359a("dropVideoBuffer");
+        TraceUtil.m29359a("dropVideoBuffer");
         mediaCodec.releaseOutputBuffer(i, false);
-        C9547i0.m29358a();
+        TraceUtil.m29358a();
         mo23192b(1);
     }
 
@@ -1155,19 +1155,19 @@ public class C9593m extends C9271b {
             int r9 = r9 * r10
             goto L_0x00a3
         L_0x0061:
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r8 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "BRAVIA 4K 2015"
             boolean r8 = r1.equals(r8)
             if (r8 != 0) goto L_0x009f
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
+            java.lang.String r8 = com.google.android.exoplayer2.util.Util.MANUFACTURER
             java.lang.String r1 = "Amazon"
             boolean r8 = r1.equals(r8)
             if (r8 == 0) goto L_0x008e
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r8 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "KFSOWI"
             boolean r8 = r1.equals(r8)
             if (r8 != 0) goto L_0x009f
-            java.lang.String r8 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r8 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r1 = "AFTS"
             boolean r8 = r1.equals(r8)
             if (r8 == 0) goto L_0x008e
@@ -1176,8 +1176,8 @@ public class C9593m extends C9271b {
             goto L_0x009f
         L_0x008e:
             r7 = 16
-            int r8 = com.google.android.exoplayer2.p393v0.Util.m29381a(r9, r7)
-            int r9 = com.google.android.exoplayer2.p393v0.Util.m29381a(r10, r7)
+            int r8 = com.google.android.exoplayer2.util.Util.m29381a(r9, r7)
+            int r9 = com.google.android.exoplayer2.util.Util.m29381a(r10, r7)
             int r8 = r8 * r9
             int r8 = r8 * 16
             int r9 = r8 * 16
@@ -1337,7 +1337,7 @@ public class C9593m extends C9271b {
         f22395W1 = true;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:400:0x0614, code lost:
-        r1 = com.google.android.exoplayer2.p393v0.Util.MODEL;
+        r1 = com.google.android.exoplayer2.util.Util.MODEL;
         r2 = r1.hashCode();
      */
     /* JADX WARNING: Code restructure failed: missing block: B:401:0x061d, code lost:
@@ -1382,27 +1382,27 @@ public class C9593m extends C9271b {
             monitor-enter(r7)
             boolean r1 = f22394V1     // Catch:{ all -> 0x0646 }
             if (r1 != 0) goto L_0x0642
-            int r1 = com.google.android.exoplayer2.p393v0.Util.SDK_INT     // Catch:{ all -> 0x0646 }
+            int r1 = com.google.android.exoplayer2.util.Util.SDK_INT     // Catch:{ all -> 0x0646 }
             r2 = 27
             r3 = 1
             if (r1 > r2) goto L_0x0030
             java.lang.String r1 = "dangal"
-            java.lang.String r4 = com.google.android.exoplayer2.p393v0.Util.DEVICE     // Catch:{ all -> 0x0646 }
+            java.lang.String r4 = com.google.android.exoplayer2.util.Util.DEVICE     // Catch:{ all -> 0x0646 }
             boolean r1 = r1.equals(r4)     // Catch:{ all -> 0x0646 }
             if (r1 != 0) goto L_0x002c
             java.lang.String r1 = "HWEML"
-            java.lang.String r4 = com.google.android.exoplayer2.p393v0.Util.DEVICE     // Catch:{ all -> 0x0646 }
+            java.lang.String r4 = com.google.android.exoplayer2.util.Util.DEVICE     // Catch:{ all -> 0x0646 }
             boolean r1 = r1.equals(r4)     // Catch:{ all -> 0x0646 }
             if (r1 == 0) goto L_0x0030
         L_0x002c:
             f22395W1 = r3     // Catch:{ all -> 0x0646 }
             goto L_0x0640
         L_0x0030:
-            int r1 = com.google.android.exoplayer2.p393v0.Util.SDK_INT     // Catch:{ all -> 0x0646 }
+            int r1 = com.google.android.exoplayer2.util.Util.SDK_INT     // Catch:{ all -> 0x0646 }
             if (r1 < r2) goto L_0x0036
             goto L_0x0640
         L_0x0036:
-            java.lang.String r1 = com.google.android.exoplayer2.p393v0.Util.DEVICE     // Catch:{ all -> 0x0646 }
+            java.lang.String r1 = com.google.android.exoplayer2.util.Util.DEVICE     // Catch:{ all -> 0x0646 }
             int r4 = r1.hashCode()     // Catch:{ all -> 0x0646 }
             r5 = -1
             switch(r4) {
@@ -2421,7 +2421,7 @@ public class C9593m extends C9271b {
         L_0x0612:
             f22395W1 = r3     // Catch:{ all -> 0x0646 }
         L_0x0614:
-            java.lang.String r1 = com.google.android.exoplayer2.p393v0.Util.MODEL     // Catch:{ all -> 0x0646 }
+            java.lang.String r1 = com.google.android.exoplayer2.util.Util.MODEL     // Catch:{ all -> 0x0646 }
             int r2 = r1.hashCode()     // Catch:{ all -> 0x0646 }
             r4 = 2006354(0x1e9d52, float:2.811501E-39)
             if (r2 == r4) goto L_0x062f

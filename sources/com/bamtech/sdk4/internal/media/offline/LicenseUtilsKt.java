@@ -3,8 +3,8 @@ package com.bamtech.sdk4.internal.media.offline;
 import com.bamtech.sdk4.internal.media.ExoCachedMedia;
 import com.google.android.exoplayer2.source.hls.playlist.C9185f;
 import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist;
-import com.google.android.exoplayer2.upstream.C9455c0;
-import com.google.android.exoplayer2.upstream.C9455c0.C9456a;
+import com.google.android.exoplayer2.upstream.ParsingLoadable;
+import com.google.android.exoplayer2.upstream.ParsingLoadable.Parser;
 import com.google.android.exoplayer2.upstream.DataSource;
 import java.util.Map;
 import kotlin.Metadata;
@@ -24,7 +24,7 @@ public final class LicenseUtilsKt {
         VariantCandidate variantCandidate = (VariantCandidate) map.get(Integer.valueOf(2));
         HlsMediaPlaylist hlsMediaPlaylist2 = null;
         if (variantCandidate != null) {
-            Object a = C9455c0.m28986a(dataSource, (C9456a<? extends T>) new C9185f<Object>(), variantCandidate.getUrl(), 4);
+            Object a = ParsingLoadable.m28986a(dataSource, (Parser<? extends T>) new C9185f<Object>(), variantCandidate.getUrl(), 4);
             if (!(a instanceof HlsMediaPlaylist)) {
                 a = null;
             }
@@ -34,7 +34,7 @@ public final class LicenseUtilsKt {
         }
         VariantCandidate variantCandidate2 = (VariantCandidate) map.get(Integer.valueOf(1));
         if (variantCandidate2 != null) {
-            Object a2 = C9455c0.m28986a(dataSource, (C9456a<? extends T>) new C9185f<Object>(), variantCandidate2.getUrl(), 4);
+            Object a2 = ParsingLoadable.m28986a(dataSource, (Parser<? extends T>) new C9185f<Object>(), variantCandidate2.getUrl(), 4);
             if (!(a2 instanceof HlsMediaPlaylist)) {
                 a2 = null;
             }

@@ -16,7 +16,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import okhttp3.C14252r.C14254b;
 import okhttp3.C14256t.C14257a;
-import okhttp3.Call.C14111a;
+import okhttp3.Call.Factory;
 import okhttp3.Response.C14114a;
 import okhttp3.p688d0.C14124c;
 import okhttp3.p688d0.C14126e;
@@ -28,7 +28,7 @@ import okhttp3.p688d0.p696n.C14226a;
 import okhttp3.p688d0.p697o.C14229c;
 import okhttp3.p688d0.p697o.C14230d;
 
-public class OkHttpClient implements Cloneable, C14111a, C14118b0 {
+public class OkHttpClient implements Cloneable, Factory, C14118b0 {
 
     /* renamed from: v0 */
     static final List<C14259v> f31218v0 = C14126e.m44825a((T[]) new C14259v[]{C14259v.HTTP_2, C14259v.HTTP_1_1});

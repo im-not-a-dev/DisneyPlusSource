@@ -14,9 +14,9 @@ import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.Timeline.C8670c;
 import com.google.android.exoplayer2.offline.C8808b;
 import com.google.android.exoplayer2.offline.StreamKey;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9229o;
 import com.google.android.exoplayer2.source.C9256t;
@@ -33,18 +33,18 @@ import com.google.android.exoplayer2.source.dash.p376k.C9120f;
 import com.google.android.exoplayer2.source.dash.p376k.C9123i;
 import com.google.android.exoplayer2.source.dash.p376k.C9135m;
 import com.google.android.exoplayer2.source.p378l0.C9207c;
-import com.google.android.exoplayer2.upstream.C9442a0;
-import com.google.android.exoplayer2.upstream.C9442a0.C9444b;
-import com.google.android.exoplayer2.upstream.C9442a0.C9445c;
-import com.google.android.exoplayer2.upstream.C9452b0;
-import com.google.android.exoplayer2.upstream.C9452b0.C9453a;
-import com.google.android.exoplayer2.upstream.C9455c0;
-import com.google.android.exoplayer2.upstream.C9455c0.C9456a;
+import com.google.android.exoplayer2.upstream.Loader;
+import com.google.android.exoplayer2.upstream.Loader.C9444b;
+import com.google.android.exoplayer2.upstream.Loader.C9445c;
+import com.google.android.exoplayer2.upstream.LoaderErrorThrower;
+import com.google.android.exoplayer2.upstream.LoaderErrorThrower.Dummy;
+import com.google.android.exoplayer2.upstream.ParsingLoadable;
+import com.google.android.exoplayer2.upstream.ParsingLoadable.Parser;
 import com.google.android.exoplayer2.upstream.C9491f;
 import com.google.android.exoplayer2.upstream.C9518u;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.io.BufferedReader;
@@ -79,7 +79,7 @@ public final class DashMediaSource extends C9229o {
     private final boolean f20285Y;
 
     /* renamed from: Z */
-    private final C9435a f20286Z;
+    private final DataSource f20286Z;
 
     /* renamed from: a0 */
     private final C9099a f20287a0;
@@ -88,7 +88,7 @@ public final class DashMediaSource extends C9229o {
     private final C9256t f20288b0;
 
     /* renamed from: c0 */
-    private final C9524z f20289c0;
+    private final LoadErrorHandlingPolicy f20289c0;
 
     /* renamed from: d0 */
     private final long f20290d0;
@@ -100,7 +100,7 @@ public final class DashMediaSource extends C9229o {
     private final C9068a f20292f0;
 
     /* renamed from: g0 */
-    private final C9456a<? extends C9115b> f20293g0;
+    private final Parser<? extends C9115b> f20293g0;
 
     /* renamed from: h0 */
     private final C9091e f20294h0;
@@ -121,7 +121,7 @@ public final class DashMediaSource extends C9229o {
     private final C9112b f20299m0;
 
     /* renamed from: n0 */
-    private final C9452b0 f20300n0;
+    private final LoaderErrorThrower f20300n0;
 
     /* renamed from: o0 */
     private final Object f20301o0;
@@ -131,7 +131,7 @@ public final class DashMediaSource extends C9229o {
     /* access modifiers changed from: private */
 
     /* renamed from: q0 */
-    public C9442a0 f20303q0;
+    public Loader f20303q0;
 
     /* renamed from: r0 */
     private TransferListener f20304r0;
@@ -167,10 +167,10 @@ public final class DashMediaSource extends C9229o {
         private final C9099a f20313a;
 
         /* renamed from: b */
-        private final C9435a f20314b;
+        private final DataSource f20314b;
 
         /* renamed from: c */
-        private C9456a<? extends C9115b> f20315c;
+        private Parser<? extends C9115b> f20315c;
 
         /* renamed from: d */
         private List<StreamKey> f20316d;
@@ -179,7 +179,7 @@ public final class DashMediaSource extends C9229o {
         private C9256t f20317e;
 
         /* renamed from: f */
-        private C9524z f20318f;
+        private LoadErrorHandlingPolicy f20318f;
 
         /* renamed from: g */
         private long f20319g;
@@ -193,7 +193,7 @@ public final class DashMediaSource extends C9229o {
         /* renamed from: j */
         private Object f20322j;
 
-        public Factory(C9435a aVar) {
+        public Factory(DataSource aVar) {
             this(new C9106a(aVar), aVar);
         }
 
@@ -217,7 +217,7 @@ public final class DashMediaSource extends C9229o {
             return this;
         }
 
-        public Factory(C9099a aVar, C9435a aVar2) {
+        public Factory(C9099a aVar, DataSource aVar2) {
             Assertions.checkNotNull(aVar);
             this.f20313a = aVar;
             this.f20314b = aVar2;
@@ -366,7 +366,7 @@ public final class DashMediaSource extends C9229o {
     }
 
     /* renamed from: com.google.android.exoplayer2.source.dash.DashMediaSource$d */
-    static final class C9090d implements C9456a<Long> {
+    static final class C9090d implements Parser<Long> {
 
         /* renamed from: a */
         private static final Pattern f20332a = Pattern.compile("(.+?)(Z|((\\+|-|−)(\\d\\d)(:?(\\d\\d))?))");
@@ -403,28 +403,28 @@ public final class DashMediaSource extends C9229o {
     }
 
     /* renamed from: com.google.android.exoplayer2.source.dash.DashMediaSource$e */
-    private final class C9091e implements C9444b<C9455c0<C9115b>> {
+    private final class C9091e implements C9444b<ParsingLoadable<C9115b>> {
         private C9091e() {
         }
 
         /* renamed from: a */
-        public void mo23559a(C9455c0<C9115b> c0Var, long j, long j2) {
+        public void mo23559a(ParsingLoadable<C9115b> c0Var, long j, long j2) {
             DashMediaSource.this.mo23610b(c0Var, j, j2);
         }
 
         /* renamed from: a */
-        public void mo23560a(C9455c0<C9115b> c0Var, long j, long j2, boolean z) {
+        public void mo23560a(ParsingLoadable<C9115b> c0Var, long j, long j2, boolean z) {
             DashMediaSource.this.mo23609a(c0Var, j, j2);
         }
 
         /* renamed from: a */
-        public C9445c mo23555a(C9455c0<C9115b> c0Var, long j, long j2, IOException iOException, int i) {
+        public C9445c mo23555a(ParsingLoadable<C9115b> c0Var, long j, long j2, IOException iOException, int i) {
             return DashMediaSource.this.mo23607a(c0Var, j, j2, iOException, i);
         }
     }
 
     /* renamed from: com.google.android.exoplayer2.source.dash.DashMediaSource$f */
-    final class C9092f implements C9452b0 {
+    final class C9092f implements LoaderErrorThrower {
         C9092f() {
         }
 
@@ -436,8 +436,8 @@ public final class DashMediaSource extends C9229o {
         }
 
         /* renamed from: a */
-        public void mo23621a() throws IOException {
-            DashMediaSource.this.f20303q0.mo23621a();
+        public void maybeThrowError() throws IOException {
+            DashMediaSource.this.f20303q0.maybeThrowError();
             m27125b();
         }
     }
@@ -539,28 +539,28 @@ public final class DashMediaSource extends C9229o {
     }
 
     /* renamed from: com.google.android.exoplayer2.source.dash.DashMediaSource$h */
-    private final class C9094h implements C9444b<C9455c0<Long>> {
+    private final class C9094h implements C9444b<ParsingLoadable<Long>> {
         private C9094h() {
         }
 
         /* renamed from: a */
-        public void mo23559a(C9455c0<Long> c0Var, long j, long j2) {
+        public void mo23559a(ParsingLoadable<Long> c0Var, long j, long j2) {
             DashMediaSource.this.mo23612c(c0Var, j, j2);
         }
 
         /* renamed from: a */
-        public void mo23560a(C9455c0<Long> c0Var, long j, long j2, boolean z) {
+        public void mo23560a(ParsingLoadable<Long> c0Var, long j, long j2, boolean z) {
             DashMediaSource.this.mo23609a(c0Var, j, j2);
         }
 
         /* renamed from: a */
-        public C9445c mo23555a(C9455c0<Long> c0Var, long j, long j2, IOException iOException, int i) {
+        public C9445c mo23555a(ParsingLoadable<Long> c0Var, long j, long j2, IOException iOException, int i) {
             return DashMediaSource.this.mo23606a(c0Var, j, j2, iOException);
         }
     }
 
     /* renamed from: com.google.android.exoplayer2.source.dash.DashMediaSource$i */
-    private static final class C9095i implements C9456a<Long> {
+    private static final class C9095i implements Parser<Long> {
         private C9095i() {
         }
 
@@ -601,7 +601,7 @@ public final class DashMediaSource extends C9229o {
                 uri = this.f20308v0;
             }
             this.f20310x0 = false;
-            m27084a(new C9455c0<>(this.f20302p0, uri, 4, this.f20293g0), (C9444b<C9455c0<T>>) this.f20294h0, this.f20289c0.getMinimumLoadableRetryCount(4));
+            m27084a(new ParsingLoadable<>(this.f20302p0, uri, 4, this.f20293g0), (C9444b<ParsingLoadable<T>>) this.f20294h0, this.f20289c0.getMinimumLoadableRetryCount(4));
         }
     }
 
@@ -617,7 +617,7 @@ public final class DashMediaSource extends C9229o {
         m27094g();
     }
 
-    private DashMediaSource(C9115b bVar, Uri uri, C9435a aVar, C9456a<? extends C9115b> aVar2, C9099a aVar3, C9256t tVar, C9524z zVar, long j, boolean z, Object obj) {
+    private DashMediaSource(C9115b bVar, Uri uri, DataSource aVar, Parser<? extends C9115b> aVar2, C9099a aVar3, C9256t tVar, LoadErrorHandlingPolicy zVar, long j, boolean z, Object obj) {
         this.f20307u0 = uri;
         this.f20309w0 = bVar;
         this.f20308v0 = uri;
@@ -640,7 +640,7 @@ public final class DashMediaSource extends C9229o {
             this.f20294h0 = null;
             this.f20297k0 = null;
             this.f20298l0 = null;
-            this.f20300n0 = new C9453a();
+            this.f20300n0 = new Dummy();
             return;
         }
         this.f20294h0 = new C9091e();
@@ -657,7 +657,7 @@ public final class DashMediaSource extends C9229o {
             return;
         }
         this.f20302p0 = this.f20286Z.mo24448a();
-        this.f20303q0 = new C9442a0("Loader:DashMediaSource");
+        this.f20303q0 = new Loader("Loader:DashMediaSource");
         this.f20306t0 = new Handler();
         m27094g();
     }
@@ -666,7 +666,7 @@ public final class DashMediaSource extends C9229o {
     public void mo23581b() {
         this.f20310x0 = false;
         this.f20302p0 = null;
-        C9442a0 a0Var = this.f20303q0;
+        Loader a0Var = this.f20303q0;
         if (a0Var != null) {
             a0Var.mo24462f();
             this.f20303q0 = null;
@@ -690,8 +690,8 @@ public final class DashMediaSource extends C9229o {
 
     /* access modifiers changed from: 0000 */
     /* renamed from: c */
-    public void mo23612c(C9455c0<Long> c0Var, long j, long j2) {
-        C9455c0<Long> c0Var2 = c0Var;
+    public void mo23612c(ParsingLoadable<Long> c0Var, long j, long j2) {
+        ParsingLoadable<Long> c0Var2 = c0Var;
         this.f20292f0.mo23524b(c0Var2.f21975a, c0Var.mo24474e(), c0Var.mo24472c(), c0Var2.f21976b, j, j2, c0Var.mo24471b());
         m27088b(((Long) c0Var.mo24473d()).longValue() - j);
     }
@@ -703,7 +703,7 @@ public final class DashMediaSource extends C9229o {
 
     /* renamed from: a */
     public void mo23487a() throws IOException {
-        this.f20300n0.mo23621a();
+        this.f20300n0.maybeThrowError();
     }
 
     /* renamed from: a */
@@ -734,14 +734,14 @@ public final class DashMediaSource extends C9229o {
 
     /* access modifiers changed from: 0000 */
     /* renamed from: a */
-    public C9445c mo23607a(C9455c0<C9115b> c0Var, long j, long j2, IOException iOException, int i) {
+    public C9445c mo23607a(ParsingLoadable<C9115b> c0Var, long j, long j2, IOException iOException, int i) {
         C9445c cVar;
-        C9455c0<C9115b> c0Var2 = c0Var;
+        ParsingLoadable<C9115b> c0Var2 = c0Var;
         long retryDelayMsFor = this.f20289c0.getRetryDelayMsFor(4, j2, iOException, i);
         if (retryDelayMsFor == -9223372036854775807L) {
-            cVar = C9442a0.f21955e;
+            cVar = Loader.f21955e;
         } else {
-            cVar = C9442a0.m28955a(false, retryDelayMsFor);
+            cVar = Loader.m28955a(false, retryDelayMsFor);
         }
         this.f20292f0.mo23517a(c0Var2.f21975a, c0Var.mo24474e(), c0Var.mo24472c(), c0Var2.f21976b, j, j2, c0Var.mo24471b(), iOException, !cVar.mo24463a());
         return cVar;
@@ -752,7 +752,7 @@ public final class DashMediaSource extends C9229o {
     /* JADX WARNING: Removed duplicated region for block: B:27:0x00b9  */
     /* renamed from: b */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public void mo23610b(com.google.android.exoplayer2.upstream.C9455c0<com.google.android.exoplayer2.source.dash.p376k.C9115b> r18, long r19, long r21) {
+    public void mo23610b(com.google.android.exoplayer2.upstream.ParsingLoadable<com.google.android.exoplayer2.source.dash.p376k.C9115b> r18, long r19, long r21) {
         /*
             r17 = this;
             r1 = r17
@@ -798,7 +798,7 @@ public final class DashMediaSource extends C9229o {
             if (r5 <= r8) goto L_0x005e
             java.lang.String r5 = "DashMediaSource"
             java.lang.String r8 = "Loaded out of sync manifest"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r5, r8)
+            com.google.android.exoplayer2.util.Log.m29500d(r5, r8)
         L_0x005c:
             r5 = 1
             goto L_0x0097
@@ -824,7 +824,7 @@ public final class DashMediaSource extends C9229o {
             r5.append(r8)
             java.lang.String r5 = r5.toString()
             java.lang.String r8 = "DashMediaSource"
-            com.google.android.exoplayer2.p393v0.Log.m29500d(r8, r5)
+            com.google.android.exoplayer2.util.Log.m29500d(r8, r5)
             goto L_0x005c
         L_0x0096:
             r5 = 0
@@ -904,8 +904,8 @@ public final class DashMediaSource extends C9229o {
 
     /* access modifiers changed from: 0000 */
     /* renamed from: a */
-    public C9445c mo23606a(C9455c0<Long> c0Var, long j, long j2, IOException iOException) {
-        C9455c0<Long> c0Var2 = c0Var;
+    public C9445c mo23606a(ParsingLoadable<Long> c0Var, long j, long j2, IOException iOException) {
+        ParsingLoadable<Long> c0Var2 = c0Var;
         C9068a aVar = this.f20292f0;
         DataSpec dataSpec = c0Var2.f21975a;
         Uri e = c0Var.mo24474e();
@@ -913,13 +913,13 @@ public final class DashMediaSource extends C9229o {
         int i = c0Var2.f21976b;
         aVar.mo23517a(dataSpec, e, c, i, j, j2, c0Var.mo24471b(), iOException, true);
         m27085a(iOException);
-        return C9442a0.f21954d;
+        return Loader.f21954d;
     }
 
     /* access modifiers changed from: 0000 */
     /* renamed from: a */
-    public void mo23609a(C9455c0<?> c0Var, long j, long j2) {
-        C9455c0<?> c0Var2 = c0Var;
+    public void mo23609a(ParsingLoadable<?> c0Var, long j, long j2) {
+        ParsingLoadable<?> c0Var2 = c0Var;
         this.f20292f0.mo23516a(c0Var2.f21975a, c0Var.mo24474e(), c0Var.mo24472c(), c0Var2.f21976b, j, j2, c0Var.mo24471b());
     }
 
@@ -938,8 +938,8 @@ public final class DashMediaSource extends C9229o {
     }
 
     /* renamed from: a */
-    private void m27083a(C9135m mVar, C9456a<Long> aVar) {
-        m27084a(new C9455c0<>(this.f20302p0, Uri.parse(mVar.f20495b), 5, aVar), (C9444b<C9455c0<T>>) new C9094h<C9455c0<T>>(), 1);
+    private void m27083a(C9135m mVar, Parser<Long> aVar) {
+        m27084a(new ParsingLoadable<>(this.f20302p0, Uri.parse(mVar.f20495b), 5, aVar), (C9444b<ParsingLoadable<T>>) new C9094h<ParsingLoadable<T>>(), 1);
     }
 
     /* renamed from: a */
@@ -1051,7 +1051,7 @@ public final class DashMediaSource extends C9229o {
     }
 
     /* renamed from: a */
-    private <T> void m27084a(C9455c0<T> c0Var, C9444b<C9455c0<T>> bVar, int i) {
+    private <T> void m27084a(ParsingLoadable<T> c0Var, C9444b<ParsingLoadable<T>> bVar, int i) {
         this.f20292f0.mo23513a(c0Var.f21975a, c0Var.f21976b, this.f20303q0.mo24455a(c0Var, bVar, i));
     }
 }

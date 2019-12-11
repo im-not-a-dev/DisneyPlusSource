@@ -1,11 +1,11 @@
 package com.google.android.exoplayer2.upstream;
 
-import com.google.android.exoplayer2.p393v0.C9557m.C9558a;
+import com.google.android.exoplayer2.util.EventDispatcher.Event;
 import com.google.android.exoplayer2.upstream.BandwidthMeter.C9434a;
 
 /* renamed from: com.google.android.exoplayer2.upstream.a */
 /* compiled from: lambda */
-public final /* synthetic */ class C9441a implements C9558a {
+public final /* synthetic */ class C9441a implements Event {
 
     /* renamed from: a */
     private final /* synthetic */ int f21951a;
@@ -23,7 +23,7 @@ public final /* synthetic */ class C9441a implements C9558a {
     }
 
     /* renamed from: a */
-    public final void mo22792a(Object obj) {
+    public final void sendTo(Object obj) {
         ((C9434a) obj).mo22698b(this.f21951a, this.f21952b, this.f21953c);
     }
 }

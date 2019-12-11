@@ -7,13 +7,13 @@ import com.bamtech.sdk4.internal.configuration.ContentServiceClientExtras;
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
+import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
 import com.google.android.exoplayer2.p366s0.p371v.C8980k;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.C9202k0;
 import com.google.android.exoplayer2.source.hls.playlist.C9182e.C9184b;
 import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist.C9176a;
-import com.google.android.exoplayer2.upstream.C9455c0.C9456a;
+import com.google.android.exoplayer2.upstream.ParsingLoadable.Parser;
 import java.io.BufferedReader;
 import java.io.Closeable;
 import java.io.IOException;
@@ -32,7 +32,7 @@ import net.danlew.android.joda.DateUtils;
 
 /* renamed from: com.google.android.exoplayer2.source.hls.playlist.f */
 /* compiled from: HlsPlaylistParser */
-public final class C9185f implements C9456a<HlsPlaylist> {
+public final class C9185f implements Parser<HlsPlaylist> {
 
     /* renamed from: A */
     private static final Pattern f20766A = Pattern.compile("LANGUAGE=\"(.+?)\"");
@@ -436,7 +436,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             r19 = r7
             r18 = r14
             r14 = 1
-            com.google.android.exoplayer2.drm.DrmInitData$b[] r7 = new com.google.android.exoplayer2.drm.DrmInitData.C8692b[r14]
+            com.google.android.exoplayer2.drm.DrmInitData$b[] r7 = new com.google.android.exoplayer2.drm.DrmInitData.SchemeData[r14]
             r14 = 0
             r7[r14] = r9
             r15.<init>(r10, r7)
@@ -511,7 +511,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             java.lang.String r13 = m27667a(r15, r13, r11)
             java.lang.String r15 = r39.mo23897b()
             java.lang.String r15 = m27678c(r15, r11)
-            android.net.Uri r15 = com.google.android.exoplayer2.p393v0.C9549j0.m29368b(r1, r15)
+            android.net.Uri r15 = com.google.android.exoplayer2.util.C9549j0.m29368b(r1, r15)
             int r16 = r2.size()
             java.lang.String r20 = java.lang.Integer.toString(r16)
             r21 = 0
@@ -593,7 +593,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
         L_0x01f3:
             r14 = 0
         L_0x01f4:
-            com.google.android.exoplayer2.p393v0.Assertions.checkState(r14)
+            com.google.android.exoplayer2.util.Assertions.checkState(r14)
             com.google.android.exoplayer2.source.hls.n r14 = new com.google.android.exoplayer2.source.hls.n
             android.net.Uri r15 = r10.f20760a
             java.lang.Object r15 = r0.get(r15)
@@ -639,7 +639,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             r12 = 0
             goto L_0x0255
         L_0x0251:
-            android.net.Uri r12 = com.google.android.exoplayer2.p393v0.C9549j0.m29368b(r1, r12)
+            android.net.Uri r12 = com.google.android.exoplayer2.util.C9549j0.m29368b(r1, r12)
         L_0x0255:
             java.util.regex.Pattern r1 = f20766A
             java.lang.String r34 = m27667a(r10, r1, r11)
@@ -765,7 +765,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             com.google.android.exoplayer2.Format r7 = r7.f20761b
             java.lang.String r7 = r7.f18346Y
             r8 = 1
-            java.lang.String r7 = com.google.android.exoplayer2.p393v0.Util.m29396a(r7, r8)
+            java.lang.String r7 = com.google.android.exoplayer2.util.Util.m29396a(r7, r8)
             r26 = r7
             goto L_0x0354
         L_0x0351:
@@ -773,7 +773,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             r26 = 0
         L_0x0354:
             if (r26 == 0) goto L_0x035d
-            java.lang.String r7 = com.google.android.exoplayer2.p393v0.C9566t.m29511d(r26)
+            java.lang.String r7 = com.google.android.exoplayer2.util.C9566t.m29511d(r26)
             r25 = r7
             goto L_0x035f
         L_0x035d:
@@ -804,7 +804,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             if (r7 == 0) goto L_0x03a6
             com.google.android.exoplayer2.Format r7 = r7.f20761b
             java.lang.String r10 = r7.f18346Y
-            java.lang.String r10 = com.google.android.exoplayer2.p393v0.Util.m29396a(r10, r13)
+            java.lang.String r10 = com.google.android.exoplayer2.util.Util.m29396a(r10, r13)
             int r13 = r7.f18355g0
             int r8 = r7.f18356h0
             float r7 = r7.f18357i0
@@ -820,7 +820,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
             r31 = -1082130432(0xffffffffbf800000, float:-1.0)
         L_0x03ae:
             if (r26 == 0) goto L_0x03b7
-            java.lang.String r7 = com.google.android.exoplayer2.p393v0.C9566t.m29511d(r26)
+            java.lang.String r7 = com.google.android.exoplayer2.util.C9566t.m29511d(r26)
             r25 = r7
             goto L_0x03b9
         L_0x03b7:
@@ -1003,7 +1003,7 @@ public final class C9185f implements C9456a<HlsPlaylist> {
                                         if (str6 == null) {
                                             str6 = m27674b(b4);
                                         }
-                                        C8692b a6 = m27662a(b, a4, (Map<String, String>) hashMap);
+                                        SchemeData a6 = m27662a(b, a4, (Map<String, String>) hashMap);
                                         if (a6 != null) {
                                             treeMap2.put(a4, a6);
                                             str7 = a5;
@@ -1053,10 +1053,10 @@ public final class C9185f implements C9456a<HlsPlaylist> {
                                     drmInitData = drmInitData3;
                                 } else {
                                     treeMap = treeMap2;
-                                    C8692b[] bVarArr = (C8692b[]) treeMap2.values().toArray(new C8692b[0]);
+                                    SchemeData[] bVarArr = (SchemeData[]) treeMap2.values().toArray(new SchemeData[0]);
                                     drmInitData = new DrmInitData(str6, bVarArr);
                                     if (drmInitData2 == null) {
-                                        C8692b[] bVarArr2 = new C8692b[bVarArr.length];
+                                        SchemeData[] bVarArr2 = new SchemeData[bVarArr.length];
                                         str2 = str3;
                                         j = j13;
                                         for (int i7 = 0; i7 < bVarArr.length; i7++) {
@@ -1111,20 +1111,20 @@ public final class C9185f implements C9456a<HlsPlaylist> {
     }
 
     /* renamed from: a */
-    private static C8692b m27662a(String str, String str2, Map<String, String> map) throws C8723g0 {
+    private static SchemeData m27662a(String str, String str2, Map<String, String> map) throws C8723g0 {
         String str3 = "1";
         String a = m27666a(str, f20798w, str3, map);
         String str4 = "video/mp4";
         if ("urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed".equals(str2)) {
             String b = m27675b(str, f20799x, map);
-            return new C8692b(C.WIDEVINE_UUID, str4, Base64.decode(b.substring(b.indexOf(44)), 0));
+            return new SchemeData(C.WIDEVINE_UUID, str4, Base64.decode(b.substring(b.indexOf(44)), 0));
         } else if ("com.widevine".equals(str2)) {
-            return new C8692b(C.WIDEVINE_UUID, "hls", Util.m29447d(str));
+            return new SchemeData(C.WIDEVINE_UUID, "hls", Util.m29447d(str));
         } else if (!"com.microsoft.playready".equals(str2) || !str3.equals(a)) {
             return null;
         } else {
             String b2 = m27675b(str, f20799x, map);
-            return new C8692b(C.PLAYREADY_UUID, str4, C8980k.m26491a(C.PLAYREADY_UUID, Base64.decode(b2.substring(b2.indexOf(44)), 0)));
+            return new SchemeData(C.PLAYREADY_UUID, str4, C8980k.m26491a(C.PLAYREADY_UUID, Base64.decode(b2.substring(b2.indexOf(44)), 0)));
         }
     }
 

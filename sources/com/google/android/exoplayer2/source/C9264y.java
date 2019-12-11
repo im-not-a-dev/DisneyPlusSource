@@ -1,8 +1,8 @@
 package com.google.android.exoplayer2.source;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9572w;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import com.google.android.exoplayer2.upstream.TransferListener;
@@ -37,7 +37,7 @@ final class C9264y implements DataSource {
     }
 
     public C9264y(DataSource dataSource, int i, C9265a aVar) {
-        Assertions.m29299a(i > 0);
+        Assertions.checkArgument(i > 0);
         this.f21069a = dataSource;
         this.f21070b = i;
         this.f21071c = aVar;

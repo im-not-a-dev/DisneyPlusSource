@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p394w0.p395s;
 
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 
 /* renamed from: com.google.android.exoplayer2.w0.s.d */
 /* compiled from: Projection */
@@ -58,7 +58,7 @@ public final class C9608d {
 
         public C9610b(int i, float[] fArr, float[] fArr2, int i2) {
             this.f22475a = i;
-            Assertions.m29299a(((long) fArr.length) * 2 == ((long) fArr2.length) * 3);
+            Assertions.checkArgument(((long) fArr.length) * 2 == ((long) fArr2.length) * 3);
             this.f22477c = fArr;
             this.f22478d = fArr2;
             this.f22476b = i2;
@@ -96,11 +96,11 @@ public final class C9608d {
         int i8 = i2;
         float f5 = f2;
         float f6 = f3;
-        Assertions.m29299a(f4 > 0.0f);
-        Assertions.m29299a(i7 >= 1);
-        Assertions.m29299a(i8 >= 1);
-        Assertions.m29299a(f5 > 0.0f && f5 <= 180.0f);
-        Assertions.m29299a(f6 > 0.0f && f6 <= 360.0f);
+        Assertions.checkArgument(f4 > 0.0f);
+        Assertions.checkArgument(i7 >= 1);
+        Assertions.checkArgument(i8 >= 1);
+        Assertions.checkArgument(f5 > 0.0f && f5 <= 180.0f);
+        Assertions.checkArgument(f6 > 0.0f && f6 <= 360.0f);
         float radians = (float) Math.toRadians((double) f5);
         float radians2 = (float) Math.toRadians((double) f6);
         float f7 = radians / ((float) i7);

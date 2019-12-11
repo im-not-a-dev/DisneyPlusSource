@@ -14,9 +14,9 @@ import com.google.android.exoplayer2.p361p0.C8844o.C8846b;
 import com.google.android.exoplayer2.p361p0.C8844o.C8847c;
 import com.google.android.exoplayer2.p361p0.C8844o.C8848d;
 import com.google.android.exoplayer2.p361p0.C8851q.C8852a;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayDeque;
@@ -845,7 +845,7 @@ public final class C8856u implements C8844o {
             boolean z = true;
             int i = 0;
             if (byteBuffer2 != null) {
-                Assertions.m29299a(byteBuffer2 == byteBuffer);
+                Assertions.checkArgument(byteBuffer2 == byteBuffer);
             } else {
                 this.f18906H = byteBuffer;
                 if (Util.SDK_INT < 21) {
@@ -1073,7 +1073,7 @@ public final class C8856u implements C8844o {
         ByteBuffer byteBuffer2 = byteBuffer;
         long j2 = j;
         ByteBuffer byteBuffer3 = this.f18905G;
-        Assertions.m29299a(byteBuffer3 == null || byteBuffer2 == byteBuffer3);
+        Assertions.checkArgument(byteBuffer3 == null || byteBuffer2 == byteBuffer3);
         if (this.f18929m != null) {
             if (!m25764g()) {
                 return false;

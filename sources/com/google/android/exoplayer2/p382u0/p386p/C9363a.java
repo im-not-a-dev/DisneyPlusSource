@@ -2,11 +2,11 @@ package com.google.android.exoplayer2.p382u0.p386p;
 
 import com.google.android.exoplayer2.p382u0.C9322b;
 import com.google.android.exoplayer2.p382u0.C9323c;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9564r;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9564r;
+import com.google.android.exoplayer2.util.C9572w;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -42,7 +42,7 @@ public final class C9363a extends C9323c {
         }
         this.f21537n = true;
         String a = Util.m29399a((byte[]) list.get(0));
-        Assertions.m29299a(a.startsWith("Format: "));
+        Assertions.checkArgument(a.startsWith("Format: "));
         m28542a(a);
         m28540a(new C9572w((byte[]) list.get(1)));
     }
@@ -121,7 +121,7 @@ public final class C9363a extends C9323c {
             if (r2 >= r3) goto L_0x006d
             r3 = r9[r2]
             java.lang.String r3 = r3.trim()
-            java.lang.String r3 = com.google.android.exoplayer2.p393v0.Util.m29457k(r3)
+            java.lang.String r3 = com.google.android.exoplayer2.util.Util.m29457k(r3)
             int r4 = r3.hashCode()
             r5 = 100571(0x188db, float:1.4093E-40)
             r6 = 2

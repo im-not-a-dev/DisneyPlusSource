@@ -11,12 +11,12 @@ import com.google.android.exoplayer2.C9525v.C9526a;
 import com.google.android.exoplayer2.PlayerMessage.C8667a;
 import com.google.android.exoplayer2.Timeline.C8669b;
 import com.google.android.exoplayer2.Timeline.C8670c;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9542g;
-import com.google.android.exoplayer2.p393v0.C9547i0;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9562p;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9542g;
+import com.google.android.exoplayer2.util.TraceUtil;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9562p;
+import com.google.android.exoplayer2.util.Log;
 import com.google.android.exoplayer2.source.C9072a0;
 import com.google.android.exoplayer2.source.C9072a0.C9073a;
 import com.google.android.exoplayer2.source.C9141f0;
@@ -24,7 +24,7 @@ import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MediaSource.C9067a;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.trackselection.C9311j;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
 import com.google.android.exoplayer2.trackselection.C9318m;
 import com.google.android.exoplayer2.trackselection.TrackSelector;
 import com.google.android.exoplayer2.trackselection.TrackSelector.C9285a;
@@ -251,7 +251,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
             if (i != 4) {
                 z = false;
             }
-            Assertions.m29299a(z);
+            Assertions.checkArgument(z);
         }
     }
 
@@ -318,7 +318,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
             return;
         }
         C8683d0 e = this.f22539k0.mo22824e();
-        C9547i0.m29359a("doSomeWork");
+        TraceUtil.m29359a("doSomeWork");
         m29851u();
         long elapsedRealtime = SystemClock.elapsedRealtime() * 1000;
         e.f18430a.mo23541a(this.f22541m0.f18545m - this.f22533e0, this.f22534f0);
@@ -363,11 +363,11 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
                 } else {
                     m29815b(b, 1000);
                 }
-                C9547i0.m29358a();
+                TraceUtil.m29358a();
             }
         }
         m29815b(b, 10);
-        C9547i0.m29358a();
+        TraceUtil.m29358a();
     }
 
     /* renamed from: e */
@@ -498,11 +498,11 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
 
     /* renamed from: n */
     private void m29844n() {
-        C9311j[] a;
+        TrackSelection[] a;
         for (C8683d0 c = this.f22539k0.mo22822c(); c != null; c = c.mo22724b()) {
             C9318m g = c.mo22734g();
             if (g != null) {
-                for (C9311j jVar : g.f21312c.mo24041a()) {
+                for (TrackSelection jVar : g.f21312c.mo24041a()) {
                     if (jVar != null) {
                         jVar.mo24078i();
                     }
@@ -695,7 +695,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
                                         if (z2) {
                                             l0Var3.mo22849h();
                                         } else if (!l0Var3.mo22854m()) {
-                                            C9311j a2 = g2.f21312c.mo24040a(i4);
+                                            TrackSelection a2 = g2.f21312c.mo24040a(i4);
                                             boolean a3 = g2.mo24134a(i4);
                                             boolean z3 = this.f22522U[i4].mo22860f() == 6;
                                             C8800n0 n0Var = g.f21311b[i4];
@@ -1467,7 +1467,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
             r0 = move-exception
         L_0x0025:
             java.lang.String r7 = "Disable failed."
-            com.google.android.exoplayer2.p393v0.Log.m29496a(r6, r7, r0)
+            com.google.android.exoplayer2.util.Log.m29496a(r6, r7, r0)
         L_0x002a:
             int r5 = r5 + 1
             goto L_0x0018
@@ -1485,7 +1485,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
             r0 = move-exception
             r7 = r0
             java.lang.String r0 = "Reset failed."
-            com.google.android.exoplayer2.p393v0.Log.m29496a(r6, r0, r7)
+            com.google.android.exoplayer2.util.Log.m29496a(r6, r0, r7)
         L_0x0042:
             int r5 = r5 + 1
             goto L_0x0033
@@ -1828,10 +1828,10 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
 
     /* renamed from: a */
     private void m29797a(float f) {
-        C9311j[] a;
+        TrackSelection[] a;
         C8683d0 c = this.f22539k0.mo22822c();
         while (c != null && c.f18433d) {
-            for (C9311j jVar : c.mo22734g().f21312c.mo24041a()) {
+            for (TrackSelection jVar : c.mo22734g().f21312c.mo24041a()) {
                 if (jVar != null) {
                     jVar.mo24052a(f);
                 }
@@ -2144,7 +2144,7 @@ final class C9616z implements Callback, C9073a, C9285a, C9067a, C9526a, C8667a {
     }
 
     /* renamed from: a */
-    private static Format[] m29811a(C9311j jVar) {
+    private static Format[] m29811a(TrackSelection jVar) {
         int length = jVar != null ? jVar.length() : 0;
         Format[] formatArr = new Format[length];
         for (int i = 0; i < length; i++) {

@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p366s0;
 
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.upstream.DataSource;
 import java.io.EOFException;
 import java.io.IOException;

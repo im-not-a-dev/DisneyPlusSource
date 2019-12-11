@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source;
 
 import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.source.C9146h0.C9147a;
 import com.google.android.exoplayer2.source.MediaSource.MediaPeriodId;
 import com.google.android.exoplayer2.upstream.C9491f;
@@ -138,7 +138,7 @@ public final class C9266z extends C9233r<Void> {
     }
 
     public C9266z(MediaSource mediaSource, int i) {
-        Assertions.m29299a(i > 0);
+        Assertions.checkArgument(i > 0);
         this.f21074b0 = mediaSource;
         this.f21075c0 = i;
         this.f21076d0 = new HashMap();

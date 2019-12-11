@@ -14,10 +14,10 @@ import com.google.android.exoplayer2.source.p379m0.C9217g;
 import com.google.android.exoplayer2.source.smoothstreaming.C9242c.C9243a;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a;
 import com.google.android.exoplayer2.source.smoothstreaming.p380e.C9245a.C9247b;
-import com.google.android.exoplayer2.trackselection.C9311j;
-import com.google.android.exoplayer2.upstream.C9452b0;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
+import com.google.android.exoplayer2.upstream.LoaderErrorThrower;
 import com.google.android.exoplayer2.upstream.C9491f;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,10 +30,10 @@ final class C9244d implements C9072a0, C9144a<C9217g<C9242c>> {
     private final TransferListener f20989U;
 
     /* renamed from: V */
-    private final C9452b0 f20990V;
+    private final LoaderErrorThrower f20990V;
 
     /* renamed from: W */
-    private final C9524z f20991W;
+    private final LoadErrorHandlingPolicy f20991W;
 
     /* renamed from: X */
     private final C9068a f20992X;
@@ -65,7 +65,7 @@ final class C9244d implements C9072a0, C9144a<C9217g<C9242c>> {
     /* renamed from: f0 */
     private boolean f21001f0;
 
-    public C9244d(C9245a aVar, C9243a aVar2, TransferListener transferListener, C9256t tVar, C9524z zVar, C9068a aVar3, C9452b0 b0Var, C9491f fVar) {
+    public C9244d(C9245a aVar, C9243a aVar2, TransferListener transferListener, C9256t tVar, LoadErrorHandlingPolicy zVar, C9068a aVar3, LoaderErrorThrower b0Var, C9491f fVar) {
         this.f20998c0 = aVar;
         this.f20997c = aVar2;
         this.f20989U = transferListener;
@@ -95,7 +95,7 @@ final class C9244d implements C9072a0, C9144a<C9217g<C9242c>> {
 
     /* renamed from: d */
     public void mo23546d() throws IOException {
-        this.f20990V.mo23621a();
+        this.f20990V.maybeThrowError();
     }
 
     /* renamed from: e */
@@ -157,7 +157,7 @@ final class C9244d implements C9072a0, C9144a<C9217g<C9242c>> {
     }
 
     /* renamed from: a */
-    public long mo23540a(C9311j[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr, boolean[] zArr2, long j) {
+    public long mo23540a(TrackSelection[] jVarArr, boolean[] zArr, C9141f0[] f0VarArr, boolean[] zArr2, long j) {
         ArrayList arrayList = new ArrayList();
         for (int i = 0; i < jVarArr.length; i++) {
             if (f0VarArr[i] != null) {
@@ -215,7 +215,7 @@ final class C9244d implements C9072a0, C9144a<C9217g<C9242c>> {
     }
 
     /* renamed from: a */
-    private C9217g<C9242c> m27912a(C9311j jVar, long j) {
+    private C9217g<C9242c> m27912a(TrackSelection jVar, long j) {
         int a = this.f20994Z.mo23530a(jVar.mo24067a());
         C9217g gVar = new C9217g(this.f20998c0.f21007f[a].f21013a, null, null, this.f20997c.mo23979a(this.f20990V, this.f20998c0, a, jVar, this.f20989U), this, this.f20993Y, j, this.f20991W, this.f20992X);
         return gVar;

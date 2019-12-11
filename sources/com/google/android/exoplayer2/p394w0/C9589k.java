@@ -8,10 +8,10 @@ import android.os.Handler.Callback;
 import android.os.HandlerThread;
 import android.os.Message;
 import android.view.Surface;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9550k;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9550k;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
 
 @TargetApi(17)
 /* renamed from: com.google.android.exoplayer2.w0.k */
@@ -200,29 +200,29 @@ public final class C9589k extends Surface {
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:5:0x0019, code lost:
-        if ("XT1650".equals(com.google.android.exoplayer2.p393v0.Util.MODEL) != false) goto L_0x001b;
+        if ("XT1650".equals(com.google.android.exoplayer2.util.Util.MODEL) != false) goto L_0x001b;
      */
     @android.annotation.TargetApi(24)
     /* renamed from: a */
     /* Code decompiled incorrectly, please refer to instructions dump. */
     private static int m29618a(android.content.Context r4) {
         /*
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             r1 = 26
             r2 = 0
             if (r0 >= r1) goto L_0x001c
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MANUFACTURER
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MANUFACTURER
             java.lang.String r3 = "samsung"
             boolean r0 = r3.equals(r0)
             if (r0 != 0) goto L_0x001b
-            java.lang.String r0 = com.google.android.exoplayer2.p393v0.Util.MODEL
+            java.lang.String r0 = com.google.android.exoplayer2.util.Util.MODEL
             java.lang.String r3 = "XT1650"
             boolean r0 = r3.equals(r0)
             if (r0 == 0) goto L_0x001c
         L_0x001b:
             return r2
         L_0x001c:
-            int r0 = com.google.android.exoplayer2.p393v0.Util.SDK_INT
+            int r0 = com.google.android.exoplayer2.util.Util.SDK_INT
             if (r0 >= r1) goto L_0x002d
             android.content.pm.PackageManager r4 = r4.getPackageManager()
             java.lang.String r0 = "android.hardware.vr.high_performance"

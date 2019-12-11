@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p366s0.p369t;
 
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9572w;
 import java.io.IOException;
 
 /* renamed from: com.google.android.exoplayer2.s0.t.f */

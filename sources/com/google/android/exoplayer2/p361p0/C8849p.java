@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p361p0;
 import android.annotation.TargetApi;
 import android.media.AudioTimestamp;
 import android.media.AudioTrack;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.p0.p */
 /* compiled from: AudioTimestampPoller */

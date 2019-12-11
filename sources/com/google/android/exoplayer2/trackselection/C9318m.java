@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.trackselection;
 
 import com.google.android.exoplayer2.C8800n0;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.trackselection.m */
 /* compiled from: TrackSelectorResult */
@@ -19,7 +19,7 @@ public final class C9318m {
     /* renamed from: d */
     public final Object f21313d;
 
-    public C9318m(C8800n0[] n0VarArr, C9311j[] jVarArr, Object obj) {
+    public C9318m(C8800n0[] n0VarArr, TrackSelection[] jVarArr, Object obj) {
         this.f21311b = n0VarArr;
         this.f21312c = new TrackSelectionArray(jVarArr);
         this.f21313d = obj;

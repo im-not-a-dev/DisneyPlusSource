@@ -7,7 +7,7 @@ import com.bumptech.glide.load.p339o.C8306n.C8307a;
 import com.bumptech.glide.load.p339o.C8308o;
 import com.bumptech.glide.load.p339o.C8314r;
 import java.io.InputStream;
-import okhttp3.Call.C14111a;
+import okhttp3.Call.Factory;
 import okhttp3.OkHttpClient;
 
 /* renamed from: com.bumptech.glide.integration.okhttp3.c */
@@ -15,24 +15,24 @@ import okhttp3.OkHttpClient;
 public class C8103c implements C8306n<C8292g, InputStream> {
 
     /* renamed from: a */
-    private final C14111a f17352a;
+    private final Factory f17352a;
 
     /* renamed from: com.bumptech.glide.integration.okhttp3.c$a */
     /* compiled from: OkHttpUrlLoader */
     public static class C8104a implements C8308o<C8292g, InputStream> {
 
         /* renamed from: b */
-        private static volatile C14111a f17353b;
+        private static volatile Factory f17353b;
 
         /* renamed from: a */
-        private final C14111a f17354a;
+        private final Factory f17354a;
 
         public C8104a() {
             this(m23520b());
         }
 
         /* renamed from: b */
-        private static C14111a m23520b() {
+        private static Factory m23520b() {
             if (f17353b == null) {
                 synchronized (C8104a.class) {
                     if (f17353b == null) {
@@ -52,12 +52,12 @@ public class C8103c implements C8306n<C8292g, InputStream> {
         public void mo19955a() {
         }
 
-        public C8104a(C14111a aVar) {
+        public C8104a(Factory aVar) {
             this.f17354a = aVar;
         }
     }
 
-    public C8103c(C14111a aVar) {
+    public C8103c(Factory aVar) {
         this.f17352a = aVar;
     }
 

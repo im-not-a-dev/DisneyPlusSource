@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Map;
 public final class C9519v implements DataSource {
 
     /* renamed from: a */
-    public static final C9435a f22219a = C9454c.f21974a;
+    public static final DataSource f22219a = C9454c.f21974a;
 
     static {
         new C9519v();

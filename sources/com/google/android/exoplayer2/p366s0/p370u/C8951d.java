@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.metadata.p359j.C8776k;
 import com.google.android.exoplayer2.p366s0.C8920o.C8921a;
 import com.google.android.exoplayer2.p366s0.C8923p;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Util;
 
 /* renamed from: com.google.android.exoplayer2.s0.u.d */
 /* compiled from: MlltSeeker */

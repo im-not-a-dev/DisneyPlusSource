@@ -7,8 +7,8 @@ import com.google.android.exoplayer2.SeekParameters;
 import com.google.android.exoplayer2.p366s0.C8907b;
 import com.google.android.exoplayer2.p366s0.C8920o;
 import com.google.android.exoplayer2.p366s0.C8924q;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9566t;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9566t;
 import com.google.android.exoplayer2.source.C9230p;
 import com.google.android.exoplayer2.source.dash.C9098c.C9099a;
 import com.google.android.exoplayer2.source.dash.C9110j.C9113c;
@@ -25,10 +25,10 @@ import com.google.android.exoplayer2.source.p379m0.C9223k;
 import com.google.android.exoplayer2.source.p379m0.C9224l;
 import com.google.android.exoplayer2.source.p379m0.C9225m;
 import com.google.android.exoplayer2.source.p379m0.C9227n;
-import com.google.android.exoplayer2.trackselection.C9311j;
-import com.google.android.exoplayer2.upstream.C9452b0;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
+import com.google.android.exoplayer2.upstream.LoaderErrorThrower;
 import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSource.C9435a;
+import com.google.android.exoplayer2.upstream.DataSource.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import com.google.android.exoplayer2.upstream.HttpDataSource.C9439d;
 import com.google.android.exoplayer2.upstream.TransferListener;
@@ -41,7 +41,7 @@ import java.util.List;
 public class C9105h implements C9098c {
 
     /* renamed from: a */
-    private final C9452b0 f20372a;
+    private final LoaderErrorThrower f20372a;
 
     /* renamed from: b */
     private final int[] f20373b;
@@ -65,7 +65,7 @@ public class C9105h implements C9098c {
     protected final C9107b[] f20379h;
 
     /* renamed from: i */
-    private C9311j f20380i;
+    private TrackSelection f20380i;
 
     /* renamed from: j */
     private C9115b f20381j;
@@ -87,17 +87,17 @@ public class C9105h implements C9098c {
     public static final class C9106a implements C9099a {
 
         /* renamed from: a */
-        private final C9435a f20386a;
+        private final DataSource f20386a;
 
         /* renamed from: b */
         private final int f20387b;
 
-        public C9106a(C9435a aVar) {
+        public C9106a(DataSource aVar) {
             this(aVar, 1);
         }
 
         /* renamed from: a */
-        public C9098c mo23629a(C9452b0 b0Var, C9115b bVar, int i, int[] iArr, C9311j jVar, int i2, long j, boolean z, List<Format> list, C9113c cVar, TransferListener transferListener) {
+        public C9098c mo23629a(LoaderErrorThrower b0Var, C9115b bVar, int i, int[] iArr, TrackSelection jVar, int i2, long j, boolean z, List<Format> list, C9113c cVar, TransferListener transferListener) {
             TransferListener transferListener2 = transferListener;
             DataSource a = this.f20386a.mo24448a();
             if (transferListener2 != null) {
@@ -107,7 +107,7 @@ public class C9105h implements C9098c {
             return hVar;
         }
 
-        public C9106a(C9435a aVar, int i) {
+        public C9106a(DataSource aVar, int i) {
             this.f20386a = aVar;
             this.f20387b = i;
         }
@@ -314,8 +314,8 @@ public class C9105h implements C9098c {
         }
     }
 
-    public C9105h(C9452b0 b0Var, C9115b bVar, int i, int[] iArr, C9311j jVar, int i2, DataSource dataSource, long j, int i3, boolean z, List<Format> list, C9113c cVar) {
-        C9311j jVar2 = jVar;
+    public C9105h(LoaderErrorThrower b0Var, C9115b bVar, int i, int[] iArr, TrackSelection jVar, int i2, DataSource dataSource, long j, int i3, boolean z, List<Format> list, C9113c cVar) {
+        TrackSelection jVar2 = jVar;
         this.f20372a = b0Var;
         this.f20381j = bVar;
         this.f20373b = iArr;
@@ -389,7 +389,7 @@ public class C9105h implements C9098c {
     }
 
     /* renamed from: a */
-    public void mo23628a(C9311j jVar) {
+    public void mo23628a(TrackSelection jVar) {
         this.f20380i = jVar;
     }
 
@@ -397,7 +397,7 @@ public class C9105h implements C9098c {
     public void mo23646a() throws IOException {
         IOException iOException = this.f20383l;
         if (iOException == null) {
-            this.f20372a.mo23621a();
+            this.f20372a.maybeThrowError();
             return;
         }
         throw iOException;
@@ -553,7 +553,7 @@ public class C9105h implements C9098c {
             }
         }
         if (j != -9223372036854775807L) {
-            C9311j jVar = this.f20380i;
+            TrackSelection jVar = this.f20380i;
             if (jVar.mo24069a(jVar.mo24065a(dVar.f20858c), j)) {
                 z2 = true;
             }

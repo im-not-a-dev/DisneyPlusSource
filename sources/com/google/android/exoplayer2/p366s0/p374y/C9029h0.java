@@ -3,8 +3,8 @@ package com.google.android.exoplayer2.p366s0.p374y;
 import android.util.SparseArray;
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.p366s0.C8914i;
-import com.google.android.exoplayer2.p393v0.C9545h0;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9545h0;
+import com.google.android.exoplayer2.util.C9572w;
 import java.util.Collections;
 import java.util.List;
 

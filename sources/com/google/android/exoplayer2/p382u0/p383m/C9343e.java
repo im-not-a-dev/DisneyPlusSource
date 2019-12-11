@@ -5,7 +5,7 @@ import com.google.android.exoplayer2.p382u0.C9326f;
 import com.google.android.exoplayer2.p382u0.C9327g;
 import com.google.android.exoplayer2.p382u0.C9330i;
 import com.google.android.exoplayer2.p382u0.C9331j;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.util.ArrayDeque;
 import java.util.PriorityQueue;
 
@@ -124,7 +124,7 @@ abstract class C9343e implements C9326f {
 
     /* renamed from: b */
     public void mo23218a(C9330i iVar) throws C9327g {
-        Assertions.m29299a(iVar == this.f21463d);
+        Assertions.checkArgument(iVar == this.f21463d);
         if (iVar.mo23210c()) {
             m28476a(this.f21463d);
         } else {

@@ -3,9 +3,9 @@ package com.google.android.exoplayer2.source.hls;
 import android.net.Uri;
 import android.os.SystemClock;
 import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9549j0;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9549j0;
+import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.source.C9199j0;
 import com.google.android.exoplayer2.source.hls.playlist.C9188h;
 import com.google.android.exoplayer2.source.hls.playlist.HlsMediaPlaylist;
@@ -16,7 +16,7 @@ import com.google.android.exoplayer2.source.p379m0.C9222j;
 import com.google.android.exoplayer2.source.p379m0.C9224l;
 import com.google.android.exoplayer2.source.p379m0.C9225m;
 import com.google.android.exoplayer2.trackselection.C9292c;
-import com.google.android.exoplayer2.trackselection.C9311j;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DataSpec;
 import com.google.android.exoplayer2.upstream.TransferListener;
@@ -76,7 +76,7 @@ class C9156g {
     private boolean f20579o;
 
     /* renamed from: p */
-    private C9311j f20580p;
+    private TrackSelection f20580p;
 
     /* renamed from: q */
     private long f20581q = -9223372036854775807L;
@@ -208,7 +208,7 @@ class C9156g {
         }
     }
 
-    public C9156g(HlsExtractorFactory hlsExtractorFactory, C9188h hVar, Uri[] uriArr, Format[] formatArr, C9162h hVar2, TransferListener transferListener, C9175p pVar, List<Format> list) {
+    public C9156g(HlsExtractorFactory hlsExtractorFactory, C9188h hVar, Uri[] uriArr, Format[] formatArr, HlsDataSourceFactory hVar2, TransferListener transferListener, C9175p pVar, List<Format> list) {
         this.f20565a = hlsExtractorFactory;
         this.f20571g = hVar;
         this.f20569e = uriArr;
@@ -234,7 +234,7 @@ class C9156g {
     }
 
     /* renamed from: b */
-    public C9311j mo23803b() {
+    public TrackSelection mo23803b() {
         return this.f20580p;
     }
 
@@ -258,7 +258,7 @@ class C9156g {
     }
 
     /* renamed from: a */
-    public void mo23798a(C9311j jVar) {
+    public void mo23798a(TrackSelection jVar) {
         this.f20580p = jVar;
     }
 
@@ -485,7 +485,7 @@ class C9156g {
 
     /* renamed from: a */
     public boolean mo23801a(C9212d dVar, long j) {
-        C9311j jVar = this.f20580p;
+        TrackSelection jVar = this.f20580p;
         return jVar.mo24069a(jVar.mo24072c(this.f20572h.mo23901a(dVar.f20858c)), j);
     }
 

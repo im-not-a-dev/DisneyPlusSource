@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.source.hls;
 
 import android.util.SparseArray;
-import com.google.android.exoplayer2.p393v0.C9545h0;
+import com.google.android.exoplayer2.util.C9545h0;
 
 /* renamed from: com.google.android.exoplayer2.source.hls.p */
 /* compiled from: TimestampAdjusterProvider */

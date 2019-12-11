@@ -10,15 +10,15 @@ import android.os.Message;
 import android.util.Pair;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.drm.ExoMediaCrypto;
-import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
-import com.google.android.exoplayer2.drm.DrmSession.C8694a;
+import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
+import com.google.android.exoplayer2.drm.DrmSession.DrmSessionException;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.KeyRequest;
 import com.google.android.exoplayer2.drm.ExoMediaDrm.ProvisionRequest;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9557m;
-import com.google.android.exoplayer2.p393v0.C9557m.C9558a;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.EventDispatcher;
+import com.google.android.exoplayer2.util.EventDispatcher.Event;
+import com.google.android.exoplayer2.util.Log;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -32,7 +32,7 @@ import java.util.UUID;
 class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
 
     /* renamed from: a */
-    public final List<C8692b> f18483a;
+    public final List<SchemeData> f18483a;
 
     /* renamed from: b */
     private final ExoMediaDrm<T> f18484b;
@@ -47,7 +47,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
     private final HashMap<String, String> f18487e;
 
     /* renamed from: f */
-    private final C9557m<DefaultDrmSessionEventListener> f18488f;
+    private final EventDispatcher<DefaultDrmSessionEventListener> f18488f;
     /* access modifiers changed from: private */
 
     /* renamed from: g */
@@ -78,7 +78,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
     private T f18497o;
 
     /* renamed from: p */
-    private C8694a f18498p;
+    private DrmSessionException f18498p;
 
     /* renamed from: q */
     private byte[] f18499q;
@@ -181,7 +181,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
         void mo22746a(Exception exc);
     }
 
-    public DefaultDrmSession(UUID uuid, ExoMediaDrm<T> exoMediaDrm, C8707c<T> cVar, List<C8692b> list, int i, byte[] bArr, HashMap<String, String> hashMap, MediaDrmCallback qVar, Looper looper, C9557m<DefaultDrmSessionEventListener> mVar, int i2) {
+    public DefaultDrmSession(UUID uuid, ExoMediaDrm<T> exoMediaDrm, C8707c<T> cVar, List<SchemeData> list, int i, byte[] bArr, HashMap<String, String> hashMap, MediaDrmCallback qVar, Looper looper, EventDispatcher<DefaultDrmSessionEventListener> mVar, int i2) {
         if (i == 1 || i == 3) {
             Assertions.checkNotNull(bArr);
         }
@@ -212,7 +212,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
         if (!C.WIDEVINE_UUID.equals(this.f18491i)) {
             return Long.MAX_VALUE;
         }
-        Pair a = C8717s.m25263a(this);
+        Pair a = WidevineUtil.getLicenseDurationRemainingSec(this);
         Assertions.checkNotNull(a);
         Pair pair = a;
         return Math.min(((Long) pair.first).longValue(), ((Long) pair.second).longValue());
@@ -246,12 +246,12 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
     }
 
     /* renamed from: c */
-    public byte[] mo22772c() {
+    public byte[] getOfflineLicenseKeySetId() {
         return this.f18500r;
     }
 
     /* renamed from: d */
-    public final int mo22773d() {
+    public final int getState() {
         return this.f18493k;
     }
 
@@ -277,7 +277,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
         this.f18496n.post(0, this.f18502t, true);
     }
 
-    public final C8694a getError() {
+    public final DrmSessionException getError() {
         if (this.f18493k == 1) {
             return this.f18498p;
         }
@@ -305,7 +305,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
         if (bArr != null) {
             this.f18484b.mo22784c(bArr);
             this.f18499q = null;
-            this.f18488f.mo24648a((C9558a<T>) C8696a.f18475a);
+            this.f18488f.dispatch((Event<T>) C8696a.f18475a);
         }
         return true;
     }
@@ -320,7 +320,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
     }
 
     /* renamed from: b */
-    public final T mo22771b() {
+    public final T getMediaCrypto() {
         return this.f18497o;
     }
 
@@ -331,7 +331,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
         }
         try {
             this.f18499q = this.f18484b.mo22782b();
-            this.f18488f.mo24648a((C9558a<T>) C8700e.f18480a);
+            this.f18488f.dispatch((Event<T>) C8700e.f18480a);
             this.f18497o = this.f18484b.mo22781b(this.f18499q);
             this.f18493k = 3;
             return true;
@@ -366,7 +366,7 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
     }
 
     /* renamed from: a */
-    public Map<String, String> mo22770a() {
+    public Map<String, String> queryKeyStatus() {
         byte[] bArr = this.f18499q;
         if (bArr == null) {
             return null;
@@ -389,10 +389,10 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
                     Log.m29495a("DefaultDrmSession", sb.toString());
                     m25227a(this.f18499q, 2, z);
                 } else if (i2 <= 0) {
-                    m25229b((Exception) new C8714p());
+                    m25229b((Exception) new KeysExpiredException());
                 } else {
                     this.f18493k = 4;
-                    this.f18488f.mo24648a((C9558a<T>) C8701f.f18481a);
+                    this.f18488f.dispatch((Event<T>) C8701f.f18481a);
                 }
             }
         } else if (i != 2) {
@@ -429,8 +429,8 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
 
     /* renamed from: b */
     private void m25229b(Exception exc) {
-        this.f18498p = new C8694a(exc);
-        this.f18488f.mo24648a((C9558a<T>) new C8697b<T>(exc));
+        this.f18498p = new DrmSessionException(exc);
+        this.f18488f.dispatch((Event<T>) new C8697b<T>(exc));
         if (this.f18493k != 4) {
             this.f18493k = 1;
         }
@@ -462,14 +462,14 @@ class DefaultDrmSession<T extends ExoMediaCrypto> implements DrmSession<T> {
                     byte[] bArr2 = this.f18500r;
                     Util.castNonNull(bArr2);
                     exoMediaDrm.mo22783b(bArr2, bArr);
-                    this.f18488f.mo24648a((C9558a<T>) C8701f.f18481a);
+                    this.f18488f.dispatch((Event<T>) C8701f.f18481a);
                 } else {
                     byte[] b = this.f18484b.mo22783b(this.f18499q, bArr);
                     if (!((this.f18486d != 2 && (this.f18486d != 0 || this.f18500r == null)) || b == null || b.length == 0)) {
                         this.f18500r = b;
                     }
                     this.f18493k = 4;
-                    this.f18488f.mo24648a((C9558a<T>) C8702g.f18482a);
+                    this.f18488f.dispatch((Event<T>) C8702g.f18482a);
                 }
             } catch (Exception e) {
                 m25232c(e);

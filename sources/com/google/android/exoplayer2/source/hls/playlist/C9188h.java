@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.source.hls.playlist;
 
 import android.net.Uri;
 import com.google.android.exoplayer2.source.MediaSourceEventListener.C9068a;
-import com.google.android.exoplayer2.source.hls.C9162h;
-import com.google.android.exoplayer2.upstream.C9524z;
+import com.google.android.exoplayer2.source.hls.HlsDataSourceFactory;
+import com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;
 import java.io.IOException;
 
 /* renamed from: com.google.android.exoplayer2.source.hls.playlist.h */
@@ -14,7 +14,7 @@ public interface C9188h {
     /* compiled from: HlsPlaylistTracker */
     public interface C9189a {
         /* renamed from: a */
-        C9188h mo23868a(C9162h hVar, C9524z zVar, C9187g gVar);
+        C9188h mo23868a(HlsDataSourceFactory hVar, LoadErrorHandlingPolicy zVar, HlsPlaylistParserFactory gVar);
     }
 
     /* renamed from: com.google.android.exoplayer2.source.hls.playlist.h$b */

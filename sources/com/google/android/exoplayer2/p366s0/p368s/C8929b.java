@@ -6,8 +6,8 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.drm.DrmInitData;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.p368s.C8932e.C8933a;
-import com.google.android.exoplayer2.p393v0.C9544h;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9544h;
+import com.google.android.exoplayer2.util.C9572w;
 import java.util.Collections;
 
 /* renamed from: com.google.android.exoplayer2.s0.s.b */

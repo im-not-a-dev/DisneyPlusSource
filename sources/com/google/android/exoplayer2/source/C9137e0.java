@@ -7,7 +7,7 @@ import com.google.android.exoplayer2.p362q0.C8879e;
 import com.google.android.exoplayer2.p366s0.C8913h;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9572w;
 import com.google.android.exoplayer2.source.C9085d0.C9086a;
 import com.google.android.exoplayer2.upstream.C9489e;
 import com.google.android.exoplayer2.upstream.C9491f;

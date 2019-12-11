@@ -4,15 +4,15 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.Util;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.UUID;
 
-public final class DrmInitData implements Comparator<C8692b>, Parcelable {
+public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
     public static final Creator<DrmInitData> CREATOR = new C8691a();
 
     /* renamed from: U */
@@ -25,7 +25,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
     public final int f18461W;
 
     /* renamed from: c */
-    private final C8692b[] f18462c;
+    private final SchemeData[] f18462c;
 
     /* renamed from: com.google.android.exoplayer2.drm.DrmInitData$a */
     static class C8691a implements Creator<DrmInitData> {
@@ -42,8 +42,8 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
     }
 
     /* renamed from: com.google.android.exoplayer2.drm.DrmInitData$b */
-    public static final class C8692b implements Parcelable {
-        public static final Creator<C8692b> CREATOR = new C8693a();
+    public static final class SchemeData implements Parcelable {
+        public static final Creator<SchemeData> CREATOR = new C8693a();
         /* access modifiers changed from: private */
 
         /* renamed from: U */
@@ -65,20 +65,20 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         private int f18468c;
 
         /* renamed from: com.google.android.exoplayer2.drm.DrmInitData$b$a */
-        static class C8693a implements Creator<C8692b> {
+        static class C8693a implements Creator<SchemeData> {
             C8693a() {
             }
 
-            public C8692b createFromParcel(Parcel parcel) {
-                return new C8692b(parcel);
+            public SchemeData createFromParcel(Parcel parcel) {
+                return new SchemeData(parcel);
             }
 
-            public C8692b[] newArray(int i) {
-                return new C8692b[i];
+            public SchemeData[] newArray(int i) {
+                return new SchemeData[i];
             }
         }
 
-        public C8692b(UUID uuid, String str, byte[] bArr) {
+        public SchemeData(UUID uuid, String str, byte[] bArr) {
             this(uuid, str, bArr, false);
         }
 
@@ -97,14 +97,14 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         }
 
         public boolean equals(Object obj) {
-            if (!(obj instanceof C8692b)) {
+            if (!(obj instanceof SchemeData)) {
                 return false;
             }
             boolean z = true;
             if (obj == this) {
                 return true;
             }
-            C8692b bVar = (C8692b) obj;
+            SchemeData bVar = (SchemeData) obj;
             if (!Util.m29414a((Object) this.f18464V, (Object) bVar.f18464V) || !Util.m29414a((Object) this.f18465W, (Object) bVar.f18465W) || !Util.m29414a((Object) this.f18463U, (Object) bVar.f18463U) || !Arrays.equals(this.f18466X, bVar.f18466X)) {
                 z = false;
             }
@@ -129,16 +129,16 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
             parcel.writeByte(this.f18467Y ? (byte) 1 : 0);
         }
 
-        public C8692b(UUID uuid, String str, byte[] bArr, boolean z) {
+        public SchemeData(UUID uuid, String str, byte[] bArr, boolean z) {
             this(uuid, null, str, bArr, z);
         }
 
         /* renamed from: a */
-        public boolean mo22762a(C8692b bVar) {
+        public boolean mo22762a(SchemeData bVar) {
             return mo22760X() && !bVar.mo22760X() && mo22763a(bVar.f18463U);
         }
 
-        public C8692b(UUID uuid, String str, String str2, byte[] bArr, boolean z) {
+        public SchemeData(UUID uuid, String str, String str2, byte[] bArr, boolean z) {
             Assertions.checkNotNull(uuid);
             this.f18463U = uuid;
             this.f18464V = str;
@@ -149,12 +149,12 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         }
 
         /* renamed from: a */
-        public C8692b mo22761a(byte[] bArr) {
-            C8692b bVar = new C8692b(this.f18463U, this.f18464V, this.f18465W, bArr, this.f18467Y);
+        public SchemeData mo22761a(byte[] bArr) {
+            SchemeData bVar = new SchemeData(this.f18463U, this.f18464V, this.f18465W, bArr, this.f18467Y);
             return bVar;
         }
 
-        C8692b(Parcel parcel) {
+        SchemeData(Parcel parcel) {
             this.f18463U = new UUID(parcel.readLong(), parcel.readLong());
             this.f18464V = parcel.readString();
             String readString = parcel.readString();
@@ -165,19 +165,19 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         }
     }
 
-    public DrmInitData(List<C8692b> list) {
-        this(null, false, (C8692b[]) list.toArray(new C8692b[0]));
+    public DrmInitData(List<SchemeData> list) {
+        this(null, false, (SchemeData[]) list.toArray(new SchemeData[0]));
     }
 
     /* renamed from: a */
     public static DrmInitData m25158a(DrmInitData drmInitData, DrmInitData drmInitData2) {
         String str;
-        C8692b[] bVarArr;
-        C8692b[] bVarArr2;
+        SchemeData[] bVarArr;
+        SchemeData[] bVarArr2;
         ArrayList arrayList = new ArrayList();
         if (drmInitData != null) {
             str = drmInitData.f18460V;
-            for (C8692b bVar : drmInitData.f18462c) {
+            for (SchemeData bVar : drmInitData.f18462c) {
                 if (bVar.mo22760X()) {
                     arrayList.add(bVar);
                 }
@@ -190,7 +190,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
                 str = drmInitData2.f18460V;
             }
             int size = arrayList.size();
-            for (C8692b bVar2 : drmInitData2.f18462c) {
+            for (SchemeData bVar2 : drmInitData2.f18462c) {
                 if (bVar2.mo22760X() && !m25159a(arrayList, size, bVar2.f18463U)) {
                     arrayList.add(bVar2);
                 }
@@ -199,7 +199,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         if (arrayList.isEmpty()) {
             return null;
         }
-        return new DrmInitData(str, (List<C8692b>) arrayList);
+        return new DrmInitData(str, (List<SchemeData>) arrayList);
     }
 
     public int describeContents() {
@@ -234,22 +234,22 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         parcel.writeTypedArray(this.f18462c, 0);
     }
 
-    public DrmInitData(String str, List<C8692b> list) {
-        this(str, false, (C8692b[]) list.toArray(new C8692b[0]));
+    public DrmInitData(String str, List<SchemeData> list) {
+        this(str, false, (SchemeData[]) list.toArray(new SchemeData[0]));
     }
 
-    public DrmInitData(C8692b... bVarArr) {
+    public DrmInitData(SchemeData... bVarArr) {
         this((String) null, bVarArr);
     }
 
-    public DrmInitData(String str, C8692b... bVarArr) {
+    public DrmInitData(String str, SchemeData... bVarArr) {
         this(str, true, bVarArr);
     }
 
-    private DrmInitData(String str, boolean z, C8692b... bVarArr) {
+    private DrmInitData(String str, boolean z, SchemeData... bVarArr) {
         this.f18460V = str;
         if (z) {
-            bVarArr = (C8692b[]) bVarArr.clone();
+            bVarArr = (SchemeData[]) bVarArr.clone();
         }
         this.f18462c = bVarArr;
         this.f18461W = bVarArr.length;
@@ -258,14 +258,14 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
 
     DrmInitData(Parcel parcel) {
         this.f18460V = parcel.readString();
-        Object[] createTypedArray = parcel.createTypedArray(C8692b.CREATOR);
+        Object[] createTypedArray = parcel.createTypedArray(SchemeData.CREATOR);
         Util.castNonNull(createTypedArray);
-        this.f18462c = (C8692b[]) createTypedArray;
+        this.f18462c = (SchemeData[]) createTypedArray;
         this.f18461W = this.f18462c.length;
     }
 
     /* renamed from: a */
-    public C8692b mo22750a(int i) {
+    public SchemeData mo22750a(int i) {
         return this.f18462c[i];
     }
 
@@ -296,7 +296,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         L_0x0011:
             r0 = 1
         L_0x0012:
-            com.google.android.exoplayer2.p393v0.Assertions.checkState(r0)
+            com.google.android.exoplayer2.util.Assertions.checkState(r0)
             java.lang.String r0 = r2.f18460V
             if (r0 == 0) goto L_0x001a
             goto L_0x001c
@@ -305,8 +305,8 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
         L_0x001c:
             com.google.android.exoplayer2.drm.DrmInitData$b[] r1 = r2.f18462c
             com.google.android.exoplayer2.drm.DrmInitData$b[] r3 = r3.f18462c
-            java.lang.Object[] r3 = com.google.android.exoplayer2.p393v0.Util.m29421a((T[]) r1, (T[]) r3)
-            com.google.android.exoplayer2.drm.DrmInitData$b[] r3 = (com.google.android.exoplayer2.drm.DrmInitData.C8692b[]) r3
+            java.lang.Object[] r3 = com.google.android.exoplayer2.util.Util.m29421a((T[]) r1, (T[]) r3)
+            com.google.android.exoplayer2.drm.DrmInitData$b[] r3 = (com.google.android.exoplayer2.drm.DrmInitData.SchemeData[]) r3
             com.google.android.exoplayer2.drm.DrmInitData r1 = new com.google.android.exoplayer2.drm.DrmInitData
             r1.<init>(r0, r3)
             return r1
@@ -315,7 +315,7 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
     }
 
     /* renamed from: a */
-    public int compare(C8692b bVar, C8692b bVar2) {
+    public int compare(SchemeData bVar, SchemeData bVar2) {
         if (C.UUID_NIL.equals(bVar.f18463U)) {
             return C.UUID_NIL.equals(bVar2.f18463U) ? 0 : 1;
         }
@@ -323,9 +323,9 @@ public final class DrmInitData implements Comparator<C8692b>, Parcelable {
     }
 
     /* renamed from: a */
-    private static boolean m25159a(ArrayList<C8692b> arrayList, int i, UUID uuid) {
+    private static boolean m25159a(ArrayList<SchemeData> arrayList, int i, UUID uuid) {
         for (int i2 = 0; i2 < i; i2++) {
-            if (((C8692b) arrayList.get(i2)).f18463U.equals(uuid)) {
+            if (((SchemeData) arrayList.get(i2)).f18463U.equals(uuid)) {
                 return true;
             }
         }

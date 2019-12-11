@@ -4,8 +4,8 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.p366s0.C8914i;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.p374y.C9029h0.C9033d;
-import com.google.android.exoplayer2.p393v0.C9571v;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9571v;
+import com.google.android.exoplayer2.util.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.s0.y.i */
 /* compiled from: Ac4Reader */
@@ -57,7 +57,7 @@ public final class C9034i implements C9042o {
     /* JADX WARNING: Removed duplicated region for block: B:16:0x002d  */
     /* renamed from: b */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    private boolean m26710b(com.google.android.exoplayer2.p393v0.C9572w r6) {
+    private boolean m26710b(com.google.android.exoplayer2.util.C9572w r6) {
         /*
             r5 = this;
         L_0x0000:

@@ -1,11 +1,11 @@
 package com.google.android.exoplayer2.drm;
 
 import com.google.android.exoplayer2.drm.DefaultDrmSessionManager.C8690d;
-import com.google.android.exoplayer2.p393v0.C9557m.C9558a;
+import com.google.android.exoplayer2.util.EventDispatcher.Event;
 
 /* renamed from: com.google.android.exoplayer2.drm.c */
 /* compiled from: lambda */
-public final /* synthetic */ class C8698c implements C9558a {
+public final /* synthetic */ class C8698c implements Event {
 
     /* renamed from: a */
     private final /* synthetic */ C8690d f18477a;
@@ -15,7 +15,7 @@ public final /* synthetic */ class C8698c implements C9558a {
     }
 
     /* renamed from: a */
-    public final void mo22792a(Object obj) {
+    public final void sendTo(Object obj) {
         ((DefaultDrmSessionEventListener) obj).onDrmSessionManagerError(this.f18477a);
     }
 }

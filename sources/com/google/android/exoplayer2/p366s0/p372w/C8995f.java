@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.p366s0.p372w;
 
 import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.p366s0.C8913h;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.C9572w;
 import java.io.EOFException;
 import java.io.IOException;
 

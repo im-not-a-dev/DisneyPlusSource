@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.p366s0.p374y;
 
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.C9572w;
 
 /* renamed from: com.google.android.exoplayer2.s0.y.i0 */
 /* compiled from: TsUtil */

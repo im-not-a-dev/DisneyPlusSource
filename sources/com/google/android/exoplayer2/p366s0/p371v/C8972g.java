@@ -6,7 +6,7 @@ import com.google.android.exoplayer2.C8723g0;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.drm.DrmInitData;
-import com.google.android.exoplayer2.drm.DrmInitData.C8692b;
+import com.google.android.exoplayer2.drm.DrmInitData.SchemeData;
 import com.google.android.exoplayer2.metadata.p356g.C8746a;
 import com.google.android.exoplayer2.metadata.p356g.C8749c;
 import com.google.android.exoplayer2.p361p0.C8828h;
@@ -20,12 +20,12 @@ import com.google.android.exoplayer2.p366s0.C8920o.C8922b;
 import com.google.android.exoplayer2.p366s0.C8924q;
 import com.google.android.exoplayer2.p366s0.C8924q.C8925a;
 import com.google.android.exoplayer2.p382u0.p383m.C9348g;
-import com.google.android.exoplayer2.p393v0.Assertions;
-import com.google.android.exoplayer2.p393v0.C9545h0;
-import com.google.android.exoplayer2.p393v0.Util;
-import com.google.android.exoplayer2.p393v0.Log;
-import com.google.android.exoplayer2.p393v0.C9568u;
-import com.google.android.exoplayer2.p393v0.C9572w;
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.C9545h0;
+import com.google.android.exoplayer2.util.Util;
+import com.google.android.exoplayer2.util.Log;
+import com.google.android.exoplayer2.util.C9568u;
+import com.google.android.exoplayer2.util.C9572w;
 import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -1458,14 +1458,14 @@ public class C8972g implements C8912g {
                 if (c == null) {
                     Log.m29500d("FragmentedMp4Extractor", "Skipped pssh atom (failed to extract uuid)");
                 } else {
-                    arrayList.add(new C8692b(c, "video/mp4", bArr));
+                    arrayList.add(new SchemeData(c, "video/mp4", bArr));
                 }
             }
         }
         if (arrayList == null) {
             return null;
         }
-        return new DrmInitData((List<C8692b>) arrayList);
+        return new DrmInitData((List<SchemeData>) arrayList);
     }
 
     /* renamed from: a */

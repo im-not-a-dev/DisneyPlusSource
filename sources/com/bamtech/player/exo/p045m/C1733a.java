@@ -6,8 +6,8 @@ import android.view.KeyEvent;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.C8898s;
 import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.p363r0.p364a.C8884a;
-import com.google.android.exoplayer2.p363r0.p364a.C8884a.C8890f;
+import com.google.android.exoplayer2.ext.p364a.C8884a;
+import com.google.android.exoplayer2.ext.p364a.C8884a.C8890f;
 
 /* renamed from: com.bamtech.player.exo.m.a */
 /* compiled from: ExoMediaSessionConnection.kt */

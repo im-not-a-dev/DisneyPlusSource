@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2.p361p0;
 
 import com.google.android.exoplayer2.p361p0.C8840m.C8841a;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 

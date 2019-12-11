@@ -1,7 +1,7 @@
 package com.google.android.exoplayer2;
 
 import android.util.Pair;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import com.google.android.exoplayer2.source.p378l0.C9204a;
 import com.google.android.exoplayer2.source.p378l0.C9204a.C9205a;
 

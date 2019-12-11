@@ -23,7 +23,7 @@ import com.google.android.exoplayer2.source.C9266z;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import com.google.android.exoplayer2.upstream.C9515r;
-import com.google.android.exoplayer2.upstream.cache.C9465e;
+import com.google.android.exoplayer2.upstream.cache.CacheDataSourceFactory;
 import com.google.android.exoplayer2.upstream.cache.C9483r;
 import com.google.android.exoplayer2.upstream.cache.C9484s;
 import com.google.android.exoplayer2.upstream.cache.Cache;
@@ -183,7 +183,7 @@ public final class AssetVideoArtViewModel extends C0702a implements C3317e {
             if (AssetVideoArtViewModel.f8302d0 == null) {
                 AssetVideoArtViewModel.f8302d0 = new C9484s(new File(this.f8312U.getCacheDir(), "animationCache"), new C9483r());
             }
-            return new C9262c(new C9465e(AssetVideoArtViewModel.f8302d0, new C9515r(this.f8313c.mo4111y(), "brandtiles")));
+            return new C9262c(new CacheDataSourceFactory(AssetVideoArtViewModel.f8302d0, new C9515r(this.f8313c.mo4111y(), "brandtiles")));
         }
     }
 

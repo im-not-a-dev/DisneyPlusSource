@@ -6,7 +6,7 @@ import android.text.SpannableStringBuilder;
 import android.util.Base64;
 import android.util.Pair;
 import com.google.android.exoplayer2.p382u0.C9322b;
-import com.google.android.exoplayer2.p393v0.Assertions;
+import com.google.android.exoplayer2.util.Assertions;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;

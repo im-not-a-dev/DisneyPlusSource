@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.p382u0.p390t;
 import android.text.Layout.Alignment;
 import android.text.SpannableStringBuilder;
 import com.google.android.exoplayer2.p382u0.C9322b;
-import com.google.android.exoplayer2.p393v0.Log;
+import com.google.android.exoplayer2.util.Log;
 
 /* renamed from: com.google.android.exoplayer2.u0.t.e */
 /* compiled from: WebvttCue */
